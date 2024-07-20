@@ -26,10 +26,17 @@ namespace SoulRPG
         {
             var document = Object.Instantiate(documentPrefab);
             var positionText = document.Q<TMP_Text>("Text.Position");
+            var directionText = document.Q<TMP_Text>("Text.Direction");
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
                     positionText.text = $"Position: {x}";
+                })
+                .RegisterTo(scope);
+            character.DirectionAsObservable()
+                .Subscribe(x =>
+                {
+                    directionText.text = $"Direction: {x}";
                 })
                 .RegisterTo(scope);
         }
