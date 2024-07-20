@@ -12,12 +12,8 @@ namespace SoulRPG
     public sealed class MasterData : ScriptableObject
     {
         [SerializeField]
-        private Item.DictionaryList items;
-        public Item.DictionaryList Items => items;
-
-        [SerializeField]
-        private BorderData.DictionaryList borders;
-        public BorderData.DictionaryList Borders => borders;
+        private SpreadSheetDungeonCellData.DictionaryList borders;
+        public SpreadSheetDungeonCellData.DictionaryList Borders => borders;
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
@@ -28,7 +24,7 @@ namespace SoulRPG
                 GoogleSpreadSheetDownloader.DownloadAsync("Dungeon.Test")
             );
 
-            borders.Set(JsonHelper.FromJson<BorderData>(database[0]));
+            borders.Set(JsonHelper.FromJson<SpreadSheetDungeonCellData>(database[0]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -36,39 +32,23 @@ namespace SoulRPG
 #endif
 
         [Serializable]
-        public class Item
-        {
-            public int Id;
-
-            public string Name;
-
-            public Sprite Icon;
-
-            [Serializable]
-            public sealed class DictionaryList : DictionaryList<int, Item>
-            {
-                public DictionaryList() : base(x => x.Id) { }
-            }
-        }
-
-        [Serializable]
-        public class BorderData
+        public class SpreadSheetDungeonCellData
         {
             public int x;
 
             public int y;
 
-            public Border borders;
+            public SpreadSheetBorder borders;
 
             [Serializable]
-            public sealed class DictionaryList : DictionaryList<Vector2Int, BorderData>
+            public sealed class DictionaryList : DictionaryList<Vector2Int, SpreadSheetDungeonCellData>
             {
                 public DictionaryList() : base(x => new Vector2Int(x.x, x.y)) { }
             }
         }
 
         [Serializable]
-        public class Border
+        public class SpreadSheetBorder
         {
             public bool top;
 
