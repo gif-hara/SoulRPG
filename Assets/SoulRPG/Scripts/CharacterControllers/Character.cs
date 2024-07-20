@@ -8,7 +8,7 @@ namespace SoulRPG.CharacterControllers
     /// </summary>
     public sealed class Character
     {
-        private ReactiveProperty<Vector2Int> position = new ReactiveProperty<Vector2Int>();
+        private ReactiveProperty<Vector2Int> position = new();
 
         public Vector2Int Position
         {
@@ -17,5 +17,15 @@ namespace SoulRPG.CharacterControllers
         }
 
         public ReadOnlyReactiveProperty<Vector2Int> PositionAsObservable() => position;
+
+        private ReactiveProperty<Define.Direction> direction = new();
+
+        public Define.Direction Direction
+        {
+            get => direction.Value;
+            set => direction.Value = value;
+        }
+
+        public ReadOnlyReactiveProperty<Define.Direction> DirectionAsObservable() => direction;
     }
 }
