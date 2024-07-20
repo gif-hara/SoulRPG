@@ -55,6 +55,18 @@ namespace SoulRPG
             };
         }
 
+        public static Define.Direction Rotate(this Define.Direction self, Define.Direction direction)
+        {
+            return direction switch
+            {
+                Define.Direction.Up => self,
+                Define.Direction.Right => self.ToRight(),
+                Define.Direction.Down => self.ToOpposite(),
+                Define.Direction.Left => self.ToLeft(),
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
+        }
+
         public static Vector2Int TransformVelocityByDirection(this Define.Direction self, Vector2Int velocity)
         {
             return self switch
