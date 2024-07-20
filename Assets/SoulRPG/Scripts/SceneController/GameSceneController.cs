@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SoulRPG
+namespace SoulRPG.SceneControllers
 {
     /// <summary>
     /// 
