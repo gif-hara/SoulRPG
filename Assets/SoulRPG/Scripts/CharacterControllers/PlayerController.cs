@@ -16,8 +16,10 @@ namespace SoulRPG
             inputActions.InGame.Move.OnPerformedAsObservable()
                 .Subscribe(x =>
                 {
-                    var value = x.ReadValue<Vector2>();
-                    player.Position += new Vector2Int((int)value.x, (int)value.y);
+                    var v = x.ReadValue<Vector2>();
+                    var velocity = new Vector2Int((int)v.x, (int)v.y);
+                    velocity = player.Direction.TransformVelocityByDirection(velocity);
+                    player.Position += new Vector2Int(velocity.x, velocity.y);
                 })
                 .RegisterTo(scope);
         }

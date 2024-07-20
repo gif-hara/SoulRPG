@@ -54,5 +54,17 @@ namespace SoulRPG
                 _ => throw new System.ArgumentOutOfRangeException()
             };
         }
+
+        public static Vector2Int TransformVelocityByDirection(this Define.Direction self, Vector2Int velocity)
+        {
+            return self switch
+            {
+                Define.Direction.Up => new Vector2Int(velocity.x, velocity.y),
+                Define.Direction.Right => new Vector2Int(velocity.y, -velocity.x),
+                Define.Direction.Down => new Vector2Int(-velocity.x, -velocity.y),
+                Define.Direction.Left => new Vector2Int(-velocity.y, velocity.x),
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
+        }
     }
 }
