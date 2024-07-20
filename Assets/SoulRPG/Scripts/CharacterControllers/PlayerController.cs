@@ -16,8 +16,7 @@ namespace SoulRPG
             inputActions.InGame.Move.OnPerformedAsObservable()
                 .Subscribe(x =>
                 {
-                    var v = x.ReadValue<Vector2>();
-                    var velocity = new Vector2Int((int)v.x, (int)v.y);
+                    var velocity = x.ReadValue<Vector2>().ToVector2Int();
                     if (inputActions.InGame.Shift.IsPressed())
                     {
                         if (!velocity.CanConvertToDirection())
