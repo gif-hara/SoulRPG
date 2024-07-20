@@ -7,5 +7,8 @@ namespace SoulRPG.SceneControllers
     /// </summary>
     public sealed class GameSceneController : MonoBehaviour
     {
+        void Start()
+        {
+        }
     }
 }
