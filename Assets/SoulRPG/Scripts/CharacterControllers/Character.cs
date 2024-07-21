@@ -1,5 +1,6 @@
 using R3;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace SoulRPG.CharacterControllers
 {
@@ -13,7 +14,7 @@ namespace SoulRPG.CharacterControllers
         public Vector2Int Position
         {
             get => position.Value;
-            set => position.Value = value;
+            private set => position.Value = value;
         }
 
         public ReadOnlyReactiveProperty<Vector2Int> PositionAsObservable() => position;
@@ -28,9 +29,27 @@ namespace SoulRPG.CharacterControllers
 
         public ReadOnlyReactiveProperty<Define.Direction> DirectionAsObservable() => direction;
 
+        private MasterData.Dungeon dungeon;
+
         public void Move(Vector2Int velocity)
         {
+            Assert.IsNotNull(dungeon, "Dungeon is null");
+            if (dungeon.IsExistWall(Position, velocity.ToDirection()))
+            {
+                return;
+            }
             Position += velocity;
+        }
+
+        public void Warp(Vector2Int position)
+        {
+            Position = position;
+        }
+
+        public void SetDungeon(MasterData.Dungeon dungeon, Vector2Int position)
+        {
+            this.dungeon = dungeon;
+            Warp(position);
         }
     }
 }
