@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace SoulRPG
@@ -23,6 +26,60 @@ namespace SoulRPG
                     Debug.LogError($"Invalid direction: {direction}");
                     return false;
             }
+        }
+
+        public static bool IsValidPosition(this MasterData.Dungeon self, Vector2Int position)
+        {
+            return position.x >= 0 && position.x < self.range.x && position.y >= 0 && position.y < self.range.y;
+        }
+
+        public static List<MasterData.DungeonWall> GetWalls(this MasterData.Dungeon self, RectInt rect)
+        {
+            var walls = new List<MasterData.DungeonWall>();
+            for (var x = rect.xMin; x < rect.xMax; x++)
+            {
+                for (var y = rect.yMin; y < rect.yMax; y++)
+                {
+                    var position = new Vector2Int(x, y);
+                    AddSafe(() => self.wall.TryGetTop(position));
+                    AddSafe(() => self.wall.TryGetBottom(position));
+                    AddSafe(() => self.wall.TryGetLeft(position));
+                    AddSafe(() => self.wall.TryGetRight(position));
+                }
+            }
+            return walls.Distinct().ToList();
+            void AddSafe(Func<MasterData.DungeonWall> selector)
+            {
+                var wall = selector();
+                if (wall != null)
+                {
+                    walls.Add(wall);
+                }
+            }
+        }
+
+        public static MasterData.DungeonWall TryGetTop(this MasterData.DungeonWall.DictionaryList self, Vector2Int position)
+        {
+            self.TryGetValue((position, position + Vector2Int.right), out var wall);
+            return wall;
+        }
+
+        public static MasterData.DungeonWall TryGetBottom(this MasterData.DungeonWall.DictionaryList self, Vector2Int position)
+        {
+            self.TryGetValue((position + Vector2Int.down, position + Vector2Int.down + Vector2Int.right), out var wall);
+            return wall;
+        }
+
+        public static MasterData.DungeonWall TryGetLeft(this MasterData.DungeonWall.DictionaryList self, Vector2Int position)
+        {
+            self.TryGetValue((position, position + Vector2Int.down), out var wall);
+            return wall;
+        }
+
+        public static MasterData.DungeonWall TryGetRight(this MasterData.DungeonWall.DictionaryList self, Vector2Int position)
+        {
+            self.TryGetValue((position + Vector2Int.right, position + Vector2Int.right + Vector2Int.down), out var wall);
+            return wall;
         }
     }
 }
