@@ -9,7 +9,7 @@ namespace SoulRPG.CharacterControllers
     /// </summary>
     public sealed class Character
     {
-        private ReactiveProperty<Vector2Int> position = new();
+        private readonly ReactiveProperty<Vector2Int> position = new();
 
         public Vector2Int Position
         {
@@ -19,7 +19,7 @@ namespace SoulRPG.CharacterControllers
 
         public ReadOnlyReactiveProperty<Vector2Int> PositionAsObservable() => position;
 
-        private ReactiveProperty<Define.Direction> direction = new();
+        private readonly ReactiveProperty<Define.Direction> direction = new();
 
         public Define.Direction Direction
         {
@@ -29,7 +29,15 @@ namespace SoulRPG.CharacterControllers
 
         public ReadOnlyReactiveProperty<Define.Direction> DirectionAsObservable() => direction;
 
-        public MasterData.Dungeon Dungeon { get; private set; }
+        private readonly ReactiveProperty<MasterData.Dungeon> dungeon = new();
+
+        public MasterData.Dungeon Dungeon
+        {
+            get => dungeon.Value;
+            private set => dungeon.Value = value;
+        }
+
+        public ReadOnlyReactiveProperty<MasterData.Dungeon> DungeonAsObservable() => dungeon;
 
         public void Move(Vector2Int velocity)
         {
