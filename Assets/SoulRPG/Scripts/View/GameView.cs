@@ -86,9 +86,9 @@ namespace SoulRPG
                         Object.Destroy(floor.gameObject);
                     }
                     dungeonFloorObjects.Clear();
-                    for (var i = 0; i < x.range.x; i++)
+                    for (var i = 0; i <= x.range.x; i++)
                     {
-                        for (var j = 0; j < x.range.y; j++)
+                        for (var j = 0; j <= x.range.y; j++)
                         {
                             var floorObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Floor"), dungeonDocument.transform);
                             dungeonFloorObjects.Add(floorObject);
