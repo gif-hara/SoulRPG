@@ -239,3 +239,4 @@ MonoBehaviour:
           b: {x: 26, y: -1}
         - a: {x: 26, y: 0}
           b: {x: 26, y: -1}
+      range: {x: 25, y: 25}

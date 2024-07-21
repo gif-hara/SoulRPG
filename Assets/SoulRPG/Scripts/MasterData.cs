@@ -96,6 +96,8 @@ namespace SoulRPG
 
             public DungeonWall.DictionaryList wall = new();
 
+            public Vector2Int range;
+
             [Serializable]
             public sealed class DictionaryList : DictionaryList<string, Dungeon>
             {
@@ -147,6 +149,7 @@ namespace SoulRPG
                     name = name
                 };
                 result.wall.Set(dw.Distinct());
+                result.range = new Vector2Int(cellData.List.Max(x => x.x), cellData.List.Max(x => x.y));
                 return result;
             }
         }
