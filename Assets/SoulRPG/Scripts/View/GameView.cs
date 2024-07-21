@@ -15,28 +15,38 @@ namespace SoulRPG
     {
         private readonly HKUIDocument uiDocumentPrefab;
 
+        private readonly HKUIDocument dungeonDocumentPrefab;
+
         private readonly GameCameraController gameCameraController;
 
         private readonly Character character;
 
-        public GameView(HKUIDocument uiDocumentPrefab, GameCameraController gameCameraController, Character character)
+        public GameView(
+            HKUIDocument uiDocumentPrefab,
+            HKUIDocument dungeonDocumentPrefab,
+            GameCameraController gameCameraController,
+            Character character
+            )
         {
             this.uiDocumentPrefab = uiDocumentPrefab;
+            this.dungeonDocumentPrefab = dungeonDocumentPrefab;
             this.gameCameraController = gameCameraController;
             this.character = character;
         }
 
         public void Open(CancellationToken scope)
         {
-            var document = Object.Instantiate(uiDocumentPrefab);
-            var positionText = document.Q<TMP_Text>("Text.Position");
-            var directionText = document.Q<TMP_Text>("Text.Direction");
-            var miniMapAreaDocument = document.Q<HKUIDocument>("Area.MiniMap");
+            var uiDocument = Object.Instantiate(uiDocumentPrefab);
+            var positionText = uiDocument.Q<TMP_Text>("Text.Position");
+            var directionText = uiDocument.Q<TMP_Text>("Text.Direction");
+            var miniMapAreaDocument = uiDocument.Q<HKUIDocument>("Area.MiniMap");
             var miniMapTipsParent = miniMapAreaDocument.Q<RectTransform>("Area.Tips.Viewport");
             var characterAreaTransform = miniMapAreaDocument.Q<Transform>("Area.Character");
             var miniMapWallTopPrefab = miniMapAreaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Top");
             var miniMapWallLeftPrefab = miniMapAreaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Left");
             var miniMapWallObjects = new List<RectTransform>();
+            var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
+            var dungeonFloorObjects = new List<Transform>();
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
@@ -68,6 +78,21 @@ namespace SoulRPG
                         var wallObject = Object.Instantiate(prefab, miniMapTipsParent.transform);
                         miniMapWallObjects.Add(wallObject);
                         wallObject.anchoredPosition = new Vector2(i.a.x * 100, i.a.y * 100);
+                    }
+
+                    foreach (var floor in dungeonFloorObjects)
+                    {
+                        Object.Destroy(floor.gameObject);
+                    }
+                    dungeonFloorObjects.Clear();
+                    for (var i = 0; i < x.range.x; i++)
+                    {
+                        for (var j = 0; j < x.range.y; j++)
+                        {
+                            var floorObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Floor"), dungeonDocument.transform);
+                            dungeonFloorObjects.Add(floorObject);
+                            floorObject.position = new Vector3(i, 0, j);
+                        }
                     }
                 })
                 .RegisterTo(scope);
