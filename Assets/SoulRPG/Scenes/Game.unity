@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterData: {fileID: 11400000, guid: be2ddabe0b4b0cd4ba8667820a79ffe3, type: 2}
+  gameCameraControllerPrefab: {fileID: 362200604035762854, guid: 4ae303bf33904664a88a30327f24fac0, type: 3}
   gameDocumentPrefab: {fileID: 3672498495014125879, guid: 7bf281830fc4fa840be637dc2e71d6ea, type: 3}
   debugDungeonName: Dungeon.Test
   debugPosition: {x: 0, y: 0}

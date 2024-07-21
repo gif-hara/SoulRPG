@@ -13,19 +13,22 @@ namespace SoulRPG
     /// </summary>
     public sealed class GameView
     {
-        private readonly HKUIDocument documentPrefab;
+        private readonly HKUIDocument uiDocumentPrefab;
+
+        private readonly GameCameraController gameCameraController;
 
         private readonly Character character;
 
-        public GameView(HKUIDocument documentPrefab, Character character)
+        public GameView(HKUIDocument uiDocumentPrefab, GameCameraController gameCameraController, Character character)
         {
-            this.documentPrefab = documentPrefab;
+            this.uiDocumentPrefab = uiDocumentPrefab;
+            this.gameCameraController = gameCameraController;
             this.character = character;
         }
 
         public void Open(CancellationToken scope)
         {
-            var document = Object.Instantiate(documentPrefab);
+            var document = Object.Instantiate(uiDocumentPrefab);
             var positionText = document.Q<TMP_Text>("Text.Position");
             var directionText = document.Q<TMP_Text>("Text.Direction");
             var miniMapAreaDocument = document.Q<HKUIDocument>("Area.MiniMap");
@@ -39,6 +42,7 @@ namespace SoulRPG
                 {
                     positionText.text = $"Position: {x}";
                     miniMapTipsParent.anchoredPosition = new Vector2(-x.x * 100, -x.y * 100);
+                    gameCameraController.transform.position = new Vector3(x.x, 0, x.y);
                 })
                 .RegisterTo(scope);
             character.DirectionAsObservable()
@@ -46,6 +50,7 @@ namespace SoulRPG
                 {
                     directionText.text = $"Direction: {x}";
                     characterAreaTransform.rotation = Quaternion.Euler(0, 0, -x.ToAngle());
+                    gameCameraController.transform.rotation = Quaternion.Euler(0, x.ToAngle(), 0);
                 })
                 .RegisterTo(scope);
             character.DungeonAsObservable()

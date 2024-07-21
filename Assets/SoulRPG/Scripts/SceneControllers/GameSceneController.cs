@@ -13,6 +13,9 @@ namespace SoulRPG.SceneControllers
         private MasterData masterData;
 
         [SerializeField]
+        private GameCameraController gameCameraControllerPrefab;
+
+        [SerializeField]
         private HKUIDocument gameDocumentPrefab;
 
         [SerializeField]
@@ -26,7 +29,8 @@ namespace SoulRPG.SceneControllers
             await BootSystem.IsReady;
             TinyServiceLocator.Register(masterData);
             var player = new Character();
-            var gameView = new GameView(gameDocumentPrefab, player);
+            var gameCameraController = Instantiate(gameCameraControllerPrefab);
+            var gameView = new GameView(gameDocumentPrefab, gameCameraController, player);
             var playerController = new PlayerController();
             var inputActions = new InputActions();
             player.SetDungeon(masterData.Dungeons.Get(debugDungeonName), debugPosition);
