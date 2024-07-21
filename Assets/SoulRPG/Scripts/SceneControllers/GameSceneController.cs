@@ -10,11 +10,15 @@ namespace SoulRPG.SceneControllers
     public sealed class GameSceneController : MonoBehaviour
     {
         [SerializeField]
+        private MasterData masterData;
+
+        [SerializeField]
         private HKUIDocument gameDocumentPrefab;
 
         async void Start()
         {
             await BootSystem.IsReady;
+            TinyServiceLocator.Register(masterData);
             var player = new Character();
             var gameView = new GameView(gameDocumentPrefab, player);
             var playerController = new PlayerController();
