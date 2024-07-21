@@ -165,6 +165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterData: {fileID: 11400000, guid: be2ddabe0b4b0cd4ba8667820a79ffe3, type: 2}
   gameDocumentPrefab: {fileID: 3672498495014125879, guid: 7bf281830fc4fa840be637dc2e71d6ea, type: 3}
+  debugDungeonName: Dungeon.Test
+  debugPosition: {x: 0, y: 0}
 --- !u!1 &830182097
 GameObject:
   m_ObjectHideFlags: 0
