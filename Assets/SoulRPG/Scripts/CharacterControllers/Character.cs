@@ -27,5 +27,10 @@ namespace SoulRPG.CharacterControllers
         }
 
         public ReadOnlyReactiveProperty<Define.Direction> DirectionAsObservable() => direction;
+
+        public void Move(Vector2Int velocity)
+        {
+            Position += velocity;
+        }
     }
 }
