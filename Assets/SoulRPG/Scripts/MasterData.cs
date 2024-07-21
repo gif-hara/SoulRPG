@@ -14,46 +14,22 @@ namespace SoulRPG
     public sealed class MasterData : ScriptableObject
     {
         [SerializeField]
-        private DungeonWall.DictionaryList dungeonWalls;
-        public DungeonWall.DictionaryList DungeonWalls => dungeonWalls;
+        private Dungeon.DictionaryList dungeons;
+        public Dungeon.DictionaryList Dungeons => dungeons;
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
         private async void UpdateMasterData()
         {
             Debug.Log("Begin MasterData Update");
-            var database = await UniTask.WhenAll(
-                GoogleSpreadSheetDownloader.DownloadAsync("Dungeon.Test")
-            );
-
-            var cellData = new SpreadSheetDungeonCellData.DictionaryList();
-            cellData.Set(JsonHelper.FromJson<SpreadSheetDungeonCellData>(database[0]));
-            var dw = new List<DungeonWall>();
-            foreach (var i in cellData.List)
+            var dungeonNames = new string[]
             {
-                if (i.borders.top)
-                {
-                    dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y) });
-                    dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y) });
-                }
-                if (i.borders.bottom)
-                {
-                    dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y + 1) });
-                    dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y + 1) });
-                }
-                if (i.borders.left)
-                {
-                    dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y) });
-                    dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y + 1) });
-                }
-                if (i.borders.right)
-                {
-                    dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y) });
-                    dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y + 1) });
-                }
-            }
-            dw = dw.Distinct().ToList();
-            dungeonWalls.Set(dw);
+                "Dungeon.Test"
+            };
+            var database = await UniTask.WhenAll(
+                dungeonNames.Select(x => GoogleSpreadSheetDownloader.DownloadAsync(x))
+            );
+            dungeons.Set(database.Select((x, i) => Dungeon.Create(dungeonNames[i], x)));
 
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
@@ -108,6 +84,56 @@ namespace SoulRPG
             public sealed class DictionaryList : DictionaryList<Vector2Int, DungeonWall>
             {
                 public DictionaryList() : base(x => x.position) { }
+            }
+        }
+
+        [Serializable]
+        public class Dungeon
+        {
+            public string name;
+
+            public DungeonWall.DictionaryList wall = new();
+
+            [Serializable]
+            public sealed class DictionaryList : DictionaryList<string, Dungeon>
+            {
+                public DictionaryList() : base(x => x.name) { }
+            }
+
+            public static Dungeon Create(string name, string wallData)
+            {
+                var cellData = new SpreadSheetDungeonCellData.DictionaryList();
+                cellData.Set(JsonHelper.FromJson<SpreadSheetDungeonCellData>(wallData));
+                var dw = new List<DungeonWall>();
+                foreach (var i in cellData.List)
+                {
+                    if (i.borders.top)
+                    {
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y) });
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y) });
+                    }
+                    if (i.borders.bottom)
+                    {
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y + 1) });
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y + 1) });
+                    }
+                    if (i.borders.left)
+                    {
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y) });
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y + 1) });
+                    }
+                    if (i.borders.right)
+                    {
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y) });
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y + 1) });
+                    }
+                }
+                var result = new Dungeon
+                {
+                    name = name
+                };
+                result.wall.Set(dw.Distinct());
+                return result;
             }
         }
     }
