@@ -68,22 +68,24 @@ namespace SoulRPG
         [Serializable]
         public class DungeonWall : IEquatable<DungeonWall>
         {
-            public Vector2Int position;
+            public Vector2Int a;
+
+            public Vector2Int b;
 
             public bool Equals(DungeonWall other)
             {
-                return position == other.position;
+                return a == other.a && b == other.b;
             }
 
             public override int GetHashCode()
             {
-                return position.GetHashCode();
+                return a.GetHashCode() ^ b.GetHashCode();
             }
 
             [Serializable]
-            public sealed class DictionaryList : DictionaryList<Vector2Int, DungeonWall>
+            public sealed class DictionaryList : DictionaryList<(Vector2Int, Vector2Int), DungeonWall>
             {
-                public DictionaryList() : base(x => x.position) { }
+                public DictionaryList() : base(x => (x.a, x.b)) { }
             }
         }
 
@@ -109,23 +111,35 @@ namespace SoulRPG
                 {
                     if (i.borders.top)
                     {
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y) });
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y) });
+                        dw.Add(new DungeonWall
+                        {
+                            a = new Vector2Int(i.x, i.y),
+                            b = new Vector2Int(i.x + 1, i.y)
+                        });
                     }
                     if (i.borders.bottom)
                     {
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y - 1) });
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y - 1) });
+                        dw.Add(new DungeonWall
+                        {
+                            a = new Vector2Int(i.x, i.y - 1),
+                            b = new Vector2Int(i.x + 1, i.y - 1)
+                        });
                     }
                     if (i.borders.left)
                     {
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y) });
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y - 1) });
+                        dw.Add(new DungeonWall
+                        {
+                            a = new Vector2Int(i.x, i.y),
+                            b = new Vector2Int(i.x, i.y - 1)
+                        });
                     }
                     if (i.borders.right)
                     {
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y) });
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y - 1) });
+                        dw.Add(new DungeonWall
+                        {
+                            a = new Vector2Int(i.x + 1, i.y),
+                            b = new Vector2Int(i.x + 1, i.y - 1)
+                        });
                     }
                 }
                 var result = new Dungeon

@@ -12,238 +12,232 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caeb89e63906b164d9831fbeb45c2f51, type: 3}
   m_Name: MasterData
   m_EditorClassIdentifier: 
-  dungeonWalls:
-    list:
-    - position: {x: 0, y: 0}
-    - position: {x: 1, y: 0}
-    - position: {x: 0, y: 1}
-    - position: {x: 2, y: 0}
-    - position: {x: 3, y: 0}
-    - position: {x: 4, y: 0}
-    - position: {x: 5, y: 0}
-    - position: {x: 6, y: 0}
-    - position: {x: 7, y: 0}
-    - position: {x: 8, y: 0}
-    - position: {x: 9, y: 0}
-    - position: {x: 10, y: 0}
-    - position: {x: 11, y: 0}
-    - position: {x: 12, y: 0}
-    - position: {x: 13, y: 0}
-    - position: {x: 14, y: 0}
-    - position: {x: 15, y: 0}
-    - position: {x: 16, y: 0}
-    - position: {x: 17, y: 0}
-    - position: {x: 18, y: 0}
-    - position: {x: 19, y: 0}
-    - position: {x: 20, y: 0}
-    - position: {x: 21, y: 0}
-    - position: {x: 22, y: 0}
-    - position: {x: 23, y: 0}
-    - position: {x: 24, y: 0}
-    - position: {x: 25, y: 0}
-    - position: {x: 26, y: 0}
-    - position: {x: 26, y: 1}
-    - position: {x: 0, y: 2}
-    - position: {x: 1, y: 1}
-    - position: {x: 1, y: 2}
-    - position: {x: 26, y: 2}
-    - position: {x: 0, y: 3}
-    - position: {x: 1, y: 3}
-    - position: {x: 26, y: 3}
-    - position: {x: 0, y: 4}
-    - position: {x: 1, y: 4}
-    - position: {x: 26, y: 4}
-    - position: {x: 0, y: 5}
-    - position: {x: 1, y: 5}
-    - position: {x: 26, y: 5}
-    - position: {x: 0, y: 6}
-    - position: {x: 1, y: 6}
-    - position: {x: 26, y: 6}
-    - position: {x: 0, y: 7}
-    - position: {x: 1, y: 7}
-    - position: {x: 26, y: 7}
-    - position: {x: 0, y: 8}
-    - position: {x: 26, y: 8}
-    - position: {x: 1, y: 8}
-    - position: {x: 0, y: 9}
-    - position: {x: 2, y: 8}
-    - position: {x: 3, y: 8}
-    - position: {x: 26, y: 9}
-    - position: {x: 0, y: 10}
-    - position: {x: 26, y: 10}
-    - position: {x: 0, y: 11}
-    - position: {x: 26, y: 11}
-    - position: {x: 0, y: 12}
-    - position: {x: 26, y: 12}
-    - position: {x: 0, y: 13}
-    - position: {x: 26, y: 13}
-    - position: {x: 0, y: 14}
-    - position: {x: 26, y: 14}
-    - position: {x: 0, y: 15}
-    - position: {x: 26, y: 15}
-    - position: {x: 0, y: 16}
-    - position: {x: 26, y: 16}
-    - position: {x: 0, y: 17}
-    - position: {x: 26, y: 17}
-    - position: {x: 0, y: 18}
-    - position: {x: 26, y: 18}
-    - position: {x: 0, y: 19}
-    - position: {x: 26, y: 19}
-    - position: {x: 0, y: 20}
-    - position: {x: 26, y: 20}
-    - position: {x: 0, y: 21}
-    - position: {x: 26, y: 21}
-    - position: {x: 0, y: 22}
-    - position: {x: 26, y: 22}
-    - position: {x: 0, y: 23}
-    - position: {x: 26, y: 23}
-    - position: {x: 0, y: 24}
-    - position: {x: 26, y: 24}
-    - position: {x: 0, y: 25}
-    - position: {x: 26, y: 25}
-    - position: {x: 0, y: 26}
-    - position: {x: 1, y: 26}
-    - position: {x: 2, y: 26}
-    - position: {x: 3, y: 26}
-    - position: {x: 4, y: 26}
-    - position: {x: 5, y: 26}
-    - position: {x: 6, y: 26}
-    - position: {x: 7, y: 26}
-    - position: {x: 8, y: 26}
-    - position: {x: 9, y: 26}
-    - position: {x: 10, y: 26}
-    - position: {x: 11, y: 26}
-    - position: {x: 12, y: 26}
-    - position: {x: 13, y: 26}
-    - position: {x: 14, y: 26}
-    - position: {x: 15, y: 26}
-    - position: {x: 16, y: 26}
-    - position: {x: 17, y: 26}
-    - position: {x: 18, y: 26}
-    - position: {x: 19, y: 26}
-    - position: {x: 20, y: 26}
-    - position: {x: 21, y: 26}
-    - position: {x: 22, y: 26}
-    - position: {x: 23, y: 26}
-    - position: {x: 24, y: 26}
-    - position: {x: 25, y: 26}
-    - position: {x: 26, y: 26}
   dungeons:
     list:
     - name: Dungeon.Test
       wall:
         list:
-        - position: {x: 0, y: 0}
-        - position: {x: 1, y: 0}
-        - position: {x: 0, y: 1}
-        - position: {x: 2, y: 0}
-        - position: {x: 3, y: 0}
-        - position: {x: 4, y: 0}
-        - position: {x: 5, y: 0}
-        - position: {x: 6, y: 0}
-        - position: {x: 7, y: 0}
-        - position: {x: 8, y: 0}
-        - position: {x: 9, y: 0}
-        - position: {x: 10, y: 0}
-        - position: {x: 11, y: 0}
-        - position: {x: 12, y: 0}
-        - position: {x: 13, y: 0}
-        - position: {x: 14, y: 0}
-        - position: {x: 15, y: 0}
-        - position: {x: 16, y: 0}
-        - position: {x: 17, y: 0}
-        - position: {x: 18, y: 0}
-        - position: {x: 19, y: 0}
-        - position: {x: 20, y: 0}
-        - position: {x: 21, y: 0}
-        - position: {x: 22, y: 0}
-        - position: {x: 23, y: 0}
-        - position: {x: 24, y: 0}
-        - position: {x: 25, y: 0}
-        - position: {x: 26, y: 0}
-        - position: {x: 26, y: 1}
-        - position: {x: 0, y: 2}
-        - position: {x: 1, y: 1}
-        - position: {x: 1, y: 2}
-        - position: {x: 26, y: 2}
-        - position: {x: 0, y: 3}
-        - position: {x: 1, y: 3}
-        - position: {x: 26, y: 3}
-        - position: {x: 0, y: 4}
-        - position: {x: 1, y: 4}
-        - position: {x: 26, y: 4}
-        - position: {x: 0, y: 5}
-        - position: {x: 1, y: 5}
-        - position: {x: 26, y: 5}
-        - position: {x: 0, y: 6}
-        - position: {x: 1, y: 6}
-        - position: {x: 26, y: 6}
-        - position: {x: 0, y: 7}
-        - position: {x: 1, y: 7}
-        - position: {x: 26, y: 7}
-        - position: {x: 0, y: 8}
-        - position: {x: 26, y: 8}
-        - position: {x: 1, y: 8}
-        - position: {x: 0, y: 9}
-        - position: {x: 2, y: 8}
-        - position: {x: 3, y: 8}
-        - position: {x: 26, y: 9}
-        - position: {x: 0, y: 10}
-        - position: {x: 26, y: 10}
-        - position: {x: 0, y: 11}
-        - position: {x: 26, y: 11}
-        - position: {x: 0, y: 12}
-        - position: {x: 26, y: 12}
-        - position: {x: 0, y: 13}
-        - position: {x: 26, y: 13}
-        - position: {x: 0, y: 14}
-        - position: {x: 26, y: 14}
-        - position: {x: 0, y: 15}
-        - position: {x: 26, y: 15}
-        - position: {x: 0, y: 16}
-        - position: {x: 26, y: 16}
-        - position: {x: 0, y: 17}
-        - position: {x: 26, y: 17}
-        - position: {x: 0, y: 18}
-        - position: {x: 26, y: 18}
-        - position: {x: 0, y: 19}
-        - position: {x: 26, y: 19}
-        - position: {x: 0, y: 20}
-        - position: {x: 26, y: 20}
-        - position: {x: 0, y: 21}
-        - position: {x: 26, y: 21}
-        - position: {x: 0, y: 22}
-        - position: {x: 26, y: 22}
-        - position: {x: 0, y: 23}
-        - position: {x: 26, y: 23}
-        - position: {x: 0, y: 24}
-        - position: {x: 26, y: 24}
-        - position: {x: 0, y: 25}
-        - position: {x: 26, y: 25}
-        - position: {x: 0, y: 26}
-        - position: {x: 1, y: 26}
-        - position: {x: 2, y: 26}
-        - position: {x: 3, y: 26}
-        - position: {x: 4, y: 26}
-        - position: {x: 5, y: 26}
-        - position: {x: 6, y: 26}
-        - position: {x: 7, y: 26}
-        - position: {x: 8, y: 26}
-        - position: {x: 9, y: 26}
-        - position: {x: 10, y: 26}
-        - position: {x: 11, y: 26}
-        - position: {x: 12, y: 26}
-        - position: {x: 13, y: 26}
-        - position: {x: 14, y: 26}
-        - position: {x: 15, y: 26}
-        - position: {x: 16, y: 26}
-        - position: {x: 17, y: 26}
-        - position: {x: 18, y: 26}
-        - position: {x: 19, y: 26}
-        - position: {x: 20, y: 26}
-        - position: {x: 21, y: 26}
-        - position: {x: 22, y: 26}
-        - position: {x: 23, y: 26}
-        - position: {x: 24, y: 26}
-        - position: {x: 25, y: 26}
-        - position: {x: 26, y: 26}
+        - a: {x: 0, y: 25}
+          b: {x: 1, y: 25}
+        - a: {x: 0, y: 25}
+          b: {x: 0, y: 24}
+        - a: {x: 1, y: 25}
+          b: {x: 2, y: 25}
+        - a: {x: 2, y: 25}
+          b: {x: 3, y: 25}
+        - a: {x: 3, y: 25}
+          b: {x: 4, y: 25}
+        - a: {x: 4, y: 25}
+          b: {x: 5, y: 25}
+        - a: {x: 5, y: 25}
+          b: {x: 6, y: 25}
+        - a: {x: 6, y: 25}
+          b: {x: 7, y: 25}
+        - a: {x: 7, y: 25}
+          b: {x: 8, y: 25}
+        - a: {x: 8, y: 25}
+          b: {x: 9, y: 25}
+        - a: {x: 9, y: 25}
+          b: {x: 10, y: 25}
+        - a: {x: 10, y: 25}
+          b: {x: 11, y: 25}
+        - a: {x: 11, y: 25}
+          b: {x: 12, y: 25}
+        - a: {x: 12, y: 25}
+          b: {x: 13, y: 25}
+        - a: {x: 13, y: 25}
+          b: {x: 14, y: 25}
+        - a: {x: 14, y: 25}
+          b: {x: 15, y: 25}
+        - a: {x: 15, y: 25}
+          b: {x: 16, y: 25}
+        - a: {x: 16, y: 25}
+          b: {x: 17, y: 25}
+        - a: {x: 17, y: 25}
+          b: {x: 18, y: 25}
+        - a: {x: 18, y: 25}
+          b: {x: 19, y: 25}
+        - a: {x: 19, y: 25}
+          b: {x: 20, y: 25}
+        - a: {x: 20, y: 25}
+          b: {x: 21, y: 25}
+        - a: {x: 21, y: 25}
+          b: {x: 22, y: 25}
+        - a: {x: 22, y: 25}
+          b: {x: 23, y: 25}
+        - a: {x: 23, y: 25}
+          b: {x: 24, y: 25}
+        - a: {x: 24, y: 25}
+          b: {x: 25, y: 25}
+        - a: {x: 25, y: 25}
+          b: {x: 26, y: 25}
+        - a: {x: 26, y: 25}
+          b: {x: 26, y: 24}
+        - a: {x: 0, y: 24}
+          b: {x: 0, y: 23}
+        - a: {x: 26, y: 24}
+          b: {x: 26, y: 23}
+        - a: {x: 0, y: 23}
+          b: {x: 0, y: 22}
+        - a: {x: 26, y: 23}
+          b: {x: 26, y: 22}
+        - a: {x: 0, y: 22}
+          b: {x: 0, y: 21}
+        - a: {x: 26, y: 22}
+          b: {x: 26, y: 21}
+        - a: {x: 0, y: 21}
+          b: {x: 0, y: 20}
+        - a: {x: 26, y: 21}
+          b: {x: 26, y: 20}
+        - a: {x: 0, y: 20}
+          b: {x: 0, y: 19}
+        - a: {x: 26, y: 20}
+          b: {x: 26, y: 19}
+        - a: {x: 0, y: 19}
+          b: {x: 0, y: 18}
+        - a: {x: 26, y: 19}
+          b: {x: 26, y: 18}
+        - a: {x: 0, y: 18}
+          b: {x: 0, y: 17}
+        - a: {x: 26, y: 18}
+          b: {x: 26, y: 17}
+        - a: {x: 0, y: 17}
+          b: {x: 0, y: 16}
+        - a: {x: 26, y: 17}
+          b: {x: 26, y: 16}
+        - a: {x: 0, y: 16}
+          b: {x: 0, y: 15}
+        - a: {x: 26, y: 16}
+          b: {x: 26, y: 15}
+        - a: {x: 0, y: 15}
+          b: {x: 0, y: 14}
+        - a: {x: 26, y: 15}
+          b: {x: 26, y: 14}
+        - a: {x: 0, y: 14}
+          b: {x: 0, y: 13}
+        - a: {x: 26, y: 14}
+          b: {x: 26, y: 13}
+        - a: {x: 0, y: 13}
+          b: {x: 0, y: 12}
+        - a: {x: 26, y: 13}
+          b: {x: 26, y: 12}
+        - a: {x: 0, y: 12}
+          b: {x: 0, y: 11}
+        - a: {x: 26, y: 12}
+          b: {x: 26, y: 11}
+        - a: {x: 0, y: 11}
+          b: {x: 0, y: 10}
+        - a: {x: 26, y: 11}
+          b: {x: 26, y: 10}
+        - a: {x: 0, y: 10}
+          b: {x: 0, y: 9}
+        - a: {x: 26, y: 10}
+          b: {x: 26, y: 9}
+        - a: {x: 0, y: 9}
+          b: {x: 0, y: 8}
+        - a: {x: 26, y: 9}
+          b: {x: 26, y: 8}
+        - a: {x: 0, y: 8}
+          b: {x: 0, y: 7}
+        - a: {x: 26, y: 8}
+          b: {x: 26, y: 7}
+        - a: {x: 0, y: 7}
+          b: {x: 0, y: 6}
+        - a: {x: 26, y: 7}
+          b: {x: 26, y: 6}
+        - a: {x: 0, y: 6}
+          b: {x: 0, y: 5}
+        - a: {x: 26, y: 6}
+          b: {x: 26, y: 5}
+        - a: {x: 0, y: 5}
+          b: {x: 0, y: 4}
+        - a: {x: 26, y: 5}
+          b: {x: 26, y: 4}
+        - a: {x: 0, y: 4}
+          b: {x: 0, y: 3}
+        - a: {x: 26, y: 4}
+          b: {x: 26, y: 3}
+        - a: {x: 0, y: 3}
+          b: {x: 0, y: 2}
+        - a: {x: 26, y: 3}
+          b: {x: 26, y: 2}
+        - a: {x: 0, y: 2}
+          b: {x: 0, y: 1}
+        - a: {x: 1, y: 2}
+          b: {x: 2, y: 2}
+        - a: {x: 1, y: 2}
+          b: {x: 1, y: 1}
+        - a: {x: 2, y: 2}
+          b: {x: 3, y: 2}
+        - a: {x: 3, y: 2}
+          b: {x: 3, y: 1}
+        - a: {x: 26, y: 2}
+          b: {x: 26, y: 1}
+        - a: {x: 0, y: 1}
+          b: {x: 0, y: 0}
+        - a: {x: 1, y: 0}
+          b: {x: 2, y: 0}
+        - a: {x: 1, y: 1}
+          b: {x: 1, y: 0}
+        - a: {x: 2, y: 0}
+          b: {x: 3, y: 0}
+        - a: {x: 3, y: 1}
+          b: {x: 3, y: 0}
+        - a: {x: 26, y: 1}
+          b: {x: 26, y: 0}
+        - a: {x: 0, y: -1}
+          b: {x: 1, y: -1}
+        - a: {x: 0, y: 0}
+          b: {x: 0, y: -1}
+        - a: {x: 1, y: -1}
+          b: {x: 2, y: -1}
+        - a: {x: 2, y: -1}
+          b: {x: 3, y: -1}
+        - a: {x: 3, y: -1}
+          b: {x: 4, y: -1}
+        - a: {x: 4, y: -1}
+          b: {x: 5, y: -1}
+        - a: {x: 5, y: -1}
+          b: {x: 6, y: -1}
+        - a: {x: 6, y: -1}
+          b: {x: 7, y: -1}
+        - a: {x: 7, y: -1}
+          b: {x: 8, y: -1}
+        - a: {x: 8, y: -1}
+          b: {x: 9, y: -1}
+        - a: {x: 9, y: -1}
+          b: {x: 10, y: -1}
+        - a: {x: 10, y: -1}
+          b: {x: 11, y: -1}
+        - a: {x: 11, y: -1}
+          b: {x: 12, y: -1}
+        - a: {x: 12, y: -1}
+          b: {x: 13, y: -1}
+        - a: {x: 13, y: -1}
+          b: {x: 14, y: -1}
+        - a: {x: 14, y: -1}
+          b: {x: 15, y: -1}
+        - a: {x: 15, y: -1}
+          b: {x: 16, y: -1}
+        - a: {x: 16, y: -1}
+          b: {x: 17, y: -1}
+        - a: {x: 17, y: -1}
+          b: {x: 18, y: -1}
+        - a: {x: 18, y: -1}
+          b: {x: 19, y: -1}
+        - a: {x: 19, y: -1}
+          b: {x: 20, y: -1}
+        - a: {x: 20, y: -1}
+          b: {x: 21, y: -1}
+        - a: {x: 21, y: -1}
+          b: {x: 22, y: -1}
+        - a: {x: 22, y: -1}
+          b: {x: 23, y: -1}
+        - a: {x: 23, y: -1}
+          b: {x: 24, y: -1}
+        - a: {x: 24, y: -1}
+          b: {x: 25, y: -1}
+        - a: {x: 25, y: -1}
+          b: {x: 26, y: -1}
+        - a: {x: 26, y: 0}
+          b: {x: 26, y: -1}
