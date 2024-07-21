@@ -8,7 +8,7 @@ namespace SoulRPG
     /// </summary>
     public sealed class GoogleSpreadSheetDownloader
     {
-        const string url = "https://script.google.com/macros/s/AKfycbwkaCI4AsDmssprEoUoe9YAMUg6JyzMQmbzDCD6NsfcMC_GdGO_NAjcfQpWp-bl0YH89w/exec";
+        const string url = "https://script.google.com/macros/s/AKfycbw-n4D0ryL4Q-oWe41IpCQJSb3awodQgP5KNxLxjKs21H89foIBO4lsKXA72oTW00zm4Q/exec";
 
         public static async UniTask<string> DownloadAsync(string sheetName)
         {
