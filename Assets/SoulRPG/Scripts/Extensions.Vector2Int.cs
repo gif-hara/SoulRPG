@@ -15,7 +15,7 @@ namespace SoulRPG
                 (1, 0) => Define.Direction.Right,
                 (0, -1) => Define.Direction.Down,
                 (-1, 0) => Define.Direction.Left,
-                _ => throw new System.ArgumentOutOfRangeException(nameof(self), self, "Invalid direction vector"),
+                _ => throw new System.ArgumentOutOfRangeException(nameof(self), self, $"Invalid direction vector: {self}"),
             };
         }
 
