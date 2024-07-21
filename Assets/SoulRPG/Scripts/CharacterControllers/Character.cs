@@ -29,12 +29,12 @@ namespace SoulRPG.CharacterControllers
 
         public ReadOnlyReactiveProperty<Define.Direction> DirectionAsObservable() => direction;
 
-        private MasterData.Dungeon dungeon;
+        public MasterData.Dungeon Dungeon { get; private set; }
 
         public void Move(Vector2Int velocity)
         {
-            Assert.IsNotNull(dungeon, "Dungeon is null");
-            if (dungeon.IsExistWall(Position, velocity.ToDirection()))
+            Assert.IsNotNull(Dungeon, "Dungeon is null");
+            if (Dungeon.IsExistWall(Position, velocity.ToDirection()))
             {
                 return;
             }
@@ -48,7 +48,7 @@ namespace SoulRPG.CharacterControllers
 
         public void SetDungeon(MasterData.Dungeon dungeon, Vector2Int position)
         {
-            this.dungeon = dungeon;
+            this.Dungeon = dungeon;
             Warp(position);
         }
     }
