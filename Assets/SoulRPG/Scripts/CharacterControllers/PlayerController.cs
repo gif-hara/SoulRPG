@@ -28,7 +28,6 @@ namespace SoulRPG
                     }
                     else
                     {
-
                         velocity = player.Direction.TransformVelocityByDirection(velocity);
                         player.Position += new Vector2Int(velocity.x, velocity.y);
                     }
