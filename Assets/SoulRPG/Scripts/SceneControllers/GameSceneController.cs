@@ -15,6 +15,12 @@ namespace SoulRPG.SceneControllers
         [SerializeField]
         private HKUIDocument gameDocumentPrefab;
 
+        [SerializeField]
+        private string debugDungeonName;
+
+        [SerializeField]
+        private Vector2Int debugPosition;
+
         async void Start()
         {
             await BootSystem.IsReady;
@@ -23,6 +29,7 @@ namespace SoulRPG.SceneControllers
             var gameView = new GameView(gameDocumentPrefab, player);
             var playerController = new PlayerController();
             var inputActions = new InputActions();
+            player.SetDungeon(masterData.Dungeons.Get(debugDungeonName), debugPosition);
             playerController.Attach(inputActions, player, destroyCancellationToken);
             gameView.Open(destroyCancellationToken);
             inputActions.Enable();
