@@ -114,18 +114,18 @@ namespace SoulRPG
                     }
                     if (i.borders.bottom)
                     {
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y + 1) });
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y + 1) });
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y - 1) });
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y - 1) });
                     }
                     if (i.borders.left)
                     {
                         dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y) });
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y + 1) });
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x, i.y - 1) });
                     }
                     if (i.borders.right)
                     {
                         dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y) });
-                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y + 1) });
+                        dw.Add(new DungeonWall { position = new Vector2Int(i.x + 1, i.y - 1) });
                     }
                 }
                 var result = new Dungeon
