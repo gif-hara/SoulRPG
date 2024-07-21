@@ -539,6 +539,8 @@ MonoBehaviour:
   elements:
   - document: {fileID: 7159250007143929860}
     overrideName: 
+  - document: {fileID: 8101275882166660962, guid: 1338206bf6145c041bcfa4fcbc1ee9e7, type: 3}
+    overrideName: 
 --- !u!1001 &5258740381958581288
 PrefabInstance:
   m_ObjectHideFlags: 0
