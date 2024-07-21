@@ -47,6 +47,7 @@ namespace SoulRPG
             var miniMapWallObjects = new List<RectTransform>();
             var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
             var dungeonFloorObjects = new List<Transform>();
+            var dungeonWallObjects = new List<Transform>();
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
@@ -93,6 +94,20 @@ namespace SoulRPG
                             dungeonFloorObjects.Add(floorObject);
                             floorObject.position = new Vector3(i, 0, j);
                         }
+                    }
+
+                    foreach (var wall in dungeonWallObjects)
+                    {
+                        Object.Destroy(wall.gameObject);
+                    }
+                    dungeonWallObjects.Clear();
+                    foreach (var i in x.wall.List)
+                    {
+                        var isHorizontal = i.a.y == i.b.y;
+                        var prefab = isHorizontal ? dungeonDocument.Q<Transform>("Dungeon.Wall.Top") : dungeonDocument.Q<Transform>("Dungeon.Wall.Left");
+                        var wallObject = Object.Instantiate(prefab, dungeonDocument.transform);
+                        dungeonWallObjects.Add(wallObject);
+                        wallObject.position = new Vector3(i.a.x, 0, i.a.y);
                     }
                 })
                 .RegisterTo(scope);
