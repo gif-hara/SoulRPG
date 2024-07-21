@@ -28,6 +28,10 @@ namespace SoulRPG
                     }
                     else
                     {
+                        if (velocity == Vector2Int.zero)
+                        {
+                            return;
+                        }
                         velocity = player.Direction.TransformVelocityByDirection(velocity);
                         player.Move(velocity);
                     }
