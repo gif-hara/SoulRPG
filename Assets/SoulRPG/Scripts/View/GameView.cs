@@ -29,7 +29,7 @@ namespace SoulRPG
             var positionText = document.Q<TMP_Text>("Text.Position");
             var directionText = document.Q<TMP_Text>("Text.Direction");
             var miniMapAreaDocument = document.Q<HKUIDocument>("Area.MiniMap");
-            var miniMapTipsAreaDocument = miniMapAreaDocument.Q<Transform>("Area.Tips");
+            var miniMapTipsParent = miniMapAreaDocument.Q<RectTransform>("Area.Tips.Viewport");
             var characterAreaTransform = miniMapAreaDocument.Q<Transform>("Area.Character");
             var miniMapWallTopPrefab = miniMapAreaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Top");
             var miniMapWallLeftPrefab = miniMapAreaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Left");
@@ -38,20 +38,7 @@ namespace SoulRPG
                 .Subscribe(x =>
                 {
                     positionText.text = $"Position: {x}";
-                    foreach (var wall in miniMapWallObjects)
-                    {
-                        Object.Destroy(wall.gameObject);
-                    }
-                    miniMapWallObjects.Clear();
-                    var walls = character.Dungeon.GetWalls(new RectInt(x - new Vector2Int(2, 2), new Vector2Int(5, 5)));
-                    foreach (var wall in walls)
-                    {
-                        var isHorizontal = wall.a.y == wall.b.y;
-                        var prefab = isHorizontal ? miniMapWallTopPrefab : miniMapWallLeftPrefab;
-                        var wallObject = Object.Instantiate(prefab, miniMapTipsAreaDocument.transform);
-                        miniMapWallObjects.Add(wallObject);
-                        wallObject.anchoredPosition = (x - new Vector2(wall.a.x, wall.a.y)) * -100;
-                    }
+                    miniMapTipsParent.anchoredPosition = new Vector2(-x.x * 100, -x.y * 100);
                 })
                 .RegisterTo(scope);
             character.DirectionAsObservable()
@@ -59,6 +46,24 @@ namespace SoulRPG
                 {
                     directionText.text = $"Direction: {x}";
                     characterAreaTransform.rotation = Quaternion.Euler(0, 0, -x.ToAngle());
+                })
+                .RegisterTo(scope);
+            character.DungeonAsObservable()
+                .Subscribe(x =>
+                {
+                    foreach (var wall in miniMapWallObjects)
+                    {
+                        Object.Destroy(wall.gameObject);
+                    }
+                    miniMapWallObjects.Clear();
+                    foreach (var i in x.wall.List)
+                    {
+                        var isHorizontal = i.a.y == i.b.y;
+                        var prefab = isHorizontal ? miniMapWallTopPrefab : miniMapWallLeftPrefab;
+                        var wallObject = Object.Instantiate(prefab, miniMapTipsParent.transform);
+                        miniMapWallObjects.Add(wallObject);
+                        wallObject.anchoredPosition = new Vector2(i.a.x * 100, i.a.y * 100);
+                    }
                 })
                 .RegisterTo(scope);
         }
