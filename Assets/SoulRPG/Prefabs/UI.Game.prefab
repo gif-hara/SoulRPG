@@ -382,7 +382,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3753519765748751356
 GameObject:
@@ -788,9 +788,13 @@ MonoBehaviour:
   elements:
   - document: {fileID: 7159250007143929860}
     overrideName: 
+  - document: {fileID: 3052036655460106279}
+    overrideName: 
   - document: {fileID: 8101275882166660962, guid: 1338206bf6145c041bcfa4fcbc1ee9e7, type: 3}
     overrideName: 
-  - document: {fileID: 3052036655460106279}
+  - document: {fileID: 8491296199173971465, guid: 151e3676282e4d54fba721b42625a448, type: 3}
+    overrideName: 
+  - document: {fileID: 8491296199173971465, guid: abf75ac1f590d004cbb9ec8e5c2b93b1, type: 3}
     overrideName: 
 --- !u!1001 &5258740381958581288
 PrefabInstance:
