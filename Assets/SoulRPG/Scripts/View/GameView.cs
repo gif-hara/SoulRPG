@@ -27,16 +27,20 @@ namespace SoulRPG
             var document = Object.Instantiate(documentPrefab);
             var positionText = document.Q<TMP_Text>("Text.Position");
             var directionText = document.Q<TMP_Text>("Text.Direction");
+            var miniMapAreaDocument = document.Q<HKUIDocument>("Area.MiniMap");
+            var characterAreaTransform = miniMapAreaDocument.Q<Transform>("Area.Character");
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
                     positionText.text = $"Position: {x}";
+
                 })
                 .RegisterTo(scope);
             character.DirectionAsObservable()
                 .Subscribe(x =>
                 {
                     directionText.text = $"Direction: {x}";
+                    characterAreaTransform.rotation = Quaternion.Euler(0, 0, -x.ToAngle());
                 })
                 .RegisterTo(scope);
         }

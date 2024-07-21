@@ -78,5 +78,17 @@ namespace SoulRPG
                 _ => throw new System.ArgumentOutOfRangeException()
             };
         }
+
+        public static float ToAngle(this Define.Direction self)
+        {
+            return self switch
+            {
+                Define.Direction.Up => 0.0f,
+                Define.Direction.Right => 90.0f,
+                Define.Direction.Down => 180.0f,
+                Define.Direction.Left => 270.0f,
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
+        }
     }
 }
