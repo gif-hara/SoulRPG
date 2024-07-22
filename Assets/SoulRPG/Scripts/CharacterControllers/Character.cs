@@ -1,7 +1,6 @@
 using HK;
 using R3;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace SoulRPG.CharacterControllers
 {
