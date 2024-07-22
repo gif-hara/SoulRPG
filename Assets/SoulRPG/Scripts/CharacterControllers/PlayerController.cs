@@ -1,4 +1,5 @@
 using System.Threading;
+using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
@@ -40,7 +41,7 @@ namespace SoulRPG
             inputActions.InGame.Interact.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    TinyServiceLocator.Resolve<DungeonController>().Interact(player);
+                    TinyServiceLocator.Resolve<DungeonController>().InteractAsync(player).Forget();
                 })
                 .RegisterTo(scope);
         }
