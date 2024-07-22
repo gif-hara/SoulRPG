@@ -45,13 +45,18 @@ namespace SoulRPG
 
         public UniTask InvokeOnItemAsync(Character character, MasterData.DungeonEvent dungeonEvent)
         {
+            var userData = TinyServiceLocator.Resolve<UserData>();
+            if (userData.ContainsCompletedEventId(dungeonEvent.Id))
+            {
+                Debug.Log("Already Completed");
+                return UniTask.CompletedTask;
+            }
             var masterDataEventItems = TinyServiceLocator.Resolve<MasterData>().DungeonEventItems.Get(dungeonEvent.Id);
             foreach (var item in masterDataEventItems)
             {
                 character.Inventory.Add(item.ItemId, item.Count);
                 Debug.Log($"Add Item {item.ItemId} x {item.Count}");
             }
-            var userData = TinyServiceLocator.Resolve<UserData>();
             userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsPermanent);
             return UniTask.CompletedTask;
         }
