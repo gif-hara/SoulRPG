@@ -16,11 +16,11 @@ namespace SoulRPG
         [SerializeField]
         private Dungeon.DictionaryList dungeons;
         public Dungeon.DictionaryList Dungeons => dungeons;
-        
+
         [SerializeField]
         private DungeonEvent.DictionaryList dungeonEvents;
         public DungeonEvent.DictionaryList DungeonEvents => dungeonEvents;
-        
+
         [SerializeField]
         private DungeonEventItem.Group dungeonEventItems;
         public DungeonEventItem.Group DungeonEventItems => dungeonEventItems;
@@ -184,7 +184,7 @@ namespace SoulRPG
             public int Y;
 
             public string EventType;
-            
+
             [Serializable]
             public class DictionaryList : DictionaryList<(string, int, int), DungeonEvent>
             {
@@ -200,7 +200,9 @@ namespace SoulRPG
             public int EventId;
 
             public int ItemId;
-            
+
+            public int Count;
+
             [Serializable]
             public class Group : Group<int, DungeonEventItem>
             {
