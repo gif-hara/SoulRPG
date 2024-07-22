@@ -238,3 +238,10 @@ MonoBehaviour:
       X: 0
       Y: 2
       EventType: SavePoint
+  dungeonEventItems:
+    list:
+    - Key: 101001
+      Value:
+      - Id: 1
+        EventId: 101001
+        ItemId: 101001
