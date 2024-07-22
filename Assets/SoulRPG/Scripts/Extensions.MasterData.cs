@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HK;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
 
@@ -82,10 +83,11 @@ namespace SoulRPG
             self.TryGetValue((position + Vector2Int.right, position + Vector2Int.right + Vector2Int.down), out var wall);
             return wall;
         }
-        
+
         public static bool TryGetValue(this MasterData.DungeonEvent.DictionaryList self, Character character, out MasterData.DungeonEvent dungeonEvent)
         {
-            return self.TryGetValue((character.Dungeon.name, character.Position.x, character.Position.y), out dungeonEvent);
+            var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
+            return self.TryGetValue((dungeonController.CurrentDungeon.name, character.Position.x, character.Position.y), out dungeonEvent);
         }
     }
 }

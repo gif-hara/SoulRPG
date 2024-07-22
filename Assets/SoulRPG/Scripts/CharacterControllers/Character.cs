@@ -1,3 +1,4 @@
+using HK;
 using R3;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -29,24 +30,14 @@ namespace SoulRPG.CharacterControllers
 
         public ReadOnlyReactiveProperty<Define.Direction> DirectionAsObservable() => direction;
 
-        private readonly ReactiveProperty<MasterData.Dungeon> dungeon = new();
-
-        public MasterData.Dungeon Dungeon
-        {
-            get => dungeon.Value;
-            private set => dungeon.Value = value;
-        }
-
-        public ReadOnlyReactiveProperty<MasterData.Dungeon> DungeonAsObservable() => dungeon;
-
         private readonly Inventory inventory = new();
 
         public Inventory Inventory => inventory;
 
         public void Move(Vector2Int velocity)
         {
-            Assert.IsNotNull(Dungeon, "Dungeon is null");
-            if (Dungeon.IsExistWall(Position, velocity.ToDirection()))
+            var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
+            if (dungeonController.CurrentDungeon.IsExistWall(Position, velocity.ToDirection()))
             {
                 return;
             }
@@ -56,12 +47,6 @@ namespace SoulRPG.CharacterControllers
         public void Warp(Vector2Int position)
         {
             Position = position;
-        }
-
-        public void SetDungeon(MasterData.Dungeon dungeon, Vector2Int position)
-        {
-            this.Dungeon = dungeon;
-            Warp(position);
         }
     }
 }

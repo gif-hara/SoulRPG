@@ -41,7 +41,9 @@ namespace SoulRPG.SceneControllers
                 );
             var playerController = new PlayerController();
             var inputActions = new InputActions();
-            player.SetDungeon(masterData.Dungeons.Get(debugDungeonName), debugPosition);
+            var dungeonController = new DungeonController();
+            TinyServiceLocator.Register(dungeonController);
+            dungeonController.Setup(debugDungeonName);
             playerController.Attach(inputActions, player, destroyCancellationToken);
             gameView.Open(destroyCancellationToken);
             inputActions.Enable();
