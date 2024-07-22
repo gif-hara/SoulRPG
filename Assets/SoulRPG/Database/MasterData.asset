@@ -327,3 +327,4 @@ MonoBehaviour:
       - Id: 1
         EventId: 101001
         ItemId: 101001
+        Count: 1
