@@ -37,7 +37,7 @@ namespace SoulRPG
                     }
                 })
                 .RegisterTo(scope);
-            inputActions.InGame.Search.OnPerformedAsObservable()
+            inputActions.InGame.Interact.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
                     var masterData = TinyServiceLocator.Resolve<MasterData>();

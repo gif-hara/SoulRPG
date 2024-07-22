@@ -48,7 +48,7 @@ namespace SoulRPG
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Search"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""ceab82d9-70f9-47c3-9042-a0d78f59508c"",
                     ""expectedControlType"": ""Button"",
@@ -131,7 +131,7 @@ namespace SoulRPG
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Search"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -144,7 +144,7 @@ namespace SoulRPG
             m_InGame = asset.FindActionMap("InGame", throwIfNotFound: true);
             m_InGame_Move = m_InGame.FindAction("Move", throwIfNotFound: true);
             m_InGame_Shift = m_InGame.FindAction("Shift", throwIfNotFound: true);
-            m_InGame_Search = m_InGame.FindAction("Search", throwIfNotFound: true);
+            m_InGame_Interact = m_InGame.FindAction("Interact", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -208,14 +208,14 @@ namespace SoulRPG
         private List<IInGameActions> m_InGameActionsCallbackInterfaces = new List<IInGameActions>();
         private readonly InputAction m_InGame_Move;
         private readonly InputAction m_InGame_Shift;
-        private readonly InputAction m_InGame_Search;
+        private readonly InputAction m_InGame_Interact;
         public struct InGameActions
         {
             private @InputActions m_Wrapper;
             public InGameActions(@InputActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_InGame_Move;
             public InputAction @Shift => m_Wrapper.m_InGame_Shift;
-            public InputAction @Search => m_Wrapper.m_InGame_Search;
+            public InputAction @Interact => m_Wrapper.m_InGame_Interact;
             public InputActionMap Get() { return m_Wrapper.m_InGame; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -231,9 +231,9 @@ namespace SoulRPG
                 @Shift.started += instance.OnShift;
                 @Shift.performed += instance.OnShift;
                 @Shift.canceled += instance.OnShift;
-                @Search.started += instance.OnSearch;
-                @Search.performed += instance.OnSearch;
-                @Search.canceled += instance.OnSearch;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
 
             private void UnregisterCallbacks(IInGameActions instance)
@@ -244,9 +244,9 @@ namespace SoulRPG
                 @Shift.started -= instance.OnShift;
                 @Shift.performed -= instance.OnShift;
                 @Shift.canceled -= instance.OnShift;
-                @Search.started -= instance.OnSearch;
-                @Search.performed -= instance.OnSearch;
-                @Search.canceled -= instance.OnSearch;
+                @Interact.started -= instance.OnInteract;
+                @Interact.performed -= instance.OnInteract;
+                @Interact.canceled -= instance.OnInteract;
             }
 
             public void RemoveCallbacks(IInGameActions instance)
@@ -268,7 +268,7 @@ namespace SoulRPG
         {
             void OnMove(InputAction.CallbackContext context);
             void OnShift(InputAction.CallbackContext context);
-            void OnSearch(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
         }
     }
 }
