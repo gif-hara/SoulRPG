@@ -37,6 +37,20 @@ namespace SoulRPG
                     }
                 })
                 .RegisterTo(scope);
+            inputActions.InGame.Search.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    var masterData = TinyServiceLocator.Resolve<MasterData>();
+                    if (masterData.DungeonEvents.TryGetValue(player, out var dungeonEvent))
+                    {
+                        Debug.Log($"{dungeonEvent.EventType}");
+                    }
+                    else
+                    {
+                        Debug.Log("Not Found DungeonEvent");
+                    }
+                })
+                .RegisterTo(scope);
         }
     }
 }

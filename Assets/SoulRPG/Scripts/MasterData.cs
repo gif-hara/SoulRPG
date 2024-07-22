@@ -186,9 +186,9 @@ namespace SoulRPG
             public string EventType;
             
             [Serializable]
-            public class DictionaryList : DictionaryList<int, DungeonEvent>
+            public class DictionaryList : DictionaryList<(string, int, int), DungeonEvent>
             {
-                public DictionaryList() : base(x => x.Id) { }
+                public DictionaryList() : base(x => (x.DungeonName, x.X, x.Y)) { }
             }
         }
 
