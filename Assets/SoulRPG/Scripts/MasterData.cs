@@ -175,7 +175,7 @@ namespace SoulRPG
         [Serializable]
         public class DungeonEvent
         {
-            public int Id;
+            public string Id;
 
             public string DungeonName;
 
@@ -197,14 +197,14 @@ namespace SoulRPG
         {
             public int Id;
 
-            public int EventId;
+            public string EventId;
 
             public int ItemId;
 
             public int Count;
 
             [Serializable]
-            public class Group : Group<int, DungeonEventItem>
+            public class Group : Group<string, DungeonEventItem>
             {
                 public Group() : base(x => x.EventId) { }
             }
