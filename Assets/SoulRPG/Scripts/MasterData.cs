@@ -16,21 +16,33 @@ namespace SoulRPG
         [SerializeField]
         private Dungeon.DictionaryList dungeons;
         public Dungeon.DictionaryList Dungeons => dungeons;
+        
+        [SerializeField]
+        private DungeonEvent.DictionaryList dungeonEvents;
+        public DungeonEvent.DictionaryList DungeonEvents => dungeonEvents;
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
         private async void UpdateMasterData()
         {
             Debug.Log("Begin MasterData Update");
-            var dungeonNames = new string[]
+            var dungeonNames = new[]
             {
                 "Dungeon.Test"
             };
-            var database = await UniTask.WhenAll(
-                dungeonNames.Select(x => GoogleSpreadSheetDownloader.DownloadAsync(x))
+            var masterDataNames = new[]
+            {
+                "MasterData.DungeonEvent",
+            };
+            var dungeonDownloader = UniTask.WhenAll(
+                dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
             );
-            dungeons.Set(database.Select((x, i) => Dungeon.Create(dungeonNames[i], x)));
-
+            var masterDataDownloader = UniTask.WhenAll(
+                masterDataNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
+            );
+            var database = await UniTask.WhenAll(dungeonDownloader, masterDataDownloader);
+            dungeons.Set(database.Item1.Select((x, i) => Dungeon.Create(dungeonNames[i], x)));
+            dungeonEvents.Set(JsonHelper.FromJson<DungeonEvent>(database.Item2[0]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -151,6 +163,26 @@ namespace SoulRPG
                 result.wall.Set(dw.Distinct());
                 result.range = new Vector2Int(cellData.List.Max(x => x.x), cellData.List.Max(x => x.y));
                 return result;
+            }
+        }
+
+        [Serializable]
+        public class DungeonEvent
+        {
+            public int Id;
+
+            public string DungeonName;
+
+            public int X;
+
+            public int Y;
+
+            public string EventType;
+            
+            [Serializable]
+            public class DictionaryList : DictionaryList<int, DungeonEvent>
+            {
+                public DictionaryList() : base(x => x.Id) { }
             }
         }
     }

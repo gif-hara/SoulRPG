@@ -147,78 +147,26 @@ MonoBehaviour:
           b: {x: 26, y: 6}
         - a: {x: 0, y: 6}
           b: {x: 0, y: 5}
-        - a: {x: 1, y: 6}
-          b: {x: 2, y: 6}
-        - a: {x: 1, y: 6}
-          b: {x: 1, y: 5}
-        - a: {x: 2, y: 6}
-          b: {x: 3, y: 6}
         - a: {x: 26, y: 6}
           b: {x: 26, y: 5}
         - a: {x: 0, y: 5}
           b: {x: 0, y: 4}
-        - a: {x: 1, y: 5}
-          b: {x: 1, y: 4}
-        - a: {x: 2, y: 5}
-          b: {x: 3, y: 5}
-        - a: {x: 2, y: 5}
-          b: {x: 2, y: 4}
-        - a: {x: 3, y: 5}
-          b: {x: 4, y: 5}
-        - a: {x: 4, y: 5}
-          b: {x: 4, y: 4}
         - a: {x: 26, y: 5}
           b: {x: 26, y: 4}
         - a: {x: 0, y: 4}
           b: {x: 0, y: 3}
-        - a: {x: 1, y: 4}
-          b: {x: 1, y: 3}
-        - a: {x: 2, y: 4}
-          b: {x: 2, y: 3}
-        - a: {x: 4, y: 4}
-          b: {x: 4, y: 3}
         - a: {x: 26, y: 4}
           b: {x: 26, y: 3}
         - a: {x: 0, y: 3}
           b: {x: 0, y: 2}
-        - a: {x: 1, y: 3}
-          b: {x: 1, y: 2}
-        - a: {x: 2, y: 3}
-          b: {x: 2, y: 2}
-        - a: {x: 4, y: 3}
-          b: {x: 4, y: 2}
-        - a: {x: 4, y: 3}
-          b: {x: 5, y: 3}
-        - a: {x: 5, y: 3}
-          b: {x: 6, y: 3}
-        - a: {x: 6, y: 3}
-          b: {x: 6, y: 2}
         - a: {x: 26, y: 3}
           b: {x: 26, y: 2}
         - a: {x: 0, y: 2}
           b: {x: 0, y: 1}
-        - a: {x: 1, y: 2}
-          b: {x: 1, y: 1}
-        - a: {x: 2, y: 2}
-          b: {x: 2, y: 1}
-        - a: {x: 4, y: 2}
-          b: {x: 4, y: 1}
-        - a: {x: 6, y: 2}
-          b: {x: 6, y: 1}
         - a: {x: 26, y: 2}
           b: {x: 26, y: 1}
         - a: {x: 0, y: 1}
           b: {x: 0, y: 0}
-        - a: {x: 1, y: 1}
-          b: {x: 1, y: 0}
-        - a: {x: 2, y: 0}
-          b: {x: 3, y: 0}
-        - a: {x: 2, y: 1}
-          b: {x: 2, y: 0}
-        - a: {x: 4, y: 1}
-          b: {x: 4, y: 0}
-        - a: {x: 6, y: 1}
-          b: {x: 6, y: 0}
         - a: {x: 26, y: 1}
           b: {x: 26, y: 0}
         - a: {x: 0, y: -1}
@@ -227,8 +175,6 @@ MonoBehaviour:
           b: {x: 0, y: -1}
         - a: {x: 1, y: -1}
           b: {x: 2, y: -1}
-        - a: {x: 1, y: 0}
-          b: {x: 1, y: -1}
         - a: {x: 2, y: -1}
           b: {x: 3, y: -1}
         - a: {x: 3, y: -1}
@@ -236,8 +182,6 @@ MonoBehaviour:
         - a: {x: 4, y: -1}
           b: {x: 5, y: -1}
         - a: {x: 5, y: -1}
-          b: {x: 6, y: -1}
-        - a: {x: 6, y: 0}
           b: {x: 6, y: -1}
         - a: {x: 6, y: -1}
           b: {x: 7, y: -1}
@@ -282,3 +226,15 @@ MonoBehaviour:
         - a: {x: 26, y: 0}
           b: {x: 26, y: -1}
       range: {x: 25, y: 25}
+  dungeonEvents:
+    list:
+    - Id: 101001
+      DungeonName: Dungeon.Test
+      X: 0
+      Y: 1
+      EventType: Item
+    - Id: 101002
+      DungeonName: Dungeon.Test
+      X: 0
+      Y: 2
+      EventType: SavePoint
