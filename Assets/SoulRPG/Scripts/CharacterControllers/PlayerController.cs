@@ -40,15 +40,7 @@ namespace SoulRPG
             inputActions.InGame.Interact.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    var masterData = TinyServiceLocator.Resolve<MasterData>();
-                    if (masterData.DungeonEvents.TryGetValue(player, out var dungeonEvent))
-                    {
-                        Debug.Log($"{dungeonEvent.EventType}");
-                    }
-                    else
-                    {
-                        Debug.Log("Not Found DungeonEvent");
-                    }
+                    TinyServiceLocator.Resolve<DungeonController>().Interact(player);
                 })
                 .RegisterTo(scope);
         }
