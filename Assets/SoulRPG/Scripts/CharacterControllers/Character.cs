@@ -39,6 +39,10 @@ namespace SoulRPG.CharacterControllers
 
         public ReadOnlyReactiveProperty<MasterData.Dungeon> DungeonAsObservable() => dungeon;
 
+        private readonly Inventory inventory = new();
+
+        public Inventory Inventory => inventory;
+
         public void Move(Vector2Int velocity)
         {
             Assert.IsNotNull(Dungeon, "Dungeon is null");
