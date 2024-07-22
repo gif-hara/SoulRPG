@@ -185,6 +185,8 @@ namespace SoulRPG
 
             public string EventType;
 
+            public bool IsPermanent;
+
             [Serializable]
             public class DictionaryList : DictionaryList<(string, int, int), DungeonEvent>
             {

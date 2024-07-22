@@ -310,21 +310,35 @@ MonoBehaviour:
       range: {x: 25, y: 25}
   dungeonEvents:
     list:
-    - Id: 101001
+    - Id: Test.Item.001
       DungeonName: Dungeon.Test
       X: 0
       Y: 1
       EventType: Item
-    - Id: 101002
+      IsPermanent: 0
+    - Id: Test.Item.002
+      DungeonName: Dungeon.Test
+      X: 0
+      Y: 3
+      EventType: Item
+      IsPermanent: 1
+    - Id: Test.SavePoint.001
       DungeonName: Dungeon.Test
       X: 0
       Y: 2
       EventType: SavePoint
+      IsPermanent: 1
   dungeonEventItems:
     list:
-    - Key: 101001
+    - Key: Test.Item.001
       Value:
       - Id: 1
-        EventId: 101001
+        EventId: Test.Item.001
         ItemId: 101001
         Count: 1
+    - Key: Test.Item.002
+      Value:
+      - Id: 1
+        EventId: Test.Item.002
+        ItemId: 101001
+        Count: 2
