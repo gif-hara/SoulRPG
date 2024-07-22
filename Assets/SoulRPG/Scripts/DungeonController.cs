@@ -51,6 +51,8 @@ namespace SoulRPG
                 character.Inventory.Add(item.ItemId, item.Count);
                 Debug.Log($"Add Item {item.ItemId} x {item.Count}");
             }
+            var userData = TinyServiceLocator.Resolve<UserData>();
+            userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsPermanent);
             return UniTask.CompletedTask;
         }
 
