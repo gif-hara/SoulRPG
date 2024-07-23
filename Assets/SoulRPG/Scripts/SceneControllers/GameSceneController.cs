@@ -19,6 +19,9 @@ namespace SoulRPG.SceneControllers
         private HKUIDocument gameUIDocumentPrefab;
 
         [SerializeField]
+        private GameDocumentPrefabs gameMenuPrefabs;
+
+        [SerializeField]
         private HKUIDocument dungeonDocumentPrefab;
 
         [SerializeField]
@@ -47,7 +50,7 @@ namespace SoulRPG.SceneControllers
             TinyServiceLocator.Register(dungeonController);
             TinyServiceLocator.Register(new UserData());
             dungeonController.Setup(debugDungeonName);
-            playerController.Attach(player, destroyCancellationToken);
+            playerController.Attach(player, gameMenuPrefabs, destroyCancellationToken);
             gameView.Open(destroyCancellationToken);
         }
     }
