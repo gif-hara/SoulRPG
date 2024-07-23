@@ -12,5 +12,15 @@ namespace SoulRPG
             Down,
             Left,
         }
+
+        public enum AttackAttribute
+        {
+            Slash,
+            Blow,
+            Thrust,
+            Magic,
+            Fire,
+            Thunder,
+        }
     }
 }
