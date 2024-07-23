@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5928923918740533807}
   - component: {fileID: 3461175836202981815}
   m_Layer: 0
-  m_Name: Icon
+  m_Name: Area.Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 6009743978088505935}
   - component: {fileID: 4084877155540385582}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,6 +238,10 @@ MonoBehaviour:
   - document: {fileID: 6856817931336277856}
     overrideName: 
   - document: {fileID: 8443603244612958407}
+    overrideName: 
+  - document: {fileID: 3755045059742493982}
+    overrideName: 
+  - document: {fileID: 4571489537848429017}
     overrideName: 
 --- !u!1 &6856817931336277856
 GameObject:

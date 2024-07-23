@@ -38,9 +38,8 @@ namespace SoulRPG
         private async UniTask StateRootMenuAsync(CancellationToken scope)
         {
             var document = Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"));
-            var leftAreaDocument = document.Q<HKUIDocument>("Area.Left");
-            var listParent = leftAreaDocument.Q<RectTransform>("Area.List");
-            var listElementPrefab = leftAreaDocument.Q<HKUIDocument>("ListElementPrefab");
+            var listParent = document.Q<RectTransform>("Area.List");
+            var listElementPrefab = document.Q<HKUIDocument>("ListElementPrefab");
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var actions = inputController.InputActions.UI;
 
