@@ -111,8 +111,6 @@ namespace SoulRPG
             var document = Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"));
             var listParent = document.Q<RectTransform>("Area.List");
             var listElementPrefab = document.Q<HKUIDocument>("ListElementPrefab");
-            var inputController = TinyServiceLocator.Resolve<InputController>();
-            var actions = inputController.InputActions.UI;
             var index = 0;
             foreach (var listElement in listElements)
             {
