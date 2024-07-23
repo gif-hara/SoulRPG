@@ -34,6 +34,10 @@ namespace SoulRPG
         private Weapon.DictionaryList weapons;
         public Weapon.DictionaryList Weapons => weapons;
 
+        [SerializeField]
+        private Skill.DictionaryList skills;
+        public Skill.DictionaryList Skills => skills;
+
 #if UNITY_EDITOR
         [ContextMenu("Update")]
         private async void UpdateMasterData()
@@ -49,6 +53,7 @@ namespace SoulRPG
                 "MasterData.DungeonEvent.Item",
                 "MasterData.Item",
                 "MasterData.Weapon",
+                "MasterData.Skill",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -62,6 +67,7 @@ namespace SoulRPG
             dungeonEventItems.Set(JsonHelper.FromJson<DungeonEventItem>(database.Item2[1]));
             items.Set(JsonHelper.FromJson<Item>(database.Item2[2]));
             weapons.Set(JsonHelper.FromJson<Weapon>(database.Item2[3]));
+            skills.Set(JsonHelper.FromJson<Skill>(database.Item2[4]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -228,9 +234,9 @@ namespace SoulRPG
         [Serializable]
         public class Item
         {
-            public int Id;
-
             public string Name;
+
+            public int Id;
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Item>
@@ -258,6 +264,24 @@ namespace SoulRPG
             public class DictionaryList : DictionaryList<int, Weapon>
             {
                 public DictionaryList() : base(x => x.ItemId) { }
+            }
+        }
+
+        [Serializable]
+        public class Skill
+        {
+            public string Name;
+
+            public int Id;
+
+            public int Cost;
+
+            public string Description;
+
+            [Serializable]
+            public class DictionaryList : DictionaryList<int, Skill>
+            {
+                public DictionaryList() : base(x => x.Id) { }
             }
         }
     }
