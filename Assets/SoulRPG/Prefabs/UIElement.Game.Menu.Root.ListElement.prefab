@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8614530761456019113}
   - component: {fileID: 1737055527160428659}
   m_Layer: 0
-  m_Name: UIElement.Game.Menu.ListElement
+  m_Name: UIElement.Game.Menu.Root.ListElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
