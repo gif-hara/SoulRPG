@@ -12,13 +12,15 @@ namespace SoulRPG
     /// </summary>
     public sealed class PlayerController
     {
-        public void Attach(InputActions inputActions, Character player, CancellationToken scope)
+        public void Attach(Character player, CancellationToken scope)
         {
-            inputActions.InGame.Move.OnPerformedAsObservable()
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            var inGameActions = inputController.InputActions.InGame;
+            inGameActions.Move.OnPerformedAsObservable()
                 .Subscribe(x =>
                 {
                     var velocity = x.ReadValue<Vector2>().ToVector2Int();
-                    if (inputActions.InGame.Shift.IsPressed())
+                    if (inGameActions.Shift.IsPressed())
                     {
                         if (!velocity.CanConvertToDirection())
                         {
@@ -38,7 +40,7 @@ namespace SoulRPG
                     }
                 })
                 .RegisterTo(scope);
-            inputActions.InGame.Interact.OnPerformedAsObservable()
+            inGameActions.Interact.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
                     TinyServiceLocator.Resolve<DungeonController>().InteractAsync(player).Forget();
