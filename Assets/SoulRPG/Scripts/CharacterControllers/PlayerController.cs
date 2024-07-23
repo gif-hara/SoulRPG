@@ -12,7 +12,7 @@ namespace SoulRPG
     /// </summary>
     public sealed class PlayerController
     {
-        public void Attach(Character player, CancellationToken scope)
+        public void Attach(Character player, GameDocumentPrefabs gameMenuPrefabs, CancellationToken scope)
         {
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var inGameActions = inputController.InputActions.InGame;
@@ -44,6 +44,13 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     TinyServiceLocator.Resolve<DungeonController>().InteractAsync(player).Forget();
+                })
+                .RegisterTo(scope);
+            inGameActions.ToMenu.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    var gameMenuView = new GameMenuView(gameMenuPrefabs);
+                    gameMenuView.OpenAsync().Forget();
                 })
                 .RegisterTo(scope);
         }
