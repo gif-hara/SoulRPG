@@ -26,6 +26,19 @@ namespace SoulRPG
         private readonly List<ReactiveProperty<int>> accessoryIds = new();
         public ReadOnlyReactiveProperty<int> AccessoryIdAsObservable(int index) => accessoryIds[index];
 
+        public Equipment()
+        {
+            for (var i = 0; i < 3; i++)
+            {
+                weaponIds.Add(new ReactiveProperty<int>());
+            }
+
+            for (var i = 0; i < 4; i++)
+            {
+                accessoryIds.Add(new ReactiveProperty<int>());
+            }
+        }
+
         public void EquipWeapon(int index, int weaponId)
         {
             weaponIds[index].Value = weaponId;
