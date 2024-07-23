@@ -11,15 +11,15 @@ namespace SoulRPG
     /// </summary>
     public sealed class GameMenuView
     {
-        private readonly HKUIDocument documentPrefab;
+        private readonly HKUIDocument documentBundlePrefab;
 
         private readonly TinyStateMachine stateMachine;
 
         private readonly UniTaskCompletionSource openCompletionSource = new();
 
-        public GameMenuView(HKUIDocument documentPrefab)
+        public GameMenuView(HKUIDocument documentBundlePrefab)
         {
-            this.documentPrefab = documentPrefab;
+            this.documentBundlePrefab = documentBundlePrefab;
             this.stateMachine = new TinyStateMachine();
         }
 
@@ -34,7 +34,7 @@ namespace SoulRPG
 
         private async UniTask StateRootMenuAsync(CancellationToken scope)
         {
-            var document = Object.Instantiate(documentPrefab.Q<HKUIDocument>("UI.Game.Menu.Root"));
+            var document = Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Root"));
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var actions = inputController.InputActions.UI;
             actions.Cancel.OnPerformedAsObservable()
