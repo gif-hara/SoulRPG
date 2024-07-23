@@ -315,19 +315,19 @@ MonoBehaviour:
       X: 0
       Y: 1
       EventType: Item
-      IsPermanent: 0
+      IsOneTime: 1
     - Id: Test.Item.002
       DungeonName: Dungeon.Test
       X: 0
       Y: 3
       EventType: Item
-      IsPermanent: 1
+      IsOneTime: 0
     - Id: Test.SavePoint.001
       DungeonName: Dungeon.Test
       X: 0
       Y: 2
       EventType: SavePoint
-      IsPermanent: 1
+      IsOneTime: 0
   dungeonEventItems:
     list:
     - Key: Test.Item.001
@@ -338,7 +338,15 @@ MonoBehaviour:
         Count: 1
     - Key: Test.Item.002
       Value:
-      - Id: 1
+      - Id: 2
         EventId: Test.Item.002
         ItemId: 101001
         Count: 2
+  items:
+    list:
+    - Id: 101001
+      Name: "\u30B7\u30E7\u30FC\u30C8\u30BD\u30FC\u30C9"
+    - Id: 101002
+      Name: "\u30C0\u30AC\u30FC"
+    - Id: 101003
+      Name: "\u30D0\u30B9\u30BF\u30FC\u30BD\u30FC\u30C9"

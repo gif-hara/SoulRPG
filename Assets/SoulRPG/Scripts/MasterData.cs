@@ -26,6 +26,10 @@ namespace SoulRPG
         private DungeonEventItem.Group dungeonEventItems;
         public DungeonEventItem.Group DungeonEventItems => dungeonEventItems;
 
+        [SerializeField]
+        private Item.DictionaryList items;
+        public Item.DictionaryList Items => items;
+
 #if UNITY_EDITOR
         [ContextMenu("Update")]
         private async void UpdateMasterData()
@@ -39,6 +43,7 @@ namespace SoulRPG
             {
                 "MasterData.DungeonEvent",
                 "MasterData.DungeonEvent.Item",
+                "MasterData.Item",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -50,6 +55,7 @@ namespace SoulRPG
             dungeons.Set(database.Item1.Select((x, i) => Dungeon.Create(dungeonNames[i], x)));
             dungeonEvents.Set(JsonHelper.FromJson<DungeonEvent>(database.Item2[0]));
             dungeonEventItems.Set(JsonHelper.FromJson<DungeonEventItem>(database.Item2[1]));
+            items.Set(JsonHelper.FromJson<Item>(database.Item2[2]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -210,6 +216,20 @@ namespace SoulRPG
             public class Group : Group<string, DungeonEventItem>
             {
                 public Group() : base(x => x.EventId) { }
+            }
+        }
+
+        [Serializable]
+        public class Item
+        {
+            public int Id;
+
+            public string Name;
+
+            [Serializable]
+            public class DictionaryList : DictionaryList<int, Item>
+            {
+                public DictionaryList() : base(x => x.Id) { }
             }
         }
     }
