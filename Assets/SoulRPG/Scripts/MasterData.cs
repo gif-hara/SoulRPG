@@ -4,6 +4,7 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 using HK;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace SoulRPG
 {
@@ -185,7 +186,7 @@ namespace SoulRPG
 
             public string EventType;
 
-            public bool IsPermanent;
+            public bool IsOneTime;
 
             [Serializable]
             public class DictionaryList : DictionaryList<(string, int, int), DungeonEvent>

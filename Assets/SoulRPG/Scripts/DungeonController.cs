@@ -57,7 +57,7 @@ namespace SoulRPG
                 character.Inventory.Add(item.ItemId, item.Count);
                 Debug.Log($"Add Item {item.ItemId} x {item.Count}");
             }
-            userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsPermanent);
+            userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsOneTime);
             return UniTask.CompletedTask;
         }
 
