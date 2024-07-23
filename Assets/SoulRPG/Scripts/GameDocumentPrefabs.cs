@@ -8,7 +8,7 @@ namespace SoulRPG
     /// 
     /// </summary>
     [Serializable]
-    public sealed class GameMenuPrefabs
+    public sealed class GameDocumentPrefabs
     {
         [SerializeField]
         private HKUIDocument rootPrefab;
