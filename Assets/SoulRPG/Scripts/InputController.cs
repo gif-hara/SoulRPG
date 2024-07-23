@@ -19,5 +19,20 @@ namespace SoulRPG
         {
             inputActions.Enable();
         }
+
+        public void ChangeInputType(InputType inputType)
+        {
+            switch (inputType)
+            {
+                case InputType.InGame:
+                    inputActions.InGame.Enable();
+                    inputActions.UI.Disable();
+                    break;
+                case InputType.UI:
+                    inputActions.InGame.Disable();
+                    inputActions.UI.Enable();
+                    break;
+            }
+        }
     }
 }
