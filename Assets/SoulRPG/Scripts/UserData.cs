@@ -7,15 +7,21 @@ namespace SoulRPG
     /// </summary>
     public sealed class UserData
     {
-        public HashSet<string> PermanentCompletedEventIds { get; } = new();
+        public HashSet<string> CompletedEventIds { get; } = new();
 
+        /// <summary>
+        /// 一時的に完了したイベントのリスト
+        /// </summary>
+        /// <remarks>
+        /// このイベントはセーブポイントにアクセスすると開放されて再度アクセス出来るようになります
+        /// </remarks>
         public HashSet<string> TemporaryCompletedEventIds { get; } = new();
 
         public void AddCompletedEventIds(string eventId, bool isPermanent)
         {
             if (isPermanent)
             {
-                PermanentCompletedEventIds.Add(eventId);
+                CompletedEventIds.Add(eventId);
             }
             else
             {
@@ -25,7 +31,7 @@ namespace SoulRPG
 
         public bool ContainsCompletedEventId(string eventId)
         {
-            return PermanentCompletedEventIds.Contains(eventId) || TemporaryCompletedEventIds.Contains(eventId);
+            return CompletedEventIds.Contains(eventId) || TemporaryCompletedEventIds.Contains(eventId);
         }
 
         public void ClearTemporaryCompletedEventIds()
