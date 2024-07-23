@@ -3,7 +3,9 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
+using SoulRPG.CharacterControllers;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -16,6 +18,8 @@ namespace SoulRPG
     public sealed class GameMenuView
     {
         private readonly HKUIDocument documentBundlePrefab;
+
+        private readonly Character character;
 
         private readonly TinyStateMachine stateMachine;
 
@@ -30,9 +34,10 @@ namespace SoulRPG
             public System.Action onClick;
         }
 
-        public GameMenuView(HKUIDocument documentBundlePrefab)
+        public GameMenuView(HKUIDocument documentBundlePrefab, Character character)
         {
             this.documentBundlePrefab = documentBundlePrefab;
+            this.character = character;
             this.stateMachine = new TinyStateMachine();
             inputController = TinyServiceLocator.Resolve<InputController>();
         }
@@ -54,10 +59,7 @@ namespace SoulRPG
                 new()
                 {
                     header = "装備",
-                    onClick = () =>
-                    {
-                        Debug.Log("装備");
-                    }
+                    onClick = () => stateMachine.Change(StateSelectEquipmentPartAsync)
                 },
                 new()
                 {
@@ -95,6 +97,11 @@ namespace SoulRPG
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
+        }
+
+        private UniTask StateSelectEquipmentPartAsync(CancellationToken scope)
+        {
+            return UniTask.CompletedTask;
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)
