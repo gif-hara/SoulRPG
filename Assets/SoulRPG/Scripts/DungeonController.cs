@@ -55,7 +55,8 @@ namespace SoulRPG
             foreach (var item in masterDataEventItems)
             {
                 character.Inventory.Add(item.ItemId, item.Count);
-                Debug.Log($"Add Item {item.ItemId} x {item.Count}");
+                var masterDataItem = TinyServiceLocator.Resolve<MasterData>().Items.Get(item.ItemId);
+                Debug.Log($"Add Item {masterDataItem.Name} x {item.Count}");
             }
             userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsOneTime);
             return UniTask.CompletedTask;
