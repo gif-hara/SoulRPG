@@ -30,6 +30,10 @@ namespace SoulRPG
         private Item.DictionaryList items;
         public Item.DictionaryList Items => items;
 
+        [SerializeField]
+        private Weapon.DictionaryList weapons;
+        public Weapon.DictionaryList Weapons => weapons;
+
 #if UNITY_EDITOR
         [ContextMenu("Update")]
         private async void UpdateMasterData()
@@ -44,6 +48,7 @@ namespace SoulRPG
                 "MasterData.DungeonEvent",
                 "MasterData.DungeonEvent.Item",
                 "MasterData.Item",
+                "MasterData.Weapon",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -56,6 +61,7 @@ namespace SoulRPG
             dungeonEvents.Set(JsonHelper.FromJson<DungeonEvent>(database.Item2[0]));
             dungeonEventItems.Set(JsonHelper.FromJson<DungeonEventItem>(database.Item2[1]));
             items.Set(JsonHelper.FromJson<Item>(database.Item2[2]));
+            weapons.Set(JsonHelper.FromJson<Weapon>(database.Item2[3]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -230,6 +236,28 @@ namespace SoulRPG
             public class DictionaryList : DictionaryList<int, Item>
             {
                 public DictionaryList() : base(x => x.Id) { }
+            }
+        }
+
+        [Serializable]
+        public class Weapon
+        {
+            public int ItemId;
+
+            public int Strength;
+
+            public int Speed;
+
+            public Define.AttackAttribute AttackAttribute;
+
+            public int Skill1;
+
+            public int Skill2;
+
+            [Serializable]
+            public class DictionaryList : DictionaryList<int, Weapon>
+            {
+                public DictionaryList() : base(x => x.ItemId) { }
             }
         }
     }

@@ -350,3 +350,23 @@ MonoBehaviour:
       Name: "\u30C0\u30AC\u30FC"
     - Id: 101003
       Name: "\u30D0\u30B9\u30BF\u30FC\u30BD\u30FC\u30C9"
+  weapons:
+    list:
+    - ItemId: 101001
+      Strength: 80
+      Speed: 0
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101002
+    - ItemId: 101002
+      Strength: 62
+      Speed: 15
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101003
+    - ItemId: 101003
+      Strength: 108
+      Speed: -12
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101004
