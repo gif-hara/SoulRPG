@@ -55,6 +55,15 @@ namespace SoulRPG
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""65bb4685-7dad-4369-a72f-769551ed6d99"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,17 @@ namespace SoulRPG
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64655203-68cf-4de9-b086-3fc4f3ad8ad5"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -257,6 +277,7 @@ namespace SoulRPG
             m_InGame_Move = m_InGame.FindAction("Move", throwIfNotFound: true);
             m_InGame_Shift = m_InGame.FindAction("Shift", throwIfNotFound: true);
             m_InGame_Interact = m_InGame.FindAction("Interact", throwIfNotFound: true);
+            m_InGame_ToMenu = m_InGame.FindAction("ToMenu", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Move = m_UI.FindAction("Move", throwIfNotFound: true);
@@ -326,6 +347,7 @@ namespace SoulRPG
         private readonly InputAction m_InGame_Move;
         private readonly InputAction m_InGame_Shift;
         private readonly InputAction m_InGame_Interact;
+        private readonly InputAction m_InGame_ToMenu;
         public struct InGameActions
         {
             private @InputActions m_Wrapper;
@@ -333,6 +355,7 @@ namespace SoulRPG
             public InputAction @Move => m_Wrapper.m_InGame_Move;
             public InputAction @Shift => m_Wrapper.m_InGame_Shift;
             public InputAction @Interact => m_Wrapper.m_InGame_Interact;
+            public InputAction @ToMenu => m_Wrapper.m_InGame_ToMenu;
             public InputActionMap Get() { return m_Wrapper.m_InGame; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -351,6 +374,9 @@ namespace SoulRPG
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @ToMenu.started += instance.OnToMenu;
+                @ToMenu.performed += instance.OnToMenu;
+                @ToMenu.canceled += instance.OnToMenu;
             }
 
             private void UnregisterCallbacks(IInGameActions instance)
@@ -364,6 +390,9 @@ namespace SoulRPG
                 @Interact.started -= instance.OnInteract;
                 @Interact.performed -= instance.OnInteract;
                 @Interact.canceled -= instance.OnInteract;
+                @ToMenu.started -= instance.OnToMenu;
+                @ToMenu.performed -= instance.OnToMenu;
+                @ToMenu.canceled -= instance.OnToMenu;
             }
 
             public void RemoveCallbacks(IInGameActions instance)
@@ -448,6 +477,7 @@ namespace SoulRPG
             void OnMove(InputAction.CallbackContext context);
             void OnShift(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
+            void OnToMenu(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {
