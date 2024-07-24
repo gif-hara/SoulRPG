@@ -6,7 +6,6 @@ using HK;
 using R3;
 using SoulRPG.CharacterControllers;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -27,6 +26,8 @@ namespace SoulRPG
         private readonly UniTaskCompletionSource openCompletionSource = new();
 
         private InputController inputController;
+
+        private IContext context;
 
         public class ListElement
         {
@@ -110,6 +111,7 @@ namespace SoulRPG
                     header = $"武器{i + 1}: {weaponName}",
                     onClick = () =>
                     {
+                        context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Weapon1);
                         stateMachine.Change(StateSelectWeaponAsync);
                     }
                 };
@@ -137,7 +139,9 @@ namespace SoulRPG
                         header = itemName,
                         onClick = () =>
                         {
-                            Debug.Log(itemName);
+                            var equipmentChangeController = (EquipmentChangeController)context;
+                            equipmentChangeController.ChangeEquipment(x.Key);
+                            stateMachine.Change(StateSelectEquipmentPartAsync);
                         }
                     };
                 });
@@ -184,6 +188,10 @@ namespace SoulRPG
                 index++;
             }
             return document;
+        }
+
+        public interface IContext
+        {
         }
     }
 }
