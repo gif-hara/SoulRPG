@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
@@ -99,9 +100,56 @@ namespace SoulRPG
             Object.Destroy(listDocument.gameObject);
         }
 
-        private UniTask StateSelectEquipmentPartAsync(CancellationToken scope)
+        private async UniTask StateSelectEquipmentPartAsync(CancellationToken scope)
         {
-            return UniTask.CompletedTask;
+            var listElements = character.Equipment.GetWeaponIds().Select((x, i) =>
+            {
+                var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
+                return new ListElement()
+                {
+                    header = $"武器{i + 1}: {weaponName}",
+                    onClick = () =>
+                    {
+                        stateMachine.Change(StateSelectWeaponAsync);
+                    }
+                };
+            });
+            var listDocument = CreateListDocument(listElements, 0);
+            inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateRootMenuAsync);
+                })
+                .RegisterTo(scope);
+            await UniTask.WaitUntilCanceled(scope);
+            Object.Destroy(listDocument.gameObject);
+        }
+
+        private async UniTask StateSelectWeaponAsync(CancellationToken scope)
+        {
+            var listElements = character.Inventory.Items
+                .Where(x => x.Key.ContainsMasterDataWeapon())
+                .Select(x =>
+                {
+                    var itemName = x.Key.GetMasterDataItem().Name;
+                    return new ListElement()
+                    {
+                        header = itemName,
+                        onClick = () =>
+                        {
+                            Debug.Log(itemName);
+                        }
+                    };
+                });
+            var listDocument = CreateListDocument(listElements, 0);
+            inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateSelectEquipmentPartAsync);
+                })
+                .RegisterTo(scope);
+            await UniTask.WaitUntilCanceled(scope);
+            Object.Destroy(listDocument.gameObject);
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)
