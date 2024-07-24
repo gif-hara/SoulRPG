@@ -103,7 +103,7 @@ namespace SoulRPG
 
         private async UniTask StateSelectEquipmentPartAsync(CancellationToken scope)
         {
-            var listElements = character.Equipment.GetWeaponIds().Select((x, i) =>
+            var weaponElements = character.Equipment.GetWeaponIds().Select((x, i) =>
             {
                 var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
                 return new ListElement()
@@ -116,6 +116,63 @@ namespace SoulRPG
                     }
                 };
             });
+            var headElement = new ListElement()
+            {
+                header = $"頭: {(character.Equipment.HeadId == 0 ? "なし" : character.Equipment.HeadId.GetMasterDataItem().Name)}",
+                onClick = () =>
+                {
+                    context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Head);
+                    Debug.Log("TODO: 頭選択");
+                }
+            };
+            var bodyElement = new ListElement()
+            {
+                header = $"胴: {(character.Equipment.BodyId == 0 ? "なし" : character.Equipment.BodyId.GetMasterDataItem().Name)}",
+                onClick = () =>
+                {
+                    context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
+                    Debug.Log("TODO: 胴選択");
+                }
+            };
+            var armElement = new ListElement()
+            {
+                header = $"腕: {(character.Equipment.ArmId == 0 ? "なし" : character.Equipment.ArmId.GetMasterDataItem().Name)}",
+                onClick = () =>
+                {
+                    context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Arm);
+                    Debug.Log("TODO: 腕選択");
+                }
+            };
+            var legElement = new ListElement()
+            {
+                header = $"脚: {(character.Equipment.LegId == 0 ? "なし" : character.Equipment.LegId.GetMasterDataItem().Name)}",
+                onClick = () =>
+                {
+                    context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Leg);
+                    Debug.Log("TODO: 脚選択");
+                }
+            };
+            var accessoryElements = character.Equipment.GetAccessoryIds().Select((x, i) =>
+            {
+                var accessoryName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
+                return new ListElement()
+                {
+                    header = $"アクセサリ{i + 1}: {accessoryName}",
+                    onClick = () =>
+                    {
+                        context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Accessory1);
+                        Debug.Log("TODO: アクセサリ選択");
+                    }
+                };
+            });
+            var listElements = new List<ListElement>();
+            listElements.AddRange(weaponElements);
+            listElements.Add(headElement);
+            listElements.Add(bodyElement);
+            listElements.Add(armElement);
+            listElements.Add(legElement);
+            listElements.AddRange(accessoryElements);
+
             var listDocument = CreateListDocument(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
