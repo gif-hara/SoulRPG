@@ -7,35 +7,35 @@ namespace SoulRPG
     /// </summary>
     public sealed class Inventory
     {
-        private readonly Dictionary<int, int> items = new();
+        public Dictionary<int, int> Items { get; } = new();
 
         public void Add(int itemId, int count)
         {
-            if (items.ContainsKey(itemId))
+            if (Items.ContainsKey(itemId))
             {
-                items[itemId] += count;
+                Items[itemId] += count;
             }
             else
             {
-                items[itemId] = count;
+                Items[itemId] = count;
             }
         }
 
         public void Remove(int itemId, int count)
         {
-            if (items.ContainsKey(itemId))
+            if (Items.ContainsKey(itemId))
             {
-                items[itemId] -= count;
-                if (items[itemId] <= 0)
+                Items[itemId] -= count;
+                if (Items[itemId] <= 0)
                 {
-                    items.Remove(itemId);
+                    Items.Remove(itemId);
                 }
             }
         }
 
         public int GetNumber(int itemId)
         {
-            return items.ContainsKey(itemId) ? items[itemId] : 0;
+            return Items.ContainsKey(itemId) ? Items[itemId] : 0;
         }
     }
 }
