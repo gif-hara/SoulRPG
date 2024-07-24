@@ -50,6 +50,15 @@ namespace SoulRPG
 
         public void EquipWeapon(int index, int weaponId)
         {
+            foreach (var i in weaponIds)
+            {
+                // 既に装備している場合は入れ替える
+                if (i.Value == weaponId)
+                {
+                    i.Value = weaponIds[index].Value;
+                    break;
+                }
+            }
             weaponIds[index].Value = weaponId;
         }
 
