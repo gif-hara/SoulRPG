@@ -35,6 +35,11 @@ namespace SoulRPG.CharacterControllers
 
         public CharacterGrowthParameter GrowthParameter { get; } = new();
 
+        public Character(CharacterGrowthParameter growthParameter)
+        {
+            GrowthParameter = growthParameter;
+        }
+
         public void Move(Vector2Int velocity)
         {
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();

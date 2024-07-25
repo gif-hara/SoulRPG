@@ -33,11 +33,14 @@ namespace SoulRPG.SceneControllers
         [SerializeField]
         private Vector2Int debugPosition;
 
+        [SerializeField]
+        private CharacterGrowthParameter debugCharacterGrowthParameter;
+
         async void Start()
         {
             await BootSystem.IsReady;
             TinyServiceLocator.Register(masterData);
-            var player = new Character();
+            var player = new Character(debugCharacterGrowthParameter);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             var gameView = new GameView(
                 gameUIDocumentPrefab,
