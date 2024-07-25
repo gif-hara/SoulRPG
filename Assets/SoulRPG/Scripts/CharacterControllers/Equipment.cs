@@ -112,6 +112,15 @@ namespace SoulRPG
 
         public void EquipAccessory(int index, int accessoryId)
         {
+            foreach (var i in accessoryIds)
+            {
+                // 既に装備している場合は入れ替える
+                if (i.Value == accessoryId)
+                {
+                    i.Value = accessoryIds[index].Value;
+                    break;
+                }
+            }
             accessoryIds[index].Value = accessoryId;
         }
     }
