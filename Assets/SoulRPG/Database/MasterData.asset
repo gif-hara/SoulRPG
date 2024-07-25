@@ -531,7 +531,7 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
-  armorChests:
+  armorBodies:
     list:
     - ItemId: 103001
       SlashCutRate: 0.05

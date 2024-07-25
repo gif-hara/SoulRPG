@@ -32,9 +32,9 @@ namespace SoulRPG
             return TinyServiceLocator.Resolve<MasterData>().ArmorHeads.ContainsKey(self);
         }
         
-        public static bool ContainsMasterDataArmorChest(this int self)
+        public static bool ContainsMasterDataArmorBody(this int self)
         {
-            return TinyServiceLocator.Resolve<MasterData>().ArmorChests.ContainsKey(self);
+            return TinyServiceLocator.Resolve<MasterData>().ArmorBodies.ContainsKey(self);
         }
         
         public static bool ContainsMasterDataArmorArms(this int self)

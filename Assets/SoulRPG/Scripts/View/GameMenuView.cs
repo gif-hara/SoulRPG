@@ -131,7 +131,7 @@ namespace SoulRPG
                 onClick = () =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
-                    stateMachine.Change(StateSelectArmorChestAsync);
+                    stateMachine.Change(StateSelectArmorBodyAsync);
                 }
             };
             var armElement = new ListElement()
@@ -242,10 +242,10 @@ namespace SoulRPG
             Object.Destroy(listDocument.gameObject);
         }
         
-        private async UniTask StateSelectArmorChestAsync(CancellationToken scope)
+        private async UniTask StateSelectArmorBodyAsync(CancellationToken scope)
         {
             var listElements = character.Inventory.Items
-                .Where(x => x.Key.ContainsMasterDataArmorChest())
+                .Where(x => x.Key.ContainsMasterDataArmorBody())
                 .Select(x =>
                 {
                     var itemName = x.Key.GetMasterDataItem().Name;

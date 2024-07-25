@@ -43,8 +43,8 @@ namespace SoulRPG
         public Armor.DictionaryList ArmorHeads => armorHeads;
 
         [SerializeField]
-        private Armor.DictionaryList armorChests;
-        public Armor.DictionaryList ArmorChests => armorChests;
+        private Armor.DictionaryList armorBodies;
+        public Armor.DictionaryList ArmorBodies => armorBodies;
         
         [SerializeField]
         private Armor.DictionaryList armorArms;
@@ -72,7 +72,7 @@ namespace SoulRPG
                 "MasterData.Weapon",
                 "MasterData.Skill",
                 "MasterData.Armor.Head",
-                "MasterData.Armor.Chest",
+                "MasterData.Armor.Body",
                 "MasterData.Armor.Arms",
                 "MasterData.Armor.Legs",
             };
@@ -90,7 +90,7 @@ namespace SoulRPG
             weapons.Set(JsonHelper.FromJson<Weapon>(database.Item2[3]));
             skills.Set(JsonHelper.FromJson<Skill>(database.Item2[4]));
             armorHeads.Set(JsonHelper.FromJson<Armor>(database.Item2[5]));
-            armorChests.Set(JsonHelper.FromJson<Armor>(database.Item2[6]));
+            armorBodies.Set(JsonHelper.FromJson<Armor>(database.Item2[6]));
             armorArms.Set(JsonHelper.FromJson<Armor>(database.Item2[7]));
             armorLegs.Set(JsonHelper.FromJson<Armor>(database.Item2[8]));
             UnityEditor.EditorUtility.SetDirty(this);
