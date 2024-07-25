@@ -122,7 +122,7 @@ namespace SoulRPG
                 onClick = () =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Head);
-                    Debug.Log("TODO: 頭選択");
+                    stateMachine.Change(StateSelectArmorHeadAsync);
                 }
             };
             var bodyElement = new ListElement()
@@ -131,7 +131,7 @@ namespace SoulRPG
                 onClick = () =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
-                    Debug.Log("TODO: 胴選択");
+                    stateMachine.Change(StateSelectArmorChestAsync);
                 }
             };
             var armElement = new ListElement()
@@ -140,7 +140,7 @@ namespace SoulRPG
                 onClick = () =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Arm);
-                    Debug.Log("TODO: 腕選択");
+                    stateMachine.Change(StateSelectArmorArmsAsync);
                 }
             };
             var legElement = new ListElement()
@@ -149,7 +149,7 @@ namespace SoulRPG
                 onClick = () =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Leg);
-                    Debug.Log("TODO: 脚選択");
+                    stateMachine.Change(StateSelectArmorLegsAsync);
                 }
             };
             var accessoryElements = character.Equipment.GetAccessoryIds().Select((x, i) =>
@@ -192,6 +192,122 @@ namespace SoulRPG
                 {
                     var itemName = x.Key.GetMasterDataItem().Name;
                     return new ListElement()
+                    {
+                        header = itemName,
+                        onClick = () =>
+                        {
+                            var equipmentChangeController = (EquipmentChangeController)context;
+                            equipmentChangeController.ChangeEquipment(x.Key);
+                            stateMachine.Change(StateSelectEquipmentPartAsync);
+                        }
+                    };
+                });
+            var listDocument = CreateListDocument(listElements, 0);
+            inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateSelectEquipmentPartAsync);
+                })
+                .RegisterTo(scope);
+            await UniTask.WaitUntilCanceled(scope);
+            Object.Destroy(listDocument.gameObject);
+        }
+        
+        private async UniTask StateSelectArmorHeadAsync(CancellationToken scope)
+        {
+            var listElements = character.Inventory.Items
+                .Where(x => x.Key.ContainsMasterDataArmorHead())
+                .Select(x =>
+                {
+                    var itemName = x.Key.GetMasterDataItem().Name;
+                    return new ListElement
+                    {
+                        header = itemName,
+                        onClick = () =>
+                        {
+                            var equipmentChangeController = (EquipmentChangeController)context;
+                            equipmentChangeController.ChangeEquipment(x.Key);
+                            stateMachine.Change(StateSelectEquipmentPartAsync);
+                        }
+                    };
+                });
+            var listDocument = CreateListDocument(listElements, 0);
+            inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateSelectEquipmentPartAsync);
+                })
+                .RegisterTo(scope);
+            await UniTask.WaitUntilCanceled(scope);
+            Object.Destroy(listDocument.gameObject);
+        }
+        
+        private async UniTask StateSelectArmorChestAsync(CancellationToken scope)
+        {
+            var listElements = character.Inventory.Items
+                .Where(x => x.Key.ContainsMasterDataArmorChest())
+                .Select(x =>
+                {
+                    var itemName = x.Key.GetMasterDataItem().Name;
+                    return new ListElement
+                    {
+                        header = itemName,
+                        onClick = () =>
+                        {
+                            var equipmentChangeController = (EquipmentChangeController)context;
+                            equipmentChangeController.ChangeEquipment(x.Key);
+                            stateMachine.Change(StateSelectEquipmentPartAsync);
+                        }
+                    };
+                });
+            var listDocument = CreateListDocument(listElements, 0);
+            inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateSelectEquipmentPartAsync);
+                })
+                .RegisterTo(scope);
+            await UniTask.WaitUntilCanceled(scope);
+            Object.Destroy(listDocument.gameObject);
+        }
+        
+        private async UniTask StateSelectArmorArmsAsync(CancellationToken scope)
+        {
+            var listElements = character.Inventory.Items
+                .Where(x => x.Key.ContainsMasterDataArmorArms())
+                .Select(x =>
+                {
+                    var itemName = x.Key.GetMasterDataItem().Name;
+                    return new ListElement
+                    {
+                        header = itemName,
+                        onClick = () =>
+                        {
+                            var equipmentChangeController = (EquipmentChangeController)context;
+                            equipmentChangeController.ChangeEquipment(x.Key);
+                            stateMachine.Change(StateSelectEquipmentPartAsync);
+                        }
+                    };
+                });
+            var listDocument = CreateListDocument(listElements, 0);
+            inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateSelectEquipmentPartAsync);
+                })
+                .RegisterTo(scope);
+            await UniTask.WaitUntilCanceled(scope);
+            Object.Destroy(listDocument.gameObject);
+        }
+        
+        private async UniTask StateSelectArmorLegsAsync(CancellationToken scope)
+        {
+            var listElements = character.Inventory.Items
+                .Where(x => x.Key.ContainsMasterDataArmorLegs())
+                .Select(x =>
+                {
+                    var itemName = x.Key.GetMasterDataItem().Name;
+                    return new ListElement
                     {
                         header = itemName,
                         onClick = () =>
