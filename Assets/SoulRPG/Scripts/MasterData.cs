@@ -54,6 +54,10 @@ namespace SoulRPG
         private Armor.DictionaryList armorLegs;
         public Armor.DictionaryList ArmorLegs => armorLegs;
         
+        [SerializeField]
+        private Accessory.DictionaryList accessories;
+        public Accessory.DictionaryList Accessories => accessories;
+        
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
@@ -75,6 +79,7 @@ namespace SoulRPG
                 "MasterData.Armor.Body",
                 "MasterData.Armor.Arms",
                 "MasterData.Armor.Legs",
+                "MasterData.Accessory",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -93,6 +98,7 @@ namespace SoulRPG
             armorBodies.Set(JsonHelper.FromJson<Armor>(database.Item2[6]));
             armorArms.Set(JsonHelper.FromJson<Armor>(database.Item2[7]));
             armorLegs.Set(JsonHelper.FromJson<Armor>(database.Item2[8]));
+            accessories.Set(JsonHelper.FromJson<Accessory>(database.Item2[9]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -329,6 +335,18 @@ namespace SoulRPG
             
             [Serializable]
             public class DictionaryList : DictionaryList<int, Armor>
+            {
+                public DictionaryList() : base(x => x.ItemId) { }
+            }
+        }
+
+        [Serializable]
+        public class Accessory
+        {
+            public int ItemId;
+            
+            [Serializable]
+            public class DictionaryList : DictionaryList<int, Accessory>
             {
                 public DictionaryList() : base(x => x.ItemId) { }
             }

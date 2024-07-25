@@ -558,3 +558,6 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
+  accessories:
+    list:
+    - ItemId: 106001
