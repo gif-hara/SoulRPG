@@ -1,6 +1,9 @@
 using HK;
+using R3;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using Observable = R3.Observable;
 
 namespace SoulRPG.SceneControllers
 {
@@ -52,6 +55,19 @@ namespace SoulRPG.SceneControllers
             dungeonController.Setup(debugDungeonName);
             playerController.Attach(player, gameMenuDocumentPrefab, destroyCancellationToken);
             gameView.Open(destroyCancellationToken);
+            Observable.EveryUpdate(destroyCancellationToken)
+                .Subscribe(_ =>
+                {
+                    if (Keyboard.current.qKey.wasPressedThisFrame)
+                    {
+                        foreach (var i in TinyServiceLocator.Resolve<MasterData>().Items.List)
+                        {
+                            player.Inventory.Add(i.Id, 1);
+                        }
+                        Debug.Log("Add All Items");
+                    }
+                })
+                .RegisterTo(destroyCancellationToken);
         }
     }
 }
