@@ -561,3 +561,18 @@ MonoBehaviour:
   accessories:
     list:
     - ItemId: 106001
+  enemies:
+    list:
+    - Id: 10101
+      HitPoint: 45
+      Stamina: 0
+      PhysicalAttack: 24
+      MagicalAttack: 24
+      SlashCutRate: 0.06
+      BlowCutRate: 0.06
+      ThrustCutRate: 0.06
+      MagicCutRate: 0.06
+      FireCutRate: 0.06
+      ThunderCutRate: 0.06
+      Speed: 24
+      Experience: 100

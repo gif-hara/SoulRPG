@@ -37,7 +37,7 @@ namespace SoulRPG
         [SerializeField]
         private Skill.DictionaryList skills;
         public Skill.DictionaryList Skills => skills;
-        
+
         [SerializeField]
         private Armor.DictionaryList armorHeads;
         public Armor.DictionaryList ArmorHeads => armorHeads;
@@ -45,19 +45,23 @@ namespace SoulRPG
         [SerializeField]
         private Armor.DictionaryList armorBodies;
         public Armor.DictionaryList ArmorBodies => armorBodies;
-        
+
         [SerializeField]
         private Armor.DictionaryList armorArms;
         public Armor.DictionaryList ArmorArms => armorArms;
-        
+
         [SerializeField]
         private Armor.DictionaryList armorLegs;
         public Armor.DictionaryList ArmorLegs => armorLegs;
-        
+
         [SerializeField]
         private Accessory.DictionaryList accessories;
         public Accessory.DictionaryList Accessories => accessories;
-        
+
+        [SerializeField]
+        private Enemy.DictionaryList enemies;
+        public Enemy.DictionaryList Enemies => enemies;
+
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
@@ -80,6 +84,7 @@ namespace SoulRPG
                 "MasterData.Armor.Arms",
                 "MasterData.Armor.Legs",
                 "MasterData.Accessory",
+                "MasterData.Enemy",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -99,6 +104,7 @@ namespace SoulRPG
             armorArms.Set(JsonHelper.FromJson<Armor>(database.Item2[7]));
             armorLegs.Set(JsonHelper.FromJson<Armor>(database.Item2[8]));
             accessories.Set(JsonHelper.FromJson<Accessory>(database.Item2[9]));
+            enemies.Set(JsonHelper.FromJson<Enemy>(database.Item2[10]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -322,17 +328,17 @@ namespace SoulRPG
             public int ItemId;
 
             public float SlashCutRate;
-            
+
             public float BlowCutRate;
-            
+
             public float ThrustCutRate;
-            
+
             public float MagicCutRate;
-            
+
             public float FireCutRate;
-            
+
             public float ThunderCutRate;
-            
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Armor>
             {
@@ -344,11 +350,47 @@ namespace SoulRPG
         public class Accessory
         {
             public int ItemId;
-            
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Accessory>
             {
                 public DictionaryList() : base(x => x.ItemId) { }
+            }
+        }
+
+        [Serializable]
+        public class Enemy
+        {
+            public int Id;
+
+            public int HitPoint;
+
+            public int Stamina;
+
+            public int PhysicalAttack;
+
+            public int MagicalAttack;
+
+            public float SlashCutRate;
+
+            public float BlowCutRate;
+
+            public float ThrustCutRate;
+
+            public float MagicCutRate;
+
+            public float FireCutRate;
+
+            public float ThunderCutRate;
+
+            public int Speed;
+
+            public int Experience;
+
+            [Serializable]
+            public class DictionaryList : DictionaryList<int, Enemy>
+            {
+                public DictionaryList() : base(x => x.Id) { }
             }
         }
     }
