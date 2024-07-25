@@ -350,6 +350,16 @@ MonoBehaviour:
       Id: 101002
     - Name: "\u30D0\u30B9\u30BF\u30FC\u30BD\u30FC\u30C9"
       Id: 101003
+    - Name: "\u9A0E\u58EB\u306E\u515C"
+      Id: 102001
+    - Name: "\u9A0E\u58EB\u306E\u93A7"
+      Id: 103001
+    - Name: "\u9A0E\u58EB\u306E\u624B\u7532"
+      Id: 104001
+    - Name: "\u9A0E\u58EB\u306E\u8DB3\u7532"
+      Id: 105001
+    - Name: "\u9244\u306E\u6307\u8F2A"
+      Id: 106001
   weapons:
     list:
     - ItemId: 101001
@@ -507,8 +517,44 @@ MonoBehaviour:
     - Name: "\u653E\u51FA\u3059\u308B\u9B54\u529B"
       Id: 101033
       Cost: 7
-      Description: "\u5897\u5E45\u3055\u305B\u305F\u9B54\u529B\u3092\u4E00\u5EA6\u306B\u653E\u3061\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u3053\u306E\u653B\u6483\u306F\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u306B\u5FDC\u3058\u3066\u5A01\u529B\u304C\u5909\u308F\u308B\u3002"
+      Description: "\u5897\u5E45\u3055\u305B\u305F\u9B54\u529B\u3092\u4E00\u5EA6\u306B\u653E\u3061\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u3053\u306E\u653B\u6483\u306F\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u306B\u5FDC\u3058\u3066\u5A01\u529B\u304C\u5909\u308F\u308A\u3001\u653B\u6483\u5F8C\u306F\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u306F0\u306B\u306A\u308B\u3002"
     - Name: "\u5897\u5E45\u9B54\u529B\u30FB\u8FC5"
       Id: 101034
       Cost: 7
       Description: "\u7D20\u65E9\u3044\u8A60\u5531\u306B\u3088\u308A\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u30921\u84C4\u7A4D\u3059\u308B\u3002"
+  armorHeads:
+    list:
+    - ItemId: 102001
+      SlashCutRate: 0.05
+      BlowCutRate: 0.05
+      ThrustCutRate: 0.05
+      MagicCutRate: 0.05
+      FireCutRate: 0.05
+      ThunderCutRate: 0.05
+  armorChests:
+    list:
+    - ItemId: 103001
+      SlashCutRate: 0.05
+      BlowCutRate: 0.05
+      ThrustCutRate: 0.05
+      MagicCutRate: 0.05
+      FireCutRate: 0.05
+      ThunderCutRate: 0.05
+  armorArms:
+    list:
+    - ItemId: 104001
+      SlashCutRate: 0.05
+      BlowCutRate: 0.05
+      ThrustCutRate: 0.05
+      MagicCutRate: 0.05
+      FireCutRate: 0.05
+      ThunderCutRate: 0.05
+  armorLegs:
+    list:
+    - ItemId: 105001
+      SlashCutRate: 0.05
+      BlowCutRate: 0.05
+      ThrustCutRate: 0.05
+      MagicCutRate: 0.05
+      FireCutRate: 0.05
+      ThunderCutRate: 0.05

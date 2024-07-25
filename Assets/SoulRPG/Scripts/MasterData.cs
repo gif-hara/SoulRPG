@@ -37,6 +37,23 @@ namespace SoulRPG
         [SerializeField]
         private Skill.DictionaryList skills;
         public Skill.DictionaryList Skills => skills;
+        
+        [SerializeField]
+        private Armor.DictionaryList armorHeads;
+        public Armor.DictionaryList ArmorHeads => armorHeads;
+
+        [SerializeField]
+        private Armor.DictionaryList armorChests;
+        public Armor.DictionaryList ArmorChests => armorChests;
+        
+        [SerializeField]
+        private Armor.DictionaryList armorArms;
+        public Armor.DictionaryList ArmorArms => armorArms;
+        
+        [SerializeField]
+        private Armor.DictionaryList armorLegs;
+        public Armor.DictionaryList ArmorLegs => armorLegs;
+        
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
@@ -54,6 +71,10 @@ namespace SoulRPG
                 "MasterData.Item",
                 "MasterData.Weapon",
                 "MasterData.Skill",
+                "MasterData.Armor.Head",
+                "MasterData.Armor.Chest",
+                "MasterData.Armor.Arms",
+                "MasterData.Armor.Legs",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -68,6 +89,10 @@ namespace SoulRPG
             items.Set(JsonHelper.FromJson<Item>(database.Item2[2]));
             weapons.Set(JsonHelper.FromJson<Weapon>(database.Item2[3]));
             skills.Set(JsonHelper.FromJson<Skill>(database.Item2[4]));
+            armorHeads.Set(JsonHelper.FromJson<Armor>(database.Item2[5]));
+            armorChests.Set(JsonHelper.FromJson<Armor>(database.Item2[6]));
+            armorArms.Set(JsonHelper.FromJson<Armor>(database.Item2[7]));
+            armorLegs.Set(JsonHelper.FromJson<Armor>(database.Item2[8]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -282,6 +307,30 @@ namespace SoulRPG
             public class DictionaryList : DictionaryList<int, Skill>
             {
                 public DictionaryList() : base(x => x.Id) { }
+            }
+        }
+
+        [Serializable]
+        public class Armor
+        {
+            public int ItemId;
+
+            public float SlashCutRate;
+            
+            public float BlowCutRate;
+            
+            public float ThrustCutRate;
+            
+            public float MagicCutRate;
+            
+            public float FireCutRate;
+            
+            public float ThunderCutRate;
+            
+            [Serializable]
+            public class DictionaryList : DictionaryList<int, Armor>
+            {
+                public DictionaryList() : base(x => x.ItemId) { }
             }
         }
     }
