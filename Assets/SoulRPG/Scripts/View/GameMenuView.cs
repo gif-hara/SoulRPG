@@ -34,6 +34,10 @@ namespace SoulRPG
             public string header;
 
             public System.Action onClick;
+
+            public System.Action onLeft;
+
+            public System.Action onRight;
         }
 
         public GameMenuView(HKUIDocument documentBundlePrefab, Character character)
@@ -69,6 +73,14 @@ namespace SoulRPG
                     onClick = () =>
                     {
                         Debug.Log("道具");
+                    },
+                    onLeft = () =>
+                    {
+                        Debug.Log("左");
+                    },
+                    onRight = () =>
+                    {
+                        Debug.Log("右");
                     }
                 },
                 new()
@@ -212,7 +224,7 @@ namespace SoulRPG
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
-        
+
         private async UniTask StateSelectArmorHeadAsync(CancellationToken scope)
         {
             var listElements = character.Inventory.Items
@@ -241,7 +253,7 @@ namespace SoulRPG
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
-        
+
         private async UniTask StateSelectArmorBodyAsync(CancellationToken scope)
         {
             var listElements = character.Inventory.Items
@@ -270,7 +282,7 @@ namespace SoulRPG
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
-        
+
         private async UniTask StateSelectArmorArmsAsync(CancellationToken scope)
         {
             var listElements = character.Inventory.Items
@@ -299,7 +311,7 @@ namespace SoulRPG
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
-        
+
         private async UniTask StateSelectArmorLegsAsync(CancellationToken scope)
         {
             var listElements = character.Inventory.Items
@@ -328,7 +340,7 @@ namespace SoulRPG
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
-        
+
         private async UniTask StateSelectAccessoryAsync(CancellationToken scope)
         {
             var listElements = character.Inventory.Items
@@ -376,13 +388,29 @@ namespace SoulRPG
             foreach (var listElement in listElements)
             {
                 var element = Object.Instantiate(listElementPrefab, listParent);
+                var buttonObject = element.Q("Button");
                 element.Q<TMP_Text>("Header").text = listElement.header;
                 element.Q<Button>("Button").OnClickAsObservable()
                     .Subscribe(_ =>
                     {
                         listElement.onClick();
                     })
-                    .AddTo(element);
+                    .RegisterTo(element.destroyCancellationToken);
+                inputController.InputActions.UI.Navigate.OnPerformedAsObservable()
+                    .Where(x => x.ReadValue<Vector2>().x != 0)
+                    .Where(_ => EventSystem.current.currentSelectedGameObject == buttonObject)
+                    .Subscribe(x =>
+                    {
+                        if (x.ReadValue<Vector2>().x < 0)
+                        {
+                            listElement.onLeft?.Invoke();
+                        }
+                        else if (x.ReadValue<Vector2>().x > 0)
+                        {
+                            listElement.onRight?.Invoke();
+                        }
+                    })
+                    .RegisterTo(element.destroyCancellationToken);
                 if (index == initialElement)
                 {
                     EventSystem.current.SetSelectedGameObject(element.Q("Button"));
