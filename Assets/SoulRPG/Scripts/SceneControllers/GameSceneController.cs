@@ -3,7 +3,6 @@ using R3;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Observable = R3.Observable;
 
 namespace SoulRPG.SceneControllers
 {
