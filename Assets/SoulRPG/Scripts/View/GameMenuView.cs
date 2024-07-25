@@ -161,7 +161,7 @@ namespace SoulRPG
                     onClick = () =>
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Accessory1);
-                        Debug.Log("TODO: アクセサリ選択");
+                        stateMachine.Change(StateSelectAccessoryAsync);
                     }
                 };
             });
@@ -304,6 +304,35 @@ namespace SoulRPG
         {
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataArmorLegs())
+                .Select(x =>
+                {
+                    var itemName = x.Key.GetMasterDataItem().Name;
+                    return new ListElement
+                    {
+                        header = itemName,
+                        onClick = () =>
+                        {
+                            var equipmentChangeController = (EquipmentChangeController)context;
+                            equipmentChangeController.ChangeEquipment(x.Key);
+                            stateMachine.Change(StateSelectEquipmentPartAsync);
+                        }
+                    };
+                });
+            var listDocument = CreateListDocument(listElements, 0);
+            inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateSelectEquipmentPartAsync);
+                })
+                .RegisterTo(scope);
+            await UniTask.WaitUntilCanceled(scope);
+            Object.Destroy(listDocument.gameObject);
+        }
+        
+        private async UniTask StateSelectAccessoryAsync(CancellationToken scope)
+        {
+            var listElements = character.Inventory.Items
+                .Where(x => x.Key.ContainsMasterDataAccessory())
                 .Select(x =>
                 {
                     var itemName = x.Key.GetMasterDataItem().Name;

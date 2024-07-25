@@ -46,5 +46,10 @@ namespace SoulRPG
         {
             return TinyServiceLocator.Resolve<MasterData>().ArmorLegs.ContainsKey(self);
         }
+        
+        public static bool ContainsMasterDataAccessory(this int self)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().Accessories.ContainsKey(self);
+        }
     }
 }
