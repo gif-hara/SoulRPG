@@ -57,10 +57,10 @@ namespace SoulRPG
                     character.Equipment.EquipBody(itemId);
                     break;
                 case PartType.Arm:
-                    character.Equipment.EquipArm(itemId);
+                    character.Equipment.EquipArms(itemId);
                     break;
                 case PartType.Leg:
-                    character.Equipment.EquipLeg(itemId);
+                    character.Equipment.EquipLegs(itemId);
                     break;
                 case PartType.Accessory1:
                     character.Equipment.EquipAccessory(0, itemId);

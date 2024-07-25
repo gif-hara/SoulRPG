@@ -64,22 +64,50 @@ namespace SoulRPG
 
         public void EquipHead(int headId)
         {
-            this.headId.Value = headId;
+            if(this.headId.Value == headId)
+            {
+                this.headId.Value = 0;
+            }
+            else
+            {
+                this.headId.Value = headId;
+            }
         }
 
         public void EquipBody(int bodyId)
         {
-            this.bodyId.Value = bodyId;
+            if (this.bodyId.Value == bodyId)
+            {
+                this.bodyId.Value = 0;
+            }
+            else
+            {
+                this.bodyId.Value = bodyId;
+            }
         }
 
-        public void EquipArm(int armId)
+        public void EquipArms(int armId)
         {
-            this.armId.Value = armId;
+            if (this.armId.Value == armId)
+            {
+                this.armId.Value = 0;
+            }
+            else
+            {
+                this.armId.Value = armId;
+            }
         }
 
-        public void EquipLeg(int legId)
+        public void EquipLegs(int legId)
         {
-            this.legId.Value = legId;
+            if (this.legId.Value == legId)
+            {
+                this.legId.Value = 0;
+            }
+            else
+            {
+                this.legId.Value = legId;
+            }
         }
 
         public void EquipAccessory(int index, int accessoryId)
