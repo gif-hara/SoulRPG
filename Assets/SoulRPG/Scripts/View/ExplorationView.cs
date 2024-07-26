@@ -81,21 +81,20 @@ namespace SoulRPG
             )
         {
             var positionText = uiDocument.Q<TMP_Text>("Text.Position");
-            var miniMapAreaDocument = uiDocument.Q<HKUIDocument>("Area.MiniMap");
-            var miniMapAreaTransform = uiDocument.Q<RectTransform>("Area.MiniMap");
-            var miniMapSize = miniMapAreaDocument.Q<RectTransform>("Area.Tips").rect.size;
-            var miniMapTipSize = miniMapSize / 10;
-            var miniMapTipsParent = miniMapAreaDocument.Q<RectTransform>("Area.Tips.Viewport");
-            var characterAreaTransform = miniMapAreaDocument.Q<RectTransform>("Area.Character");
-            var miniMapWallTopPrefab = miniMapAreaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Top");
-            var miniMapWallLeftPrefab = miniMapAreaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Left");
-            var miniMapWallObjects = new List<RectTransform>();
-            characterAreaTransform.sizeDelta = miniMapTipSize;
+            var areaDocument = uiDocument.Q<HKUIDocument>("Area.MiniMap");
+            var areaTransform = uiDocument.Q<RectTransform>("Area.MiniMap");
+            var size = areaDocument.Q<RectTransform>("Area.Tips").rect.size;
+            var tipSize = size / 10;
+            var tipsParent = areaDocument.Q<RectTransform>("Area.Tips.Viewport");
+            var characterAreaTransform = areaDocument.Q<RectTransform>("Area.Character");
+            var miniMapWallTopPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Top");
+            var miniMapWallLeftPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Left");
+            characterAreaTransform.sizeDelta = tipSize;
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
                     positionText.text = $"{x}";
-                    miniMapTipsParent.anchoredPosition = new Vector2(-x.x * miniMapTipSize.x, -x.y * miniMapTipSize.y);
+                    tipsParent.anchoredPosition = new Vector2(-x.x * tipSize.x, -x.y * tipSize.y);
                     gameCameraController.transform.position = new Vector3(x.x, 0, x.y);
                 })
                 .RegisterTo(scope);
@@ -107,19 +106,13 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
 
-            foreach (var wall in miniMapWallObjects)
-            {
-                Object.Destroy(wall.gameObject);
-            }
-            miniMapWallObjects.Clear();
             foreach (var i in dungeonController.CurrentDungeon.wall.List)
             {
                 var isHorizontal = i.a.y == i.b.y;
                 var prefab = isHorizontal ? miniMapWallTopPrefab : miniMapWallLeftPrefab;
-                var wallObject = Object.Instantiate(prefab, miniMapTipsParent.transform);
-                miniMapWallObjects.Add(wallObject);
-                wallObject.anchoredPosition = new Vector2(i.a.x * miniMapTipSize.x, i.a.y * miniMapTipSize.y);
-                wallObject.sizeDelta = miniMapTipSize;
+                var wallObject = Object.Instantiate(prefab, tipsParent.transform);
+                wallObject.anchoredPosition = new Vector2(i.a.x * tipSize.x, i.a.y * tipSize.y);
+                wallObject.sizeDelta = tipSize;
             }
         }
     }
