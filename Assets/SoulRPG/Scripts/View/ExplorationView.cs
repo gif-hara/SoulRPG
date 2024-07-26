@@ -39,7 +39,7 @@ namespace SoulRPG
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             SetupMiniMap(uiDocument, dungeonController, character, scope);
             SetupDungeon(dungeonController);
-            SetupMessage(uiDocument);
+            SetupMessage(uiDocument, scope);
         }
 
         private void SetupMiniMap(
@@ -108,12 +108,22 @@ namespace SoulRPG
         }
 
         private void SetupMessage(
-            HKUIDocument uiDocument
+            HKUIDocument uiDocument,
+            CancellationToken scope
             )
         {
             var areaDocument = uiDocument.Q<HKUIDocument>("Area.Message");
-            var messageParent = areaDocument.Q<RectTransform>("Area.Text");
-            var messagePrefab = areaDocument.Q<TMP_Text>("UIElement.Message");
+            var messageParent = areaDocument.Q<RectTransform>("ListParent");
+            var messagePrefab = areaDocument.Q<HKUIDocument>("UIElement.Message");
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+
+            gameEvents.RequestShowMessage
+                .Subscribe(x =>
+                {
+                    var element = Object.Instantiate(messagePrefab, messageParent);
+                    element.Q<TMP_Text>("Message").text = x;
+                })
+                .RegisterTo(scope);
         }
     }
 }
