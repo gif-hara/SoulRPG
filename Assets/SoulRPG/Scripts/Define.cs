@@ -22,5 +22,11 @@ namespace SoulRPG
             Fire,
             Thunder,
         }
+
+        public enum BattleResult
+        {
+            PlayerWin,
+            PlayerLose,
+        }
     }
 }
