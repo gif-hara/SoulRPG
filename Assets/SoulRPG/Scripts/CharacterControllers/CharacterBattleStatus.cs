@@ -1,4 +1,5 @@
 using System;
+using SoulRPG.CharacterControllers;
 using UnityEngine;
 
 namespace SoulRPG
@@ -52,5 +53,22 @@ namespace SoulRPG
         [SerializeField]
         private int speed;
         public int Speed => speed;
+
+        public CharacterBattleStatus(Character character)
+        {
+            var growthParameter = character.GrowthParameter;
+            var equipment = character.Equipment;
+            hitPoint = growthParameter.Vitality * 8;
+            stamina = growthParameter.Stamina;
+            physicalAttack = growthParameter.PhysicalStrength;
+            magicalAttack = growthParameter.MagicalStrength;
+            slashCutRate = equipment.TotalSlashCutRate;
+            blowCutRate = equipment.TotalBlowCutRate;
+            thrustCutRate = equipment.TotalThrustCutRate;
+            magicCutRate = equipment.TotalMagicCutRate;
+            fireCutRate = equipment.TotalFireCutRate;
+            thunderCutRate = equipment.TotalThunderCutRate;
+            speed = growthParameter.Speed;
+        }
     }
 }
