@@ -41,6 +41,7 @@ namespace SoulRPG.SceneControllers
         {
             await BootSystem.IsReady;
             TinyServiceLocator.Register(masterData);
+            TinyServiceLocator.Register(new GameEvents());
             var player = new Character(debugCharacterGrowthParameter);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             var gameView = new ExplorationView(
@@ -59,6 +60,7 @@ namespace SoulRPG.SceneControllers
             dungeonController.Setup(debugDungeonName);
             playerController.Attach(player, gameMenuDocumentPrefab, destroyCancellationToken);
             gameView.Open(destroyCancellationToken);
+            var testMessageId = 0;
             Observable.EveryUpdate(destroyCancellationToken)
                 .Subscribe(_ =>
                 {
@@ -75,6 +77,11 @@ namespace SoulRPG.SceneControllers
                     {
                         var battleSystem = new BattleSystem();
                         battleSystem.BeginAsync(destroyCancellationToken).Forget();
+                    }
+
+                    if (Keyboard.current.eKey.wasPressedThisFrame)
+                    {
+                        TinyServiceLocator.Resolve<GameEvents>().RequestShowMessage.OnNext($"TestMessage{testMessageId++}");
                     }
                 })
                 .RegisterTo(destroyCancellationToken);
