@@ -16,8 +16,9 @@ namespace SoulRPG.BattleSystems
 
         public async UniTask<Define.BattleResult> BeginAsync(CancellationToken scope)
         {
-            Debug.Log("BattleSystem BeginAsync");
+            Debug.Log("BattleSystem Begin");
             await UniTask.Delay(TimeSpan.FromSeconds(1.0f), cancellationToken: scope);
+            Debug.Log("BattleSystem End");
             return Define.BattleResult.PlayerWin;
         }
     }
