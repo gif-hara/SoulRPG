@@ -1,5 +1,7 @@
+using Cysharp.Threading.Tasks;
 using HK;
 using R3;
+using SoulRPG.BattleSystems;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -67,6 +69,12 @@ namespace SoulRPG.SceneControllers
                             player.Inventory.Add(i.Id, 1);
                         }
                         Debug.Log("Add All Items");
+                    }
+
+                    if (Keyboard.current.wKey.wasPressedThisFrame)
+                    {
+                        var battleSystem = new BattleSystem();
+                        battleSystem.BeginAsync(destroyCancellationToken).Forget();
                     }
                 })
                 .RegisterTo(destroyCancellationToken);
