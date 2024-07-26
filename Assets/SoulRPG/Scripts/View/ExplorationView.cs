@@ -37,40 +37,9 @@ namespace SoulRPG
         public void Open(CancellationToken scope)
         {
             var uiDocument = Object.Instantiate(uiDocumentPrefab);
-            var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
-            var dungeonFloorObjects = new List<Transform>();
-            var dungeonWallObjects = new List<Transform>();
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             SetupMiniMap(uiDocument, dungeonController, character, scope);
-
-            foreach (var floor in dungeonFloorObjects)
-            {
-                Object.Destroy(floor.gameObject);
-            }
-            dungeonFloorObjects.Clear();
-            for (var i = 0; i <= dungeonController.CurrentDungeon.range.x; i++)
-            {
-                for (var j = 0; j <= dungeonController.CurrentDungeon.range.y; j++)
-                {
-                    var floorObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Floor"), dungeonDocument.transform);
-                    dungeonFloorObjects.Add(floorObject);
-                    floorObject.position = new Vector3(i, 0, j);
-                }
-            }
-
-            foreach (var wall in dungeonWallObjects)
-            {
-                Object.Destroy(wall.gameObject);
-            }
-            dungeonWallObjects.Clear();
-            foreach (var i in dungeonController.CurrentDungeon.wall.List)
-            {
-                var isHorizontal = i.a.y == i.b.y;
-                var prefab = isHorizontal ? dungeonDocument.Q<Transform>("Dungeon.Wall.Top") : dungeonDocument.Q<Transform>("Dungeon.Wall.Left");
-                var wallObject = Object.Instantiate(prefab, dungeonDocument.transform);
-                dungeonWallObjects.Add(wallObject);
-                wallObject.position = new Vector3(i.a.x, 0, i.a.y);
-            }
+            SetupDungeon(dungeonController);
         }
 
         private void SetupMiniMap(
@@ -113,6 +82,28 @@ namespace SoulRPG
                 var wallObject = Object.Instantiate(prefab, tipsParent.transform);
                 wallObject.anchoredPosition = new Vector2(i.a.x * tipSize.x, i.a.y * tipSize.y);
                 wallObject.sizeDelta = tipSize;
+            }
+        }
+
+        private void SetupDungeon(
+            DungeonController dungeonController
+            )
+        {
+            var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
+            for (var i = 0; i <= dungeonController.CurrentDungeon.range.x; i++)
+            {
+                for (var j = 0; j <= dungeonController.CurrentDungeon.range.y; j++)
+                {
+                    var floorObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Floor"), dungeonDocument.transform);
+                    floorObject.position = new Vector3(i, 0, j);
+                }
+            }
+            foreach (var i in dungeonController.CurrentDungeon.wall.List)
+            {
+                var isHorizontal = i.a.y == i.b.y;
+                var prefab = isHorizontal ? dungeonDocument.Q<Transform>("Dungeon.Wall.Top") : dungeonDocument.Q<Transform>("Dungeon.Wall.Left");
+                var wallObject = Object.Instantiate(prefab, dungeonDocument.transform);
+                wallObject.position = new Vector3(i.a.x, 0, i.a.y);
             }
         }
     }
