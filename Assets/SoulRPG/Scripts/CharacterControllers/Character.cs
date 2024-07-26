@@ -29,15 +29,18 @@ namespace SoulRPG.CharacterControllers
 
         public ReadOnlyReactiveProperty<Define.Direction> DirectionAsObservable() => direction;
 
-        public Inventory Inventory { get; } = new();
+        public Inventory Inventory { get; }
 
         public Equipment Equipment { get; } = new();
+
+        public CharacterEvents Events { get; } = new();
 
         public CharacterGrowthParameter GrowthParameter { get; } = new();
 
         public Character(CharacterGrowthParameter growthParameter)
         {
             GrowthParameter = growthParameter;
+            Inventory = new Inventory(this);
         }
 
         public void Move(Vector2Int velocity)
