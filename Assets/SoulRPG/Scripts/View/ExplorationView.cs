@@ -40,19 +40,23 @@ namespace SoulRPG
             var positionText = uiDocument.Q<TMP_Text>("Text.Position");
             var directionText = uiDocument.Q<TMP_Text>("Text.Direction");
             var miniMapAreaDocument = uiDocument.Q<HKUIDocument>("Area.MiniMap");
+            var miniMapAreaTransform = uiDocument.Q<RectTransform>("Area.MiniMap");
+            var miniMapSize = miniMapAreaDocument.Q<RectTransform>("Area.Tips").rect.size;
+            var miniMapTipSize = miniMapSize / 10;
             var miniMapTipsParent = miniMapAreaDocument.Q<RectTransform>("Area.Tips.Viewport");
-            var characterAreaTransform = miniMapAreaDocument.Q<Transform>("Area.Character");
+            var characterAreaTransform = miniMapAreaDocument.Q<RectTransform>("Area.Character");
             var miniMapWallTopPrefab = miniMapAreaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Top");
             var miniMapWallLeftPrefab = miniMapAreaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Left");
             var miniMapWallObjects = new List<RectTransform>();
             var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
             var dungeonFloorObjects = new List<Transform>();
             var dungeonWallObjects = new List<Transform>();
+            characterAreaTransform.sizeDelta = miniMapTipSize;
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
                     positionText.text = $"Position: {x}";
-                    miniMapTipsParent.anchoredPosition = new Vector2(-x.x * 100, -x.y * 100);
+                    miniMapTipsParent.anchoredPosition = new Vector2(-x.x * miniMapTipSize.x, -x.y * miniMapTipSize.y);
                     gameCameraController.transform.position = new Vector3(x.x, 0, x.y);
                 })
                 .RegisterTo(scope);
@@ -77,7 +81,8 @@ namespace SoulRPG
                 var prefab = isHorizontal ? miniMapWallTopPrefab : miniMapWallLeftPrefab;
                 var wallObject = Object.Instantiate(prefab, miniMapTipsParent.transform);
                 miniMapWallObjects.Add(wallObject);
-                wallObject.anchoredPosition = new Vector2(i.a.x * 100, i.a.y * 100);
+                wallObject.anchoredPosition = new Vector2(i.a.x * miniMapTipSize.x, i.a.y * miniMapTipSize.y);
+                wallObject.sizeDelta = miniMapTipSize;
             }
 
             foreach (var floor in dungeonFloorObjects)
