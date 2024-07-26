@@ -43,7 +43,7 @@ namespace SoulRPG.SceneControllers
             TinyServiceLocator.Register(masterData);
             var player = new Character(debugCharacterGrowthParameter);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
-            var gameView = new GameView(
+            var gameView = new ExplorationView(
                 gameUIDocumentPrefab,
                 dungeonDocumentPrefab,
                 gameCameraController,
