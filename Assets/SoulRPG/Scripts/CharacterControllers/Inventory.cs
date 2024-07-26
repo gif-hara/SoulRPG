@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using SoulRPG.CharacterControllers;
 
 namespace SoulRPG
 {
@@ -8,6 +9,13 @@ namespace SoulRPG
     public sealed class Inventory
     {
         public Dictionary<int, int> Items { get; } = new();
+
+        private readonly Character character;
+
+        public Inventory(Character character)
+        {
+            this.character = character;
+        }
 
         public void Add(int itemId, int count)
         {
@@ -19,6 +27,7 @@ namespace SoulRPG
             {
                 Items[itemId] = count;
             }
+            character.Events.OnAcquiredItem.OnNext((itemId, count));
         }
 
         public void Remove(int itemId, int count)
