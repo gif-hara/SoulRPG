@@ -38,7 +38,6 @@ namespace SoulRPG
         {
             var uiDocument = Object.Instantiate(uiDocumentPrefab);
             var positionText = uiDocument.Q<TMP_Text>("Text.Position");
-            var directionText = uiDocument.Q<TMP_Text>("Text.Direction");
             var miniMapAreaDocument = uiDocument.Q<HKUIDocument>("Area.MiniMap");
             var miniMapAreaTransform = uiDocument.Q<RectTransform>("Area.MiniMap");
             var miniMapSize = miniMapAreaDocument.Q<RectTransform>("Area.Tips").rect.size;
@@ -55,7 +54,7 @@ namespace SoulRPG
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
-                    positionText.text = $"Position: {x}";
+                    positionText.text = $"{x}";
                     miniMapTipsParent.anchoredPosition = new Vector2(-x.x * miniMapTipSize.x, -x.y * miniMapTipSize.y);
                     gameCameraController.transform.position = new Vector3(x.x, 0, x.y);
                 })
@@ -63,7 +62,6 @@ namespace SoulRPG
             character.DirectionAsObservable()
                 .Subscribe(x =>
                 {
-                    directionText.text = $"Direction: {x}";
                     characterAreaTransform.rotation = Quaternion.Euler(0, 0, -x.ToAngle());
                     gameCameraController.transform.rotation = Quaternion.Euler(0, x.ToAngle(), 0);
                 })
