@@ -21,6 +21,26 @@ namespace SoulRPG
         {
             return TinyServiceLocator.Resolve<MasterData>().Weapons.TryGetValue(self, out weapon);
         }
+        
+        public static bool TryGetMasterDataArmorHead(this int self, out MasterData.Armor armorHead)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().ArmorHeads.TryGetValue(self, out armorHead);
+        }
+        
+        public static bool TryGetMasterDataArmorBody(this int self, out MasterData.Armor armorBody)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().ArmorBodies.TryGetValue(self, out armorBody);
+        }
+        
+        public static bool TryGetMasterDataArmorArms(this int self, out MasterData.Armor armorArms)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().ArmorArms.TryGetValue(self, out armorArms);
+        }
+        
+        public static bool TryGetMasterDataArmorLegs(this int self, out MasterData.Armor armorLegs)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().ArmorLegs.TryGetValue(self, out armorLegs);
+        }
 
         public static bool ContainsMasterDataWeapon(this int self)
         {
