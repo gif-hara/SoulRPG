@@ -11,7 +11,7 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    public sealed class GameView
+    public sealed class ExplorationView
     {
         private readonly HKUIDocument uiDocumentPrefab;
 
@@ -21,7 +21,7 @@ namespace SoulRPG
 
         private readonly Character character;
 
-        public GameView(
+        public ExplorationView(
             HKUIDocument uiDocumentPrefab,
             HKUIDocument dungeonDocumentPrefab,
             GameCameraController gameCameraController,
