@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Threading;
 using HK;
 using R3;
@@ -40,6 +39,7 @@ namespace SoulRPG
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             SetupMiniMap(uiDocument, dungeonController, character, scope);
             SetupDungeon(dungeonController);
+            SetupMessage(uiDocument);
         }
 
         private void SetupMiniMap(
@@ -105,6 +105,15 @@ namespace SoulRPG
                 var wallObject = Object.Instantiate(prefab, dungeonDocument.transform);
                 wallObject.position = new Vector3(i.a.x, 0, i.a.y);
             }
+        }
+
+        private void SetupMessage(
+            HKUIDocument uiDocument
+            )
+        {
+            var areaDocument = uiDocument.Q<HKUIDocument>("Area.Message");
+            var messageParent = areaDocument.Q<RectTransform>("Area.Text");
+            var messagePrefab = areaDocument.Q<TMP_Text>("UIElement.Message");
         }
     }
 }
