@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using HK;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnitySequencerSystem;
 
 namespace SoulRPG
 {
@@ -99,6 +101,14 @@ namespace SoulRPG
             items.Set(JsonHelper.FromJson<Item>(database.Item2[2]));
             weapons.Set(JsonHelper.FromJson<Weapon>(database.Item2[3]));
             skills.Set(JsonHelper.FromJson<Skill>(database.Item2[4]));
+            foreach (var i in skills.List)
+            {
+                i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
+                if (i.ActionSequences == null)
+                {
+                    Debug.LogWarning($"Not found SkillAction {i.Id}");
+                }
+            }
             armorHeads.Set(JsonHelper.FromJson<Armor>(database.Item2[5]));
             armorBodies.Set(JsonHelper.FromJson<Armor>(database.Item2[6]));
             armorArms.Set(JsonHelper.FromJson<Armor>(database.Item2[7]));
@@ -314,6 +324,8 @@ namespace SoulRPG
             public int Cost;
 
             public string Description;
+
+            public ScriptableSequences ActionSequences;
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Skill>
