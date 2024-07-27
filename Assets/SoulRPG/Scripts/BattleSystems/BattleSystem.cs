@@ -3,6 +3,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using UnityEngine;
+using UnitySequencerSystem;
 
 namespace SoulRPG.BattleSystems
 {
@@ -26,16 +27,27 @@ namespace SoulRPG.BattleSystems
             {
                 var playerThinkResult = await player.ThinkAsync();
                 var enemyThinkResult = await enemy.ThinkAsync();
-                gameEvents.RequestShowMessage.OnNext($"Player: {playerThinkResult.weaponItemId}, {playerThinkResult.skillId}");
-                await UniTask.Delay(TimeSpan.FromSeconds(1.0f), cancellationToken: scope);
-                gameEvents.RequestShowMessage.OnNext($"Enemy: {enemyThinkResult.weaponItemId}, {enemyThinkResult.skillId}");
-                await UniTask.Delay(TimeSpan.FromSeconds(1.0f), cancellationToken: scope);
+                await InvokeSkillActionAsync(player, enemy, playerThinkResult.weaponItemId, playerThinkResult.skillId, scope);
+                await InvokeSkillActionAsync(enemy, player, enemyThinkResult.weaponItemId, enemyThinkResult.skillId, scope);
+                await UniTask.Delay(1000, cancellationToken: scope);
             }
 
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
             inputController.ChangeInputType(InputController.InputType.InGame);
             Debug.Log("BattleSystem End");
             return result;
+
+            UniTask InvokeSkillActionAsync(BattleCharacter actor, BattleCharacter target, int weaponId, int skillId, CancellationToken scope)
+            {
+                var masterDataSkill = skillId.GetMasterDataSkill();
+                var sequences = masterDataSkill.ActionSequences.Sequences;
+                var container = new Container();
+                container.Register("Actor", actor);
+                container.Register("Target", target);
+                container.Register(weaponId.GetMasterDataWeapon());
+                var sequencer = new Sequencer(container, sequences);
+                return sequencer.PlayAsync(scope);
+            }
         }
     }
 }
