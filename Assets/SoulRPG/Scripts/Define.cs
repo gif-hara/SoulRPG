@@ -39,5 +39,11 @@ namespace SoulRPG
             PlayerWin,
             PlayerLose,
         }
+
+        public enum AttackType
+        {
+            Physical,
+            Magical,
+        }
     }
 }
