@@ -85,5 +85,20 @@ namespace SoulRPG
         {
             hitPointReactiveProperty.Value = Mathf.Max(0, hitPointReactiveProperty.Value - damage);
         }
+
+        public float GetCutRate(Define.AttackAttribute attackAttribute)
+        {
+            return attackAttribute switch
+            {
+                Define.AttackAttribute.Slash => slashCutRateReactiveProperty.Value,
+                Define.AttackAttribute.Blow => blowCutRateReactiveProperty.Value,
+                Define.AttackAttribute.Thrust => thrustCutRateReactiveProperty.Value,
+                Define.AttackAttribute.Magic => magicCutRateReactiveProperty.Value,
+                Define.AttackAttribute.Fire => fireCutRateReactiveProperty.Value,
+                Define.AttackAttribute.Thunder => thunderCutRateReactiveProperty.Value,
+                _ => throw new ArgumentOutOfRangeException(),
+            };
+
+        }
     }
 }
