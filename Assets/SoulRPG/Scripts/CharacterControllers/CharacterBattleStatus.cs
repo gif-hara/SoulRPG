@@ -10,6 +10,8 @@ namespace SoulRPG
     /// </summary>
     public sealed class CharacterBattleStatus
     {
+        public string Name { get; }
+
         private readonly ReactiveProperty<int> hitPointReactiveProperty;
         public ReadOnlyReactiveProperty<int> HitPoint => hitPointReactiveProperty;
 
