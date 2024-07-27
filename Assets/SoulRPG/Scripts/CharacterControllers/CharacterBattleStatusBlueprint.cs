@@ -10,6 +10,10 @@ namespace SoulRPG
     public sealed class CharacterBattleStatusBlueprint
     {
         [SerializeField]
+        private string name;
+        public string Name => name;
+
+        [SerializeField]
         private int hitPoint;
         public int HitPoint => hitPoint;
 
