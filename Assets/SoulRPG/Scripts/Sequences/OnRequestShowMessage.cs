@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
@@ -9,6 +10,7 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
+    [Serializable]
     public sealed class OnRequestShowMessage : ISequence
     {
         [SerializeField]
