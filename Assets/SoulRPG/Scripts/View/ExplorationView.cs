@@ -115,8 +115,10 @@ namespace SoulRPG
         {
             var areaDocument = uiDocument.Q<HKUIDocument>("Area.Message");
             var messageParent = areaDocument.Q<RectTransform>("ListParent");
+            var arrowObject = areaDocument.Q("Arrow");
             var messagePrefab = areaDocument.Q<HKUIDocument>("UIElement.Message");
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            arrowObject.SetActive(false);
 
             gameEvents.OnRequestShowMessage
                 .Subscribe(x =>
@@ -137,6 +139,13 @@ namespace SoulRPG
                     {
                         CreateElement($"{masterDataItem.Name}を{x.count}個手に入れた");
                     }
+                })
+                .RegisterTo(scope);
+
+            gameEvents.OnRequestSetActiveMessageArrow
+                .Subscribe(x =>
+                {
+                    arrowObject.SetActive(x);
                 })
                 .RegisterTo(scope);
 
