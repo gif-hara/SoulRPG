@@ -51,6 +51,7 @@ namespace SoulRPG
         {
             var growthParameter = character.GrowthParameter;
             var equipment = character.Equipment;
+            Name = character.Name;
             hitPointReactiveProperty = new ReactiveProperty<int>(growthParameter.Vitality * 8);
             staminaReactiveProperty = new ReactiveProperty<int>(growthParameter.Stamina);
             physicalAttackReactiveProperty = new ReactiveProperty<int>(growthParameter.PhysicalStrength);
@@ -66,6 +67,7 @@ namespace SoulRPG
 
         public CharacterBattleStatus(CharacterBattleStatusBlueprint blueprint)
         {
+            Name = blueprint.Name;
             hitPointReactiveProperty = new ReactiveProperty<int>(blueprint.HitPoint);
             staminaReactiveProperty = new ReactiveProperty<int>(blueprint.Stamina);
             physicalAttackReactiveProperty = new ReactiveProperty<int>(blueprint.PhysicalAttack);
