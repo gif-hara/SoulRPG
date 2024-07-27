@@ -21,3 +21,4 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u6B66\u5668\u3092\u632F\u308A\u56DE\u3057\u305F\uFF01"
+        waitForInput: 1
