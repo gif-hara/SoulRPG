@@ -35,14 +35,17 @@ namespace SoulRPG.SceneControllers
         private Vector2Int debugPosition;
 
         [SerializeField]
-        private CharacterGrowthParameter debugCharacterGrowthParameter;
+        private CharacterGrowthParameter debugPlayerGrowthParameter;
+
+        [SerializeField]
+        private CharacterBattleStatusBlueprint debugEnemyBattleStatus;
 
         async void Start()
         {
             await BootSystem.IsReady;
             TinyServiceLocator.Register(masterData);
             TinyServiceLocator.Register(new GameEvents());
-            var player = new Character(debugCharacterGrowthParameter);
+            var player = new Character(debugPlayerGrowthParameter);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             var gameView = new ExplorationView(
                 gameUIDocumentPrefab,
@@ -62,7 +65,7 @@ namespace SoulRPG.SceneControllers
             gameView.Open(destroyCancellationToken);
             var testMessageId = 0;
             Observable.EveryUpdate(destroyCancellationToken)
-                .Subscribe(_ =>
+                .Subscribe(async _ =>
                 {
                     if (Keyboard.current.qKey.wasPressedThisFrame)
                     {
@@ -75,8 +78,12 @@ namespace SoulRPG.SceneControllers
 
                     if (Keyboard.current.wKey.wasPressedThisFrame)
                     {
-                        var battleSystem = new BattleSystem();
-                        battleSystem.BeginAsync(destroyCancellationToken).Forget();
+                        var battleResult = await BattleSystem.BeginAsync(
+                            new BattleCharacter(player),
+                            new BattleCharacter(new CharacterBattleStatus(debugEnemyBattleStatus)),
+                            destroyCancellationToken
+                            );
+                        Debug.Log($"BattleResult: {battleResult}");
                     }
 
                     if (Keyboard.current.eKey.wasPressedThisFrame)
