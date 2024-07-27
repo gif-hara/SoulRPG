@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using R3;
 using UnityEngine;
 using UnitySequencerSystem;
 
@@ -16,13 +17,20 @@ namespace SoulRPG
         [SerializeField]
         private string format;
 
+        [SerializeField]
+        private bool waitForInput = true;
+
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var message = format
                 .Replace("{Actor}", container.Resolve<BattleCharacter>("Actor").BattleStatus.Name)
                 .Replace("{Target}", container.Resolve<BattleCharacter>("Target").BattleStatus.Name);
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(message);
-            await UniTask.Delay(1000, cancellationToken: cancellationToken);
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            gameEvents.OnRequestShowMessage.OnNext(message);
+            if (waitForInput)
+            {
+                await gameEvents.OnSubmitInput.FirstAsync();
+            }
         }
     }
 }
