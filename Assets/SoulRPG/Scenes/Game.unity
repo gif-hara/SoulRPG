@@ -170,6 +170,7 @@ MonoBehaviour:
   dungeonDocumentPrefab: {fileID: 4041864904137408651, guid: 3ac1c3ec8df76f547abe7a635ad62857, type: 3}
   debugDungeonName: Dungeon.Test
   debugPosition: {x: 0, y: 0}
+  debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
   debugPlayerGrowthParameter:
     vitality: 10
     stamina: 10
@@ -177,6 +178,7 @@ MonoBehaviour:
     magicalStrength: 10
     speed: 10
   debugEnemyBattleStatus:
+    name: "\u30A8\u30CD\u30DF\u30FC"
     hitPoint: 10
     stamina: 10
     physicalAttack: 10
