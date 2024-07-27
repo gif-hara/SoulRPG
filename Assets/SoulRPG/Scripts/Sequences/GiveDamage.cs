@@ -36,7 +36,7 @@ namespace SoulRPG
             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(message);
             if (waitForInput)
             {
-                await TinyServiceLocator.Resolve<GameEvents>().OnSubmitInput.FirstAsync();
+                await TinyServiceLocator.Resolve<GameEvents>().WaitForSubmitInputAsync();
             }
         }
     }

@@ -29,7 +29,7 @@ namespace SoulRPG
             gameEvents.OnRequestShowMessage.OnNext(message);
             if (waitForInput)
             {
-                await gameEvents.OnSubmitInput.FirstAsync();
+                await gameEvents.WaitForSubmitInputAsync();
             }
         }
     }

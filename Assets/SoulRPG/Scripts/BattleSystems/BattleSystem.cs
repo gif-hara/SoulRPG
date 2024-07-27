@@ -46,12 +46,12 @@ namespace SoulRPG.BattleSystems
             if (result == Define.BattleResult.PlayerWin)
             {
                 gameEvents.OnRequestShowMessage.OnNext($"{enemy.BattleStatus.Name}を倒した");
-                await gameEvents.OnSubmitInput.FirstAsync();
+                await gameEvents.WaitForSubmitInputAsync();
             }
             else
             {
                 gameEvents.OnRequestShowMessage.OnNext($"{player.BattleStatus.Name}は倒れてしまった");
-                await gameEvents.OnSubmitInput.FirstAsync();
+                await gameEvents.WaitForSubmitInputAsync();
             }
             inputController.ChangeInputType(InputController.InputType.InGame);
             Debug.Log("BattleSystem End");
