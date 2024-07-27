@@ -8,5 +8,7 @@ namespace SoulRPG
     public sealed class GameEvents
     {
         public readonly Subject<string> OnRequestShowMessage = new();
+
+        public readonly Subject<Unit> OnSubmitInput = new();
     }
 }
