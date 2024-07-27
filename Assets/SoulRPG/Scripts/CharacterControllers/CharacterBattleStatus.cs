@@ -1,4 +1,5 @@
 using System;
+using R3;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
 
@@ -7,68 +8,78 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    [Serializable]
     public sealed class CharacterBattleStatus
     {
-        [SerializeField]
-        private int hitPoint;
-        public int HitPoint => hitPoint;
+        private readonly ReactiveProperty<int> hitPointReactiveProperty;
+        public ReadOnlyReactiveProperty<int> HitPoint => hitPointReactiveProperty;
 
-        [SerializeField]
-        private int stamina;
-        public int Stamina => stamina;
-        
-        [SerializeField]
-        private int physicalAttack;
-        public int PhysicalAttack => physicalAttack;
-        
-        [SerializeField]
-        private int magicalAttack;
-        public int MagicalAttack => magicalAttack;
-        
-        [SerializeField]
-        private float slashCutRate;
-        public float SlashCutRate => slashCutRate;
-        
-        [SerializeField]
-        private float blowCutRate;
-        public float BlowCutRate => blowCutRate;
-        
-        [SerializeField]
-        private float thrustCutRate;
-        public float ThrustCutRate => thrustCutRate;
-        
-        [SerializeField]
-        private float magicCutRate;
-        public float MagicCutRate => magicCutRate;
-        
-        [SerializeField]
-        private float fireCutRate;
-        public float FireCutRate => fireCutRate;
-        
-        [SerializeField]
-        private float thunderCutRate;
-        public float ThunderCutRate => thunderCutRate;
-        
-        [SerializeField]
-        private int speed;
-        public int Speed => speed;
+        private readonly ReactiveProperty<int> staminaReactiveProperty;
+        public ReadOnlyReactiveProperty<int> Stamina => staminaReactiveProperty;
+
+        private readonly ReactiveProperty<int> physicalAttackReactiveProperty;
+        public ReadOnlyReactiveProperty<int> PhysicalAttack => physicalAttackReactiveProperty;
+
+        private readonly ReactiveProperty<int> magicalAttackReactiveProperty;
+        public ReadOnlyReactiveProperty<int> MagicalAttack => magicalAttackReactiveProperty;
+
+        private readonly ReactiveProperty<float> slashCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> SlashCutRate => slashCutRateReactiveProperty;
+
+        private readonly ReactiveProperty<float> blowCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> BlowCutRate => blowCutRateReactiveProperty;
+
+        private readonly ReactiveProperty<float> thrustCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> ThrustCutRate => thrustCutRateReactiveProperty;
+
+        private readonly ReactiveProperty<float> magicCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> MagicCutRate => magicCutRateReactiveProperty;
+
+        private readonly ReactiveProperty<float> fireCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> FireCutRate => fireCutRateReactiveProperty;
+
+        private readonly ReactiveProperty<float> thunderCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> ThunderCutRate => thunderCutRateReactiveProperty;
+
+        private readonly ReactiveProperty<int> speedReactiveProperty;
+        public ReadOnlyReactiveProperty<int> Speed => speedReactiveProperty;
+
+        public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
         public CharacterBattleStatus(Character character)
         {
             var growthParameter = character.GrowthParameter;
             var equipment = character.Equipment;
-            hitPoint = growthParameter.Vitality * 8;
-            stamina = growthParameter.Stamina;
-            physicalAttack = growthParameter.PhysicalStrength;
-            magicalAttack = growthParameter.MagicalStrength;
-            slashCutRate = equipment.TotalSlashCutRate;
-            blowCutRate = equipment.TotalBlowCutRate;
-            thrustCutRate = equipment.TotalThrustCutRate;
-            magicCutRate = equipment.TotalMagicCutRate;
-            fireCutRate = equipment.TotalFireCutRate;
-            thunderCutRate = equipment.TotalThunderCutRate;
-            speed = growthParameter.Speed;
+            hitPointReactiveProperty = new ReactiveProperty<int>(growthParameter.Vitality * 8);
+            staminaReactiveProperty = new ReactiveProperty<int>(growthParameter.Stamina);
+            physicalAttackReactiveProperty = new ReactiveProperty<int>(growthParameter.PhysicalStrength);
+            magicalAttackReactiveProperty = new ReactiveProperty<int>(growthParameter.MagicalStrength);
+            slashCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalSlashCutRate);
+            blowCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalBlowCutRate);
+            thrustCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalThrustCutRate);
+            magicCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalMagicCutRate);
+            fireCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalFireCutRate);
+            thunderCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalThunderCutRate);
+            speedReactiveProperty = new ReactiveProperty<int>(growthParameter.Speed);
+        }
+
+        public CharacterBattleStatus(CharacterBattleStatusBlueprint blueprint)
+        {
+            hitPointReactiveProperty = new ReactiveProperty<int>(blueprint.HitPoint);
+            staminaReactiveProperty = new ReactiveProperty<int>(blueprint.Stamina);
+            physicalAttackReactiveProperty = new ReactiveProperty<int>(blueprint.PhysicalAttack);
+            magicalAttackReactiveProperty = new ReactiveProperty<int>(blueprint.MagicalAttack);
+            slashCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.SlashCutRate);
+            blowCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.BlowCutRate);
+            thrustCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.ThrustCutRate);
+            magicCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.MagicCutRate);
+            fireCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.FireCutRate);
+            thunderCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.ThunderCutRate);
+            speedReactiveProperty = new ReactiveProperty<int>(blueprint.Speed);
+        }
+
+        public void TakeDamage(int damage)
+        {
+            hitPointReactiveProperty.Value = Mathf.Max(0, hitPointReactiveProperty.Value - damage);
         }
     }
 }
