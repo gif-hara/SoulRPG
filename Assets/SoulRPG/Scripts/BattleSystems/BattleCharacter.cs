@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using SoulRPG.CharacterControllers;
 
 namespace SoulRPG
@@ -9,14 +10,23 @@ namespace SoulRPG
     {
         public CharacterBattleStatus BattleStatus { get; }
 
-        public BattleCharacter(Character character)
+        private readonly IBattleAI battleAI;
+
+        public BattleCharacter(Character character, IBattleAI battleAI)
         {
             BattleStatus = new CharacterBattleStatus(character);
+            this.battleAI = battleAI;
         }
 
-        public BattleCharacter(CharacterBattleStatus battleStatus)
+        public BattleCharacter(CharacterBattleStatus battleStatus, IBattleAI battleAI)
         {
             BattleStatus = battleStatus;
+            this.battleAI = battleAI;
+        }
+
+        public UniTask<(int weaponItemId, int skillId)> ThinkAsync()
+        {
+            return battleAI.ThinkAsync(this);
         }
     }
 }
