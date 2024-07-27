@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
@@ -67,28 +68,34 @@ namespace SoulRPG.SceneControllers
             Observable.EveryUpdate(destroyCancellationToken)
                 .Subscribe(async _ =>
                 {
-                    if (Keyboard.current.qKey.wasPressedThisFrame)
+                    try
                     {
-                        foreach (var i in TinyServiceLocator.Resolve<MasterData>().Items.List)
+                        if (Keyboard.current.qKey.wasPressedThisFrame)
                         {
-                            player.Inventory.Add(i.Id, 1);
+                            foreach (var i in TinyServiceLocator.Resolve<MasterData>().Items.List)
+                            {
+                                player.Inventory.Add(i.Id, 1);
+                            }
+                            Debug.Log("Add All Items");
                         }
-                        Debug.Log("Add All Items");
-                    }
 
-                    if (Keyboard.current.wKey.wasPressedThisFrame)
-                    {
-                        var battleResult = await BattleSystem.BeginAsync(
-                            new BattleCharacter(player, new Constant(101998, 101001)),
-                            new BattleCharacter(new CharacterBattleStatus(debugEnemyBattleStatus), new Constant(101998, 101001)),
-                            destroyCancellationToken
-                            );
-                        Debug.Log($"BattleResult: {battleResult}");
-                    }
+                        if (Keyboard.current.wKey.wasPressedThisFrame)
+                        {
+                            var battleResult = await BattleSystem.BeginAsync(
+                                new BattleCharacter(player, new Constant(101998, 101001)),
+                                new BattleCharacter(new CharacterBattleStatus(debugEnemyBattleStatus), new Constant(101998, 101001)),
+                                destroyCancellationToken
+                                );
+                            Debug.Log($"BattleResult: {battleResult}");
+                        }
 
-                    if (Keyboard.current.eKey.wasPressedThisFrame)
+                        if (Keyboard.current.eKey.wasPressedThisFrame)
+                        {
+                            TinyServiceLocator.Resolve<GameEvents>().RequestShowMessage.OnNext($"TestMessage{testMessageId++}");
+                        }
+                    }
+                    catch (OperationCanceledException)
                     {
-                        TinyServiceLocator.Resolve<GameEvents>().RequestShowMessage.OnNext($"TestMessage{testMessageId++}");
                     }
                 })
                 .RegisterTo(destroyCancellationToken);
