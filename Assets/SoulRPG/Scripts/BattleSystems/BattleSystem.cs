@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using R3;
 using UnityEngine;
 using UnitySequencerSystem;
 
@@ -23,13 +24,16 @@ namespace SoulRPG.BattleSystems
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             inputController.ChangeInputType(InputController.InputType.UI);
 
+            inputController.InputActions.UI.Submit.OnPerformedAsObservable()
+                .Subscribe(_ => gameEvents.OnSubmitInput.OnNext(Unit.Default))
+                .RegisterTo(scope);
+
             while (!player.BattleStatus.IsDead && !enemy.BattleStatus.IsDead)
             {
                 var playerThinkResult = await player.ThinkAsync();
                 var enemyThinkResult = await enemy.ThinkAsync();
                 await InvokeSkillActionAsync(player, enemy, playerThinkResult.weaponItemId, playerThinkResult.skillId, scope);
                 await InvokeSkillActionAsync(enemy, player, enemyThinkResult.weaponItemId, enemyThinkResult.skillId, scope);
-                await UniTask.Delay(1000, cancellationToken: scope);
             }
 
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
