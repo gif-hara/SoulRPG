@@ -36,6 +36,9 @@ namespace SoulRPG.SceneControllers
         private Vector2Int debugPosition;
 
         [SerializeField]
+        private string debugPlayerName;
+
+        [SerializeField]
         private CharacterGrowthParameter debugPlayerGrowthParameter;
 
         [SerializeField]
@@ -46,7 +49,7 @@ namespace SoulRPG.SceneControllers
             await BootSystem.IsReady;
             TinyServiceLocator.Register(masterData);
             TinyServiceLocator.Register(new GameEvents());
-            var player = new Character(debugPlayerGrowthParameter);
+            var player = new Character(debugPlayerName, debugPlayerGrowthParameter);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             var gameView = new ExplorationView(
                 gameUIDocumentPrefab,
@@ -91,7 +94,7 @@ namespace SoulRPG.SceneControllers
 
                         if (Keyboard.current.eKey.wasPressedThisFrame)
                         {
-                            TinyServiceLocator.Resolve<GameEvents>().RequestShowMessage.OnNext($"TestMessage{testMessageId++}");
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext($"TestMessage{testMessageId++}");
                         }
                     }
                     catch (OperationCanceledException)
