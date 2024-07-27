@@ -86,6 +86,16 @@ namespace SoulRPG
             hitPointReactiveProperty.Value = Mathf.Max(0, hitPointReactiveProperty.Value - damage);
         }
 
+        public int GetAttackPower(Define.AttackType attackType)
+        {
+            return attackType switch
+            {
+                Define.AttackType.Physical => physicalAttackReactiveProperty.Value,
+                Define.AttackType.Magical => magicalAttackReactiveProperty.Value,
+                _ => throw new ArgumentOutOfRangeException(),
+            };
+        }
+
         public float GetCutRate(Define.AttackAttribute attackAttribute)
         {
             return attackAttribute switch
