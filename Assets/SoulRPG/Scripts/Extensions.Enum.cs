@@ -90,5 +90,20 @@ namespace SoulRPG
                 _ => throw new System.ArgumentOutOfRangeException()
             };
         }
+
+        public static Define.AttackAttribute ToAttackAttribute(this Define.WeaponAttackAttribute self, MasterData.Weapon weapon)
+        {
+            return self switch
+            {
+                Define.WeaponAttackAttribute.Weapon => weapon.AttackAttribute,
+                Define.WeaponAttackAttribute.Slash => Define.AttackAttribute.Slash,
+                Define.WeaponAttackAttribute.Blow => Define.AttackAttribute.Blow,
+                Define.WeaponAttackAttribute.Thrust => Define.AttackAttribute.Thrust,
+                Define.WeaponAttackAttribute.Magic => Define.AttackAttribute.Magic,
+                Define.WeaponAttackAttribute.Fire => Define.AttackAttribute.Fire,
+                Define.WeaponAttackAttribute.Thunder => Define.AttackAttribute.Thunder,
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
+        }
     }
 }
