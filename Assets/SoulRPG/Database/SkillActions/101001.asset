@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 7288459789387432183
+  - rid: 7288459789387432197
   references:
     version: 2
     RefIds:
@@ -22,3 +23,15 @@ MonoBehaviour:
       data:
         format: "{Actor}\u306F\u6B66\u5668\u3092\u632F\u308A\u56DE\u3057\u305F\uFF01"
         waitForInput: 1
+    - rid: 7288459789387432197
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 7288459789387432198
+        waitForInput: 1
+    - rid: 7288459789387432198
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 1
+        attackType: 0
+        attackAttribute: 0
