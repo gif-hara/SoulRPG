@@ -170,11 +170,23 @@ MonoBehaviour:
   dungeonDocumentPrefab: {fileID: 4041864904137408651, guid: 3ac1c3ec8df76f547abe7a635ad62857, type: 3}
   debugDungeonName: Dungeon.Test
   debugPosition: {x: 0, y: 0}
-  debugCharacterGrowthParameter:
-    vitality: 0
-    stamina: 0
-    physicalStrength: 0
-    magicalStrength: 0
+  debugPlayerGrowthParameter:
+    vitality: 10
+    stamina: 10
+    physicalStrength: 10
+    magicalStrength: 10
+    speed: 10
+  debugEnemyBattleStatus:
+    hitPoint: 10
+    stamina: 10
+    physicalAttack: 10
+    magicalAttack: 10
+    slashCutRate: 0
+    blowCutRate: 0
+    thrustCutRate: 0
+    magicCutRate: 0
+    fireCutRate: 0
+    thunderCutRate: 0
     speed: 0
 --- !u!1 &897640241
 GameObject:
