@@ -118,7 +118,7 @@ namespace SoulRPG
             var messagePrefab = areaDocument.Q<HKUIDocument>("UIElement.Message");
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
 
-            gameEvents.RequestShowMessage
+            gameEvents.OnRequestShowMessage
                 .Subscribe(x =>
                 {
                     CreateElement(x);
