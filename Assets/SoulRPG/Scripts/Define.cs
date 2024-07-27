@@ -23,6 +23,17 @@ namespace SoulRPG
             Thunder,
         }
 
+        public enum WeaponAttackAttribute
+        {
+            Weapon,
+            Slash,
+            Blow,
+            Thrust,
+            Magic,
+            Fire,
+            Thunder,
+        }
+
         public enum BattleResult
         {
             PlayerWin,
