@@ -19,15 +19,16 @@ namespace SoulRPG.BattleSystems
         {
             Debug.Log("BattleSystem Begin");
             var inputController = TinyServiceLocator.Resolve<InputController>();
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             inputController.ChangeInputType(InputController.InputType.UI);
 
             while (!player.BattleStatus.IsDead && !enemy.BattleStatus.IsDead)
             {
-                player.BattleStatus.TakeDamage(enemy.BattleStatus.PhysicalAttack.CurrentValue);
-                Debug.Log($"Player HP: {player.BattleStatus.HitPoint.CurrentValue}");
+                var playerThinkResult = await player.ThinkAsync();
+                var enemyThinkResult = await enemy.ThinkAsync();
+                gameEvents.RequestShowMessage.OnNext($"Player: {playerThinkResult.weaponItemId}, {playerThinkResult.skillId}");
                 await UniTask.Delay(TimeSpan.FromSeconds(1.0f), cancellationToken: scope);
-                enemy.BattleStatus.TakeDamage(player.BattleStatus.PhysicalAttack.CurrentValue);
-                Debug.Log($"Enemy HP: {enemy.BattleStatus.HitPoint.CurrentValue}");
+                gameEvents.RequestShowMessage.OnNext($"Enemy: {enemyThinkResult.weaponItemId}, {enemyThinkResult.skillId}");
                 await UniTask.Delay(TimeSpan.FromSeconds(1.0f), cancellationToken: scope);
             }
 
