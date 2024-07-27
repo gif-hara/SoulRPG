@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
   m_Name: 101001
   m_EditorClassIdentifier: 
-  sequences: []
+  sequences:
+  - rid: 7288459789387432183
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 7288459789387432183
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u6B66\u5668\u3092\u632F\u308A\u56DE\u3057\u305F\uFF01"
