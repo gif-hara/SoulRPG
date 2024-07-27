@@ -32,16 +32,32 @@ namespace SoulRPG.BattleSystems
             {
                 var playerThinkResult = await player.ThinkAsync();
                 var enemyThinkResult = await enemy.ThinkAsync();
-                await InvokeSkillActionAsync(player, enemy, playerThinkResult.weaponItemId, playerThinkResult.skillId, scope);
-                await InvokeSkillActionAsync(enemy, player, enemyThinkResult.weaponItemId, enemyThinkResult.skillId, scope);
+                if (await InvokeSkillActionAsync(player, enemy, playerThinkResult.weaponItemId, playerThinkResult.skillId, scope))
+                {
+                    break;
+                }
+                if (await InvokeSkillActionAsync(enemy, player, enemyThinkResult.weaponItemId, enemyThinkResult.skillId, scope))
+                {
+                    break;
+                }
             }
 
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
+            if (result == Define.BattleResult.PlayerWin)
+            {
+                gameEvents.OnRequestShowMessage.OnNext($"{enemy.BattleStatus.Name}を倒した");
+                await gameEvents.OnSubmitInput.FirstAsync();
+            }
+            else
+            {
+                gameEvents.OnRequestShowMessage.OnNext($"{player.BattleStatus.Name}は倒れてしまった");
+                await gameEvents.OnSubmitInput.FirstAsync();
+            }
             inputController.ChangeInputType(InputController.InputType.InGame);
             Debug.Log("BattleSystem End");
             return result;
 
-            UniTask InvokeSkillActionAsync(BattleCharacter actor, BattleCharacter target, int weaponId, int skillId, CancellationToken scope)
+            static async UniTask<bool> InvokeSkillActionAsync(BattleCharacter actor, BattleCharacter target, int weaponId, int skillId, CancellationToken scope)
             {
                 var masterDataSkill = skillId.GetMasterDataSkill();
                 var sequences = masterDataSkill.ActionSequences.Sequences;
@@ -50,7 +66,8 @@ namespace SoulRPG.BattleSystems
                 container.Register("Target", target);
                 container.Register(weaponId.GetMasterDataWeapon());
                 var sequencer = new Sequencer(container, sequences);
-                return sequencer.PlayAsync(scope);
+                await sequencer.PlayAsync(scope);
+                return target.BattleStatus.IsDead;
             }
         }
     }
