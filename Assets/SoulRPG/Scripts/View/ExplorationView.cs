@@ -112,34 +112,47 @@ namespace SoulRPG
 
             var events = TinyServiceLocator.Resolve<MasterData>().DungeonEvents.List
                 .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name);
-            foreach (var i in events)
-            {
-                switch (i.EventType)
-                {
-                    case "Item":
-                        {
-                            var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Event.Item"), dungeonDocument.transform);
-                            eventObject.position = new Vector3(i.X, 0, i.Y);
-                            dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
-                            break;
-                        }
-                    case "SavePoint":
-                        {
-                            var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Event.SavePoint"), dungeonDocument.transform);
-                            eventObject.position = new Vector3(i.X, 0, i.Y);
-                            dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
-                            break;
-                        }
-                }
-            }
-            TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent
+            CreateEventObjects(events);
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            gameEvents.OnAcquiredDungeonEvent
                 .Subscribe(x =>
                 {
                     if (dungeonEventObjects.TryGetValue(x, out var obj))
                     {
                         Object.Destroy(obj);
+                        dungeonEventObjects.Remove(x);
                     }
                 });
+            gameEvents.OnClearTemporaryCompletedEventIds
+                .Subscribe(x =>
+                {
+                    CreateEventObjects(
+                        x.Select(y => y.GetMasterDataDungeonEvent())
+                    );
+                });
+            void CreateEventObjects(IEnumerable<MasterData.DungeonEvent> dungeonEvents)
+            {
+                foreach (var i in dungeonEvents)
+                {
+                    switch (i.EventType)
+                    {
+                        case "Item":
+                            {
+                                var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Event.Item"), dungeonDocument.transform);
+                                eventObject.position = new Vector3(i.X, 0, i.Y);
+                                dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
+                                break;
+                            }
+                        case "SavePoint":
+                            {
+                                var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Event.SavePoint"), dungeonDocument.transform);
+                                eventObject.position = new Vector3(i.X, 0, i.Y);
+                                dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
+                                break;
+                            }
+                    }
+                }
+            }
         }
 
         private void SetupMessage(
