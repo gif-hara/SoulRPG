@@ -11,11 +11,14 @@ namespace SoulRPG
     {
         public CharacterBattleStatus BattleStatus { get; }
 
+        public Equipment Equipment { get; }
+
         private readonly IBattleAI battleAI;
 
         public BattleCharacter(Character character, IBattleAI battleAI)
         {
             BattleStatus = new CharacterBattleStatus(character);
+            Equipment = character.Equipment;
             this.battleAI = battleAI;
         }
 
