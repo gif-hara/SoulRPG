@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using HK;
 
 namespace SoulRPG
 {
@@ -36,7 +37,9 @@ namespace SoulRPG
 
         public void ClearTemporaryCompletedEventIds()
         {
+            var tempData = new HashSet<string>(temporaryCompletedEventIds);
             temporaryCompletedEventIds.Clear();
+            TinyServiceLocator.Resolve<GameEvents>().OnClearTemporaryCompletedEventIds.OnNext(tempData);
         }
     }
 }
