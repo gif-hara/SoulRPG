@@ -39,13 +39,23 @@ namespace SoulRPG.BattleSystems
                 var playerSpeed = player.BattleStatus.Speed + playerCommandInvoker.GetSpeed();
                 var enemySpeed = enemy.BattleStatus.Speed + enemyCommandInvoker.GetSpeed();
                 var actorData = GetActorData(player, playerCommandInvoker, enemy, enemyCommandInvoker);
-                if (await InvokeSkillActionAsync(actorData.firstActor.actor, actorData.secondActor.actor, actorData.firstActor.commandInvoker, scope))
+                if (await InvokeCommandAsync(player, playerCommandInvoker, enemy, enemyCommandInvoker, scope))
                 {
                     break;
                 }
-                if (await InvokeSkillActionAsync(actorData.secondActor.actor, actorData.firstActor.actor, actorData.secondActor.commandInvoker, scope))
+                while (
+                    !player.BattleStatus.IsDead && !enemy.BattleStatus.IsDead &&
+                    (player.AfterCommandInvoker != null || enemy.AfterCommandInvoker != null)
+                    )
                 {
-                    break;
+                    playerCommandInvoker = player.AfterCommandInvoker;
+                    enemyCommandInvoker = enemy.AfterCommandInvoker;
+                    player.AfterCommandInvoker = null;
+                    enemy.AfterCommandInvoker = null;
+                    if (await InvokeCommandAsync(player, playerCommandInvoker, enemy, enemyCommandInvoker, scope))
+                    {
+                        break;
+                    }
                 }
             }
 
@@ -67,11 +77,6 @@ namespace SoulRPG.BattleSystems
             cts.Dispose();
             return result;
 
-            static async UniTask<bool> InvokeSkillActionAsync(BattleCharacter actor, BattleCharacter target, ICommandInvoker commandInvoker, CancellationToken scope)
-            {
-                await commandInvoker.InvokeAsync(actor, target, scope);
-                return actor.BattleStatus.IsDead || target.BattleStatus.IsDead;
-            }
             static ((BattleCharacter actor, ICommandInvoker commandInvoker) firstActor, (BattleCharacter actor, ICommandInvoker commandInvoker) secondActor) GetActorData(
                 BattleCharacter player,
                 ICommandInvoker playerCommandInvoker,
@@ -81,8 +86,8 @@ namespace SoulRPG.BattleSystems
             {
                 var playerData = (player, playerCommandInvoker);
                 var enemyData = (enemy, enemyCommandInvoker);
-                var playerBehaviourPriority = playerCommandInvoker.GetBehaviourPriority();
-                var enemyBehaviourPriority = enemyCommandInvoker.GetBehaviourPriority();
+                var playerBehaviourPriority = playerCommandInvoker == null ? -99 : playerCommandInvoker.GetBehaviourPriority();
+                var enemyBehaviourPriority = enemyCommandInvoker == null ? -99 : enemyCommandInvoker.GetBehaviourPriority();
                 if (playerBehaviourPriority > enemyBehaviourPriority)
                 {
                     return (playerData, enemyData);
@@ -91,9 +96,37 @@ namespace SoulRPG.BattleSystems
                 {
                     return (enemyData, playerData);
                 }
-                var playerSpeed = player.BattleStatus.Speed + playerCommandInvoker.GetSpeed();
-                var enemySpeed = enemy.BattleStatus.Speed + enemyCommandInvoker.GetSpeed();
+                var playerSpeed = player.BattleStatus.Speed + playerCommandInvoker?.GetSpeed() ?? 0;
+                var enemySpeed = enemy.BattleStatus.Speed + enemyCommandInvoker?.GetSpeed() ?? 0;
                 return playerSpeed > enemySpeed ? (playerData, enemyData) : (enemyData, playerData);
+            }
+            static async UniTask<bool> InvokeCommandAsync(
+                BattleCharacter player,
+                ICommandInvoker playerCommandInvoker,
+                BattleCharacter enemy,
+                ICommandInvoker enemyCommandInvoker,
+                CancellationToken scope
+                )
+            {
+                var actorData = GetActorData(player, playerCommandInvoker, enemy, enemyCommandInvoker);
+                if (await InvokeAsync(actorData.firstActor.actor, actorData.secondActor.actor, actorData.firstActor.commandInvoker, scope))
+                {
+                    return true;
+                }
+                if (await InvokeAsync(actorData.secondActor.actor, actorData.firstActor.actor, actorData.secondActor.commandInvoker, scope))
+                {
+                    return true;
+                }
+                return false;
+                static async UniTask<bool> InvokeAsync(BattleCharacter actor, BattleCharacter target, ICommandInvoker commandInvoker, CancellationToken scope)
+                {
+                    if (commandInvoker == null)
+                    {
+                        return false;
+                    }
+                    await commandInvoker.InvokeAsync(actor, target, scope);
+                    return actor.BattleStatus.IsDead || target.BattleStatus.IsDead;
+                }
             }
         }
     }
