@@ -32,6 +32,11 @@ namespace SoulRPG
             document = Object.Instantiate(documentPrefab);
         }
 
+        public void Close()
+        {
+            Object.Destroy(document.gameObject);
+        }
+
         public UniTask<int> CreateCommandsAsync(
             string header,
             IEnumerable<string> commands,
