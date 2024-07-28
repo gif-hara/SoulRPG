@@ -108,12 +108,12 @@ namespace SoulRPG.BattleSystems
                 CancellationToken scope
                 )
             {
-                var actorData = GetActorData(player, playerCommandInvoker, enemy, enemyCommandInvoker);
-                if (await InvokeAsync(actorData.firstActor.actor, actorData.secondActor.actor, actorData.firstActor.commandInvoker, scope))
+                var (firstActor, secondActor) = GetActorData(player, playerCommandInvoker, enemy, enemyCommandInvoker);
+                if (await InvokeAsync(firstActor.actor, secondActor.actor, firstActor.commandInvoker, scope))
                 {
                     return true;
                 }
-                if (await InvokeAsync(actorData.secondActor.actor, actorData.firstActor.actor, actorData.secondActor.commandInvoker, scope))
+                if (await InvokeAsync(secondActor.actor, firstActor.actor, secondActor.commandInvoker, scope))
                 {
                     return true;
                 }
