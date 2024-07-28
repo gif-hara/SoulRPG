@@ -50,5 +50,11 @@ namespace SoulRPG
         {
             staminaReactiveProperty.Value = value;
         }
+
+        public void FullRecovery()
+        {
+            hitPointReactiveProperty.Value = hitPointMaxReactiveProperty.Value;
+            staminaReactiveProperty.Value = staminaMaxReactiveProperty.Value;
+        }
     }
 }
