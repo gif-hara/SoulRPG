@@ -72,6 +72,11 @@ namespace SoulRPG
             return TinyServiceLocator.Resolve<MasterData>().Accessories.ContainsKey(self);
         }
 
+        public static bool ContainsMasterDataSkill(this int self)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().Skills.ContainsKey(self);
+        }
+
         public static MasterData.Skill GetMasterDataSkill(this int self)
         {
             return TinyServiceLocator.Resolve<MasterData>().Skills.Get(self);
