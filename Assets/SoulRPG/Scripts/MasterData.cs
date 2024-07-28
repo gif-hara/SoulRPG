@@ -254,9 +254,14 @@ namespace SoulRPG
             public bool IsOneTime;
 
             [Serializable]
-            public class DictionaryList : DictionaryList<(string, int, int), DungeonEvent>
+            public class DictionaryList : DictionaryList<string, (string, int, int), DungeonEvent>
             {
-                public DictionaryList() : base(x => (x.DungeonName, x.X, x.Y)) { }
+                public DictionaryList() : base(
+                    x => x.Id,
+                    x => (x.DungeonName, x.X, x.Y)
+                )
+                {
+                }
             }
         }
 
