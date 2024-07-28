@@ -16,6 +16,7 @@ namespace SoulRPG
         {
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var inGameActions = inputController.InputActions.InGame;
+            var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             inGameActions.Move.OnPerformedAsObservable()
                 .Subscribe(x =>
                 {
@@ -37,13 +38,14 @@ namespace SoulRPG
                         }
                         velocity = player.Direction.TransformVelocityByDirection(velocity);
                         player.Move(velocity);
+                        dungeonController.EnterAsync(player).Forget();
                     }
                 })
                 .RegisterTo(scope);
             inGameActions.Interact.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    TinyServiceLocator.Resolve<DungeonController>().InteractAsync(player).Forget();
+                    dungeonController.InteractAsync(player).Forget();
                 })
                 .RegisterTo(scope);
             inGameActions.ToMenu.OnPerformedAsObservable()
