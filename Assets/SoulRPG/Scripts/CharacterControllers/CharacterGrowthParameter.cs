@@ -30,6 +30,8 @@ namespace SoulRPG
         private int speed;
         public int Speed => speed;
 
+        public int HitPoint => vitality * 8;
+
         public void AddVitality(int value)
         {
             vitality += value;
