@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
@@ -19,6 +20,8 @@ namespace SoulRPG
 
         private HKUIDocument document;
 
+        private readonly List<GameObject> elements = new();
+
         public CommandView(HKUIDocument documentPrefab)
         {
             this.documentPrefab = documentPrefab;
@@ -29,14 +32,25 @@ namespace SoulRPG
             document = Object.Instantiate(documentPrefab);
         }
 
-        public UniTask<int> CreateCommandsAsync(IEnumerable<string> commands, int initialIndex)
+        public UniTask<int> CreateCommandsAsync(
+            string header,
+            IEnumerable<string> commands,
+            int initialIndex
+            )
         {
+            foreach (var e in elements)
+            {
+                Object.Destroy(e);
+            }
+            elements.Clear();
             var source = new UniTaskCompletionSource<int>();
             var listParent = document.Q<RectTransform>("ListParent");
             var listElementPrefab = document.Q<HKUIDocument>("ListElementPrefab");
+            document.Q<TMP_Text>("Header").text = header;
             foreach (var (c, i) in commands.Select((c, i) => (c, i)))
             {
                 var element = Object.Instantiate(listElementPrefab, listParent);
+                elements.Add(element.gameObject);
                 element.Q<TMP_Text>("Header").text = c;
                 var button = element.Q<Button>("Button");
                 button.OnClickAsObservable()
@@ -44,7 +58,7 @@ namespace SoulRPG
                     {
                         source.TrySetResult(i);
                     })
-                    .AddTo(element);
+                    .RegisterTo(element.destroyCancellationToken);
                 var navigation = button.navigation;
                 navigation.mode = Navigation.Mode.Automatic;
                 button.navigation = navigation;
