@@ -408,7 +408,7 @@ MonoBehaviour:
       Speed: 0
       AttackAttribute: 0
       Skill1: 101001
-      Skill2: 0
+      Skill2: 101003
       Skill3: 0
       Skill4: 0
     - ItemId: 101998
