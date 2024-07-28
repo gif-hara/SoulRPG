@@ -79,7 +79,7 @@ namespace HK
         private List<TValue> list;
         public IReadOnlyList<TValue> List => list;
 
-        private DictionaryData<TKey, TValue> dictionaryData;
+        private readonly DictionaryData<TKey, TValue> dictionaryData;
 
         public DictionaryList(Func<TValue, TKey> idSelector)
         {
@@ -137,6 +137,106 @@ namespace HK
             if (dictionaryData.IsNull())
             {
                 dictionaryData.Set(list);
+            }
+#endif
+        }
+    }
+
+    [Serializable]
+    public abstract class DictionaryList<TKey1, TKey2, TValue>
+    {
+        [SerializeField]
+        private List<TValue> list;
+        public IReadOnlyList<TValue> List => list;
+
+        private readonly DictionaryData<TKey1, TValue> dictionaryData1;
+
+        private readonly DictionaryData<TKey2, TValue> dictionaryData2;
+
+        public DictionaryList(Func<TValue, TKey1> idSelector, Func<TValue, TKey2> idSelector2)
+        {
+            dictionaryData1 = new DictionaryData<TKey1, TValue>(idSelector);
+            dictionaryData2 = new DictionaryData<TKey2, TValue>(idSelector2);
+        }
+
+        public void Set(IEnumerable<TValue> list)
+        {
+            this.list = list.ToList();
+            dictionaryData1.Set(list);
+            dictionaryData2.Set(list);
+        }
+
+        public void Add(TValue value)
+        {
+            list.Add(value);
+            dictionaryData1.Add(value);
+            dictionaryData2.Add(value);
+        }
+
+        public void Remove(TValue value)
+        {
+            list.Remove(value);
+            dictionaryData1.Remove(value);
+            dictionaryData2.Remove(value);
+        }
+
+        public void Clear()
+        {
+            list.Clear();
+            dictionaryData1.Clear();
+            dictionaryData2.Clear();
+        }
+
+        public TValue Get(TKey1 key)
+        {
+            InitializeIfNull();
+            return dictionaryData1.Get(key);
+        }
+
+        public bool ContainsKey(TKey1 key)
+        {
+            InitializeIfNull();
+            return dictionaryData1.ContainsKey(key);
+        }
+
+        public bool TryGetValue(TKey1 key, out TValue value)
+        {
+            InitializeIfNull();
+            return dictionaryData1.TryGetValue(key, out value);
+        }
+
+        public TValue Get(TKey2 key)
+        {
+            InitializeIfNull();
+            return dictionaryData2.Get(key);
+        }
+
+        public bool ContainsKey(TKey2 key)
+        {
+            InitializeIfNull();
+            return dictionaryData2.ContainsKey(key);
+        }
+
+        public bool TryGetValue(TKey2 key, out TValue value)
+        {
+            InitializeIfNull();
+            return dictionaryData2.TryGetValue(key, out value);
+        }
+
+        private void InitializeIfNull()
+        {
+            // UnityEditorの場合は毎回初期化する
+#if UNITY_EDITOR
+            dictionaryData1.Set(list);
+            dictionaryData2.Set(list);
+#else
+            if (dictionaryData1.IsNull())
+            {
+                dictionaryData1.Set(list);
+            }
+            if (dictionaryData2.IsNull())
+            {
+                dictionaryData2.Set(list);
             }
 #endif
         }
