@@ -81,6 +81,22 @@ namespace SoulRPG
             speedReactiveProperty = new ReactiveProperty<int>(blueprint.Speed);
         }
 
+        public CharacterBattleStatus(MasterData.Enemy enemy)
+        {
+            Name = enemy.Name;
+            hitPointReactiveProperty = new ReactiveProperty<int>(enemy.HitPoint);
+            staminaReactiveProperty = new ReactiveProperty<int>(enemy.Stamina);
+            physicalAttackReactiveProperty = new ReactiveProperty<int>(enemy.PhysicalAttack);
+            magicalAttackReactiveProperty = new ReactiveProperty<int>(enemy.MagicalAttack);
+            slashCutRateReactiveProperty = new ReactiveProperty<float>(enemy.SlashCutRate);
+            blowCutRateReactiveProperty = new ReactiveProperty<float>(enemy.BlowCutRate);
+            thrustCutRateReactiveProperty = new ReactiveProperty<float>(enemy.ThrustCutRate);
+            magicCutRateReactiveProperty = new ReactiveProperty<float>(enemy.MagicCutRate);
+            fireCutRateReactiveProperty = new ReactiveProperty<float>(enemy.FireCutRate);
+            thunderCutRateReactiveProperty = new ReactiveProperty<float>(enemy.ThunderCutRate);
+            speedReactiveProperty = new ReactiveProperty<int>(enemy.Speed);
+        }
+
         public void TakeDamage(int damage)
         {
             hitPointReactiveProperty.Value = Mathf.Max(0, hitPointReactiveProperty.Value - damage);
