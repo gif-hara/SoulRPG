@@ -40,8 +40,23 @@ namespace SoulRPG
                 "逃亡"
             };
 
-            var index = await commandView.CreateCommandsAsync(commands, 0);
-            Debug.Log(index);
+            var index = await commandView.CreateCommandsAsync("選べ", commands, 0);
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            switch (index)
+            {
+                case 0:
+                    gameEvents.OnRequestShowMessage.OnNext("どうやら未実装のようだ");
+                    stateMachine.Change(StateSelectMainCommandAsync);
+                    break;
+                case 1:
+                    gameEvents.OnRequestShowMessage.OnNext("どうやら未実装のようだ");
+                    stateMachine.Change(StateSelectMainCommandAsync);
+                    break;
+                case 2:
+                    gameEvents.OnRequestShowMessage.OnNext("どうやら未実装のようだ");
+                    stateMachine.Change(StateSelectMainCommandAsync);
+                    break;
+            }
         }
     }
 }
