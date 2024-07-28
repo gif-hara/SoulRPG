@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
@@ -7,7 +8,7 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    public sealed class BattleCharacter
+    public sealed class BattleCharacter : IDisposable
     {
         public CharacterBattleStatus BattleStatus { get; }
 
@@ -31,6 +32,11 @@ namespace SoulRPG
         public UniTask<ICommandInvoker> ThinkAsync()
         {
             return battleAI.ThinkAsync(this);
+        }
+
+        public void Dispose()
+        {
+            BattleStatus.Dispose();
         }
     }
 }
