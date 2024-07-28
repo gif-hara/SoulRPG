@@ -41,144 +41,144 @@ namespace SoulRPG
             get
             {
                 var result = 0.0f;
-                if(HeadId.TryGetMasterDataArmorHead(out var armorHead))
+                if (HeadId.TryGetMasterDataArmorHead(out var armorHead))
                 {
                     result += armorHead.SlashCutRate;
                 }
-                if(BodyId.TryGetMasterDataArmorBody(out var armorBody))
+                if (BodyId.TryGetMasterDataArmorBody(out var armorBody))
                 {
                     result += armorBody.SlashCutRate;
                 }
-                if(ArmId.TryGetMasterDataArmorArms(out var armorArm))
+                if (ArmId.TryGetMasterDataArmorArms(out var armorArm))
                 {
                     result += armorArm.SlashCutRate;
                 }
-                if(LegId.TryGetMasterDataArmorLegs(out var armorLeg))
+                if (LegId.TryGetMasterDataArmorLegs(out var armorLeg))
                 {
                     result += armorLeg.SlashCutRate;
                 }
                 return result;
             }
         }
-        
+
         public float TotalBlowCutRate
         {
             get
             {
                 var result = 0.0f;
-                if(HeadId.TryGetMasterDataArmorHead(out var armorHead))
+                if (HeadId.TryGetMasterDataArmorHead(out var armorHead))
                 {
                     result += armorHead.BlowCutRate;
                 }
-                if(BodyId.TryGetMasterDataArmorBody(out var armorBody))
+                if (BodyId.TryGetMasterDataArmorBody(out var armorBody))
                 {
                     result += armorBody.BlowCutRate;
                 }
-                if(ArmId.TryGetMasterDataArmorArms(out var armorArm))
+                if (ArmId.TryGetMasterDataArmorArms(out var armorArm))
                 {
                     result += armorArm.BlowCutRate;
                 }
-                if(LegId.TryGetMasterDataArmorLegs(out var armorLeg))
+                if (LegId.TryGetMasterDataArmorLegs(out var armorLeg))
                 {
                     result += armorLeg.BlowCutRate;
                 }
                 return result;
             }
         }
-        
+
         public float TotalThrustCutRate
         {
             get
             {
                 var result = 0.0f;
-                if(HeadId.TryGetMasterDataArmorHead(out var armorHead))
+                if (HeadId.TryGetMasterDataArmorHead(out var armorHead))
                 {
                     result += armorHead.ThrustCutRate;
                 }
-                if(BodyId.TryGetMasterDataArmorBody(out var armorBody))
+                if (BodyId.TryGetMasterDataArmorBody(out var armorBody))
                 {
                     result += armorBody.ThrustCutRate;
                 }
-                if(ArmId.TryGetMasterDataArmorArms(out var armorArm))
+                if (ArmId.TryGetMasterDataArmorArms(out var armorArm))
                 {
                     result += armorArm.ThrustCutRate;
                 }
-                if(LegId.TryGetMasterDataArmorLegs(out var armorLeg))
+                if (LegId.TryGetMasterDataArmorLegs(out var armorLeg))
                 {
                     result += armorLeg.ThrustCutRate;
                 }
                 return result;
             }
         }
-        
+
         public float TotalMagicCutRate
         {
             get
             {
                 var result = 0.0f;
-                if(HeadId.TryGetMasterDataArmorHead(out var armorHead))
+                if (HeadId.TryGetMasterDataArmorHead(out var armorHead))
                 {
                     result += armorHead.MagicCutRate;
                 }
-                if(BodyId.TryGetMasterDataArmorBody(out var armorBody))
+                if (BodyId.TryGetMasterDataArmorBody(out var armorBody))
                 {
                     result += armorBody.MagicCutRate;
                 }
-                if(ArmId.TryGetMasterDataArmorArms(out var armorArm))
+                if (ArmId.TryGetMasterDataArmorArms(out var armorArm))
                 {
                     result += armorArm.MagicCutRate;
                 }
-                if(LegId.TryGetMasterDataArmorLegs(out var armorLeg))
+                if (LegId.TryGetMasterDataArmorLegs(out var armorLeg))
                 {
                     result += armorLeg.MagicCutRate;
                 }
                 return result;
             }
         }
-        
+
         public float TotalFireCutRate
         {
             get
             {
                 var result = 0.0f;
-                if(HeadId.TryGetMasterDataArmorHead(out var armorHead))
+                if (HeadId.TryGetMasterDataArmorHead(out var armorHead))
                 {
                     result += armorHead.FireCutRate;
                 }
-                if(BodyId.TryGetMasterDataArmorBody(out var armorBody))
+                if (BodyId.TryGetMasterDataArmorBody(out var armorBody))
                 {
                     result += armorBody.FireCutRate;
                 }
-                if(ArmId.TryGetMasterDataArmorArms(out var armorArm))
+                if (ArmId.TryGetMasterDataArmorArms(out var armorArm))
                 {
                     result += armorArm.FireCutRate;
                 }
-                if(LegId.TryGetMasterDataArmorLegs(out var armorLeg))
+                if (LegId.TryGetMasterDataArmorLegs(out var armorLeg))
                 {
                     result += armorLeg.FireCutRate;
                 }
                 return result;
             }
         }
-        
+
         public float TotalThunderCutRate
         {
             get
             {
                 var result = 0.0f;
-                if(HeadId.TryGetMasterDataArmorHead(out var armorHead))
+                if (HeadId.TryGetMasterDataArmorHead(out var armorHead))
                 {
                     result += armorHead.ThunderCutRate;
                 }
-                if(BodyId.TryGetMasterDataArmorBody(out var armorBody))
+                if (BodyId.TryGetMasterDataArmorBody(out var armorBody))
                 {
                     result += armorBody.ThunderCutRate;
                 }
-                if(ArmId.TryGetMasterDataArmorArms(out var armorArm))
+                if (ArmId.TryGetMasterDataArmorArms(out var armorArm))
                 {
                     result += armorArm.ThunderCutRate;
                 }
-                if(LegId.TryGetMasterDataArmorLegs(out var armorLeg))
+                if (LegId.TryGetMasterDataArmorLegs(out var armorLeg))
                 {
                     result += armorLeg.ThunderCutRate;
                 }
@@ -199,6 +199,24 @@ namespace SoulRPG
             }
         }
 
+        public Equipment(EquipmentBlueprint blueprint)
+        {
+            for (var i = 0; i < 3; i++)
+            {
+                weaponIds.Add(new ReactiveProperty<int>(blueprint.WeaponIds[i]));
+            }
+
+            headId = new ReactiveProperty<int>(blueprint.HeadId);
+            bodyId = new ReactiveProperty<int>(blueprint.BodyId);
+            armId = new ReactiveProperty<int>(blueprint.ArmId);
+            legId = new ReactiveProperty<int>(blueprint.LegId);
+
+            for (var i = 0; i < 4; i++)
+            {
+                accessoryIds.Add(new ReactiveProperty<int>(blueprint.AccessoryIds[i]));
+            }
+        }
+
         public void EquipWeapon(int index, int weaponId)
         {
             foreach (var i in weaponIds)
@@ -215,7 +233,7 @@ namespace SoulRPG
 
         public void EquipHead(int headId)
         {
-            if(this.headId.Value == headId)
+            if (this.headId.Value == headId)
             {
                 this.headId.Value = 0;
             }
