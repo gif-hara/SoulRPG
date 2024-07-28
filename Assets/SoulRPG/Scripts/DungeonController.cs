@@ -62,7 +62,7 @@ namespace SoulRPG
 
         public UniTask InvokeOnSavePointAsync(Character character, MasterData.DungeonEvent dungeonEvent)
         {
-            Debug.Log("SavePoint");
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("ここはセーブポイントのようだ");
             var userData = TinyServiceLocator.Resolve<UserData>();
             userData.ClearTemporaryCompletedEventIds();
             return UniTask.CompletedTask;

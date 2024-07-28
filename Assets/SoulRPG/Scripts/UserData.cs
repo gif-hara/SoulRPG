@@ -18,15 +18,15 @@ namespace SoulRPG
         /// </remarks>
         private readonly HashSet<string> temporaryCompletedEventIds = new();
 
-        public void AddCompletedEventIds(string eventId, bool isTemporary)
+        public void AddCompletedEventIds(string eventId, bool isOneTime)
         {
-            if (isTemporary)
+            if (isOneTime)
             {
-                temporaryCompletedEventIds.Add(eventId);
+                completedEventIds.Add(eventId);
             }
             else
             {
-                completedEventIds.Add(eventId);
+                temporaryCompletedEventIds.Add(eventId);
             }
         }
 
