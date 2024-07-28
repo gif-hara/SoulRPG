@@ -390,12 +390,17 @@ namespace SoulRPG
                 var element = Object.Instantiate(listElementPrefab, listParent);
                 var buttonObject = element.Q("Button");
                 element.Q<TMP_Text>("Header").text = listElement.header;
-                element.Q<Button>("Button").OnClickAsObservable()
+                var button = element.Q<Button>("Button");
+                button.OnClickAsObservable()
                     .Subscribe(_ =>
                     {
                         listElement.onClick();
                     })
                     .RegisterTo(element.destroyCancellationToken);
+                var navigation = button.navigation;
+                navigation.mode = Navigation.Mode.Vertical;
+                navigation.wrapAround = true;
+                button.navigation = navigation;
                 inputController.InputActions.UI.Navigate.OnPerformedAsObservable()
                     .Where(x => x.ReadValue<Vector2>().x != 0)
                     .Where(_ => EventSystem.current.currentSelectedGameObject == buttonObject)
@@ -413,7 +418,7 @@ namespace SoulRPG
                     .RegisterTo(element.destroyCancellationToken);
                 if (index == initialElement)
                 {
-                    EventSystem.current.SetSelectedGameObject(element.Q("Button"));
+                    EventSystem.current.SetSelectedGameObject(button.gameObject);
                 }
                 index++;
             }
