@@ -20,8 +20,11 @@ namespace SoulRPG
 
         private readonly CancellationToken scope;
 
-        public DungeonController(HKUIDocument commandDocumentPrefab, CancellationToken scope)
+        private Vector2Int checkPoint;
+
+        public DungeonController(Vector2Int initialCheckPoint, HKUIDocument commandDocumentPrefab, CancellationToken scope)
         {
+            checkPoint = initialCheckPoint;
             this.commandDocumentPrefab = commandDocumentPrefab;
             this.scope = scope;
         }
@@ -92,9 +95,11 @@ namespace SoulRPG
 
         private UniTask InvokeOnSavePointAsync(Character character, MasterData.DungeonEvent dungeonEvent)
         {
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("ここはセーブポイントのようだ");
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("ここはセーブポイントのようだ。一休みしよう");
             var userData = TinyServiceLocator.Resolve<UserData>();
             userData.ClearTemporaryCompletedEventIds();
+            character.InstanceStatus.FullRecovery();
+            checkPoint = character.Position;
             return UniTask.CompletedTask;
         }
 
@@ -117,6 +122,12 @@ namespace SoulRPG
             {
                 TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, dungeonEvent.X, dungeonEvent.Y));
                 userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsOneTime);
+            }
+            else
+            {
+                character.Warp(checkPoint);
+                character.InstanceStatus.FullRecovery();
+                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("どうやら安全な場所に移動されたようだ");
             }
         }
     }
