@@ -31,7 +31,7 @@ namespace SoulRPG.CharacterControllers
 
         public Inventory Inventory { get; }
 
-        public Equipment Equipment { get; } = new();
+        public Equipment Equipment { get; }
 
         public CharacterEvents Events { get; } = new();
 
@@ -41,12 +41,13 @@ namespace SoulRPG.CharacterControllers
 
         public string Name { get; }
 
-        public Character(string name, CharacterGrowthParameter growthParameter)
+        public Character(string name, CharacterGrowthParameter growthParameter, EquipmentBlueprint equipmentBlueprint)
         {
             Name = name;
             GrowthParameter = growthParameter;
             InstanceStatus = new CharacterInstanceStatus(growthParameter);
             Inventory = new Inventory(this);
+            Equipment = new Equipment(equipmentBlueprint);
         }
 
         public void Move(Vector2Int velocity)
