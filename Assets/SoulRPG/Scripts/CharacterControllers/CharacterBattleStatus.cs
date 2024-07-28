@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using R3;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
@@ -8,12 +9,18 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    public sealed class CharacterBattleStatus
+    public sealed class CharacterBattleStatus : IDisposable
     {
         public string Name { get; }
 
+        private readonly ReactiveProperty<int> hitPointMaxReactiveProperty;
+        public ReadOnlyReactiveProperty<int> HitPointMax => hitPointMaxReactiveProperty;
+
         private readonly ReactiveProperty<int> hitPointReactiveProperty;
         public ReadOnlyReactiveProperty<int> HitPoint => hitPointReactiveProperty;
+
+        private readonly ReactiveProperty<int> staminaMaxReactiveProperty;
+        public ReadOnlyReactiveProperty<int> StaminaMax => staminaMaxReactiveProperty;
 
         private readonly ReactiveProperty<int> staminaReactiveProperty;
         public ReadOnlyReactiveProperty<int> Stamina => staminaReactiveProperty;
@@ -47,13 +54,18 @@ namespace SoulRPG
 
         public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
+        private readonly CancellationTokenSource scope = new();
+
         public CharacterBattleStatus(Character character)
         {
             var growthParameter = character.GrowthParameter;
             var equipment = character.Equipment;
+            var instanceStatus = character.InstanceStatus;
             Name = character.Name;
-            hitPointReactiveProperty = new ReactiveProperty<int>(growthParameter.Vitality * 8);
-            staminaReactiveProperty = new ReactiveProperty<int>(growthParameter.Stamina);
+            hitPointMaxReactiveProperty = new ReactiveProperty<int>(instanceStatus.HitPointMax);
+            hitPointReactiveProperty = new ReactiveProperty<int>(instanceStatus.HitPoint);
+            staminaMaxReactiveProperty = new ReactiveProperty<int>(instanceStatus.StaminaMax);
+            staminaReactiveProperty = new ReactiveProperty<int>(instanceStatus.Stamina);
             physicalAttackReactiveProperty = new ReactiveProperty<int>(growthParameter.PhysicalStrength);
             magicalAttackReactiveProperty = new ReactiveProperty<int>(growthParameter.MagicalStrength);
             slashCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalSlashCutRate);
@@ -63,12 +75,27 @@ namespace SoulRPG
             fireCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalFireCutRate);
             thunderCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalThunderCutRate);
             speedReactiveProperty = new ReactiveProperty<int>(growthParameter.Speed);
+
+            hitPointReactiveProperty
+                .Subscribe(x =>
+                {
+                    character.InstanceStatus.SetHitPoint(x);
+                })
+                .RegisterTo(scope.Token);
+            staminaReactiveProperty
+                .Subscribe(x =>
+                {
+                    character.InstanceStatus.SetStamina(x);
+                })
+                .RegisterTo(scope.Token);
         }
 
         public CharacterBattleStatus(CharacterBattleStatusBlueprint blueprint)
         {
             Name = blueprint.Name;
+            hitPointMaxReactiveProperty = new ReactiveProperty<int>(blueprint.HitPoint);
             hitPointReactiveProperty = new ReactiveProperty<int>(blueprint.HitPoint);
+            staminaMaxReactiveProperty = new ReactiveProperty<int>(blueprint.Stamina);
             staminaReactiveProperty = new ReactiveProperty<int>(blueprint.Stamina);
             physicalAttackReactiveProperty = new ReactiveProperty<int>(blueprint.PhysicalAttack);
             magicalAttackReactiveProperty = new ReactiveProperty<int>(blueprint.MagicalAttack);
@@ -125,6 +152,12 @@ namespace SoulRPG
                 _ => throw new ArgumentOutOfRangeException(),
             };
 
+        }
+
+        public void Dispose()
+        {
+            scope.Cancel();
+            scope.Dispose();
         }
     }
 }
