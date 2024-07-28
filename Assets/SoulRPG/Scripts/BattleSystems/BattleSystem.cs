@@ -26,6 +26,9 @@ namespace SoulRPG.BattleSystems
                 .Subscribe(_ => gameEvents.OnSubmitInput.OnNext(Unit.Default))
                 .RegisterTo(scope);
 
+            gameEvents.OnRequestShowMessage.OnNext($"{enemy.BattleStatus.Name}が現れた");
+            await gameEvents.WaitForSubmitInputAsync();
+
             while (!player.BattleStatus.IsDead && !enemy.BattleStatus.IsDead)
             {
                 var playerCommandInvoker = await player.ThinkAsync();
