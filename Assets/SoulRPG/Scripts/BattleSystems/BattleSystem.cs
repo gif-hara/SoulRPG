@@ -18,6 +18,8 @@ namespace SoulRPG.BattleSystems
             CancellationToken scope
             )
         {
+            var cts = CancellationTokenSource.CreateLinkedTokenSource(scope);
+            scope = cts.Token;
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             inputController.ChangeInputType(InputController.InputType.UI);
@@ -55,6 +57,10 @@ namespace SoulRPG.BattleSystems
                 await gameEvents.WaitForSubmitInputAsync();
             }
             inputController.ChangeInputType(InputController.InputType.InGame);
+            player.Dispose();
+            enemy.Dispose();
+            cts.Cancel();
+            cts.Dispose();
             return result;
 
             static async UniTask<bool> InvokeSkillActionAsync(BattleCharacter actor, BattleCharacter target, ICommandInvoker commandInvoker, CancellationToken scope)
