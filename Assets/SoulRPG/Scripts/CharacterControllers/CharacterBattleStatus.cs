@@ -14,43 +14,56 @@ namespace SoulRPG
         public string Name { get; }
 
         private readonly ReactiveProperty<int> hitPointMaxReactiveProperty;
-        public ReadOnlyReactiveProperty<int> HitPointMax => hitPointMaxReactiveProperty;
+        public ReadOnlyReactiveProperty<int> HitPointMaxReactiveProperty => hitPointMaxReactiveProperty;
+        public int HitPointMax => hitPointMaxReactiveProperty.Value;
 
         private readonly ReactiveProperty<int> hitPointReactiveProperty;
-        public ReadOnlyReactiveProperty<int> HitPoint => hitPointReactiveProperty;
+        public ReadOnlyReactiveProperty<int> HitPointReactiveProperty => hitPointReactiveProperty;
+        public int HitPoint => hitPointReactiveProperty.Value;
 
         private readonly ReactiveProperty<int> staminaMaxReactiveProperty;
-        public ReadOnlyReactiveProperty<int> StaminaMax => staminaMaxReactiveProperty;
+        public ReadOnlyReactiveProperty<int> StaminaMaxReactiveProperty => staminaMaxReactiveProperty;
+        public int StaminaMax => staminaMaxReactiveProperty.Value;
 
         private readonly ReactiveProperty<int> staminaReactiveProperty;
-        public ReadOnlyReactiveProperty<int> Stamina => staminaReactiveProperty;
+        public ReadOnlyReactiveProperty<int> StaminaReactiveProperty => staminaReactiveProperty;
+        public int Stamina => staminaReactiveProperty.Value;
 
         private readonly ReactiveProperty<int> physicalAttackReactiveProperty;
-        public ReadOnlyReactiveProperty<int> PhysicalAttack => physicalAttackReactiveProperty;
+        public ReadOnlyReactiveProperty<int> PhysicalAttackReactiveProperty => physicalAttackReactiveProperty;
+        public int PhysicalAttack => physicalAttackReactiveProperty.Value;
 
         private readonly ReactiveProperty<int> magicalAttackReactiveProperty;
-        public ReadOnlyReactiveProperty<int> MagicalAttack => magicalAttackReactiveProperty;
+        public ReadOnlyReactiveProperty<int> MagicalAttackReactiveProperty => magicalAttackReactiveProperty;
+        public int MagicalAttack => magicalAttackReactiveProperty.Value;
 
         private readonly ReactiveProperty<float> slashCutRateReactiveProperty;
-        public ReadOnlyReactiveProperty<float> SlashCutRate => slashCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> SlashCutRateReactiveProperty => slashCutRateReactiveProperty;
+        public float SlashCutRate => slashCutRateReactiveProperty.Value;
 
         private readonly ReactiveProperty<float> blowCutRateReactiveProperty;
-        public ReadOnlyReactiveProperty<float> BlowCutRate => blowCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> BlowCutRateReactiveProperty => blowCutRateReactiveProperty;
+        public float BlowCutRate => blowCutRateReactiveProperty.Value;
 
         private readonly ReactiveProperty<float> thrustCutRateReactiveProperty;
-        public ReadOnlyReactiveProperty<float> ThrustCutRate => thrustCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> ThrustCutRateReactiveProperty => thrustCutRateReactiveProperty;
+        public float ThrustCutRate => thrustCutRateReactiveProperty.Value;
 
         private readonly ReactiveProperty<float> magicCutRateReactiveProperty;
-        public ReadOnlyReactiveProperty<float> MagicCutRate => magicCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> MagicCutRateReactiveProperty => magicCutRateReactiveProperty;
+        public float MagicCutRate => magicCutRateReactiveProperty.Value;
 
         private readonly ReactiveProperty<float> fireCutRateReactiveProperty;
-        public ReadOnlyReactiveProperty<float> FireCutRate => fireCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> FireCutRateReactiveProperty => fireCutRateReactiveProperty;
+        public float FireCutRate => fireCutRateReactiveProperty.Value;
 
         private readonly ReactiveProperty<float> thunderCutRateReactiveProperty;
-        public ReadOnlyReactiveProperty<float> ThunderCutRate => thunderCutRateReactiveProperty;
+        public ReadOnlyReactiveProperty<float> ThunderCutRateReactiveProperty => thunderCutRateReactiveProperty;
+        public float ThunderCutRate => thunderCutRateReactiveProperty.Value;
 
         private readonly ReactiveProperty<int> speedReactiveProperty;
-        public ReadOnlyReactiveProperty<int> Speed => speedReactiveProperty;
+        public ReadOnlyReactiveProperty<int> SpeedReactiveProperty => speedReactiveProperty;
+        public int Speed => speedReactiveProperty.Value;
 
         public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
