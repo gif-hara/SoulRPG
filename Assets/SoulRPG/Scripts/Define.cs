@@ -45,5 +45,7 @@ namespace SoulRPG
             Physical,
             Magical,
         }
+
+        public const int HandWeaponId = 101998;
     }
 }
