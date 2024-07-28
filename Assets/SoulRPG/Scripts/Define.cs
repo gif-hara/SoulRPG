@@ -46,6 +46,12 @@ namespace SoulRPG
             Magical,
         }
 
+        public enum TargetType
+        {
+            Self,
+            Opponent,
+        }
+
         public const int HandWeaponId = 101998;
     }
 }
