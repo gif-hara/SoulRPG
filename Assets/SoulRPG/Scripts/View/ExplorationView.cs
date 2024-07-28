@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using HK;
 using R3;
@@ -19,6 +21,8 @@ namespace SoulRPG
         private readonly GameCameraController gameCameraController;
 
         private readonly Character character;
+
+        private Dictionary<(string dungeonName, int x, int y), GameObject> dungeonEventObjects = new();
 
         public ExplorationView(
             HKUIDocument uiDocumentPrefab,
@@ -105,6 +109,37 @@ namespace SoulRPG
                 var wallObject = Object.Instantiate(prefab, dungeonDocument.transform);
                 wallObject.position = new Vector3(i.a.x, 0, i.a.y);
             }
+
+            var events = TinyServiceLocator.Resolve<MasterData>().DungeonEvents.List
+                .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name);
+            foreach (var i in events)
+            {
+                switch (i.EventType)
+                {
+                    case "Item":
+                        {
+                            var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Event.Item"), dungeonDocument.transform);
+                            eventObject.position = new Vector3(i.X, 0, i.Y);
+                            dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
+                            break;
+                        }
+                    case "SavePoint":
+                        {
+                            var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Event.SavePoint"), dungeonDocument.transform);
+                            eventObject.position = new Vector3(i.X, 0, i.Y);
+                            dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
+                            break;
+                        }
+                }
+            }
+            TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent
+                .Subscribe(x =>
+                {
+                    if (dungeonEventObjects.TryGetValue(x, out var obj))
+                    {
+                        Object.Destroy(obj);
+                    }
+                });
         }
 
         private void SetupMessage(
