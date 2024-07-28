@@ -89,5 +89,10 @@ namespace SoulRPG
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             return self.TryGetValue((dungeonController.CurrentDungeon.name, character.Position.x, character.Position.y), out dungeonEvent);
         }
+
+        public static BattleCharacter CreateBattleCharacter(this MasterData.Enemy self)
+        {
+            return new BattleCharacter(new CharacterBattleStatus(self), new Constant(101999, 101001));
+        }
     }
 }
