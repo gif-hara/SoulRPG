@@ -30,6 +30,9 @@ namespace SoulRPG.SceneControllers
         private HKUIDocument dungeonDocumentPrefab;
 
         [SerializeField]
+        private HKUIDocument commandDocumentPrefab;
+
+        [SerializeField]
         private string debugDungeonName;
 
         [SerializeField]
@@ -85,7 +88,7 @@ namespace SoulRPG.SceneControllers
                         if (Keyboard.current.wKey.wasPressedThisFrame)
                         {
                             var battleResult = await BattleSystem.BeginAsync(
-                                new BattleCharacter(player, new Constant(101998, 101001)),
+                                new BattleCharacter(player, new Input(commandDocumentPrefab)),
                                 new BattleCharacter(new CharacterBattleStatus(debugEnemyBattleStatus), new Constant(101998, 101001)),
                                 destroyCancellationToken
                                 );
