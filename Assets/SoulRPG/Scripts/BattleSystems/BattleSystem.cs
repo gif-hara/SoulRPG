@@ -1,4 +1,5 @@
 using System.Threading;
+using System.Windows.Input;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
@@ -37,13 +38,12 @@ namespace SoulRPG.BattleSystems
                 var enemyCommandInvoker = await enemy.ThinkAsync();
                 var playerSpeed = player.BattleStatus.Speed + playerCommandInvoker.GetSpeed();
                 var enemySpeed = enemy.BattleStatus.Speed + enemyCommandInvoker.GetSpeed();
-                var firstActorData = playerSpeed > enemySpeed ? (player, playerCommandInvoker) : (enemy, enemyCommandInvoker);
-                var secondActor = firstActorData.Item1 == player ? (enemy, enemyCommandInvoker) : (player, playerCommandInvoker);
-                if (await InvokeSkillActionAsync(firstActorData.Item1, secondActor.Item1, firstActorData.Item2, scope))
+                var actorData = GetActorData(player, playerCommandInvoker, enemy, enemyCommandInvoker);
+                if (await InvokeSkillActionAsync(actorData.firstActor.actor, actorData.secondActor.actor, actorData.firstActor.commandInvoker, scope))
                 {
                     break;
                 }
-                if (await InvokeSkillActionAsync(secondActor.Item1, firstActorData.Item1, secondActor.Item2, scope))
+                if (await InvokeSkillActionAsync(actorData.secondActor.actor, actorData.firstActor.actor, actorData.secondActor.commandInvoker, scope))
                 {
                     break;
                 }
@@ -71,6 +71,19 @@ namespace SoulRPG.BattleSystems
             {
                 await commandInvoker.InvokeAsync(actor, target, scope);
                 return actor.BattleStatus.IsDead || target.BattleStatus.IsDead;
+            }
+            static ((BattleCharacter actor, ICommandInvoker commandInvoker) firstActor, (BattleCharacter actor, ICommandInvoker commandInvoker) secondActor) GetActorData(
+                BattleCharacter player,
+                ICommandInvoker playerCommandInvoker,
+                BattleCharacter enemy,
+                ICommandInvoker enemyCommandInvoker
+                )
+            {
+                var playerData = (player, playerCommandInvoker);
+                var enemyData = (enemy, enemyCommandInvoker);
+                var playerSpeed = player.BattleStatus.Speed + playerCommandInvoker.GetSpeed();
+                var enemySpeed = enemy.BattleStatus.Speed + enemyCommandInvoker.GetSpeed();
+                return playerSpeed > enemySpeed ? (playerData, enemyData) : (enemyData, playerData);
             }
         }
     }
