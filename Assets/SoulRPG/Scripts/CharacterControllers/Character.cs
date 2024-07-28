@@ -37,12 +37,15 @@ namespace SoulRPG.CharacterControllers
 
         public CharacterGrowthParameter GrowthParameter { get; } = new();
 
+        public CharacterInstanceStatus InstanceStatus { get; }
+
         public string Name { get; }
 
         public Character(string name, CharacterGrowthParameter growthParameter)
         {
             Name = name;
             GrowthParameter = growthParameter;
+            InstanceStatus = new CharacterInstanceStatus(growthParameter);
             Inventory = new Inventory(this);
         }
 
