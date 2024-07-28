@@ -9,7 +9,7 @@ namespace SoulRPG.BattleSystems.CommandInvokers
     /// </summary>
     public sealed class Sequences : ICommandInvoker
     {
-        private ScriptableSequences scriptableSequences;
+        private readonly ScriptableSequences scriptableSequences;
 
         private readonly int weaponId;
 
