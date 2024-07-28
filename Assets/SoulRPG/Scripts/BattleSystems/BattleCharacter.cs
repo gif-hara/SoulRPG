@@ -16,6 +16,8 @@ namespace SoulRPG
 
         private readonly IBattleAI battleAI;
 
+        public ICommandInvoker AfterCommandInvoker { get; set; }
+
         public BattleCharacter(Character character, IBattleAI battleAI)
         {
             BattleStatus = new CharacterBattleStatus(character);
