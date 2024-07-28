@@ -152,6 +152,33 @@ namespace SoulRPG
             };
         }
 
+        public void AddCutRate(Define.AttackAttribute attackAttribute, float value)
+        {
+            switch (attackAttribute)
+            {
+                case Define.AttackAttribute.Slash:
+                    slashCutRateReactiveProperty.Value += value;
+                    break;
+                case Define.AttackAttribute.Blow:
+                    blowCutRateReactiveProperty.Value += value;
+                    break;
+                case Define.AttackAttribute.Thrust:
+                    thrustCutRateReactiveProperty.Value += value;
+                    break;
+                case Define.AttackAttribute.Magic:
+                    magicCutRateReactiveProperty.Value += value;
+                    break;
+                case Define.AttackAttribute.Fire:
+                    fireCutRateReactiveProperty.Value += value;
+                    break;
+                case Define.AttackAttribute.Thunder:
+                    thunderCutRateReactiveProperty.Value += value;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
         public float GetCutRate(Define.AttackAttribute attackAttribute)
         {
             return attackAttribute switch
