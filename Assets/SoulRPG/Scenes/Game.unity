@@ -175,7 +175,7 @@ MonoBehaviour:
   debugPlayerGrowthParameter:
     vitality: 10
     stamina: 10
-    physicalStrength: 10
+    physicalStrength: 20
     magicalStrength: 10
     speed: 10
   debugEnemyBattleStatus:
