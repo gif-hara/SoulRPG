@@ -20,7 +20,7 @@ namespace SoulRPG
 
         private readonly CommandView commandView;
 
-        private readonly UniTaskCompletionSource<ICommandInvoker> source = new();
+        private UniTaskCompletionSource<ICommandInvoker> source;
 
         private int selectedWeaponId;
 
@@ -34,6 +34,7 @@ namespace SoulRPG
             this.character = character;
             commandView.Open();
             stateMachine.Change(StateSelectMainCommandAsync);
+            source = new UniTaskCompletionSource<ICommandInvoker>();
             return source.Task;
         }
 
