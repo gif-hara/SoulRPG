@@ -356,6 +356,8 @@ namespace SoulRPG
 
             public int Cost;
 
+            public int SpeedLayer;
+
             public string Description;
 
             public ScriptableSequences ActionSequences;
