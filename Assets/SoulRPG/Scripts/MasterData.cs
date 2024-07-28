@@ -307,6 +307,8 @@ namespace SoulRPG
 
             public int Skill2;
 
+            public IEnumerable<int> Skills => new[] { Skill1, Skill2 };
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Weapon>
             {
