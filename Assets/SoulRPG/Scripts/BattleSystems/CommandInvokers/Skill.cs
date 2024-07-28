@@ -30,5 +30,10 @@ namespace SoulRPG.BattleSystems.CommandInvokers
             var sequencer = new Sequencer(container, sequences);
             return sequencer.PlayAsync(scope);
         }
+
+        public int GetSpeed()
+        {
+            return weaponId.GetMasterDataWeapon().Speed;
+        }
     }
 }

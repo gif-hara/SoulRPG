@@ -9,5 +9,7 @@ namespace SoulRPG.BattleSystems.CommandInvokers
     public interface ICommandInvoker
     {
         UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
+
+        int GetSpeed();
     }
 }
