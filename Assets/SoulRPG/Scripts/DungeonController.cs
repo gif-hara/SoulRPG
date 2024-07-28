@@ -48,15 +48,13 @@ namespace SoulRPG
             var userData = TinyServiceLocator.Resolve<UserData>();
             if (userData.ContainsCompletedEventId(dungeonEvent.Id))
             {
-                Debug.Log("Already Completed");
                 return UniTask.CompletedTask;
             }
             var masterDataEventItems = TinyServiceLocator.Resolve<MasterData>().DungeonEventItems.Get(dungeonEvent.Id);
             foreach (var item in masterDataEventItems)
             {
                 character.Inventory.Add(item.ItemId, item.Count);
-                var masterDataItem = TinyServiceLocator.Resolve<MasterData>().Items.Get(item.ItemId);
-                Debug.Log($"Add Item {masterDataItem.Name} x {item.Count}");
+                TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, dungeonEvent.X, dungeonEvent.Y));
             }
             userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsOneTime);
             return UniTask.CompletedTask;
