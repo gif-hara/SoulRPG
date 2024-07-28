@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
@@ -13,11 +14,15 @@ namespace SoulRPG
     [Serializable]
     public sealed class Input : IBattleAI
     {
+        private BattleCharacter character;
+
         private readonly TinyStateMachine stateMachine = new();
 
         private readonly CommandView commandView;
 
         private readonly UniTaskCompletionSource<ICommandInvoker> source = new();
+
+        private int selectedWeaponId;
 
         public Input(HKUIDocument commandDocumentPrefab)
         {
@@ -26,6 +31,7 @@ namespace SoulRPG
 
         public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
         {
+            this.character = character;
             commandView.Open();
             stateMachine.Change(StateSelectMainCommandAsync);
             return source.Task;
@@ -45,8 +51,7 @@ namespace SoulRPG
             switch (index)
             {
                 case 0:
-                    gameEvents.OnRequestShowMessage.OnNext("どうやら未実装のようだ");
-                    stateMachine.Change(StateSelectMainCommandAsync);
+                    stateMachine.Change(StateSelectWeaponAsync);
                     break;
                 case 1:
                     gameEvents.OnRequestShowMessage.OnNext("どうやら未実装のようだ");
@@ -57,6 +62,42 @@ namespace SoulRPG
                     stateMachine.Change(StateSelectMainCommandAsync);
                     break;
             }
+        }
+
+        private async UniTask StateSelectWeaponAsync(CancellationToken scope)
+        {
+            var commands = character.Equipment.GetWeaponIds()
+                .Select(x =>
+                {
+                    if (x.TryGetMasterDataWeapon(out var weapon))
+                    {
+                        return weapon.ItemId.GetMasterDataItem().Name;
+                    }
+                    return Define.HandWeaponId.GetMasterDataItem().Name;
+                });
+            var index = await commandView.CreateCommandsAsync("武器を選べ", commands, 0);
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            selectedWeaponId = index;
+            stateMachine.Change(StateSelectSkillAsync);
+        }
+
+        private async UniTask StateSelectSkillAsync(CancellationToken scope)
+        {
+            MasterData.Weapon weapon;
+            if (!character.Equipment.GetWeaponId(selectedWeaponId).TryGetMasterDataWeapon(out weapon))
+            {
+                weapon = Define.HandWeaponId.GetMasterDataWeapon();
+            }
+            var skills = weapon.Skills
+                .Where(x => x.ContainsMasterDataSkill())
+                .Select(x =>
+                {
+                    return x.GetMasterDataSkill();
+                });
+            var commands = skills.Select(x => x.Name);
+            var index = await commandView.CreateCommandsAsync("スキルを選べ", commands, 0);
+            commandView.Close();
+            source.TrySetResult(new Skill(weapon.ItemId, skills.ElementAt(index).Id));
         }
     }
 }
