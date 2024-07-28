@@ -4,7 +4,6 @@ using HK;
 using R3;
 using SoulRPG.BattleSystems.CommandInvokers;
 using UnityEngine;
-using UnitySequencerSystem;
 
 namespace SoulRPG.BattleSystems
 {
@@ -19,7 +18,6 @@ namespace SoulRPG.BattleSystems
             CancellationToken scope
             )
         {
-            Debug.Log("BattleSystem Begin");
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             inputController.ChangeInputType(InputController.InputType.UI);
@@ -54,7 +52,6 @@ namespace SoulRPG.BattleSystems
                 await gameEvents.WaitForSubmitInputAsync();
             }
             inputController.ChangeInputType(InputController.InputType.InGame);
-            Debug.Log("BattleSystem End");
             return result;
 
             static async UniTask<bool> InvokeSkillActionAsync(BattleCharacter actor, BattleCharacter target, ICommandInvoker commandInvoker, CancellationToken scope)
