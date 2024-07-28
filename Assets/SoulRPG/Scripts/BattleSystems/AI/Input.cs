@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using SoulRPG.BattleSystems.CommandInvokers;
@@ -12,19 +13,35 @@ namespace SoulRPG
     [Serializable]
     public sealed class Input : IBattleAI
     {
-        private readonly BattleCharacter character;
+        private readonly TinyStateMachine stateMachine = new();
 
-        private readonly HKUIDocument commandDocumentPrefab;
+        private readonly CommandView commandView;
 
-        public Input(BattleCharacter character, HKUIDocument commandDocumentPrefab)
+        private readonly UniTaskCompletionSource<ICommandInvoker> source = new();
+
+        public Input(HKUIDocument commandDocumentPrefab)
         {
-            this.character = character;
-            this.commandDocumentPrefab = commandDocumentPrefab;
+            commandView = new CommandView(commandDocumentPrefab);
         }
 
         public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
         {
-            return UniTask.FromResult(default(ICommandInvoker));
+            commandView.Open();
+            stateMachine.Change(StateSelectMainCommandAsync);
+            return source.Task;
+        }
+
+        private async UniTask StateSelectMainCommandAsync(CancellationToken scope)
+        {
+            var commands = new[]
+            {
+                "武器",
+                "道具",
+                "逃亡"
+            };
+
+            var index = await commandView.CreateCommandsAsync(commands, 0);
+            Debug.Log(index);
         }
     }
 }
