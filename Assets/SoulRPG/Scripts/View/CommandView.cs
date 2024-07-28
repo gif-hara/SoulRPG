@@ -5,6 +5,7 @@ using HK;
 using R3;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace SoulRPG
@@ -28,7 +29,7 @@ namespace SoulRPG
             document = Object.Instantiate(documentPrefab);
         }
 
-        public UniTask<int> CreateCommandsAsync(IEnumerable<string> commands)
+        public UniTask<int> CreateCommandsAsync(IEnumerable<string> commands, int initialIndex)
         {
             var source = new UniTaskCompletionSource<int>();
             var listParent = document.Q<RectTransform>("ListParent");
@@ -37,12 +38,20 @@ namespace SoulRPG
             {
                 var element = Object.Instantiate(listElementPrefab, listParent);
                 element.Q<TMP_Text>("Header").text = c;
-                element.Q<Button>("Button").OnClickAsObservable()
+                var button = element.Q<Button>("Button");
+                button.OnClickAsObservable()
                     .Subscribe(_ =>
                     {
                         source.TrySetResult(i);
                     })
                     .AddTo(element);
+                var navigation = button.navigation;
+                navigation.mode = Navigation.Mode.Automatic;
+                button.navigation = navigation;
+                if (i == initialIndex)
+                {
+                    EventSystem.current.SetSelectedGameObject(button.gameObject);
+                }
             }
 
             return source.Task;
