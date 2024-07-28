@@ -81,6 +81,16 @@ namespace SoulRPG.BattleSystems
             {
                 var playerData = (player, playerCommandInvoker);
                 var enemyData = (enemy, enemyCommandInvoker);
+                var playerBehaviourPriority = playerCommandInvoker.GetBehaviourPriority();
+                var enemyBehaviourPriority = enemyCommandInvoker.GetBehaviourPriority();
+                if (playerBehaviourPriority > enemyBehaviourPriority)
+                {
+                    return (playerData, enemyData);
+                }
+                if (playerBehaviourPriority < enemyBehaviourPriority)
+                {
+                    return (enemyData, playerData);
+                }
                 var playerSpeed = player.BattleStatus.Speed + playerCommandInvoker.GetSpeed();
                 var enemySpeed = enemy.BattleStatus.Speed + enemyCommandInvoker.GetSpeed();
                 return playerSpeed > enemySpeed ? (playerData, enemyData) : (enemyData, playerData);
