@@ -15,6 +15,9 @@ MonoBehaviour:
   sequences:
   - rid: 6411493576093728937
   - rid: 6411493576093728944
+  - rid: 6411493576093728956
+  - rid: 6411493576093728957
+  - rid: 6411493576093728958
   references:
     version: 2
     RefIds:
@@ -28,3 +31,21 @@ MonoBehaviour:
       data:
         scriptableSequences: {fileID: 11400000, guid: 954ec1d2022b545c486046460f52a60d, type: 2}
         behaviourPriority: 0
+    - rid: 6411493576093728956
+      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        attackAttribute: 0
+        cutRate: 0.2
+    - rid: 6411493576093728957
+      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        attackAttribute: 1
+        cutRate: 0.2
+    - rid: 6411493576093728958
+      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        attackAttribute: 2
+        cutRate: 0.2
