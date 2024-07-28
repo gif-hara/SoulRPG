@@ -671,6 +671,7 @@ MonoBehaviour:
   enemies:
     list:
     - Id: 10101
+      Name: "\u30C6\u30B9\u30C8\u30A8\u30CD\u30DF\u30FC"
       HitPoint: 45
       Stamina: 0
       PhysicalAttack: 24
