@@ -35,11 +35,15 @@ namespace SoulRPG.BattleSystems
             {
                 var playerCommandInvoker = await player.ThinkAsync();
                 var enemyCommandInvoker = await enemy.ThinkAsync();
-                if (await InvokeSkillActionAsync(player, enemy, playerCommandInvoker, scope))
+                var playerSpeed = player.BattleStatus.Speed + playerCommandInvoker.GetSpeed();
+                var enemySpeed = enemy.BattleStatus.Speed + enemyCommandInvoker.GetSpeed();
+                var firstActorData = playerSpeed > enemySpeed ? (player, playerCommandInvoker) : (enemy, enemyCommandInvoker);
+                var secondActor = firstActorData.Item1 == player ? (enemy, enemyCommandInvoker) : (player, playerCommandInvoker);
+                if (await InvokeSkillActionAsync(firstActorData.Item1, secondActor.Item1, firstActorData.Item2, scope))
                 {
                     break;
                 }
-                if (await InvokeSkillActionAsync(enemy, player, enemyCommandInvoker, scope))
+                if (await InvokeSkillActionAsync(secondActor.Item1, firstActorData.Item1, secondActor.Item2, scope))
                 {
                     break;
                 }
