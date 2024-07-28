@@ -321,12 +321,18 @@ MonoBehaviour:
       X: 0
       Y: 3
       EventType: Item
-      IsOneTime: 0
+      IsOneTime: 1
     - Id: Test.00.02.SavePoint
       DungeonName: Dungeon.Test
       X: 0
       Y: 2
       EventType: SavePoint
+      IsOneTime: 0
+    - Id: Test.00.04.Enemy
+      DungeonName: Dungeon.Test
+      X: 0
+      Y: 4
+      EventType: Enemy
       IsOneTime: 0
   dungeonEventItems:
     list:
@@ -342,6 +348,11 @@ MonoBehaviour:
         EventId: Test.00.03.Item
         ItemId: 101002
         Count: 1
+  dungeonEventEnemies:
+    list:
+    - Id: 1
+      EventId: Test.00.04.Enemy
+      EnemyId: 10101
   items:
     list:
     - Name: "\u30B7\u30E7\u30FC\u30C8\u30BD\u30FC\u30C9"

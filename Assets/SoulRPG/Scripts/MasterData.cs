@@ -5,7 +5,6 @@ using Cysharp.Threading.Tasks;
 using HK;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnitySequencerSystem;
 
 namespace SoulRPG
@@ -27,6 +26,10 @@ namespace SoulRPG
         [SerializeField]
         private DungeonEventItem.Group dungeonEventItems;
         public DungeonEventItem.Group DungeonEventItems => dungeonEventItems;
+
+        [SerializeField]
+        private DungeonEventEnemy.DictionaryList dungeonEventEnemies;
+        public DungeonEventEnemy.DictionaryList DungeonEventEnemies => dungeonEventEnemies;
 
         [SerializeField]
         private Item.DictionaryList items;
@@ -87,6 +90,7 @@ namespace SoulRPG
                 "MasterData.Armor.Legs",
                 "MasterData.Accessory",
                 "MasterData.Enemy",
+                "MasterData.DungeonEvent.Enemy",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -115,6 +119,7 @@ namespace SoulRPG
             armorLegs.Set(JsonHelper.FromJson<Armor>(database.Item2[8]));
             accessories.Set(JsonHelper.FromJson<Accessory>(database.Item2[9]));
             enemies.Set(JsonHelper.FromJson<Enemy>(database.Item2[10]));
+            dungeonEventEnemies.Set(JsonHelper.FromJson<DungeonEventEnemy>(database.Item2[11]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -282,6 +287,23 @@ namespace SoulRPG
                 public Group() : base(x => x.EventId) { }
             }
         }
+
+        [Serializable]
+        public class DungeonEventEnemy
+        {
+            public int Id;
+
+            public string EventId;
+
+            public int EnemyId;
+
+            [Serializable]
+            public class DictionaryList : DictionaryList<string, DungeonEventEnemy>
+            {
+                public DictionaryList() : base(x => x.EventId) { }
+            }
+        }
+
 
         [Serializable]
         public class Item
