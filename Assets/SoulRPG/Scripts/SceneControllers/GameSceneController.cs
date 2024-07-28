@@ -45,6 +45,9 @@ namespace SoulRPG.SceneControllers
         private CharacterGrowthParameter debugPlayerGrowthParameter;
 
         [SerializeField]
+        private EquipmentBlueprint debugPlayerEquipment;
+
+        [SerializeField]
         private CharacterBattleStatusBlueprint debugEnemyBattleStatus;
 
         async void Start()
@@ -52,7 +55,7 @@ namespace SoulRPG.SceneControllers
             await BootSystem.IsReady;
             TinyServiceLocator.Register(masterData);
             TinyServiceLocator.Register(new GameEvents());
-            var player = new Character(debugPlayerName, debugPlayerGrowthParameter);
+            var player = new Character(debugPlayerName, debugPlayerGrowthParameter, debugPlayerEquipment);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             var gameView = new ExplorationView(
                 gameUIDocumentPrefab,

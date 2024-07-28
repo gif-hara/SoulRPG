@@ -178,6 +178,13 @@ MonoBehaviour:
     physicalStrength: 20
     magicalStrength: 10
     speed: 10
+  debugPlayerEquipment:
+    weaponIds: 6d8e01000000000000000000
+    headId: 0
+    bodyId: 0
+    armId: 0
+    legId: 0
+    accessoryIds: 00000000000000000000000000000000
   debugEnemyBattleStatus:
     name: "\u30A8\u30CD\u30DF\u30FC"
     hitPoint: 10
