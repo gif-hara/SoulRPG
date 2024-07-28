@@ -134,23 +134,9 @@ namespace SoulRPG
             {
                 foreach (var i in dungeonEvents)
                 {
-                    switch (i.EventType)
-                    {
-                        case "Item":
-                            {
-                                var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Event.Item"), dungeonDocument.transform);
-                                eventObject.position = new Vector3(i.X, 0, i.Y);
-                                dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
-                                break;
-                            }
-                        case "SavePoint":
-                            {
-                                var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Event.SavePoint"), dungeonDocument.transform);
-                                eventObject.position = new Vector3(i.X, 0, i.Y);
-                                dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
-                                break;
-                            }
-                    }
+                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Event.{i.EventType}"), dungeonDocument.transform);
+                    eventObject.position = new Vector3(i.X, 0, i.Y);
+                    dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
                 }
             }
         }
