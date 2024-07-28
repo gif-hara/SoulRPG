@@ -6,6 +6,7 @@ using R3;
 using SoulRPG.CharacterControllers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SoulRPG
 {
@@ -44,6 +45,7 @@ namespace SoulRPG
             SetupMiniMap(uiDocument, dungeonController, character, scope);
             SetupDungeon(dungeonController);
             SetupMessage(uiDocument, character, scope);
+            SetupStatuses(uiDocument, character, scope);
         }
 
         private void SetupMiniMap(
@@ -188,6 +190,35 @@ namespace SoulRPG
                 var element = Object.Instantiate(messagePrefab, messageParent);
                 element.Q<TMP_Text>("Message").text = message;
             }
+        }
+
+        private void SetupStatuses(
+            HKUIDocument uiDocument,
+            Character character,
+            CancellationToken scope
+            )
+        {
+            var areaDocument = uiDocument.Q<HKUIDocument>("Area.Status");
+            var hitPointGauge = areaDocument.Q<Slider>("Gauge.HitPoint");
+            Observable.Merge(
+                character.InstanceStatus.HitPointAsObservable(),
+                character.InstanceStatus.HitPointMaxAsObservable()
+                )
+                .Subscribe(_ =>
+                {
+                    hitPointGauge.value = character.InstanceStatus.HitPoint / (float)character.InstanceStatus.HitPointMax;
+                })
+                .RegisterTo(scope);
+            var staminaGauge = areaDocument.Q<Slider>("Gauge.Stamina");
+            Observable.Merge(
+                character.InstanceStatus.StaminaAsObservable(),
+                character.InstanceStatus.StaminaMaxAsObservable()
+                )
+                .Subscribe(_ =>
+                {
+                    staminaGauge.value = character.InstanceStatus.Stamina / (float)character.InstanceStatus.StaminaMax;
+                })
+                .RegisterTo(scope);
         }
     }
 }
