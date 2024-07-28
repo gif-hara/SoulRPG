@@ -310,19 +310,19 @@ MonoBehaviour:
       range: {x: 25, y: 25}
   dungeonEvents:
     list:
-    - Id: Test.Item.001
+    - Id: Test.00.01.Item
       DungeonName: Dungeon.Test
       X: 0
       Y: 1
       EventType: Item
       IsOneTime: 1
-    - Id: Test.Item.002
+    - Id: Test.00.03.Item
       DungeonName: Dungeon.Test
       X: 0
       Y: 3
       EventType: Item
       IsOneTime: 0
-    - Id: Test.SavePoint.001
+    - Id: Test.00.02.SavePoint
       DungeonName: Dungeon.Test
       X: 0
       Y: 2
@@ -330,16 +330,16 @@ MonoBehaviour:
       IsOneTime: 0
   dungeonEventItems:
     list:
-    - Key: Test.Item.001
+    - Key: Test.00.01.Item
       Value:
       - Id: 1
-        EventId: Test.Item.001
+        EventId: Test.00.01.Item
         ItemId: 101001
         Count: 1
-    - Key: Test.Item.002
+    - Key: Test.00.03.Item
       Value:
       - Id: 2
-        EventId: Test.Item.002
+        EventId: Test.00.03.Item
         ItemId: 101002
         Count: 1
   items:
@@ -391,7 +391,7 @@ MonoBehaviour:
       Skill1: 101001
       Skill2: 0
     - ItemId: 101999
-      Strength: 199
+      Strength: 100
       Speed: 0
       AttackAttribute: 0
       Skill1: 0
