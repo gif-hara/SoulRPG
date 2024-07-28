@@ -64,7 +64,7 @@ namespace SoulRPG.SceneControllers
             var inputController = new InputController();
             inputController.ChangeInputType(InputController.InputType.InGame);
             TinyServiceLocator.Register(inputController);
-            var dungeonController = new DungeonController();
+            var dungeonController = new DungeonController(commandDocumentPrefab, destroyCancellationToken);
             TinyServiceLocator.Register(dungeonController);
             TinyServiceLocator.Register(new UserData());
             dungeonController.Setup(debugDungeonName);
