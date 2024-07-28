@@ -383,30 +383,40 @@ MonoBehaviour:
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101002
+      Skill3: 0
+      Skill4: 0
     - ItemId: 101002
       Strength: 99
       Speed: 9
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101003
+      Skill3: 0
+      Skill4: 0
     - ItemId: 101003
       Strength: 153
       Speed: -11
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101004
+      Skill3: 0
+      Skill4: 0
     - ItemId: 101998
       Strength: 50
       Speed: 0
       AttackAttribute: 1
       Skill1: 101001
       Skill2: 0
+      Skill3: 0
+      Skill4: 0
     - ItemId: 101999
       Strength: 100
       Speed: 0
       AttackAttribute: 0
       Skill1: 0
       Skill2: 0
+      Skill3: 0
+      Skill4: 0
   skills:
     list:
     - Name: "\u901A\u5E38\u653B\u6483"
