@@ -404,6 +404,8 @@ namespace SoulRPG
         {
             public int Id;
 
+            public string Name;
+
             public int HitPoint;
 
             public int Stamina;
