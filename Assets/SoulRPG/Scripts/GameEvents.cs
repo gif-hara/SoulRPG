@@ -14,6 +14,8 @@ namespace SoulRPG
 
         public readonly Subject<bool> OnRequestSetActiveMessageArrow = new();
 
+        public readonly Subject<(string dungeonName, int x, int y)> OnAcquiredDungeonEvent = new();
+
         public async UniTask WaitForSubmitInputAsync()
         {
             OnRequestSetActiveMessageArrow.OnNext(true);
