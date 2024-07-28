@@ -35,5 +35,10 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         {
             return weaponId.GetMasterDataWeapon().Speed;
         }
+
+        public int GetBehaviourPriority()
+        {
+            return skillId.GetMasterDataSkill().BehaviourPriority;
+        }
     }
 }

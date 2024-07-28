@@ -11,5 +11,7 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
 
         int GetSpeed();
+
+        int GetBehaviourPriority();
     }
 }
