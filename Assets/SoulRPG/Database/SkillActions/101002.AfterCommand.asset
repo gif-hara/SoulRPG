@@ -10,21 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: 101002
+  m_Name: 101002.AfterCommand
   m_EditorClassIdentifier: 
   sequences:
   - rid: 6411493576093728937
-  - rid: 6411493576093728944
+  - rid: 6411493576093728945
   references:
     version: 2
     RefIds:
     - rid: 6411493576093728937
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F\u7D20\u65E9\u304F\u69CB\u3048\u305F"
+        format: "{Actor}\u306F\u69CB\u3048\u3092\u89E3\u304D\u3001\u529B\u5F37\u304F\u6B66\u5668\u3092\u632F\u308B\u3063\u305F"
         waitForInput: 1
-    - rid: 6411493576093728944
-      type: {class: RegisterAfterCommandInvoker, ns: SoulRPG, asm: Assembly-CSharp}
+    - rid: 6411493576093728945
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        scriptableSequences: {fileID: 11400000, guid: 954ec1d2022b545c486046460f52a60d, type: 2}
-        behaviourPriority: 0
+        damageCalculator:
+          rid: 6411493576093728946
+        waitForInput: 1
+    - rid: 6411493576093728946
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 1.3
+        attackType: 0
+        attackAttribute: 0
