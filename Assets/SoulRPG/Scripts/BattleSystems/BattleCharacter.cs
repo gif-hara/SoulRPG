@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
 
 namespace SoulRPG
@@ -24,7 +25,7 @@ namespace SoulRPG
             this.battleAI = battleAI;
         }
 
-        public UniTask<(int weaponItemId, int skillId)> ThinkAsync()
+        public UniTask<ICommandInvoker> ThinkAsync()
         {
             return battleAI.ThinkAsync(this);
         }

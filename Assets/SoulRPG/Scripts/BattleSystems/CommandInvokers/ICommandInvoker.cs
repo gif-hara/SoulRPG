@@ -1,12 +1,13 @@
+using System.Threading;
 using Cysharp.Threading.Tasks;
 
-namespace SoulRPG
+namespace SoulRPG.BattleSystems.CommandInvokers
 {
     /// <summary>
     /// 
     /// </summary>
     public interface ICommandInvoker
     {
-        UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target);
+        UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
     }
 }

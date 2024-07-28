@@ -1,8 +1,8 @@
-using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
+using SoulRPG.BattleSystems.CommandInvokers;
 using UnityEngine;
 using UnitySequencerSystem;
 
@@ -30,13 +30,13 @@ namespace SoulRPG.BattleSystems
 
             while (!player.BattleStatus.IsDead && !enemy.BattleStatus.IsDead)
             {
-                var playerThinkResult = await player.ThinkAsync();
-                var enemyThinkResult = await enemy.ThinkAsync();
-                if (await InvokeSkillActionAsync(player, enemy, playerThinkResult.weaponItemId, playerThinkResult.skillId, scope))
+                var playerCommandInvoker = await player.ThinkAsync();
+                var enemyCommandInvoker = await enemy.ThinkAsync();
+                if (await InvokeSkillActionAsync(player, enemy, playerCommandInvoker, scope))
                 {
                     break;
                 }
-                if (await InvokeSkillActionAsync(enemy, player, enemyThinkResult.weaponItemId, enemyThinkResult.skillId, scope))
+                if (await InvokeSkillActionAsync(enemy, player, enemyCommandInvoker, scope))
                 {
                     break;
                 }
@@ -57,17 +57,10 @@ namespace SoulRPG.BattleSystems
             Debug.Log("BattleSystem End");
             return result;
 
-            static async UniTask<bool> InvokeSkillActionAsync(BattleCharacter actor, BattleCharacter target, int weaponId, int skillId, CancellationToken scope)
+            static async UniTask<bool> InvokeSkillActionAsync(BattleCharacter actor, BattleCharacter target, ICommandInvoker commandInvoker, CancellationToken scope)
             {
-                var masterDataSkill = skillId.GetMasterDataSkill();
-                var sequences = masterDataSkill.ActionSequences.Sequences;
-                var container = new Container();
-                container.Register("Actor", actor);
-                container.Register("Target", target);
-                container.Register(weaponId.GetMasterDataWeapon());
-                var sequencer = new Sequencer(container, sequences);
-                await sequencer.PlayAsync(scope);
-                return target.BattleStatus.IsDead;
+                await commandInvoker.InvokeAsync(actor, target, scope);
+                return actor.BattleStatus.IsDead || target.BattleStatus.IsDead;
             }
         }
     }

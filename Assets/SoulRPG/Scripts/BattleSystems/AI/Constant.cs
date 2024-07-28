@@ -1,5 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
+using SoulRPG.BattleSystems.CommandInvokers;
 using UnityEngine;
 
 namespace SoulRPG
@@ -22,9 +23,9 @@ namespace SoulRPG
             this.skillId = skillId;
         }
 
-        public UniTask<(int weaponItemId, int skillId)> ThinkAsync(BattleCharacter character)
+        public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
         {
-            return UniTask.FromResult((weaponItemId, skillId));
+            return UniTask.FromResult(new Skill(weaponItemId, skillId) as ICommandInvoker);
         }
     }
 }
