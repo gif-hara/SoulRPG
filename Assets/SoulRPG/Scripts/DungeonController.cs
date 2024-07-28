@@ -100,13 +100,24 @@ namespace SoulRPG
 
         private async UniTask InvokeOnEnemyAsync(Character character, MasterData.DungeonEvent dungeonEvent)
         {
+            var userData = TinyServiceLocator.Resolve<UserData>();
+            if (userData.ContainsCompletedEventId(dungeonEvent.Id))
+            {
+                return;
+            }
+
             var masterDataEventEnemy = TinyServiceLocator.Resolve<MasterData>().DungeonEventEnemies.Get(dungeonEvent.Id);
             var masterDataEnemy = TinyServiceLocator.Resolve<MasterData>().Enemies.Get(masterDataEventEnemy.EnemyId);
-            await BattleSystem.BeginAsync(
+            var battleResult = await BattleSystem.BeginAsync(
                 new BattleCharacter(character, new Input(commandDocumentPrefab)),
                 masterDataEnemy.CreateBattleCharacter(),
                 scope
                 );
+            if (battleResult == Define.BattleResult.PlayerWin)
+            {
+                TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, dungeonEvent.X, dungeonEvent.Y));
+                userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsOneTime);
+            }
         }
     }
 }
