@@ -14,13 +14,17 @@ namespace SoulRPG
         [SerializeField]
         private ScriptableSequences onAdded;
         public ScriptableSequences OnAdded => onAdded;
-        
+
         [SerializeField]
         private ScriptableSequences onTurnEnd;
         public ScriptableSequences OnTurnEnd => onTurnEnd;
-        
+
         [SerializeField]
         private ScriptableSequences onRemoved;
         public ScriptableSequences OnRemoved => onRemoved;
+
+        [SerializeField]
+        private ScriptableSequences canExecutableTurn;
+        public ScriptableSequences CanExecutableTurn => canExecutableTurn;
     }
 }
