@@ -30,6 +30,6 @@ MonoBehaviour:
       data:
         targetType: 0
         masterDataAilmentId: 101003
-        turnCount: 3
+        turnCount: 4
         battleCharacterEvaluator:
           rid: -2
