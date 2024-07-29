@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using SoulRPG.BattleSystems.BattleCharacterEvaluators;
 using UnityEngine;
 using UnitySequencerSystem;
 
@@ -21,6 +22,9 @@ namespace SoulRPG
         [SerializeField]
         private int turnCount;
 
+        [SerializeReference, SubclassSelector]
+        private IBattleCharacterEvaluator battleCharacterEvaluator;
+
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var name = targetType == Define.TargetType.Self ? "Actor" : "Target";
@@ -29,7 +33,10 @@ namespace SoulRPG
             {
                 return;
             }
-            await target.AilmentController.AddAsync(masterDataAilmentId, turnCount);
+            if (battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(target))
+            {
+                await target.AilmentController.AddAsync(masterDataAilmentId, turnCount);
+            }
         }
     }
 }
