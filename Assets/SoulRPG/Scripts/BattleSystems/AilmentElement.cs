@@ -26,18 +26,18 @@ namespace SoulRPG
 
         public UniTask OnAddedAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
-            return PlaySequencesAsync(masterDataAilment.Sequences.OnAdded, scope);
+            return PlaySequencesAsync(masterDataAilment.Sequences.OnAdded, battleCharacter, scope);
         }
 
         public UniTask OnRemovedAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
-            return PlaySequencesAsync(masterDataAilment.Sequences.OnRemoved, scope);
+            return PlaySequencesAsync(masterDataAilment.Sequences.OnRemoved, battleCharacter, scope);
         }
 
         public UniTask OnTurnEndAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
             currentTurnCount++;
-            return PlaySequencesAsync(masterDataAilment.Sequences.OnTurnEnd, scope);
+            return PlaySequencesAsync(masterDataAilment.Sequences.OnTurnEnd, battleCharacter, scope);
         }
 
         public bool IsEnd()
@@ -61,7 +61,7 @@ namespace SoulRPG
             this.turnCount = turnCount;
         }
 
-        private static async UniTask<Container> PlaySequencesAsync(ScriptableSequences sequences, CancellationToken scope)
+        private static async UniTask<Container> PlaySequencesAsync(ScriptableSequences sequences, BattleCharacter battleCharacter, CancellationToken scope)
         {
             if (sequences == null)
             {
@@ -69,6 +69,7 @@ namespace SoulRPG
             }
 
             var container = new Container();
+            container.Register("Actor", battleCharacter);
             var sequencer = new Sequencer(container, sequences.Sequences);
             await sequencer.PlayAsync(scope);
             return container;
