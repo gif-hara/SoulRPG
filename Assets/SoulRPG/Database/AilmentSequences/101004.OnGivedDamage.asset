@@ -31,7 +31,7 @@ MonoBehaviour:
       data:
         rate: 1
         attackType: 1
-        attackAttribute: 0
+        attackAttribute: 4
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
