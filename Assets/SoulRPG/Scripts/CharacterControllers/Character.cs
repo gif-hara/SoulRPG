@@ -39,15 +39,18 @@ namespace SoulRPG.CharacterControllers
 
         public CharacterInstanceStatus InstanceStatus { get; }
 
+        public Define.CharacterAttribute Attribute { get; }
+
         public string Name { get; }
 
-        public Character(string name, CharacterGrowthParameter growthParameter, EquipmentBlueprint equipmentBlueprint)
+        public Character(string name, CharacterGrowthParameter growthParameter, EquipmentBlueprint equipmentBlueprint, Define.CharacterAttribute attribute)
         {
             Name = name;
             GrowthParameter = growthParameter;
             InstanceStatus = new CharacterInstanceStatus(growthParameter);
             Inventory = new Inventory(this);
             Equipment = new Equipment(equipmentBlueprint);
+            Attribute = attribute;
         }
 
         public void Move(Vector2Int velocity)
