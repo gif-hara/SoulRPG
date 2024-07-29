@@ -22,14 +22,16 @@ MonoBehaviour:
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         damageCalculator:
-          rid: 7288459838305337774
+          rid: 7288459838305337778
         targetType: 1
         waitForInput: 1
         canCombo: 0
-    - rid: 7288459838305337774
-      type: {class: Percentage, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+    - rid: 7288459838305337778
+      type: {class: AttackPowerOnly, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        rate: 0.01
+        rate: 1
+        attackType: 1
+        attackAttribute: 0
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
