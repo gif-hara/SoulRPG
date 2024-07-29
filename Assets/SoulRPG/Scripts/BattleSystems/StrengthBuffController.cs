@@ -11,27 +11,33 @@ namespace SoulRPG
 
         private readonly List<(string, float)> magicalStrengthBuffList = new();
 
-        public void AddPhysicalStrengthBuff(string name, float rate)
+        public void Add(Define.AttackType attackType, string name, float rate)
         {
-            physicalStrengthBuffList.Add((name, rate));
+            switch (attackType)
+            {
+                case Define.AttackType.Physical:
+                    physicalStrengthBuffList.Add((name, rate));
+                    break;
+                case Define.AttackType.Magical:
+                    magicalStrengthBuffList.Add((name, rate));
+                    break;
+            }
         }
 
-        public void AddMagicalStrengthBuff(string name, float rate)
+        public void Remove(Define.AttackType attackType, string name)
         {
-            magicalStrengthBuffList.Add((name, rate));
+            switch (attackType)
+            {
+                case Define.AttackType.Physical:
+                    physicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
+                    break;
+                case Define.AttackType.Magical:
+                    magicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
+                    break;
+            }
         }
 
-        public void RemovePhysicalStrengthBuff(string name)
-        {
-            physicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
-        }
-
-        public void RemoveMagicalStrengthBuff(string name)
-        {
-            magicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
-        }
-
-        public float GetStrengthRate(Define.AttackType attackType)
+        public float GetRate(Define.AttackType attackType)
         {
             return attackType switch
             {
