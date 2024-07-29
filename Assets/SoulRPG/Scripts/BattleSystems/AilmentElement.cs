@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnitySequencerSystem;
@@ -26,23 +27,23 @@ namespace SoulRPG
 
         public UniTask OnAddedAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
-            return PlaySequencesAsync(masterDataAilment.Sequences.OnAdded, battleCharacter, scope);
+            return PlaySequencesAsync(masterDataAilment.Sequences.OnAdded, battleCharacter, null, scope);
         }
 
         public UniTask OnRemovedAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
-            return PlaySequencesAsync(masterDataAilment.Sequences.OnRemoved, battleCharacter, scope);
+            return PlaySequencesAsync(masterDataAilment.Sequences.OnRemoved, battleCharacter, null, scope);
         }
 
         public UniTask OnTurnEndAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
             currentTurnCount++;
-            return PlaySequencesAsync(masterDataAilment.Sequences.OnTurnEnd, battleCharacter, scope);
+            return PlaySequencesAsync(masterDataAilment.Sequences.OnTurnEnd, battleCharacter, null, scope);
         }
 
         public async UniTask<bool> CanExecutableTurnAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
-            var container = await PlaySequencesAsync(masterDataAilment.Sequences.CanExecutableTurn, battleCharacter, scope);
+            var container = await PlaySequencesAsync(masterDataAilment.Sequences.CanExecutableTurn, battleCharacter, null, scope);
             if (container == null)
             {
                 return true;
@@ -50,6 +51,16 @@ namespace SoulRPG
 
             var contains = container.TryResolve<bool>("CanExecutableTurn", out var canExecutableTurn);
             return contains && canExecutableTurn;
+        }
+
+        public UniTask OnGivedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        {
+            return PlaySequencesAsync(
+                masterDataAilment.Sequences.OnGivedDamage,
+                actor,
+                c => c.Register("Target", target),
+                scope
+                );
         }
 
         public bool IsEnd()
@@ -73,7 +84,7 @@ namespace SoulRPG
             this.turnCount = turnCount;
         }
 
-        private static async UniTask<Container> PlaySequencesAsync(ScriptableSequences sequences, BattleCharacter battleCharacter, CancellationToken scope)
+        private static async UniTask<Container> PlaySequencesAsync(ScriptableSequences sequences, BattleCharacter battleCharacter, Action<Container> containerAction, CancellationToken scope)
         {
             if (sequences == null)
             {
@@ -82,6 +93,7 @@ namespace SoulRPG
 
             var container = new Container();
             container.Register("Actor", battleCharacter);
+            containerAction?.Invoke(container);
             var sequencer = new Sequencer(container, sequences.Sequences);
             await sequencer.PlayAsync(scope);
             return container;

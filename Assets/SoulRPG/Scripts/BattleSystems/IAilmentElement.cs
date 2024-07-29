@@ -16,6 +16,8 @@ namespace SoulRPG
 
         UniTask<bool> CanExecutableTurnAsync(BattleCharacter battleCharacter, CancellationToken scope);
 
+        UniTask OnGivedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
+
         bool IsEnd();
 
         int GetMasterDataId();
