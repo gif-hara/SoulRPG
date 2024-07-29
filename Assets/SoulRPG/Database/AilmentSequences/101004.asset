@@ -16,4 +16,5 @@ MonoBehaviour:
   onTurnEnd: {fileID: 0}
   onRemoved: {fileID: 11400000, guid: 6ae9dbc87d737124cb26b3fd4b555ef1, type: 2}
   canExecutableTurn: {fileID: 0}
-  onGivedDamage: {fileID: 11400000, guid: 1c4de099accb3d242922b6b849ec3248, type: 2}
+  onComboFromGivedDamage: {fileID: 11400000, guid: 1c4de099accb3d242922b6b849ec3248, type: 2}
+  onComboFromTakedDamage: {fileID: 0}
