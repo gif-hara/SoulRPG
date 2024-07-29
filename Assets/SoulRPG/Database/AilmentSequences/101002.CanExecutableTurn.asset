@@ -14,9 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 7538228103530414196
+  - rid: 7288459838305337737
   references:
     version: 2
     RefIds:
+    - rid: 7288459838305337737
+      type: {class: BooleanSet, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        booleanResolver:
+          rid: 7288459838305337738
+        booleanNameResolver:
+          rid: 7288459838305337739
+    - rid: 7288459838305337738
+      type: {class: BooleanResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 7288459838305337739
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: CanExecutableTurn
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
