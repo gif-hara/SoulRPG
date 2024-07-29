@@ -15,3 +15,4 @@ MonoBehaviour:
   onAdded: {fileID: 11400000, guid: f113442a56970c147877f245b97a8239, type: 2}
   onTurnEnd: {fileID: 0}
   onRemoved: {fileID: 11400000, guid: ab43bcd54d93e6644b14ac3bb89b802f, type: 2}
+  canExecutableTurn: {fileID: 11400000, guid: b8117daa63ccf7e42b6983ee4aac7329, type: 2}
