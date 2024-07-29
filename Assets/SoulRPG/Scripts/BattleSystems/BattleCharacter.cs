@@ -17,14 +17,15 @@ namespace SoulRPG
         private readonly IBattleAI battleAI;
 
         public ICommandInvoker AfterCommandInvoker { get; set; }
-        
-        public AilmentController AilmentController { get; } = new();
+
+        public AilmentController AilmentController { get; }
 
         public BattleCharacter(Character character, IBattleAI battleAI)
         {
             BattleStatus = new CharacterBattleStatus(character);
             Equipment = character.Equipment;
             this.battleAI = battleAI;
+            AilmentController = new AilmentController(this);
         }
 
         public BattleCharacter(CharacterBattleStatus battleStatus, IBattleAI battleAI)

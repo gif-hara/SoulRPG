@@ -17,5 +17,7 @@ namespace SoulRPG
         bool IsEnd();
 
         int GetMasterDataId();
+
+        void Reset(int turnCount);
     }
 }

@@ -9,7 +9,7 @@ namespace SoulRPG
     /// </summary>
     public sealed class AilmentElement : IAilmentElement
     {
-        private readonly int turnCount;
+        private int turnCount;
 
         private readonly MasterData.Ailment masterDataAilment;
         
@@ -48,6 +48,17 @@ namespace SoulRPG
         public int GetMasterDataId()
         {
             return masterDataAilmentId;
+        }
+
+        public void Reset(int turnCount)
+        {
+            // 無限付与の場合はリセットしない
+            if (this.turnCount == -1)
+            {
+                return;
+            }
+            currentTurnCount = 0;
+            this.turnCount = turnCount;
         }
 
         private static async UniTask<Container> PlaySequencesAsync(ScriptableSequences sequences, CancellationToken scope)
