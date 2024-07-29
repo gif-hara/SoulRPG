@@ -81,5 +81,10 @@ namespace SoulRPG
         {
             return TinyServiceLocator.Resolve<MasterData>().Skills.Get(self);
         }
+        
+        public static MasterData.Ailment GetMasterDataAilment(this int self)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().Ailments.Get(self);
+        }
     }
 }
