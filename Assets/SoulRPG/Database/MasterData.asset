@@ -408,7 +408,7 @@ MonoBehaviour:
       Speed: 0
       AttackAttribute: 0
       Skill1: 101001
-      Skill2: 101010
+      Skill2: 101011
       Skill3: 0
       Skill4: 0
     - ItemId: 101998
@@ -494,7 +494,7 @@ MonoBehaviour:
       Cost: 9
       BehaviourPriority: 0
       Description: "\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u708E\u8FFD\u6483\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 2e57ba717ee3c914e8b014853f3e0ab3, type: 2}
     - Name: "\u9B54\u6CD5\u653B\u6483"
       Id: 101012
       Cost: 0
@@ -763,3 +763,7 @@ MonoBehaviour:
       Name: "\u6C17\u5408"
       Description: "\u5185\u306A\u308B\u95D8\u5FD7\u3092\u5F15\u304D\u51FA\u3057\u3001\u653B\u6483\u529B\u3092\u5411\u4E0A\u3055\u305B\u308B\u6280\u3002"
       Sequences: {fileID: 11400000, guid: a95bcf6f7a8e3ad4b9400481f0c8007e, type: 2}
+    - Id: 101004
+      Name: "\u708E\u8FFD\u6483"
+      Description: "\u706B\u708E\u306E\u529B\u304C\u5BBF\u3057\u3001\u653B\u6483\u3092\u884C\u3046\u5EA6\u306B\u708E\u5C5E\u6027\u306E\u5C0F\u3055\u306A\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u308B\u3002"
+      Sequences: {fileID: 11400000, guid: 0f2d997bfb9c5a045b92a76b715c09f3, type: 2}
