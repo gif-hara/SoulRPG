@@ -26,5 +26,9 @@ namespace SoulRPG
         [SerializeField]
         private ScriptableSequences canExecutableTurn;
         public ScriptableSequences CanExecutableTurn => canExecutableTurn;
+
+        [SerializeField]
+        private ScriptableSequences onGivedDamage;
+        public ScriptableSequences OnGivedDamage => onGivedDamage;
     }
 }
