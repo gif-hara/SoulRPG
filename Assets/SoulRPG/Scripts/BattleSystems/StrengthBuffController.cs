@@ -31,6 +31,16 @@ namespace SoulRPG
             magicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
         }
 
+        public float GetStrengthRate(Define.AttackType attackType)
+        {
+            return attackType switch
+            {
+                Define.AttackType.Physical => GetPhysicalStrengthRate(),
+                Define.AttackType.Magical => GetMagicalStrengthRate(),
+                _ => 1.0f,
+            };
+        }
+
         public float GetPhysicalStrengthRate()
         {
             float rate = 1.0f;
