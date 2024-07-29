@@ -56,5 +56,9 @@ namespace SoulRPG
         [SerializeField]
         private int speed;
         public int Speed => speed;
+
+        [SerializeField]
+        private Define.CharacterAttribute attribute;
+        public Define.CharacterAttribute Attribute => attribute;
     }
 }

@@ -65,6 +65,9 @@ namespace SoulRPG
         public ReadOnlyReactiveProperty<int> SpeedReactiveProperty => speedReactiveProperty;
         public int Speed => speedReactiveProperty.Value;
 
+        private readonly Define.CharacterAttribute attribute;
+        public Define.CharacterAttribute Attribute => attribute;
+
         public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
         private readonly CancellationTokenSource scope = new();
@@ -88,6 +91,7 @@ namespace SoulRPG
             fireCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalFireCutRate);
             thunderCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalThunderCutRate);
             speedReactiveProperty = new ReactiveProperty<int>(growthParameter.Speed);
+            attribute = character.Attribute;
 
             hitPointReactiveProperty
                 .Subscribe(x =>
@@ -119,6 +123,7 @@ namespace SoulRPG
             fireCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.FireCutRate);
             thunderCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.ThunderCutRate);
             speedReactiveProperty = new ReactiveProperty<int>(blueprint.Speed);
+            attribute = blueprint.Attribute;
         }
 
         public CharacterBattleStatus(MasterData.Enemy enemy)
@@ -137,6 +142,7 @@ namespace SoulRPG
             fireCutRateReactiveProperty = new ReactiveProperty<float>(enemy.FireCutRate);
             thunderCutRateReactiveProperty = new ReactiveProperty<float>(enemy.ThunderCutRate);
             speedReactiveProperty = new ReactiveProperty<int>(enemy.Speed);
+            attribute = enemy.Attribute;
         }
 
         public void TakeDamage(int damage)
