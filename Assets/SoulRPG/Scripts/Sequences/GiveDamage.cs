@@ -24,6 +24,9 @@ namespace SoulRPG
         [SerializeField]
         private bool waitForInput = true;
 
+        [SerializeField]
+        private bool canCombo = true;
+
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var target = container.Resolve<BattleCharacter>(targetType == Define.TargetType.Self ? "Actor" : "Target");
@@ -41,7 +44,10 @@ namespace SoulRPG
             {
                 await TinyServiceLocator.Resolve<GameEvents>().WaitForSubmitInputAsync();
             }
-            await actor.OnGivedDamageAsync(target, cancellationToken);
+            if (canCombo)
+            {
+                await actor.OnGivedDamageAsync(target, cancellationToken);
+            }
         }
     }
 }
