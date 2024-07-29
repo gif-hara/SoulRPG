@@ -41,6 +41,7 @@ namespace SoulRPG
             {
                 await TinyServiceLocator.Resolve<GameEvents>().WaitForSubmitInputAsync();
             }
+            await actor.OnGivedDamageAsync(target, cancellationToken);
         }
     }
 }
