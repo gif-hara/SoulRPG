@@ -2,6 +2,7 @@ using System;
 using Cysharp.Threading.Tasks;
 using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
+using UnityEngine;
 
 namespace SoulRPG
 {
@@ -32,11 +33,17 @@ namespace SoulRPG
         {
             BattleStatus = battleStatus;
             this.battleAI = battleAI;
+            AilmentController = new AilmentController(this);
         }
 
         public UniTask<ICommandInvoker> ThinkAsync()
         {
             return battleAI.ThinkAsync(this);
+        }
+
+        public UniTask TurnEndAsync()
+        {
+            return AilmentController.OnTurnEndAsync();
         }
 
         public void Dispose()

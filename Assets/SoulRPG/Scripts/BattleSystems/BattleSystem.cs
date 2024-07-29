@@ -54,6 +54,8 @@ namespace SoulRPG.BattleSystems
                         break;
                     }
                 }
+                await player.TurnEndAsync();
+                await enemy.TurnEndAsync();
             }
 
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
