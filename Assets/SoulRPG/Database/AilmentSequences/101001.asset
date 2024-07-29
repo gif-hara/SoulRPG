@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onAdded: {fileID: 11400000, guid: 96e7eebc046f64f96b6b89b89e40757e, type: 2}
   onTurnEnd: {fileID: 11400000, guid: 895f989151f9142f6b3f4af9f4c57155, type: 2}
-  onRemoved: {fileID: 0}
+  onRemoved: {fileID: 11400000, guid: 594ddf3e3e41af14faf675a20effea7e, type: 2}
