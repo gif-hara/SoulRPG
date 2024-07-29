@@ -185,6 +185,7 @@ MonoBehaviour:
     armId: 0
     legId: 0
     accessoryIds: 00000000000000000000000000000000
+  debugPlayerAttribute: 1
   debugEnemyBattleStatus:
     name: "\u30A8\u30CD\u30DF\u30FC"
     hitPoint: 10
@@ -198,6 +199,7 @@ MonoBehaviour:
     fireCutRate: 0
     thunderCutRate: 0
     speed: 0
+    attribute: 0
 --- !u!1 &897640241
 GameObject:
   m_ObjectHideFlags: 0
