@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101001.OnTurnEnd
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 7538228103530414196
+  - rid: 7538228103530414682
+  references:
+    version: 2
+    RefIds:
+    - rid: 7538228103530414196
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u6BD2\u306B\u4FB5\u3055\u308C\u3066\u3044\u308B"
+        waitForInput: 1
+    - rid: 7538228103530414682
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 7538228103530414685
+        targetType: 0
+        waitForInput: 1
+    - rid: 7538228103530414685
+      type: {class: Percentage, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        rate: 0.125
