@@ -28,6 +28,7 @@ MonoBehaviour:
       data:
         damageCalculator:
           rid: 7288459805653991498
+        targetType: 1
         waitForInput: 1
     - rid: 7288459805653991498
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}

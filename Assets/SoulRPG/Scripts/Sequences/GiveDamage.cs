@@ -17,13 +17,16 @@ namespace SoulRPG
     {
         [SerializeReference, SubclassSelector]
         private IDamageCalculator damageCalculator;
+        
+        [SerializeField]
+        private Define.TargetType targetType;
 
         [SerializeField]
         private bool waitForInput = true;
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
-            var target = container.Resolve<BattleCharacter>("Target");
+            var target = container.Resolve<BattleCharacter>(targetType == Define.TargetType.Self ? "Actor" : "Target");
             if (target.BattleStatus.IsDead)
             {
                 return;
