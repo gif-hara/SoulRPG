@@ -17,7 +17,7 @@ namespace SoulRPG
     {
         [SerializeReference, SubclassSelector]
         private IDamageCalculator damageCalculator;
-        
+
         [SerializeField]
         private Define.TargetType targetType;
 
@@ -31,8 +31,8 @@ namespace SoulRPG
             {
                 return;
             }
-            var actor = container.Resolve<BattleCharacter>("Actor");
-            var weapon = container.Resolve<MasterData.Weapon>();
+            container.TryResolve<BattleCharacter>("Actor", out var actor);
+            container.TryResolve<MasterData.Weapon>(out var weapon);
             var damage = damageCalculator.Calculate(actor, target, weapon);
             target.BattleStatus.TakeDamage(damage);
             var message = $"{target.BattleStatus.Name}に{damage}のダメージ！";
