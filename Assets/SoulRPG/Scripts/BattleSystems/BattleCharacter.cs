@@ -17,6 +17,8 @@ namespace SoulRPG
         private readonly IBattleAI battleAI;
 
         public ICommandInvoker AfterCommandInvoker { get; set; }
+        
+        public AilmentController AilmentController { get; } = new();
 
         public BattleCharacter(Character character, IBattleAI battleAI)
         {

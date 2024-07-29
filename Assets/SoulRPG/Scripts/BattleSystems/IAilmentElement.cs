@@ -1,3 +1,5 @@
+using Cysharp.Threading.Tasks;
+
 namespace SoulRPG
 {
     /// <summary>
@@ -5,7 +7,7 @@ namespace SoulRPG
     /// </summary>
     public interface IAilmentElement
     {
-        void OnTurnEnd(BattleCharacter battleCharacter);
+        UniTask OnTurnEndAsync(BattleCharacter battleCharacter);
         
         bool IsEnd();
     }
