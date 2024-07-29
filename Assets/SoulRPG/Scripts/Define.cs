@@ -1,3 +1,5 @@
+using System;
+
 namespace SoulRPG
 {
     /// <summary>
@@ -50,6 +52,19 @@ namespace SoulRPG
         {
             Self,
             Opponent,
+        }
+
+        [Flags]
+        public enum CharacterAttribute
+        {
+            /// <summary>なし</summary>
+            None = 0,
+
+            /// <summary>人型</summary>
+            Humanoid = 1 << 0,
+
+            /// <summary>不定形</summary>
+            Formless = 1 << 1,
         }
 
         public const int HandWeaponId = 101998;
