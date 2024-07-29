@@ -22,9 +22,15 @@ namespace SoulRPG
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
-            var message = format
-                .Replace("{Actor}", container.Resolve<BattleCharacter>("Actor").BattleStatus.Name)
-                .Replace("{Target}", container.Resolve<BattleCharacter>("Target").BattleStatus.Name);
+            var message = format;
+            if(container.TryResolve<BattleCharacter>("Actor", out var actor))
+            {
+                message = message.Replace("{Actor}", actor.BattleStatus.Name);
+            }
+            if(container.TryResolve<BattleCharacter>("Target", out var target))
+            {
+                message = message.Replace("{Target}", target.BattleStatus.Name);
+            }
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnRequestShowMessage.OnNext(message);
             if (waitForInput)
