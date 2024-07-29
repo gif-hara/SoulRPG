@@ -12,7 +12,7 @@ namespace SoulRPG
         private int turnCount;
 
         private readonly MasterData.Ailment masterDataAilment;
-        
+
         private readonly int masterDataAilmentId;
 
         private int currentTurnCount;
@@ -38,6 +38,18 @@ namespace SoulRPG
         {
             currentTurnCount++;
             return PlaySequencesAsync(masterDataAilment.Sequences.OnTurnEnd, battleCharacter, scope);
+        }
+
+        public async UniTask<bool> CanExecutableTurnAsync(BattleCharacter battleCharacter, CancellationToken scope)
+        {
+            var container = await PlaySequencesAsync(masterDataAilment.Sequences.CanExecutableTurn, battleCharacter, scope);
+            if (container == null)
+            {
+                return true;
+            }
+
+            var contains = container.TryResolve<bool>("CanExecutableTurn", out var canExecutableTurn);
+            return contains && canExecutableTurn;
         }
 
         public bool IsEnd()
