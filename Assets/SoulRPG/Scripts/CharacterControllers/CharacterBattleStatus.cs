@@ -124,7 +124,9 @@ namespace SoulRPG
         public CharacterBattleStatus(MasterData.Enemy enemy)
         {
             Name = enemy.Name;
+            hitPointMaxReactiveProperty = new ReactiveProperty<int>(enemy.HitPoint);
             hitPointReactiveProperty = new ReactiveProperty<int>(enemy.HitPoint);
+            staminaMaxReactiveProperty = new ReactiveProperty<int>(enemy.Stamina);
             staminaReactiveProperty = new ReactiveProperty<int>(enemy.Stamina);
             physicalAttackReactiveProperty = new ReactiveProperty<int>(enemy.PhysicalAttack);
             magicalAttackReactiveProperty = new ReactiveProperty<int>(enemy.MagicalAttack);
