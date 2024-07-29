@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
@@ -51,6 +52,11 @@ namespace SoulRPG
         public UniTask TurnEndAsync()
         {
             return AilmentController.OnTurnEndAsync();
+        }
+
+        public UniTask OnGivedDamageAsync(BattleCharacter target, CancellationToken scope)
+        {
+            return AilmentController.OnGivedDamageAsync(this, target, scope);
         }
 
         public void Dispose()
