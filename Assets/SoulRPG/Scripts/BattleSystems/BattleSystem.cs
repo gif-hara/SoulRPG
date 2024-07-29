@@ -123,6 +123,10 @@ namespace SoulRPG.BattleSystems
                     {
                         return false;
                     }
+                    if (!await actor.AilmentController.CanExecutableTurnAsync())
+                    {
+                        return false;
+                    }
                     await commandInvoker.InvokeAsync(actor, target, scope);
                     return actor.BattleStatus.IsDead || target.BattleStatus.IsDead;
                 }
