@@ -54,6 +54,7 @@ namespace SoulRPG
         public void Dispose()
         {
             BattleStatus.Dispose();
+            AilmentController.Dispose();
         }
     }
 }
