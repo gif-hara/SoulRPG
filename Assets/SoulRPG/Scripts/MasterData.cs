@@ -66,7 +66,7 @@ namespace SoulRPG
         [SerializeField]
         private Enemy.DictionaryList enemies;
         public Enemy.DictionaryList Enemies => enemies;
-        
+
         [SerializeField]
         private Ailment.DictionaryList ailments;
         public Ailment.DictionaryList Ailments => ailments;
@@ -96,6 +96,7 @@ namespace SoulRPG
                 "MasterData.Enemy",
                 "MasterData.DungeonEvent.Enemy",
                 "MasterData.Ailment",
+                "MasterData.Enemy.CharacterAttribute",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -126,6 +127,22 @@ namespace SoulRPG
             enemies.Set(JsonHelper.FromJson<Enemy>(database.Item2[10]));
             dungeonEventEnemies.Set(JsonHelper.FromJson<DungeonEventEnemy>(database.Item2[11]));
             ailments.Set(JsonHelper.FromJson<Ailment>(database.Item2[12]));
+            var enemyCharacterAttributes = new EnemyCharacterAttribute.Group();
+            enemyCharacterAttributes.Set(JsonHelper.FromJson<EnemyCharacterAttribute>(database.Item2[13]));
+            foreach (var i in enemies.List)
+            {
+                if (enemyCharacterAttributes.TryGetValue(i.Id, out var attributes))
+                {
+                    foreach (var a in attributes)
+                    {
+                        i.Attribute |= a.Attribute;
+                    }
+                }
+                else
+                {
+                    i.Attribute = Define.CharacterAttribute.None;
+                }
+            }
             foreach (var i in ailments.List)
             {
                 i.Sequences = AssetDatabase.LoadAssetAtPath<AilmentSequences>($"Assets/SoulRPG/Database/AilmentSequences/{i.Id}.asset");
@@ -450,10 +467,26 @@ namespace SoulRPG
 
             public int Experience;
 
+            public Define.CharacterAttribute Attribute;
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Enemy>
             {
                 public DictionaryList() : base(x => x.Id) { }
+            }
+        }
+
+        [Serializable]
+        public class EnemyCharacterAttribute
+        {
+            public int EnemyId;
+
+            public Define.CharacterAttribute Attribute;
+
+            [Serializable]
+            public class Group : Group<int, EnemyCharacterAttribute>
+            {
+                public Group() : base(x => x.EnemyId) { }
             }
         }
 
@@ -465,9 +498,9 @@ namespace SoulRPG
             public string Name;
 
             public string Description;
-            
+
             public AilmentSequences Sequences;
-            
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Ailment>
             {
