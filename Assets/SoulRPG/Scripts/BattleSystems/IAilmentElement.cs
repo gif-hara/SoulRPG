@@ -9,11 +9,13 @@ namespace SoulRPG
     public interface IAilmentElement
     {
         UniTask OnAddedAsync(BattleCharacter battleCharacter, CancellationToken scope);
-        
+
         UniTask OnRemovedAsync(BattleCharacter battleCharacter, CancellationToken scope);
-        
+
         UniTask OnTurnEndAsync(BattleCharacter battleCharacter, CancellationToken scope);
-        
+
+        UniTask<bool> CanExecutableTurnAsync(BattleCharacter battleCharacter, CancellationToken scope);
+
         bool IsEnd();
 
         int GetMasterDataId();
