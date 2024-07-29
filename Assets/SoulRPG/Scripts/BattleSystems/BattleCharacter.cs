@@ -54,7 +54,7 @@ namespace SoulRPG
             return AilmentController.OnTurnEndAsync();
         }
 
-        public async UniTask BeginComboDamageAsync(BattleCharacter target, CancellationToken scope)
+        public async UniTask BeginComboAsync(BattleCharacter target, CancellationToken scope)
         {
             await AilmentController.OnComboFromGivedDamageAsync(this, target, scope);
             await target.AilmentController.OnComboFromTakedDamageAsync(target, this, scope);

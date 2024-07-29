@@ -46,7 +46,7 @@ namespace SoulRPG
             }
             if (canCombo && !target.BattleStatus.IsDead)
             {
-                await actor.BeginComboDamageAsync(target, cancellationToken);
+                await actor.BeginComboAsync(target, cancellationToken);
             }
         }
     }
