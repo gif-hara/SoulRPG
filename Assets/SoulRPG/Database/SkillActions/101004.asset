@@ -43,3 +43,9 @@ MonoBehaviour:
         targetType: 1
         masterDataAilmentId: 101002
         turnCount: 1
+        battleCharacterEvaluator:
+          rid: 7288459838305337757
+    - rid: 7288459838305337757
+      type: {class: IncludeCharacterAttribute, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+      data:
+        whiteList: 1
