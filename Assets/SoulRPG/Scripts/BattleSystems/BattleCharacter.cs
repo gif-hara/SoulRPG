@@ -36,9 +36,14 @@ namespace SoulRPG
             AilmentController = new AilmentController(this);
         }
 
-        public UniTask<ICommandInvoker> ThinkAsync()
+        public async UniTask<ICommandInvoker> ThinkAsync()
         {
-            return battleAI.ThinkAsync(this);
+            if (!await AilmentController.CanExecutableTurnAsync())
+            {
+                return null;
+            }
+
+            return await battleAI.ThinkAsync(this);
         }
 
         public UniTask TurnEndAsync()
