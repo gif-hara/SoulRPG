@@ -33,7 +33,7 @@ namespace SoulRPG
             {
                 return;
             }
-            if (battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(target))
+            if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(target))
             {
                 await target.AilmentController.AddAsync(masterDataAilmentId, turnCount);
             }
