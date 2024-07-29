@@ -53,10 +53,20 @@ namespace SoulRPG
             return contains && canExecutableTurn;
         }
 
-        public UniTask OnGivedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        public UniTask OnComboFromGivedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
             return PlaySequencesAsync(
-                masterDataAilment.Sequences.OnGivedDamage,
+                masterDataAilment.Sequences.OnComboFromGivedDamage,
+                actor,
+                c => c.Register("Target", target),
+                scope
+                );
+        }
+
+        public UniTask OnComboFromTakedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        {
+            return PlaySequencesAsync(
+                masterDataAilment.Sequences.OnComboFromTakedDamage,
                 actor,
                 c => c.Register("Target", target),
                 scope

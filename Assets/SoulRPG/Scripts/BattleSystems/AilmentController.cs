@@ -61,12 +61,21 @@ namespace SoulRPG
             return true;
         }
 
-        public async UniTask OnGivedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        public async UniTask OnComboFromGivedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
             scope = CancellationTokenSource.CreateLinkedTokenSource(cancellationTokenSource.Token, scope).Token;
             foreach (var element in elements)
             {
-                await element.OnGivedDamageAsync(actor, target, scope);
+                await element.OnComboFromGivedDamageAsync(actor, target, scope);
+            }
+        }
+
+        public async UniTask OnComboFromTakedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        {
+            scope = CancellationTokenSource.CreateLinkedTokenSource(cancellationTokenSource.Token, scope).Token;
+            foreach (var element in elements)
+            {
+                await element.OnComboFromTakedDamageAsync(actor, target, scope);
             }
         }
 

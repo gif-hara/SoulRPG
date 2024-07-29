@@ -44,9 +44,9 @@ namespace SoulRPG
             {
                 await TinyServiceLocator.Resolve<GameEvents>().WaitForSubmitInputAsync();
             }
-            if (canCombo)
+            if (canCombo && !target.BattleStatus.IsDead)
             {
-                await actor.OnGivedDamageAsync(target, cancellationToken);
+                await actor.BeginComboDamageAsync(target, cancellationToken);
             }
         }
     }

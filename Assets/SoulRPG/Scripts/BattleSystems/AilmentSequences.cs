@@ -28,7 +28,11 @@ namespace SoulRPG
         public ScriptableSequences CanExecutableTurn => canExecutableTurn;
 
         [SerializeField]
-        private ScriptableSequences onGivedDamage;
-        public ScriptableSequences OnGivedDamage => onGivedDamage;
+        private ScriptableSequences onComboFromGivedDamage;
+        public ScriptableSequences OnComboFromGivedDamage => onComboFromGivedDamage;
+
+        [SerializeField]
+        private ScriptableSequences onComboFromTakedDamage;
+        public ScriptableSequences OnComboFromTakedDamage => onComboFromTakedDamage;
     }
 }
