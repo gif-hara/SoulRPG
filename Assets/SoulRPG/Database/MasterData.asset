@@ -450,7 +450,7 @@ MonoBehaviour:
     - Name: "\u8DB3\u7815\u304D"
       Id: 101004
       Cost: 7
-      BehaviourPriority: 1
+      BehaviourPriority: 0
       Description: "\u8DB3\u3092\u72D9\u3063\u3066\u6B66\u5668\u3092\u632F\u308B\u3002\u4EBA\u578B\u304C\u76F8\u624B\u306E\u5834\u5408\u306F\u300C\u602F\u307F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 7a5b52c92a3c20d43b7f9df9cfb1207b, type: 2}
     - Name: "\u4E8C\u9023\u6483"
@@ -748,6 +748,7 @@ MonoBehaviour:
       ThunderCutRate: 0.06
       Speed: 24
       Experience: 100
+      Attribute: 1
   ailments:
     list:
     - Id: 101001
