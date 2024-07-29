@@ -408,7 +408,7 @@ MonoBehaviour:
       Speed: 0
       AttackAttribute: 0
       Skill1: 101001
-      Skill2: 101004
+      Skill2: 101010
       Skill3: 0
       Skill4: 0
     - ItemId: 101998
@@ -458,19 +458,19 @@ MonoBehaviour:
       Cost: 7
       BehaviourPriority: 0
       Description: "\u6B66\u5668\u3092\u5DE6\u53F3\u306B\u632F\u308A\u30012\u56DE\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 11400000, guid: 2701b88fcee2ccf4fb79648660cf1339, type: 2}
+      ActionSequences: {fileID: 11400000, guid: 336a7141c06340841a5bcb9010c2f2c4, type: 2}
     - Name: "\u523A\u3057\u7A81\u304D"
       Id: 101006
       Cost: 6
       BehaviourPriority: 0
       Description: "\u523A\u7A81\u6B66\u5668\u7279\u6709\u306E\u6280\u3002\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 11400000, guid: 2cceedc0f3912ac4a863fd9f6a8af20f, type: 2}
+      ActionSequences: {fileID: 11400000, guid: 7236c15d41f37e24caa6053e16d9e846, type: 2}
     - Name: "\u30D6\u30F3\u56DE\u3057"
       Id: 101007
       Cost: 4
       BehaviourPriority: 0
       Description: "\u6253\u6483\u6B66\u5668\u306B\u591A\u304F\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u6280\u3002\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 11400000, guid: 2ffb030c915c4004fa789b774da70e3b, type: 2}
+      ActionSequences: {fileID: 11400000, guid: 5c43b07efc110204da4458495658131e, type: 2}
     - Name: "\u6BD2\u306E\u5203"
       Id: 101008
       Cost: 6
@@ -482,13 +482,13 @@ MonoBehaviour:
       Cost: 11
       BehaviourPriority: 1
       Description: "\u9AD8\u901F\u3067\u653B\u6483\u3092\u884C\u3046\u304C\u3001\u5A01\u529B\u306F\u5C11\u3057\u843D\u3061\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 1b63f9ec84ab907419bc92146e35a17b, type: 2}
     - Name: "\u6C17\u5408"
       Id: 101010
       Cost: 7
       BehaviourPriority: 0
       Description: "\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6C17\u5408\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 60c54c7daf92c304d9716d82bd44a75c, type: 2}
     - Name: "\u708E\u821E"
       Id: 101011
       Cost: 9
@@ -759,3 +759,7 @@ MonoBehaviour:
       Name: "\u602F\u307F"
       Description: "\u653B\u6483\u3092\u53D7\u3051\u305F\u6050\u6016\u306B\u3088\u308A\u3001\u884C\u52D5\u51FA\u6765\u306A\u3044\u3002"
       Sequences: {fileID: 11400000, guid: 41df3523778136349974ec170b7f32ed, type: 2}
+    - Id: 101003
+      Name: "\u6C17\u5408"
+      Description: "\u5185\u306A\u308B\u95D8\u5FD7\u3092\u5F15\u304D\u51FA\u3057\u3001\u653B\u6483\u529B\u3092\u5411\u4E0A\u3055\u305B\u308B\u6280\u3002"
+      Sequences: {fileID: 11400000, guid: a95bcf6f7a8e3ad4b9400481f0c8007e, type: 2}
