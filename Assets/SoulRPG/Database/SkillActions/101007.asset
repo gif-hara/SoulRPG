@@ -12,7 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
   m_Name: 101007
   m_EditorClassIdentifier: 
-  sequences: []
+  sequences:
+  - rid: 7288459789387432183
+  - rid: 7288459789387432197
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 7288459789387432183
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u5DE8\u5927\u306A\u6B66\u5668\u3092\u30D6\u30F3\u56DE\u3059"
+        waitForInput: 1
+    - rid: 7288459789387432197
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 7288459789387432198
+        targetType: 1
+        waitForInput: 1
+    - rid: 7288459789387432198
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 1.4
+        attackType: 0
+        attackAttribute: 2
