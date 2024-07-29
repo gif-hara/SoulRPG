@@ -66,6 +66,10 @@ namespace SoulRPG
         [SerializeField]
         private Enemy.DictionaryList enemies;
         public Enemy.DictionaryList Enemies => enemies;
+        
+        [SerializeField]
+        private Ailment.DictionaryList ailments;
+        public Ailment.DictionaryList Ailments => ailments;
 
 
 #if UNITY_EDITOR
@@ -91,6 +95,7 @@ namespace SoulRPG
                 "MasterData.Accessory",
                 "MasterData.Enemy",
                 "MasterData.DungeonEvent.Enemy",
+                "MasterData.Ailment",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -120,6 +125,15 @@ namespace SoulRPG
             accessories.Set(JsonHelper.FromJson<Accessory>(database.Item2[9]));
             enemies.Set(JsonHelper.FromJson<Enemy>(database.Item2[10]));
             dungeonEventEnemies.Set(JsonHelper.FromJson<DungeonEventEnemy>(database.Item2[11]));
+            ailments.Set(JsonHelper.FromJson<Ailment>(database.Item2[12]));
+            foreach (var i in ailments.List)
+            {
+                i.Sequences = AssetDatabase.LoadAssetAtPath<AilmentSequences>($"Assets/SoulRPG/Database/AilmentSequences/{i.Id}.asset");
+                if (i.Sequences == null)
+                {
+                    Debug.LogWarning($"Not found AilmentSequences {i.Id}");
+                }
+            }
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -438,6 +452,24 @@ namespace SoulRPG
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Enemy>
+            {
+                public DictionaryList() : base(x => x.Id) { }
+            }
+        }
+
+        [Serializable]
+        public class Ailment
+        {
+            public int Id;
+
+            public string Name;
+
+            public string Description;
+            
+            public AilmentSequences Sequences;
+            
+            [Serializable]
+            public class DictionaryList : DictionaryList<int, Ailment>
             {
                 public DictionaryList() : base(x => x.Id) { }
             }

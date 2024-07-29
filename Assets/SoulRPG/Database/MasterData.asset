@@ -748,3 +748,13 @@ MonoBehaviour:
       ThunderCutRate: 0.06
       Speed: 24
       Experience: 100
+  ailments:
+    list:
+    - Id: 101001
+      Name: "\u6BD2"
+      Description: "\u731B\u6BD2\u304C\u8EAB\u4F53\u306E\u751F\u547D\u529B\u3092\u596A\u3063\u3066\u3044\u304F\u3002\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306B\u4E00\u5B9A\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u308B\u3002"
+      Sequences: {fileID: 11400000, guid: 49031c77c58914ac390578e17cd377eb, type: 2}
+    - Id: 101002
+      Name: "\u602F\u307F"
+      Description: "\u653B\u6483\u3092\u53D7\u3051\u305F\u6050\u6016\u306B\u3088\u308A\u3001\u884C\u52D5\u51FA\u6765\u306A\u3044\u3002"
+      Sequences: {fileID: 0}
