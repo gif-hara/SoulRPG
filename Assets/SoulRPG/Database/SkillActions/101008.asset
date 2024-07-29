@@ -15,6 +15,7 @@ MonoBehaviour:
   sequences:
   - rid: 7288459789387432183
   - rid: 7288459789387432197
+  - rid: 7538228103530414197
   references:
     version: 2
     RefIds:
@@ -35,3 +36,9 @@ MonoBehaviour:
         weaponRate: 1
         attackType: 0
         attackAttribute: 0
+    - rid: 7538228103530414197
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 1
+        masterDataAilmentId: 101001
+        turnCount: 5

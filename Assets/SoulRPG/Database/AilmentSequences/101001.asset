@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573b911ae3074f5c9b328767ca60d31, type: 3}
   m_Name: 101001
   m_EditorClassIdentifier: 
-  onAdded: {fileID: 0}
+  onAdded: {fileID: 11400000, guid: 96e7eebc046f64f96b6b89b89e40757e, type: 2}
   onTurnEnd: {fileID: 0}
   onRemoved: {fileID: 0}
