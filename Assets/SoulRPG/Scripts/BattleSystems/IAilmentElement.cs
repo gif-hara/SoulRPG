@@ -1,3 +1,4 @@
+using System.Threading;
 using Cysharp.Threading.Tasks;
 
 namespace SoulRPG
@@ -7,8 +8,14 @@ namespace SoulRPG
     /// </summary>
     public interface IAilmentElement
     {
-        UniTask OnTurnEndAsync(BattleCharacter battleCharacter);
+        UniTask OnAddedAsync(BattleCharacter battleCharacter, CancellationToken scope);
+        
+        UniTask OnRemovedAsync(BattleCharacter battleCharacter, CancellationToken scope);
+        
+        UniTask OnTurnEndAsync(BattleCharacter battleCharacter, CancellationToken scope);
         
         bool IsEnd();
+
+        int GetMasterDataId();
     }
 }
