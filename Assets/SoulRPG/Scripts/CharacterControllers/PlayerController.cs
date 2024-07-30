@@ -41,6 +41,7 @@ namespace SoulRPG
                         {
                             velocity = player.Direction.TransformVelocityByDirection(velocity);
                             player.Move(velocity);
+                            dungeonController.EnterAsync(player).Forget();
                         }
                         else if (velocity.x == 1 || velocity.x == -1)
                         {
