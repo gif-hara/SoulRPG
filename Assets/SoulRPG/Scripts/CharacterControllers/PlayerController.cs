@@ -23,15 +23,6 @@ namespace SoulRPG
                     var velocity = x.ReadValue<Vector2>().ToVector2Int();
                     if (inGameActions.Shift.IsPressed())
                     {
-                        if (!velocity.CanConvertToDirection())
-                        {
-                            return;
-                        }
-                        var direction = velocity.ToDirection();
-                        player.Direction = player.Direction.Rotate(direction);
-                    }
-                    else
-                    {
                         if (velocity == Vector2Int.zero)
                         {
                             return;
@@ -39,6 +30,23 @@ namespace SoulRPG
                         velocity = player.Direction.TransformVelocityByDirection(velocity);
                         player.Move(velocity);
                         dungeonController.EnterAsync(player).Forget();
+                    }
+                    else
+                    {
+                        if (!velocity.CanConvertToDirection())
+                        {
+                            return;
+                        }
+                        if (velocity.y == 1 || velocity.y == -1)
+                        {
+                            velocity = player.Direction.TransformVelocityByDirection(velocity);
+                            player.Move(velocity);
+                        }
+                        else if (velocity.x == 1 || velocity.x == -1)
+                        {
+                            var direction = velocity.ToDirection();
+                            player.Direction = player.Direction.Rotate(direction);
+                        }
                     }
                 })
                 .RegisterTo(scope);
