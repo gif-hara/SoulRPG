@@ -569,12 +569,21 @@ MonoBehaviour:
       EnemyId: 10101
   wallEvents:
     list:
-    - Id: Test.(10,10).(11,10).Door
+    - Id: Test.(10,09).(11,09).Door
       DungeonName: Dungeon.Test
       LeftX: 10
-      LeftY: 10
+      LeftY: 9
       RightX: 11
-      RightY: 10
+      RightY: 9
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: OppositeSideOpen
+    - Id: Test.(01,10).(01,09).Door
+      DungeonName: Dungeon.Test
+      LeftX: 1
+      LeftY: 10
+      RightX: 1
+      RightY: 9
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: OppositeSideOpen
