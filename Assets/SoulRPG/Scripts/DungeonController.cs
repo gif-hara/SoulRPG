@@ -1,11 +1,9 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
-using R3;
 using SoulRPG.BattleSystems;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace SoulRPG
 {
@@ -74,6 +72,16 @@ namespace SoulRPG
                 Debug.Log("Not Found DungeonEvent");
                 return UniTask.CompletedTask;
             }
+        }
+
+        public bool IsExistWall(Vector2Int position, Define.Direction direction)
+        {
+            return CurrentDungeon.IsExistWall(position, direction);
+        }
+
+        public bool CanMove(Vector2Int position, Define.Direction direction)
+        {
+            return !IsExistWall(position, direction);
         }
 
         private UniTask InvokeOnItemAsync(Character character, MasterData.FloorEvent dungeonEvent)
