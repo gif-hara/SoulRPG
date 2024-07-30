@@ -587,6 +587,15 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: OppositeSideOpen
+    - Id: Test.(06,05).(06,04).Door
+      DungeonName: Dungeon.Test
+      LeftX: 6
+      LeftY: 5
+      RightX: 6
+      RightY: 4
+      EventType: Door
+      PositiveSideCondition: Lock
+      NegativeSideCondition: OppositeSideOpen
   items:
     list:
     - Name: "\u30B7\u30E7\u30FC\u30C8\u30BD\u30FC\u30C9"
