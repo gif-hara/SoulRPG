@@ -136,7 +136,7 @@ namespace SoulRPG
             {
                 foreach (var i in floorEvents)
                 {
-                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Event.{i.EventType}"), dungeonDocument.transform);
+                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{i.EventType}"), dungeonDocument.transform);
                     eventObject.position = new Vector3(i.X, 0, i.Y);
                     dungeonEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
                 }
