@@ -48,5 +48,10 @@ namespace SoulRPG
         {
             completedWallEventIds.Add(eventId);
         }
+
+        public bool ContainsCompletedWallEventId(string eventId)
+        {
+            return completedWallEventIds.Contains(eventId);
+        }
     }
 }
