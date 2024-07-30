@@ -32,6 +32,10 @@ namespace SoulRPG
         public DungeonEventEnemy.DictionaryList DungeonEventEnemies => dungeonEventEnemies;
 
         [SerializeField]
+        private WallEvent.DictionaryList wallEvents;
+        public WallEvent.DictionaryList WallEvents => wallEvents;
+
+        [SerializeField]
         private Item.DictionaryList items;
         public Item.DictionaryList Items => items;
 
@@ -97,6 +101,7 @@ namespace SoulRPG
                 "MasterData.DungeonEvent.Enemy",
                 "MasterData.Ailment",
                 "MasterData.Enemy.CharacterAttribute",
+                "MasterData.WallEvent",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -151,6 +156,7 @@ namespace SoulRPG
                     Debug.LogWarning($"Not found AilmentSequences {i.Id}");
                 }
             }
+            wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[14]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -503,6 +509,34 @@ namespace SoulRPG
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Ailment>
+            {
+                public DictionaryList() : base(x => x.Id) { }
+            }
+        }
+
+        [Serializable]
+        public class WallEvent
+        {
+            public string Id;
+
+            public string DungeonName;
+
+            public int LeftX;
+
+            public int LeftY;
+
+            public int RightX;
+
+            public int RightY;
+
+            public string EventType;
+
+            public string PositiveSideCondition;
+
+            public string NegativeSideCondition;
+
+            [Serializable]
+            public class DictionaryList : DictionaryList<string, WallEvent>
             {
                 public DictionaryList() : base(x => x.Id) { }
             }
