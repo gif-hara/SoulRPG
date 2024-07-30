@@ -91,11 +91,12 @@ namespace SoulRPG
             }
 
             var masterData = TinyServiceLocator.Resolve<MasterData>();
+            var userData = TinyServiceLocator.Resolve<UserData>();
             if (masterData.WallEvents.TryGetValue(position, direction, out var wallEvent))
             {
                 return wallEvent.EventType switch
                 {
-                    "Door" => false,
+                    "Door" => userData.ContainsCompletedWallEventId(wallEvent.Id),
                     _ => false,
                 };
             }
@@ -160,7 +161,22 @@ namespace SoulRPG
 
         private UniTask InvokeOnDoorAsync(Character character, MasterData.WallEvent wallEvent)
         {
-            Debug.Log("InvokeOnDoorAsync");
+            var userData = TinyServiceLocator.Resolve<UserData>();
+            var isPositiveAccess = wallEvent.IsPositiveAccess(character.Direction);
+            var condition = isPositiveAccess ? wallEvent.PositiveSideCondition : wallEvent.NegativeSideCondition;
+            switch (condition)
+            {
+                case "None":
+                    userData.AddCompletedWallEventIds(wallEvent.Id);
+                    break;
+                case "Lock":
+                    if (!userData.ContainsCompletedWallEventId(wallEvent.Id))
+                    {
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("ロックされているようだ");
+                    }
+                    break;
+            }
+
             return UniTask.CompletedTask;
         }
     }
