@@ -542,10 +542,10 @@ MonoBehaviour:
       Y: 2
       EventType: SavePoint
       IsOneTime: 0
-    - Id: Test.00.04.Enemy
+    - Id: Test.00.06.Enemy
       DungeonName: Dungeon.Test
       X: 0
-      Y: 4
+      Y: 6
       EventType: Enemy
       IsOneTime: 0
   floorEventItems:
