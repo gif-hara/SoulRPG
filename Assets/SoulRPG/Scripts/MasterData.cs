@@ -536,9 +536,13 @@ namespace SoulRPG
             public string NegativeSideCondition;
 
             [Serializable]
-            public class DictionaryList : DictionaryList<string, WallEvent>
+            public class DictionaryList : DictionaryList<string, (string, int, int, int, int), WallEvent>
             {
-                public DictionaryList() : base(x => x.Id) { }
+                public DictionaryList() : base(
+                    x => x.Id,
+                    x => (x.DungeonName, x.LeftX, x.LeftY, x.RightX, x.RightY)
+                    )
+                { }
             }
         }
     }
