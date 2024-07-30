@@ -409,7 +409,7 @@ MonoBehaviour:
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101012
-      Skill3: 101015
+      Skill3: 101016
       Skill4: 0
     - ItemId: 101998
       Strength: 50
@@ -523,8 +523,8 @@ MonoBehaviour:
       Id: 101016
       Cost: 10
       BehaviourPriority: 0
-      Description: "\u6B66\u5668\u306B\u9B54\u529B\u3092\u5E2F\u3073\u3055\u305B\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u8FFD\u6483\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      Description: "\u6B66\u5668\u306B\u9B54\u529B\u3092\u5E2F\u3073\u3055\u305B\u3001\u7269\u7406\u7684\u306A\u9B54\u5C5E\u6027\u3067\u653B\u6483\u3092\u884C\u3046\u3002"
+      ActionSequences: {fileID: 11400000, guid: 332b1d0a35cd14a658f7cef50b5ffebc, type: 2}
     - Name: "\u8E0F\u307F\u8FBC\u307F\u65AC\u308A"
       Id: 101017
       Cost: 16
