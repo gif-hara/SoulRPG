@@ -18,6 +18,8 @@ namespace SoulRPG
         /// </remarks>
         private readonly HashSet<string> temporaryCompletedFloorEventIds = new();
 
+        private readonly HashSet<string> completedWallEventIds = new();
+
         public void AddCompletedfloorEventIds(string eventId, bool isOneTime)
         {
             if (isOneTime)
@@ -40,6 +42,11 @@ namespace SoulRPG
             var tempData = new HashSet<string>(temporaryCompletedFloorEventIds);
             temporaryCompletedFloorEventIds.Clear();
             TinyServiceLocator.Resolve<GameEvents>().OnClearTemporaryCompletedEventIds.OnNext(tempData);
+        }
+
+        public void AddCompletedWallEventIds(string eventId)
+        {
+            completedWallEventIds.Add(eventId);
         }
     }
 }
