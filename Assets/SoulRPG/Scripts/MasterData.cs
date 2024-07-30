@@ -20,16 +20,16 @@ namespace SoulRPG
         public Dungeon.DictionaryList Dungeons => dungeons;
 
         [SerializeField]
-        private DungeonEvent.DictionaryList dungeonEvents;
-        public DungeonEvent.DictionaryList DungeonEvents => dungeonEvents;
+        private FloorEvent.DictionaryList floorEvents;
+        public FloorEvent.DictionaryList FloorEvents => floorEvents;
 
         [SerializeField]
-        private DungeonEventItem.Group dungeonEventItems;
-        public DungeonEventItem.Group DungeonEventItems => dungeonEventItems;
+        private FloorEventItem.Group floorEventItems;
+        public FloorEventItem.Group FloorEventItems => floorEventItems;
 
         [SerializeField]
-        private DungeonEventEnemy.DictionaryList dungeonEventEnemies;
-        public DungeonEventEnemy.DictionaryList DungeonEventEnemies => dungeonEventEnemies;
+        private FloorEventEnemy.DictionaryList floorEventEnemies;
+        public FloorEventEnemy.DictionaryList FloorEventEnemies => floorEventEnemies;
 
         [SerializeField]
         private WallEvent.DictionaryList wallEvents;
@@ -111,8 +111,8 @@ namespace SoulRPG
             );
             var database = await UniTask.WhenAll(dungeonDownloader, masterDataDownloader);
             dungeons.Set(database.Item1.Select((x, i) => Dungeon.Create(dungeonNames[i], x)));
-            dungeonEvents.Set(JsonHelper.FromJson<DungeonEvent>(database.Item2[0]));
-            dungeonEventItems.Set(JsonHelper.FromJson<DungeonEventItem>(database.Item2[1]));
+            floorEvents.Set(JsonHelper.FromJson<FloorEvent>(database.Item2[0]));
+            floorEventItems.Set(JsonHelper.FromJson<FloorEventItem>(database.Item2[1]));
             items.Set(JsonHelper.FromJson<Item>(database.Item2[2]));
             weapons.Set(JsonHelper.FromJson<Weapon>(database.Item2[3]));
             skills.Set(JsonHelper.FromJson<Skill>(database.Item2[4]));
@@ -130,7 +130,7 @@ namespace SoulRPG
             armorLegs.Set(JsonHelper.FromJson<Armor>(database.Item2[8]));
             accessories.Set(JsonHelper.FromJson<Accessory>(database.Item2[9]));
             enemies.Set(JsonHelper.FromJson<Enemy>(database.Item2[10]));
-            dungeonEventEnemies.Set(JsonHelper.FromJson<DungeonEventEnemy>(database.Item2[11]));
+            floorEventEnemies.Set(JsonHelper.FromJson<FloorEventEnemy>(database.Item2[11]));
             ailments.Set(JsonHelper.FromJson<Ailment>(database.Item2[12]));
             var enemyCharacterAttributes = new EnemyCharacterAttribute.Group();
             enemyCharacterAttributes.Set(JsonHelper.FromJson<EnemyCharacterAttribute>(database.Item2[13]));
@@ -281,7 +281,7 @@ namespace SoulRPG
         }
 
         [Serializable]
-        public class DungeonEvent
+        public class FloorEvent
         {
             public string Id;
 
@@ -296,7 +296,7 @@ namespace SoulRPG
             public bool IsOneTime;
 
             [Serializable]
-            public class DictionaryList : DictionaryList<string, (string, int, int), DungeonEvent>
+            public class DictionaryList : DictionaryList<string, (string, int, int), FloorEvent>
             {
                 public DictionaryList() : base(
                     x => x.Id,
@@ -308,7 +308,7 @@ namespace SoulRPG
         }
 
         [Serializable]
-        public class DungeonEventItem
+        public class FloorEventItem
         {
             public int Id;
 
@@ -319,14 +319,14 @@ namespace SoulRPG
             public int Count;
 
             [Serializable]
-            public class Group : Group<string, DungeonEventItem>
+            public class Group : Group<string, FloorEventItem>
             {
                 public Group() : base(x => x.EventId) { }
             }
         }
 
         [Serializable]
-        public class DungeonEventEnemy
+        public class FloorEventEnemy
         {
             public int Id;
 
@@ -335,7 +335,7 @@ namespace SoulRPG
             public int EnemyId;
 
             [Serializable]
-            public class DictionaryList : DictionaryList<string, DungeonEventEnemy>
+            public class DictionaryList : DictionaryList<string, FloorEventEnemy>
             {
                 public DictionaryList() : base(x => x.EventId) { }
             }

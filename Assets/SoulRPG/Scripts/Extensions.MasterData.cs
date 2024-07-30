@@ -84,7 +84,7 @@ namespace SoulRPG
             return wall;
         }
 
-        public static bool TryGetValue(this MasterData.DungeonEvent.DictionaryList self, Character character, out MasterData.DungeonEvent dungeonEvent)
+        public static bool TryGetValue(this MasterData.FloorEvent.DictionaryList self, Character character, out MasterData.FloorEvent dungeonEvent)
         {
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             return self.TryGetValue((dungeonController.CurrentDungeon.name, character.Position.x, character.Position.y), out dungeonEvent);

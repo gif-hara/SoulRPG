@@ -9,9 +9,9 @@ namespace HK
     /// </summary>
     public static partial class Extensions
     {
-        public static MasterData.DungeonEvent GetMasterDataDungeonEvent(this string self)
+        public static MasterData.FloorEvent GetMasterDataDungeonEvent(this string self)
         {
-            return TinyServiceLocator.Resolve<MasterData>().DungeonEvents.Get(self);
+            return TinyServiceLocator.Resolve<MasterData>().FloorEvents.Get(self);
         }
     }
 }

@@ -522,7 +522,7 @@ MonoBehaviour:
         - a: {x: 26, y: 0}
           b: {x: 26, y: -1}
       range: {x: 25, y: 25}
-  dungeonEvents:
+  floorEvents:
     list:
     - Id: Test.00.01.Item
       DungeonName: Dungeon.Test
@@ -548,7 +548,7 @@ MonoBehaviour:
       Y: 4
       EventType: Enemy
       IsOneTime: 0
-  dungeonEventItems:
+  floorEventItems:
     list:
     - Key: Test.00.01.Item
       Value:
@@ -562,7 +562,7 @@ MonoBehaviour:
         EventId: Test.00.03.Item
         ItemId: 101002
         Count: 1
-  dungeonEventEnemies:
+  floorEventEnemies:
     list:
     - Id: 1
       EventId: Test.00.04.Enemy

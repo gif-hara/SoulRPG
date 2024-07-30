@@ -38,7 +38,7 @@ namespace SoulRPG
         public UniTask EnterAsync(Character character)
         {
             var masterData = TinyServiceLocator.Resolve<MasterData>();
-            if (masterData.DungeonEvents.TryGetValue(character, out var dungeonEvent))
+            if (masterData.FloorEvents.TryGetValue(character, out var dungeonEvent))
             {
                 switch (dungeonEvent.EventType)
                 {
@@ -57,7 +57,7 @@ namespace SoulRPG
         public UniTask InteractAsync(Character character)
         {
             var masterData = TinyServiceLocator.Resolve<MasterData>();
-            if (masterData.DungeonEvents.TryGetValue(character, out var dungeonEvent))
+            if (masterData.FloorEvents.TryGetValue(character, out var dungeonEvent))
             {
                 switch (dungeonEvent.EventType)
                 {
@@ -76,14 +76,14 @@ namespace SoulRPG
             }
         }
 
-        private UniTask InvokeOnItemAsync(Character character, MasterData.DungeonEvent dungeonEvent)
+        private UniTask InvokeOnItemAsync(Character character, MasterData.FloorEvent dungeonEvent)
         {
             var userData = TinyServiceLocator.Resolve<UserData>();
             if (userData.ContainsCompletedEventId(dungeonEvent.Id))
             {
                 return UniTask.CompletedTask;
             }
-            var masterDataEventItems = TinyServiceLocator.Resolve<MasterData>().DungeonEventItems.Get(dungeonEvent.Id);
+            var masterDataEventItems = TinyServiceLocator.Resolve<MasterData>().FloorEventItems.Get(dungeonEvent.Id);
             foreach (var item in masterDataEventItems)
             {
                 character.Inventory.Add(item.ItemId, item.Count);
@@ -93,7 +93,7 @@ namespace SoulRPG
             return UniTask.CompletedTask;
         }
 
-        private UniTask InvokeOnSavePointAsync(Character character, MasterData.DungeonEvent dungeonEvent)
+        private UniTask InvokeOnSavePointAsync(Character character, MasterData.FloorEvent dungeonEvent)
         {
             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("ここはセーブポイントのようだ。一休みしよう");
             var userData = TinyServiceLocator.Resolve<UserData>();
@@ -103,7 +103,7 @@ namespace SoulRPG
             return UniTask.CompletedTask;
         }
 
-        private async UniTask InvokeOnEnemyAsync(Character character, MasterData.DungeonEvent dungeonEvent)
+        private async UniTask InvokeOnEnemyAsync(Character character, MasterData.FloorEvent dungeonEvent)
         {
             var userData = TinyServiceLocator.Resolve<UserData>();
             if (userData.ContainsCompletedEventId(dungeonEvent.Id))
@@ -111,7 +111,7 @@ namespace SoulRPG
                 return;
             }
 
-            var masterDataEventEnemy = TinyServiceLocator.Resolve<MasterData>().DungeonEventEnemies.Get(dungeonEvent.Id);
+            var masterDataEventEnemy = TinyServiceLocator.Resolve<MasterData>().FloorEventEnemies.Get(dungeonEvent.Id);
             var masterDataEnemy = TinyServiceLocator.Resolve<MasterData>().Enemies.Get(masterDataEventEnemy.EnemyId);
             var battleResult = await BattleSystem.BeginAsync(
                 new BattleCharacter(character, new Input(commandDocumentPrefab)),

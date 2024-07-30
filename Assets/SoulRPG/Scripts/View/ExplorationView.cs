@@ -112,9 +112,9 @@ namespace SoulRPG
                 wallObject.position = new Vector3(i.a.x, 0, i.a.y);
             }
 
-            var events = TinyServiceLocator.Resolve<MasterData>().DungeonEvents.List
+            var events = TinyServiceLocator.Resolve<MasterData>().FloorEvents.List
                 .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name);
-            CreateEventObjects(events);
+            CreateFloorEventObjects(events);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAcquiredDungeonEvent
                 .Subscribe(x =>
@@ -128,13 +128,13 @@ namespace SoulRPG
             gameEvents.OnClearTemporaryCompletedEventIds
                 .Subscribe(x =>
                 {
-                    CreateEventObjects(
+                    CreateFloorEventObjects(
                         x.Select(y => y.GetMasterDataDungeonEvent())
                     );
                 });
-            void CreateEventObjects(IEnumerable<MasterData.DungeonEvent> dungeonEvents)
+            void CreateFloorEventObjects(IEnumerable<MasterData.FloorEvent> floorEvents)
             {
-                foreach (var i in dungeonEvents)
+                foreach (var i in floorEvents)
                 {
                     var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Event.{i.EventType}"), dungeonDocument.transform);
                     eventObject.position = new Vector3(i.X, 0, i.Y);
