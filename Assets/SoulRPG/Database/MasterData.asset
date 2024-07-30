@@ -565,7 +565,7 @@ MonoBehaviour:
   floorEventEnemies:
     list:
     - Id: 1
-      EventId: Test.00.04.Enemy
+      EventId: Test.00.06.Enemy
       EnemyId: 10101
   wallEvents:
     list:
