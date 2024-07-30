@@ -85,7 +85,22 @@ namespace SoulRPG
 
         public bool CanMove(Vector2Int position, Define.Direction direction)
         {
-            return !IsExistWall(position, direction);
+            if (IsExistWall(position, direction))
+            {
+                return false;
+            }
+
+            var masterData = TinyServiceLocator.Resolve<MasterData>();
+            if (masterData.WallEvents.TryGetValue(position, direction, out var wallEvent))
+            {
+                return wallEvent.EventType switch
+                {
+                    "Door" => false,
+                    _ => false,
+                };
+            }
+
+            return true;
         }
 
         private UniTask InvokeOnItemAsync(Character character, MasterData.FloorEvent floorEvent)
