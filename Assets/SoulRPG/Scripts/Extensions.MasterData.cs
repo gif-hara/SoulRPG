@@ -113,5 +113,11 @@ namespace SoulRPG
                 );
             return self.TryGetValue(key, out wallEvent);
         }
+
+        public static bool IsPositiveAccess(this MasterData.WallEvent self, Define.Direction accessDirection)
+        {
+            var isHorizontal = self.LeftY == self.RightY;
+            return isHorizontal ? accessDirection == Define.Direction.Down : accessDirection == Define.Direction.Right;
+        }
     }
 }
