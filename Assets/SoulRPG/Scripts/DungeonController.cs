@@ -172,7 +172,7 @@ namespace SoulRPG
                 case "Lock":
                     if (!userData.ContainsCompletedWallEventId(wallEvent.Id))
                     {
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("ロックされているようだ");
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("こちらからは開かないようだ");
                     }
                     break;
             }
