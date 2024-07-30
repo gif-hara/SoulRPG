@@ -46,7 +46,9 @@ namespace SoulRPG
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             var floorEvents = TinyServiceLocator.Resolve<MasterData>().FloorEvents.List
                 .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name);
-            SetupMiniMap(uiDocument, dungeonController, floorEvents, character, scope);
+            var wallEvents = TinyServiceLocator.Resolve<MasterData>().WallEvents.List
+                .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name);
+            SetupMiniMap(uiDocument, dungeonController, floorEvents, wallEvents, character, scope);
             SetupDungeon(dungeonController, floorEvents);
             SetupMessage(uiDocument, character, scope);
             SetupStatuses(uiDocument, character, scope);
@@ -56,6 +58,7 @@ namespace SoulRPG
             HKUIDocument uiDocument,
             DungeonController dungeonController,
             IEnumerable<MasterData.FloorEvent> floorEvents,
+            IEnumerable<MasterData.WallEvent> wallEvents,
             Character character,
             CancellationToken scope
             )
@@ -96,6 +99,7 @@ namespace SoulRPG
             }
 
             CreateFloorEventObjects(floorEvents);
+            CreateWallEventObjects(wallEvents);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAcquiredDungeonEvent
                 .Subscribe(x =>
@@ -122,6 +126,18 @@ namespace SoulRPG
                     eventObject.anchoredPosition = new Vector2(i.X * tipSize.x, i.Y * tipSize.y);
                     eventObject.sizeDelta = tipSize;
                     maptipFloorEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
+                }
+            }
+
+            void CreateWallEventObjects(IEnumerable<MasterData.WallEvent> wallEvents)
+            {
+                foreach (var i in wallEvents)
+                {
+                    var isHorizontal = i.LeftY == i.RightY;
+                    var directionName = isHorizontal ? "Top" : "Left";
+                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Wall.Event.{i.EventType}.{directionName}"), tipsParent.transform);
+                    eventObject.anchoredPosition = new Vector2(i.LeftX * tipSize.x, i.LeftY * tipSize.y);
+                    eventObject.sizeDelta = tipSize;
                 }
             }
         }
