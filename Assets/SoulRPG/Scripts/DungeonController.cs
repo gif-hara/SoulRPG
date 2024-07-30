@@ -79,7 +79,7 @@ namespace SoulRPG
         private UniTask InvokeOnItemAsync(Character character, MasterData.FloorEvent dungeonEvent)
         {
             var userData = TinyServiceLocator.Resolve<UserData>();
-            if (userData.ContainsCompletedEventId(dungeonEvent.Id))
+            if (userData.ContainsCompletedFloorEventId(dungeonEvent.Id))
             {
                 return UniTask.CompletedTask;
             }
@@ -89,7 +89,7 @@ namespace SoulRPG
                 character.Inventory.Add(item.ItemId, item.Count);
             }
             TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, dungeonEvent.X, dungeonEvent.Y));
-            userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsOneTime);
+            userData.AddCompletedfloorEventIds(dungeonEvent.Id, dungeonEvent.IsOneTime);
             return UniTask.CompletedTask;
         }
 
@@ -97,7 +97,7 @@ namespace SoulRPG
         {
             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("ここはセーブポイントのようだ。一休みしよう");
             var userData = TinyServiceLocator.Resolve<UserData>();
-            userData.ClearTemporaryCompletedEventIds();
+            userData.ClearTemporaryCompletedFloorEventIds();
             character.InstanceStatus.FullRecovery();
             checkPoint = character.Position;
             return UniTask.CompletedTask;
@@ -106,7 +106,7 @@ namespace SoulRPG
         private async UniTask InvokeOnEnemyAsync(Character character, MasterData.FloorEvent dungeonEvent)
         {
             var userData = TinyServiceLocator.Resolve<UserData>();
-            if (userData.ContainsCompletedEventId(dungeonEvent.Id))
+            if (userData.ContainsCompletedFloorEventId(dungeonEvent.Id))
             {
                 return;
             }
@@ -121,7 +121,7 @@ namespace SoulRPG
             if (battleResult == Define.BattleResult.PlayerWin)
             {
                 TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, dungeonEvent.X, dungeonEvent.Y));
-                userData.AddCompletedEventIds(dungeonEvent.Id, dungeonEvent.IsOneTime);
+                userData.AddCompletedfloorEventIds(dungeonEvent.Id, dungeonEvent.IsOneTime);
             }
             else
             {

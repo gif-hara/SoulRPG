@@ -8,37 +8,37 @@ namespace SoulRPG
     /// </summary>
     public sealed class UserData
     {
-        private readonly HashSet<string> completedEventIds = new();
+        private readonly HashSet<string> completedFloorEventIds = new();
 
         /// <summary>
-        /// 一時的に完了したイベントのリスト
+        /// 一時的に完了した床イベントのリスト
         /// </summary>
         /// <remarks>
         /// このイベントはセーブポイントにアクセスすると開放されて再度アクセス出来るようになります
         /// </remarks>
-        private readonly HashSet<string> temporaryCompletedEventIds = new();
+        private readonly HashSet<string> temporaryCompletedFloorEventIds = new();
 
-        public void AddCompletedEventIds(string eventId, bool isOneTime)
+        public void AddCompletedfloorEventIds(string eventId, bool isOneTime)
         {
             if (isOneTime)
             {
-                completedEventIds.Add(eventId);
+                completedFloorEventIds.Add(eventId);
             }
             else
             {
-                temporaryCompletedEventIds.Add(eventId);
+                temporaryCompletedFloorEventIds.Add(eventId);
             }
         }
 
-        public bool ContainsCompletedEventId(string eventId)
+        public bool ContainsCompletedFloorEventId(string eventId)
         {
-            return completedEventIds.Contains(eventId) || temporaryCompletedEventIds.Contains(eventId);
+            return completedFloorEventIds.Contains(eventId) || temporaryCompletedFloorEventIds.Contains(eventId);
         }
 
-        public void ClearTemporaryCompletedEventIds()
+        public void ClearTemporaryCompletedFloorEventIds()
         {
-            var tempData = new HashSet<string>(temporaryCompletedEventIds);
-            temporaryCompletedEventIds.Clear();
+            var tempData = new HashSet<string>(temporaryCompletedFloorEventIds);
+            temporaryCompletedFloorEventIds.Clear();
             TinyServiceLocator.Resolve<GameEvents>().OnClearTemporaryCompletedEventIds.OnNext(tempData);
         }
     }
