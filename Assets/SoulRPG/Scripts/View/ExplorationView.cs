@@ -89,11 +89,7 @@ namespace SoulRPG
                     tipsParent.anchoredPosition = viewportPosition;
                     shadowParent.anchoredPosition = viewportPosition;
                     gameCameraController.transform.position = new Vector3(x.x, 0, x.y);
-                    if (maptipShadowObjects.TryGetValue(x, out var shadowObject))
-                    {
-                        Object.Destroy(shadowObject);
-                        maptipShadowObjects.Remove(x);
-                    }
+                    RemoveShadows(x);
                 })
                 .RegisterTo(scope);
             character.DirectionAsObservable()
@@ -118,10 +114,6 @@ namespace SoulRPG
                 for (var x = 0; x <= dungeonController.CurrentDungeon.range.x; x++)
                 {
                     var position = new Vector2Int(x, y);
-                    if (character.Position == position)
-                    {
-                        continue;
-                    }
                     var shadowObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Shadow"), shadowParent);
                     shadowObject.anchoredPosition = new Vector2(x * tipSize.x, y * tipSize.y);
                     shadowObject.sizeDelta = tipSize;
@@ -129,6 +121,7 @@ namespace SoulRPG
                 }
             }
 
+            RemoveShadows(character.Position);
             CreateFloorEventObjects(floorEvents);
             CreateWallEventObjects(wallEvents);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
@@ -176,13 +169,42 @@ namespace SoulRPG
                     element.Q("Close").SetActive(!isUnlock);
                 }
             }
+
+            void RemoveShadows(Vector2Int position)
+            {
+                RemoveShadow(position);
+                if (dungeonController.CanMove(position, Define.Direction.Up))
+                {
+                    RemoveShadow(position + Define.Direction.Up.ToVector2Int());
+                }
+                if (dungeonController.CanMove(position, Define.Direction.Down))
+                {
+                    RemoveShadow(position + Define.Direction.Down.ToVector2Int());
+                }
+                if (dungeonController.CanMove(position, Define.Direction.Left))
+                {
+                    RemoveShadow(position + Define.Direction.Left.ToVector2Int());
+                }
+                if (dungeonController.CanMove(position, Define.Direction.Right))
+                {
+                    RemoveShadow(position + Define.Direction.Right.ToVector2Int());
+                }
+            }
+            void RemoveShadow(Vector2Int position)
+            {
+                if (maptipShadowObjects.TryGetValue(position, out var shadowObject))
+                {
+                    Object.Destroy(shadowObject);
+                    maptipShadowObjects.Remove(position);
+                }
+            }
         }
 
         private void SetupDungeon(
-            DungeonController dungeonController,
-            IEnumerable<MasterData.FloorEvent> floorEvents,
-            IEnumerable<MasterData.WallEvent> wallEvents
-            )
+                DungeonController dungeonController,
+                IEnumerable<MasterData.FloorEvent> floorEvents,
+                IEnumerable<MasterData.WallEvent> wallEvents
+                )
         {
             var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
             for (var i = 0; i <= dungeonController.CurrentDungeon.range.x; i++)
