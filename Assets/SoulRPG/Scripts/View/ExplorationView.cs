@@ -32,6 +32,8 @@ namespace SoulRPG
 
         private readonly Dictionary<MasterData.WallEvent, HKUIDocument> dungeonWallEventObjects = new();
 
+        private readonly Dictionary<Vector2Int, GameObject> maptipShadowObjects = new();
+
         public ExplorationView(
             HKUIDocument uiDocumentPrefab,
             HKUIDocument dungeonDocumentPrefab,
@@ -77,13 +79,21 @@ namespace SoulRPG
             var characterAreaTransform = areaDocument.Q<RectTransform>("Area.Character");
             var miniMapWallTopPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Top");
             var miniMapWallLeftPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Left");
+            var shadowParent = areaDocument.Q<RectTransform>("Area.Shadow.Viewport");
             characterAreaTransform.sizeDelta = tipSize;
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
                     positionText.text = $"{x}";
-                    tipsParent.anchoredPosition = new Vector2(-x.x * tipSize.x, -x.y * tipSize.y);
+                    var viewportPosition = new Vector2(-x.x * tipSize.x, -x.y * tipSize.y);
+                    tipsParent.anchoredPosition = viewportPosition;
+                    shadowParent.anchoredPosition = viewportPosition;
                     gameCameraController.transform.position = new Vector3(x.x, 0, x.y);
+                    if (maptipShadowObjects.TryGetValue(x, out var shadowObject))
+                    {
+                        Object.Destroy(shadowObject);
+                        maptipShadowObjects.Remove(x);
+                    }
                 })
                 .RegisterTo(scope);
             character.DirectionAsObservable()
@@ -101,6 +111,22 @@ namespace SoulRPG
                 var wallObject = Object.Instantiate(prefab, tipsParent.transform);
                 wallObject.anchoredPosition = new Vector2(i.a.x * tipSize.x, i.a.y * tipSize.y);
                 wallObject.sizeDelta = tipSize;
+            }
+
+            for (var y = 0; y <= dungeonController.CurrentDungeon.range.y; y++)
+            {
+                for (var x = 0; x <= dungeonController.CurrentDungeon.range.x; x++)
+                {
+                    var position = new Vector2Int(x, y);
+                    if (character.Position == position)
+                    {
+                        continue;
+                    }
+                    var shadowObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Shadow"), shadowParent);
+                    shadowObject.anchoredPosition = new Vector2(x * tipSize.x, y * tipSize.y);
+                    shadowObject.sizeDelta = tipSize;
+                    maptipShadowObjects.Add(position, shadowObject.gameObject);
+                }
             }
 
             CreateFloorEventObjects(floorEvents);
