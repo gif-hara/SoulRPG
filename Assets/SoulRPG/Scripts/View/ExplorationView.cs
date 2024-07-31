@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
@@ -13,7 +14,7 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    public sealed class ExplorationView
+    public sealed class ExplorationView : IExplorationView
     {
         private readonly HKUIDocument uiDocumentPrefab;
 
@@ -26,6 +27,8 @@ namespace SoulRPG
         private readonly Dictionary<(string dungeonName, int x, int y), GameObject> dungeonFloorEventObjects = new();
 
         private readonly Dictionary<(string dungeonName, int x, int y), GameObject> maptipFloorEventObjects = new();
+
+        private readonly Dictionary<MasterData.WallEvent, HKUIDocument> maptipWallEventObjects = new();
 
         public ExplorationView(
             HKUIDocument uiDocumentPrefab,
@@ -135,9 +138,11 @@ namespace SoulRPG
                 {
                     var isHorizontal = i.LeftY == i.RightY;
                     var directionName = isHorizontal ? "Top" : "Left";
-                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Wall.Event.{i.EventType}.{directionName}"), tipsParent.transform);
-                    eventObject.anchoredPosition = new Vector2(i.LeftX * tipSize.x, i.LeftY * tipSize.y);
-                    eventObject.sizeDelta = tipSize;
+                    var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.EventType}.{directionName}"), tipsParent.transform);
+                    maptipWallEventObjects.Add(i, element);
+                    var elementTransform = element.transform as RectTransform;
+                    elementTransform.anchoredPosition = new Vector2(i.LeftX * tipSize.x, i.LeftY * tipSize.y);
+                    elementTransform.sizeDelta = tipSize;
                 }
             }
         }
@@ -269,6 +274,16 @@ namespace SoulRPG
                     staminaGauge.value = character.InstanceStatus.Stamina / (float)character.InstanceStatus.StaminaMax;
                 })
                 .RegisterTo(scope);
+        }
+
+        public UniTask OnOpenDoorAsync(MasterData.WallEvent wallEvent)
+        {
+            if (maptipWallEventObjects.TryGetValue(wallEvent, out var obj))
+            {
+                Object.Destroy(obj);
+                maptipWallEventObjects.Remove(wallEvent);
+            }
+            return UniTask.CompletedTask;
         }
     }
 }
