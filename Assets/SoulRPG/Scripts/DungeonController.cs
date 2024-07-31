@@ -168,7 +168,11 @@ namespace SoulRPG
             switch (condition)
             {
                 case "None":
-                    userData.AddCompletedWallEventIds(wallEvent.Id);
+                    if (!userData.ContainsCompletedWallEventId(wallEvent.Id))
+                    {
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
+                        userData.AddCompletedWallEventIds(wallEvent.Id);
+                    }
                     break;
                 case "Lock":
                     if (!userData.ContainsCompletedWallEventId(wallEvent.Id))
