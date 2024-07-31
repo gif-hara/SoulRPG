@@ -143,6 +143,9 @@ namespace SoulRPG
                     var elementTransform = element.transform as RectTransform;
                     elementTransform.anchoredPosition = new Vector2(i.LeftX * tipSize.x, i.LeftY * tipSize.y);
                     elementTransform.sizeDelta = tipSize;
+                    var isUnlock = TinyServiceLocator.Resolve<UserData>().ContainsCompletedWallEventId(i.Id);
+                    element.Q("Open").SetActive(isUnlock);
+                    element.Q("Close").SetActive(!isUnlock);
                 }
             }
         }
@@ -278,10 +281,10 @@ namespace SoulRPG
 
         public UniTask OnOpenDoorAsync(MasterData.WallEvent wallEvent)
         {
-            if (maptipWallEventObjects.TryGetValue(wallEvent, out var obj))
+            if (maptipWallEventObjects.TryGetValue(wallEvent, out var element))
             {
-                Object.Destroy(obj);
-                maptipWallEventObjects.Remove(wallEvent);
+                element.Q("Open").SetActive(true);
+                element.Q("Close").SetActive(false);
             }
             return UniTask.CompletedTask;
         }
