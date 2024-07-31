@@ -29,10 +29,10 @@ MonoBehaviour:
       data:
         attackType: 0
         buffName: Ailment.101008
-        rate: -0.6
+        rate: 0.6
     - rid: 7538228103530414705
       type: {class: AddStrengthBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         attackType: 1
         buffName: Ailment.101008
-        rate: -0.6
+        rate: 0.6
