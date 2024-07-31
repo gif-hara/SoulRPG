@@ -200,8 +200,6 @@ MonoBehaviour:
         - a: {x: 8, y: 19}
           b: {x: 8, y: 18}
         - a: {x: 9, y: 19}
-          b: {x: 10, y: 19}
-        - a: {x: 9, y: 19}
           b: {x: 9, y: 18}
         - a: {x: 10, y: 19}
           b: {x: 10, y: 18}
@@ -385,8 +383,6 @@ MonoBehaviour:
           b: {x: 6, y: 7}
         - a: {x: 9, y: 7}
           b: {x: 10, y: 7}
-        - a: {x: 10, y: 7}
-          b: {x: 11, y: 7}
         - a: {x: 11, y: 7}
           b: {x: 12, y: 7}
         - a: {x: 12, y: 7}
@@ -601,6 +597,15 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: Lock
+    - Id: Test.(10,07).(11,07).Door
+      DungeonName: Dungeon.Test
+      LeftX: 10
+      LeftY: 7
+      RightX: 11
+      RightY: 7
+      EventType: Door
+      PositiveSideCondition: Lock
+      NegativeSideCondition: None
   items:
     list:
     - Name: "\u30B7\u30E7\u30FC\u30C8\u30BD\u30FC\u30C9"
