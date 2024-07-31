@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using HK;
+using UnityEngine;
 
 namespace SoulRPG
 {
@@ -19,6 +20,8 @@ namespace SoulRPG
         private readonly HashSet<string> temporaryCompletedFloorEventIds = new();
 
         private readonly HashSet<string> completedWallEventIds = new();
+
+        private readonly Dictionary<string, HashSet<Vector2Int>> reachedPoints = new();
 
         public void AddCompletedfloorEventIds(string eventId, bool isOneTime)
         {
@@ -52,6 +55,33 @@ namespace SoulRPG
         public bool ContainsCompletedWallEventId(string eventId)
         {
             return completedWallEventIds.Contains(eventId);
+        }
+
+        public void AddReachedPoint(string dungeonName, Vector2Int point)
+        {
+            if (!reachedPoints.TryGetValue(dungeonName, out var points))
+            {
+                points = new HashSet<Vector2Int>();
+                reachedPoints.Add(dungeonName, points);
+            }
+
+            if (points.Contains(point))
+            {
+                return;
+            }
+
+            points.Add(point);
+            TinyServiceLocator.Resolve<GameEvents>().OnAddReachedPoint.OnNext((dungeonName, point));
+        }
+
+        public bool IsReachedPoint(string dungeonName, Vector2Int point)
+        {
+            if (!reachedPoints.TryGetValue(dungeonName, out var points))
+            {
+                return false;
+            }
+
+            return points.Contains(point);
         }
     }
 }

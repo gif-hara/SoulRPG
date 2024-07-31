@@ -80,6 +80,7 @@ namespace SoulRPG
             var miniMapWallTopPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Top");
             var miniMapWallLeftPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Left");
             var shadowParent = areaDocument.Q<RectTransform>("Area.Shadow.Viewport");
+            var userData = TinyServiceLocator.Resolve<UserData>();
             characterAreaTransform.sizeDelta = tipSize;
             character.PositionAsObservable()
                 .Subscribe(x =>
@@ -89,7 +90,6 @@ namespace SoulRPG
                     tipsParent.anchoredPosition = viewportPosition;
                     shadowParent.anchoredPosition = viewportPosition;
                     gameCameraController.transform.position = new Vector3(x.x, 0, x.y);
-                    RemoveShadows(x);
                 })
                 .RegisterTo(scope);
             character.DirectionAsObservable()
@@ -113,6 +113,10 @@ namespace SoulRPG
             {
                 for (var x = 0; x <= dungeonController.CurrentDungeon.range.x; x++)
                 {
+                    if (userData.IsReachedPoint(dungeonController.CurrentDungeon.name, new Vector2Int(x, y)))
+                    {
+                        continue;
+                    }
                     var position = new Vector2Int(x, y);
                     var shadowObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Shadow"), shadowParent);
                     shadowObject.anchoredPosition = new Vector2(x * tipSize.x, y * tipSize.y);
@@ -121,10 +125,18 @@ namespace SoulRPG
                 }
             }
 
-            RemoveShadows(character.Position);
             CreateFloorEventObjects(floorEvents);
             CreateWallEventObjects(wallEvents);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            gameEvents.OnAddReachedPoint
+                .Subscribe(x =>
+                {
+                    if (x.dungeonName == dungeonController.CurrentDungeon.name)
+                    {
+                        RemoveShadow(x.reachedPosition);
+                    }
+                })
+                .RegisterTo(scope);
             gameEvents.OnAcquiredDungeonEvent
                 .Subscribe(x =>
                 {
@@ -170,26 +182,6 @@ namespace SoulRPG
                 }
             }
 
-            void RemoveShadows(Vector2Int position)
-            {
-                RemoveShadow(position);
-                if (dungeonController.CanMove(position, Define.Direction.Up))
-                {
-                    RemoveShadow(position + Define.Direction.Up.ToVector2Int());
-                }
-                if (dungeonController.CanMove(position, Define.Direction.Down))
-                {
-                    RemoveShadow(position + Define.Direction.Down.ToVector2Int());
-                }
-                if (dungeonController.CanMove(position, Define.Direction.Left))
-                {
-                    RemoveShadow(position + Define.Direction.Left.ToVector2Int());
-                }
-                if (dungeonController.CanMove(position, Define.Direction.Right))
-                {
-                    RemoveShadow(position + Define.Direction.Right.ToVector2Int());
-                }
-            }
             void RemoveShadow(Vector2Int position)
             {
                 if (maptipShadowObjects.TryGetValue(position, out var shadowObject))

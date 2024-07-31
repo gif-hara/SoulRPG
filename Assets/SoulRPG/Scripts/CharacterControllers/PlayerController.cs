@@ -17,6 +17,7 @@ namespace SoulRPG
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var inGameActions = inputController.InputActions.InGame;
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
+            dungeonController.EnterAsync(player).Forget();
             inGameActions.Move.OnPerformedAsObservable()
                 .Subscribe(x =>
                 {

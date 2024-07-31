@@ -44,6 +44,7 @@ namespace SoulRPG
 
         public UniTask EnterAsync(Character character)
         {
+            AddReachedPoint(character);
             var masterData = TinyServiceLocator.Resolve<MasterData>();
             if (masterData.FloorEvents.TryGetValue(character, out var dungeonEvent))
             {
@@ -111,6 +112,28 @@ namespace SoulRPG
             }
 
             return true;
+        }
+
+        private void AddReachedPoint(Character character)
+        {
+            var userData = TinyServiceLocator.Resolve<UserData>();
+            userData.AddReachedPoint(CurrentDungeon.name, character.Position);
+            if (CanMove(character.Position, Define.Direction.Up))
+            {
+                userData.AddReachedPoint(CurrentDungeon.name, character.Position + Define.Direction.Up.ToVector2Int());
+            }
+            if (CanMove(character.Position, Define.Direction.Down))
+            {
+                userData.AddReachedPoint(CurrentDungeon.name, character.Position + Define.Direction.Down.ToVector2Int());
+            }
+            if (CanMove(character.Position, Define.Direction.Left))
+            {
+                userData.AddReachedPoint(CurrentDungeon.name, character.Position + Define.Direction.Left.ToVector2Int());
+            }
+            if (CanMove(character.Position, Define.Direction.Right))
+            {
+                userData.AddReachedPoint(CurrentDungeon.name, character.Position + Define.Direction.Right.ToVector2Int());
+            }
         }
 
         private UniTask InvokeOnItemAsync(Character character, MasterData.FloorEvent floorEvent)
