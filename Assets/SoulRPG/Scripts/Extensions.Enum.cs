@@ -105,5 +105,23 @@ namespace SoulRPG
                 _ => throw new System.ArgumentOutOfRangeException()
             };
         }
+
+        public static (Vector2Int from, Vector2Int to) GetWallIndex(this Define.Direction self)
+        {
+            return self switch
+            {
+                Define.Direction.Up => (Vector2Int.zero, Vector2Int.right),
+                Define.Direction.Right => (Vector2Int.right, new Vector2Int(1, -1)),
+                Define.Direction.Down => (new Vector2Int(0, -1), new Vector2Int(1, -1)),
+                Define.Direction.Left => (Vector2Int.zero, new Vector2Int(0, -1)),
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
+        }
+
+        public static (Vector2Int from, Vector2Int to) GetWallPosition(this Define.Direction self, Vector2Int position)
+        {
+            var result = self.GetWallIndex();
+            return (position + result.from, position + result.to);
+        }
     }
 }

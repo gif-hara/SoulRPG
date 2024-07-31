@@ -84,7 +84,7 @@ namespace SoulRPG
             return wall;
         }
 
-        public static bool TryGetValue(this MasterData.DungeonEvent.DictionaryList self, Character character, out MasterData.DungeonEvent dungeonEvent)
+        public static bool TryGetValue(this MasterData.FloorEvent.DictionaryList self, Character character, out MasterData.FloorEvent dungeonEvent)
         {
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             return self.TryGetValue((dungeonController.CurrentDungeon.name, character.Position.x, character.Position.y), out dungeonEvent);
@@ -93,6 +93,31 @@ namespace SoulRPG
         public static BattleCharacter CreateBattleCharacter(this MasterData.Enemy self)
         {
             return new BattleCharacter(new CharacterBattleStatus(self), new Constant(101999, 101001));
+        }
+
+        public static bool TryGetValue(this MasterData.WallEvent.DictionaryList self, Character character, out MasterData.WallEvent wallEvent)
+        {
+            return self.TryGetValue(character.Position, character.Direction, out wallEvent);
+        }
+
+        public static bool TryGetValue(this MasterData.WallEvent.DictionaryList self, Vector2Int position, Define.Direction direction, out MasterData.WallEvent wallEvent)
+        {
+            var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
+            var wallPositions = direction.GetWallPosition(position);
+            var key = (
+                dungeonController.CurrentDungeon.name,
+                wallPositions.from.x,
+                wallPositions.from.y,
+                wallPositions.to.x,
+                wallPositions.to.y
+                );
+            return self.TryGetValue(key, out wallEvent);
+        }
+
+        public static bool IsPositiveAccess(this MasterData.WallEvent self, Define.Direction accessDirection)
+        {
+            var isHorizontal = self.LeftY == self.RightY;
+            return isHorizontal ? accessDirection == Define.Direction.Down : accessDirection == Define.Direction.Right;
         }
     }
 }

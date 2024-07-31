@@ -43,10 +43,14 @@ MonoBehaviour:
           b: {x: 11, y: 25}
         - a: {x: 11, y: 25}
           b: {x: 12, y: 25}
+        - a: {x: 11, y: 25}
+          b: {x: 11, y: 24}
         - a: {x: 12, y: 25}
           b: {x: 13, y: 25}
         - a: {x: 13, y: 25}
           b: {x: 14, y: 25}
+        - a: {x: 14, y: 25}
+          b: {x: 14, y: 24}
         - a: {x: 14, y: 25}
           b: {x: 15, y: 25}
         - a: {x: 15, y: 25}
@@ -75,174 +79,386 @@ MonoBehaviour:
           b: {x: 26, y: 24}
         - a: {x: 0, y: 24}
           b: {x: 0, y: 23}
+        - a: {x: 1, y: 24}
+          b: {x: 2, y: 24}
+        - a: {x: 1, y: 24}
+          b: {x: 1, y: 23}
+        - a: {x: 3, y: 24}
+          b: {x: 4, y: 24}
+        - a: {x: 4, y: 24}
+          b: {x: 4, y: 23}
+        - a: {x: 6, y: 24}
+          b: {x: 7, y: 24}
+        - a: {x: 6, y: 24}
+          b: {x: 6, y: 23}
+        - a: {x: 7, y: 24}
+          b: {x: 8, y: 24}
+        - a: {x: 8, y: 24}
+          b: {x: 9, y: 24}
+        - a: {x: 9, y: 24}
+          b: {x: 9, y: 23}
+        - a: {x: 11, y: 24}
+          b: {x: 11, y: 23}
+        - a: {x: 14, y: 24}
+          b: {x: 14, y: 23}
         - a: {x: 26, y: 24}
           b: {x: 26, y: 23}
         - a: {x: 0, y: 23}
           b: {x: 0, y: 22}
+        - a: {x: 1, y: 23}
+          b: {x: 1, y: 22}
+        - a: {x: 4, y: 23}
+          b: {x: 4, y: 22}
+        - a: {x: 9, y: 23}
+          b: {x: 9, y: 22}
+        - a: {x: 11, y: 22}
+          b: {x: 12, y: 22}
+        - a: {x: 11, y: 23}
+          b: {x: 11, y: 22}
+        - a: {x: 12, y: 22}
+          b: {x: 13, y: 22}
+        - a: {x: 14, y: 23}
+          b: {x: 14, y: 22}
         - a: {x: 26, y: 23}
           b: {x: 26, y: 22}
         - a: {x: 0, y: 22}
           b: {x: 0, y: 21}
+        - a: {x: 1, y: 21}
+          b: {x: 2, y: 21}
+        - a: {x: 1, y: 22}
+          b: {x: 1, y: 21}
+        - a: {x: 3, y: 21}
+          b: {x: 4, y: 21}
+        - a: {x: 4, y: 22}
+          b: {x: 4, y: 21}
+        - a: {x: 6, y: 21}
+          b: {x: 7, y: 21}
+        - a: {x: 6, y: 22}
+          b: {x: 6, y: 21}
+        - a: {x: 7, y: 21}
+          b: {x: 8, y: 21}
+        - a: {x: 8, y: 21}
+          b: {x: 9, y: 21}
+        - a: {x: 9, y: 22}
+          b: {x: 9, y: 21}
+        - a: {x: 14, y: 22}
+          b: {x: 14, y: 21}
         - a: {x: 26, y: 22}
           b: {x: 26, y: 21}
         - a: {x: 0, y: 21}
           b: {x: 0, y: 20}
+        - a: {x: 1, y: 21}
+          b: {x: 1, y: 20}
+        - a: {x: 2, y: 21}
+          b: {x: 2, y: 20}
+        - a: {x: 3, y: 21}
+          b: {x: 3, y: 20}
+        - a: {x: 4, y: 21}
+          b: {x: 4, y: 20}
+        - a: {x: 11, y: 21}
+          b: {x: 12, y: 21}
+        - a: {x: 12, y: 21}
+          b: {x: 13, y: 21}
+        - a: {x: 13, y: 21}
+          b: {x: 14, y: 21}
+        - a: {x: 14, y: 21}
+          b: {x: 14, y: 20}
         - a: {x: 26, y: 21}
           b: {x: 26, y: 20}
         - a: {x: 0, y: 20}
           b: {x: 0, y: 19}
+        - a: {x: 2, y: 20}
+          b: {x: 2, y: 19}
+        - a: {x: 3, y: 20}
+          b: {x: 3, y: 19}
+        - a: {x: 11, y: 20}
+          b: {x: 12, y: 20}
+        - a: {x: 11, y: 20}
+          b: {x: 11, y: 19}
+        - a: {x: 12, y: 20}
+          b: {x: 13, y: 20}
+        - a: {x: 13, y: 20}
+          b: {x: 14, y: 20}
+        - a: {x: 14, y: 20}
+          b: {x: 14, y: 19}
         - a: {x: 26, y: 20}
           b: {x: 26, y: 19}
         - a: {x: 0, y: 19}
           b: {x: 0, y: 18}
+        - a: {x: 2, y: 19}
+          b: {x: 2, y: 18}
+        - a: {x: 3, y: 19}
+          b: {x: 4, y: 19}
+        - a: {x: 4, y: 19}
+          b: {x: 5, y: 19}
+        - a: {x: 5, y: 19}
+          b: {x: 6, y: 19}
+        - a: {x: 6, y: 19}
+          b: {x: 6, y: 18}
+        - a: {x: 6, y: 19}
+          b: {x: 7, y: 19}
+        - a: {x: 7, y: 19}
+          b: {x: 8, y: 19}
+        - a: {x: 8, y: 19}
+          b: {x: 8, y: 18}
+        - a: {x: 9, y: 19}
+          b: {x: 10, y: 19}
+        - a: {x: 9, y: 19}
+          b: {x: 9, y: 18}
+        - a: {x: 10, y: 19}
+          b: {x: 10, y: 18}
+        - a: {x: 14, y: 19}
+          b: {x: 14, y: 18}
         - a: {x: 26, y: 19}
           b: {x: 26, y: 18}
         - a: {x: 0, y: 18}
           b: {x: 0, y: 17}
+        - a: {x: 2, y: 18}
+          b: {x: 2, y: 17}
+        - a: {x: 8, y: 18}
+          b: {x: 8, y: 17}
+        - a: {x: 9, y: 18}
+          b: {x: 9, y: 17}
+        - a: {x: 10, y: 18}
+          b: {x: 10, y: 17}
+        - a: {x: 11, y: 17}
+          b: {x: 12, y: 17}
+        - a: {x: 11, y: 18}
+          b: {x: 11, y: 17}
+        - a: {x: 12, y: 17}
+          b: {x: 13, y: 17}
+        - a: {x: 13, y: 17}
+          b: {x: 14, y: 17}
+        - a: {x: 14, y: 18}
+          b: {x: 14, y: 17}
         - a: {x: 26, y: 18}
           b: {x: 26, y: 17}
         - a: {x: 0, y: 17}
           b: {x: 0, y: 16}
+        - a: {x: 2, y: 16}
+          b: {x: 3, y: 16}
+        - a: {x: 2, y: 17}
+          b: {x: 2, y: 16}
+        - a: {x: 3, y: 16}
+          b: {x: 4, y: 16}
+        - a: {x: 4, y: 16}
+          b: {x: 5, y: 16}
+        - a: {x: 5, y: 16}
+          b: {x: 6, y: 16}
+        - a: {x: 6, y: 17}
+          b: {x: 6, y: 16}
+        - a: {x: 6, y: 16}
+          b: {x: 7, y: 16}
+        - a: {x: 7, y: 16}
+          b: {x: 8, y: 16}
+        - a: {x: 8, y: 17}
+          b: {x: 8, y: 16}
+        - a: {x: 9, y: 16}
+          b: {x: 10, y: 16}
+        - a: {x: 9, y: 17}
+          b: {x: 9, y: 16}
+        - a: {x: 10, y: 17}
+          b: {x: 10, y: 16}
+        - a: {x: 14, y: 17}
+          b: {x: 14, y: 16}
         - a: {x: 26, y: 17}
           b: {x: 26, y: 16}
         - a: {x: 0, y: 16}
           b: {x: 0, y: 15}
+        - a: {x: 14, y: 16}
+          b: {x: 14, y: 15}
         - a: {x: 26, y: 16}
           b: {x: 26, y: 15}
         - a: {x: 0, y: 15}
           b: {x: 0, y: 14}
+        - a: {x: 5, y: 15}
+          b: {x: 5, y: 14}
+        - a: {x: 14, y: 15}
+          b: {x: 14, y: 14}
         - a: {x: 26, y: 15}
           b: {x: 26, y: 14}
         - a: {x: 0, y: 14}
           b: {x: 0, y: 13}
+        - a: {x: 5, y: 14}
+          b: {x: 5, y: 13}
+        - a: {x: 14, y: 14}
+          b: {x: 14, y: 13}
         - a: {x: 26, y: 14}
           b: {x: 26, y: 13}
         - a: {x: 0, y: 13}
           b: {x: 0, y: 12}
+        - a: {x: 2, y: 12}
+          b: {x: 3, y: 12}
+        - a: {x: 3, y: 12}
+          b: {x: 4, y: 12}
+        - a: {x: 4, y: 12}
+          b: {x: 5, y: 12}
+        - a: {x: 5, y: 13}
+          b: {x: 5, y: 12}
+        - a: {x: 14, y: 13}
+          b: {x: 14, y: 12}
         - a: {x: 26, y: 13}
           b: {x: 26, y: 12}
         - a: {x: 0, y: 12}
           b: {x: 0, y: 11}
+        - a: {x: 9, y: 12}
+          b: {x: 10, y: 12}
+        - a: {x: 9, y: 12}
+          b: {x: 9, y: 11}
+        - a: {x: 10, y: 12}
+          b: {x: 11, y: 12}
+        - a: {x: 11, y: 12}
+          b: {x: 12, y: 12}
+        - a: {x: 12, y: 12}
+          b: {x: 12, y: 11}
+        - a: {x: 12, y: 12}
+          b: {x: 13, y: 12}
+        - a: {x: 13, y: 12}
+          b: {x: 14, y: 12}
+        - a: {x: 14, y: 12}
+          b: {x: 14, y: 11}
         - a: {x: 26, y: 12}
           b: {x: 26, y: 11}
         - a: {x: 0, y: 11}
           b: {x: 0, y: 10}
+        - a: {x: 1, y: 11}
+          b: {x: 2, y: 11}
+        - a: {x: 1, y: 11}
+          b: {x: 1, y: 10}
+        - a: {x: 2, y: 11}
+          b: {x: 3, y: 11}
+        - a: {x: 3, y: 11}
+          b: {x: 4, y: 11}
+        - a: {x: 4, y: 11}
+          b: {x: 5, y: 11}
+        - a: {x: 5, y: 11}
+          b: {x: 6, y: 11}
+        - a: {x: 6, y: 11}
+          b: {x: 6, y: 10}
+        - a: {x: 9, y: 11}
+          b: {x: 9, y: 10}
+        - a: {x: 12, y: 11}
+          b: {x: 12, y: 10}
+        - a: {x: 14, y: 11}
+          b: {x: 14, y: 10}
         - a: {x: 26, y: 11}
           b: {x: 26, y: 10}
         - a: {x: 0, y: 10}
           b: {x: 0, y: 9}
+        - a: {x: 6, y: 10}
+          b: {x: 6, y: 9}
+        - a: {x: 9, y: 9}
+          b: {x: 10, y: 9}
+        - a: {x: 9, y: 10}
+          b: {x: 9, y: 9}
+        - a: {x: 11, y: 9}
+          b: {x: 12, y: 9}
+        - a: {x: 12, y: 10}
+          b: {x: 12, y: 9}
+        - a: {x: 14, y: 10}
+          b: {x: 14, y: 9}
         - a: {x: 26, y: 10}
           b: {x: 26, y: 9}
         - a: {x: 0, y: 9}
+          b: {x: 1, y: 9}
+        - a: {x: 0, y: 9}
           b: {x: 0, y: 8}
+        - a: {x: 1, y: 9}
+          b: {x: 2, y: 9}
+        - a: {x: 1, y: 9}
+          b: {x: 1, y: 8}
+        - a: {x: 2, y: 9}
+          b: {x: 3, y: 9}
+        - a: {x: 3, y: 9}
+          b: {x: 4, y: 9}
+        - a: {x: 4, y: 9}
+          b: {x: 5, y: 9}
+        - a: {x: 6, y: 9}
+          b: {x: 6, y: 8}
+        - a: {x: 14, y: 9}
+          b: {x: 14, y: 8}
         - a: {x: 26, y: 9}
           b: {x: 26, y: 8}
         - a: {x: 0, y: 8}
           b: {x: 0, y: 7}
+        - a: {x: 1, y: 8}
+          b: {x: 1, y: 7}
+        - a: {x: 6, y: 8}
+          b: {x: 6, y: 7}
+        - a: {x: 9, y: 7}
+          b: {x: 10, y: 7}
+        - a: {x: 10, y: 7}
+          b: {x: 11, y: 7}
+        - a: {x: 11, y: 7}
+          b: {x: 12, y: 7}
+        - a: {x: 12, y: 7}
+          b: {x: 13, y: 7}
+        - a: {x: 13, y: 7}
+          b: {x: 14, y: 7}
+        - a: {x: 14, y: 8}
+          b: {x: 14, y: 7}
         - a: {x: 26, y: 8}
           b: {x: 26, y: 7}
         - a: {x: 0, y: 7}
           b: {x: 0, y: 6}
-        - a: {x: 26, y: 7}
-          b: {x: 26, y: 6}
-        - a: {x: 0, y: 6}
-          b: {x: 0, y: 5}
         - a: {x: 1, y: 6}
           b: {x: 2, y: 6}
-        - a: {x: 1, y: 6}
-          b: {x: 1, y: 5}
+        - a: {x: 1, y: 7}
+          b: {x: 1, y: 6}
         - a: {x: 2, y: 6}
           b: {x: 3, y: 6}
         - a: {x: 3, y: 6}
           b: {x: 4, y: 6}
+        - a: {x: 4, y: 6}
+          b: {x: 5, y: 6}
+        - a: {x: 5, y: 6}
+          b: {x: 6, y: 6}
+        - a: {x: 6, y: 7}
+          b: {x: 6, y: 6}
+        - a: {x: 26, y: 7}
+          b: {x: 26, y: 6}
+        - a: {x: 0, y: 6}
+          b: {x: 0, y: 5}
         - a: {x: 26, y: 6}
           b: {x: 26, y: 5}
         - a: {x: 0, y: 5}
           b: {x: 0, y: 4}
-        - a: {x: 1, y: 5}
-          b: {x: 1, y: 4}
-        - a: {x: 2, y: 5}
-          b: {x: 3, y: 5}
-        - a: {x: 2, y: 5}
-          b: {x: 2, y: 4}
-        - a: {x: 3, y: 5}
-          b: {x: 4, y: 5}
-        - a: {x: 4, y: 5}
-          b: {x: 4, y: 4}
         - a: {x: 26, y: 5}
           b: {x: 26, y: 4}
         - a: {x: 0, y: 4}
           b: {x: 0, y: 3}
-        - a: {x: 1, y: 4}
-          b: {x: 1, y: 3}
-        - a: {x: 2, y: 4}
-          b: {x: 3, y: 4}
-        - a: {x: 3, y: 4}
-          b: {x: 3, y: 3}
-        - a: {x: 4, y: 4}
-          b: {x: 4, y: 3}
-        - a: {x: 8, y: 4}
-          b: {x: 9, y: 4}
-        - a: {x: 9, y: 4}
-          b: {x: 10, y: 4}
-        - a: {x: 10, y: 4}
-          b: {x: 10, y: 3}
         - a: {x: 26, y: 4}
           b: {x: 26, y: 3}
         - a: {x: 0, y: 3}
           b: {x: 0, y: 2}
         - a: {x: 1, y: 3}
+          b: {x: 2, y: 3}
+        - a: {x: 1, y: 3}
           b: {x: 1, y: 2}
-        - a: {x: 3, y: 3}
-          b: {x: 3, y: 2}
+        - a: {x: 2, y: 3}
+          b: {x: 3, y: 3}
         - a: {x: 4, y: 3}
           b: {x: 5, y: 3}
-        - a: {x: 4, y: 2}
-          b: {x: 5, y: 2}
         - a: {x: 5, y: 3}
           b: {x: 6, y: 3}
-        - a: {x: 5, y: 2}
-          b: {x: 6, y: 2}
         - a: {x: 6, y: 3}
-          b: {x: 7, y: 3}
-        - a: {x: 6, y: 2}
-          b: {x: 7, y: 2}
-        - a: {x: 7, y: 3}
-          b: {x: 8, y: 3}
-        - a: {x: 7, y: 2}
-          b: {x: 8, y: 2}
-        - a: {x: 8, y: 3}
-          b: {x: 9, y: 3}
-        - a: {x: 8, y: 2}
-          b: {x: 9, y: 2}
-        - a: {x: 9, y: 3}
-          b: {x: 9, y: 2}
-        - a: {x: 10, y: 3}
-          b: {x: 10, y: 2}
+          b: {x: 6, y: 2}
         - a: {x: 26, y: 3}
           b: {x: 26, y: 2}
         - a: {x: 0, y: 2}
           b: {x: 0, y: 1}
         - a: {x: 1, y: 2}
           b: {x: 1, y: 1}
-        - a: {x: 2, y: 1}
-          b: {x: 3, y: 1}
-        - a: {x: 3, y: 2}
-          b: {x: 3, y: 1}
-        - a: {x: 4, y: 2}
-          b: {x: 4, y: 1}
-        - a: {x: 10, y: 2}
-          b: {x: 10, y: 1}
+        - a: {x: 6, y: 2}
+          b: {x: 6, y: 1}
         - a: {x: 26, y: 2}
           b: {x: 26, y: 1}
         - a: {x: 0, y: 1}
           b: {x: 0, y: 0}
         - a: {x: 1, y: 1}
           b: {x: 1, y: 0}
-        - a: {x: 4, y: 1}
-          b: {x: 4, y: 0}
-        - a: {x: 10, y: 1}
-          b: {x: 10, y: 0}
+        - a: {x: 6, y: 1}
+          b: {x: 6, y: 0}
         - a: {x: 26, y: 1}
           b: {x: 26, y: 0}
         - a: {x: 0, y: -1}
@@ -257,11 +473,11 @@ MonoBehaviour:
           b: {x: 3, y: -1}
         - a: {x: 3, y: -1}
           b: {x: 4, y: -1}
-        - a: {x: 4, y: 0}
-          b: {x: 4, y: -1}
         - a: {x: 4, y: -1}
           b: {x: 5, y: -1}
         - a: {x: 5, y: -1}
+          b: {x: 6, y: -1}
+        - a: {x: 6, y: 0}
           b: {x: 6, y: -1}
         - a: {x: 6, y: -1}
           b: {x: 7, y: -1}
@@ -270,8 +486,6 @@ MonoBehaviour:
         - a: {x: 8, y: -1}
           b: {x: 9, y: -1}
         - a: {x: 9, y: -1}
-          b: {x: 10, y: -1}
-        - a: {x: 10, y: 0}
           b: {x: 10, y: -1}
         - a: {x: 10, y: -1}
           b: {x: 11, y: -1}
@@ -308,7 +522,7 @@ MonoBehaviour:
         - a: {x: 26, y: 0}
           b: {x: 26, y: -1}
       range: {x: 25, y: 25}
-  dungeonEvents:
+  floorEvents:
     list:
     - Id: Test.00.01.Item
       DungeonName: Dungeon.Test
@@ -328,13 +542,13 @@ MonoBehaviour:
       Y: 2
       EventType: SavePoint
       IsOneTime: 0
-    - Id: Test.00.04.Enemy
+    - Id: Test.00.06.Enemy
       DungeonName: Dungeon.Test
       X: 0
-      Y: 4
+      Y: 6
       EventType: Enemy
       IsOneTime: 0
-  dungeonEventItems:
+  floorEventItems:
     list:
     - Key: Test.00.01.Item
       Value:
@@ -348,11 +562,40 @@ MonoBehaviour:
         EventId: Test.00.03.Item
         ItemId: 101002
         Count: 1
-  dungeonEventEnemies:
+  floorEventEnemies:
     list:
     - Id: 1
-      EventId: Test.00.04.Enemy
+      EventId: Test.00.06.Enemy
       EnemyId: 10101
+  wallEvents:
+    list:
+    - Id: Test.(10,09).(11,09).Door
+      DungeonName: Dungeon.Test
+      LeftX: 10
+      LeftY: 9
+      RightX: 11
+      RightY: 9
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: Lock
+    - Id: Test.(01,10).(01,09).Door
+      DungeonName: Dungeon.Test
+      LeftX: 1
+      LeftY: 10
+      RightX: 1
+      RightY: 9
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: Lock
+    - Id: Test.(06,05).(06,04).Door
+      DungeonName: Dungeon.Test
+      LeftX: 6
+      LeftY: 5
+      RightX: 6
+      RightY: 4
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: Lock
   items:
     list:
     - Name: "\u30B7\u30E7\u30FC\u30C8\u30BD\u30FC\u30C9"
@@ -500,31 +743,31 @@ MonoBehaviour:
       Cost: 0
       BehaviourPriority: 0
       Description: "\u9B54\u529B\u3092\u7528\u3044\u305F\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 11400000, guid: 6533d9b7c26fb4cb69556e32772a7c4f, type: 2}
+      ActionSequences: {fileID: 0}
     - Name: "\u708E\u306E\u3064\u3076\u3066"
       Id: 101013
       Cost: 4
       BehaviourPriority: 0
       Description: "\u708E\u306E\u584A\u3092\u76F8\u624B\u306B\u5411\u3051\u3066\u653E\u3064\u3002\u708E\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 11400000, guid: 32e7d1f07e7d94576a54570d7f026709, type: 2}
+      ActionSequences: {fileID: 0}
     - Name: "\u713C\u93DD"
       Id: 101014
       Cost: 7
       BehaviourPriority: 0
       Description: "\u71B1\u3057\u305F\u713C\u93DD\u3092\u62BC\u3057\u4ED8\u3051\u308B\u3002\u76F8\u624B\u306B\u300C\u706B\u50B7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 11400000, guid: b5f390b9efc6f41dc839f24ff630ebde, type: 2}
+      ActionSequences: {fileID: 0}
     - Name: "\u721B\u308C\u713C\u93DD"
       Id: 101015
       Cost: 22
       BehaviourPriority: 0
       Description: "\u8D64\u71B1\u3057\u305F\u713C\u93DD\u3092\u62BC\u3057\u4ED8\u3051\u308B\u3002\u76F8\u624B\u306B\u300C\u721B\u308C\u706B\u50B7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 11400000, guid: e7e7d94c8759a439cb70206d4750af00, type: 2}
+      ActionSequences: {fileID: 0}
     - Name: "\u9B54\u8853\u5263"
       Id: 101016
       Cost: 10
       BehaviourPriority: 0
       Description: "\u6B66\u5668\u306B\u9B54\u529B\u3092\u5E2F\u3073\u3055\u305B\u3001\u7269\u7406\u7684\u306A\u9B54\u5C5E\u6027\u3067\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 11400000, guid: 332b1d0a35cd14a658f7cef50b5ffebc, type: 2}
+      ActionSequences: {fileID: 0}
     - Name: "\u8E0F\u307F\u8FBC\u307F\u65AC\u308A"
       Id: 101017
       Cost: 16
@@ -806,8 +1049,8 @@ MonoBehaviour:
     - Id: 101005
       Name: "\u706B\u50B7"
       Description: "\u708E\u3084\u71B1\u306B\u3088\u308A\u8CA0\u50B7\u3057\u3066\u3044\u308B\u72B6\u614B\u3002\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u308B\u305F\u3073\u306B\u8FFD\u52A0\u3067\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u3066\u3057\u307E\u3046\u3002"
-      Sequences: {fileID: 11400000, guid: edcc60090800c4ff8afa71b1783bfdeb, type: 2}
+      Sequences: {fileID: 0}
     - Id: 101006
       Name: "\u721B\u308C\u706B\u50B7"
       Description: "\u706B\u50B7\u3088\u308A\u3082\u9177\u304F\u721B\u308C\u3066\u304A\u308A\u3001\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u308B\u305F\u3073\u306B\u8FFD\u52A0\u3067\u5927\u304D\u306A\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u3066\u3057\u307E\u3046\u3002"
-      Sequences: {fileID: 11400000, guid: 2df05f64a322247a4a58fd2d1413686e, type: 2}
+      Sequences: {fileID: 0}

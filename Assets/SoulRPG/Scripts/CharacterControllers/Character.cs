@@ -56,7 +56,7 @@ namespace SoulRPG.CharacterControllers
         public void Move(Vector2Int velocity)
         {
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
-            if (dungeonController.CurrentDungeon.IsExistWall(Position, velocity.ToDirection()))
+            if (!dungeonController.CanMove(Position, velocity.ToDirection()))
             {
                 return;
             }
