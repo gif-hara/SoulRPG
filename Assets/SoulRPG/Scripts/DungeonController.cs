@@ -21,10 +21,18 @@ namespace SoulRPG
 
         private Vector2Int checkPoint;
 
-        public DungeonController(Vector2Int initialCheckPoint, HKUIDocument commandDocumentPrefab, CancellationToken scope)
+        private readonly IExplorationView view;
+
+        public DungeonController(
+            Vector2Int initialCheckPoint,
+            HKUIDocument commandDocumentPrefab,
+            IExplorationView view,
+            CancellationToken scope
+            )
         {
             checkPoint = initialCheckPoint;
             this.commandDocumentPrefab = commandDocumentPrefab;
+            this.view = view;
             this.scope = scope;
         }
 
@@ -160,7 +168,7 @@ namespace SoulRPG
             }
         }
 
-        private UniTask InvokeOnDoorAsync(Character character, MasterData.WallEvent wallEvent)
+        private async UniTask InvokeOnDoorAsync(Character character, MasterData.WallEvent wallEvent)
         {
             var userData = TinyServiceLocator.Resolve<UserData>();
             var isPositiveAccess = wallEvent.IsPositiveAccess(character.Direction);
@@ -172,6 +180,7 @@ namespace SoulRPG
                     {
                         TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
                         userData.AddCompletedWallEventIds(wallEvent.Id);
+                        await view.OnOpenDoorAsync(wallEvent);
                     }
                     break;
                 case "Lock":
@@ -181,8 +190,6 @@ namespace SoulRPG
                     }
                     break;
             }
-
-            return UniTask.CompletedTask;
         }
     }
 }

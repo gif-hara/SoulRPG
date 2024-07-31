@@ -60,7 +60,7 @@ namespace SoulRPG.SceneControllers
             TinyServiceLocator.Register(new GameEvents());
             var player = new Character(debugPlayerName, debugPlayerGrowthParameter, debugPlayerEquipment, debugPlayerAttribute);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
-            var gameView = new ExplorationView(
+            var explorationView = new ExplorationView(
                 gameUIDocumentPrefab,
                 dungeonDocumentPrefab,
                 gameCameraController,
@@ -70,12 +70,17 @@ namespace SoulRPG.SceneControllers
             var inputController = new InputController();
             inputController.ChangeInputType(InputController.InputType.InGame);
             TinyServiceLocator.Register(inputController);
-            var dungeonController = new DungeonController(player.Position, commandDocumentPrefab, destroyCancellationToken);
+            var dungeonController = new DungeonController(
+                player.Position,
+                commandDocumentPrefab,
+                explorationView,
+                destroyCancellationToken
+                );
             TinyServiceLocator.Register(dungeonController);
             TinyServiceLocator.Register(new UserData());
             dungeonController.Setup(debugDungeonName);
             playerController.Attach(player, gameMenuDocumentPrefab, destroyCancellationToken);
-            gameView.Open(destroyCancellationToken);
+            explorationView.Open(destroyCancellationToken);
             var testMessageId = 0;
             Observable.EveryUpdate(destroyCancellationToken)
                 .Subscribe(async _ =>
