@@ -30,6 +30,8 @@ namespace SoulRPG
 
         private readonly Dictionary<MasterData.WallEvent, HKUIDocument> maptipWallEventObjects = new();
 
+        private readonly Dictionary<MasterData.WallEvent, HKUIDocument> dungeonWallEventObjects = new();
+
         public ExplorationView(
             HKUIDocument uiDocumentPrefab,
             HKUIDocument dungeonDocumentPrefab,
@@ -52,7 +54,7 @@ namespace SoulRPG
             var wallEvents = TinyServiceLocator.Resolve<MasterData>().WallEvents.List
                 .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name);
             SetupMiniMap(uiDocument, dungeonController, floorEvents, wallEvents, character, scope);
-            SetupDungeon(dungeonController, floorEvents);
+            SetupDungeon(dungeonController, floorEvents, wallEvents);
             SetupMessage(uiDocument, character, scope);
             SetupStatuses(uiDocument, character, scope);
         }
@@ -152,7 +154,8 @@ namespace SoulRPG
 
         private void SetupDungeon(
             DungeonController dungeonController,
-            IEnumerable<MasterData.FloorEvent> floorEvents
+            IEnumerable<MasterData.FloorEvent> floorEvents,
+            IEnumerable<MasterData.WallEvent> wallEvents
             )
         {
             var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
@@ -173,6 +176,7 @@ namespace SoulRPG
             }
 
             CreateFloorEventObjects(floorEvents);
+            CreateWallEventObjects(wallEvents);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAcquiredDungeonEvent
                 .Subscribe(x =>
@@ -197,6 +201,20 @@ namespace SoulRPG
                     var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{i.EventType}"), dungeonDocument.transform);
                     eventObject.position = new Vector3(i.X, 0, i.Y);
                     dungeonFloorEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
+                }
+            }
+            void CreateWallEventObjects(IEnumerable<MasterData.WallEvent> wallEvents)
+            {
+                foreach (var i in wallEvents)
+                {
+                    var isHorizontal = i.LeftY == i.RightY;
+                    var directionName = isHorizontal ? "Top" : "Left";
+                    var element = Object.Instantiate(dungeonDocument.Q<HKUIDocument>($"Dungeon.Wall.Event.{i.EventType}.{directionName}"), dungeonDocument.transform);
+                    dungeonWallEventObjects.Add(i, element);
+                    element.transform.position = new Vector3(i.LeftX, 0, i.LeftY);
+                    var isUnlock = TinyServiceLocator.Resolve<UserData>().ContainsCompletedWallEventId(i.Id);
+                    element.Q("Open").SetActive(isUnlock);
+                    element.Q("Close").SetActive(!isUnlock);
                 }
             }
         }
@@ -285,6 +303,11 @@ namespace SoulRPG
             {
                 element.Q("Open").SetActive(true);
                 element.Q("Close").SetActive(false);
+            }
+            if (dungeonWallEventObjects.TryGetValue(wallEvent, out var dungeonElement))
+            {
+                dungeonElement.Q("Open").SetActive(true);
+                dungeonElement.Q("Close").SetActive(false);
             }
             return UniTask.CompletedTask;
         }
