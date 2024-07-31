@@ -50,8 +50,6 @@ MonoBehaviour:
         - a: {x: 13, y: 25}
           b: {x: 14, y: 25}
         - a: {x: 14, y: 25}
-          b: {x: 14, y: 24}
-        - a: {x: 14, y: 25}
           b: {x: 15, y: 25}
         - a: {x: 15, y: 25}
           b: {x: 16, y: 25}
@@ -415,18 +413,26 @@ MonoBehaviour:
           b: {x: 6, y: 6}
         - a: {x: 6, y: 7}
           b: {x: 6, y: 6}
+        - a: {x: 9, y: 7}
+          b: {x: 9, y: 6}
         - a: {x: 26, y: 7}
           b: {x: 26, y: 6}
         - a: {x: 0, y: 6}
           b: {x: 0, y: 5}
+        - a: {x: 9, y: 6}
+          b: {x: 9, y: 5}
         - a: {x: 26, y: 6}
           b: {x: 26, y: 5}
         - a: {x: 0, y: 5}
           b: {x: 0, y: 4}
+        - a: {x: 9, y: 5}
+          b: {x: 9, y: 4}
         - a: {x: 26, y: 5}
           b: {x: 26, y: 4}
         - a: {x: 0, y: 4}
           b: {x: 0, y: 3}
+        - a: {x: 9, y: 4}
+          b: {x: 9, y: 3}
         - a: {x: 26, y: 4}
           b: {x: 26, y: 3}
         - a: {x: 0, y: 3}
@@ -443,6 +449,8 @@ MonoBehaviour:
           b: {x: 6, y: 3}
         - a: {x: 6, y: 3}
           b: {x: 6, y: 2}
+        - a: {x: 9, y: 3}
+          b: {x: 9, y: 2}
         - a: {x: 26, y: 3}
           b: {x: 26, y: 2}
         - a: {x: 0, y: 2}
@@ -451,6 +459,8 @@ MonoBehaviour:
           b: {x: 1, y: 1}
         - a: {x: 6, y: 2}
           b: {x: 6, y: 1}
+        - a: {x: 9, y: 2}
+          b: {x: 9, y: 1}
         - a: {x: 26, y: 2}
           b: {x: 26, y: 1}
         - a: {x: 0, y: 1}
@@ -459,6 +469,8 @@ MonoBehaviour:
           b: {x: 1, y: 0}
         - a: {x: 6, y: 1}
           b: {x: 6, y: 0}
+        - a: {x: 9, y: 1}
+          b: {x: 9, y: 0}
         - a: {x: 26, y: 1}
           b: {x: 26, y: 0}
         - a: {x: 0, y: -1}
@@ -487,6 +499,8 @@ MonoBehaviour:
           b: {x: 9, y: -1}
         - a: {x: 9, y: -1}
           b: {x: 10, y: -1}
+        - a: {x: 9, y: 0}
+          b: {x: 9, y: -1}
         - a: {x: 10, y: -1}
           b: {x: 11, y: -1}
         - a: {x: 11, y: -1}
@@ -584,15 +598,6 @@ MonoBehaviour:
       LeftY: 10
       RightX: 1
       RightY: 9
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: Lock
-    - Id: Test.(06,05).(06,04).Door
-      DungeonName: Dungeon.Test
-      LeftX: 6
-      LeftY: 5
-      RightX: 6
-      RightY: 4
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: Lock
