@@ -2,7 +2,6 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
-using R3;
 using UnityEngine;
 using UnitySequencerSystem;
 
@@ -20,14 +19,30 @@ namespace SoulRPG
         [SerializeField]
         private bool waitForInput = true;
 
+        [SerializeField]
+        private bool ignoreIfCharacterDead = false;
+
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
+            container.TryResolve<BattleCharacter>("Actor", out var actor);
+            container.TryResolve<BattleCharacter>("Target", out var target);
+            if (ignoreIfCharacterDead)
+            {
+                if (actor != null && actor.BattleStatus.IsDead)
+                {
+                    return;
+                }
+                if (target != null && target.BattleStatus.IsDead)
+                {
+                    return;
+                }
+            }
             var message = format;
-            if(container.TryResolve<BattleCharacter>("Actor", out var actor))
+            if (actor != null)
             {
                 message = message.Replace("{Actor}", actor.BattleStatus.Name);
             }
-            if(container.TryResolve<BattleCharacter>("Target", out var target))
+            if (target != null)
             {
                 message = message.Replace("{Target}", target.BattleStatus.Name);
             }
