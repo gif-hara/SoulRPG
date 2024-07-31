@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101018
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 7288459789387432183
+  - rid: 7538228103530414693
+  references:
+    version: 2
+    RefIds:
+    - rid: 7288459789387432183
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u7D20\u65E9\u304F{Target}\u306B\u5411\u304B\u3063\u3066\u75BE\u98A8\u306E\u3054\u3068\u304F\u99C6\u3051\u629C\u3051\u308B\u3002"
+        waitForInput: 1
+    - rid: 7538228103530414693
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 7538228103530414694
+        targetType: 1
+        waitForInput: 1
+        canCombo: 1
+    - rid: 7538228103530414694
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 1
+        attackType: 1
+        attackAttribute: 6
