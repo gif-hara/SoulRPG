@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using HK;
 using R3;
 using UnityEngine;
 
@@ -21,6 +22,22 @@ namespace SoulRPG
         public readonly Subject<HashSet<string>> OnClearTemporaryCompletedEventIds = new();
 
         public readonly Subject<(string dungeonName, Vector2Int reachedPosition)> OnAddReachedPoint = new();
+
+        public async UniTask ShowMessageAndWaitForSubmitInputAsync(string message)
+        {
+            OnRequestShowMessage.OnNext(message);
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            var tempInputType = inputController.CurrentInputType;
+            inputController.ChangeInputType(InputController.InputType.UI);
+            inputController.InputActions.UI.Submit.OnPerformedAsObservable()
+                .Take(1)
+                .Subscribe(_ =>
+                {
+                    OnSubmitInput.OnNext(Unit.Default);
+                });
+            await WaitForSubmitInputAsync();
+            inputController.ChangeInputType(tempInputType);
+        }
 
         public async UniTask WaitForSubmitInputAsync()
         {
