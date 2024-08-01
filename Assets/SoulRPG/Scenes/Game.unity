@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterData: {fileID: 11400000, guid: be2ddabe0b4b0cd4ba8667820a79ffe3, type: 2}
+  gameRule: {fileID: 11400000, guid: 9cfe9440296db4bdc9323e2917d74468, type: 2}
   gameCameraControllerPrefab: {fileID: 362200604035762854, guid: 4ae303bf33904664a88a30327f24fac0, type: 3}
   gameUIDocumentPrefab: {fileID: 3672498495014125879, guid: 7bf281830fc4fa840be637dc2e71d6ea, type: 3}
   gameMenuDocumentPrefab: {fileID: 6138824259176453115, guid: d58e9662b67901746a479003070fb56f, type: 3}
@@ -173,6 +174,7 @@ MonoBehaviour:
   debugPosition: {x: 0, y: 0}
   debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
   debugPlayerGrowthParameter:
+    level: 1
     vitality: 10
     stamina: 10
     physicalStrength: 10

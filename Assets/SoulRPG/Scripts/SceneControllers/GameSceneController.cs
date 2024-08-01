@@ -18,6 +18,9 @@ namespace SoulRPG.SceneControllers
         private MasterData masterData;
 
         [SerializeField]
+        private GameRule gameRule;
+
+        [SerializeField]
         private GameCameraController gameCameraControllerPrefab;
 
         [SerializeField]
@@ -58,6 +61,7 @@ namespace SoulRPG.SceneControllers
             await BootSystem.IsReady;
             TinyServiceLocator.Register(masterData);
             TinyServiceLocator.Register(new GameEvents());
+            TinyServiceLocator.Register(gameRule);
             var player = new Character(debugPlayerName, debugPlayerGrowthParameter, debugPlayerEquipment, debugPlayerAttribute);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             var explorationView = new ExplorationView(
