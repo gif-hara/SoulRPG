@@ -167,7 +167,7 @@ MonoBehaviour:
   gameRule: {fileID: 11400000, guid: 9cfe9440296db4bdc9323e2917d74468, type: 2}
   gameCameraControllerPrefab: {fileID: 362200604035762854, guid: 4ae303bf33904664a88a30327f24fac0, type: 3}
   gameUIDocumentPrefab: {fileID: 3672498495014125879, guid: 7bf281830fc4fa840be637dc2e71d6ea, type: 3}
-  gameMenuDocumentPrefab: {fileID: 6138824259176453115, guid: d58e9662b67901746a479003070fb56f, type: 3}
+  gameMenuBundlePrefab: {fileID: 6138824259176453115, guid: d58e9662b67901746a479003070fb56f, type: 3}
   dungeonDocumentPrefab: {fileID: 4041864904137408651, guid: 3ac1c3ec8df76f547abe7a635ad62857, type: 3}
   commandDocumentPrefab: {fileID: 3672498495014125879, guid: 65d5d3d49490d8c47806f799c59bc1a4, type: 3}
   debugDungeonName: Dungeon.Test

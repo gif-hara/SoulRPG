@@ -27,7 +27,7 @@ namespace SoulRPG.SceneControllers
         private HKUIDocument gameUIDocumentPrefab;
 
         [SerializeField]
-        private HKUIDocument gameMenuDocumentPrefab;
+        private HKUIDocument gameMenuBundlePrefab;
 
         [SerializeField]
         private HKUIDocument dungeonDocumentPrefab;
@@ -83,7 +83,7 @@ namespace SoulRPG.SceneControllers
             TinyServiceLocator.Register(dungeonController);
             TinyServiceLocator.Register(new UserData());
             dungeonController.Setup(debugDungeonName);
-            playerController.Attach(player, gameMenuDocumentPrefab, destroyCancellationToken);
+            playerController.Attach(player, gameMenuBundlePrefab, destroyCancellationToken);
             explorationView.Open(destroyCancellationToken);
             var testMessageId = 0;
             Observable.EveryUpdate(destroyCancellationToken)

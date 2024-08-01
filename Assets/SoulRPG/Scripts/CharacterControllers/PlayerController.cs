@@ -12,7 +12,7 @@ namespace SoulRPG
     /// </summary>
     public sealed class PlayerController
     {
-        public void Attach(Character player, HKUIDocument gameMenuDocumentPrefab, CancellationToken scope)
+        public void Attach(Character player, HKUIDocument gameMenuBundlePrefab, CancellationToken scope)
         {
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var inGameActions = inputController.InputActions.InGame;
@@ -61,7 +61,7 @@ namespace SoulRPG
             inGameActions.ToMenu.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    var gameMenuView = new GameMenuView(gameMenuDocumentPrefab, player);
+                    var gameMenuView = new GameMenuView(gameMenuBundlePrefab, player);
                     gameMenuView.OpenAsync().Forget();
                 })
                 .RegisterTo(scope);
