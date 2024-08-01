@@ -5,7 +5,9 @@ using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SoulRPG
 {
@@ -51,39 +53,62 @@ namespace SoulRPG
                 new()
                 {
                     header = "装備",
-                    onClick = () => stateMachine.Change(StateSelectEquipmentPartAsync)
+                    activateAction = element =>
+                    {
+                        element.Q<TMP_Text>("Header").text = "装備";
+                        var button = element.Q<Button>("Button");
+                        button.OnClickAsObservable()
+                        .Subscribe(_ =>
+                        {
+                            stateMachine.Change(StateSelectEquipmentPartAsync);
+                        })
+                        .RegisterTo(element.destroyCancellationToken);
+                    },
                 },
                 new()
                 {
                     header = "道具",
-                    onClick = () =>
+                    activateAction = element =>
                     {
-                        Debug.Log("道具");
+                        element.Q<TMP_Text>("Header").text = "道具";
+                        var button = element.Q<Button>("Button");
+                        button.OnClickAsObservable()
+                        .Subscribe(_ =>
+                        {
+                            Debug.Log("道具");
+                        })
+                        .RegisterTo(element.destroyCancellationToken);
                     },
-                    onLeft = () =>
-                    {
-                        Debug.Log("左");
-                    },
-                    onRight = () =>
-                    {
-                        Debug.Log("右");
-                    }
                 },
                 new()
                 {
                     header = "ステータス",
-                    onClick = () =>
+                    activateAction = element =>
                     {
-                        Debug.Log("ステータス");
-                    }
+                        element.Q<TMP_Text>("Header").text = "ステータス";
+                        var button = element.Q<Button>("Button");
+                        button.OnClickAsObservable()
+                        .Subscribe(_ =>
+                        {
+                            Debug.Log("ステータス");
+                        })
+                        .RegisterTo(element.destroyCancellationToken);
+                    },
                 },
                 new()
                 {
                     header = "システム",
-                    onClick = () =>
+                    activateAction = element =>
                     {
-                        Debug.Log("システム");
-                    }
+                        element.Q<TMP_Text>("Header").text = "システム";
+                        var button = element.Q<Button>("Button");
+                        button.OnClickAsObservable()
+                        .Subscribe(_ =>
+                        {
+                            Debug.Log("システム");
+                        })
+                        .RegisterTo(element.destroyCancellationToken);
+                    },
                 },
             },
             0
@@ -104,15 +129,18 @@ namespace SoulRPG
             var weaponElements = character.Equipment.GetWeaponIds().Select((x, i) =>
             {
                 var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
-                return new GameListView.Element()
+                return new System.Action<HKUIDocument>(element =>
                 {
-                    header = $"武器{i + 1}: {weaponName}",
-                    onClick = () =>
+                    element.Q<TMP_Text>("Header").text = $"武器{i + 1}: {weaponName}";
+                    var button = element.Q<Button>("Button");
+                    button.OnClickAsObservable()
+                    .Subscribe(_ =>
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Weapon1);
                         stateMachine.Change(StateSelectWeaponAsync);
-                    }
-                };
+                    })
+                    .RegisterTo(element.destroyCancellationToken);
+                });
             });
             var headElement = new GameListView.Element()
             {
