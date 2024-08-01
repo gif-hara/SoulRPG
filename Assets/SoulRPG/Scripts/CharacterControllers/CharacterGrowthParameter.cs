@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace SoulRPG
@@ -11,50 +10,59 @@ namespace SoulRPG
     public sealed class CharacterGrowthParameter
     {
         [SerializeField]
+        private int level;
+        public int Level => level;
+
+        [SerializeField]
         private int vitality;
-        public int Vitality => vitality;
+        public int Vitality => vitality + level;
 
         [SerializeField]
         public int stamina;
-        public int Stamina => stamina;
+        public int Stamina => stamina + level;
 
         [SerializeField]
         private int physicalStrength;
-        public int PhysicalStrength => physicalStrength;
+        public int PhysicalStrength => physicalStrength + level;
 
         [SerializeField]
         private int magicalStrength;
-        public int MagicalStrength => magicalStrength;
+        public int MagicalStrength => magicalStrength + level;
 
         [SerializeField]
         private int speed;
-        public int Speed => speed;
+        public int Speed => speed + level;
 
-        public int HitPoint => vitality * 8;
+        public int HitPoint => (vitality + level) * 8;
 
         public void AddVitality(int value)
         {
             vitality += value;
+            level += value;
         }
 
         public void AddStamina(int value)
         {
             stamina += value;
+            level += value;
         }
 
         public void AddPhysicalStrength(int value)
         {
             physicalStrength += value;
+            level += value;
         }
 
         public void AddMagicalStrength(int value)
         {
             magicalStrength += value;
+            level += value;
         }
 
         public void AddSpeed(int value)
         {
             speed += value;
+            level += value;
         }
     }
 }
