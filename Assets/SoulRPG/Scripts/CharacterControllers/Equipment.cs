@@ -188,7 +188,7 @@ namespace SoulRPG
 
         public Equipment()
         {
-            for (var i = 0; i < 3; i++)
+            for (var i = 0; i < 4; i++)
             {
                 weaponIds.Add(new ReactiveProperty<int>());
             }
@@ -201,7 +201,7 @@ namespace SoulRPG
 
         public Equipment(EquipmentBlueprint blueprint)
         {
-            for (var i = 0; i < 3; i++)
+            for (var i = 0; i < 4; i++)
             {
                 weaponIds.Add(new ReactiveProperty<int>(blueprint.WeaponIds[i]));
             }

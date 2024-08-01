@@ -175,11 +175,11 @@ MonoBehaviour:
   debugPlayerGrowthParameter:
     vitality: 10
     stamina: 10
-    physicalStrength: 90
+    physicalStrength: 10
     magicalStrength: 10
     speed: 10
   debugPlayerEquipment:
-    weaponIds: 6d8e01000000000000000000
+    weaponIds: 00000000000000000000000000000000
     headId: 0
     bodyId: 0
     armId: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
     fireCutRate: 0
     thunderCutRate: 0
     speed: 0
+    experience: 0
     attribute: 0
 --- !u!1 &897640241
 GameObject:
