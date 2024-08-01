@@ -4,7 +4,9 @@ using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SoulRPG
 {
@@ -54,12 +56,17 @@ namespace SoulRPG
         private async UniTask StateRootMenuAsync(CancellationToken scope)
         {
             var actions = TinyServiceLocator.Resolve<InputController>().InputActions.UI;
-            var listDocument = CreateList(new List<GameListView.Element>
+            var listDocument = CreateList(new List<System.Action<HKUIDocument>>
             {
-                new()
+                element =>
                 {
-                    header = "レベルアップ",
-                    onClick = () => Debug.Log("レベルアップ"),
+                    element.Q<TMP_Text>("Header").text = "レベルアップ";
+                    var button = element.Q<Button>("Button");
+                    button.OnClickAsObservable()
+                    .Subscribe(_ =>
+                    {
+                    })
+                    .RegisterTo(element.destroyCancellationToken);
                 },
             },
             0
@@ -83,14 +90,14 @@ namespace SoulRPG
 
         private HKUIDocument CreateList
         (
-            IEnumerable<GameListView.Element> listElements,
+            IEnumerable<System.Action<HKUIDocument>> elementActivateActions,
             int initialElement
         )
         {
             return GameListView.Create
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
-                listElements,
+                elementActivateActions,
                 initialElement
             );
         }
