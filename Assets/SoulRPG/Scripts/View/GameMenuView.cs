@@ -29,17 +29,6 @@ namespace SoulRPG
 
         private IContext context;
 
-        public class ListElement
-        {
-            public string header;
-
-            public System.Action onClick;
-
-            public System.Action onLeft;
-
-            public System.Action onRight;
-        }
-
         public GameMenuView(HKUIDocument documentBundlePrefab, Character character)
         {
             this.documentBundlePrefab = documentBundlePrefab;
@@ -60,7 +49,7 @@ namespace SoulRPG
         private async UniTask StateRootMenuAsync(CancellationToken scope)
         {
             var actions = TinyServiceLocator.Resolve<InputController>().InputActions.UI;
-            var listDocument = CreateListDocument(new List<ListElement>
+            var listDocument = CreateList(new List<GameListView.Element>
             {
                 new()
                 {
@@ -118,7 +107,7 @@ namespace SoulRPG
             var weaponElements = character.Equipment.GetWeaponIds().Select((x, i) =>
             {
                 var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
-                return new ListElement()
+                return new GameListView.Element()
                 {
                     header = $"武器{i + 1}: {weaponName}",
                     onClick = () =>
@@ -128,7 +117,7 @@ namespace SoulRPG
                     }
                 };
             });
-            var headElement = new ListElement()
+            var headElement = new GameListView.Element()
             {
                 header = $"頭: {(character.Equipment.HeadId == 0 ? "なし" : character.Equipment.HeadId.GetMasterDataItem().Name)}",
                 onClick = () =>
@@ -137,7 +126,7 @@ namespace SoulRPG
                     stateMachine.Change(StateSelectArmorHeadAsync);
                 }
             };
-            var bodyElement = new ListElement()
+            var bodyElement = new GameListView.Element()
             {
                 header = $"胴: {(character.Equipment.BodyId == 0 ? "なし" : character.Equipment.BodyId.GetMasterDataItem().Name)}",
                 onClick = () =>
@@ -146,7 +135,7 @@ namespace SoulRPG
                     stateMachine.Change(StateSelectArmorBodyAsync);
                 }
             };
-            var armElement = new ListElement()
+            var armElement = new GameListView.Element()
             {
                 header = $"腕: {(character.Equipment.ArmId == 0 ? "なし" : character.Equipment.ArmId.GetMasterDataItem().Name)}",
                 onClick = () =>
@@ -155,7 +144,7 @@ namespace SoulRPG
                     stateMachine.Change(StateSelectArmorArmsAsync);
                 }
             };
-            var legElement = new ListElement()
+            var legElement = new GameListView.Element()
             {
                 header = $"脚: {(character.Equipment.LegId == 0 ? "なし" : character.Equipment.LegId.GetMasterDataItem().Name)}",
                 onClick = () =>
@@ -167,7 +156,7 @@ namespace SoulRPG
             var accessoryElements = character.Equipment.GetAccessoryIds().Select((x, i) =>
             {
                 var accessoryName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
-                return new ListElement()
+                return new GameListView.Element()
                 {
                     header = $"アクセサリ{i + 1}: {accessoryName}",
                     onClick = () =>
@@ -177,7 +166,7 @@ namespace SoulRPG
                     }
                 };
             });
-            var listElements = new List<ListElement>();
+            var listElements = new List<GameListView.Element>();
             listElements.AddRange(weaponElements);
             listElements.Add(headElement);
             listElements.Add(bodyElement);
@@ -185,7 +174,12 @@ namespace SoulRPG
             listElements.Add(legElement);
             listElements.AddRange(accessoryElements);
 
-            var listDocument = CreateListDocument(listElements, 0);
+            var listDocument = GameListView.Create
+            (
+                documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
+                listElements,
+                0
+            );
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -203,7 +197,7 @@ namespace SoulRPG
                 .Select(x =>
                 {
                     var itemName = x.Key.GetMasterDataItem().Name;
-                    return new ListElement()
+                    return new GameListView.Element()
                     {
                         header = itemName,
                         onClick = () =>
@@ -214,7 +208,11 @@ namespace SoulRPG
                         }
                     };
                 });
-            var listDocument = CreateListDocument(listElements, 0);
+            var listDocument = CreateList
+            (
+                listElements,
+                0
+            );
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -232,7 +230,7 @@ namespace SoulRPG
                 .Select(x =>
                 {
                     var itemName = x.Key.GetMasterDataItem().Name;
-                    return new ListElement
+                    return new GameListView.Element
                     {
                         header = itemName,
                         onClick = () =>
@@ -243,7 +241,7 @@ namespace SoulRPG
                         }
                     };
                 });
-            var listDocument = CreateListDocument(listElements, 0);
+            var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -261,7 +259,7 @@ namespace SoulRPG
                 .Select(x =>
                 {
                     var itemName = x.Key.GetMasterDataItem().Name;
-                    return new ListElement
+                    return new GameListView.Element
                     {
                         header = itemName,
                         onClick = () =>
@@ -272,7 +270,7 @@ namespace SoulRPG
                         }
                     };
                 });
-            var listDocument = CreateListDocument(listElements, 0);
+            var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -290,7 +288,7 @@ namespace SoulRPG
                 .Select(x =>
                 {
                     var itemName = x.Key.GetMasterDataItem().Name;
-                    return new ListElement
+                    return new GameListView.Element
                     {
                         header = itemName,
                         onClick = () =>
@@ -301,7 +299,7 @@ namespace SoulRPG
                         }
                     };
                 });
-            var listDocument = CreateListDocument(listElements, 0);
+            var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -319,7 +317,7 @@ namespace SoulRPG
                 .Select(x =>
                 {
                     var itemName = x.Key.GetMasterDataItem().Name;
-                    return new ListElement
+                    return new GameListView.Element
                     {
                         header = itemName,
                         onClick = () =>
@@ -330,7 +328,7 @@ namespace SoulRPG
                         }
                     };
                 });
-            var listDocument = CreateListDocument(listElements, 0);
+            var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -348,7 +346,7 @@ namespace SoulRPG
                 .Select(x =>
                 {
                     var itemName = x.Key.GetMasterDataItem().Name;
-                    return new ListElement
+                    return new GameListView.Element
                     {
                         header = itemName,
                         onClick = () =>
@@ -359,7 +357,7 @@ namespace SoulRPG
                         }
                     };
                 });
-            var listDocument = CreateListDocument(listElements, 0);
+            var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -376,53 +374,18 @@ namespace SoulRPG
             return UniTask.CompletedTask;
         }
 
-        private HKUIDocument CreateListDocument(
-            IEnumerable<ListElement> listElements,
+        private HKUIDocument CreateList
+        (
+            IEnumerable<GameListView.Element> listElements,
             int initialElement
-            )
+        )
         {
-            var document = Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"));
-            var listParent = document.Q<RectTransform>("Area.List");
-            var listElementPrefab = document.Q<HKUIDocument>("ListElementPrefab");
-            var index = 0;
-            foreach (var listElement in listElements)
-            {
-                var element = Object.Instantiate(listElementPrefab, listParent);
-                var buttonObject = element.Q("Button");
-                element.Q<TMP_Text>("Header").text = listElement.header;
-                var button = element.Q<Button>("Button");
-                button.OnClickAsObservable()
-                    .Subscribe(_ =>
-                    {
-                        listElement.onClick();
-                    })
-                    .RegisterTo(element.destroyCancellationToken);
-                var navigation = button.navigation;
-                navigation.mode = Navigation.Mode.Vertical;
-                navigation.wrapAround = true;
-                button.navigation = navigation;
-                inputController.InputActions.UI.Navigate.OnPerformedAsObservable()
-                    .Where(x => x.ReadValue<Vector2>().x != 0)
-                    .Where(_ => EventSystem.current.currentSelectedGameObject == buttonObject)
-                    .Subscribe(x =>
-                    {
-                        if (x.ReadValue<Vector2>().x < 0)
-                        {
-                            listElement.onLeft?.Invoke();
-                        }
-                        else if (x.ReadValue<Vector2>().x > 0)
-                        {
-                            listElement.onRight?.Invoke();
-                        }
-                    })
-                    .RegisterTo(element.destroyCancellationToken);
-                if (index == initialElement)
-                {
-                    EventSystem.current.SetSelectedGameObject(button.gameObject);
-                }
-                index++;
-            }
-            return document;
+            return GameListView.Create
+            (
+                documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
+                listElements,
+                initialElement
+            );
         }
 
         public interface IContext
