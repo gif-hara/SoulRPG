@@ -1,7 +1,6 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
-using R3;
 using SoulRPG.BattleSystems;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
@@ -15,7 +14,7 @@ namespace SoulRPG
     {
         public MasterData.Dungeon CurrentDungeon { get; private set; }
 
-        private readonly HKUIDocument commandDocumentPrefab;
+        private readonly HKUIDocument gameMenuBundlePrefab;
 
         private readonly CancellationToken scope;
 
@@ -25,13 +24,13 @@ namespace SoulRPG
 
         public DungeonController(
             Vector2Int initialCheckPoint,
-            HKUIDocument commandDocumentPrefab,
+            HKUIDocument gameMenuBundlePrefab,
             IExplorationView view,
             CancellationToken scope
             )
         {
             checkPoint = initialCheckPoint;
-            this.commandDocumentPrefab = commandDocumentPrefab;
+            this.gameMenuBundlePrefab = gameMenuBundlePrefab;
             this.view = view;
             this.scope = scope;
         }
@@ -153,14 +152,16 @@ namespace SoulRPG
             return UniTask.CompletedTask;
         }
 
-        private UniTask InvokeOnSavePointAsync(Character character, MasterData.FloorEvent floorEvent)
+        private async UniTask InvokeOnSavePointAsync(Character character, MasterData.FloorEvent floorEvent)
         {
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("ここはセーブポイントのようだ。一休みしよう");
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            await gameEvents.ShowMessageAndWaitForSubmitInputAsync("ここはセーブポイントのようだ。一休みしよう");
             var userData = TinyServiceLocator.Resolve<UserData>();
             userData.ClearTemporaryCompletedFloorEventIds();
             character.InstanceStatus.FullRecovery();
             checkPoint = character.Position;
-            return UniTask.CompletedTask;
+            var savePointMenuView = new SavePointMenuView(gameMenuBundlePrefab, character);
+            await savePointMenuView.OpenAsync();
         }
 
         private async UniTask InvokeOnEnemyAsync(Character character, MasterData.FloorEvent floorEvent)
@@ -174,7 +175,7 @@ namespace SoulRPG
             var masterDataEventEnemy = TinyServiceLocator.Resolve<MasterData>().FloorEventEnemies.Get(floorEvent.Id);
             var masterDataEnemy = TinyServiceLocator.Resolve<MasterData>().Enemies.Get(masterDataEventEnemy.EnemyId);
             var battleResult = await BattleSystem.BeginAsync(
-                new BattleCharacter(character, new Input(commandDocumentPrefab)),
+                new BattleCharacter(character, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command"))),
                 masterDataEnemy.CreateBattleCharacter(),
                 scope
                 );
