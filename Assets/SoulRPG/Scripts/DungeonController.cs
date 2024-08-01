@@ -160,8 +160,8 @@ namespace SoulRPG
             userData.ClearTemporaryCompletedFloorEventIds();
             character.InstanceStatus.FullRecovery();
             checkPoint = character.Position;
-            var savePointMenuView = new SavePointMenuView(gameMenuBundlePrefab, character);
-            await savePointMenuView.OpenAsync();
+            var view = new GameSavePointMenuView(gameMenuBundlePrefab, character);
+            await view.OpenAsync();
         }
 
         private async UniTask InvokeOnEnemyAsync(Character character, MasterData.FloorEvent floorEvent)
