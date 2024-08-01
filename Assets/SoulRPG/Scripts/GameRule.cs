@@ -6,17 +6,18 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    [Serializable]
-    public sealed class GameRule
+    [CreateAssetMenu(menuName = "SoulRPG/GameRule")]
+    public sealed class GameRule : ScriptableObject
     {
         [SerializeField]
         private ExperienceTableData experienceTableData;
         public ExperienceTableData ExperienceTable => experienceTableData;
 
+        [Serializable]
         public class ExperienceTableData
         {
             [SerializeField]
-            private int rate;
+            private float rate;
 
             public int GetNeedExperience(int level)
             {
