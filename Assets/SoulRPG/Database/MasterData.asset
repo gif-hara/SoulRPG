@@ -614,6 +614,40 @@ MonoBehaviour:
       Id: 101002
     - Name: "\u30D0\u30B9\u30BF\u30FC\u30BD\u30FC\u30C9"
       Id: 101003
+    - Name: "\u30DA\u30CD\u30C8\u30EC\u30FC\u30BF\u30FC"
+      Id: 101004
+    - Name: "\u30AF\u30E9\u30D6"
+      Id: 101005
+    - Name: "\u30DD\u30A4\u30BA\u30F3\u30C0\u30AC\u30FC"
+      Id: 101006
+    - Name: "\u30B9\u30D1\u30FC\u30AF\u30A8\u30C3\u30B8"
+      Id: 101007
+    - Name: "\u30A6\u30A3\u30EB\u30E1\u30A4\u30B9"
+      Id: 101008
+    - Name: "\u30D5\u30EC\u30A4\u30E0\u30ED\u30C3\u30C9"
+      Id: 101009
+    - Name: "\u713C\u93DD"
+      Id: 101010
+    - Name: "\u30B5\u30F3\u30C0\u30FC\u30ED\u30C3\u30C9"
+      Id: 101011
+    - Name: "\u9752\u9B54\u5C0E\u58EB\u306E\u5263"
+      Id: 101012
+    - Name: "\u30B0\u30EC\u30FC\u30C8\u30BD\u30FC\u30C9"
+      Id: 101013
+    - Name: "\u706B\u82B1\u306E\u77ED\u5263"
+      Id: 101014
+    - Name: "\u96F7\u546A\u306E\u6756"
+      Id: 101015
+    - Name: "\u30D0\u30B9\u30BF\u30FC\u30AF\u30E9\u30D6"
+      Id: 101016
+    - Name: "\u30AF\u30A4\u30C3\u30AF\u30DC\u30A6"
+      Id: 101017
+    - Name: "\u30E9\u30F3\u30B9"
+      Id: 101018
+    - Name: "\u96F7\u306E\u5263"
+      Id: 101019
+    - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u5927\u69CD"
+      Id: 101020
     - Name: "\u30C6\u30B9\u30C8\u6B66\u5668"
       Id: 101997
     - Name: "\u7D20\u624B"
@@ -628,6 +662,14 @@ MonoBehaviour:
       Id: 104001
     - Name: "\u9A0E\u58EB\u306E\u8DB3\u7532"
       Id: 105001
+    - Name: "\u9769\u306E\u515C"
+      Id: 102002
+    - Name: "\u9769\u306E\u93A7"
+      Id: 103002
+    - Name: "\u9769\u306E\u624B\u7532"
+      Id: 104002
+    - Name: "\u9769\u306E\u8DB3\u7532"
+      Id: 105002
     - Name: "\u9244\u306E\u6307\u8F2A"
       Id: 106001
   weapons:
@@ -655,6 +697,142 @@ MonoBehaviour:
       Skill1: 101001
       Skill2: 101004
       Skill3: 0
+      Skill4: 0
+    - ItemId: 101004
+      Strength: 117
+      Speed: 4
+      AttackAttribute: 2
+      Skill1: 101001
+      Skill2: 101003
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101005
+      Strength: 130
+      Speed: -5
+      AttackAttribute: 1
+      Skill1: 101001
+      Skill2: 101007
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101006
+      Strength: 94
+      Speed: 10
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101008
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101007
+      Strength: 120
+      Speed: 0
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101009
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101008
+      Strength: 128
+      Speed: -4
+      AttackAttribute: 1
+      Skill1: 101001
+      Skill2: 101010
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101009
+      Strength: 122
+      Speed: 3
+      AttackAttribute: 3
+      Skill1: 101012
+      Skill2: 101013
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101010
+      Strength: 134
+      Speed: -2
+      AttackAttribute: 1
+      Skill1: 101001
+      Skill2: 101014
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101011
+      Strength: 128
+      Speed: 6
+      AttackAttribute: 3
+      Skill1: 101012
+      Skill2: 101021
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101012
+      Strength: 128
+      Speed: 0
+      AttackAttribute: 0
+      Skill1: 101012
+      Skill2: 101016
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101013
+      Strength: 167
+      Speed: -16
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101017
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101014
+      Strength: 111
+      Speed: 9
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101011
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101015
+      Strength: 120
+      Speed: 6
+      AttackAttribute: 5
+      Skill1: 101012
+      Skill2: 101019
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101016
+      Strength: 185
+      Speed: -7
+      AttackAttribute: 1
+      Skill1: 101001
+      Skill2: 101022
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101017
+      Strength: 113
+      Speed: 6
+      AttackAttribute: 2
+      Skill1: 101026
+      Skill2: 101027
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101018
+      Strength: 143
+      Speed: 0
+      AttackAttribute: 2
+      Skill1: 101001
+      Skill2: 101046
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101019
+      Strength: 161
+      Speed: 3
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101018
+      Skill3: 101023
+      Skill4: 0
+    - ItemId: 101020
+      Strength: 190
+      Speed: -10
+      AttackAttribute: 2
+      Skill1: 101001
+      Skill2: 101024
+      Skill3: 101013
       Skill4: 0
     - ItemId: 101997
       Strength: 100
@@ -807,7 +985,7 @@ MonoBehaviour:
       Cost: 6
       BehaviourPriority: 0
       Description: "\u7A7A\u304B\u3089\u96F7\u3092\u653E\u3064\u3002\u96F7\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 90ac62abe900b43e498965b8e169516b, type: 2}
     - Name: "\u91CD\u6483\u7815\u304D"
       Id: 101022
       Cost: 10
@@ -922,7 +1100,7 @@ MonoBehaviour:
       BehaviourPriority: 0
       Description: "\u5E7E\u4EBA\u3082\u306E\u8840\u3092\u5438\u3044\u4E0A\u3052\u305F\u5200\u8EAB\u3067\u653B\u6483\u3059\u308B\u3002\u5A01\u529B\u306F\u843D\u3061\u308B\u304C\u4E0E\u3048\u305F\u30C0\u30E1\u30FC\u30B8\u304B\u3089\u81EA\u5206\u81EA\u8EAB\u306EHP\u306B\u5909\u63DB\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
-    - Name: "\u53CD\u6483\u306E\u523A\u7A81"
+    - Name: "\u53CD\u6483\u306E\u68D8"
       Id: 101041
       Cost: 11
       BehaviourPriority: 0
@@ -938,7 +1116,7 @@ MonoBehaviour:
       Id: 101043
       Cost: 14
       BehaviourPriority: 0
-      Description: "\u6CBB\u7642\u795E\u30A8\u30A2\u30EA\u30FC\u306E\u52A0\u8B77\u3092\u53D7\u3051\u3001\u6BCE\u30BF\u30FC\u30F3\u81EA\u5206\u81EA\u8EAB\u306EHP\u3092\u56DE\u5FA9\u3059\u308B\u3002"
+      Description: "\u6CBB\u7642\u795E\u306E\u52A0\u8B77\u3092\u53D7\u3051\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A8\u30A2\u30EA\u30FC\u306E\u52A0\u8B77\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u6C17\u914D\u5BDF\u77E5"
       Id: 101044
@@ -958,29 +1136,95 @@ MonoBehaviour:
       BehaviourPriority: 1
       Description: "\u76FE\u4ED8\u304D\u306E\u30E9\u30F3\u30B9\u304C\u4F7F\u3048\u308B\u7279\u6B8A\u306A\u6280\u3002\u30C0\u30E1\u30FC\u30B8\u3092\u6291\u3048\u3064\u3064\u653B\u6483\u3092\u3059\u308B\u3002\u305F\u3060\u3057\u653B\u6483\u306F\u30AC\u30FC\u30C9\u5F8C\u306B\u884C\u3046\u3002"
       ActionSequences: {fileID: 0}
-    - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483(1)"
+    - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u58F1"
       Id: 101047
       Cost: 4
       BehaviourPriority: 1
-      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u30C0\u30E1\u30FC\u30B8\u304C\u5C11\u306A\u3044\u304C\u9AD8\u901F\u3067\u653B\u6483\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483(1)\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u30C0\u30E1\u30FC\u30B8\u304C\u5C11\u306A\u3044\u304C\u9AD8\u901F\u3067\u653B\u6483\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u58F1\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
-    - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483(2)"
+    - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u5F10"
       Id: 101048
       Cost: 5
       BehaviourPriority: 0
-      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483(1)\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483(2)\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u58F1\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
-    - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483(3)"
+    - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u53C2"
       Id: 101049
       Cost: 6
       BehaviourPriority: 0
-      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483(2)\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002"
+      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u79D8\u9023\u6483"
       Id: 101050
       Cost: 12
       BehaviourPriority: 0
-      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u79D8\u4F1D\u306E\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483(2)\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002"
+      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u79D8\u4F1D\u306E\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u7A7A\u5143\u6C17"
+      Id: 101051
+      Cost: 7
+      BehaviourPriority: 0
+      Description: "\u865A\u52E2\u3092\u5F35\u3063\u305F\u95D8\u5FD7\u3092\u6F32\u3089\u305B\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7A7A\u5143\u6C17\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u6B7B\u708E\u69CD"
+      Id: 101052
+      Cost: 16
+      BehaviourPriority: 0
+      Description: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u5BB6\u306E\u79D8\u4F1D\u306E\u6280\u3002\u7344\u708E\u306B\u5305\u307E\u308C\u305F\u69CD\u3092\u76F8\u624B\u306B\u6295\u3052\u3064\u3051\u3001\u708E\u5C5E\u6027\u306E\u7269\u7406\u653B\u6483\u3092\u884C\u3046\u304C\u3001\u672A\u5B8C\u6210\u306E\u6280\u3067\u3042\u308B\u305F\u3081\u3001\u81EA\u5206\u81EA\u8EAB\u3082\u300C\u706B\u50B7\u300D\u3092\u8CA0\u3063\u3066\u3057\u307E\u3046\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u30B5\u30EB\u30C7\u30A8\u30F4\u30A1\u30FC\u30B8"
+      Id: 101053
+      Cost: 48
+      BehaviourPriority: -2
+      Description: "\u6642\u3092\u6B62\u3081\u308B\u7981\u5FCC\u306E\u6280\u306E1\u3064\u3002\u8A60\u5531\u306B\u304B\u306A\u308A\u306E\u6642\u9593\u3092\u8981\u3059\u308B\u305F\u3081\u884C\u52D5\u304C\u9045\u3044\u304C\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6642\u505C\u6B62\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u9B54\u529B\u306E\u6D77"
+      Id: 101054
+      Cost: 1
+      BehaviourPriority: 0
+      Description: "\u9B54\u529B\u3092\u8CAF\u84C4\u3055\u308C\u305F\u7A7A\u9593\u3092\u81EA\u5206\u81EA\u8EAB\u306B\u5C55\u958B\u3057\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u529B\u56DE\u5FA9\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u5F29\u9023\u5C04\u6483"
+      Id: 101055
+      Cost: 8
+      BehaviourPriority: 0
+      Description: "\u592A\u3044\u77E2\u3092\u653E\u3061\u3001\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u6012\u5F29\u9023\u5C04\u6483"
+      Id: 101056
+      Cost: 14
+      BehaviourPriority: -1
+      Description: "\u6975\u592A\u3044\u77E2\u3092\u653E\u3061\u3001\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002\u77E2\u304C\u91CD\u3044\u305F\u3081\u653B\u6483\u3059\u308B\u306E\u304C\u9045\u304F\u306A\u308B\u304C\u3001\u76F8\u624B\u306B\u300C\u602F\u307F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u6E3E\u8EAB\u306E\u901A\u5E38\u653B\u6483"
+      Id: 101057
+      Cost: 8
+      BehaviourPriority: 0
+      Description: "\u901A\u5E38\u653B\u6483\u3092\u7A81\u304D\u8A70\u3081\u305F\u3001\u30B7\u30F3\u30D7\u30EB\u3060\u304C\u3001\u30B7\u30F3\u30D7\u30EB\u3086\u3048\u306B\u5F37\u3044\u4E00\u6483\u3068\u306A\u308B\u3002\u653B\u6483\u3092\u884C\u3063\u305F\u5F8C\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u901A\u5E38\u653B\u6483\u5F37\u5316\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u30B9\u30E9\u30A4\u30E0\u65AC\u308A"
+      Id: 101058
+      Cost: 6
+      BehaviourPriority: 0
+      Description: "\u30B9\u30E9\u30A4\u30E0\u306E\u5F31\u70B9\u3068\u306A\u308B\u6838\u3092\u898B\u6975\u3081\u3066\u653B\u6483\u3092\u3059\u308B\u3002\u4E0D\u5B9A\u5F62\u5C5E\u6027\u3092\u6301\u3064\u6575\u306B\u5BFE\u3057\u3066\u5F37\u529B\u306A\u4E00\u6483\u3092\u4E0E\u3048\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u7363\u72E9\u308A"
+      Id: 101059
+      Cost: 7
+      BehaviourPriority: 0
+      Description: "\u7363\u306E\u6050\u6016\u5FC3\u3092\u717D\u308B\u4E00\u6483\u3002\u7363\u5C5E\u6027\u3092\u6301\u3064\u6575\u306B\u5BFE\u3057\u3066\u5F37\u529B\u306A\u4E00\u6483\u3092\u4E0E\u3048\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u6E80\u6708\u306E\u9060\u5420\u3048"
+      Id: 101060
+      Cost: 29
+      BehaviourPriority: 0
+      Description: "\u529B\u5F37\u3044\u9060\u5420\u3048\u306B\u3088\u308A\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6E80\u6708\u306E\u9060\u5420\u3048\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u8840\u67D3\u3081\u306E\u722A"
+      Id: 101061
+      Cost: 7
+      BehaviourPriority: 0
+      Description: "\u7363\u306E\u529B\u3092\u501F\u308A\u305F\u5E7E\u4E07\u3082\u306E\u91CE\u7363\u3092\u846C\u3063\u305F\u722A\u3067\u653B\u6483\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u7363\u5C5E\u6027\u304C\u3042\u308B\u5834\u5408\u306F\u5F37\u529B\u306A\u4E00\u6483\u3068\u306A\u308B\u3002"
       ActionSequences: {fileID: 0}
   armorHeads:
     list:
@@ -991,6 +1235,13 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
+    - ItemId: 102002
+      SlashCutRate: 0.02
+      BlowCutRate: 0.031
+      ThrustCutRate: 0.017
+      MagicCutRate: 0.024
+      FireCutRate: 0.011
+      ThunderCutRate: 0.051
   armorBodies:
     list:
     - ItemId: 103001
@@ -1000,6 +1251,13 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
+    - ItemId: 103002
+      SlashCutRate: 0.042
+      BlowCutRate: 0.038
+      ThrustCutRate: 0.029
+      MagicCutRate: 0.041
+      FireCutRate: 0.034
+      ThunderCutRate: 0.048
   armorArms:
     list:
     - ItemId: 104001
@@ -1009,6 +1267,13 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
+    - ItemId: 104002
+      SlashCutRate: 0.021
+      BlowCutRate: 0.031
+      ThrustCutRate: 0.018
+      MagicCutRate: 0.032
+      FireCutRate: 0.012
+      ThunderCutRate: 0.042
   armorLegs:
     list:
     - ItemId: 105001
@@ -1018,6 +1283,13 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
+    - ItemId: 105002
+      SlashCutRate: 0.014
+      BlowCutRate: 0.038
+      ThrustCutRate: 0.016
+      MagicCutRate: 0.04
+      FireCutRate: 0.01
+      ThunderCutRate: 0.037
   accessories:
     list:
     - ItemId: 106001
@@ -1027,8 +1299,8 @@ MonoBehaviour:
       Name: "\u30C6\u30B9\u30C8\u30A8\u30CD\u30DF\u30FC"
       HitPoint: 45
       Stamina: 0
-      PhysicalAttack: 24
-      MagicalAttack: 24
+      PhysicalAttack: 23
+      MagicalAttack: 23
       SlashCutRate: 0.06
       BlowCutRate: 0.06
       ThrustCutRate: 0.06
@@ -1070,5 +1342,81 @@ MonoBehaviour:
       Sequences: {fileID: 11400000, guid: 129dbad0ac5174d4795f00a8e7a22f47, type: 2}
     - Id: 101008
       Name: "\u9EBB\u75FA"
-      Description: "\u8EAB\u4F53\u304C\u75FA\u308C\u3066\u601D\u3046\u3088\u3046\u306B\u52D5\u304B\u306A\u304F\u306A\u308B\u3002\u4E0E\u3048\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u6E1B\u5C11\u3057\u3066\u3057\u307E\u3046\u3002"
+      Description: "\u8EAB\u4F53\u304C\u75FA\u308C\u3066\u601D\u3046\u3088\u3046\u306B\u52D5\u304B\u306A\u304F\u306A\u308A\u3001\u4E0E\u3048\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u6E1B\u5C11\u3057\u3066\u3057\u307E\u3046\u3002"
       Sequences: {fileID: 11400000, guid: a7187e8112d84449fb7d5e22ce636a65, type: 2}
+    - Id: 101009
+      Name: "\u93A7\u7815\u304D"
+      Description: "\u8EAB\u306B\u7E8F\u3046\u93A7\u306A\u3069\u304C\u8106\u304F\u7815\u3051\u305F\u72B6\u614B\u3002\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u52A0\u3057\u3066\u3057\u307E\u3046\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101010
+      Name: "\u8056\u9A0E\u58EB\u306E\u610F\u5FD7"
+      Description: "\u4E0D\u5C48\u306E\u7CBE\u795E\u306B\u3088\u308A\u5947\u8DE1\u306E\u529B\u3092\u5F97\u308B\u3002\u653B\u6483\u529B\u3068\u9632\u5FA1\u529B\u3092\u5411\u4E0A\u3055\u305B\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101011
+      Name: "\u56DE\u907F\u53EF\u80FD\u6027"
+      Description: "\u8EFD\u3044\u8EAB\u306E\u3053\u306A\u3057\u3068\u4E88\u77E5\u80FD\u529B\u306B\u3088\u308A\u3001\u76F8\u624B\u306E\u653B\u6483\u3092\u56DE\u907F\u51FA\u6765\u308B\u53EF\u80FD\u6027\u3092\u5F97\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101012
+      Name: "\u75B2\u52B4"
+      Description: "\u5F37\u529B\u306A\u653B\u6483\u306A\u3069\u306E\u4EE3\u511F\u3068\u306A\u308A\u3001\u884C\u52D5\u51FA\u6765\u306A\u3044\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101013
+      Name: "\u5148\u99C6"
+      Description: "\u98A8\u306E\u5982\u304F\u4FCA\u654F\u306A\u52D5\u304D\u3067\u3001\u884C\u52D5\u30EC\u30D9\u30EB\u3092\u4E0A\u6607\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101014
+      Name: "\u9244\u58C1"
+      Description: "\u92FC\u9244\u306E\u58C1\u306E\u5982\u304D\u529B\u3092\u5F97\u308B\u3002\u4E00\u5EA6\u3060\u3051\u653B\u6483\u3092\u7121\u52B9\u5316\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101015
+      Name: "\u9B54\u529B\u306E\u76FE"
+      Description: "\u9B54\u529B\u3067\u4F5C\u3089\u308C\u305F\u76FE\u3092\u524D\u65B9\u306B\u5C55\u958B\u3057\u3001\u9B54\u529B\u306E\u30C0\u30E1\u30FC\u30B8\u3092\u5927\u5E45\u306B\u6E1B\u5C11\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101016
+      Name: "\u6642\u52A0\u901F"
+      Description: "\u7981\u5FCC\u9B54\u6CD5\u306E1\u3064\u3068\u3055\u308C\u3066\u304A\u308A\u3001\u7D20\u65E9\u3055\u3092\u5411\u4E0A\u3055\u305B\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101017
+      Name: "\u6028\u6068\u306E\u529B"
+      Description: "\u6DF1\u3044\u6068\u307F\u3068\u618E\u3057\u307F\u306B\u82E6\u3057\u3081\u3089\u308C\u308B\u3002\u653B\u6483\u529B\u304C\u4E0A\u6607\u3059\u308B\u304C\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u52A0\u3057\u3066\u3057\u307E\u3046\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101018
+      Name: "\u7269\u7406\u53CD\u6483"
+      Description: "\u53CD\u6483\u306E\u529B\u3092\u8EAB\u306B\u7E8F\u3044\u3001\u7269\u7406\u653B\u6483\u3092\u4ED5\u639B\u3051\u305F\u76F8\u624B\u306B\u5BFE\u3057\u3066\u653B\u6483\u3092\u884C\u3046\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101019
+      Name: "\u30A8\u30A2\u30EA\u30FC\u306E\u52A0\u8B77"
+      Description: "\u6CBB\u7642\u795E\u30A8\u30A2\u30EA\u30FC\u306E\u52A0\u8B77\u306B\u3088\u308A\u3001\u6BCE\u30BF\u30FC\u30F3HP\u304C\u56DE\u5FA9\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101020
+      Name: "\u653B\u6483\u7D76\u5BFE\u56DE\u907F"
+      Description: "\u76F8\u624B\u306E\u6C17\u914D\u3092\u8AAD\u307F\u53D6\u308A\u3001\u653B\u6483\u3092\u5FC5\u305A\u56DE\u907F\u3059\u308B\u3002\u3053\u306E\u72B6\u614B\u7570\u5E38\u304C\u89E3\u3051\u305F\u6642\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u653B\u6483\u7D76\u5BFE\u56DE\u907F\u75B2\u308C\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101021
+      Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u58F1"
+      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u821E\u82B8\u8853\u3092\u884C\u3063\u305F\u72B6\u614B\u3002\u7279\u5B9A\u306E\u884C\u52D5\u3092\u5F37\u5316\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101022
+      Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10"
+      Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u821E\u82B8\u8853\u3092\u884C\u3063\u305F\u72B6\u614B\u3002\u7279\u5B9A\u306E\u884C\u52D5\u3092\u5F37\u5316\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101023
+      Name: "\u7A7A\u5143\u6C17"
+      Description: "\u865A\u52E2\u3092\u5F35\u3063\u305F\u95D8\u5FD7\u306B\u3088\u308A\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6BD2\u300D\u307E\u305F\u306F\u300C\u706B\u50B7\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u6642\u306B\u653B\u6483\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101024
+      Name: "\u653B\u6483\u7D76\u5BFE\u56DE\u907F\u75B2\u308C"
+      Description: "\u6C17\u914D\u5BDF\u77E5\u306F\u304B\u306A\u308A\u306E\u96C6\u4E2D\u529B\u3092\u6D88\u8CBB\u3059\u308B\u3002\u3053\u308C\u306B\u3088\u308A\u300C\u653B\u6483\u7D76\u5BFE\u56DE\u907F\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u306A\u304F\u306A\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101025
+      Name: "\u6642\u505C\u6B62"
+      Description: "\u7981\u5FCC\u9B54\u6CD5\u306E1\u3064\u3068\u3055\u308C\u3066\u304A\u308A\u3001\u81EA\u5206\u306E\u307F\u304C\u884C\u52D5\u51FA\u6765\u308B\u3088\u3046\u306B\u306A\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101026
+      Name: "\u901A\u5E38\u653B\u6483\u5F37\u5316"
+      Description: "\u30B7\u30F3\u30D7\u30EB\u3055\u3092\u6975\u3081\u305F\u8005\u304C\u4F1A\u5F97\u3067\u304D\u308B\u6280\u3002\u901A\u5E38\u653B\u6483\u306E\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u52A0\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101027
+      Name: "\u6E80\u6708\u306E\u9060\u5420\u3048"
+      Description: "\u6E80\u6708\u306B\u9CF4\u304F\u72FC\u306E\u529B\u3092\u5F97\u308B\u3002\u7363\u5C5E\u6027\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
