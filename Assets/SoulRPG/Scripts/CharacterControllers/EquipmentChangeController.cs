@@ -5,7 +5,7 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    public sealed class EquipmentChangeController : GameMenuView.IContext
+    public sealed class EquipmentChangeController : GamePauseMenuView.IContext
     {
         private readonly Character character;
 

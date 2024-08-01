@@ -5,17 +5,14 @@ using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
-using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 namespace SoulRPG
 {
     /// <summary>
     /// 
     /// </summary>
-    public sealed class GameMenuView
+    public sealed class GamePauseMenuView
     {
         private readonly HKUIDocument documentBundlePrefab;
 
@@ -29,7 +26,7 @@ namespace SoulRPG
 
         private IContext context;
 
-        public GameMenuView(HKUIDocument documentBundlePrefab, Character character)
+        public GamePauseMenuView(HKUIDocument documentBundlePrefab, Character character)
         {
             this.documentBundlePrefab = documentBundlePrefab;
             this.character = character;

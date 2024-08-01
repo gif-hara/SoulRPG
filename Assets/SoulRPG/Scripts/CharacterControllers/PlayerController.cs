@@ -61,8 +61,8 @@ namespace SoulRPG
             inGameActions.ToMenu.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    var gameMenuView = new GameMenuView(gameMenuBundlePrefab, player);
-                    gameMenuView.OpenAsync().Forget();
+                    var view = new GamePauseMenuView(gameMenuBundlePrefab, player);
+                    view.OpenAsync().Forget();
                 })
                 .RegisterTo(scope);
         }
