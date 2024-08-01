@@ -65,6 +65,10 @@ namespace SoulRPG
         public ReadOnlyReactiveProperty<int> SpeedReactiveProperty => speedReactiveProperty;
         public int Speed => speedReactiveProperty.Value;
 
+        private readonly ReactiveProperty<int> experienceReactiveProperty;
+        public ReadOnlyReactiveProperty<int> ExperienceReactiveProperty => experienceReactiveProperty;
+        public int Experience => experienceReactiveProperty.Value;
+
         private readonly Define.CharacterAttribute attribute;
         public Define.CharacterAttribute Attribute => attribute;
 
@@ -91,6 +95,7 @@ namespace SoulRPG
             fireCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalFireCutRate);
             thunderCutRateReactiveProperty = new ReactiveProperty<float>(equipment.TotalThunderCutRate);
             speedReactiveProperty = new ReactiveProperty<int>(growthParameter.Speed);
+            experienceReactiveProperty = new ReactiveProperty<int>(0);
             attribute = character.Attribute;
 
             hitPointReactiveProperty
@@ -123,6 +128,7 @@ namespace SoulRPG
             fireCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.FireCutRate);
             thunderCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.ThunderCutRate);
             speedReactiveProperty = new ReactiveProperty<int>(blueprint.Speed);
+            experienceReactiveProperty = new ReactiveProperty<int>(blueprint.Experience);
             attribute = blueprint.Attribute;
         }
 
@@ -142,6 +148,7 @@ namespace SoulRPG
             fireCutRateReactiveProperty = new ReactiveProperty<float>(enemy.FireCutRate);
             thunderCutRateReactiveProperty = new ReactiveProperty<float>(enemy.ThunderCutRate);
             speedReactiveProperty = new ReactiveProperty<int>(enemy.Speed);
+            experienceReactiveProperty = new ReactiveProperty<int>(enemy.Experience);
             attribute = enemy.Attribute;
         }
 
