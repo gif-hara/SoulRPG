@@ -62,40 +62,8 @@ namespace SoulRPG
             {
                 new()
                 {
-                    header = "装備",
-                    onClick = () => Debug.Log("装備"),
-                },
-                new()
-                {
-                    header = "道具",
-                    onClick = () =>
-                    {
-                        Debug.Log("道具");
-                    },
-                    onLeft = () =>
-                    {
-                        Debug.Log("左");
-                    },
-                    onRight = () =>
-                    {
-                        Debug.Log("右");
-                    }
-                },
-                new()
-                {
-                    header = "ステータス",
-                    onClick = () =>
-                    {
-                        Debug.Log("ステータス");
-                    }
-                },
-                new()
-                {
-                    header = "システム",
-                    onClick = () =>
-                    {
-                        Debug.Log("システム");
-                    }
+                    header = "レベルアップ",
+                    onClick = () => Debug.Log("レベルアップ"),
                 },
             },
             0
