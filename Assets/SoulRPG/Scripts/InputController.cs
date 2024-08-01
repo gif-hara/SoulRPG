@@ -9,6 +9,8 @@ namespace SoulRPG
 
         public InputActions InputActions => inputActions;
 
+        public InputType CurrentInputType { get; private set; }
+
         public enum InputType
         {
             InGame,
@@ -22,6 +24,7 @@ namespace SoulRPG
 
         public void ChangeInputType(InputType inputType)
         {
+            CurrentInputType = inputType;
             switch (inputType)
             {
                 case InputType.InGame:
