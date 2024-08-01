@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using HK;
+using R3;
 using UnityEngine;
 
 namespace SoulRPG
@@ -22,6 +23,9 @@ namespace SoulRPG
         private readonly HashSet<string> completedWallEventIds = new();
 
         private readonly Dictionary<string, HashSet<Vector2Int>> reachedPoints = new();
+
+        private readonly ReactiveProperty<int> experience = new(0);
+        public ReadOnlyReactiveProperty<int> Experience => experience;
 
         public void AddCompletedfloorEventIds(string eventId, bool isOneTime)
         {
@@ -82,6 +86,11 @@ namespace SoulRPG
             }
 
             return points.Contains(point);
+        }
+
+        public void AddExperience(int value)
+        {
+            experience.Value += value;
         }
     }
 }
