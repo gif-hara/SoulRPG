@@ -15,23 +15,23 @@ namespace SoulRPG
 
         [SerializeField]
         private int vitality;
-        public int Vitality => vitality + level;
+        public int Vitality => vitality;
 
         [SerializeField]
         public int stamina;
-        public int Stamina => stamina + level;
+        public int Stamina => stamina;
 
         [SerializeField]
         private int physicalStrength;
-        public int PhysicalStrength => physicalStrength + level;
+        public int PhysicalStrength => physicalStrength;
 
         [SerializeField]
         private int magicalStrength;
-        public int MagicalStrength => magicalStrength + level;
+        public int MagicalStrength => magicalStrength;
 
         [SerializeField]
         private int speed;
-        public int Speed => speed + level;
+        public int Speed => speed;
 
         public int HitPoint => (vitality + level) * 8;
 
