@@ -65,6 +65,12 @@ namespace SoulRPG
 
             /// <summary>不定形</summary>
             Formless = 1 << 1,
+            
+            /// <summary>鎧</summary>
+            Armor = 1 << 2,
+            
+            /// <summary>甲羅</summary>
+            Shell = 1 << 3,
         }
 
         public const int HandWeaponId = 101998;
