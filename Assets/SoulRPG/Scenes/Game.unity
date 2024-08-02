@@ -181,7 +181,7 @@ MonoBehaviour:
     magicalStrength: 10
     speed: 10
   debugPlayerEquipment:
-    weaponIds: 00000000000000000000000000000000
+    weaponIds: 6d8e0100000000000000000000000000
     headId: 0
     bodyId: 0
     armId: 0
