@@ -16,24 +16,9 @@ namespace SoulRPG
     /// </summary>
     public sealed class GameListView
     {
-        public class Element
-        {
-            public string header;
-
-            public System.Action<HKUIDocument> activateAction;
-
-            public System.Action onClick;
-
-            public System.Action onLeft;
-
-            public System.Action onRight;
-
-            public System.Action onSelected;
-        }
-
         public static HKUIDocument Create(
         HKUIDocument listDocumentPrefab,
-        IEnumerable<System.Action<HKUIDocument>> elementActivateActions,
+        IEnumerable<Action<HKUIDocument>> elementActivateActions,
         int initialElement
         )
         {
@@ -41,11 +26,10 @@ namespace SoulRPG
             var listParent = document.Q<RectTransform>("Area.List");
             var listElementPrefab = document.Q<HKUIDocument>("ListElementPrefab");
             var index = 0;
-            foreach (var listElement in elementActivateActions)
+            foreach (var action in elementActivateActions)
             {
                 var element = Object.Instantiate(listElementPrefab, listParent);
-                var button = element.Q<Button>("Button");
-                listElement(element);
+                action(element);
                 if (index == initialElement)
                 {
                     EventSystem.current.SetSelectedGameObject(element.Q("Button"));
