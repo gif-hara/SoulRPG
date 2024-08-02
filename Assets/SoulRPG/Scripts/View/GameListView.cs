@@ -22,7 +22,7 @@ namespace SoulRPG
         )
         {
             var document = Object.Instantiate(listDocumentPrefab);
-            var listParent = document.Q<RectTransform>("Area.List");
+            var listParent = document.Q<RectTransform>("ListParent");
             var listElementPrefab = document.Q<HKUIDocument>("ListElementPrefab");
             var index = 0;
             foreach (var action in elementActivateActions)
