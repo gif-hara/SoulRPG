@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using HK;
 using R3;
@@ -6,6 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
 namespace SoulRPG
 {
@@ -51,6 +53,15 @@ namespace SoulRPG
                 index++;
             }
             return document;
+        }
+        
+        public static void ApplyAsSimpleElement(HKUIDocument element, string header, Action<Unit> onClick)
+        {
+            element.Q<TMP_Text>("Header").text = header;
+            var button = element.Q<Button>("Button");
+            button.OnClickAsObservable()
+                .Subscribe(onClick)
+                .RegisterTo(element.destroyCancellationToken);
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -8,6 +9,7 @@ using SoulRPG.CharacterControllers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
 namespace SoulRPG
 {
@@ -47,74 +49,49 @@ namespace SoulRPG
 
         private async UniTask StateRootMenuAsync(CancellationToken scope)
         {
-            var actions = TinyServiceLocator.Resolve<InputController>().InputActions.UI;
-            var listDocument = CreateList(new List<GameListView.Element>
-            {
-                new()
+            var listDocument = CreateList(new List<Action<HKUIDocument>>
                 {
-                    header = "装備",
-                    activateAction = element =>
+                    element =>
                     {
-                        element.Q<TMP_Text>("Header").text = "装備";
-                        var button = element.Q<Button>("Button");
-                        button.OnClickAsObservable()
-                        .Subscribe(_ =>
-                        {
-                            stateMachine.Change(StateSelectEquipmentPartAsync);
-                        })
-                        .RegisterTo(element.destroyCancellationToken);
+                        GameListView.ApplyAsSimpleElement
+                        (
+                            element,
+                            "装備",
+                            _ => { stateMachine.Change(StateSelectEquipmentPartAsync); }
+                        );
+                    },
+                    element =>
+                    {
+                        GameListView.ApplyAsSimpleElement
+                        (
+                            element,
+                            "道具",
+                            _ => { Debug.Log("道具"); }
+                        );
+                    },
+                    element =>
+                    {
+                        GameListView.ApplyAsSimpleElement
+                        (
+                            element,
+                            "ステータス",
+                            _ => { Debug.Log("ステータス"); }
+                        );
+                    },
+                    element =>
+                    {
+                        GameListView.ApplyAsSimpleElement
+                        (
+                            element,
+                            "システム",
+                            _ => { Debug.Log("システム"); }
+                        );
                     },
                 },
-                new()
-                {
-                    header = "道具",
-                    activateAction = element =>
-                    {
-                        element.Q<TMP_Text>("Header").text = "道具";
-                        var button = element.Q<Button>("Button");
-                        button.OnClickAsObservable()
-                        .Subscribe(_ =>
-                        {
-                            Debug.Log("道具");
-                        })
-                        .RegisterTo(element.destroyCancellationToken);
-                    },
-                },
-                new()
-                {
-                    header = "ステータス",
-                    activateAction = element =>
-                    {
-                        element.Q<TMP_Text>("Header").text = "ステータス";
-                        var button = element.Q<Button>("Button");
-                        button.OnClickAsObservable()
-                        .Subscribe(_ =>
-                        {
-                            Debug.Log("ステータス");
-                        })
-                        .RegisterTo(element.destroyCancellationToken);
-                    },
-                },
-                new()
-                {
-                    header = "システム",
-                    activateAction = element =>
-                    {
-                        element.Q<TMP_Text>("Header").text = "システム";
-                        var button = element.Q<Button>("Button");
-                        button.OnClickAsObservable()
-                        .Subscribe(_ =>
-                        {
-                            Debug.Log("システム");
-                        })
-                        .RegisterTo(element.destroyCancellationToken);
-                    },
-                },
-            },
-            0
+                0
             );
 
-            inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+        inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateCloseAsync);
@@ -131,67 +108,58 @@ namespace SoulRPG
                 var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
                 return new System.Action<HKUIDocument>(element =>
                 {
-                    element.Q<TMP_Text>("Header").text = $"武器{i + 1}: {weaponName}";
-                    var button = element.Q<Button>("Button");
-                    button.OnClickAsObservable()
-                    .Subscribe(_ =>
+                    GameListView.ApplyAsSimpleElement(element, $"武器{i + 1}: {weaponName}", _ =>
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Weapon1);
                         stateMachine.Change(StateSelectWeaponAsync);
-                    })
-                    .RegisterTo(element.destroyCancellationToken);
+                    });
                 });
             });
-            var headElement = new GameListView.Element()
+            var headElement = new System.Action<HKUIDocument>(element =>
             {
-                header = $"頭: {(character.Equipment.HeadId == 0 ? "なし" : character.Equipment.HeadId.GetMasterDataItem().Name)}",
-                onClick = () =>
+                GameListView.ApplyAsSimpleElement(element, $"頭: {(character.Equipment.HeadId == 0 ? "なし" : character.Equipment.HeadId.GetMasterDataItem().Name)}", _ =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Head);
                     stateMachine.Change(StateSelectArmorHeadAsync);
-                }
-            };
-            var bodyElement = new GameListView.Element()
+                });
+            });
+            var bodyElement = new Action<HKUIDocument>(element =>
             {
-                header = $"胴: {(character.Equipment.BodyId == 0 ? "なし" : character.Equipment.BodyId.GetMasterDataItem().Name)}",
-                onClick = () =>
+                GameListView.ApplyAsSimpleElement(element, $"胴: {(character.Equipment.BodyId == 0 ? "なし" : character.Equipment.BodyId.GetMasterDataItem().Name)}", _ =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
                     stateMachine.Change(StateSelectArmorBodyAsync);
-                }
-            };
-            var armElement = new GameListView.Element()
+                });
+            });
+            var armElement = new Action<HKUIDocument>(element =>
             {
-                header = $"腕: {(character.Equipment.ArmId == 0 ? "なし" : character.Equipment.ArmId.GetMasterDataItem().Name)}",
-                onClick = () =>
+                GameListView.ApplyAsSimpleElement(element, $"腕: {(character.Equipment.ArmId == 0 ? "なし" : character.Equipment.ArmId.GetMasterDataItem().Name)}", _ =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Arm);
                     stateMachine.Change(StateSelectArmorArmsAsync);
-                }
-            };
-            var legElement = new GameListView.Element()
+                });
+            });
+            var legElement = new Action<HKUIDocument>(element =>
             {
-                header = $"脚: {(character.Equipment.LegId == 0 ? "なし" : character.Equipment.LegId.GetMasterDataItem().Name)}",
-                onClick = () =>
+                GameListView.ApplyAsSimpleElement(element, $"脚: {(character.Equipment.LegId == 0 ? "なし" : character.Equipment.LegId.GetMasterDataItem().Name)}", _ =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Leg);
                     stateMachine.Change(StateSelectArmorLegsAsync);
-                }
-            };
+                });
+            });
             var accessoryElements = character.Equipment.GetAccessoryIds().Select((x, i) =>
             {
                 var accessoryName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
-                return new GameListView.Element()
+                return new Action<HKUIDocument>(element =>
                 {
-                    header = $"アクセサリ{i + 1}: {accessoryName}",
-                    onClick = () =>
+                    GameListView.ApplyAsSimpleElement(element, $"アクセサリ{i + 1}: {accessoryName}", _ =>
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Accessory1);
                         stateMachine.Change(StateSelectAccessoryAsync);
-                    }
-                };
+                    });
+                });
             });
-            var listElements = new List<GameListView.Element>();
+            var listElements = new List<Action<HKUIDocument>>();
             listElements.AddRange(weaponElements);
             listElements.Add(headElement);
             listElements.Add(bodyElement);
@@ -221,17 +189,15 @@ namespace SoulRPG
                 .Where(x => x.Key.ContainsMasterDataWeapon())
                 .Select(x =>
                 {
-                    var itemName = x.Key.GetMasterDataItem().Name;
-                    return new GameListView.Element()
+                    return new Action<HKUIDocument>(element =>
                     {
-                        header = itemName,
-                        onClick = () =>
+                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        }
-                    };
+                        });
+                    });
                 });
             var listDocument = CreateList
             (
@@ -254,17 +220,15 @@ namespace SoulRPG
                 .Where(x => x.Key.ContainsMasterDataArmorHead())
                 .Select(x =>
                 {
-                    var itemName = x.Key.GetMasterDataItem().Name;
-                    return new GameListView.Element
+                    return new Action<HKUIDocument>(element =>
                     {
-                        header = itemName,
-                        onClick = () =>
+                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        }
-                    };
+                        });
+                    });
                 });
             var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
@@ -283,17 +247,15 @@ namespace SoulRPG
                 .Where(x => x.Key.ContainsMasterDataArmorBody())
                 .Select(x =>
                 {
-                    var itemName = x.Key.GetMasterDataItem().Name;
-                    return new GameListView.Element
+                    return new Action<HKUIDocument>(element =>
                     {
-                        header = itemName,
-                        onClick = () =>
+                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        }
-                    };
+                        });
+                    });
                 });
             var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
@@ -312,17 +274,15 @@ namespace SoulRPG
                 .Where(x => x.Key.ContainsMasterDataArmorArms())
                 .Select(x =>
                 {
-                    var itemName = x.Key.GetMasterDataItem().Name;
-                    return new GameListView.Element
+                    return new Action<HKUIDocument>(element =>
                     {
-                        header = itemName,
-                        onClick = () =>
+                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        }
-                    };
+                        });
+                    });
                 });
             var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
@@ -341,17 +301,15 @@ namespace SoulRPG
                 .Where(x => x.Key.ContainsMasterDataArmorLegs())
                 .Select(x =>
                 {
-                    var itemName = x.Key.GetMasterDataItem().Name;
-                    return new GameListView.Element
+                    return new Action<HKUIDocument>(element =>
                     {
-                        header = itemName,
-                        onClick = () =>
+                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        }
-                    };
+                        });
+                    });
                 });
             var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
@@ -370,17 +328,15 @@ namespace SoulRPG
                 .Where(x => x.Key.ContainsMasterDataAccessory())
                 .Select(x =>
                 {
-                    var itemName = x.Key.GetMasterDataItem().Name;
-                    return new GameListView.Element
+                    return new Action<HKUIDocument>(element =>
                     {
-                        header = itemName,
-                        onClick = () =>
+                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        }
-                    };
+                        });
+                    });
                 });
             var listDocument = CreateList(listElements, 0);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
@@ -401,14 +357,14 @@ namespace SoulRPG
 
         private HKUIDocument CreateList
         (
-            IEnumerable<GameListView.Element> listElements,
+            IEnumerable<Action<HKUIDocument>> elements,
             int initialElement
         )
         {
             return GameListView.Create
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
-                listElements,
+                elements,
                 initialElement
             );
         }
