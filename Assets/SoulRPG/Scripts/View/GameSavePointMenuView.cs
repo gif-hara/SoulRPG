@@ -200,10 +200,16 @@ namespace SoulRPG
                 );
                 var horizontalInterface = CreateHorizontalInterface(element);
                 UpdateHorizontalInterfaceMessage(horizontalInterface, valueSelector(0).ToString("00"));
+                var leftArrow = horizontalInterface.Q<CanvasGroup>("LeftArrow");
+                leftArrow.alpha = 0;
+                var rightArrow = horizontalInterface.Q<CanvasGroup>("RightArrow");
+                rightArrow.alpha = 0;
                 var button = element.Q<Button>("Button");
                 button.OnSelectAsObservable()
                     .Subscribe(_ =>
                     {
+                        leftArrow.alpha = 1;
+                        rightArrow.alpha = 1;
                         inputController.InputActions.UI.Navigate.OnPerformedAsObservable()
                             .TakeUntil(button.OnDeselectAsObservable())
                             .Subscribe(x =>
@@ -224,6 +230,13 @@ namespace SoulRPG
                                 UpdateHorizontalInterfaceMessage(horizontalInterface, valueSelector(0).ToString("00"));
                             })
                             .RegisterTo(scope);
+                    })
+                    .RegisterTo(scope);
+                button.OnDeselectAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        leftArrow.alpha = 0;
+                        rightArrow.alpha = 0;
                     })
                     .RegisterTo(scope);
             }
