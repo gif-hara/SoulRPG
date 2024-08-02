@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using HK;
 using R3;
-using R3.Triggers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -38,7 +37,7 @@ namespace SoulRPG
             }
             return document;
         }
-        
+
         public static void ApplyAsSimpleElement(HKUIDocument element, string header, Action<Unit> onClick)
         {
             element.Q<TMP_Text>("Header").text = header;
