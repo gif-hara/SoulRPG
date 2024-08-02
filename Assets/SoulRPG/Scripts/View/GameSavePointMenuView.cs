@@ -60,13 +60,14 @@ namespace SoulRPG
             {
                 element =>
                 {
-                    element.Q<TMP_Text>("Header").text = "レベルアップ";
-                    var button = element.Q<Button>("Button");
-                    button.OnClickAsObservable()
-                    .Subscribe(_ =>
-                    {
-                    })
-                    .RegisterTo(element.destroyCancellationToken);
+                    GameListView.ApplyAsSimpleElement
+                    (
+                        element,
+                        "レベルアップ",
+                        _ =>
+                        {
+                        }
+                    );
                 },
             },
             0
