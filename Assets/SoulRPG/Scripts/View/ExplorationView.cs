@@ -335,6 +335,13 @@ namespace SoulRPG
                     staminaGauge.value = character.InstanceStatus.Stamina / (float)character.InstanceStatus.StaminaMax;
                 })
                 .RegisterTo(scope);
+            var experience = areaDocument.Q<TMP_Text>("Text.Experience");
+            TinyServiceLocator.Resolve<UserData>().Experience
+                .Subscribe(x =>
+                {
+                    experience.SetText(x.ToString());
+                })
+                .RegisterTo(scope);
         }
 
         public UniTask OnOpenDoorAsync(MasterData.WallEvent wallEvent)
