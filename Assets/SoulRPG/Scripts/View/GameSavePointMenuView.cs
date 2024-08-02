@@ -37,17 +37,6 @@ namespace SoulRPG
 
         private int speed;
 
-        public class ListElement
-        {
-            public string header;
-
-            public System.Action onClick;
-
-            public System.Action onLeft;
-
-            public System.Action onRight;
-        }
-
         public GameSavePointMenuView(HKUIDocument documentBundlePrefab, Character character)
         {
             this.documentBundlePrefab = documentBundlePrefab;
