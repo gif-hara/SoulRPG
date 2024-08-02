@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101009.OnRemoved
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 7538228103530414196
+  - rid: 7538228103530414717
+  - rid: 7538228103530414718
+  - rid: 7538228103530414719
+  - rid: 7538228103530414720
+  - rid: 7538228103530414721
+  - rid: 7538228103530414722
+  references:
+    version: 2
+    RefIds:
+    - rid: 7538228103530414196
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u93A7\u7815\u304D\u304C\u89E3\u3051\u305F"
+        waitForInput: 1
+        ignoreIfCharacterDead: 0
+    - rid: 7538228103530414717
+      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        attackAttribute: 0
+        cutRate: 0.2
+    - rid: 7538228103530414718
+      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        attackAttribute: 1
+        cutRate: 0.2
+    - rid: 7538228103530414719
+      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        attackAttribute: 2
+        cutRate: 0.2
+    - rid: 7538228103530414720
+      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        attackAttribute: 3
+        cutRate: 0.2
+    - rid: 7538228103530414721
+      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        attackAttribute: 4
+        cutRate: 0.2
+    - rid: 7538228103530414722
+      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        attackAttribute: 5
+        cutRate: 0.2
