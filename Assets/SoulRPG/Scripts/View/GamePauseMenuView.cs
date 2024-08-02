@@ -6,9 +6,7 @@ using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
 namespace SoulRPG
@@ -26,7 +24,7 @@ namespace SoulRPG
 
         private readonly UniTaskCompletionSource openCompletionSource = new();
 
-        private InputController inputController;
+        private readonly InputController inputController;
 
         private IContext context;
 
@@ -40,7 +38,6 @@ namespace SoulRPG
 
         public async UniTask OpenAsync()
         {
-            var inputController = TinyServiceLocator.Resolve<InputController>();
             inputController.ChangeInputType(InputController.InputType.UI);
             stateMachine.Change(StateRootMenuAsync);
             await openCompletionSource.Task;
@@ -106,7 +103,7 @@ namespace SoulRPG
             var weaponElements = character.Equipment.GetWeaponIds().Select((x, i) =>
             {
                 var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
-                return new System.Action<HKUIDocument>(element =>
+                return new Action<HKUIDocument>(element =>
                 {
                     GameListView.ApplyAsSimpleElement(element, $"武器{i + 1}: {weaponName}", _ =>
                     {
@@ -115,7 +112,7 @@ namespace SoulRPG
                     });
                 });
             });
-            var headElement = new System.Action<HKUIDocument>(element =>
+            var headElement = new Action<HKUIDocument>(element =>
             {
                 GameListView.ApplyAsSimpleElement(element, $"頭: {(character.Equipment.HeadId == 0 ? "なし" : character.Equipment.HeadId.GetMasterDataItem().Name)}", _ =>
                 {
