@@ -839,7 +839,7 @@ MonoBehaviour:
       Speed: 0
       AttackAttribute: 0
       Skill1: 101001
-      Skill2: 101020
+      Skill2: 101022
       Skill3: 0
       Skill4: 0
     - ItemId: 101998
@@ -991,7 +991,7 @@ MonoBehaviour:
       Cost: 10
       BehaviourPriority: 0
       Description: "\u91CD\u3044\u6253\u6483\u3092\u4E00\u6483\u653E\u3061\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u93A7\u3001\u307E\u305F\u306F\u7532\u7F85\u3092\u6301\u3064\u76F8\u624B\u306B\u300C\u93A7\u7815\u304D\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 977741038a17d4ee5a1d6baab4198b17, type: 2}
     - Name: "\u7A32\u59BB\u306E\u93A7"
       Id: 101023
       Cost: 11
@@ -1309,7 +1309,7 @@ MonoBehaviour:
       ThunderCutRate: 0.06
       Speed: 24
       Experience: 100
-      Attribute: 1
+      Attribute: 4
   ailments:
     list:
     - Id: 101001
@@ -1347,7 +1347,7 @@ MonoBehaviour:
     - Id: 101009
       Name: "\u93A7\u7815\u304D"
       Description: "\u8EAB\u306B\u7E8F\u3046\u93A7\u306A\u3069\u304C\u8106\u304F\u7815\u3051\u305F\u72B6\u614B\u3002\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u52A0\u3057\u3066\u3057\u307E\u3046\u3002"
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: 361eeccf20aaa4c34a1e3d5c2bd2bee1, type: 2}
     - Id: 101010
       Name: "\u8056\u9A0E\u58EB\u306E\u610F\u5FD7"
       Description: "\u4E0D\u5C48\u306E\u7CBE\u795E\u306B\u3088\u308A\u5947\u8DE1\u306E\u529B\u3092\u5F97\u308B\u3002\u653B\u6483\u529B\u3068\u9632\u5FA1\u529B\u3092\u5411\u4E0A\u3055\u305B\u308B\u3002"
