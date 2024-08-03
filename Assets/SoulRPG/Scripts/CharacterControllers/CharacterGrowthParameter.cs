@@ -11,58 +11,42 @@ namespace SoulRPG
     {
         [SerializeField]
         private int level;
-        public int Level => level;
+        public int Level { get => level; set => level = value; }
 
         [SerializeField]
         private int vitality;
-        public int Vitality => vitality;
+        public int Vitality { get => vitality; set => vitality = value; }
 
         [SerializeField]
         public int stamina;
-        public int Stamina => stamina;
+        public int Stamina { get => stamina; set => stamina = value; }
 
         [SerializeField]
         private int physicalStrength;
-        public int PhysicalStrength => physicalStrength;
+        public int PhysicalStrength { get => physicalStrength; set => physicalStrength = value; }
 
         [SerializeField]
         private int magicalStrength;
-        public int MagicalStrength => magicalStrength;
+        public int MagicalStrength { get => magicalStrength; set => magicalStrength = value; }
 
         [SerializeField]
         private int speed;
-        public int Speed => speed;
+        public int Speed { get => speed; set => speed = value; }
 
         public int HitPoint => (vitality + level) * 8;
 
-        public void AddVitality(int value)
+        public CharacterGrowthParameter()
         {
-            vitality += value;
-            level += value;
         }
 
-        public void AddStamina(int value)
+        public CharacterGrowthParameter(CharacterGrowthParameter parameter)
         {
-            stamina += value;
-            level += value;
-        }
-
-        public void AddPhysicalStrength(int value)
-        {
-            physicalStrength += value;
-            level += value;
-        }
-
-        public void AddMagicalStrength(int value)
-        {
-            magicalStrength += value;
-            level += value;
-        }
-
-        public void AddSpeed(int value)
-        {
-            speed += value;
-            level += value;
+            level = parameter.level;
+            vitality = parameter.vitality;
+            stamina = parameter.stamina;
+            physicalStrength = parameter.physicalStrength;
+            magicalStrength = parameter.magicalStrength;
+            speed = parameter.speed;
         }
     }
 }

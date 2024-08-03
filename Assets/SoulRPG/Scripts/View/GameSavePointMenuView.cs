@@ -27,15 +27,7 @@ namespace SoulRPG
 
         private InputController inputController;
 
-        private int vitality;
-
-        private int stamina;
-
-        private int physicalStrength;
-
-        private int magicalStrength;
-
-        private int speed;
+        private CharacterGrowthParameter growthParameter;
 
         public GameSavePointMenuView(HKUIDocument documentBundlePrefab, Character character)
         {
@@ -86,11 +78,7 @@ namespace SoulRPG
 
         private async UniTask StateLevelUpAsync(CancellationToken scope)
         {
-            vitality = character.GrowthParameter.Vitality;
-            stamina = character.GrowthParameter.Stamina;
-            physicalStrength = character.GrowthParameter.PhysicalStrength;
-            magicalStrength = character.GrowthParameter.MagicalStrength;
-            speed = character.GrowthParameter.Speed;
+            growthParameter = new CharacterGrowthParameter(character.GrowthParameter);
             var listDocument = CreateList
             (
                 new List<Action<HKUIDocument>>
@@ -103,8 +91,8 @@ namespace SoulRPG
                             "生命力",
                             x =>
                             {
-                                vitality += x;
-                                return vitality;
+                                growthParameter.Vitality += x;
+                                return growthParameter.Vitality;
                             }
                         );
                     },
@@ -116,8 +104,8 @@ namespace SoulRPG
                             "持久力",
                             x =>
                             {
-                                stamina += x;
-                                return stamina;
+                                growthParameter.stamina += x;
+                                return growthParameter.Stamina;
                             }
                         );
                     },
@@ -129,8 +117,8 @@ namespace SoulRPG
                             "物理攻撃力",
                             x =>
                             {
-                                physicalStrength += x;
-                                return physicalStrength;
+                                growthParameter.PhysicalStrength += x;
+                                return growthParameter.PhysicalStrength;
                             }
                         );
                     },
@@ -142,8 +130,8 @@ namespace SoulRPG
                             "魔法攻撃力",
                             x =>
                             {
-                                magicalStrength += x;
-                                return magicalStrength;
+                                growthParameter.MagicalStrength += x;
+                                return growthParameter.MagicalStrength;
                             }
                         );
                     },
@@ -155,8 +143,8 @@ namespace SoulRPG
                             "素早さ",
                             x =>
                             {
-                                speed += x;
-                                return speed;
+                                growthParameter.Speed += x;
+                                return growthParameter.Speed;
                             }
                         );
                     },
