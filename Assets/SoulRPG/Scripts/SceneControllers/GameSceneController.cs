@@ -85,7 +85,6 @@ namespace SoulRPG.SceneControllers
             dungeonController.Setup(debugDungeonName);
             playerController.Attach(player, gameMenuBundlePrefab, destroyCancellationToken);
             explorationView.Open(destroyCancellationToken);
-            var testMessageId = 0;
             Observable.EveryUpdate(destroyCancellationToken)
                 .Subscribe(async _ =>
                 {
@@ -97,7 +96,7 @@ namespace SoulRPG.SceneControllers
                             {
                                 player.Inventory.Add(i.Id, 1);
                             }
-                            Debug.Log("Add All Items");
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("[DEBUG] Add All Items");
                         }
 
                         if (Keyboard.current.wKey.wasPressedThisFrame)
@@ -112,7 +111,8 @@ namespace SoulRPG.SceneControllers
 
                         if (Keyboard.current.eKey.wasPressedThisFrame)
                         {
-                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext($"TestMessage{testMessageId++}");
+                            TinyServiceLocator.Resolve<UserData>().AddExperience(100000);
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("[DEBUG] Add Experience 100000");
                         }
                     }
                     catch (OperationCanceledException)
