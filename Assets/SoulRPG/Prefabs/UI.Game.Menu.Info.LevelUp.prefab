@@ -324,9 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elements:
   - document: {fileID: 479108064644162071}
-    overrideName: ListParent
-  - document: {fileID: 6718679723373189518, guid: 8bcd5ed7fa0df4b428baae4500745e10, type: 3}
-    overrideName: ListElementPrefab
+    overrideName: 
 --- !u!114 &-15748072192623952
 MonoBehaviour:
   m_ObjectHideFlags: 0

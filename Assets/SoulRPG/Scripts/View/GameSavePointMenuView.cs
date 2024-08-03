@@ -29,6 +29,8 @@ namespace SoulRPG
 
         private CharacterGrowthParameter growthParameter;
 
+        private ReactiveProperty<int> useExperience = new(0);
+
         public GameSavePointMenuView(HKUIDocument documentBundlePrefab, Character character)
         {
             this.documentBundlePrefab = documentBundlePrefab;
@@ -78,7 +80,9 @@ namespace SoulRPG
 
         private async UniTask StateLevelUpAsync(CancellationToken scope)
         {
+            var gameRule = TinyServiceLocator.Resolve<GameRule>();
             growthParameter = new CharacterGrowthParameter(character.GrowthParameter);
+            useExperience = new ReactiveProperty<int>(0);
             var listDocument = CreateList
             (
                 new List<Action<HKUIDocument>>
@@ -151,6 +155,18 @@ namespace SoulRPG
                 },
                 0
             );
+            var userData = TinyServiceLocator.Resolve<UserData>();
+            var informationDocument = UnityEngine.Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.LevelUp"));
+            var informationViewport = informationDocument.Q<RectTransform>("Viewport");
+            var informationElementPrefab = documentBundlePrefab.Q<HKUIDocument>("UIElement.Info");
+            var informationElement = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
+            informationElement.Q<TMP_Text>("Header").text = "所持経験値";
+            Observable.Merge(useExperience, userData.Experience)
+                .Subscribe(x =>
+                {
+                    informationElement.Q<TMP_Text>("Value").text = (userData.Experience.CurrentValue - useExperience.Value).ToString();
+                })
+                .RegisterTo(scope);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -196,13 +212,17 @@ namespace SoulRPG
                                 {
                                     return;
                                 }
-                                if (velocity.x > 0)
+                                if (velocity.x > 0 && CanLevelUp())
                                 {
                                     valueSelector(1);
+                                    growthParameter.Level += 1;
+                                    useExperience.Value += gameRule.ExperienceTable.GetNeedExperience(growthParameter.Level);
                                 }
-                                else
+                                else if (velocity.x < 0 && CanLevelDown())
                                 {
                                     valueSelector(-1);
+                                    useExperience.Value -= gameRule.ExperienceTable.GetNeedExperience(growthParameter.Level);
+                                    growthParameter.Level -= 1;
                                 }
                                 UpdateHorizontalInterfaceMessage(horizontalInterface, valueSelector(0).ToString("00"));
                             })
@@ -227,7 +247,7 @@ namespace SoulRPG
 
         private HKUIDocument CreateList
         (
-            IEnumerable<System.Action<HKUIDocument>> elementActivateActions,
+            IEnumerable<Action<HKUIDocument>> elementActivateActions,
             int initialElement
         )
         {
@@ -249,6 +269,19 @@ namespace SoulRPG
         private static void UpdateHorizontalInterfaceMessage(HKUIDocument horizontalInterface, string message)
         {
             horizontalInterface.Q<TMP_Text>("Message").text = message;
+        }
+
+        private bool CanLevelUp()
+        {
+            var gameRule = TinyServiceLocator.Resolve<GameRule>();
+            var userData = TinyServiceLocator.Resolve<UserData>();
+            var needExperience = gameRule.ExperienceTable.GetNeedExperience(growthParameter.Level + 1);
+            return userData.Experience.CurrentValue - useExperience.Value >= needExperience;
+        }
+
+        private bool CanLevelDown()
+        {
+            return character.GrowthParameter.Level < growthParameter.Level;
         }
     }
 }
