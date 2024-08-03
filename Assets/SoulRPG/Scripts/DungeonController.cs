@@ -183,6 +183,7 @@ namespace SoulRPG
             {
                 TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorEvent.X, floorEvent.Y));
                 userData.AddCompletedfloorEventIds(floorEvent.Id, floorEvent.IsOneTime);
+                userData.AddExperience(masterDataEnemy.Experience);
             }
             else
             {
