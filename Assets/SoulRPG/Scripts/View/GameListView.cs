@@ -17,10 +17,11 @@ namespace SoulRPG
     /// </summary>
     public sealed class GameListView
     {
-        public static HKUIDocument Create(
-        HKUIDocument listDocumentPrefab,
-        IEnumerable<Action<HKUIDocument>> elementActivateActions,
-        int initialElement
+        public static HKUIDocument Create
+        (
+            HKUIDocument listDocumentPrefab,
+            IEnumerable<Action<HKUIDocument>> elementActivateActions,
+            int initialElement
         )
         {
             var document = Object.Instantiate(listDocumentPrefab);
