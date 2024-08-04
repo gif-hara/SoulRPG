@@ -25,6 +25,8 @@ namespace SoulRPG
 
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();
+
+        public readonly Subject<string> OnRequestRemoveDebugPanelInformation = new();
 #endif
 
         public async UniTask ShowMessageAndWaitForSubmitInputAsync(string message)
