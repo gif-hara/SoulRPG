@@ -108,5 +108,15 @@ namespace SoulRPG
             await sequencer.PlayAsync(scope);
             return container;
         }
+
+        public int TurnCount()
+        {
+            return turnCount;
+        }
+
+        public MasterData.Ailment GetMasterDataAilment()
+        {
+            return masterDataAilment;
+        }
     }
 }
