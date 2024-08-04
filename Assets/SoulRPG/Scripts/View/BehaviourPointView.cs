@@ -34,6 +34,7 @@ namespace SoulRPG
                     {
                         SetActiveElement(i, x > activeIndex);
                     }
+                    activeIndex = x;
                 })
                 .RegisterTo(scope);
 
