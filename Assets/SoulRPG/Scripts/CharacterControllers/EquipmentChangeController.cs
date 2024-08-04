@@ -16,6 +16,7 @@ namespace SoulRPG
             Weapon1,
             Weapon2,
             Weapon3,
+            Weapon4,
             Head,
             Body,
             Arm,
@@ -49,6 +50,9 @@ namespace SoulRPG
                     break;
                 case PartType.Weapon3:
                     character.Equipment.EquipWeapon(2, itemId);
+                    break;
+                case PartType.Weapon4:
+                    character.Equipment.EquipWeapon(3, itemId);
                     break;
                 case PartType.Head:
                     character.Equipment.EquipHead(itemId);
