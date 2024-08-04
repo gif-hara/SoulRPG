@@ -14,23 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 7538228103530414196
-  - rid: 7538228103530414707
-  - rid: 7538228103530414708
+  - rid: 3022425624215289858
+  - rid: 3022425624215289859
   references:
     version: 2
     RefIds:
+    - rid: 3022425624215289858
+      type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        statusType: 0
+        buffName: Ailment.101008
+    - rid: 3022425624215289859
+      type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        statusType: 1
+        buffName: Ailment.101008
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306E\u9EBB\u75FA\u304C\u89E3\u3051\u305F\u3002"
         waitForInput: 1
-    - rid: 7538228103530414707
-      type: {class: RemoveStrengthBuff, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        attackType: 0
-        buffName: Ailment.101008
-    - rid: 7538228103530414708
-      type: {class: RemoveStrengthBuff, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        attackType: 1
-        buffName: Ailment.101008
+        ignoreIfCharacterDead: 0

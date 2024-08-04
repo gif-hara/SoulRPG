@@ -4,7 +4,7 @@ using UnityEngine;
 namespace SoulRPG.BattleSystems.DamageCalculators
 {
     /// <summary>
-    /// 通常のダメージ計算
+    /// 
     /// </summary>
     [Serializable]
     public sealed class AttackPowerOnly : IDamageCalculator
@@ -22,7 +22,7 @@ namespace SoulRPG.BattleSystems.DamageCalculators
         {
             var attackPower = attacker.BattleStatus.GetAttackPower(attackType) * rate;
             var cutRate = defender.BattleStatus.GetCutRate(attackAttribute);
-            var damage = (int)(attackPower * attacker.StrengthBuffController.GetRate(attackType) * (1.0f - cutRate));
+            var damage = (int)(attackPower * attacker.StatusBuffController.GetStrengthRate(attackType) * (1.0f - cutRate));
             damage = Mathf.Max(1, damage);
             return damage;
         }

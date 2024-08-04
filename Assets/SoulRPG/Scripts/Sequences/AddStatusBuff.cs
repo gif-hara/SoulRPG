@@ -1,7 +1,6 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using SoulRPG.BattleSystems.BattleCharacterEvaluators;
 using UnityEngine;
 using UnitySequencerSystem;
 
@@ -11,10 +10,10 @@ namespace SoulRPG
     /// 
     /// </summary>
     [Serializable]
-    public sealed class AddStrengthBuff : ISequence
+    public sealed class AddStatusBuff : ISequence
     {
         [SerializeField]
-        private Define.AttackType attackType;
+        private Define.StatusType statusType;
 
         [SerializeField]
         private string buffName;
@@ -25,7 +24,7 @@ namespace SoulRPG
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var actor = container.Resolve<BattleCharacter>("Actor");
-            actor.StrengthBuffController.Add(attackType, buffName, rate);
+            actor.StatusBuffController.Add(statusType, buffName, rate);
             return UniTask.CompletedTask;
         }
     }

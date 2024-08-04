@@ -21,7 +21,7 @@ namespace SoulRPG
 
         public AilmentController AilmentController { get; }
 
-        public StatusBuffController StrengthBuffController { get; } = new();
+        public StatusBuffController StatusBuffController { get; } = new();
 
         public BattleCharacter(Character character, IBattleAI battleAI)
         {
