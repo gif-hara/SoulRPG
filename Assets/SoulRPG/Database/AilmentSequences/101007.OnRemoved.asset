@@ -14,32 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 7538228103530414196
-  - rid: 7538228103530414700
-  - rid: 7538228103530414701
-  - rid: 7538228103530414702
+  - rid: 3022425624344264777
   references:
     version: 2
     RefIds:
+    - rid: 3022425624344264777
+      type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        buffName: Ailment.101007
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306E\u7269\u7406\u534A\u6E1B\u72B6\u614B\u306F\u6CBB\u307E\u3063\u305F"
         waitForInput: 1
-    - rid: 7538228103530414700
-      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        attackAttribute: 0
-        cutRate: -0.5
-    - rid: 7538228103530414701
-      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        attackAttribute: 1
-        cutRate: -0.5
-    - rid: 7538228103530414702
-      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        attackAttribute: 2
-        cutRate: -0.5
+        ignoreIfCharacterDead: 0

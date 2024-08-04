@@ -15,37 +15,26 @@ MonoBehaviour:
   sequences:
   - rid: 6411493576093728937
   - rid: 6411493576093728944
-  - rid: 6411493576093728956
-  - rid: 6411493576093728957
-  - rid: 6411493576093728958
+  - rid: 3022425624344264782
   references:
     version: 2
     RefIds:
+    - rid: 3022425624344264782
+      type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        statusTypes: 020000000300000004000000
+        buffName: Skill.101002
+        rate: 0.2
     - rid: 6411493576093728937
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u7D20\u65E9\u304F\u69CB\u3048\u305F"
         waitForInput: 1
+        ignoreIfCharacterDead: 0
     - rid: 6411493576093728944
       type: {class: RegisterAfterCommandInvoker, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         scriptableSequences: {fileID: 11400000, guid: 954ec1d2022b545c486046460f52a60d, type: 2}
         behaviourPriority: 0
-    - rid: 6411493576093728956
-      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        attackAttribute: 0
-        cutRate: 0.2
-    - rid: 6411493576093728957
-      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        attackAttribute: 1
-        cutRate: 0.2
-    - rid: 6411493576093728958
-      type: {class: AddCutRate, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        attackAttribute: 2
-        cutRate: 0.2
+        cost: 0
