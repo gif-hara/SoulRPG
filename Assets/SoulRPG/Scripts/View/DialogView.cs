@@ -6,6 +6,7 @@ using HK;
 using R3;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace SoulRPG
@@ -24,6 +25,7 @@ namespace SoulRPG
             CancellationToken scope
         )
         {
+            var tempSelectObject = EventSystem.current.currentSelectedGameObject;
             var source = new UniTaskCompletionSource<int>();
             var document = Object.Instantiate(documentPrefab);
             scope = CancellationTokenSource.CreateLinkedTokenSource(document.destroyCancellationToken, scope).Token;
@@ -51,6 +53,7 @@ namespace SoulRPG
                 button.navigation = navigation;
             }
             var result = await source.Task;
+            EventSystem.current.SetSelectedGameObject(tempSelectObject);
             Object.Destroy(document.gameObject);
             return result;
         }
