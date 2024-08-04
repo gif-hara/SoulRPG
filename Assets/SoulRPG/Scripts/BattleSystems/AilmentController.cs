@@ -106,7 +106,7 @@ namespace SoulRPG
             foreach (var ailment in elements)
             {
                 var masterDataAilment = ailment.GetMasterDataAilment();
-                sb.AppendLine($"    - {masterDataAilment.Name} [{ailment.TurnCount()}]");
+                sb.AppendLine($"    - {masterDataAilment.Name} [{ailment.GetRemainingTurnCount()}]");
             }
             TinyServiceLocator.Resolve<GameEvents>()
                 .OnRequestAddDebugPanelInformation.OnNext(($"{battleCharacter.BattleStatus.Name}.AilmendController", sb.ToString()));

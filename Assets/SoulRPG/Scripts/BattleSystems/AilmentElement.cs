@@ -109,7 +109,7 @@ namespace SoulRPG
             return container;
         }
 
-        public int TurnCount()
+        public int GetRemainingTurnCount()
         {
             return turnCount - currentTurnCount;
         }

@@ -26,7 +26,7 @@ namespace SoulRPG
 
         void Reset(int turnCount);
 
-        int TurnCount();
+        int GetRemainingTurnCount();
 
         MasterData.Ailment GetMasterDataAilment();
     }
