@@ -16,11 +16,12 @@ namespace SoulRPG
         {
             var document = Object.Instantiate(documentPrefab);
             var elementParent = document.Q<Transform>("ElementParent");
+            var elementPrefab = document.Q<HKUIDocument>("ElementPrefab");
             var elements = new List<HKUIDocument>();
             var activeIndex = 0;
             for (var i = 0; i < character.BattleStatus.BehaviorPointMaxReactiveProperty.CurrentValue; i++)
             {
-                var element = Object.Instantiate(documentPrefab, elementParent);
+                var element = Object.Instantiate(elementPrefab, elementParent);
                 elements.Add(element);
                 SetActiveElement(i, false);
             }
