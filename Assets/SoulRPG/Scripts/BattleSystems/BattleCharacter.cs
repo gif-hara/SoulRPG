@@ -64,5 +64,10 @@ namespace SoulRPG
             BattleStatus.Dispose();
             AilmentController.Dispose();
         }
+
+        public float GetTotalCutRate(Define.AttackAttribute attackAttribute)
+        {
+            return BattleStatus.GetCutRate(attackAttribute) + StatusBuffController.GetCutRate(attackAttribute);
+        }
     }
 }

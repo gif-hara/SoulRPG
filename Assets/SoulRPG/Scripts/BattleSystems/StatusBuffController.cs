@@ -134,21 +134,21 @@ namespace SoulRPG
             }
         }
 
-        public float GetCutRate(Define.WeaponAttackAttribute attackAttribute)
+        public float GetCutRate(Define.AttackAttribute attackAttribute)
         {
             switch (attackAttribute)
             {
-                case Define.WeaponAttackAttribute.Slash:
+                case Define.AttackAttribute.Slash:
                     return slashCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.WeaponAttackAttribute.Blow:
+                case Define.AttackAttribute.Blow:
                     return blowCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.WeaponAttackAttribute.Thrust:
+                case Define.AttackAttribute.Thrust:
                     return thrustCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.WeaponAttackAttribute.Magic:
+                case Define.AttackAttribute.Magic:
                     return magicCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.WeaponAttackAttribute.Fire:
+                case Define.AttackAttribute.Fire:
                     return fireCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.WeaponAttackAttribute.Thunder:
+                case Define.AttackAttribute.Thunder:
                     return thunderCutRateBuffList.Select(x => x.Item2).Sum();
                 default:
                     Assert.IsTrue(false, $"攻撃属性が不正です {attackAttribute}");
