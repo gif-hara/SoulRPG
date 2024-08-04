@@ -19,20 +19,24 @@ namespace SoulRPG
             var messages = new Dictionary<string, HKUIDocument>();
             var document = Object.Instantiate(documentPrefab);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var elementParent = document.Q<RectTransform>("ElementParent");
             gameEvents.OnRequestAddDebugPanelInformation
                 .Subscribe(x =>
                 {
                     if (!messages.ContainsKey(x.key))
                     {
-                        var instance = Object.Instantiate(document);
-                        instance.GetComponentInChildren<TextMeshProUGUI>().text = x.message;
+                        var message = document.Q<HKUIDocument>("ElementPrefab");
+                        var instance = Object.Instantiate(message, elementParent);
                         messages.Add(x.key, instance);
                     }
                     messages[x.key].Q<TMP_Text>("Text").text = x.message;
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
-            Object.Destroy(document.gameObject);
+            if (document != null)
+            {
+                Object.Destroy(document.gameObject);
+            }
         }
     }
 #endif
