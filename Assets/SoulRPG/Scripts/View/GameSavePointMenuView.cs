@@ -25,7 +25,7 @@ namespace SoulRPG
 
         private readonly UniTaskCompletionSource openCompletionSource = new();
 
-        private InputController inputController;
+        private readonly InputController inputController;
 
         private CharacterGrowthParameter growthParameter;
 
