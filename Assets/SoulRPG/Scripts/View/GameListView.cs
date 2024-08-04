@@ -92,7 +92,15 @@ namespace SoulRPG
             }
             void UpdatePage(int index)
             {
-                document.Q<TMP_Text>("Text.Page").text = $"{index + 1}/{pageMax + 1}";
+                if (pageMax == 0)
+                {
+                    document.Q("Area.Page").SetActive(false);
+                }
+                else
+                {
+                    document.Q("Area.Page").SetActive(true);
+                    document.Q<TMP_Text>("Text.Page").text = $"{index + 1}/{pageMax + 1}";
+                }
             }
             return document;
         }

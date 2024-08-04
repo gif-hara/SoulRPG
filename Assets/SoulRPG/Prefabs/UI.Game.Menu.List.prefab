@@ -342,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6678282558943037287}
   m_Layer: 0
-  m_Name: Page
+  m_Name: Area.Page
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -502,6 +502,8 @@ MonoBehaviour:
     overrideName: ListElementPrefab
   - document: {fileID: 7572792914852308831}
     overrideName: Text.Page
+  - document: {fileID: 7634158076658451680}
+    overrideName: 
 --- !u!114 &-15748072192623952
 MonoBehaviour:
   m_ObjectHideFlags: 0
