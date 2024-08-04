@@ -80,6 +80,7 @@ namespace SoulRPG
 
         private async UniTask StateLevelUpAsync(CancellationToken scope)
         {
+            var userData = TinyServiceLocator.Resolve<UserData>();
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
             growthParameter = new CharacterGrowthParameter(character.GrowthParameter);
             useExperience = new ReactiveProperty<int>(0);
@@ -155,7 +156,6 @@ namespace SoulRPG
                 },
                 0
             );
-            var userData = TinyServiceLocator.Resolve<UserData>();
             var informationDocument = UnityEngine.Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.LevelUp"));
             var informationViewport = informationDocument.Q<RectTransform>("Viewport");
             var informationElementPrefab = documentBundlePrefab.Q<HKUIDocument>("UIElement.Info");
@@ -183,6 +183,7 @@ namespace SoulRPG
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
             UnityEngine.Object.Destroy(listDocument.gameObject);
+            UnityEngine.Object.Destroy(informationDocument.gameObject);
 
             void SetupElement
             (
@@ -197,6 +198,18 @@ namespace SoulRPG
                     header,
                     async _ =>
                     {
+                        if (character.GrowthParameter.Level == growthParameter.Level)
+                        {
+                            DialogView.ConfirmAsync
+                            (
+                                documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                                "パラメーターを割り振ってください",
+                                new[] { "OK" },
+                                0,
+                                scope
+                            ).Forget();
+                            return;
+                        }
                         var result = await DialogView.ConfirmAsync
                         (
                             documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
@@ -205,6 +218,12 @@ namespace SoulRPG
                             0,
                             scope
                         );
+                        if (result == 0)
+                        {
+                            character.GrowthParameter.Sync(growthParameter);
+                            userData.AddExperience(-useExperience.Value);
+                            stateMachine.Change(StateRootMenuAsync);
+                        }
                     }
                 );
                 var horizontalInterface = CreateHorizontalInterface(element);
