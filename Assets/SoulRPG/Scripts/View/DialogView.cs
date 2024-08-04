@@ -33,8 +33,9 @@ namespace SoulRPG
             foreach (var e in options.Select((x, i) => (x, i)))
             {
                 var element = Object.Instantiate(elementPrefab, elementParent);
+                var button = element.Q<Button>("Button");
                 element.Q<TMP_Text>("Header").text = e.x;
-                element.Q<Button>("Button").OnClickAsObservable()
+                button.OnClickAsObservable()
                     .Subscribe(_ =>
                     {
                         source.TrySetResult(e.i);
@@ -42,8 +43,12 @@ namespace SoulRPG
                     .RegisterTo(scope);
                 if (defaultIndex == e.i)
                 {
-                    element.Q<Button>("Button").Select();
+                    button.Select();
                 }
+                var navigation = button.navigation;
+                navigation.mode = Navigation.Mode.Horizontal;
+                navigation.wrapAround = false;
+                button.navigation = navigation;
             }
             var result = await source.Task;
             Object.Destroy(document.gameObject);
