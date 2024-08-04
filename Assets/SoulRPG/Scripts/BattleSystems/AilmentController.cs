@@ -29,6 +29,9 @@ namespace SoulRPG
         public void Dispose()
         {
             cancellationTokenSource?.Dispose();
+#if DEBUG
+            RemoveDebugPanel();
+#endif
         }
 
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
@@ -107,6 +110,12 @@ namespace SoulRPG
             }
             TinyServiceLocator.Resolve<GameEvents>()
                 .OnRequestAddDebugPanelInformation.OnNext(($"{battleCharacter.BattleStatus.Name}.AilmendController", sb.ToString()));
+        }
+
+        private void RemoveDebugPanel()
+        {
+            TinyServiceLocator.Resolve<GameEvents>()
+                .OnRequestRemoveDebugPanelInformation.OnNext($"{battleCharacter.BattleStatus.Name}.AilmendController");
         }
 #endif
     }
