@@ -5,7 +5,7 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    public sealed class StrengthBuffController
+    public sealed class StatusBuffController
     {
         private readonly List<(string, float)> physicalStrengthBuffList = new();
 
