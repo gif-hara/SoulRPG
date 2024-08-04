@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using HK;
 
 namespace SoulRPG
 {
@@ -19,6 +21,14 @@ namespace SoulRPG
         public AilmentController(BattleCharacter battleCharacter)
         {
             this.battleCharacter = battleCharacter;
+#if DEBUG
+            AddDebugPanel();
+#endif
+        }
+
+        public void Dispose()
+        {
+            cancellationTokenSource?.Dispose();
         }
 
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
@@ -34,6 +44,9 @@ namespace SoulRPG
                 elements.Add(element);
                 await element.OnAddedAsync(battleCharacter, cancellationTokenSource.Token);
             }
+#if DEBUG
+            AddDebugPanel();
+#endif
         }
 
         public async UniTask OnTurnEndAsync()
@@ -47,6 +60,9 @@ namespace SoulRPG
                 }
             }
             elements.RemoveAll(x => x.IsEnd());
+#if DEBUG
+            AddDebugPanel();
+#endif
         }
 
         public async UniTask<bool> CanExecutableTurnAsync()
@@ -79,9 +95,19 @@ namespace SoulRPG
             }
         }
 
-        public void Dispose()
+#if DEBUG
+        private void AddDebugPanel()
         {
-            cancellationTokenSource?.Dispose();
+            var sb = new StringBuilder();
+            sb.AppendLine("  - Ailment");
+            foreach (var ailment in elements)
+            {
+                var masterDataAilment = ailment.GetMasterDataAilment();
+                sb.AppendLine($"    - {masterDataAilment.Name} [{ailment.TurnCount()}]");
+            }
+            TinyServiceLocator.Resolve<GameEvents>()
+                .OnRequestAddDebugPanelInformation.OnNext(($"{battleCharacter.BattleStatus.Name}.AilmendController", sb.ToString()));
         }
+#endif
     }
 }
