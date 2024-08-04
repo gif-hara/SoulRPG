@@ -15,19 +15,12 @@ MonoBehaviour:
   sequences:
   - rid: 7538228103530414196
   - rid: 3022425624215289858
-  - rid: 3022425624215289859
   references:
     version: 2
     RefIds:
     - rid: 3022425624215289858
       type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        statusType: 0
-        buffName: Ailment.101008
-    - rid: 3022425624215289859
-      type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        statusType: 1
         buffName: Ailment.101008
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}

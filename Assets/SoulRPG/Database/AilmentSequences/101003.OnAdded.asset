@@ -21,7 +21,8 @@ MonoBehaviour:
     - rid: 3022425619933167715
       type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        statusType: 0
+        targetType: 0
+        statusTypes: 00000000
         buffName: Ailment.101003
         rate: 1.2
     - rid: 7538228103530414196
