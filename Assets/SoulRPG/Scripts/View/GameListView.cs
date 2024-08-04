@@ -32,7 +32,7 @@ namespace SoulRPG
             var elementSize = ((RectTransform)listElementPrefab.transform).rect.height + layoutGroup.spacing;
             var elementCount = Mathf.FloorToInt(parentSize / elementSize);
             var pageIndex = 0;
-            var pageMax = elementActivateActions.Count() / elementCount;
+            var pageMax = (elementActivateActions.Count() - 1) / elementCount;
             var elementIndex = 0;
             var elements = new List<HKUIDocument>();
             CreateList(initialElement);
@@ -59,19 +59,23 @@ namespace SoulRPG
                                 .TakeUntil(button.OnDeselectAsObservable())
                                 .Subscribe(x =>
                                 {
+                                    if (pageMax == 0)
+                                    {
+                                        return;
+                                    }
                                     var direction = x.ReadValue<Vector2>();
                                     if (direction.x == 0)
                                     {
                                         return;
                                     }
-                                    if (direction.x > 0 && pageIndex < pageMax)
+                                    if (direction.x > 0)
                                     {
-                                        pageIndex++;
+                                        pageIndex = (pageIndex + 1) % (pageMax + 1);
                                         CreateList(0);
                                     }
-                                    else if (direction.x < 0 && pageIndex > 0)
+                                    else if (direction.x < 0)
                                     {
-                                        pageIndex--;
+                                        pageIndex = pageIndex == 0 ? pageMax : pageIndex - 1;
                                         CreateList(0);
                                     }
                                 })
