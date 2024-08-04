@@ -473,6 +473,8 @@ namespace SoulRPG
 
             public int Experience;
 
+            public int BehaviourPoint;
+
             public Define.CharacterAttribute Attribute;
 
             [Serializable]

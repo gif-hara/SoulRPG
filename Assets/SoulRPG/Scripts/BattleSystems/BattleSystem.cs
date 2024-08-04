@@ -31,30 +31,15 @@ namespace SoulRPG.BattleSystems
             gameEvents.OnRequestShowMessage.OnNext($"{enemy.BattleStatus.Name}が現れた");
             await gameEvents.WaitForSubmitInputAsync();
 
-            while (!player.BattleStatus.IsDead && !enemy.BattleStatus.IsDead)
+            while (!IsBattleEnd())
             {
-                var playerCommandInvoker = await player.ThinkAsync();
-                var enemyCommandInvoker = await enemy.ThinkAsync();
-                if (await InvokeCommandAsync(player, playerCommandInvoker, enemy, enemyCommandInvoker, scope))
+                var firstActor = player.BattleStatus.Speed > enemy.BattleStatus.Speed ? player : enemy;
+                var secondActor = firstActor == player ? enemy : player;
+                while (!IsBattleEnd())
                 {
-                    break;
+                    var commandInvoker = await firstActor.ThinkAsync();
+                    await commandInvoker.InvokeAsync(firstActor, secondActor, scope);
                 }
-                while (
-                    !player.BattleStatus.IsDead && !enemy.BattleStatus.IsDead &&
-                    (player.AfterCommandInvoker != null || enemy.AfterCommandInvoker != null)
-                    )
-                {
-                    playerCommandInvoker = player.AfterCommandInvoker;
-                    enemyCommandInvoker = enemy.AfterCommandInvoker;
-                    player.AfterCommandInvoker = null;
-                    enemy.AfterCommandInvoker = null;
-                    if (await InvokeCommandAsync(player, playerCommandInvoker, enemy, enemyCommandInvoker, scope))
-                    {
-                        break;
-                    }
-                }
-                await player.TurnEndAsync();
-                await enemy.TurnEndAsync();
             }
 
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
@@ -129,6 +114,11 @@ namespace SoulRPG.BattleSystems
                     await commandInvoker.InvokeAsync(actor, target, scope);
                     return actor.BattleStatus.IsDead || target.BattleStatus.IsDead;
                 }
+            }
+
+            bool IsBattleEnd()
+            {
+                return player.BattleStatus.IsDead || enemy.BattleStatus.IsDead;
             }
         }
     }

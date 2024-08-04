@@ -69,6 +69,12 @@ namespace SoulRPG
         public ReadOnlyReactiveProperty<int> ExperienceReactiveProperty => experienceReactiveProperty;
         public int Experience => experienceReactiveProperty.Value;
 
+        private readonly ReactiveProperty<int> behaviourPointMaxReactiveProperty = new(0);
+        public ReadOnlyReactiveProperty<int> BehaviorPointMaxReactiveProperty => behaviourPointMaxReactiveProperty;
+
+        private readonly ReactiveProperty<int> behaviourPointReactiveProperty = new(0);
+        public ReadOnlyReactiveProperty<int> BehaviourPointReactiveProperty => behaviourPointReactiveProperty;
+
         private readonly Define.CharacterAttribute attribute;
         public Define.CharacterAttribute Attribute => attribute;
 
@@ -110,6 +116,8 @@ namespace SoulRPG
                     character.InstanceStatus.SetStamina(x);
                 })
                 .RegisterTo(scope.Token);
+            behaviourPointMaxReactiveProperty.Value = 3;
+            behaviourPointReactiveProperty.Value = behaviourPointMaxReactiveProperty.Value;
         }
 
         public CharacterBattleStatus(CharacterBattleStatusBlueprint blueprint)
@@ -129,6 +137,7 @@ namespace SoulRPG
             thunderCutRateReactiveProperty = new ReactiveProperty<float>(blueprint.ThunderCutRate);
             speedReactiveProperty = new ReactiveProperty<int>(blueprint.Speed);
             experienceReactiveProperty = new ReactiveProperty<int>(blueprint.Experience);
+            behaviourPointMaxReactiveProperty = new ReactiveProperty<int>(blueprint.BehaviourPoint);
             attribute = blueprint.Attribute;
         }
 
@@ -149,6 +158,7 @@ namespace SoulRPG
             thunderCutRateReactiveProperty = new ReactiveProperty<float>(enemy.ThunderCutRate);
             speedReactiveProperty = new ReactiveProperty<int>(enemy.Speed);
             experienceReactiveProperty = new ReactiveProperty<int>(enemy.Experience);
+            behaviourPointMaxReactiveProperty = new ReactiveProperty<int>(enemy.BehaviourPoint);
             attribute = enemy.Attribute;
         }
 
@@ -207,6 +217,17 @@ namespace SoulRPG
                 _ => throw new ArgumentOutOfRangeException(),
             };
 
+        }
+
+        public void AddBehaviourPoint(int value)
+        {
+            behaviourPointReactiveProperty.Value =
+                Mathf.Clamp(behaviourPointReactiveProperty.Value + value, 0, behaviourPointMaxReactiveProperty.Value);
+        }
+
+        public void RecoveryBehaviourPoint()
+        {
+            behaviourPointReactiveProperty.Value = behaviourPointMaxReactiveProperty.Value;
         }
 
         public void Dispose()

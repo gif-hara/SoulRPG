@@ -62,6 +62,10 @@ namespace SoulRPG
         public int Experience => experience;
 
         [SerializeField]
+        private int behaviourPoint;
+        public int BehaviourPoint => behaviourPoint;
+
+        [SerializeField]
         private Define.CharacterAttribute attribute;
         public Define.CharacterAttribute Attribute => attribute;
     }
