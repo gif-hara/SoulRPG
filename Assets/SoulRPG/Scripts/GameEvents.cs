@@ -23,6 +23,10 @@ namespace SoulRPG
 
         public readonly Subject<(string dungeonName, Vector2Int reachedPosition)> OnAddReachedPoint = new();
 
+#if DEBUG
+        public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();
+#endif
+
         public async UniTask ShowMessageAndWaitForSubmitInputAsync(string message)
         {
             OnRequestShowMessage.OnNext(message);
