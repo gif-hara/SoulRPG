@@ -862,319 +862,319 @@ MonoBehaviour:
     list:
     - Name: "\u901A\u5E38\u653B\u6483"
       Id: 101001
-      Cost: 0
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6B66\u5668\u306E\u632F\u308A\u56DE\u3057\u3066\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 2f91381adf7999842acadc0c1386454c, type: 2}
     - Name: "\u69CB\u3048"
       Id: 101002
-      Cost: 2
+      Cost: 1
       BehaviourPriority: 1
       Description: "\u9AD8\u901F\u3067\u6B66\u5668\u3092\u69CB\u3048\u3066\u7269\u7406\u9632\u5FA1\u3092\u9AD8\u3081\u3001\u76F8\u624B\u306E\u52D5\u4F5C\u306E\u5F8C\u306B\u5A01\u529B\u306E\u9AD8\u3044\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 4d49a36e15e6afe45b8bdc95c0fc3494, type: 2}
     - Name: "\u7A81\u304D"
       Id: 101003
-      Cost: 3
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6B66\u5668\u3067\u76F8\u624B\u3092\u7A81\u304D\u523A\u3057\u3001\u523A\u7A81\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 13b7771f428f09b4781c298a3306effb, type: 2}
     - Name: "\u8DB3\u7815\u304D"
       Id: 101004
-      Cost: 7
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u8DB3\u3092\u72D9\u3063\u3066\u6B66\u5668\u3092\u632F\u308B\u3002\u4EBA\u578B\u304C\u76F8\u624B\u306E\u5834\u5408\u306F\u300C\u602F\u307F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 7a5b52c92a3c20d43b7f9df9cfb1207b, type: 2}
     - Name: "\u4E8C\u9023\u6483"
       Id: 101005
-      Cost: 7
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6B66\u5668\u3092\u5DE6\u53F3\u306B\u632F\u308A\u30012\u56DE\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 336a7141c06340841a5bcb9010c2f2c4, type: 2}
     - Name: "\u523A\u3057\u7A81\u304D"
       Id: 101006
-      Cost: 6
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u523A\u7A81\u6B66\u5668\u7279\u6709\u306E\u6280\u3002\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 7236c15d41f37e24caa6053e16d9e846, type: 2}
     - Name: "\u30D6\u30F3\u56DE\u3057"
       Id: 101007
-      Cost: 4
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6253\u6483\u6B66\u5668\u306B\u591A\u304F\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u6280\u3002\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 5c43b07efc110204da4458495658131e, type: 2}
     - Name: "\u6BD2\u306E\u5203"
       Id: 101008
-      Cost: 6
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6BD2\u3092\u7E8F\u3063\u305F\u6B66\u5668\u3092\u632F\u308A\u56DE\u3057\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u76F8\u624B\u306B\u300C\u6BD2\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: a4194a1b8597741caa713ae0373472a5, type: 2}
     - Name: "\u96FB\u5149\u77F3\u706B"
       Id: 101009
-      Cost: 11
+      Cost: 1
       BehaviourPriority: 1
       Description: "\u9AD8\u901F\u3067\u653B\u6483\u3092\u884C\u3046\u304C\u3001\u5A01\u529B\u306F\u5C11\u3057\u843D\u3061\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 1b63f9ec84ab907419bc92146e35a17b, type: 2}
     - Name: "\u6C17\u5408"
       Id: 101010
-      Cost: 7
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6C17\u5408\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 60c54c7daf92c304d9716d82bd44a75c, type: 2}
     - Name: "\u708E\u821E"
       Id: 101011
-      Cost: 9
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u708E\u8FFD\u6483\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 2e57ba717ee3c914e8b014853f3e0ab3, type: 2}
     - Name: "\u9B54\u6CD5\u653B\u6483"
       Id: 101012
-      Cost: 0
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u9B54\u529B\u3092\u7528\u3044\u305F\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 6533d9b7c26fb4cb69556e32772a7c4f, type: 2}
     - Name: "\u708E\u306E\u3064\u3076\u3066"
       Id: 101013
-      Cost: 4
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u708E\u306E\u584A\u3092\u76F8\u624B\u306B\u5411\u3051\u3066\u653E\u3064\u3002\u708E\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 32e7d1f07e7d94576a54570d7f026709, type: 2}
     - Name: "\u713C\u93DD"
       Id: 101014
-      Cost: 7
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u71B1\u3057\u305F\u713C\u93DD\u3092\u62BC\u3057\u4ED8\u3051\u308B\u3002\u76F8\u624B\u306B\u300C\u706B\u50B7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: b5f390b9efc6f41dc839f24ff630ebde, type: 2}
     - Name: "\u721B\u308C\u713C\u93DD"
       Id: 101015
-      Cost: 22
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u8D64\u71B1\u3057\u305F\u713C\u93DD\u3092\u62BC\u3057\u4ED8\u3051\u308B\u3002\u76F8\u624B\u306B\u300C\u721B\u308C\u706B\u50B7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: e7e7d94c8759a439cb70206d4750af00, type: 2}
     - Name: "\u9B54\u8853\u5263"
       Id: 101016
-      Cost: 10
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6B66\u5668\u306B\u9B54\u529B\u3092\u5E2F\u3073\u3055\u305B\u3001\u7269\u7406\u7684\u306A\u9B54\u5C5E\u6027\u3067\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 332b1d0a35cd14a658f7cef50b5ffebc, type: 2}
     - Name: "\u8E0F\u307F\u8FBC\u307F\u65AC\u308A"
       Id: 101017
-      Cost: 16
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u8E0F\u307F\u8FBC\u3093\u3067\u5F37\u976D\u306A\u4F53\u52E2\u3092\u53D6\u3063\u3066\u653B\u6483\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u534A\u6E1B\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: e23c3e48877384503a73ee18f32bd170, type: 2}
     - Name: "\u96F7\u8FC5"
       Id: 101018
-      Cost: 14
+      Cost: 1
       BehaviourPriority: 1
       Description: "\u9AD8\u901F\u3067\u96F7\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: e2df414488c3a403ba800c92d42c6af4, type: 2}
     - Name: "\u96F7\u306E\u6028\u6068"
       Id: 101019
-      Cost: 20
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u546A\u3044\u306E\u529B\u3092\u7E8F\u3063\u305F\u96F7\u3092\u653E\u3064\u3002\u76F8\u624B\u306B\u300C\u9EBB\u75FA\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 38b24c1c7bb274a47bf71ad5dba5abb6, type: 2}
     - Name: "\u30A8\u30DC\u30CB\u30A2\u306E\u96F7\u8853\u5263"
       Id: 101020
-      Cost: 17
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u30A8\u30DC\u30CB\u30A2\u5BB6\u306B\u4F1D\u308F\u308B\u8853\u3002\u96F7\u3092\u5263\u306B\u7E8F\u308F\u305B\u3066\u653B\u6483\u3092\u884C\u3046\u3002\u65AC\u6483\u306E\u5F8C\u3001\u96F7\u3092\u653E\u3064\u3002"
       ActionSequences: {fileID: 11400000, guid: 4747ea5608c3e4dcda47e0205e7cd1e4, type: 2}
     - Name: "\u96F7\u9CF4\u306E\u4E00\u6483"
       Id: 101021
-      Cost: 6
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u7A7A\u304B\u3089\u96F7\u3092\u653E\u3064\u3002\u96F7\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 90ac62abe900b43e498965b8e169516b, type: 2}
     - Name: "\u91CD\u6483\u7815\u304D"
       Id: 101022
-      Cost: 10
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u91CD\u3044\u6253\u6483\u3092\u4E00\u6483\u653E\u3061\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u93A7\u3001\u307E\u305F\u306F\u7532\u7F85\u3092\u6301\u3064\u76F8\u624B\u306B\u300C\u93A7\u7815\u304D\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 977741038a17d4ee5a1d6baab4198b17, type: 2}
     - Name: "\u7A32\u59BB\u306E\u93A7"
       Id: 101023
-      Cost: 11
+      Cost: 1
       BehaviourPriority: 0
-      Description: "\u7A32\u59BB\u3092\u8EAB\u4F53\u306B\u7E8F\u3044\u3001\u96F7\u5C5E\u6027\u306E\u653B\u6483\u306B\u5BFE\u3057\u3066\u5F37\u304F\u306A\u308B\u3002"
+      Description: "\u7A32\u59BB\u3092\u8EAB\u4F53\u306B\u7E8F\u3044\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7A32\u59BB\u306E\u93A7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u708E\u69CD"
       Id: 101024
-      Cost: 10
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u5BB6\u306B\u4F1D\u308F\u308B\u8853\u3002\u708E\u306E\u69CD\u3092\u76F8\u624B\u306B\u6295\u3052\u3064\u3051\u3001\u708E\u5C5E\u6027\u306E\u7269\u7406\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u8056\u9A0E\u58EB\u306E\u610F\u5FD7"
       Id: 101025
-      Cost: 16
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u8056\u9A0E\u58EB\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u6280\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u8056\u9A0E\u58EB\u306E\u610F\u5FD7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u5C04\u6483"
       Id: 101026
-      Cost: 0
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u77E2\u3092\u653E\u3061\u3001\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30D0\u30C3\u30AF\u30B9\u30C6\u30C3\u30D7\u5C04\u6483"
       Id: 101027
-      Cost: 4
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u30D0\u30C3\u30AF\u30B9\u30C6\u30C3\u30D7\u3057\u3064\u3064\u76F8\u624B\u306B\u5C04\u6483\u3057\u3066\u653B\u6483\u3057\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u56DE\u907F\u53EF\u80FD\u6027\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u653E\u5C04\u6483"
       Id: 101028
-      Cost: 6
+      Cost: 1
       BehaviourPriority: 0
       Description: "3\u672C\u306E\u77E2\u3092\u540C\u6642\u306B\u767A\u5C04\u3057\u3066\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u4E71\u821E"
       Id: 101029
-      Cost: 12
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6B66\u5668\u3092\u6301\u3061\u821E\u3046\u653B\u6483\u30024\u56DE\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u6B7B\u3088\u308A\u9177\u306A\u6BD2\u76DB\u308A"
       Id: 101030
-      Cost: 18
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u7279\u6B8A\u306A\u6BD2\u7D20\u3092\u6301\u3064\u6B66\u5668\u3067\u653B\u6483\u3092\u884C\u3046\u3002\u3082\u3057\u76F8\u624B\u304C\u300C\u6BD2\u300D\u306A\u3089\u3070\u5F37\u529B\u306A\u4E00\u6483\u3068\u306A\u308A\u3001\u5F37\u5236\u7684\u306B\u300C\u6BD2\u300D\u3092\u89E3\u9664\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u6C38\u696D\u7834\u65AC"
       Id: 101031
-      Cost: 20
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u91CD\u304F\u5927\u304D\u306A\u5263\u3092\u6E3E\u8EAB\u306B\u632F\u308A\u3001\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u75B2\u52B4\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30AF\u30A4\u30C3\u30AF\u30B9\u30C6\u30C3\u30D7"
       Id: 101032
-      Cost: 9
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u7D20\u65E9\u3044\u8EAB\u306E\u3053\u306A\u3057\u3067\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u5148\u99C6\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u5897\u5E45\u3059\u308B\u9B54\u529B"
       Id: 101033
-      Cost: 4
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u9B54\u529B\u3092\u5897\u5E45\u3055\u305B\u8EAB\u306B\u7E8F\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u30921\u84C4\u7A4D\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u653E\u51FA\u3059\u308B\u9B54\u529B"
       Id: 101034
-      Cost: 7
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u5897\u5E45\u3055\u305B\u305F\u9B54\u529B\u3092\u4E00\u5EA6\u306B\u653E\u3061\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u3053\u306E\u653B\u6483\u306F\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u306B\u5FDC\u3058\u3066\u5A01\u529B\u304C\u5909\u308F\u308A\u3001\u653B\u6483\u5F8C\u306F\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u306F0\u306B\u306A\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u5897\u5E45\u9B54\u529B\u30FB\u8FC5"
       Id: 101035
-      Cost: 7
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u7D20\u65E9\u3044\u8A60\u5531\u306B\u3088\u308A\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u30921\u84C4\u7A4D\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u9244\u58C1"
       Id: 101036
-      Cost: 9
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u81EA\u8EAB\u306E\u9632\u5177\u3092\u5F37\u5316\u3059\u308B\u6280\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9244\u58C1\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u9B54\u529B\u306E\u76FE"
       Id: 101037
-      Cost: 10
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u81EA\u8EAB\u306E\u524D\u65B9\u306B\u9B54\u529B\u3067\u51FA\u6765\u305F\u76FE\u3092\u5C55\u958B\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u529B\u306E\u76FE\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30A8\u30F4\u30A1\u30FC\u30B8"
       Id: 101038
-      Cost: 28
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6642\u7A7A\u3092\u6B6A\u307E\u305B\u3066\u76F8\u624B\u3088\u308A\u65E9\u304F\u52D5\u3051\u308B\u7981\u5FCC\u306E\u6280\u306E1\u3064\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6642\u52A0\u901F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u6068\u307F\u306E\u529B"
       Id: 101039
-      Cost: 36
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6028\u6068\u306E\u5FF5\u3092\u529B\u306B\u5909\u3048\u3001\u6B66\u5668\u306B\u529B\u3092\u4E0E\u3048\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6028\u6068\u306E\u529B\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u5996\u5200\u65AC\u6483"
       Id: 101040
-      Cost: 24
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u5E7E\u4EBA\u3082\u306E\u8840\u3092\u5438\u3044\u4E0A\u3052\u305F\u5200\u8EAB\u3067\u653B\u6483\u3059\u308B\u3002\u5A01\u529B\u306F\u843D\u3061\u308B\u304C\u4E0E\u3048\u305F\u30C0\u30E1\u30FC\u30B8\u304B\u3089\u81EA\u5206\u81EA\u8EAB\u306EHP\u306B\u5909\u63DB\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u53CD\u6483\u306E\u68D8"
       Id: 101041
-      Cost: 11
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u9632\u5177\u306B\u9B54\u6CD5\u3067\u4F5C\u3089\u308C\u305F\u68D8\u3092\u4ED8\u4E0E\u3057\u3001\u653B\u6483\u3057\u3066\u304D\u305F\u76F8\u624B\u306B\u5BFE\u3057\u3066\u53CD\u6483\u3092\u884C\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u53CD\u6483\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u6CBB\u7642"
       Id: 101042
-      Cost: 5
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u67D4\u3089\u304B\u306A\u5149\u306B\u5305\u307E\u308C\u3001\u81EA\u5206\u81EA\u8EAB\u306EHP\u3092\u56DE\u5FA9\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30A8\u30A2\u30EA\u30FC\u306E\u52A0\u8B77"
       Id: 101043
-      Cost: 14
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u6CBB\u7642\u795E\u306E\u52A0\u8B77\u3092\u53D7\u3051\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A8\u30A2\u30EA\u30FC\u306E\u52A0\u8B77\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u6C17\u914D\u5BDF\u77E5"
       Id: 101044
-      Cost: 9
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u76F8\u624B\u306E\u52D5\u304D\u3092\u8AAD\u307F\u53D6\u308A\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u653B\u6483\u7D76\u5BFE\u56DE\u907F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u76FE\u653B\u6483"
       Id: 101045
-      Cost: 0
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u76FE\u3092\u69CB\u3048\u3001\u6575\u306B\u7A81\u9032\u3057\u3066\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30AC\u30FC\u30C9\u7A81\u304D"
       Id: 101046
-      Cost: 14
+      Cost: 1
       BehaviourPriority: 1
       Description: "\u76FE\u4ED8\u304D\u306E\u30E9\u30F3\u30B9\u304C\u4F7F\u3048\u308B\u7279\u6B8A\u306A\u6280\u3002\u30C0\u30E1\u30FC\u30B8\u3092\u6291\u3048\u3064\u3064\u653B\u6483\u3092\u3059\u308B\u3002\u305F\u3060\u3057\u653B\u6483\u306F\u30AC\u30FC\u30C9\u5F8C\u306B\u884C\u3046\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u58F1"
       Id: 101047
-      Cost: 4
+      Cost: 1
       BehaviourPriority: 1
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u30C0\u30E1\u30FC\u30B8\u304C\u5C11\u306A\u3044\u304C\u9AD8\u901F\u3067\u653B\u6483\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u58F1\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u5F10"
       Id: 101048
-      Cost: 5
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u58F1\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u53C2"
       Id: 101049
-      Cost: 6
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u79D8\u9023\u6483"
       Id: 101050
-      Cost: 12
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u79D8\u4F1D\u306E\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u7A7A\u5143\u6C17"
       Id: 101051
-      Cost: 7
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u865A\u52E2\u3092\u5F35\u3063\u305F\u95D8\u5FD7\u3092\u6F32\u3089\u305B\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7A7A\u5143\u6C17\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u6B7B\u708E\u69CD"
       Id: 101052
-      Cost: 16
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u5BB6\u306E\u79D8\u4F1D\u306E\u6280\u3002\u7344\u708E\u306B\u5305\u307E\u308C\u305F\u69CD\u3092\u76F8\u624B\u306B\u6295\u3052\u3064\u3051\u3001\u708E\u5C5E\u6027\u306E\u7269\u7406\u653B\u6483\u3092\u884C\u3046\u304C\u3001\u672A\u5B8C\u6210\u306E\u6280\u3067\u3042\u308B\u305F\u3081\u3001\u81EA\u5206\u81EA\u8EAB\u3082\u300C\u706B\u50B7\u300D\u3092\u8CA0\u3063\u3066\u3057\u307E\u3046\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30B5\u30EB\u30C7\u30A8\u30F4\u30A1\u30FC\u30B8"
       Id: 101053
-      Cost: 48
+      Cost: 1
       BehaviourPriority: -2
       Description: "\u6642\u3092\u6B62\u3081\u308B\u7981\u5FCC\u306E\u6280\u306E1\u3064\u3002\u8A60\u5531\u306B\u304B\u306A\u308A\u306E\u6642\u9593\u3092\u8981\u3059\u308B\u305F\u3081\u884C\u52D5\u304C\u9045\u3044\u304C\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6642\u505C\u6B62\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
@@ -1186,43 +1186,43 @@ MonoBehaviour:
       ActionSequences: {fileID: 0}
     - Name: "\u5F29\u9023\u5C04\u6483"
       Id: 101055
-      Cost: 8
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u592A\u3044\u77E2\u3092\u653E\u3061\u3001\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u6012\u5F29\u9023\u5C04\u6483"
       Id: 101056
-      Cost: 14
+      Cost: 1
       BehaviourPriority: -1
       Description: "\u6975\u592A\u3044\u77E2\u3092\u653E\u3061\u3001\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002\u77E2\u304C\u91CD\u3044\u305F\u3081\u653B\u6483\u3059\u308B\u306E\u304C\u9045\u304F\u306A\u308B\u304C\u3001\u76F8\u624B\u306B\u300C\u602F\u307F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u6E3E\u8EAB\u306E\u901A\u5E38\u653B\u6483"
       Id: 101057
-      Cost: 8
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u901A\u5E38\u653B\u6483\u3092\u7A81\u304D\u8A70\u3081\u305F\u3001\u30B7\u30F3\u30D7\u30EB\u3060\u304C\u3001\u30B7\u30F3\u30D7\u30EB\u3086\u3048\u306B\u5F37\u3044\u4E00\u6483\u3068\u306A\u308B\u3002\u653B\u6483\u3092\u884C\u3063\u305F\u5F8C\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u901A\u5E38\u653B\u6483\u5F37\u5316\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u30B9\u30E9\u30A4\u30E0\u65AC\u308A"
       Id: 101058
-      Cost: 6
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u30B9\u30E9\u30A4\u30E0\u306E\u5F31\u70B9\u3068\u306A\u308B\u6838\u3092\u898B\u6975\u3081\u3066\u653B\u6483\u3092\u3059\u308B\u3002\u4E0D\u5B9A\u5F62\u5C5E\u6027\u3092\u6301\u3064\u6575\u306B\u5BFE\u3057\u3066\u5F37\u529B\u306A\u4E00\u6483\u3092\u4E0E\u3048\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u7363\u72E9\u308A"
       Id: 101059
-      Cost: 7
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u7363\u306E\u6050\u6016\u5FC3\u3092\u717D\u308B\u4E00\u6483\u3002\u7363\u5C5E\u6027\u3092\u6301\u3064\u6575\u306B\u5BFE\u3057\u3066\u5F37\u529B\u306A\u4E00\u6483\u3092\u4E0E\u3048\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u6E80\u6708\u306E\u9060\u5420\u3048"
       Id: 101060
-      Cost: 29
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u529B\u5F37\u3044\u9060\u5420\u3048\u306B\u3088\u308A\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6E80\u6708\u306E\u9060\u5420\u3048\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
     - Name: "\u8840\u67D3\u3081\u306E\u722A"
       Id: 101061
-      Cost: 7
+      Cost: 1
       BehaviourPriority: 0
       Description: "\u7363\u306E\u529B\u3092\u501F\u308A\u305F\u5E7E\u4E07\u3082\u306E\u91CE\u7363\u3092\u846C\u3063\u305F\u722A\u3067\u653B\u6483\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u7363\u5C5E\u6027\u304C\u3042\u308B\u5834\u5408\u306F\u5F37\u529B\u306A\u4E00\u6483\u3068\u306A\u308B\u3002"
       ActionSequences: {fileID: 0}
@@ -1309,6 +1309,7 @@ MonoBehaviour:
       ThunderCutRate: 0.06
       Speed: 24
       Experience: 100
+      BehaviourPoint: 0
       Attribute: 4
   ailments:
     list:
@@ -1419,4 +1420,8 @@ MonoBehaviour:
     - Id: 101027
       Name: "\u6E80\u6708\u306E\u9060\u5420\u3048"
       Description: "\u6E80\u6708\u306B\u9CF4\u304F\u72FC\u306E\u529B\u3092\u5F97\u308B\u3002\u7363\u5C5E\u6027\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Sequences: {fileID: 0}
+    - Id: 101028
+      Name: "\u7A32\u59BB\u306E\u93A7"
+      Description: "\u7A32\u59BB\u306E\u529B\u3092\u8EAB\u4F53\u306B\u5BBF\u3059\u3002\u96F7\u5C5E\u6027\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u3092\u5927\u5E45\u306B\u6E1B\u5C11\u3055\u305B\u308B\u3002"
       Sequences: {fileID: 0}
