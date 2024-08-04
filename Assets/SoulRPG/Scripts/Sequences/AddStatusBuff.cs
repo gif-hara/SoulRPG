@@ -27,10 +27,8 @@ namespace SoulRPG
 
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
-            var actor = container.Resolve<BattleCharacter>
-            (
-                targetType == Define.TargetType.Self ? "Actor" : "Target"
-            );
+            var key = targetType == Define.TargetType.Self ? "Actor" : "Target";
+            var actor = container.Resolve<BattleCharacter>(key);
             actor.StatusBuffController.Add(statusTypes, buffName, rate);
             return UniTask.CompletedTask;
         }
