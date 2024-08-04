@@ -62,6 +62,9 @@ namespace SoulRPG.SceneControllers
             TinyServiceLocator.Register(masterData);
             TinyServiceLocator.Register(new GameEvents());
             TinyServiceLocator.Register(gameRule);
+#if DEBUG
+            GameDebugPanelView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.DebugPanel"), destroyCancellationToken).Forget();
+#endif
             var player = new Character(debugPlayerName, debugPlayerGrowthParameter, debugPlayerEquipment, debugPlayerAttribute);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             var explorationView = new ExplorationView(
