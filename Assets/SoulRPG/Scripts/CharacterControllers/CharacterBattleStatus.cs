@@ -138,6 +138,7 @@ namespace SoulRPG
             speedReactiveProperty = new ReactiveProperty<int>(blueprint.Speed);
             experienceReactiveProperty = new ReactiveProperty<int>(blueprint.Experience);
             behaviourPointMaxReactiveProperty = new ReactiveProperty<int>(blueprint.BehaviourPoint);
+            behaviourPointReactiveProperty = new ReactiveProperty<int>(blueprint.BehaviourPoint);
             attribute = blueprint.Attribute;
         }
 
@@ -159,6 +160,7 @@ namespace SoulRPG
             speedReactiveProperty = new ReactiveProperty<int>(enemy.Speed);
             experienceReactiveProperty = new ReactiveProperty<int>(enemy.Experience);
             behaviourPointMaxReactiveProperty = new ReactiveProperty<int>(enemy.BehaviourPoint);
+            behaviourPointReactiveProperty = new ReactiveProperty<int>(enemy.BehaviourPoint);
             attribute = enemy.Attribute;
         }
 
