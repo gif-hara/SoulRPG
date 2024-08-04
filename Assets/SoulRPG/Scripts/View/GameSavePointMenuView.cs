@@ -195,8 +195,16 @@ namespace SoulRPG
                 (
                     element,
                     header,
-                    _ =>
+                    async _ =>
                     {
+                        var result = await DialogView.ConfirmAsync
+                        (
+                            documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                            "本当にレベルアップしますか？",
+                            new[] { "はい", "いいえ" },
+                            0,
+                            scope
+                        );
                     }
                 );
                 var horizontalInterface = CreateHorizontalInterface(element);
