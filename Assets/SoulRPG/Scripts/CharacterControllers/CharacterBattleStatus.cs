@@ -230,6 +230,11 @@ namespace SoulRPG
             behaviourPointReactiveProperty.Value = behaviourPointMaxReactiveProperty.Value;
         }
 
+        public bool CanBehaviour()
+        {
+            return behaviourPointReactiveProperty.Value > 0;
+        }
+
         public void Dispose()
         {
             scope.Cancel();

@@ -15,11 +15,14 @@ namespace SoulRPG.BattleSystems.CommandInvokers
 
         private readonly int behaviourPriority;
 
-        public Sequences(ScriptableSequences scriptableSequences, int weaponId, int behaviourPriority)
+        private readonly int cost;
+
+        public Sequences(ScriptableSequences scriptableSequences, int weaponId, int behaviourPriority, int cost)
         {
             this.scriptableSequences = scriptableSequences;
             this.weaponId = weaponId;
             this.behaviourPriority = behaviourPriority;
+            this.cost = cost;
         }
 
         public UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
@@ -41,6 +44,11 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         public int GetBehaviourPriority()
         {
             return behaviourPriority;
+        }
+
+        public int GetCost()
+        {
+            return cost;
         }
     }
 }

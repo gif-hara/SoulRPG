@@ -13,5 +13,7 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         int GetSpeed();
 
         int GetBehaviourPriority();
+
+        int GetCost();
     }
 }

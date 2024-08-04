@@ -40,5 +40,10 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         {
             return skillId.GetMasterDataSkill().BehaviourPriority;
         }
+
+        public int GetCost()
+        {
+            return skillId.GetMasterDataSkill().Cost;
+        }
     }
 }

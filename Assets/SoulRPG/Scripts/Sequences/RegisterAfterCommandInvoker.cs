@@ -19,6 +19,9 @@ namespace SoulRPG
         [SerializeField]
         private int behaviourPriority;
 
+        [SerializeField]
+        private int cost;
+
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var target = container.Resolve<BattleCharacter>("Target");
@@ -28,7 +31,7 @@ namespace SoulRPG
             }
             var actor = container.Resolve<BattleCharacter>("Actor");
             var weapon = container.Resolve<MasterData.Weapon>();
-            actor.AfterCommandInvoker = new Sequences(scriptableSequences, weapon.ItemId, behaviourPriority);
+            actor.AfterCommandInvoker = new Sequences(scriptableSequences, weapon.ItemId, behaviourPriority, cost);
             return UniTask.CompletedTask;
         }
     }

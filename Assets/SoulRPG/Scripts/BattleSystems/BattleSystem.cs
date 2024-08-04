@@ -35,11 +35,10 @@ namespace SoulRPG.BattleSystems
             {
                 var firstActor = player.BattleStatus.Speed > enemy.BattleStatus.Speed ? player : enemy;
                 var secondActor = firstActor == player ? enemy : player;
-                while (!IsBattleEnd())
-                {
-                    var commandInvoker = await firstActor.ThinkAsync();
-                    await commandInvoker.InvokeAsync(firstActor, secondActor, scope);
-                }
+                await ProcessActorAction(firstActor, secondActor);
+                await firstActor.TurnEndAsync();
+                await ProcessActorAction(secondActor, firstActor);
+                await secondActor.TurnEndAsync();
             }
 
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
@@ -60,59 +59,13 @@ namespace SoulRPG.BattleSystems
             cts.Dispose();
             return result;
 
-            static ((BattleCharacter actor, ICommandInvoker commandInvoker) firstActor, (BattleCharacter actor, ICommandInvoker commandInvoker) secondActor) GetActorData(
-                BattleCharacter player,
-                ICommandInvoker playerCommandInvoker,
-                BattleCharacter enemy,
-                ICommandInvoker enemyCommandInvoker
-                )
+            async UniTask ProcessActorAction(BattleCharacter actor, BattleCharacter target)
             {
-                var playerData = (player, playerCommandInvoker);
-                var enemyData = (enemy, enemyCommandInvoker);
-                var playerBehaviourPriority = playerCommandInvoker == null ? -99 : playerCommandInvoker.GetBehaviourPriority();
-                var enemyBehaviourPriority = enemyCommandInvoker == null ? -99 : enemyCommandInvoker.GetBehaviourPriority();
-                if (playerBehaviourPriority > enemyBehaviourPriority)
+                while (!IsBattleEnd() && actor.BattleStatus.CanBehaviour())
                 {
-                    return (playerData, enemyData);
-                }
-                if (playerBehaviourPriority < enemyBehaviourPriority)
-                {
-                    return (enemyData, playerData);
-                }
-                var playerSpeed = player.BattleStatus.Speed + playerCommandInvoker?.GetSpeed() ?? 0;
-                var enemySpeed = enemy.BattleStatus.Speed + enemyCommandInvoker?.GetSpeed() ?? 0;
-                return playerSpeed > enemySpeed ? (playerData, enemyData) : (enemyData, playerData);
-            }
-            static async UniTask<bool> InvokeCommandAsync(
-                BattleCharacter player,
-                ICommandInvoker playerCommandInvoker,
-                BattleCharacter enemy,
-                ICommandInvoker enemyCommandInvoker,
-                CancellationToken scope
-                )
-            {
-                var (firstActor, secondActor) = GetActorData(player, playerCommandInvoker, enemy, enemyCommandInvoker);
-                if (await InvokeAsync(firstActor.actor, secondActor.actor, firstActor.commandInvoker, scope))
-                {
-                    return true;
-                }
-                if (await InvokeAsync(secondActor.actor, firstActor.actor, secondActor.commandInvoker, scope))
-                {
-                    return true;
-                }
-                return false;
-                static async UniTask<bool> InvokeAsync(BattleCharacter actor, BattleCharacter target, ICommandInvoker commandInvoker, CancellationToken scope)
-                {
-                    if (commandInvoker == null)
-                    {
-                        return false;
-                    }
-                    if (!await actor.AilmentController.CanExecutableTurnAsync())
-                    {
-                        return false;
-                    }
+                    var commandInvoker = await actor.ThinkAsync();
+                    actor.BattleStatus.AddBehaviourPoint(-commandInvoker.GetCost());
                     await commandInvoker.InvokeAsync(actor, target, scope);
-                    return actor.BattleStatus.IsDead || target.BattleStatus.IsDead;
                 }
             }
 
