@@ -13,15 +13,12 @@ namespace SoulRPG
     public sealed class RemoveStatusBuff : ISequence
     {
         [SerializeField]
-        private Define.StatusType statusType;
-
-        [SerializeField]
         private string buffName;
 
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var actor = container.Resolve<BattleCharacter>("Actor");
-            actor.StatusBuffController.Remove(statusType, buffName);
+            actor.StatusBuffController.Remove(buffName);
             return UniTask.CompletedTask;
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -13,7 +14,10 @@ namespace SoulRPG
     public sealed class AddStatusBuff : ISequence
     {
         [SerializeField]
-        private Define.StatusType statusType;
+        private Define.TargetType targetType;
+
+        [SerializeField]
+        private List<Define.StatusType> statusTypes;
 
         [SerializeField]
         private string buffName;
@@ -23,8 +27,11 @@ namespace SoulRPG
 
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
-            var actor = container.Resolve<BattleCharacter>("Actor");
-            actor.StatusBuffController.Add(statusType, buffName, rate);
+            var actor = container.Resolve<BattleCharacter>
+            (
+                targetType == Define.TargetType.Self ? "Actor" : "Target"
+            );
+            actor.StatusBuffController.Add(statusTypes, buffName, rate);
             return UniTask.CompletedTask;
         }
     }

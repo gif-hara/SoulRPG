@@ -26,6 +26,14 @@ namespace SoulRPG
 
         private readonly List<(string, float)> thunderCutRateBuffList = new();
 
+        public void Add(IEnumerable<Define.StatusType> statusTypes, string name, float rate)
+        {
+            foreach (var statusType in statusTypes)
+            {
+                Add(statusType, name, rate);
+            }
+        }
+
         public void Add(Define.StatusType statusType, string name, float rate)
         {
             switch (statusType)
@@ -89,35 +97,16 @@ namespace SoulRPG
             }
         }
 
-        public void Remove(Define.StatusType statucType, string name)
+        public void Remove(string name)
         {
-            switch (statucType)
-            {
-                case Define.StatusType.PhysicalStrength:
-                    physicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
-                    break;
-                case Define.StatusType.MagicalStrength:
-                    magicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
-                    break;
-                case Define.StatusType.SlashCutRate:
-                    slashCutRateBuffList.RemoveAll(x => x.Item1 == name);
-                    break;
-                case Define.StatusType.BlowCutRate:
-                    blowCutRateBuffList.RemoveAll(x => x.Item1 == name);
-                    break;
-                case Define.StatusType.ThrustCutRate:
-                    thrustCutRateBuffList.RemoveAll(x => x.Item1 == name);
-                    break;
-                case Define.StatusType.MagicCutRate:
-                    magicCutRateBuffList.RemoveAll(x => x.Item1 == name);
-                    break;
-                case Define.StatusType.FireCutRate:
-                    fireCutRateBuffList.RemoveAll(x => x.Item1 == name);
-                    break;
-                case Define.StatusType.ThunderCutRate:
-                    thunderCutRateBuffList.RemoveAll(x => x.Item1 == name);
-                    break;
-            }
+            physicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
+            magicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
+            slashCutRateBuffList.RemoveAll(x => x.Item1 == name);
+            blowCutRateBuffList.RemoveAll(x => x.Item1 == name);
+            thrustCutRateBuffList.RemoveAll(x => x.Item1 == name);
+            magicCutRateBuffList.RemoveAll(x => x.Item1 == name);
+            fireCutRateBuffList.RemoveAll(x => x.Item1 == name);
+            thunderCutRateBuffList.RemoveAll(x => x.Item1 == name);
         }
 
         public float GetStrengthRate(Define.AttackType attackType)
