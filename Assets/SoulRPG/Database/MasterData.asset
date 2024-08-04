@@ -1309,7 +1309,7 @@ MonoBehaviour:
       ThunderCutRate: 0.06
       Speed: 24
       Experience: 100
-      BehaviourPoint: 0
+      BehaviourPoint: 1
       Attribute: 4
   ailments:
     list:
