@@ -65,6 +65,10 @@ namespace SoulRPG.BattleSystems
                 while (!IsBattleEnd() && actor.BattleStatus.CanBehaviour())
                 {
                     var commandInvoker = await actor.ThinkAsync();
+                    if (commandInvoker == null)
+                    {
+                        break;
+                    }
                     actor.BattleStatus.AddBehaviourPoint(-commandInvoker.GetCost());
                     await commandInvoker.InvokeAsync(actor, target, scope);
                 }
