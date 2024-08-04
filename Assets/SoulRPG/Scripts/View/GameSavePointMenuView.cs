@@ -159,12 +159,20 @@ namespace SoulRPG
             var informationDocument = UnityEngine.Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.LevelUp"));
             var informationViewport = informationDocument.Q<RectTransform>("Viewport");
             var informationElementPrefab = documentBundlePrefab.Q<HKUIDocument>("UIElement.Info");
-            var informationElement = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
-            informationElement.Q<TMP_Text>("Header").text = "所持経験値";
+            var currentExperienceInfo = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
+            currentExperienceInfo.Q<TMP_Text>("Header").text = "所持経験値";
             Observable.Merge(useExperience, userData.Experience)
                 .Subscribe(x =>
                 {
-                    informationElement.Q<TMP_Text>("Value").text = (userData.Experience.CurrentValue - useExperience.Value).ToString();
+                    currentExperienceInfo.Q<TMP_Text>("Value").text = (userData.Experience.CurrentValue - useExperience.Value).ToString();
+                })
+                .RegisterTo(scope);
+            var needExperienceInfo = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
+            needExperienceInfo.Q<TMP_Text>("Header").text = "必要経験値";
+            Observable.Merge(useExperience)
+                .Subscribe(x =>
+                {
+                    needExperienceInfo.Q<TMP_Text>("Value").text = gameRule.ExperienceTable.GetNeedExperience(growthParameter.Level + 1).ToString();
                 })
                 .RegisterTo(scope);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
@@ -221,8 +229,8 @@ namespace SoulRPG
                                 else if (velocity.x < 0 && CanLevelDown())
                                 {
                                     valueSelector(-1);
-                                    useExperience.Value -= gameRule.ExperienceTable.GetNeedExperience(growthParameter.Level);
                                     growthParameter.Level -= 1;
+                                    useExperience.Value -= gameRule.ExperienceTable.GetNeedExperience(growthParameter.Level + 1);
                                 }
                                 UpdateHorizontalInterfaceMessage(horizontalInterface, valueSelector(0).ToString("00"));
                             })
