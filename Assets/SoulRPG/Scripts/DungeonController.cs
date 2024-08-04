@@ -23,8 +23,7 @@ namespace SoulRPG
         public DungeonController(
             Vector2Int initialCheckPoint,
             HKUIDocument gameMenuBundlePrefab,
-            IExplorationView view,
-            CancellationToken scope
+            IExplorationView view
             )
         {
             checkPoint = initialCheckPoint;
