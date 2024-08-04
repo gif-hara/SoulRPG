@@ -1,5 +1,7 @@
 using System;
+using System.Text;
 using System.Threading;
+using HK;
 using R3;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
@@ -118,6 +120,9 @@ namespace SoulRPG
                 .RegisterTo(scope.Token);
             behaviourPointMaxReactiveProperty.Value = 3;
             behaviourPointReactiveProperty.Value = behaviourPointMaxReactiveProperty.Value;
+#if DEBUG
+            AddDebugPanel();
+#endif
         }
 
         public CharacterBattleStatus(CharacterBattleStatusBlueprint blueprint)
@@ -140,6 +145,9 @@ namespace SoulRPG
             behaviourPointMaxReactiveProperty = new ReactiveProperty<int>(blueprint.BehaviourPoint);
             behaviourPointReactiveProperty = new ReactiveProperty<int>(blueprint.BehaviourPoint);
             attribute = blueprint.Attribute;
+#if DEBUG
+            AddDebugPanel();
+#endif
         }
 
         public CharacterBattleStatus(MasterData.Enemy enemy)
@@ -162,6 +170,9 @@ namespace SoulRPG
             behaviourPointMaxReactiveProperty = new ReactiveProperty<int>(enemy.BehaviourPoint);
             behaviourPointReactiveProperty = new ReactiveProperty<int>(enemy.BehaviourPoint);
             attribute = enemy.Attribute;
+#if DEBUG
+            AddDebugPanel();
+#endif
         }
 
         public void TakeDamage(int damage)
@@ -241,6 +252,59 @@ namespace SoulRPG
         {
             scope.Cancel();
             scope.Dispose();
+#if DEBUG
+            RemoveDebugPanel();
+#endif
         }
+
+#if DEBUG
+        private void AddDebugPanel()
+        {
+            Observable.Merge(
+                hitPointReactiveProperty.AsUnitObservable(),
+                staminaReactiveProperty.AsUnitObservable(),
+                physicalAttackReactiveProperty.AsUnitObservable(),
+                magicalAttackReactiveProperty.AsUnitObservable(),
+                slashCutRateReactiveProperty.AsUnitObservable(),
+                blowCutRateReactiveProperty.AsUnitObservable(),
+                thrustCutRateReactiveProperty.AsUnitObservable(),
+                magicCutRateReactiveProperty.AsUnitObservable(),
+                fireCutRateReactiveProperty.AsUnitObservable(),
+                thunderCutRateReactiveProperty.AsUnitObservable(),
+                speedReactiveProperty.AsUnitObservable(),
+                experienceReactiveProperty.AsUnitObservable(),
+                behaviourPointMaxReactiveProperty.AsUnitObservable(),
+                behaviourPointReactiveProperty.AsUnitObservable()
+                )
+                .Subscribe(_ =>
+                {
+                    var sb = new StringBuilder();
+                    sb.AppendLine("  - CharacterBattleStatus");
+                    sb.AppendLine($"    - Name: {Name}");
+                    sb.AppendLine($"    - HitPoint: {hitPointReactiveProperty.Value}/{hitPointMaxReactiveProperty.Value}");
+                    sb.AppendLine($"    - Stamina: {staminaReactiveProperty.Value}/{staminaMaxReactiveProperty.Value}");
+                    sb.AppendLine($"    - PhysicalAttack: {physicalAttackReactiveProperty.Value}");
+                    sb.AppendLine($"    - MagicalAttack: {magicalAttackReactiveProperty.Value}");
+                    sb.AppendLine($"    - SlashCutRate: {slashCutRateReactiveProperty.Value}");
+                    sb.AppendLine($"    - BlowCutRate: {blowCutRateReactiveProperty.Value}");
+                    sb.AppendLine($"    - ThrustCutRate: {thrustCutRateReactiveProperty.Value}");
+                    sb.AppendLine($"    - MagicCutRate: {magicCutRateReactiveProperty.Value}");
+                    sb.AppendLine($"    - FireCutRate: {fireCutRateReactiveProperty.Value}");
+                    sb.AppendLine($"    - ThunderCutRate: {thunderCutRateReactiveProperty.Value}");
+                    sb.AppendLine($"    - Speed: {speedReactiveProperty.Value}");
+                    sb.AppendLine($"    - Experience: {experienceReactiveProperty.Value}");
+                    sb.AppendLine($"    - BehaviourPoint: {behaviourPointReactiveProperty.Value}/{behaviourPointMaxReactiveProperty.Value}");
+                    TinyServiceLocator.Resolve<GameEvents>().OnRequestAddDebugPanelInformation
+                        .OnNext(($"{Name}.CharacterBattleStatus", sb.ToString()));
+                })
+                .RegisterTo(scope.Token);
+        }
+
+        private void RemoveDebugPanel()
+        {
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestRemoveDebugPanelInformation
+                .OnNext($"{Name}.CharacterBattleStatus");
+        }
+#endif
     }
 }
