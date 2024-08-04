@@ -16,8 +16,6 @@ namespace SoulRPG
 
         private readonly HKUIDocument gameMenuBundlePrefab;
 
-        private readonly CancellationToken scope;
-
         private Vector2Int checkPoint;
 
         private readonly IExplorationView view;
@@ -32,7 +30,6 @@ namespace SoulRPG
             checkPoint = initialCheckPoint;
             this.gameMenuBundlePrefab = gameMenuBundlePrefab;
             this.view = view;
-            this.scope = scope;
         }
 
         public void Setup(string dungeonName)
@@ -171,13 +168,16 @@ namespace SoulRPG
             {
                 return;
             }
-
+            var scope = new CancellationTokenSource();
             var masterDataEventEnemy = TinyServiceLocator.Resolve<MasterData>().FloorEventEnemies.Get(floorEvent.Id);
             var masterDataEnemy = TinyServiceLocator.Resolve<MasterData>().Enemies.Get(masterDataEventEnemy.EnemyId);
+            var playerCharacter = new BattleCharacter(character, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
+            var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
+            BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
             var battleResult = await BattleSystem.BeginAsync(
-                new BattleCharacter(character, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command"))),
-                masterDataEnemy.CreateBattleCharacter(),
-                scope
+                playerCharacter,
+                enemyCharacter,
+                scope.Token
                 );
             if (battleResult == Define.BattleResult.PlayerWin)
             {
@@ -191,6 +191,8 @@ namespace SoulRPG
                 character.InstanceStatus.FullRecovery();
                 TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("どうやら安全な場所に移動されたようだ");
             }
+            scope.Cancel();
+            scope.Dispose();
         }
 
         private async UniTask InvokeOnDoorAsync(Character character, MasterData.WallEvent wallEvent)
