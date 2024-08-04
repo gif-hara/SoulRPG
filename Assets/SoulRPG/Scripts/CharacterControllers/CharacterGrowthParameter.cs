@@ -48,5 +48,15 @@ namespace SoulRPG
             magicalStrength = parameter.magicalStrength;
             speed = parameter.speed;
         }
+
+        public void Sync(CharacterGrowthParameter parameter)
+        {
+            level = parameter.level;
+            vitality = parameter.vitality;
+            stamina = parameter.stamina;
+            physicalStrength = parameter.physicalStrength;
+            magicalStrength = parameter.magicalStrength;
+            speed = parameter.speed;
+        }
     }
 }
