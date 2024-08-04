@@ -176,9 +176,27 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
-                .Subscribe(_ =>
+                .Subscribe(async _ =>
                 {
-                    stateMachine.Change(StateRootMenuAsync);
+                    if (growthParameter.Level != character.GrowthParameter.Level)
+                    {
+                        var result = await DialogView.ConfirmAsync
+                        (
+                            documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                            "レベルアップせずに戻ります。よろしいですか？",
+                            new[] { "はい", "いいえ" },
+                            0,
+                            scope
+                        );
+                        if (result == 0)
+                        {
+                            stateMachine.Change(StateRootMenuAsync);
+                        }
+                    }
+                    else
+                    {
+                        stateMachine.Change(StateRootMenuAsync);
+                    }
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
