@@ -111,7 +111,7 @@ namespace SoulRPG
 
         public int TurnCount()
         {
-            return turnCount;
+            return turnCount - currentTurnCount;
         }
 
         public MasterData.Ailment GetMasterDataAilment()
