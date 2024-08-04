@@ -32,6 +32,16 @@ namespace SoulRPG
                     messages[x.key].Q<TMP_Text>("Text").text = x.message;
                 })
                 .RegisterTo(scope);
+            gameEvents.OnRequestRemoveDebugPanelInformation
+                .Subscribe(x =>
+                {
+                    if (messages.ContainsKey(x))
+                    {
+                        Object.Destroy(messages[x].gameObject);
+                        messages.Remove(x);
+                    }
+                })
+                .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
             if (document != null)
             {
