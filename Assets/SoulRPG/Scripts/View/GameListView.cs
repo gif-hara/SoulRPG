@@ -34,7 +34,6 @@ namespace SoulRPG
             var pageMax = elementActivateActions.Count() / elementCount;
             var elementIndex = 0;
             var elements = new List<HKUIDocument>();
-            Debug.Log($"parentSize: {parentSize}, elementSize: {elementSize}, elementCount: {elementCount}, pageMax: {pageMax}");
             CreateList(initialElement);
 
             void CreateList(int selectIndex)
@@ -84,6 +83,11 @@ namespace SoulRPG
                     }
                     elementIndex++;
                 }
+                UpdatePage(pageIndex);
+            }
+            void UpdatePage(int index)
+            {
+                document.Q<TMP_Text>("Text.Page").text = $"{index + 1}/{pageMax + 1}";
             }
             return document;
         }
