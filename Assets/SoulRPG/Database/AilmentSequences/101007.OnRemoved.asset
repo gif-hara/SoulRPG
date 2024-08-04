@@ -21,6 +21,7 @@ MonoBehaviour:
     - rid: 3022425624344264777
       type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
+        targetType: 0
         buffName: Ailment.101007
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
