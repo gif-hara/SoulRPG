@@ -27,9 +27,9 @@ namespace SoulRPG
 
         public HashSet<string> UsedSkills { get; } = new();
 
-        public BattleCharacter(Character character, IBattleAI battleAI)
+        public BattleCharacter(Character character, Define.AllyType allyType, IBattleAI battleAI)
         {
-            BattleStatus = new CharacterBattleStatus(character);
+            BattleStatus = new CharacterBattleStatus(character, allyType);
             Equipment = character.Equipment;
             this.battleAI = battleAI;
             AilmentController = new AilmentController(this);

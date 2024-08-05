@@ -104,7 +104,7 @@ namespace SoulRPG.SceneControllers
                         if (Keyboard.current.wKey.wasPressedThisFrame)
                         {
                             var battleResult = await BattleSystem.BeginAsync(
-                                new BattleCharacter(player, new Input(commandDocumentPrefab)),
+                                new BattleCharacter(player, Define.AllyType.Player, new Input(commandDocumentPrefab)),
                                 new BattleCharacter(new CharacterBattleStatus(debugEnemyBattleStatus), new Constant(101998, 101001, false)),
                                 destroyCancellationToken
                                 );

@@ -80,6 +80,8 @@ namespace SoulRPG
         private readonly Define.CharacterAttribute attribute;
         public Define.CharacterAttribute Attribute => attribute;
 
+        private readonly Define.AllyType allyType;
+
         public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
         private readonly CancellationTokenSource scope = new();
@@ -103,7 +105,8 @@ namespace SoulRPG
             int experience,
             int behaviourPointMax,
             int behaviourPoint,
-            Define.CharacterAttribute attribute
+            Define.CharacterAttribute attribute,
+            Define.AllyType allyType
         )
         {
             Name = name;
@@ -124,12 +127,13 @@ namespace SoulRPG
             behaviourPointMaxReactiveProperty = new ReactiveProperty<int>(behaviourPointMax);
             behaviourPointReactiveProperty = new ReactiveProperty<int>(behaviourPoint);
             this.attribute = attribute;
+            this.allyType = allyType;
 #if DEBUG
             AddDebugPanel();
 #endif
         }
 
-        public CharacterBattleStatus(Character character)
+        public CharacterBattleStatus(Character character, Define.AllyType allyType)
             : this
             (
                 character.Name,
@@ -149,7 +153,8 @@ namespace SoulRPG
                 0,
                 3,
                 3,
-                character.Attribute
+                character.Attribute,
+                allyType
             )
         {
             hitPointReactiveProperty
@@ -186,7 +191,8 @@ namespace SoulRPG
                 blueprint.Experience,
                 blueprint.BehaviourPoint,
                 blueprint.BehaviourPoint,
-                blueprint.Attribute
+                blueprint.Attribute,
+                blueprint.AllyType
             )
         {
         }
@@ -211,7 +217,8 @@ namespace SoulRPG
                 enemy.Experience,
                 enemy.BehaviourPoint,
                 enemy.BehaviourPoint,
-                enemy.Attribute
+                enemy.Attribute,
+                Define.AllyType.Enemy
             )
         {
         }

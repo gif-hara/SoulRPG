@@ -68,5 +68,9 @@ namespace SoulRPG
         [SerializeField]
         private Define.CharacterAttribute attribute;
         public Define.CharacterAttribute Attribute => attribute;
+
+        [SerializeField]
+        private Define.AllyType allyType;
+        public Define.AllyType AllyType => allyType;
     }
 }
