@@ -27,15 +27,16 @@ namespace SoulRPG
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
-            var name = targetType == Define.TargetType.Self ? "Actor" : "Target";
-            var target = container.Resolve<BattleCharacter>(name);
+            var actor = container.Resolve<BattleCharacter>("Actor");
+            var target = container.Resolve<BattleCharacter>("Target");
             if (target.BattleStatus.IsDead)
             {
                 return;
             }
-            if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(target))
+            if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
             {
-                await target.AilmentController.AddAsync(masterDataAilmentId, turnCount);
+                var t = targetType == Define.TargetType.Self ? actor : target;
+                await t.AilmentController.AddAsync(masterDataAilmentId, turnCount);
             }
         }
     }
