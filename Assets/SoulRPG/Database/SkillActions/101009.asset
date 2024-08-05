@@ -15,6 +15,7 @@ MonoBehaviour:
   sequences:
   - rid: 7288459789387432183
   - rid: 7288459789387432197
+  - rid: 9047573447245037658
   references:
     version: 2
     RefIds:
@@ -23,6 +24,7 @@ MonoBehaviour:
       data:
         format: "{Actor}\u306F\u7A32\u59BB\u306E\u5982\u304F\u7D20\u65E9\u3044\u52D5\u304D\u3067\u6575\u306B\u63A5\u8FD1\u3057\u3001\u653B\u6483\u3059\u308B"
         waitForInput: 1
+        ignoreIfCharacterDead: 0
     - rid: 7288459789387432197
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -30,9 +32,21 @@ MonoBehaviour:
           rid: 7288459789387432198
         targetType: 1
         waitForInput: 1
+        canCombo: 1
     - rid: 7288459789387432198
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
         weaponRate: 0.9
         attackType: 0
         attackAttribute: 0
+    - rid: 9047573447245037658
+      type: {class: AddBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        battleCharacterEvaluator:
+          rid: 9047573447245037659
+        behaviourPriority: 1
+    - rid: 9047573447245037659
+      type: {class: Random, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+      data:
+        probability: 0.5
