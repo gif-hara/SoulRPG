@@ -59,7 +59,6 @@ namespace SoulRPG.BattleSystems
 
             async UniTask ProcessActorAction(BattleCharacter actor, BattleCharacter target)
             {
-                actor.BattleStatus.RecoveryBehaviourPoint();
                 while (!IsBattleEnd() && actor.BattleStatus.CanBehaviour())
                 {
                     var commandInvoker = await actor.ThinkAsync();

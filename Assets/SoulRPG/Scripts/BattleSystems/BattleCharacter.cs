@@ -49,6 +49,12 @@ namespace SoulRPG
             return await battleAI.ThinkAsync(this);
         }
 
+        public UniTask TurnStartAsync()
+        {
+            BattleStatus.RecoveryBehaviourPoint();
+            return UniTask.CompletedTask;
+        }
+
         public UniTask TurnEndAsync()
         {
             return AilmentController.OnTurnEndAsync();
