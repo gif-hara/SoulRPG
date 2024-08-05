@@ -5,6 +5,6 @@ namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
     /// </summary>
     public interface IBattleCharacterEvaluator
     {
-        bool Evaluate(BattleCharacter battleCharacter);
+        bool Evaluate(BattleCharacter actor, BattleCharacter target);
     }
 }

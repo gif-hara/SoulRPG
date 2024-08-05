@@ -10,11 +10,15 @@ namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
     public sealed class IncludeCharacterAttribute : IBattleCharacterEvaluator
     {
         [SerializeField]
+        private Define.TargetType targetType;
+
+        [SerializeField]
         private Define.CharacterAttribute whiteList;
 
-        public bool Evaluate(BattleCharacter battleCharacter)
+        public bool Evaluate(BattleCharacter actor, BattleCharacter target)
         {
-            return (battleCharacter.BattleStatus.Attribute & whiteList) != 0;
+            var t = targetType == Define.TargetType.Self ? actor : target;
+            return t.BattleStatus.Attribute.HasFlag(whiteList);
         }
     }
 }
