@@ -95,6 +95,12 @@ namespace SoulRPG
             OnComboFromTakedDamage,
         }
 
+        public enum AllyType
+        {
+            Player,
+            Enemy,
+        }
+
         public const int HandWeaponId = 101998;
     }
 }
