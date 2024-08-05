@@ -34,16 +34,6 @@ namespace SoulRPG.BattleSystems.CommandInvokers
             return sequencer.PlayAsync(scope);
         }
 
-        public int GetSpeed()
-        {
-            return weaponId.GetMasterDataWeapon().Speed;
-        }
-
-        public int GetBehaviourPriority()
-        {
-            return skillId.GetMasterDataSkill().BehaviourPriority;
-        }
-
         public int GetCost()
         {
             return skillId.GetMasterDataSkill().Cost;

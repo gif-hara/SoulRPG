@@ -393,8 +393,6 @@ namespace SoulRPG
 
             public int Cost;
 
-            public int BehaviourPriority;
-
             public bool CanRegisterUsedSkills;
 
             public string Description;
