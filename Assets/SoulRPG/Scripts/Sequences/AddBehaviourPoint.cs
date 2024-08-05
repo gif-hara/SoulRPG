@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using HK;
 using SoulRPG.BattleSystems.BattleCharacterEvaluators;
 using UnityEngine;
 using UnitySequencerSystem;
@@ -22,20 +23,20 @@ namespace SoulRPG
         [SerializeField]
         private int behaviourPriority;
 
-        public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
+        public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var actor = container.Resolve<BattleCharacter>("Actor");
             var target = container.Resolve<BattleCharacter>("Target");
             if (target.BattleStatus.IsDead)
             {
-                return UniTask.CompletedTask;
+                return;
             }
             if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
                 t.BattleStatus.AddBehaviourPoint(behaviourPriority);
+                await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.Name}の行動ポイントが{behaviourPriority}回復した");
             }
-            return UniTask.CompletedTask;
         }
     }
 }
