@@ -36,11 +36,7 @@ namespace SoulRPG.BattleSystems
             while (!IsBattleEnd())
             {
                 await ProcessActorAction(firstActor, secondActor);
-                await firstActor.InvokeAfterCommandAsync(secondActor, scope);
-                await firstActor.TurnEndAsync();
                 await ProcessActorAction(secondActor, firstActor);
-                await secondActor.TurnEndAsync();
-                await secondActor.InvokeAfterCommandAsync(firstActor, scope);
             }
 
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
@@ -74,6 +70,8 @@ namespace SoulRPG.BattleSystems
                     actor.BattleStatus.AddBehaviourPoint(-commandInvoker.GetCost());
                     await commandInvoker.InvokeAsync(actor, target, scope);
                 }
+                await actor.InvokeAfterCommandAsync(target, scope);
+                await actor.TurnEndAsync();
             }
 
             bool IsBattleEnd()
