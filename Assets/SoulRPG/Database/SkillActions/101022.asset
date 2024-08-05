@@ -50,4 +50,5 @@ MonoBehaviour:
     - rid: 7538228103530414729
       type: {class: IncludeCharacterAttribute, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
+        targetType: 1
         whiteList: 12
