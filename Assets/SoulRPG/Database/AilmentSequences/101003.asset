@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573b911ae3074f5c9b328767ca60d31, type: 3}
   m_Name: 101003
   m_EditorClassIdentifier: 
-  onAdded: {fileID: 11400000, guid: 4d0077ba442486b42bf4762134cb29e5, type: 2}
-  onTurnEnd: {fileID: 0}
-  onRemoved: {fileID: 11400000, guid: ca92b2535bf11e64eb1c047831262189, type: 2}
-  canExecutableTurn: {fileID: 0}
+  elements:
+    list:
+    - type: 0
+      sequences: {fileID: 11400000, guid: 4d0077ba442486b42bf4762134cb29e5, type: 2}
+    - type: 1
+      sequences: {fileID: 11400000, guid: ca92b2535bf11e64eb1c047831262189, type: 2}

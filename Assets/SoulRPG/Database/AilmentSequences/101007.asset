@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573b911ae3074f5c9b328767ca60d31, type: 3}
   m_Name: 101007
   m_EditorClassIdentifier: 
-  onAdded: {fileID: 11400000, guid: aad317f1fab3644898db5031f837223b, type: 2}
-  onTurnEnd: {fileID: 0}
-  onRemoved: {fileID: 11400000, guid: 2ff5e8e533ee54db6b9e369aeb0008f2, type: 2}
-  canExecutableTurn: {fileID: 0}
-  onComboFromGivedDamage: {fileID: 0}
-  onComboFromTakedDamage: {fileID: 0}
+  elements:
+    list:
+    - type: 0
+      sequences: {fileID: 11400000, guid: aad317f1fab3644898db5031f837223b, type: 2}
+    - type: 1
+      sequences: {fileID: 11400000, guid: 2ff5e8e533ee54db6b9e369aeb0008f2, type: 2}
