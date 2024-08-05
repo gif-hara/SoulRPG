@@ -123,5 +123,15 @@ namespace SoulRPG
             var result = self.GetWallIndex();
             return (position + result.from, position + result.to);
         }
+
+        public static string WithTag(this Define.AllyType self, string message)
+        {
+            return self switch
+            {
+                Define.AllyType.Player => $"<color=#AAAAFF>{message}</color>",
+                Define.AllyType.Enemy => $"<color=#FFAAAA>{message}</color>",
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
+        }
     }
 }

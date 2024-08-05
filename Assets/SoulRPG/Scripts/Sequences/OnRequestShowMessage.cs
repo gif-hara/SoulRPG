@@ -40,11 +40,11 @@ namespace SoulRPG
             var message = format;
             if (actor != null)
             {
-                message = message.Replace("{Actor}", actor.BattleStatus.Name);
+                message = message.Replace("{Actor}", actor.BattleStatus.NameWithTag);
             }
             if (target != null)
             {
-                message = message.Replace("{Target}", target.BattleStatus.Name);
+                message = message.Replace("{Target}", target.BattleStatus.NameWithTag);
             }
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnRequestShowMessage.OnNext(message);
