@@ -17,6 +17,9 @@ namespace SoulRPG
         private ScriptableSequences scriptableSequences;
 
         [SerializeField]
+        private string key;
+
+        [SerializeField]
         private int behaviourPriority;
 
         [SerializeField]
@@ -31,7 +34,12 @@ namespace SoulRPG
             }
             var actor = container.Resolve<BattleCharacter>("Actor");
             var weapon = container.Resolve<MasterData.Weapon>();
-            actor.AfterCommandInvoker = new Sequences(scriptableSequences, weapon.ItemId, behaviourPriority, cost);
+            if (actor.ContainsAfterCommandInvoker(key))
+            {
+                return UniTask.CompletedTask;
+            }
+
+            actor.EnqueueAfterCommandInvoker(key, new Sequences(scriptableSequences, weapon.ItemId, behaviourPriority, cost));
             return UniTask.CompletedTask;
         }
     }

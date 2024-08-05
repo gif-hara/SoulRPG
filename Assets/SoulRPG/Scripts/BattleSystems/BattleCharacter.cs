@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using SoulRPG.BattleSystems.CommandInvokers;
@@ -17,7 +18,7 @@ namespace SoulRPG
 
         private readonly IBattleAI battleAI;
 
-        public ICommandInvoker AfterCommandInvoker { get; set; }
+        public Queue<(string, ICommandInvoker)> AfterCommandInvokers { get; private set; } = new();
 
         public AilmentController AilmentController { get; }
 
@@ -68,6 +69,34 @@ namespace SoulRPG
         public float GetTotalCutRate(Define.AttackAttribute attackAttribute)
         {
             return BattleStatus.GetCutRate(attackAttribute) + StatusBuffController.GetCutRate(attackAttribute);
+        }
+
+        public bool ContainsAfterCommandInvoker(string key)
+        {
+            foreach (var (k, _) in AfterCommandInvokers)
+            {
+                if (k == key)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public void EnqueueAfterCommandInvoker(string key, ICommandInvoker commandInvoker)
+        {
+            AfterCommandInvokers.Enqueue((key, commandInvoker));
+        }
+
+        public async UniTask InvokeAfterCommandAsync(BattleCharacter target, CancellationToken scope)
+        {
+            var invokers = new List<(string, ICommandInvoker)>(AfterCommandInvokers);
+            AfterCommandInvokers.Clear();
+            foreach (var (_, invoker) in invokers)
+            {
+                await invoker.InvokeAsync(this, target, scope);
+            }
         }
     }
 }

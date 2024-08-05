@@ -30,15 +30,17 @@ namespace SoulRPG.BattleSystems
 
             gameEvents.OnRequestShowMessage.OnNext($"{enemy.BattleStatus.Name}が現れた");
             await gameEvents.WaitForSubmitInputAsync();
+            var firstActor = player.BattleStatus.Speed > enemy.BattleStatus.Speed ? player : enemy;
+            var secondActor = firstActor == player ? enemy : player;
 
             while (!IsBattleEnd())
             {
-                var firstActor = player.BattleStatus.Speed > enemy.BattleStatus.Speed ? player : enemy;
-                var secondActor = firstActor == player ? enemy : player;
                 await ProcessActorAction(firstActor, secondActor);
+                await firstActor.InvokeAfterCommandAsync(secondActor, scope);
                 await firstActor.TurnEndAsync();
                 await ProcessActorAction(secondActor, firstActor);
                 await secondActor.TurnEndAsync();
+                await secondActor.InvokeAfterCommandAsync(firstActor, scope);
             }
 
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
