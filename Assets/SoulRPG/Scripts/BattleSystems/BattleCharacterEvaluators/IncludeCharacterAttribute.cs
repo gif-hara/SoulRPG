@@ -18,7 +18,7 @@ namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
         public bool Evaluate(BattleCharacter actor, BattleCharacter target)
         {
             var t = targetType == Define.TargetType.Self ? actor : target;
-            return t.BattleStatus.Attribute.HasFlag(whiteList);
+            return (t.BattleStatus.Attribute & whiteList) != 0;
         }
     }
 }
