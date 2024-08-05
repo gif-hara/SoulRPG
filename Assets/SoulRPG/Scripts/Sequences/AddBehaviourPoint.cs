@@ -35,7 +35,7 @@ namespace SoulRPG
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
                 t.BattleStatus.AddBehaviourPoint(behaviourPriority);
-                await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.Name}の行動ポイントが{behaviourPriority}回復した");
+                await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.Name}のBPが{behaviourPriority}回復した");
             }
         }
     }
