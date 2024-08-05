@@ -215,6 +215,23 @@ namespace SoulRPG
                         TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("こちらからは開かないようだ");
                     }
                     break;
+                case "Item":
+                    if (!userData.ContainsCompletedWallEventId(wallEvent.Id))
+                    {
+                        var masterDataWallEventConditionItems = TinyServiceLocator.Resolve<MasterData>().WallEventConditionItems.Get(wallEvent.Id);
+                        foreach (var item in masterDataWallEventConditionItems)
+                        {
+                            if (!character.Inventory.HasItem(item))
+                            {
+                                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("鍵が必要のようだ");
+                                return;
+                            }
+                        }
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
+                        userData.AddCompletedWallEventIds(wallEvent.Id);
+                        await view.OnOpenDoorAsync(wallEvent);
+                    }
+                    break;
             }
         }
     }
