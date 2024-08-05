@@ -174,7 +174,7 @@ MonoBehaviour:
   debugPosition: {x: 0, y: 0}
   debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
   debugPlayerGrowthParameter:
-    level: 3
+    level: 5
     vitality: 10
     stamina: 10
     physicalStrength: 10
@@ -202,7 +202,9 @@ MonoBehaviour:
     thunderCutRate: 0
     speed: 0
     experience: 0
+    behaviourPoint: 0
     attribute: 0
+    allyType: 0
 --- !u!1 &897640241
 GameObject:
   m_ObjectHideFlags: 0
