@@ -29,7 +29,7 @@ MonoBehaviour:
     - rid: 7288459838305337778
       type: {class: AttackPowerOnly, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        rate: 1
+        rate: 0.5
         attackType: 1
         attackAttribute: 4
     - rid: 7538228103530414196
@@ -37,3 +37,4 @@ MonoBehaviour:
       data:
         format: "\u708E\u306E\u8FFD\u6483\u304C{Target}\u3092\u8972\u3046"
         waitForInput: 1
+        ignoreIfCharacterDead: 0
