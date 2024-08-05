@@ -606,6 +606,14 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: Lock
       NegativeSideCondition: None
+  wallEventConditionItems:
+    list:
+    - Key: Test.(10,09).(11,09).Door
+      Value:
+      - Id: 1
+        EventId: Test.(10,09).(11,09).Door
+        ItemId: 101001
+        Count: 1
   items:
     list:
     - Name: "\u30B7\u30E7\u30FC\u30C8\u30BD\u30FC\u30C9"
@@ -818,7 +826,7 @@ MonoBehaviour:
       Strength: 100
       AttackAttribute: 0
       Skill1: 101001
-      Skill2: 101011
+      Skill2: 101023
       Skill3: 0
       Skill4: 0
     - ItemId: 101998
@@ -974,7 +982,7 @@ MonoBehaviour:
       Cost: 1
       CanRegisterUsedSkills: 1
       Description: "\u7A32\u59BB\u3092\u8EAB\u4F53\u306B\u7E8F\u3044\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7A32\u59BB\u306E\u93A7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: f88356eb077fa364bbe94d9fd9855a6a, type: 2}
     - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u708E\u69CD"
       Id: 101024
       Cost: 1
@@ -1413,7 +1421,7 @@ MonoBehaviour:
     - Id: 101028
       Name: "\u7A32\u59BB\u306E\u93A7"
       Description: "\u7A32\u59BB\u306E\u529B\u3092\u8EAB\u4F53\u306B\u5BBF\u3059\u3002\u96F7\u5C5E\u6027\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u3092\u5927\u5E45\u306B\u6E1B\u5C11\u3055\u305B\u308B\u3002"
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: 500afd09ad4069e4b8a20859795d4261, type: 2}
     - Id: 101029
       Name: "\u61A4\u6012\u306E\u53CD\u6483"
       Description: "\u6012\u308A\u3092\u529B\u306B\u5909\u3048\u308B\u4F53\u52E2\u3002\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u305F\u5834\u5408\u3001BP\u304C1\u56DE\u5FA9\u3059\u308B\u3002"

@@ -36,6 +36,10 @@ namespace SoulRPG
         public WallEvent.DictionaryList WallEvents => wallEvents;
 
         [SerializeField]
+        private WallEventConditionItem.Group wallEventConditionItems;
+        public WallEventConditionItem.Group WallEventConditionItems => wallEventConditionItems;
+
+        [SerializeField]
         private Item.DictionaryList items;
         public Item.DictionaryList Items => items;
 
@@ -102,6 +106,7 @@ namespace SoulRPG
                 "MasterData.Ailment",
                 "MasterData.Enemy.CharacterAttribute",
                 "MasterData.WallEvent",
+                "MasterData.WallEvent.Condition.Item"
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -157,6 +162,7 @@ namespace SoulRPG
                 }
             }
             wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[14]));
+            wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[15]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -543,6 +549,24 @@ namespace SoulRPG
                     x => (x.DungeonName, x.LeftX, x.LeftY, x.RightX, x.RightY)
                     )
                 { }
+            }
+        }
+
+        [Serializable]
+        public class WallEventConditionItem
+        {
+            public int Id;
+
+            public string EventId;
+
+            public int ItemId;
+
+            public int Count;
+
+            [Serializable]
+            public class Group : Group<string, WallEventConditionItem>
+            {
+                public Group() : base(x => x.EventId) { }
             }
         }
     }
