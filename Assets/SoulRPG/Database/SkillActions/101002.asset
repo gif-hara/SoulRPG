@@ -23,9 +23,9 @@ MonoBehaviour:
       type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         targetType: 0
-        statusTypes: 020000000300000004000000
+        statusTypes: 00000000
         buffName: Skill.101002
-        rate: 0.2
+        rate: 1.1
     - rid: 6411493576093728937
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -36,5 +36,6 @@ MonoBehaviour:
       type: {class: RegisterAfterCommandInvoker, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         scriptableSequences: {fileID: 11400000, guid: 954ec1d2022b545c486046460f52a60d, type: 2}
+        key: 
         behaviourPriority: 0
         cost: 0
