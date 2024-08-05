@@ -27,23 +27,23 @@ namespace SoulRPG
 
         public UniTask OnAddedAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
-            return PlaySequencesAsync(masterDataAilment.Sequences.OnAdded, battleCharacter, null, scope);
+            return PlaySequencesAsync(masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnAdded), battleCharacter, null, scope);
         }
 
         public UniTask OnRemovedAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
-            return PlaySequencesAsync(masterDataAilment.Sequences.OnRemoved, battleCharacter, null, scope);
+            return PlaySequencesAsync(masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnRemoved), battleCharacter, null, scope);
         }
 
         public UniTask OnTurnEndAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
             currentTurnCount++;
-            return PlaySequencesAsync(masterDataAilment.Sequences.OnTurnEnd, battleCharacter, null, scope);
+            return PlaySequencesAsync(masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnTurnEnd), battleCharacter, null, scope);
         }
 
         public async UniTask<bool> CanExecutableTurnAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
-            var container = await PlaySequencesAsync(masterDataAilment.Sequences.CanExecutableTurn, battleCharacter, null, scope);
+            var container = await PlaySequencesAsync(masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.CanExecutableTurn), battleCharacter, null, scope);
             if (container == null)
             {
                 return true;
@@ -56,7 +56,7 @@ namespace SoulRPG
         public UniTask OnComboFromGivedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
             return PlaySequencesAsync(
-                masterDataAilment.Sequences.OnComboFromGivedDamage,
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnComboFromGivedDamage),
                 actor,
                 c => c.Register("Target", target),
                 scope
@@ -66,7 +66,7 @@ namespace SoulRPG
         public UniTask OnComboFromTakedDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
             return PlaySequencesAsync(
-                masterDataAilment.Sequences.OnComboFromTakedDamage,
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnComboFromTakedDamage),
                 actor,
                 c => c.Register("Target", target),
                 scope

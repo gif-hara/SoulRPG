@@ -1,4 +1,5 @@
 using System;
+using HK;
 using UnityEngine;
 using UnitySequencerSystem;
 
@@ -12,27 +13,28 @@ namespace SoulRPG
     public sealed class AilmentSequences : ScriptableObject
     {
         [SerializeField]
-        private ScriptableSequences onAdded;
-        public ScriptableSequences OnAdded => onAdded;
+        private Element.DictionaryList elements;
 
-        [SerializeField]
-        private ScriptableSequences onTurnEnd;
-        public ScriptableSequences OnTurnEnd => onTurnEnd;
+        public ScriptableSequences GetSequences(Define.AilmentBehaviourType type)
+        {
+            return elements.TryGetValue(type, out var element) ? element.Sequences : null;
+        }
 
-        [SerializeField]
-        private ScriptableSequences onRemoved;
-        public ScriptableSequences OnRemoved => onRemoved;
+        [Serializable]
+        public sealed class Element
+        {
+            [SerializeField]
+            private Define.AilmentBehaviourType type;
 
-        [SerializeField]
-        private ScriptableSequences canExecutableTurn;
-        public ScriptableSequences CanExecutableTurn => canExecutableTurn;
+            [SerializeField]
+            private ScriptableSequences sequences;
+            public ScriptableSequences Sequences => sequences;
 
-        [SerializeField]
-        private ScriptableSequences onComboFromGivedDamage;
-        public ScriptableSequences OnComboFromGivedDamage => onComboFromGivedDamage;
-
-        [SerializeField]
-        private ScriptableSequences onComboFromTakedDamage;
-        public ScriptableSequences OnComboFromTakedDamage => onComboFromTakedDamage;
+            [Serializable]
+            public sealed class DictionaryList : DictionaryList<Define.AilmentBehaviourType, Element>
+            {
+                DictionaryList() : base(x => x.type) { }
+            }
+        }
     }
 }
