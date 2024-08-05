@@ -85,6 +85,16 @@ namespace SoulRPG
             ThunderCutRate,
         }
 
+        public enum AilmentBehaviourType
+        {
+            OnAdded,
+            OnRemoved,
+            OnTurnEnd,
+            CanExecutableTurn,
+            OnComboFromGivedDamage,
+            OnComboFromTakedDamage,
+        }
+
         public const int HandWeaponId = 101998;
     }
 }
