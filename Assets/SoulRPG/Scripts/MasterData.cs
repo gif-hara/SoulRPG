@@ -363,8 +363,6 @@ namespace SoulRPG
 
             public int Strength;
 
-            public int Speed;
-
             public Define.AttackAttribute AttackAttribute;
 
             public int Skill1;
