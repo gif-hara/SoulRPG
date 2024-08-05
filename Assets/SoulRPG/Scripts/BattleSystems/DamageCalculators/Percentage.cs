@@ -11,10 +11,11 @@ namespace SoulRPG.BattleSystems.DamageCalculators
     {
         [SerializeField]
         private float rate = 1.0f;
-        
-        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon weapon)
+
+        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType)
         {
-            return Mathf.FloorToInt(defender.BattleStatus.HitPointMax * rate);
+            var t = targetType == Define.TargetType.Self ? attacker : defender;
+            return Mathf.FloorToInt(t.BattleStatus.HitPointMax * rate);
         }
     }
 }

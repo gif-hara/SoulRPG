@@ -36,7 +36,7 @@ namespace SoulRPG
             }
             container.TryResolve<BattleCharacter>("Actor", out var actor);
             container.TryResolve<MasterData.Weapon>(out var weapon);
-            var damage = damageCalculator.Calculate(actor, target, weapon);
+            var damage = damageCalculator.Calculate(actor, target, weapon, targetType);
             target.BattleStatus.TakeDamage(damage);
             var message = $"{target.BattleStatus.Name}に{damage}のダメージ！";
             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(message);

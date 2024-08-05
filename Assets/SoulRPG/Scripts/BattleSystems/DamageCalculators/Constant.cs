@@ -11,8 +11,8 @@ namespace SoulRPG.BattleSystems.DamageCalculators
     {
         [SerializeField]
         private int damage;
-        
-        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon weapon)
+
+        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType)
         {
             return damage;
         }

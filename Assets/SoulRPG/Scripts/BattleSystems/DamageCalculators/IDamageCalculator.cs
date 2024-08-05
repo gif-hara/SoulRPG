@@ -5,6 +5,6 @@ namespace SoulRPG.BattleSystems.DamageCalculators
     /// </summary>
     public interface IDamageCalculator
     {
-        int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon weapon);
+        int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType);
     }
 }

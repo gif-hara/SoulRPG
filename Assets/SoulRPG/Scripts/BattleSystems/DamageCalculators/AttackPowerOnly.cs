@@ -18,7 +18,7 @@ namespace SoulRPG.BattleSystems.DamageCalculators
         [SerializeField]
         private Define.AttackAttribute attackAttribute;
 
-        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon weapon)
+        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType)
         {
             var attackPower = attacker.BattleStatus.GetAttackPower(attackType) * rate;
             var cutRate = defender.GetTotalCutRate(attackAttribute);
