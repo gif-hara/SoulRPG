@@ -395,6 +395,8 @@ namespace SoulRPG
 
             public int BehaviourPriority;
 
+            public bool CanRegisterUsedSkills;
+
             public string Description;
 
             public ScriptableSequences ActionSequences;

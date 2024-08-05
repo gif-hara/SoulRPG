@@ -105,7 +105,7 @@ namespace SoulRPG.SceneControllers
                         {
                             var battleResult = await BattleSystem.BeginAsync(
                                 new BattleCharacter(player, new Input(commandDocumentPrefab)),
-                                new BattleCharacter(new CharacterBattleStatus(debugEnemyBattleStatus), new Constant(101998, 101001)),
+                                new BattleCharacter(new CharacterBattleStatus(debugEnemyBattleStatus), new Constant(101998, 101001, false)),
                                 destroyCancellationToken
                                 );
                             Debug.Log($"BattleResult: {battleResult}");

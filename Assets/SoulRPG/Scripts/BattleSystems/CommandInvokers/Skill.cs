@@ -13,10 +13,13 @@ namespace SoulRPG.BattleSystems.CommandInvokers
 
         private readonly int skillId;
 
-        public Skill(int weaponId, int skillId)
+        private readonly bool canRegisterUsedIdentifier;
+
+        public Skill(int weaponId, int skillId, bool canRegisterUsedIdentifier)
         {
             this.weaponId = weaponId;
             this.skillId = skillId;
+            this.canRegisterUsedIdentifier = canRegisterUsedIdentifier;
         }
 
         public UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
@@ -44,6 +47,16 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         public int GetCost()
         {
             return skillId.GetMasterDataSkill().Cost;
+        }
+
+        public string GetIdentifier()
+        {
+            return $"{weaponId}.{skillId}";
+        }
+
+        public bool CanRegisterUsedIdentifier()
+        {
+            return canRegisterUsedIdentifier;
         }
     }
 }

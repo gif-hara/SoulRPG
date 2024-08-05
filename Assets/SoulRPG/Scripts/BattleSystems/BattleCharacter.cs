@@ -4,6 +4,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
+using UnityEngine.Assertions;
 
 namespace SoulRPG
 {
@@ -23,6 +24,8 @@ namespace SoulRPG
         public AilmentController AilmentController { get; }
 
         public StatusBuffController StatusBuffController { get; } = new();
+
+        public HashSet<string> UsedSkills { get; } = new();
 
         public BattleCharacter(Character character, IBattleAI battleAI)
         {
@@ -46,11 +49,24 @@ namespace SoulRPG
                 return null;
             }
 
-            return await battleAI.ThinkAsync(this);
+            var result = await battleAI.ThinkAsync(this);
+            Assert.IsNotNull(result);
+            if (!result.CanRegisterUsedIdentifier())
+            {
+                return result;
+            }
+            else
+            {
+                var identifier = result.GetIdentifier();
+                Assert.IsFalse(UsedSkills.Contains(identifier), $"{identifier} is already used");
+                UsedSkills.Add(identifier);
+                return result;
+            }
         }
 
         public UniTask TurnStartAsync()
         {
+            UsedSkills.Clear();
             BattleStatus.RecoveryBehaviourPoint();
             return UniTask.CompletedTask;
         }

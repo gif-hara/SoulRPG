@@ -92,7 +92,7 @@ namespace SoulRPG
 
         public static BattleCharacter CreateBattleCharacter(this MasterData.Enemy self)
         {
-            return new BattleCharacter(new CharacterBattleStatus(self), new Constant(101999, 101001));
+            return new BattleCharacter(new CharacterBattleStatus(self), new Constant(101999, 101001, false));
         }
 
         public static bool TryGetValue(this MasterData.WallEvent.DictionaryList self, Character character, out MasterData.WallEvent wallEvent)

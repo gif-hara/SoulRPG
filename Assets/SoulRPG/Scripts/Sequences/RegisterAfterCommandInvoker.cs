@@ -25,6 +25,9 @@ namespace SoulRPG
         [SerializeField]
         private int cost;
 
+        [SerializeField]
+        private string identifier;
+
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var target = container.Resolve<BattleCharacter>("Target");
@@ -39,7 +42,7 @@ namespace SoulRPG
                 return UniTask.CompletedTask;
             }
 
-            actor.EnqueueAfterCommandInvoker(key, new Sequences(scriptableSequences, weapon.ItemId, behaviourPriority, cost));
+            actor.EnqueueAfterCommandInvoker(key, new Sequences(scriptableSequences, weapon.ItemId, behaviourPriority, cost, identifier));
             return UniTask.CompletedTask;
         }
     }

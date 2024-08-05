@@ -15,5 +15,9 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         int GetBehaviourPriority();
 
         int GetCost();
+
+        string GetIdentifier();
+
+        bool CanRegisterUsedIdentifier();
     }
 }

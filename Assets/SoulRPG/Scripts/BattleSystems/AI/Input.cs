@@ -98,7 +98,8 @@ namespace SoulRPG
             var commands = skills.Select(x => x.Name);
             var index = await commandView.CreateCommandsAsync("スキルを選べ", commands, 0);
             commandView.Close();
-            source.TrySetResult(new Skill(weapon.ItemId, skills.ElementAt(index).Id));
+            var skill = skills.ElementAt(index);
+            source.TrySetResult(new Skill(weapon.ItemId, skill.Id, skill.CanRegisterUsedSkills));
         }
     }
 }

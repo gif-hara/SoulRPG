@@ -17,15 +17,19 @@ namespace SoulRPG
         [SerializeField]
         private int skillId;
 
-        public Constant(int weaponItemId, int skillId)
+        [SerializeField]
+        private bool canRegisterUsedIdentifier;
+
+        public Constant(int weaponItemId, int skillId, bool canRegisterUsedIdentifier)
         {
             this.weaponItemId = weaponItemId;
             this.skillId = skillId;
+            this.canRegisterUsedIdentifier = canRegisterUsedIdentifier;
         }
 
         public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
         {
-            return UniTask.FromResult(new Skill(weaponItemId, skillId) as ICommandInvoker);
+            return UniTask.FromResult(new Skill(weaponItemId, skillId, canRegisterUsedIdentifier) as ICommandInvoker);
         }
     }
 }
