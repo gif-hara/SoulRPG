@@ -46,7 +46,7 @@ namespace SoulRPG
                 Define.StatusType.MagicCutRate => magicCutRateBuffList,
                 Define.StatusType.FireCutRate => fireCutRateBuffList,
                 Define.StatusType.ThunderCutRate => thunderCutRateBuffList,
-                _ => throw new System.ArgumentOutOfRangeException()
+                _ => throw new System.ArgumentOutOfRangeException(statusType.ToString())
             };
             if (buffList.Any(x => x.Item1 == name))
             {
@@ -73,7 +73,7 @@ namespace SoulRPG
             {
                 Define.AttackType.Physical => physicalStrengthBuffList,
                 Define.AttackType.Magical => magicalStrengthBuffList,
-                _ => throw new System.ArgumentOutOfRangeException()
+                _ => throw new System.ArgumentOutOfRangeException(attackType.ToString())
             };
             var result = 1.0f;
             foreach (var (_, rate) in buffList)
@@ -93,7 +93,7 @@ namespace SoulRPG
                 Define.AttackAttribute.Magic => magicCutRateBuffList.Select(x => x.Item2).Sum(),
                 Define.AttackAttribute.Fire => fireCutRateBuffList.Select(x => x.Item2).Sum(),
                 Define.AttackAttribute.Thunder => thunderCutRateBuffList.Select(x => x.Item2).Sum(),
-                _ => throw new System.ArgumentOutOfRangeException()
+                _ => throw new System.ArgumentOutOfRangeException(attackAttribute.ToString())
             };
         }
     }
