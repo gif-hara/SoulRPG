@@ -51,12 +51,17 @@ namespace SoulRPG.BattleSystems.CommandInvokers
 
         public string GetIdentifier()
         {
-            return $"{weaponId}.{skillId}";
+            return CreateIdentifier(weaponId, skillId);
         }
 
         public bool CanRegisterUsedIdentifier()
         {
             return canRegisterUsedIdentifier;
+        }
+
+        public static string CreateIdentifier(int weaponId, int skillId)
+        {
+            return $"{weaponId}.{skillId}";
         }
     }
 }

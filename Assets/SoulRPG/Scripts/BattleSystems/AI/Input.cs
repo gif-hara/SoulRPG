@@ -96,10 +96,20 @@ namespace SoulRPG
                     return x.GetMasterDataSkill();
                 });
             var commands = skills.Select(x => x.Name);
-            var index = await commandView.CreateCommandsAsync("スキルを選べ", commands, 0);
-            commandView.Close();
-            var skill = skills.ElementAt(index);
-            source.TrySetResult(new Skill(weapon.ItemId, skill.Id, skill.CanRegisterUsedSkills));
+            while (true)
+            {
+                var index = await commandView.CreateCommandsAsync("スキルを選べ", commands, 0);
+                var skill = skills.ElementAt(index);
+                var identifier = Skill.CreateIdentifier(weapon.ItemId, skill.Id);
+                if (character.UsedSkills.Contains(identifier))
+                {
+                    TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("このターンではもう使用出来ない。");
+                    continue;
+                }
+                commandView.Close();
+                source.TrySetResult(new Skill(weapon.ItemId, skill.Id, skill.CanRegisterUsedSkills));
+                break;
+            }
         }
     }
 }
