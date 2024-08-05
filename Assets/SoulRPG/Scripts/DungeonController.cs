@@ -151,7 +151,7 @@ namespace SoulRPG
         private async UniTask InvokeOnSavePointAsync(Character character, MasterData.FloorEvent floorEvent)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            await gameEvents.ShowMessageAndWaitForSubmitInputAsync("ここはセーブポイントのようだ。一休みしよう");
+            await gameEvents.ShowMessageAndWaitForSubmitInputAsync("ここはセーブポイントのようだ。一休みしよう。");
             var userData = TinyServiceLocator.Resolve<UserData>();
             userData.ClearTemporaryCompletedFloorEventIds();
             character.InstanceStatus.FullRecovery();
