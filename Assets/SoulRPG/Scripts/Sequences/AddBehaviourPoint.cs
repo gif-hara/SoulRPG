@@ -27,7 +27,7 @@ namespace SoulRPG
         {
             var actor = container.Resolve<BattleCharacter>("Actor");
             var target = container.Resolve<BattleCharacter>("Target");
-            if (target.BattleStatus.IsDead)
+            if (actor.BattleStatus.IsDead || target.BattleStatus.IsDead)
             {
                 return;
             }
