@@ -46,9 +46,8 @@ namespace SoulRPG
                 Define.StatusType.MagicCutRate => magicCutRateBuffList,
                 Define.StatusType.FireCutRate => fireCutRateBuffList,
                 Define.StatusType.ThunderCutRate => thunderCutRateBuffList,
-                _ => null
+                _ => throw new System.ArgumentOutOfRangeException()
             };
-            Assert.IsNotNull(buffList, $"ステータスタイプが不正です {statusType}");
             if (buffList.Any(x => x.Item1 == name))
             {
                 return;
@@ -74,7 +73,7 @@ namespace SoulRPG
             {
                 Define.AttackType.Physical => physicalStrengthBuffList,
                 Define.AttackType.Magical => magicalStrengthBuffList,
-                _ => null
+                _ => throw new System.ArgumentOutOfRangeException()
             };
             var result = 1.0f;
             foreach (var (_, rate) in buffList)
@@ -86,24 +85,16 @@ namespace SoulRPG
 
         public float GetCutRate(Define.AttackAttribute attackAttribute)
         {
-            switch (attackAttribute)
+            return attackAttribute switch
             {
-                case Define.AttackAttribute.Slash:
-                    return slashCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.AttackAttribute.Blow:
-                    return blowCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.AttackAttribute.Thrust:
-                    return thrustCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.AttackAttribute.Magic:
-                    return magicCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.AttackAttribute.Fire:
-                    return fireCutRateBuffList.Select(x => x.Item2).Sum();
-                case Define.AttackAttribute.Thunder:
-                    return thunderCutRateBuffList.Select(x => x.Item2).Sum();
-                default:
-                    Assert.IsTrue(false, $"攻撃属性が不正です {attackAttribute}");
-                    return 0.0f;
-            }
+                Define.AttackAttribute.Slash => slashCutRateBuffList.Select(x => x.Item2).Sum(),
+                Define.AttackAttribute.Blow => blowCutRateBuffList.Select(x => x.Item2).Sum(),
+                Define.AttackAttribute.Thrust => thrustCutRateBuffList.Select(x => x.Item2).Sum(),
+                Define.AttackAttribute.Magic => magicCutRateBuffList.Select(x => x.Item2).Sum(),
+                Define.AttackAttribute.Fire => fireCutRateBuffList.Select(x => x.Item2).Sum(),
+                Define.AttackAttribute.Thunder => thunderCutRateBuffList.Select(x => x.Item2).Sum(),
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
         }
     }
 }
