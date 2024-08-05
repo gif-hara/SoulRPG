@@ -46,5 +46,10 @@ namespace SoulRPG
         {
             return Items.ContainsKey(itemId) ? Items[itemId] : 0;
         }
+
+        public bool HasItem(INeedItem needItem)
+        {
+            return GetNumber(needItem.ItemId) >= needItem.Count;
+        }
     }
 }
