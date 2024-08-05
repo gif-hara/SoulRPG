@@ -553,7 +553,7 @@ namespace SoulRPG
         }
 
         [Serializable]
-        public class WallEventConditionItem
+        public class WallEventConditionItem : INeedItem
         {
             public int Id;
 
@@ -562,6 +562,10 @@ namespace SoulRPG
             public int ItemId;
 
             public int Count;
+
+            int INeedItem.ItemId => ItemId;
+
+            int INeedItem.Count => Count;
 
             [Serializable]
             public class Group : Group<string, WallEventConditionItem>
