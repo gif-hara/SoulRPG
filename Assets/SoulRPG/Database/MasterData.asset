@@ -586,8 +586,8 @@ MonoBehaviour:
       RightX: 11
       RightY: 9
       EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: Lock
+      PositiveSideCondition: Item
+      NegativeSideCondition: Item
     - Id: Test.(01,10).(01,09).Door
       DungeonName: Dungeon.Test
       LeftX: 1
