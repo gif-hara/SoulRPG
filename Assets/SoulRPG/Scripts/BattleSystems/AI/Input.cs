@@ -96,10 +96,12 @@ namespace SoulRPG
                     return x.GetMasterDataSkill();
                 });
             var commands = skills.Select(x => x.Name);
+            var selectedIndex = 0;
             while (true)
             {
-                var index = await commandView.CreateCommandsAsync("スキルを選べ", commands, 0);
+                var index = await commandView.CreateCommandsAsync("スキルを選べ", commands, selectedIndex);
                 var skill = skills.ElementAt(index);
+                selectedIndex = index;
                 var identifier = Skill.CreateIdentifier(weapon.ItemId, skill.Id);
                 if (character.UsedSkills.Contains(identifier))
                 {
