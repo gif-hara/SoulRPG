@@ -36,65 +36,24 @@ namespace SoulRPG
 
         public void Add(Define.StatusType statusType, string name, float rate)
         {
-            switch (statusType)
+            var buffList = statusType switch
             {
-                case Define.StatusType.PhysicalStrength:
-                    if (physicalStrengthBuffList.Any(x => x.Item1 == name))
-                    {
-                        return;
-                    }
-                    physicalStrengthBuffList.Add((name, rate));
-                    break;
-                case Define.StatusType.MagicalStrength:
-                    if (magicalStrengthBuffList.Any(x => x.Item1 == name))
-                    {
-                        return;
-                    }
-                    magicalStrengthBuffList.Add((name, rate));
-                    break;
-                case Define.StatusType.SlashCutRate:
-                    if (slashCutRateBuffList.Any(x => x.Item1 == name))
-                    {
-                        return;
-                    }
-                    slashCutRateBuffList.Add((name, rate));
-                    break;
-                case Define.StatusType.BlowCutRate:
-                    if (blowCutRateBuffList.Any(x => x.Item1 == name))
-                    {
-                        return;
-                    }
-                    blowCutRateBuffList.Add((name, rate));
-                    break;
-                case Define.StatusType.ThrustCutRate:
-                    if (thrustCutRateBuffList.Any(x => x.Item1 == name))
-                    {
-                        return;
-                    }
-                    thrustCutRateBuffList.Add((name, rate));
-                    break;
-                case Define.StatusType.MagicCutRate:
-                    if (magicCutRateBuffList.Any(x => x.Item1 == name))
-                    {
-                        return;
-                    }
-                    magicCutRateBuffList.Add((name, rate));
-                    break;
-                case Define.StatusType.FireCutRate:
-                    if (fireCutRateBuffList.Any(x => x.Item1 == name))
-                    {
-                        return;
-                    }
-                    fireCutRateBuffList.Add((name, rate));
-                    break;
-                case Define.StatusType.ThunderCutRate:
-                    if (thunderCutRateBuffList.Any(x => x.Item1 == name))
-                    {
-                        return;
-                    }
-                    thunderCutRateBuffList.Add((name, rate));
-                    break;
+                Define.StatusType.PhysicalStrength => physicalStrengthBuffList,
+                Define.StatusType.MagicalStrength => magicalStrengthBuffList,
+                Define.StatusType.SlashCutRate => slashCutRateBuffList,
+                Define.StatusType.BlowCutRate => blowCutRateBuffList,
+                Define.StatusType.ThrustCutRate => thrustCutRateBuffList,
+                Define.StatusType.MagicCutRate => magicCutRateBuffList,
+                Define.StatusType.FireCutRate => fireCutRateBuffList,
+                Define.StatusType.ThunderCutRate => thunderCutRateBuffList,
+                _ => null
+            };
+            Assert.IsNotNull(buffList, $"ステータスタイプが不正です {statusType}");
+            if (buffList.Any(x => x.Item1 == name))
+            {
+                return;
             }
+            buffList.Add((name, rate));
         }
 
         public void Remove(string name)
@@ -111,16 +70,18 @@ namespace SoulRPG
 
         public float GetStrengthRate(Define.AttackType attackType)
         {
-            switch (attackType)
+            var buffList = attackType switch
             {
-                case Define.AttackType.Physical:
-                    return 1.0f + physicalStrengthBuffList.Select(x => x.Item2).Sum();
-                case Define.AttackType.Magical:
-                    return 1.0f + magicalStrengthBuffList.Select(x => x.Item2).Sum();
-                default:
-                    Assert.IsTrue(false, $"攻撃タイプが不正です {attackType}");
-                    return 1.0f;
+                Define.AttackType.Physical => physicalStrengthBuffList,
+                Define.AttackType.Magical => magicalStrengthBuffList,
+                _ => null
+            };
+            var result = 1.0f;
+            foreach (var (_, rate) in buffList)
+            {
+                result *= rate;
             }
+            return result;
         }
 
         public float GetCutRate(Define.AttackAttribute attackAttribute)
