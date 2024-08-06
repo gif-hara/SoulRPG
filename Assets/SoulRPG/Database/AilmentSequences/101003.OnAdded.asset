@@ -28,6 +28,5 @@ MonoBehaviour:
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F\u6C17\u5408\u306B\u6E80\u3061\u305F"
-        waitForInput: 1
+        format: "{Actor}\u306F\u6C17\u5408\u306B\u6E80\u3061\u305F\u3002"
         ignoreIfCharacterDead: 0

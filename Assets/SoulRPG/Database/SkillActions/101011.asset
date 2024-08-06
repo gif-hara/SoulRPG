@@ -23,8 +23,8 @@ MonoBehaviour:
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F\u7D76\u3048\u9593\u306A\u304F\u71C3\u3048\u76DB\u308B\u708E\u3092\u7E8F\u3063\u305F"
-        waitForInput: 1
+        format: "{Actor}\u306F\u7D76\u3048\u9593\u306A\u304F\u71C3\u3048\u76DB\u308B\u708E\u3092\u7E8F\u3063\u305F\u3002"
+        ignoreIfCharacterDead: 0
     - rid: 7288459838305337762
       type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
       data:

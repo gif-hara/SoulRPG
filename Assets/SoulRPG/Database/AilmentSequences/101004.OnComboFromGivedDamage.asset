@@ -34,5 +34,5 @@ MonoBehaviour:
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "\u708E\u306E\u8FFD\u6483\u304C{Target}\u3092\u8972\u3046"
+        format: "\u708E\u306E\u8FFD\u6483\u304C{Target}\u3092\u8972\u3046\u3002"
         ignoreIfCharacterDead: 0

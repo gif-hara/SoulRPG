@@ -21,7 +21,7 @@ MonoBehaviour:
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306E\u706B\u50B7\u304C\u3055\u3089\u306B\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u308B"
+        format: "{Actor}\u306E\u706B\u50B7\u304C\u3055\u3089\u306B\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u308B\u3002"
         ignoreIfCharacterDead: 0
     - rid: 7538228103530414687
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
