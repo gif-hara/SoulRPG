@@ -42,13 +42,11 @@ namespace SoulRPG.BattleSystems
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
             if (result == Define.BattleResult.PlayerWin)
             {
-                gameEvents.OnRequestShowMessage.OnNext($"{enemy.BattleStatus.NameWithTag}を倒した");
-                await gameEvents.WaitForSubmitInputAsync();
+                await gameEvents.ShowMessageAndWaitForSubmitInputAsync($"{enemy.BattleStatus.NameWithTag}を倒した");
             }
             else
             {
-                gameEvents.OnRequestShowMessage.OnNext($"{player.BattleStatus.NameWithTag}は倒れてしまった");
-                await gameEvents.WaitForSubmitInputAsync();
+                await gameEvents.ShowMessageAndWaitForSubmitInputAsync($"{player.BattleStatus.NameWithTag}は倒れてしまった");
             }
             inputController.ChangeInputType(InputController.InputType.InGame);
             player.Dispose();

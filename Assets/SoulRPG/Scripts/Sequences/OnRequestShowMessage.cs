@@ -17,9 +17,6 @@ namespace SoulRPG
         private string format;
 
         [SerializeField]
-        private bool waitForInput = true;
-
-        [SerializeField]
         private bool ignoreIfCharacterDead = false;
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
@@ -47,11 +44,7 @@ namespace SoulRPG
                 message = message.Replace("{Target}", target.BattleStatus.NameWithTag);
             }
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            gameEvents.OnRequestShowMessage.OnNext(message);
-            if (waitForInput)
-            {
-                await gameEvents.WaitForSubmitInputAsync();
-            }
+            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(message);
         }
     }
 }
