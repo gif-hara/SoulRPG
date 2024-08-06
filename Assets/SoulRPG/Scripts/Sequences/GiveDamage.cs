@@ -21,10 +21,7 @@ namespace SoulRPG
 
         [SerializeField]
         private Define.TargetType targetType;
-
-        [SerializeField]
-        private bool waitForInput = true;
-
+        
         [SerializeField]
         private bool canCombo = true;
 
@@ -41,12 +38,7 @@ namespace SoulRPG
             var t = targetType == Define.TargetType.Self ? actor : target;
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             t.BattleStatus.TakeDamage(damage);
-            var message = $"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。";
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(message);
-            if (waitForInput)
-            {
-                await TinyServiceLocator.Resolve<GameEvents>().WaitForSubmitInputAsync();
-            }
+            await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。");
             if (canCombo && !target.BattleStatus.IsDead)
             {
                 await actor.BeginComboAsync(target, cancellationToken);
