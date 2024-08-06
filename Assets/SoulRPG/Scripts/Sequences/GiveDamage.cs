@@ -2,7 +2,6 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
-using R3;
 using SoulRPG.BattleSystems.DamageCalculators;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -39,7 +38,7 @@ namespace SoulRPG
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             t.BattleStatus.TakeDamage(damage);
             await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。");
-            if (giveDamageType == Define.GiveDamageType.Direct && !target.BattleStatus.IsDead)
+            if (giveDamageType == Define.GiveDamageType.Direct && !t.BattleStatus.IsDead)
             {
                 await actor.BeginComboAsync(target, cancellationToken);
             }
