@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101034.CanAddAilment
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 3561509598600101978
+  references:
+    version: 2
+    RefIds:
+    - rid: 3561509598600101978
+      type: {class: ContainerEvaluateSequences, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        containerEvaluator:
+          rid: 3561509598600101979
+        sequences:
+        - rid: 3561509598600101984
+    - rid: 3561509598600101979
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 3561509598600101982
+        valueResolver:
+          rid: 3561509598600101983
+        compareType: 0
+    - rid: 3561509598600101982
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: PendingAilmentId
+    - rid: 3561509598600101983
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 101008
+    - rid: 3561509598600101984
+      type: {class: BooleanSet, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        booleanResolver:
+          rid: 3561509598600101985
+        booleanNameResolver:
+          rid: 3561509598600101986
+    - rid: 3561509598600101985
+      type: {class: BooleanResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 3561509598600101986
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: CanAddAilment
