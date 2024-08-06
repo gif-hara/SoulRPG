@@ -36,6 +36,14 @@ namespace SoulRPG
 
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
         {
+            foreach (var i in elements)
+            {
+                var canAdd = await i.CanAddAilmentAsync(battleCharacter, masterDataAilmentId, cancellationTokenSource.Token);
+                if (!canAdd)
+                {
+                    return;
+                }
+            }
             var element = elements.Find(x => x.GetMasterDataId() == masterDataAilmentId);
             if (element != null)
             {
@@ -54,7 +62,8 @@ namespace SoulRPG
 
         public async UniTask OnTurnEndAsync()
         {
-            foreach (var element in elements)
+            var tempElement = new List<IAilmentElement>(elements);
+            foreach (var element in tempElement)
             {
                 await element.OnTurnEndAsync(battleCharacter, cancellationTokenSource.Token);
                 if (element.IsEnd())

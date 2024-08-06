@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using UnityEngine.Assertions;
 using UnitySequencerSystem;
 
 namespace SoulRPG
@@ -27,6 +28,8 @@ namespace SoulRPG
 
         public UniTask OnAddedAsync(BattleCharacter battleCharacter, CancellationToken scope)
         {
+            Assert.IsNotNull(battleCharacter, "battleCharacterがnullです");
+            Assert.IsNotNull(masterDataAilment, $"マスターデータが存在しません masterDataAilmentId: {masterDataAilmentId}");
             return PlaySequencesAsync(masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnAdded), battleCharacter, null, scope);
         }
 
@@ -73,8 +76,29 @@ namespace SoulRPG
                 );
         }
 
+        public async UniTask<bool> CanAddAilmentAsync(BattleCharacter battleCharacter, int pendingAilmentId, CancellationToken scope)
+        {
+            var container = await PlaySequencesAsync(
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.CanAddAilment),
+                battleCharacter,
+                c => c.Register("PendingAilmentId", pendingAilmentId),
+                scope
+                );
+            if (container == null)
+            {
+                return true;
+            }
+
+            var contains = container.TryResolve<bool>("CanAddAilment", out var canAddAilment);
+            return contains && canAddAilment;
+        }
+
         public bool IsEnd()
         {
+            if (turnCount == -1)
+            {
+                return false;
+            }
             return currentTurnCount >= turnCount;
         }
 

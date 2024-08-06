@@ -93,6 +93,7 @@ namespace SoulRPG
             CanExecutableTurn,
             OnComboFromGivedDamage,
             OnComboFromTakedDamage,
+            CanAddAilment,
         }
 
         public enum AllyType
