@@ -21,9 +21,9 @@ namespace SoulRPG
 
         [SerializeField]
         private Define.TargetType targetType;
-        
+
         [SerializeField]
-        private bool canCombo = true;
+        private Define.GiveDamageType giveDamageType;
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
@@ -39,7 +39,7 @@ namespace SoulRPG
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             t.BattleStatus.TakeDamage(damage);
             await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。");
-            if (canCombo && !target.BattleStatus.IsDead)
+            if (giveDamageType == Define.GiveDamageType.Direct && !target.BattleStatus.IsDead)
             {
                 await actor.BeginComboAsync(target, cancellationToken);
             }
