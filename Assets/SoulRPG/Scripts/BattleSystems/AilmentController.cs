@@ -45,11 +45,7 @@ namespace SoulRPG
                 }
             }
             var element = elements.Find(x => x.GetMasterDataId() == masterDataAilmentId);
-            if (element != null)
-            {
-                element.Reset(turnCount);
-            }
-            else
+            if (element == null)
             {
                 element = new AilmentElement(masterDataAilmentId, turnCount);
                 elements.Add(element);
