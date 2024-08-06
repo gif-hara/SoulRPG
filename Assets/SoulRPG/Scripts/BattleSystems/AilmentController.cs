@@ -107,6 +107,18 @@ namespace SoulRPG
             }
         }
 
+        public async UniTask<bool> EvaluateEvadeAsync(BattleCharacter actor)
+        {
+            foreach (var element in elements)
+            {
+                if (await element.EvaluateEvadeAsync(actor, cancellationTokenSource.Token))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
 #if DEBUG
         private void AddDebugPanel()
         {

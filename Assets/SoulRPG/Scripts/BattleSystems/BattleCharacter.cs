@@ -120,5 +120,10 @@ namespace SoulRPG
                 await invoker.InvokeAsync(this, target, scope);
             }
         }
+
+        public UniTask<bool> EvaluateEvaded()
+        {
+            return AilmentController.EvaluateEvadeAsync(this);
+        }
     }
 }

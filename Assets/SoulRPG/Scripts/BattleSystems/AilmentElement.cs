@@ -93,6 +93,27 @@ namespace SoulRPG
             return contains && canAddAilment;
         }
 
+        public async UniTask<bool> EvaluateEvadeAsync(BattleCharacter actor, CancellationToken scope)
+        {
+            var container = await PlaySequencesAsync(
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.EvaluateEvade),
+                actor,
+                null,
+                scope
+            );
+            if (container == null)
+            {
+                return false;
+            }
+
+            var contains = container.TryResolve<bool>("Evade", out var evade);
+            if (!contains)
+            {
+                return false;
+            }
+            return evade;
+        }
+
         public bool IsEnd()
         {
             if (turnCount == -1)
