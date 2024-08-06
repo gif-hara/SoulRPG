@@ -32,19 +32,19 @@ MonoBehaviour:
     - rid: 9047573468771254373
       type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        value: 1
+        value: 0.55
     - rid: 9047573468771254374
       type: {class: BooleanSet, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
       data:
         booleanResolver:
           rid: 9047573468771254375
         booleanNameResolver:
-          rid: 9047573468771254376
+          rid: 9047573468771254378
     - rid: 9047573468771254375
       type: {class: BooleanResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
         value: 1
-    - rid: 9047573468771254376
-      type: {class: StringResolver/NameString, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+    - rid: 9047573468771254378
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        name: Evade
+        value: Evade
