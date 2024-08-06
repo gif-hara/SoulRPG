@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101025
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 7288459789387432183
+  - rid: 9047573468771254360
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7288459789387432183
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u8056\u9A0E\u58EB\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u610F\u5FD7\u3001\u52DD\u5229\u3092\u8A93\u3063\u305F\u3002"
+        ignoreIfCharacterDead: 0
+    - rid: 9047573468771254360
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101010
+        turnCount: 3
+        battleCharacterEvaluator:
+          rid: -2
