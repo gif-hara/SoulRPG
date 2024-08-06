@@ -15,9 +15,12 @@ MonoBehaviour:
   sequences:
   - rid: 7538228103530414196
   - rid: 3022425624215289858
+  - rid: 9047573468771254341
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3022425624215289858
       type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -27,5 +30,12 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306E\u9EBB\u75FA\u304C\u89E3\u3051\u305F\u3002"
-        waitForInput: 1
         ignoreIfCharacterDead: 0
+    - rid: 9047573468771254341
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101034
+        turnCount: 3
+        battleCharacterEvaluator:
+          rid: -2
