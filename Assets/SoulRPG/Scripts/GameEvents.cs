@@ -34,6 +34,7 @@ namespace SoulRPG
             OnRequestShowMessage.OnNext(message);
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var tempInputType = inputController.CurrentInputType;
+            await UniTask.NextFrame();
             inputController.ChangeInputType(InputController.InputType.UI);
             inputController.InputActions.UI.Submit.OnPerformedAsObservable()
                 .Take(1)
