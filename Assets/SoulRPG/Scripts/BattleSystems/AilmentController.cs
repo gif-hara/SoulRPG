@@ -51,6 +51,10 @@ namespace SoulRPG
                 elements.Add(element);
                 await element.OnAddedAsync(battleCharacter, cancellationTokenSource.Token);
             }
+            else if (masterDataAilmentId.GetMasterDataAilment().CanReset)
+            {
+                element.OnResetAsync(battleCharacter, turnCount, cancellationTokenSource.Token).Forget();
+            }
 #if DEBUG
             AddDebugPanel();
 #endif

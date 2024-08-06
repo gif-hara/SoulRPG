@@ -22,7 +22,9 @@ namespace SoulRPG
 
         UniTask<bool> CanAddAilmentAsync(BattleCharacter battleCharacter, int pendingAilmentId, CancellationToken scope);
 
-        UniTask<bool> EvaluateEvadeAsync(BattleCharacter actor, CancellationToken scope);
+        UniTask<bool> EvaluateEvadeAsync(BattleCharacter battleCharacter, CancellationToken scope);
+
+        UniTask OnResetAsync(BattleCharacter battleCharacter, int newTurnCount, CancellationToken scope);
 
         bool IsEnd();
 

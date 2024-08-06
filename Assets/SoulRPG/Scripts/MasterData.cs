@@ -511,6 +511,8 @@ namespace SoulRPG
 
             public string Description;
 
+            public bool CanReset;
+
             public AilmentSequences Sequences;
 
             [Serializable]

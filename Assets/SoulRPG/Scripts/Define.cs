@@ -95,6 +95,7 @@ namespace SoulRPG
             OnComboFromTakedDamage,
             CanAddAilment,
             EvaluateEvade,
+            OnReset,
         }
 
         public enum AllyType

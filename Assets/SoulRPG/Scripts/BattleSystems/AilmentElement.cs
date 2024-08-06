@@ -114,6 +114,16 @@ namespace SoulRPG
             return evade;
         }
 
+        public UniTask OnResetAsync(BattleCharacter battleCharacter, int newTurnCount, CancellationToken scope)
+        {
+            if (turnCount != -1)
+            {
+                turnCount = newTurnCount;
+                currentTurnCount = 0;
+            }
+            return PlaySequencesAsync(masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnReset), battleCharacter, null, scope);
+        }
+
         public bool IsEnd()
         {
             if (turnCount == -1)
