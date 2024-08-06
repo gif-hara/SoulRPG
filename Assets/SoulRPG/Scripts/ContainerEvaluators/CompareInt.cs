@@ -11,10 +11,10 @@ namespace SoulRPG.ContainerEvaluators
     [Serializable]
     public sealed class CompareInt : IContainerEvaluator
     {
-        [SerializeField]
+        [SerializeReference, SubclassSelector]
         private IntResolver targetResolver;
         
-        [SerializeField]
+        [SerializeReference, SubclassSelector]
         private IntResolver valueResolver;
 
         [SerializeField]
