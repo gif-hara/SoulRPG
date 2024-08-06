@@ -128,17 +128,6 @@ namespace SoulRPG
             return masterDataAilmentId;
         }
 
-        public void Reset(int turnCount)
-        {
-            // 無限付与の場合はリセットしない
-            if (this.turnCount == -1)
-            {
-                return;
-            }
-            currentTurnCount = 0;
-            this.turnCount = turnCount;
-        }
-
         private static async UniTask<Container> PlaySequencesAsync(ScriptableSequences sequences, BattleCharacter battleCharacter, Action<Container> containerAction, CancellationToken scope)
         {
             if (sequences == null)
