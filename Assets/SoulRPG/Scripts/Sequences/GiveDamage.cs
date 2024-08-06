@@ -5,6 +5,7 @@ using HK;
 using R3;
 using SoulRPG.BattleSystems.DamageCalculators;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnitySequencerSystem;
 
 namespace SoulRPG
@@ -29,16 +30,18 @@ namespace SoulRPG
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
-            var target = container.Resolve<BattleCharacter>(targetType == Define.TargetType.Self ? "Actor" : "Target");
-            if (target.BattleStatus.IsDead)
+            container.TryResolve<BattleCharacter>("Actor", out var actor);
+            container.TryResolve<BattleCharacter>("Target", out var target);
+            if ((actor != null && actor.BattleStatus.IsDead) || (target != null && target.BattleStatus.IsDead))
             {
                 return;
             }
-            container.TryResolve<BattleCharacter>("Actor", out var actor);
             container.TryResolve<MasterData.Weapon>(out var weapon);
             var damage = damageCalculator.Calculate(actor, target, weapon, targetType);
-            target.BattleStatus.TakeDamage(damage);
-            var message = $"{target.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。";
+            var t = targetType == Define.TargetType.Self ? actor : target;
+            Assert.IsNotNull(t, $"target is null targetType:{targetType}");
+            t.BattleStatus.TakeDamage(damage);
+            var message = $"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。";
             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(message);
             if (waitForInput)
             {
