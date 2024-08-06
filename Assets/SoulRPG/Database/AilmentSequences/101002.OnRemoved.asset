@@ -14,11 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 7538228103530414196
+  - rid: 3561509598600101987
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 3561509598600101987
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101033
+        turnCount: -1
+        battleCharacterEvaluator:
+          rid: -2
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306E\u602F\u307F\u304B\u3089\u7ACB\u3061\u76F4\u3063\u305F"
-        waitForInput: 1
+        ignoreIfCharacterDead: 0
