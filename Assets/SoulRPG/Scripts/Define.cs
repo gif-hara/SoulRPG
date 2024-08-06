@@ -102,6 +102,24 @@ namespace SoulRPG
             Enemy,
         }
 
+        public enum GiveDamageType
+        {
+            /// <summary>
+            /// 直接攻撃
+            /// 通常の攻撃やスキルなどがこれに該当
+            /// 回避出来る可能性がある
+            /// この攻撃からコンボが発生する
+            /// </summary>
+            Direct,
+
+            /// <summary>
+            /// 間接攻撃
+            /// 状態異常によるダメージやコンボなどがこれに該当
+            /// 回避出来ない
+            /// </summary>
+            Indirect,
+        }
+
         public const int HandWeaponId = 101998;
     }
 }
