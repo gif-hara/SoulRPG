@@ -29,7 +29,7 @@ MonoBehaviour:
         damageCalculator:
           rid: 9047573468771254343
         targetType: 1
-        canCombo: 1
+        giveDamageType: 0
     - rid: 9047573468771254343
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:

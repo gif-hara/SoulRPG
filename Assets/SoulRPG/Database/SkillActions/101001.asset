@@ -22,14 +22,14 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u6B66\u5668\u3092\u632F\u308A\u56DE\u3057\u305F"
-        waitForInput: 1
+        ignoreIfCharacterDead: 0
     - rid: 7288459789387432197
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         damageCalculator:
           rid: 7288459789387432198
         targetType: 1
-        waitForInput: 1
+        giveDamageType: 0
     - rid: 7288459789387432198
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:

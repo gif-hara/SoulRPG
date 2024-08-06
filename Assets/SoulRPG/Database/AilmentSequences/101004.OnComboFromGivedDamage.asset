@@ -24,8 +24,7 @@ MonoBehaviour:
         damageCalculator:
           rid: 7288459838305337778
         targetType: 1
-        waitForInput: 1
-        canCombo: 0
+        giveDamageType: 1
     - rid: 7288459838305337778
       type: {class: AttackPowerOnly, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
@@ -36,5 +35,4 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "\u708E\u306E\u8FFD\u6483\u304C{Target}\u3092\u8972\u3046"
-        waitForInput: 1
         ignoreIfCharacterDead: 0

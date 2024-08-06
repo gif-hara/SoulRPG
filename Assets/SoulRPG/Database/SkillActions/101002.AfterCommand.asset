@@ -28,7 +28,6 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u69CB\u3048\u3092\u89E3\u304D\u3001\u529B\u5F37\u304F\u6B66\u5668\u3092\u632F\u308B\u3063\u305F"
-        waitForInput: 1
         ignoreIfCharacterDead: 1
     - rid: 6411493576093728945
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
@@ -36,8 +35,7 @@ MonoBehaviour:
         damageCalculator:
           rid: 6411493576093728946
         targetType: 1
-        waitForInput: 1
-        canCombo: 1
+        giveDamageType: 0
     - rid: 6411493576093728946
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:

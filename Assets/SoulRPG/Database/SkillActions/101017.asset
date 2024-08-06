@@ -25,15 +25,14 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u6575\u3068\u306E\u8DDD\u96E2\u3092\u4E00\u77AC\u3067\u8A70\u3081\u3066\u6B66\u5668\u3092\u632F\u308B\u3046"
-        waitForInput: 1
+        ignoreIfCharacterDead: 0
     - rid: 7538228103530414693
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         damageCalculator:
           rid: 7538228103530414694
         targetType: 1
-        waitForInput: 1
-        canCombo: 1
+        giveDamageType: 0
     - rid: 7538228103530414694
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:

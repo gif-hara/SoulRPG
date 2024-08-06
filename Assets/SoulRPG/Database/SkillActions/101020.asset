@@ -24,7 +24,6 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u30A8\u30DC\u30CB\u30A2\u5BB6\u306B\u4F1D\u308F\u308B\u79D8\u4F1D\u306E\u6280\u3001\u96F7\u306E\u529B\u3092\u5BBF\u3057\u305F\u5263\u6280\u3092\u653E\u3063\u305F\u3002"
-        waitForInput: 1
         ignoreIfCharacterDead: 0
     - rid: 7538228103530414693
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
@@ -32,8 +31,7 @@ MonoBehaviour:
         damageCalculator:
           rid: 7538228103530414694
         targetType: 1
-        waitForInput: 1
-        canCombo: 1
+        giveDamageType: 0
     - rid: 7538228103530414694
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
@@ -44,7 +42,6 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "\u3055\u3089\u306B\u96F7\u306E\u4E00\u6483\u304C{Target}\u3092\u8972\u3046\u3002"
-        waitForInput: 1
         ignoreIfCharacterDead: 1
     - rid: 7538228103530414711
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
@@ -52,8 +49,7 @@ MonoBehaviour:
         damageCalculator:
           rid: 7538228103530414712
         targetType: 1
-        waitForInput: 1
-        canCombo: 1
+        giveDamageType: 0
     - rid: 7538228103530414712
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
