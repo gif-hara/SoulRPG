@@ -178,6 +178,7 @@ namespace SoulRPG
                 enemyCharacter,
                 scope.Token
                 );
+            character.InstanceStatus.ResetGuardPoint();
             if (battleResult == Define.BattleResult.PlayerWin)
             {
                 TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorEvent.X, floorEvent.Y));
