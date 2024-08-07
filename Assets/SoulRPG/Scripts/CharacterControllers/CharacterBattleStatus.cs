@@ -170,6 +170,12 @@ namespace SoulRPG
                     character.InstanceStatus.SetHitPoint(x);
                 })
                 .RegisterTo(scope.Token);
+            guardPointReactiveProperty
+                .Subscribe(x =>
+                {
+                    character.InstanceStatus.SetGuardPoint(x);
+                })
+                .RegisterTo(scope.Token);
             staminaReactiveProperty
                 .Subscribe(x =>
                 {
@@ -277,6 +283,11 @@ namespace SoulRPG
         public bool CanBehaviour()
         {
             return behaviourPointReactiveProperty.Value > 0;
+        }
+        
+        public void AddGuardPoint(int value)
+        {
+            guardPointReactiveProperty.Value = Mathf.Clamp(guardPointReactiveProperty.Value + value, 0, HitPointMax / 2);
         }
 
         public void Dispose()
