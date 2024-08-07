@@ -24,6 +24,10 @@ namespace SoulRPG
         private readonly ReactiveProperty<int> hitPointReactiveProperty;
         public ReadOnlyReactiveProperty<int> HitPointReactiveProperty => hitPointReactiveProperty;
         public int HitPoint => hitPointReactiveProperty.Value;
+        
+        private readonly ReactiveProperty<int> guardPointReactiveProperty;
+        public ReadOnlyReactiveProperty<int> GuardPointReactiveProperty => guardPointReactiveProperty;
+        public int GuardPoint => guardPointReactiveProperty.Value;
 
         private readonly ReactiveProperty<int> staminaMaxReactiveProperty;
         public ReadOnlyReactiveProperty<int> StaminaMaxReactiveProperty => staminaMaxReactiveProperty;
@@ -114,6 +118,7 @@ namespace SoulRPG
             Name = name;
             hitPointMaxReactiveProperty = new ReactiveProperty<int>(hitPointMax);
             hitPointReactiveProperty = new ReactiveProperty<int>(hitPoint);
+            guardPointReactiveProperty = new ReactiveProperty<int>(0);
             staminaMaxReactiveProperty = new ReactiveProperty<int>(staminaMax);
             staminaReactiveProperty = new ReactiveProperty<int>(stamina);
             physicalAttackReactiveProperty = new ReactiveProperty<int>(physicalAttack);

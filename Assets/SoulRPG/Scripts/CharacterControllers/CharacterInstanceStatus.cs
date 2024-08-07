@@ -7,19 +7,23 @@ namespace SoulRPG
     /// </summary>
     public sealed class CharacterInstanceStatus
     {
-        private ReactiveProperty<int> hitPointMaxReactiveProperty;
+        private readonly ReactiveProperty<int> hitPointMaxReactiveProperty;
         public ReadOnlyReactiveProperty<int> HitPointMaxAsObservable() => hitPointMaxReactiveProperty;
         public int HitPointMax => hitPointMaxReactiveProperty.Value;
 
-        private ReactiveProperty<int> hitPointReactiveProperty;
+        private readonly ReactiveProperty<int> hitPointReactiveProperty;
         public ReadOnlyReactiveProperty<int> HitPointAsObservable() => hitPointReactiveProperty;
         public int HitPoint => hitPointReactiveProperty.Value;
+        
+        private readonly ReactiveProperty<int> guardPointReactiveProperty;
+        public ReadOnlyReactiveProperty<int> GuardPointAsObservable() => guardPointReactiveProperty;
+        public int GuardPoint => guardPointReactiveProperty.Value;
 
-        private ReactiveProperty<int> staminaMaxReactiveProperty;
+        private readonly ReactiveProperty<int> staminaMaxReactiveProperty;
         public ReadOnlyReactiveProperty<int> StaminaMaxAsObservable() => staminaMaxReactiveProperty;
         public int StaminaMax => staminaMaxReactiveProperty.Value;
 
-        private ReactiveProperty<int> staminaReactiveProperty;
+        private readonly ReactiveProperty<int> staminaReactiveProperty;
         public ReadOnlyReactiveProperty<int> StaminaAsObservable() => staminaReactiveProperty;
         public int Stamina => staminaReactiveProperty.Value;
 
@@ -27,6 +31,7 @@ namespace SoulRPG
         {
             hitPointMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPoint);
             hitPointReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPoint);
+            guardPointReactiveProperty = new ReactiveProperty<int>(0);
             staminaMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.Stamina);
             staminaReactiveProperty = new ReactiveProperty<int>(growthParameter.Stamina);
         }
