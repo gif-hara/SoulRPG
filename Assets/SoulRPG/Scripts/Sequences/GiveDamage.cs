@@ -34,6 +34,7 @@ namespace SoulRPG
             }
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var t = targetType == Define.TargetType.Self ? actor : target;
+            Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             if (giveDamageType == Define.GiveDamageType.Direct && await t.EvaluateEvaded())
             {
                 await gameEvents.ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.NameWithTag}は攻撃を回避した。");
