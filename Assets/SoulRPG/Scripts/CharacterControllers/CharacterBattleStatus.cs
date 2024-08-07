@@ -289,6 +289,11 @@ namespace SoulRPG
         {
             guardPointReactiveProperty.Value = Mathf.Clamp(guardPointReactiveProperty.Value + value, 0, HitPointMax / 2);
         }
+        
+        public void ResetGuardPoint()
+        {
+            guardPointReactiveProperty.Value = 0;
+        }
 
         public void Dispose()
         {
