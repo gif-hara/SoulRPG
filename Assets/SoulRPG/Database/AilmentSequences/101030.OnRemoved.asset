@@ -13,16 +13,15 @@ MonoBehaviour:
   m_Name: 101030.OnRemoved
   m_EditorClassIdentifier: 
   sequences:
+  - rid: 3561509643546263627
   - rid: 7538228103530414196
-  - rid: 3022425624344264779
   references:
     version: 2
     RefIds:
-    - rid: 3022425624344264779
-      type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
+    - rid: 3561509643546263627
+      type: {class: ResetGuardPoint, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         targetType: 0
-        buffName: Ailment.101030
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
