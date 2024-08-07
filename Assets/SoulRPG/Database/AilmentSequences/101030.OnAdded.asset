@@ -13,18 +13,16 @@ MonoBehaviour:
   m_Name: 101030.OnAdded
   m_EditorClassIdentifier: 
   sequences:
+  - rid: 3561509643546263624
   - rid: 7538228103530414196
-  - rid: 3022425624344264778
   references:
     version: 2
     RefIds:
-    - rid: 3022425624344264778
-      type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
+    - rid: 3561509643546263624
+      type: {class: AddGuardPoint, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         targetType: 0
-        statusTypes: 020000000300000004000000050000000600000007000000
-        buffName: Ailment.101030
-        rate: 0.3
+        rate: 0.25
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
