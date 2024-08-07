@@ -232,6 +232,9 @@ namespace SoulRPG
 
         public void TakeDamage(int damage)
         {
+            var guardPointDamage = Mathf.Min(guardPointReactiveProperty.Value, damage);
+            guardPointReactiveProperty.Value -= guardPointDamage;
+            damage -= guardPointDamage;
             hitPointReactiveProperty.Value = Mathf.Max(0, hitPointReactiveProperty.Value - damage);
         }
 
