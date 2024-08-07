@@ -99,6 +99,28 @@ MonoBehaviour:
           b: {x: 11, y: 23}
         - a: {x: 14, y: 24}
           b: {x: 14, y: 23}
+        - a: {x: 15, y: 24}
+          b: {x: 16, y: 24}
+        - a: {x: 15, y: 24}
+          b: {x: 15, y: 23}
+        - a: {x: 16, y: 24}
+          b: {x: 17, y: 24}
+        - a: {x: 17, y: 24}
+          b: {x: 18, y: 24}
+        - a: {x: 18, y: 24}
+          b: {x: 19, y: 24}
+        - a: {x: 19, y: 24}
+          b: {x: 20, y: 24}
+        - a: {x: 20, y: 24}
+          b: {x: 21, y: 24}
+        - a: {x: 21, y: 24}
+          b: {x: 22, y: 24}
+        - a: {x: 22, y: 24}
+          b: {x: 23, y: 24}
+        - a: {x: 23, y: 24}
+          b: {x: 24, y: 24}
+        - a: {x: 24, y: 24}
+          b: {x: 25, y: 24}
         - a: {x: 26, y: 24}
           b: {x: 26, y: 23}
         - a: {x: 0, y: 23}
@@ -117,6 +139,26 @@ MonoBehaviour:
           b: {x: 13, y: 22}
         - a: {x: 14, y: 23}
           b: {x: 14, y: 22}
+        - a: {x: 15, y: 23}
+          b: {x: 15, y: 22}
+        - a: {x: 18, y: 23}
+          b: {x: 18, y: 22}
+        - a: {x: 18, y: 23}
+          b: {x: 19, y: 23}
+        - a: {x: 19, y: 23}
+          b: {x: 20, y: 23}
+        - a: {x: 20, y: 23}
+          b: {x: 21, y: 23}
+        - a: {x: 21, y: 23}
+          b: {x: 22, y: 23}
+        - a: {x: 22, y: 23}
+          b: {x: 23, y: 23}
+        - a: {x: 23, y: 23}
+          b: {x: 24, y: 23}
+        - a: {x: 24, y: 23}
+          b: {x: 25, y: 23}
+        - a: {x: 25, y: 23}
+          b: {x: 25, y: 22}
         - a: {x: 26, y: 23}
           b: {x: 26, y: 22}
         - a: {x: 0, y: 22}
@@ -141,6 +183,30 @@ MonoBehaviour:
           b: {x: 9, y: 21}
         - a: {x: 14, y: 22}
           b: {x: 14, y: 21}
+        - a: {x: 15, y: 21}
+          b: {x: 16, y: 21}
+        - a: {x: 15, y: 22}
+          b: {x: 15, y: 21}
+        - a: {x: 16, y: 21}
+          b: {x: 17, y: 21}
+        - a: {x: 17, y: 21}
+          b: {x: 18, y: 21}
+        - a: {x: 18, y: 22}
+          b: {x: 18, y: 21}
+        - a: {x: 19, y: 22}
+          b: {x: 20, y: 22}
+        - a: {x: 19, y: 22}
+          b: {x: 19, y: 21}
+        - a: {x: 21, y: 22}
+          b: {x: 21, y: 21}
+        - a: {x: 21, y: 22}
+          b: {x: 22, y: 22}
+        - a: {x: 22, y: 22}
+          b: {x: 23, y: 22}
+        - a: {x: 23, y: 22}
+          b: {x: 24, y: 22}
+        - a: {x: 25, y: 22}
+          b: {x: 25, y: 21}
         - a: {x: 26, y: 22}
           b: {x: 26, y: 21}
         - a: {x: 0, y: 21}
@@ -161,6 +227,14 @@ MonoBehaviour:
           b: {x: 14, y: 21}
         - a: {x: 14, y: 21}
           b: {x: 14, y: 20}
+        - a: {x: 15, y: 21}
+          b: {x: 15, y: 20}
+        - a: {x: 19, y: 21}
+          b: {x: 19, y: 20}
+        - a: {x: 21, y: 21}
+          b: {x: 21, y: 20}
+        - a: {x: 25, y: 21}
+          b: {x: 25, y: 20}
         - a: {x: 26, y: 21}
           b: {x: 26, y: 20}
         - a: {x: 0, y: 20}
@@ -179,6 +253,20 @@ MonoBehaviour:
           b: {x: 14, y: 20}
         - a: {x: 14, y: 20}
           b: {x: 14, y: 19}
+        - a: {x: 15, y: 20}
+          b: {x: 15, y: 19}
+        - a: {x: 16, y: 20}
+          b: {x: 17, y: 20}
+        - a: {x: 16, y: 20}
+          b: {x: 16, y: 19}
+        - a: {x: 17, y: 20}
+          b: {x: 18, y: 20}
+        - a: {x: 18, y: 20}
+          b: {x: 19, y: 20}
+        - a: {x: 21, y: 20}
+          b: {x: 21, y: 19}
+        - a: {x: 25, y: 20}
+          b: {x: 25, y: 19}
         - a: {x: 26, y: 20}
           b: {x: 26, y: 19}
         - a: {x: 0, y: 19}
@@ -205,6 +293,32 @@ MonoBehaviour:
           b: {x: 10, y: 18}
         - a: {x: 14, y: 19}
           b: {x: 14, y: 18}
+        - a: {x: 15, y: 19}
+          b: {x: 15, y: 18}
+        - a: {x: 16, y: 18}
+          b: {x: 17, y: 18}
+        - a: {x: 16, y: 19}
+          b: {x: 16, y: 18}
+        - a: {x: 17, y: 18}
+          b: {x: 18, y: 18}
+        - a: {x: 18, y: 18}
+          b: {x: 19, y: 18}
+        - a: {x: 19, y: 18}
+          b: {x: 20, y: 18}
+        - a: {x: 20, y: 18}
+          b: {x: 21, y: 18}
+        - a: {x: 21, y: 19}
+          b: {x: 21, y: 18}
+        - a: {x: 21, y: 18}
+          b: {x: 22, y: 18}
+        - a: {x: 22, y: 18}
+          b: {x: 23, y: 18}
+        - a: {x: 23, y: 18}
+          b: {x: 24, y: 18}
+        - a: {x: 24, y: 18}
+          b: {x: 25, y: 18}
+        - a: {x: 25, y: 19}
+          b: {x: 25, y: 18}
         - a: {x: 26, y: 19}
           b: {x: 26, y: 18}
         - a: {x: 0, y: 18}
@@ -227,6 +341,26 @@ MonoBehaviour:
           b: {x: 14, y: 17}
         - a: {x: 14, y: 18}
           b: {x: 14, y: 17}
+        - a: {x: 15, y: 17}
+          b: {x: 16, y: 17}
+        - a: {x: 15, y: 18}
+          b: {x: 15, y: 17}
+        - a: {x: 16, y: 17}
+          b: {x: 17, y: 17}
+        - a: {x: 17, y: 17}
+          b: {x: 18, y: 17}
+        - a: {x: 18, y: 17}
+          b: {x: 19, y: 17}
+        - a: {x: 19, y: 17}
+          b: {x: 20, y: 17}
+        - a: {x: 21, y: 17}
+          b: {x: 22, y: 17}
+        - a: {x: 22, y: 17}
+          b: {x: 23, y: 17}
+        - a: {x: 23, y: 17}
+          b: {x: 24, y: 17}
+        - a: {x: 25, y: 17}
+          b: {x: 26, y: 17}
         - a: {x: 26, y: 18}
           b: {x: 26, y: 17}
         - a: {x: 0, y: 17}
@@ -257,12 +391,42 @@ MonoBehaviour:
           b: {x: 10, y: 16}
         - a: {x: 14, y: 17}
           b: {x: 14, y: 16}
+        - a: {x: 16, y: 17}
+          b: {x: 16, y: 16}
+        - a: {x: 20, y: 17}
+          b: {x: 20, y: 16}
+        - a: {x: 21, y: 17}
+          b: {x: 21, y: 16}
+        - a: {x: 24, y: 17}
+          b: {x: 25, y: 17}
         - a: {x: 26, y: 17}
           b: {x: 26, y: 16}
         - a: {x: 0, y: 16}
           b: {x: 0, y: 15}
         - a: {x: 14, y: 16}
           b: {x: 14, y: 15}
+        - a: {x: 16, y: 16}
+          b: {x: 17, y: 16}
+        - a: {x: 16, y: 16}
+          b: {x: 16, y: 15}
+        - a: {x: 17, y: 16}
+          b: {x: 18, y: 16}
+        - a: {x: 18, y: 16}
+          b: {x: 19, y: 16}
+        - a: {x: 19, y: 16}
+          b: {x: 19, y: 15}
+        - a: {x: 20, y: 16}
+          b: {x: 20, y: 15}
+        - a: {x: 21, y: 16}
+          b: {x: 21, y: 15}
+        - a: {x: 23, y: 16}
+          b: {x: 24, y: 16}
+        - a: {x: 23, y: 16}
+          b: {x: 23, y: 15}
+        - a: {x: 24, y: 16}
+          b: {x: 24, y: 15}
+        - a: {x: 25, y: 16}
+          b: {x: 25, y: 15}
         - a: {x: 26, y: 16}
           b: {x: 26, y: 15}
         - a: {x: 0, y: 15}
@@ -271,6 +435,14 @@ MonoBehaviour:
           b: {x: 5, y: 14}
         - a: {x: 14, y: 15}
           b: {x: 14, y: 14}
+        - a: {x: 16, y: 15}
+          b: {x: 16, y: 14}
+        - a: {x: 23, y: 15}
+          b: {x: 23, y: 14}
+        - a: {x: 24, y: 15}
+          b: {x: 24, y: 14}
+        - a: {x: 25, y: 15}
+          b: {x: 25, y: 14}
         - a: {x: 26, y: 15}
           b: {x: 26, y: 14}
         - a: {x: 0, y: 14}
@@ -279,6 +451,38 @@ MonoBehaviour:
           b: {x: 5, y: 13}
         - a: {x: 14, y: 14}
           b: {x: 14, y: 13}
+        - a: {x: 16, y: 13}
+          b: {x: 17, y: 13}
+        - a: {x: 16, y: 14}
+          b: {x: 16, y: 13}
+        - a: {x: 17, y: 13}
+          b: {x: 18, y: 13}
+        - a: {x: 18, y: 13}
+          b: {x: 19, y: 13}
+        - a: {x: 19, y: 14}
+          b: {x: 19, y: 13}
+        - a: {x: 19, y: 13}
+          b: {x: 20, y: 13}
+        - a: {x: 20, y: 14}
+          b: {x: 21, y: 14}
+        - a: {x: 20, y: 13}
+          b: {x: 21, y: 13}
+        - a: {x: 21, y: 14}
+          b: {x: 22, y: 14}
+        - a: {x: 21, y: 13}
+          b: {x: 22, y: 13}
+        - a: {x: 22, y: 14}
+          b: {x: 23, y: 14}
+        - a: {x: 22, y: 13}
+          b: {x: 23, y: 13}
+        - a: {x: 23, y: 14}
+          b: {x: 23, y: 13}
+        - a: {x: 23, y: 13}
+          b: {x: 24, y: 13}
+        - a: {x: 24, y: 13}
+          b: {x: 25, y: 13}
+        - a: {x: 25, y: 14}
+          b: {x: 25, y: 13}
         - a: {x: 26, y: 14}
           b: {x: 26, y: 13}
         - a: {x: 0, y: 13}
@@ -293,6 +497,8 @@ MonoBehaviour:
           b: {x: 5, y: 12}
         - a: {x: 14, y: 13}
           b: {x: 14, y: 12}
+        - a: {x: 16, y: 13}
+          b: {x: 16, y: 12}
         - a: {x: 26, y: 13}
           b: {x: 26, y: 12}
         - a: {x: 0, y: 12}
@@ -313,6 +519,26 @@ MonoBehaviour:
           b: {x: 14, y: 12}
         - a: {x: 14, y: 12}
           b: {x: 14, y: 11}
+        - a: {x: 16, y: 12}
+          b: {x: 16, y: 11}
+        - a: {x: 17, y: 12}
+          b: {x: 18, y: 12}
+        - a: {x: 17, y: 12}
+          b: {x: 17, y: 11}
+        - a: {x: 19, y: 12}
+          b: {x: 20, y: 12}
+        - a: {x: 20, y: 12}
+          b: {x: 20, y: 11}
+        - a: {x: 20, y: 12}
+          b: {x: 21, y: 12}
+        - a: {x: 22, y: 12}
+          b: {x: 23, y: 12}
+        - a: {x: 23, y: 12}
+          b: {x: 23, y: 11}
+        - a: {x: 23, y: 12}
+          b: {x: 24, y: 12}
+        - a: {x: 25, y: 12}
+          b: {x: 26, y: 12}
         - a: {x: 26, y: 12}
           b: {x: 26, y: 11}
         - a: {x: 0, y: 11}
@@ -337,6 +563,14 @@ MonoBehaviour:
           b: {x: 12, y: 10}
         - a: {x: 14, y: 11}
           b: {x: 14, y: 10}
+        - a: {x: 16, y: 11}
+          b: {x: 16, y: 10}
+        - a: {x: 17, y: 11}
+          b: {x: 17, y: 10}
+        - a: {x: 20, y: 11}
+          b: {x: 20, y: 10}
+        - a: {x: 23, y: 11}
+          b: {x: 23, y: 10}
         - a: {x: 26, y: 11}
           b: {x: 26, y: 10}
         - a: {x: 0, y: 10}
@@ -353,6 +587,26 @@ MonoBehaviour:
           b: {x: 12, y: 9}
         - a: {x: 14, y: 10}
           b: {x: 14, y: 9}
+        - a: {x: 16, y: 10}
+          b: {x: 16, y: 9}
+        - a: {x: 17, y: 9}
+          b: {x: 18, y: 9}
+        - a: {x: 17, y: 10}
+          b: {x: 17, y: 9}
+        - a: {x: 19, y: 9}
+          b: {x: 20, y: 9}
+        - a: {x: 20, y: 10}
+          b: {x: 20, y: 9}
+        - a: {x: 20, y: 9}
+          b: {x: 21, y: 9}
+        - a: {x: 22, y: 9}
+          b: {x: 23, y: 9}
+        - a: {x: 23, y: 10}
+          b: {x: 23, y: 9}
+        - a: {x: 23, y: 9}
+          b: {x: 24, y: 9}
+        - a: {x: 25, y: 9}
+          b: {x: 26, y: 9}
         - a: {x: 26, y: 10}
           b: {x: 26, y: 9}
         - a: {x: 0, y: 9}
@@ -373,6 +627,10 @@ MonoBehaviour:
           b: {x: 6, y: 8}
         - a: {x: 14, y: 9}
           b: {x: 14, y: 8}
+        - a: {x: 16, y: 9}
+          b: {x: 17, y: 9}
+        - a: {x: 16, y: 8}
+          b: {x: 17, y: 8}
         - a: {x: 26, y: 9}
           b: {x: 26, y: 8}
         - a: {x: 0, y: 8}
@@ -391,6 +649,30 @@ MonoBehaviour:
           b: {x: 14, y: 7}
         - a: {x: 14, y: 8}
           b: {x: 14, y: 7}
+        - a: {x: 14, y: 7}
+          b: {x: 15, y: 7}
+        - a: {x: 15, y: 7}
+          b: {x: 16, y: 7}
+        - a: {x: 16, y: 8}
+          b: {x: 16, y: 7}
+        - a: {x: 17, y: 8}
+          b: {x: 18, y: 8}
+        - a: {x: 17, y: 8}
+          b: {x: 17, y: 7}
+        - a: {x: 19, y: 8}
+          b: {x: 20, y: 8}
+        - a: {x: 20, y: 8}
+          b: {x: 20, y: 7}
+        - a: {x: 20, y: 8}
+          b: {x: 21, y: 8}
+        - a: {x: 22, y: 8}
+          b: {x: 23, y: 8}
+        - a: {x: 23, y: 8}
+          b: {x: 23, y: 7}
+        - a: {x: 23, y: 8}
+          b: {x: 24, y: 8}
+        - a: {x: 25, y: 8}
+          b: {x: 26, y: 8}
         - a: {x: 26, y: 8}
           b: {x: 26, y: 7}
         - a: {x: 0, y: 7}
@@ -411,24 +693,96 @@ MonoBehaviour:
           b: {x: 6, y: 6}
         - a: {x: 9, y: 7}
           b: {x: 9, y: 6}
+        - a: {x: 14, y: 7}
+          b: {x: 14, y: 6}
+        - a: {x: 17, y: 7}
+          b: {x: 18, y: 7}
+        - a: {x: 17, y: 6}
+          b: {x: 18, y: 6}
+        - a: {x: 18, y: 7}
+          b: {x: 18, y: 6}
+        - a: {x: 19, y: 7}
+          b: {x: 20, y: 7}
+        - a: {x: 19, y: 6}
+          b: {x: 20, y: 6}
+        - a: {x: 19, y: 7}
+          b: {x: 19, y: 6}
+        - a: {x: 23, y: 7}
+          b: {x: 23, y: 6}
         - a: {x: 26, y: 7}
           b: {x: 26, y: 6}
         - a: {x: 0, y: 6}
           b: {x: 0, y: 5}
         - a: {x: 9, y: 6}
           b: {x: 9, y: 5}
+        - a: {x: 14, y: 6}
+          b: {x: 14, y: 5}
+        - a: {x: 15, y: 6}
+          b: {x: 16, y: 6}
+        - a: {x: 16, y: 5}
+          b: {x: 17, y: 5}
+        - a: {x: 16, y: 6}
+          b: {x: 16, y: 5}
+        - a: {x: 17, y: 5}
+          b: {x: 18, y: 5}
+        - a: {x: 17, y: 6}
+          b: {x: 17, y: 5}
+        - a: {x: 18, y: 5}
+          b: {x: 19, y: 5}
+        - a: {x: 19, y: 5}
+          b: {x: 20, y: 5}
+        - a: {x: 20, y: 6}
+          b: {x: 20, y: 5}
+        - a: {x: 20, y: 5}
+          b: {x: 21, y: 5}
+        - a: {x: 22, y: 5}
+          b: {x: 23, y: 5}
+        - a: {x: 23, y: 6}
+          b: {x: 23, y: 5}
+        - a: {x: 23, y: 5}
+          b: {x: 24, y: 5}
+        - a: {x: 24, y: 5}
+          b: {x: 25, y: 5}
+        - a: {x: 25, y: 5}
+          b: {x: 26, y: 5}
         - a: {x: 26, y: 6}
           b: {x: 26, y: 5}
         - a: {x: 0, y: 5}
           b: {x: 0, y: 4}
         - a: {x: 9, y: 5}
           b: {x: 9, y: 4}
+        - a: {x: 14, y: 4}
+          b: {x: 15, y: 4}
+        - a: {x: 14, y: 5}
+          b: {x: 14, y: 4}
+        - a: {x: 16, y: 4}
+          b: {x: 17, y: 4}
+        - a: {x: 17, y: 4}
+          b: {x: 18, y: 4}
+        - a: {x: 18, y: 4}
+          b: {x: 19, y: 4}
+        - a: {x: 19, y: 4}
+          b: {x: 20, y: 4}
+        - a: {x: 20, y: 4}
+          b: {x: 21, y: 4}
+        - a: {x: 21, y: 4}
+          b: {x: 22, y: 4}
+        - a: {x: 22, y: 4}
+          b: {x: 23, y: 4}
+        - a: {x: 23, y: 4}
+          b: {x: 24, y: 4}
+        - a: {x: 24, y: 4}
+          b: {x: 25, y: 4}
+        - a: {x: 25, y: 4}
+          b: {x: 26, y: 4}
         - a: {x: 26, y: 5}
           b: {x: 26, y: 4}
         - a: {x: 0, y: 4}
           b: {x: 0, y: 3}
         - a: {x: 9, y: 4}
           b: {x: 9, y: 3}
+        - a: {x: 14, y: 4}
+          b: {x: 14, y: 3}
         - a: {x: 26, y: 4}
           b: {x: 26, y: 3}
         - a: {x: 0, y: 3}
@@ -447,6 +801,44 @@ MonoBehaviour:
           b: {x: 6, y: 2}
         - a: {x: 9, y: 3}
           b: {x: 9, y: 2}
+        - a: {x: 14, y: 3}
+          b: {x: 14, y: 2}
+        - a: {x: 15, y: 3}
+          b: {x: 16, y: 3}
+        - a: {x: 15, y: 2}
+          b: {x: 16, y: 2}
+        - a: {x: 15, y: 3}
+          b: {x: 15, y: 2}
+        - a: {x: 16, y: 3}
+          b: {x: 17, y: 3}
+        - a: {x: 17, y: 3}
+          b: {x: 18, y: 3}
+        - a: {x: 18, y: 3}
+          b: {x: 19, y: 3}
+        - a: {x: 18, y: 2}
+          b: {x: 19, y: 2}
+        - a: {x: 18, y: 3}
+          b: {x: 18, y: 2}
+        - a: {x: 19, y: 3}
+          b: {x: 20, y: 3}
+        - a: {x: 19, y: 2}
+          b: {x: 20, y: 2}
+        - a: {x: 20, y: 3}
+          b: {x: 21, y: 3}
+        - a: {x: 21, y: 3}
+          b: {x: 21, y: 2}
+        - a: {x: 22, y: 3}
+          b: {x: 23, y: 3}
+        - a: {x: 22, y: 3}
+          b: {x: 22, y: 2}
+        - a: {x: 23, y: 3}
+          b: {x: 24, y: 3}
+        - a: {x: 24, y: 3}
+          b: {x: 25, y: 3}
+        - a: {x: 25, y: 2}
+          b: {x: 26, y: 2}
+        - a: {x: 25, y: 3}
+          b: {x: 25, y: 2}
         - a: {x: 26, y: 3}
           b: {x: 26, y: 2}
         - a: {x: 0, y: 2}
@@ -457,6 +849,34 @@ MonoBehaviour:
           b: {x: 6, y: 1}
         - a: {x: 9, y: 2}
           b: {x: 9, y: 1}
+        - a: {x: 14, y: 1}
+          b: {x: 15, y: 1}
+        - a: {x: 14, y: 2}
+          b: {x: 14, y: 1}
+        - a: {x: 15, y: 1}
+          b: {x: 16, y: 1}
+        - a: {x: 15, y: 2}
+          b: {x: 15, y: 1}
+        - a: {x: 16, y: 2}
+          b: {x: 17, y: 2}
+        - a: {x: 17, y: 1}
+          b: {x: 18, y: 1}
+        - a: {x: 18, y: 1}
+          b: {x: 19, y: 1}
+        - a: {x: 19, y: 1}
+          b: {x: 20, y: 1}
+        - a: {x: 21, y: 2}
+          b: {x: 21, y: 1}
+        - a: {x: 22, y: 2}
+          b: {x: 22, y: 1}
+        - a: {x: 23, y: 2}
+          b: {x: 24, y: 2}
+        - a: {x: 23, y: 2}
+          b: {x: 23, y: 1}
+        - a: {x: 24, y: 1}
+          b: {x: 25, y: 1}
+        - a: {x: 25, y: 2}
+          b: {x: 25, y: 1}
         - a: {x: 26, y: 2}
           b: {x: 26, y: 1}
         - a: {x: 0, y: 1}
@@ -467,6 +887,14 @@ MonoBehaviour:
           b: {x: 6, y: 0}
         - a: {x: 9, y: 1}
           b: {x: 9, y: 0}
+        - a: {x: 14, y: 1}
+          b: {x: 14, y: 0}
+        - a: {x: 20, y: 1}
+          b: {x: 20, y: 0}
+        - a: {x: 21, y: 1}
+          b: {x: 21, y: 0}
+        - a: {x: 23, y: 1}
+          b: {x: 23, y: 0}
         - a: {x: 26, y: 1}
           b: {x: 26, y: 0}
         - a: {x: 0, y: -1}
@@ -519,12 +947,22 @@ MonoBehaviour:
           b: {x: 20, y: -1}
         - a: {x: 20, y: -1}
           b: {x: 21, y: -1}
+        - a: {x: 20, y: 0}
+          b: {x: 20, y: -1}
+        - a: {x: 21, y: 0}
+          b: {x: 22, y: 0}
         - a: {x: 21, y: -1}
           b: {x: 22, y: -1}
+        - a: {x: 22, y: 0}
+          b: {x: 23, y: 0}
         - a: {x: 22, y: -1}
           b: {x: 23, y: -1}
+        - a: {x: 23, y: 0}
+          b: {x: 24, y: 0}
         - a: {x: 23, y: -1}
           b: {x: 24, y: -1}
+        - a: {x: 24, y: 0}
+          b: {x: 25, y: 0}
         - a: {x: 24, y: -1}
           b: {x: 25, y: -1}
         - a: {x: 25, y: -1}
@@ -606,6 +1044,78 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: Lock
       NegativeSideCondition: None
+    - Id: Test.(01,20).(02,20).Door
+      DungeonName: Dungeon.Test
+      LeftX: 1
+      LeftY: 20
+      RightX: 2
+      RightY: 20
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(03,20).(04,20).Door
+      DungeonName: Dungeon.Test
+      LeftX: 3
+      LeftY: 20
+      RightX: 4
+      RightY: 20
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(02,24).(03,24).Door
+      DungeonName: Dungeon.Test
+      LeftX: 2
+      LeftY: 24
+      RightX: 3
+      RightY: 24
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(06,23).(06,22).Door
+      DungeonName: Dungeon.Test
+      LeftX: 6
+      LeftY: 23
+      RightX: 6
+      RightY: 22
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(06,18).(06,17).Door
+      DungeonName: Dungeon.Test
+      LeftX: 6
+      LeftY: 18
+      RightX: 6
+      RightY: 17
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(09,19).(10,19).Door
+      DungeonName: Dungeon.Test
+      LeftX: 9
+      LeftY: 19
+      RightX: 10
+      RightY: 19
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(14,25).(14,24).Door
+      DungeonName: Dungeon.Test
+      LeftX: 14
+      LeftY: 25
+      RightX: 14
+      RightY: 24
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(14,17).(15,17).Door
+      DungeonName: Dungeon.Test
+      LeftX: 14
+      LeftY: 17
+      RightX: 15
+      RightY: 17
+      EventType: Door
+      PositiveSideCondition: Lock
+      NegativeSideCondition: None
   wallEventConditionItems:
     list:
     - Key: Test.(10,09).(11,09).Door
@@ -656,6 +1166,8 @@ MonoBehaviour:
       Id: 101019
     - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u5927\u69CD"
       Id: 101020
+    - Name: "\u9244\u306E\u76FE"
+      Id: 101021
     - Name: "\u30C6\u30B9\u30C8\u6B66\u5668"
       Id: 101997
     - Name: "\u7D20\u624B"
@@ -813,20 +1325,27 @@ MonoBehaviour:
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101018
-      Skill3: 101023
+      Skill3: 0
       Skill4: 0
     - ItemId: 101020
       Strength: 190
       AttackAttribute: 2
       Skill1: 101001
       Skill2: 101024
-      Skill3: 101013
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101021
+      Strength: 89
+      AttackAttribute: 1
+      Skill1: 101045
+      Skill2: 101065
+      Skill3: 0
       Skill4: 0
     - ItemId: 101997
       Strength: 100
       AttackAttribute: 0
       Skill1: 101001
-      Skill2: 101004
+      Skill2: 101027
       Skill3: 0
       Skill4: 0
     - ItemId: 101998
@@ -988,25 +1507,25 @@ MonoBehaviour:
       Cost: 1
       CanRegisterUsedSkills: 1
       Description: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u5BB6\u306B\u4F1D\u308F\u308B\u8853\u3002\u708E\u306E\u69CD\u3092\u76F8\u624B\u306B\u6295\u3052\u3064\u3051\u3001\u708E\u5C5E\u6027\u306E\u7269\u7406\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 375a90e75d6175c47ac1bbbda13c1b1c, type: 2}
     - Name: "\u8056\u9A0E\u58EB\u306E\u610F\u5FD7"
       Id: 101025
       Cost: 2
       CanRegisterUsedSkills: 1
       Description: "\u8056\u9A0E\u58EB\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u6280\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u8056\u9A0E\u58EB\u306E\u610F\u5FD7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: c018875c520ed7f40bb65e730ffa8503, type: 2}
     - Name: "\u5C04\u6483"
       Id: 101026
       Cost: 1
       CanRegisterUsedSkills: 0
       Description: "\u77E2\u3092\u653E\u3061\u3001\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 2e9f36df2a220724480885689bd0c7d2, type: 2}
     - Name: "\u30D0\u30C3\u30AF\u30B9\u30C6\u30C3\u30D7\u5C04\u6483"
       Id: 101027
       Cost: 2
       CanRegisterUsedSkills: 1
       Description: "\u30D0\u30C3\u30AF\u30B9\u30C6\u30C3\u30D7\u3057\u3064\u3064\u76F8\u624B\u306B\u5C04\u6483\u3057\u3066\u653B\u6483\u3057\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u56DE\u907F\u53EF\u80FD\u6027\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 09065a65f2231a0409313bf9e8176cf6, type: 2}
     - Name: "\u653E\u5C04\u6483"
       Id: 101028
       Cost: 2
@@ -1045,7 +1564,7 @@ MonoBehaviour:
       ActionSequences: {fileID: 0}
     - Name: "\u653E\u51FA\u3059\u308B\u9B54\u529B"
       Id: 101034
-      Cost: 1
+      Cost: 2
       CanRegisterUsedSkills: 1
       Description: "\u5897\u5E45\u3055\u305B\u305F\u9B54\u529B\u3092\u4E00\u5EA6\u306B\u653E\u3061\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u3053\u306E\u653B\u6483\u306F\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u306B\u5FDC\u3058\u3066\u5A01\u529B\u304C\u5909\u308F\u308A\u3001\u653B\u6483\u5F8C\u306F\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u306F0\u306B\u306A\u308B\u3002"
       ActionSequences: {fileID: 0}
@@ -1120,7 +1639,7 @@ MonoBehaviour:
       Cost: 1
       CanRegisterUsedSkills: 1
       Description: "\u76FE\u4ED8\u304D\u306E\u30E9\u30F3\u30B9\u304C\u4F7F\u3048\u308B\u7279\u6B8A\u306A\u6280\u3002\u6B66\u5668\u3067\u653B\u6483\u3057\u305F\u5F8C\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30AC\u30FC\u30C9\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 3fdcef4aba9f2e24881dbe42481c5e10, type: 2}
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u58F1"
       Id: 101047
       Cost: 1
@@ -1235,11 +1754,41 @@ MonoBehaviour:
       CanRegisterUsedSkills: 1
       Description: "\u9632\u5FA1\u306E\u4F53\u52E2\u3092\u53D6\u308A\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30AC\u30FC\u30C9\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
-    - Name: "\u7269\u7406\u53CD\u6483\u4F53\u52E2"
+    - Name: "\u7981\u5FCC\u306E\u9EBB\u85AC"
       Id: 101066
       Cost: 2
       CanRegisterUsedSkills: 1
-      Description: "\u76F8\u624B\u306E\u653B\u6483\u3092\u53D7\u3051\u308B\u5EA6\u306B\u53CD\u6483\u3092\u884C\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u30AB\u30A6\u30F3\u30BF\u30FC\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Description: "\u4F7F\u7528\u8005\u306E\u8EAB\u4F53\u80FD\u529B\u3092\u9650\u754C\u307E\u3067\u9AD8\u3081\u308B\u85AC\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6BD2\u300D\u3068\u300CBP\u52A0\u901F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u5F8C\u5148\u8003\u3048\u306C\u4E00\u6483"
+      Id: 101067
+      Cost: 0
+      CanRegisterUsedSkills: 1
+      Description: "\u3053\u306E\u4E00\u6483\u306B\u5168\u3066\u3092\u304B\u3051\u308B\u601D\u3044\u3092\u8FBC\u3081\u3066\u6B66\u5668\u3092\u632F\u308A\u56DE\u3059\u3002\u5168\u3066\u306EBP\u3092\u6D88\u8CBB\u3057\u3001\u6D88\u8CBB\u3057\u305F\u6570\u3060\u3051\u653B\u6483\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u75B2\u52B4\u300D\u3068\u300C\u9EBB\u75FA\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u30AC\u30FC\u30C9\u30AB\u30A6\u30F3\u30BF\u30FC"
+      Id: 101068
+      Cost: 2
+      CanRegisterUsedSkills: 1
+      Description: "\u9632\u5FA1\u3057\u3064\u3064\u3001\u53CD\u6483\u3082\u884C\u3048\u308B\u653B\u9632\u4E00\u4F53\u306E\u4F53\u52E2\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30AC\u30FC\u30C9\u300D\u3068\u300C\u7269\u7406\u53CD\u6483\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u9B54\u529B\u306E\u89E6\u624B"
+      Id: 101069
+      Cost: 1
+      CanRegisterUsedSkills: 1
+      Description: "\u8822\u304F\u9B54\u529B\u3092\u5E2F\u3073\u305F\u89E6\u624B\u3092\u51FA\u73FE\u3055\u305B\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u529B\u306E\u89E6\u624B\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u92FC\u9244\u5316"
+      Id: 101070
+      Cost: 2
+      CanRegisterUsedSkills: 1
+      Description: "\u8EAB\u4F53\u304C\u92FC\u9244\u3068\u5316\u3059\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u92FC\u9244\u5316\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 0}
+    - Name: "\u5168\u9B54\u96C6\u4E2D"
+      Id: 101071
+      Cost: 0
+      CanRegisterUsedSkills: 1
+      Description: "\u5168\u3066\u306E\u529B\u3092\u9B54\u529B\u306B\u5909\u63DB\u3059\u308B\u6280\u3002\u5168\u3066\u306EBP\u3092\u6D88\u8CBB\u3057\u3001\u6D88\u8CBB\u3057\u305F\u6570\u3060\u3051\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u306B\u5909\u63DB\u3059\u308B\u3002"
       ActionSequences: {fileID: 0}
   armorHeads:
     list:
@@ -1312,16 +1861,16 @@ MonoBehaviour:
     list:
     - Id: 10101
       Name: "\u30C6\u30B9\u30C8\u30A8\u30CD\u30DF\u30FC"
-      HitPoint: 45
+      HitPoint: 48
       Stamina: 0
       PhysicalAttack: 23
       MagicalAttack: 23
-      SlashCutRate: 0.06
-      BlowCutRate: 0.06
-      ThrustCutRate: 0.06
-      MagicCutRate: 0.06
-      FireCutRate: 0.06
-      ThunderCutRate: 0.06
+      SlashCutRate: 0
+      BlowCutRate: 0
+      ThrustCutRate: 0
+      MagicCutRate: 0
+      FireCutRate: 0
+      ThunderCutRate: 0
       Speed: 24
       Experience: 100
       BehaviourPoint: 1
@@ -1331,140 +1880,185 @@ MonoBehaviour:
     - Id: 101001
       Name: "\u6BD2"
       Description: "\u731B\u6BD2\u304C\u8EAB\u4F53\u306E\u751F\u547D\u529B\u3092\u596A\u3063\u3066\u3044\u304F\u3002\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306B\u4E00\u5B9A\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: 49031c77c58914ac390578e17cd377eb, type: 2}
     - Id: 101002
       Name: "\u602F\u307F"
       Description: "\u653B\u6483\u3092\u53D7\u3051\u305F\u6050\u6016\u306B\u3088\u308A\u3001\u884C\u52D5\u51FA\u6765\u306A\u3044\u3002\u3053\u306E\u72B6\u614B\u7570\u5E38\u304C\u89E3\u3051\u308B\u6642\u306B\u300C\u602F\u307F\u7121\u52B9\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: 41df3523778136349974ec170b7f32ed, type: 2}
     - Id: 101003
       Name: "\u6C17\u5408"
       Description: "\u5185\u306A\u308B\u95D8\u5FD7\u3092\u5F15\u304D\u51FA\u3057\u3001\u653B\u6483\u529B\u3092\u5411\u4E0A\u3055\u305B\u308B\u6280\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: a95bcf6f7a8e3ad4b9400481f0c8007e, type: 2}
     - Id: 101004
       Name: "\u708E\u8FFD\u6483"
       Description: "\u706B\u708E\u306E\u529B\u3092\u5BBF\u3057\u3001\u653B\u6483\u3092\u884C\u3046\u5EA6\u306B\u708E\u5C5E\u6027\u306E\u5C0F\u3055\u306A\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: 0f2d997bfb9c5a045b92a76b715c09f3, type: 2}
     - Id: 101005
       Name: "\u706B\u50B7"
       Description: "\u708E\u3084\u71B1\u306B\u3088\u308A\u8CA0\u50B7\u3057\u3066\u3044\u308B\u72B6\u614B\u3002\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u308B\u305F\u3073\u306B\u8FFD\u52A0\u3067\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u3066\u3057\u307E\u3046\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: edcc60090800c4ff8afa71b1783bfdeb, type: 2}
     - Id: 101006
       Name: "\u721B\u308C\u706B\u50B7"
       Description: "\u706B\u50B7\u3088\u308A\u3082\u9177\u304F\u721B\u308C\u3066\u304A\u308A\u3001\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u308B\u305F\u3073\u306B\u8FFD\u52A0\u3067\u5927\u304D\u306A\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u3066\u3057\u307E\u3046\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: 2df05f64a322247a4a58fd2d1413686e, type: 2}
     - Id: 101007
       Name: "\u7269\u7406\u534A\u6E1B"
       Description: "\u93A7\u306A\u3069\u3092\u3088\u308A\u786C\u5316\u3055\u305B\u3001\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u304C\u534A\u6E1B\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: 129dbad0ac5174d4795f00a8e7a22f47, type: 2}
     - Id: 101008
       Name: "\u9EBB\u75FA"
       Description: "\u8EAB\u4F53\u304C\u75FA\u308C\u3066\u601D\u3046\u3088\u3046\u306B\u52D5\u304B\u306A\u304F\u306A\u308A\u3001\u4E0E\u3048\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u6E1B\u5C11\u3057\u3066\u3057\u307E\u3046\u3002\u3053\u306E\u72B6\u614B\u7570\u5E38\u304C\u89E3\u3051\u308B\u6642\u306B\u300C\u9EBB\u75FA\u7121\u52B9\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: a7187e8112d84449fb7d5e22ce636a65, type: 2}
     - Id: 101009
       Name: "\u93A7\u7815\u304D"
       Description: "\u8EAB\u306B\u7E8F\u3046\u93A7\u306A\u3069\u304C\u8106\u304F\u7815\u3051\u305F\u72B6\u614B\u3002\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u52A0\u3057\u3066\u3057\u307E\u3046\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: 361eeccf20aaa4c34a1e3d5c2bd2bee1, type: 2}
     - Id: 101010
       Name: "\u8056\u9A0E\u58EB\u306E\u610F\u5FD7"
       Description: "\u4E0D\u5C48\u306E\u7CBE\u795E\u306B\u3088\u308A\u5947\u8DE1\u306E\u529B\u3092\u5F97\u308B\u3002\u653B\u6483\u529B\u3068\u9632\u5FA1\u529B\u3092\u5411\u4E0A\u3055\u305B\u308B\u3002"
-      Sequences: {fileID: 0}
+      CanReset: 0
+      Sequences: {fileID: 11400000, guid: 6f5b946b02338e94f92e5ea2a069c37e, type: 2}
     - Id: 101011
       Name: "\u56DE\u907F\u53EF\u80FD\u6027"
       Description: "\u8EFD\u3044\u8EAB\u306E\u3053\u306A\u3057\u3068\u4E88\u77E5\u80FD\u529B\u306B\u3088\u308A\u3001\u76F8\u624B\u306E\u653B\u6483\u3092\u56DE\u907F\u51FA\u6765\u308B\u53EF\u80FD\u6027\u3092\u5F97\u308B\u3002"
-      Sequences: {fileID: 0}
+      CanReset: 1
+      Sequences: {fileID: 11400000, guid: 5c75170fed8d3c643b316102c4a47cd0, type: 2}
     - Id: 101012
       Name: "\u75B2\u52B4"
       Description: "\u5F37\u529B\u306A\u653B\u6483\u306A\u3069\u306E\u4EE3\u511F\u3068\u306A\u308A\u3001BP\u304C1\u5C11\u306A\u3044\u72B6\u614B\u3067\u30BF\u30FC\u30F3\u304C\u958B\u59CB\u3055\u308C\u308B\u3002"
+      CanReset: 1
       Sequences: {fileID: 0}
     - Id: 101013
       Name: "\u5148\u99C6"
       Description: "\u98A8\u306E\u5982\u304F\u4FCA\u654F\u306A\u52D5\u304D\u3067\u3001\u6B21\u306E\u884C\u52D5\u3067\u6D88\u8CBB\u3055\u308C\u308BBP\u304C2\u5C11\u306A\u304F\u306A\u308B\u3002\u4F55\u304B\u884C\u52D5\u3092\u3059\u308B\u3053\u3068\u3067\u89E3\u9664\u3055\u308C\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101014
       Name: "\u9244\u58C1"
-      Description: "\u92FC\u9244\u306E\u58C1\u306E\u5982\u304D\u529B\u3092\u5F97\u308B\u3002\u4E00\u5EA6\u3060\u3051\u653B\u6483\u3092\u7121\u52B9\u5316\u3059\u308B\u3002"
+      Description: "\u92FC\u9244\u306E\u58C1\u306E\u5982\u304D\u529B\u3092\u5F97\u308B\u3002\u653B\u6483\u3092\u7121\u52B9\u5316\u3059\u308B\u3002\u4E00\u5EA6\u52B9\u679C\u3092\u767A\u63EE\u3057\u305F\u3089\u89E3\u9664\u3055\u308C\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101015
       Name: "\u9B54\u529B\u306E\u76FE"
       Description: "\u9B54\u529B\u3067\u4F5C\u3089\u308C\u305F\u76FE\u3092\u524D\u65B9\u306B\u5C55\u958B\u3057\u3001\u9B54\u529B\u306E\u30C0\u30E1\u30FC\u30B8\u3092\u5927\u5E45\u306B\u6E1B\u5C11\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101016
       Name: "BP\u52A0\u901F"
       Description: "\u7981\u5FCC\u9B54\u6CD5\u306E1\u3064\u3068\u3055\u308C\u3066\u304A\u308A\u3001BP\u304C1\u591A\u3044\u72B6\u614B\u3067\u30BF\u30FC\u30F3\u304C\u958B\u59CB\u3055\u308C\u308B\u3002"
+      CanReset: 1
       Sequences: {fileID: 0}
     - Id: 101017
       Name: "\u6028\u6068\u306E\u529B"
       Description: "\u6DF1\u3044\u6068\u307F\u3068\u618E\u3057\u307F\u306B\u82E6\u3057\u3081\u3089\u308C\u308B\u3002\u653B\u6483\u529B\u304C\u4E0A\u6607\u3059\u308B\u304C\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u52A0\u3057\u3066\u3057\u307E\u3046\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101018
       Name: "\u7269\u7406\u53CD\u6483"
       Description: "\u53CD\u6483\u306E\u529B\u3092\u8EAB\u306B\u7E8F\u3044\u3001\u7269\u7406\u653B\u6483\u3092\u4ED5\u639B\u3051\u305F\u76F8\u624B\u306B\u5BFE\u3057\u3066\u653B\u6483\u3092\u884C\u3046\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101019
       Name: "\u30A8\u30A2\u30EA\u30FC\u306E\u52A0\u8B77"
       Description: "\u6CBB\u7642\u795E\u30A8\u30A2\u30EA\u30FC\u306E\u52A0\u8B77\u306B\u3088\u308A\u3001\u6BCE\u30BF\u30FC\u30F3HP\u304C\u56DE\u5FA9\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101020
       Name: "\u653B\u6483\u7D76\u5BFE\u56DE\u907F"
       Description: "\u76F8\u624B\u306E\u6C17\u914D\u3092\u8AAD\u307F\u53D6\u308A\u3001\u653B\u6483\u3092\u5FC5\u305A\u56DE\u907F\u3059\u308B\u3002\u3053\u306E\u72B6\u614B\u7570\u5E38\u304C\u89E3\u3051\u305F\u6642\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u653B\u6483\u7D76\u5BFE\u56DE\u907F\u75B2\u308C\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101021
       Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u58F1"
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u821E\u82B8\u8853\u3092\u884C\u3063\u305F\u72B6\u614B\u3002\u7279\u5B9A\u306E\u884C\u52D5\u3092\u5F37\u5316\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101022
       Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10"
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u821E\u82B8\u8853\u3092\u884C\u3063\u305F\u72B6\u614B\u3002\u7279\u5B9A\u306E\u884C\u52D5\u3092\u5F37\u5316\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101023
       Name: "\u7A7A\u5143\u6C17"
       Description: "\u865A\u52E2\u3092\u5F35\u3063\u305F\u95D8\u5FD7\u306B\u3088\u308A\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u30C7\u30D0\u30D5\u306B\u5206\u985E\u3055\u308C\u308B\u72B6\u614B\u7570\u5E38\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306B\u653B\u6483\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101024
       Name: "\u653B\u6483\u7D76\u5BFE\u56DE\u907F\u75B2\u308C"
       Description: "\u6C17\u914D\u5BDF\u77E5\u306F\u304B\u306A\u308A\u306E\u96C6\u4E2D\u529B\u3092\u6D88\u8CBB\u3059\u308B\u3002\u3053\u308C\u306B\u3088\u308A\u300C\u653B\u6483\u7D76\u5BFE\u56DE\u907F\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u306A\u304F\u306A\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101025
       Name: "\u6642\u505C\u6B62"
       Description: "\u7981\u5FCC\u9B54\u6CD5\u306E1\u3064\u3068\u3055\u308C\u3066\u304A\u308A\u3001\u81EA\u5206\u306E\u307F\u304C\u884C\u52D5\u51FA\u6765\u308B\u3088\u3046\u306B\u306A\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101026
       Name: "\u901A\u5E38\u653B\u6483\u5F37\u5316"
       Description: "\u30B7\u30F3\u30D7\u30EB\u3055\u3092\u6975\u3081\u305F\u8005\u304C\u4F1A\u5F97\u3067\u304D\u308B\u6280\u3002\u901A\u5E38\u653B\u6483\u306E\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u52A0\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101027
       Name: "\u6E80\u6708\u306E\u9060\u5420\u3048"
       Description: "\u6E80\u6708\u306B\u9CF4\u304F\u72FC\u306E\u529B\u3092\u5F97\u308B\u3002\u7363\u5C5E\u6027\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101028
       Name: "\u7A32\u59BB\u306E\u93A7"
       Description: "\u7A32\u59BB\u306E\u529B\u3092\u8EAB\u4F53\u306B\u5BBF\u3059\u3002\u96F7\u5C5E\u6027\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u3092\u5927\u5E45\u306B\u6E1B\u5C11\u3055\u305B\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: 500afd09ad4069e4b8a20859795d4261, type: 2}
     - Id: 101029
       Name: "\u61A4\u6012\u306E\u53CD\u6483"
       Description: "\u6012\u308A\u3092\u529B\u306B\u5909\u3048\u308B\u4F53\u52E2\u3002\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u305F\u5834\u5408\u3001BP\u304C1\u56DE\u5FA9\u3059\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101030
       Name: "\u30AC\u30FC\u30C9"
-      Description: "\u653B\u6483\u3088\u308A\u3082\u9632\u5FA1\u3092\u512A\u5148\u3059\u308B\u4F53\u52E2\u3002\u30BF\u30FC\u30F3\u958B\u59CB\u6642\u306EBP\u56DE\u5FA9\u91CF\u304C1\u6E1B\u308B\u304C\u3001\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5927\u5E45\u306B\u6E1B\u5C11\u3059\u308B\u3002"
-      Sequences: {fileID: 0}
+      Description: "\u653B\u6483\u3088\u308A\u3082\u9632\u5FA1\u3092\u512A\u5148\u3059\u308B\u4F53\u52E2\u3002\u4ED8\u4E0E\u3055\u308C\u305F\u6642\u306BGP\u3092\u5F97\u308B\u3002\u3053\u306E\u72B6\u614B\u7570\u5E38\u304C\u89E3\u304B\u308C\u308B\u6642\u306BGP\u30820\u306B\u306A\u308B\u3002"
+      CanReset: 1
+      Sequences: {fileID: 11400000, guid: ddfa5e2c76e0040429db654febe07731, type: 2}
     - Id: 101031
       Name: "\u9006\u5883\u306E\u8FFD\u3044\u98A8"
       Description: "\u9006\u5883\u306E\u8FFD\u3044\u98A8\u304C\u81EA\u5206\u81EA\u8EAB\u3092\u99C6\u308A\u7ACB\u3066\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u30C7\u30D0\u30D5\u306B\u5206\u985E\u3055\u308C\u308B\u72B6\u614B\u7570\u5E38\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306B\u30BF\u30FC\u30F3\u958B\u59CB\u6642\u306BBP\u304C1\u591A\u304F\u4ED8\u4E0E\u3055\u308C\u308B\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101032
       Name: "\u7269\u7406\u30AB\u30A6\u30F3\u30BF\u30FC"
       Description: "\u76F8\u624B\u306E\u653B\u6483\u3092\u53D7\u3051\u6B62\u3081\u3064\u3064\u53CD\u6483\u3092\u884C\u3046\u4F53\u52E2\u3002\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u3092\u53D7\u3051\u305F\u969B\u306B\u53CD\u6483\u3092\u884C\u3046\u3002"
+      CanReset: 0
       Sequences: {fileID: 0}
     - Id: 101033
       Name: "\u602F\u307F\u7121\u52B9"
       Description: "\u6050\u6016\u3092\u514B\u670D\u3057\u3001\u300C\u602F\u307F\u300D\u306B\u306A\u3089\u306A\u3044\u3002"
+      CanReset: 0
       Sequences: {fileID: 11400000, guid: bcff3fe73e056455d84d787b3826e884, type: 2}
     - Id: 101034
       Name: "\u9EBB\u75FA\u7121\u52B9"
       Description: "\u67D4\u8EDF\u306B\u8EAB\u4F53\u304C\u52D5\u304F\u3088\u3046\u306B\u306A\u308A\u3001\u300C\u9EBB\u75FA\u300D\u306B\u306A\u3089\u306A\u3044\u3002"
-      Sequences: {fileID: 0}
+      CanReset: 0
+      Sequences: {fileID: 11400000, guid: d4d90564fd88d5940858592bfb3f8d3a, type: 2}
     - Id: 101035
       Name: "\u9B54\u529B\u56DE\u5FA9"
       Description: "\u8C4A\u5BCC\u306A\u9B54\u529B\u304C\u81EA\u5206\u306E\u5468\u308A\u3092\u5305\u307F\u8FBC\u3080\u3002\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306B\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u304C1\u84C4\u7A4D\u3055\u308C\u308B\u3002"
+      CanReset: 0
+      Sequences: {fileID: 0}
+    - Id: 101036
+      Name: "\u9B54\u529B\u306E\u89E6\u624B"
+      Description: "\u9B54\u529B\u3067\u51FA\u6765\u305F\u89E6\u624B\u304C\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306B\u76F8\u624B\u306B\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u308B\u3002"
+      CanReset: 1
+      Sequences: {fileID: 0}
+    - Id: 101037
+      Name: "\u92FC\u9244\u5316"
+      Description: "\u92FC\u9244\u3068\u5316\u3057\u305F\u8EAB\u4F53\u306E\u304A\u304B\u3052\u3067\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306BGP\u3092\u5F97\u308B\u3002"
+      CanReset: 1
       Sequences: {fileID: 0}
