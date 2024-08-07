@@ -45,6 +45,11 @@ namespace SoulRPG
         {
             hitPointReactiveProperty.Value = value;
         }
+        
+        public void SetGuardPoint(int value)
+        {
+            guardPointReactiveProperty.Value = value;
+        }
 
         public void SetStaminaMax(int value)
         {
@@ -60,6 +65,11 @@ namespace SoulRPG
         {
             hitPointReactiveProperty.Value = hitPointMaxReactiveProperty.Value;
             staminaReactiveProperty.Value = staminaMaxReactiveProperty.Value;
+        }
+
+        public void ResetGuardPoint()
+        {
+            guardPointReactiveProperty.Value = 0;
         }
     }
 }
