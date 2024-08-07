@@ -22,7 +22,7 @@ namespace SoulRPG
         {
             var key = targetType == Define.TargetType.Self ? "Actor" : "Target";
             var actor = container.Resolve<BattleCharacter>(key);
-            var max = actor.BattleStatus.HitPointMax;
+            var max = actor.BattleStatus.HitPointMax / 2;
             actor.BattleStatus.AddGuardPoint(Mathf.FloorToInt(max * rate));
             return UniTask.CompletedTask;
         }
