@@ -65,6 +65,18 @@ namespace SoulRPG
 #endif
         }
 
+        public async UniTask RemoveAsync(int masterDataAilmentId)
+        {
+            var element = elements.Find(x => x.GetMasterDataId() == masterDataAilmentId);
+            if (element == null)
+            {
+                return;
+            }
+
+            await element.OnRemovedAsync(battleCharacter, cancellationTokenSource.Token);
+            elements.Remove(element);
+        }
+
         public async UniTask OnTurnEndAsync()
         {
             var tempElement = new List<IAilmentElement>(elements);
