@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using SoulRPG.BattleSystems.BattleCharacterEvaluators;
 using UnityEngine;
 using UnitySequencerSystem;
 
@@ -25,11 +26,19 @@ namespace SoulRPG
         [SerializeField]
         private float rate;
 
+        [SerializeField]
+        private IBattleCharacterEvaluator battleCharacterEvaluator;
+
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
-            var key = targetType == Define.TargetType.Self ? "Actor" : "Target";
-            var actor = container.Resolve<BattleCharacter>(key);
-            actor.StatusBuffController.Add(statusTypes, buffName, rate);
+            var actor = container.Resolve<BattleCharacter>("Actor");
+            var target = container.Resolve<BattleCharacter>("Target");
+            if (battleCharacterEvaluator == null ||
+                battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
+            {
+                var t = targetType == Define.TargetType.Self ? actor : target;
+                t.StatusBuffController.Add(statusTypes, buffName, rate);
+            }
             return UniTask.CompletedTask;
         }
     }
