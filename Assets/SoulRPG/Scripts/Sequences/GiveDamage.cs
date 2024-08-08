@@ -47,7 +47,6 @@ namespace SoulRPG
             t.BattleStatus.TakeDamage(damage);
             await gameEvents.ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。");
             var a = t == actor ? target : actor;
-            Assert.IsNotNull(a, $"actor is null targetType:{targetType}");
             await t.AilmentController.OnTakeDamageAsync(t, a, cancellationToken);
             if (giveDamageType == Define.GiveDamageType.Direct && !t.BattleStatus.IsDead)
             {
