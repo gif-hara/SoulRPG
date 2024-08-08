@@ -549,6 +549,8 @@ namespace SoulRPG
 
             public string NegativeSideCondition;
 
+            public float CreateRate;
+
             [Serializable]
             public class DictionaryList : DictionaryList<string, (string, int, int, int, int), WallEvent>
             {
