@@ -33,6 +33,11 @@ namespace SoulRPG
             RemoveDebugPanel();
 #endif
         }
+        
+        public bool Contains(int masterDataAilmentId)
+        {
+            return elements.Exists(x => x.GetMasterDataId() == masterDataAilmentId);
+        }
 
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
         {
