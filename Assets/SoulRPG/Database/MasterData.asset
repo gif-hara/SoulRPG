@@ -771,8 +771,6 @@ MonoBehaviour:
           b: {x: 9, y: 6}
         - a: {x: 9, y: 7}
           b: {x: 9, y: 6}
-        - a: {x: 10, y: 7}
-          b: {x: 11, y: 7}
         - a: {x: 14, y: 7}
           b: {x: 14, y: 6}
         - a: {x: 17, y: 7}
@@ -1284,6 +1282,15 @@ MonoBehaviour:
       RightY: 20
       EventType: Door
       PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(10,07).(11,07).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 10
+      LeftY: 7
+      RightX: 11
+      RightY: 7
+      EventType: Door
+      PositiveSideCondition: Lock
       NegativeSideCondition: None
   wallEventConditionItems:
     list:
