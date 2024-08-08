@@ -305,8 +305,6 @@ namespace SoulRPG
 
             public string EventType;
 
-            public bool IsOneTime;
-
             [Serializable]
             public class DictionaryList : DictionaryList<string, (string, int, int), FloorEvent>
             {
