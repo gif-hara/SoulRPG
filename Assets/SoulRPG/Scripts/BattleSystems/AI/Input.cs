@@ -91,10 +91,8 @@ namespace SoulRPG
             }
             var skills = weapon.Skills
                 .Where(x => x.ContainsMasterDataSkill())
-                .Select(x =>
-                {
-                    return x.GetMasterDataSkill();
-                });
+                .Select(x => x.GetMasterDataSkill())
+                .ToList();
             var commands = skills.Select(x => x.Name);
             var selectedIndex = 0;
             while (true)
