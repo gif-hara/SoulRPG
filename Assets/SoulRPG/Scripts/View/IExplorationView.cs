@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace SoulRPG
 {
@@ -7,6 +8,6 @@ namespace SoulRPG
     /// </summary>
     public interface IExplorationView
     {
-        UniTask OnOpenDoorAsync(MasterData.WallEvent wallEvent);
+        UniTask OnOpenDoorAsync((Vector2Int from, Vector2Int to) positions);
     }
 }

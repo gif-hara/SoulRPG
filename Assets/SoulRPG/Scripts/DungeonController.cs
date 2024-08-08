@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using R3;
 using SoulRPG.BattleSystems;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
@@ -24,7 +25,12 @@ namespace SoulRPG
 
         private readonly IExplorationView view;
 
-        private Dictionary<Vector2Int, MasterData.FloorEvent> floorEvents = new();
+        private readonly Dictionary<Vector2Int, MasterData.FloorEvent> floorEvents = new();
+
+        public readonly Dictionary<
+            (Vector2Int from, Vector2Int to),
+            (MasterData.WallEvent masterDataWallEvent, ReactiveProperty<bool> isOpen)
+            > wallEvents = new();
 
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
@@ -48,6 +54,14 @@ namespace SoulRPG
             {
                 floorEvents.Add(new Vector2Int(floorEvent.X, floorEvent.Y), floorEvent);
             }
+            wallEvents.Clear();
+            foreach (var wallEvent in masterData.WallEvents.List.Where(x => x.DungeonName == dungeonName))
+            {
+                wallEvents.Add(
+                    (new Vector2Int(wallEvent.LeftX, wallEvent.LeftY), new Vector2Int(wallEvent.RightX, wallEvent.RightY)),
+                    (wallEvent, new ReactiveProperty<bool>(false))
+                );
+            }
         }
 
         public UniTask EnterAsync(Character character)
@@ -69,7 +83,7 @@ namespace SoulRPG
 
         public UniTask InteractAsync(Character character)
         {
-            var masterData = TinyServiceLocator.Resolve<MasterData>();
+            var wallPositions = character.Direction.GetWallPosition(character.Position);
             if (floorEvents.TryGetValue(character.Position, out var dungeonEvent))
             {
                 return dungeonEvent.EventType switch
@@ -79,11 +93,11 @@ namespace SoulRPG
                     _ => UniTask.CompletedTask,
                 };
             }
-            else if (masterData.WallEvents.TryGetValue(character, out var wallEvent))
+            else if (wallEvents.TryGetValue(wallPositions, out var wallEvent))
             {
-                return wallEvent.EventType switch
+                return wallEvent.masterDataWallEvent.EventType switch
                 {
-                    "Door" => InvokeOnDoorAsync(character, wallEvent),
+                    "Door" => InvokeOnDoorAsync(character, wallPositions, wallEvent.masterDataWallEvent),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -105,15 +119,10 @@ namespace SoulRPG
                 return false;
             }
 
-            var masterData = TinyServiceLocator.Resolve<MasterData>();
-            var userData = TinyServiceLocator.Resolve<UserData>();
-            if (masterData.WallEvents.TryGetValue(position, direction, out var wallEvent))
+            var key = direction.GetWallPosition(position);
+            if (wallEvents.TryGetValue(key, out var wallEvent))
             {
-                return wallEvent.EventType switch
-                {
-                    "Door" => userData.ContainsCompletedWallEventId(wallEvent.Id),
-                    _ => false,
-                };
+                return wallEvent.isOpen.Value;
             }
 
             return true;
@@ -157,8 +166,6 @@ namespace SoulRPG
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             await gameEvents.ShowMessageAndWaitForSubmitInputAsync("ここはセーブポイントのようだ。一休みしよう。");
-            var userData = TinyServiceLocator.Resolve<UserData>();
-            userData.ClearTemporaryCompletedFloorEventIds();
             character.InstanceStatus.FullRecovery();
             checkPoint = character.Position;
             var view = new GameSavePointMenuView(gameMenuBundlePrefab, character);
@@ -167,11 +174,6 @@ namespace SoulRPG
 
         private async UniTask InvokeOnEnemyAsync(Character character, MasterData.FloorEvent floorEvent)
         {
-            var userData = TinyServiceLocator.Resolve<UserData>();
-            if (userData.ContainsCompletedFloorEventId(floorEvent.Id))
-            {
-                return;
-            }
             var scope = new CancellationTokenSource();
             var masterDataEventEnemy = TinyServiceLocator.Resolve<MasterData>().FloorEventEnemies.Get(floorEvent.Id);
             var masterDataEnemy = TinyServiceLocator.Resolve<MasterData>().Enemies.Get(masterDataEventEnemy.EnemyId);
@@ -188,7 +190,6 @@ namespace SoulRPG
             {
                 TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorEvent.X, floorEvent.Y));
                 floorEvents.Remove(character.Position);
-                userData.AddExperience(masterDataEnemy.Experience);
             }
             else
             {
@@ -200,29 +201,28 @@ namespace SoulRPG
             scope.Dispose();
         }
 
-        private async UniTask InvokeOnDoorAsync(Character character, MasterData.WallEvent wallEvent)
+        private async UniTask InvokeOnDoorAsync(Character character, (Vector2Int from, Vector2Int to) key, MasterData.WallEvent wallEvent)
         {
-            var userData = TinyServiceLocator.Resolve<UserData>();
             var isPositiveAccess = wallEvent.IsPositiveAccess(character.Direction);
             var condition = isPositiveAccess ? wallEvent.PositiveSideCondition : wallEvent.NegativeSideCondition;
             switch (condition)
             {
                 case "None":
-                    if (!userData.ContainsCompletedWallEventId(wallEvent.Id))
+                    if (!wallEvents[key].isOpen.Value)
                     {
                         TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
-                        userData.AddCompletedWallEventIds(wallEvent.Id);
-                        await view.OnOpenDoorAsync(wallEvent);
+                        wallEvents[key].isOpen.Value = true;
+                        await view.OnOpenDoorAsync(key);
                     }
                     break;
                 case "Lock":
-                    if (!userData.ContainsCompletedWallEventId(wallEvent.Id))
+                    if (!wallEvents[key].isOpen.Value)
                     {
                         TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("こちらからは開かないようだ");
                     }
                     break;
                 case "Item":
-                    if (!userData.ContainsCompletedWallEventId(wallEvent.Id))
+                    if (!wallEvents[key].isOpen.Value)
                     {
                         var masterDataWallEventConditionItems = TinyServiceLocator.Resolve<MasterData>().WallEventConditionItems.Get(wallEvent.Id);
                         foreach (var item in masterDataWallEventConditionItems)
@@ -234,8 +234,8 @@ namespace SoulRPG
                             }
                         }
                         TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
-                        userData.AddCompletedWallEventIds(wallEvent.Id);
-                        await view.OnOpenDoorAsync(wallEvent);
+                        wallEvents[key].isOpen.Value = true;
+                        await view.OnOpenDoorAsync(key);
                     }
                     break;
             }
