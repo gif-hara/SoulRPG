@@ -325,6 +325,13 @@ namespace SoulRPG
                     hitPointGauge.value = character.InstanceStatus.HitPoint / (float)character.InstanceStatus.HitPointMax;
                 })
                 .RegisterTo(scope);
+            var guardGauge = areaDocument.Q<Slider>("Gauge.Guard");
+            character.InstanceStatus.GuardPointAsObservable()
+                .Subscribe(x =>
+                {
+                    guardGauge.value = x / (float)character.InstanceStatus.HitPointMax;
+                })
+                .RegisterTo(scope);
             var staminaGauge = areaDocument.Q<Slider>("Gauge.Stamina");
             Observable.Merge(
                 character.InstanceStatus.StaminaAsObservable(),
