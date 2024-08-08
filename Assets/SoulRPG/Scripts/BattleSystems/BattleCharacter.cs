@@ -64,11 +64,12 @@ namespace SoulRPG
             }
         }
 
-        public UniTask TurnStartAsync()
+        public async UniTask TurnStartAsync()
         {
             UsedSkills.Clear();
-            BattleStatus.RecoveryBehaviourPoint();
-            return UniTask.CompletedTask;
+            var recoveryBehaviourPoint = BattleStatus.BehaviorPointMaxReactiveProperty.CurrentValue;
+            recoveryBehaviourPoint = await AilmentController.OnCalculateBehaviourPointAsync(recoveryBehaviourPoint);
+            BattleStatus.AddBehaviourPoint(recoveryBehaviourPoint);
         }
 
         public UniTask TurnEndAsync()
