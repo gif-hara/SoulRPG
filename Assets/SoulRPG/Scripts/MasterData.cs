@@ -95,8 +95,8 @@ namespace SoulRPG
             };
             var masterDataNames = new[]
             {
-                "MasterData.DungeonEvent",
-                "MasterData.DungeonEvent.Item",
+                "MasterData.FloorEvent",
+                "MasterData.FloorEvent.Item",
                 "MasterData.Item",
                 "MasterData.Weapon",
                 "MasterData.Skill",
@@ -106,7 +106,7 @@ namespace SoulRPG
                 "MasterData.Armor.Legs",
                 "MasterData.Accessory",
                 "MasterData.Enemy",
-                "MasterData.DungeonEvent.Enemy",
+                "MasterData.FloorEvent.Enemy",
                 "MasterData.Ailment",
                 "MasterData.Enemy.CharacterAttribute",
                 "MasterData.WallEvent",

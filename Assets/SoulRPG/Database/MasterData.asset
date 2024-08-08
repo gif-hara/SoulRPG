@@ -403,6 +403,14 @@ MonoBehaviour:
           b: {x: 26, y: 16}
         - a: {x: 0, y: 16}
           b: {x: 0, y: 15}
+        - a: {x: 11, y: 16}
+          b: {x: 12, y: 16}
+        - a: {x: 11, y: 16}
+          b: {x: 11, y: 15}
+        - a: {x: 12, y: 16}
+          b: {x: 13, y: 16}
+        - a: {x: 13, y: 16}
+          b: {x: 13, y: 15}
         - a: {x: 14, y: 16}
           b: {x: 14, y: 15}
         - a: {x: 16, y: 16}
@@ -431,8 +439,28 @@ MonoBehaviour:
           b: {x: 26, y: 15}
         - a: {x: 0, y: 15}
           b: {x: 0, y: 14}
+        - a: {x: 1, y: 15}
+          b: {x: 2, y: 15}
+        - a: {x: 1, y: 15}
+          b: {x: 1, y: 14}
+        - a: {x: 2, y: 15}
+          b: {x: 3, y: 15}
+        - a: {x: 3, y: 15}
+          b: {x: 3, y: 14}
         - a: {x: 5, y: 15}
           b: {x: 5, y: 14}
+        - a: {x: 6, y: 15}
+          b: {x: 7, y: 15}
+        - a: {x: 7, y: 15}
+          b: {x: 8, y: 15}
+        - a: {x: 8, y: 15}
+          b: {x: 8, y: 14}
+        - a: {x: 11, y: 14}
+          b: {x: 12, y: 14}
+        - a: {x: 11, y: 15}
+          b: {x: 11, y: 14}
+        - a: {x: 13, y: 15}
+          b: {x: 13, y: 14}
         - a: {x: 14, y: 15}
           b: {x: 14, y: 14}
         - a: {x: 16, y: 15}
@@ -447,8 +475,28 @@ MonoBehaviour:
           b: {x: 26, y: 14}
         - a: {x: 0, y: 14}
           b: {x: 0, y: 13}
+        - a: {x: 1, y: 14}
+          b: {x: 1, y: 13}
+        - a: {x: 2, y: 13}
+          b: {x: 3, y: 13}
+        - a: {x: 3, y: 14}
+          b: {x: 3, y: 13}
         - a: {x: 5, y: 14}
           b: {x: 5, y: 13}
+        - a: {x: 6, y: 14}
+          b: {x: 7, y: 14}
+        - a: {x: 6, y: 14}
+          b: {x: 6, y: 13}
+        - a: {x: 7, y: 14}
+          b: {x: 7, y: 13}
+        - a: {x: 8, y: 14}
+          b: {x: 8, y: 13}
+        - a: {x: 9, y: 14}
+          b: {x: 9, y: 13}
+        - a: {x: 10, y: 14}
+          b: {x: 11, y: 14}
+        - a: {x: 11, y: 14}
+          b: {x: 11, y: 13}
         - a: {x: 14, y: 14}
           b: {x: 14, y: 13}
         - a: {x: 16, y: 13}
@@ -495,6 +543,18 @@ MonoBehaviour:
           b: {x: 5, y: 12}
         - a: {x: 5, y: 13}
           b: {x: 5, y: 12}
+        - a: {x: 6, y: 12}
+          b: {x: 7, y: 12}
+        - a: {x: 6, y: 13}
+          b: {x: 6, y: 12}
+        - a: {x: 7, y: 12}
+          b: {x: 8, y: 12}
+        - a: {x: 8, y: 13}
+          b: {x: 8, y: 12}
+        - a: {x: 9, y: 13}
+          b: {x: 9, y: 12}
+        - a: {x: 11, y: 13}
+          b: {x: 11, y: 12}
         - a: {x: 14, y: 13}
           b: {x: 14, y: 12}
         - a: {x: 16, y: 13}
@@ -557,10 +617,16 @@ MonoBehaviour:
           b: {x: 6, y: 11}
         - a: {x: 6, y: 11}
           b: {x: 6, y: 10}
+        - a: {x: 6, y: 11}
+          b: {x: 7, y: 11}
+        - a: {x: 7, y: 11}
+          b: {x: 8, y: 11}
         - a: {x: 9, y: 11}
           b: {x: 9, y: 10}
         - a: {x: 12, y: 11}
           b: {x: 12, y: 10}
+        - a: {x: 13, y: 11}
+          b: {x: 13, y: 10}
         - a: {x: 14, y: 11}
           b: {x: 14, y: 10}
         - a: {x: 16, y: 11}
@@ -577,6 +643,8 @@ MonoBehaviour:
           b: {x: 0, y: 9}
         - a: {x: 6, y: 10}
           b: {x: 6, y: 9}
+        - a: {x: 8, y: 9}
+          b: {x: 9, y: 9}
         - a: {x: 9, y: 9}
           b: {x: 10, y: 9}
         - a: {x: 9, y: 10}
@@ -585,6 +653,10 @@ MonoBehaviour:
           b: {x: 12, y: 9}
         - a: {x: 12, y: 10}
           b: {x: 12, y: 9}
+        - a: {x: 13, y: 9}
+          b: {x: 14, y: 9}
+        - a: {x: 13, y: 10}
+          b: {x: 13, y: 9}
         - a: {x: 14, y: 10}
           b: {x: 14, y: 9}
         - a: {x: 16, y: 10}
@@ -691,8 +763,16 @@ MonoBehaviour:
           b: {x: 6, y: 6}
         - a: {x: 6, y: 7}
           b: {x: 6, y: 6}
+        - a: {x: 6, y: 7}
+          b: {x: 7, y: 7}
+        - a: {x: 7, y: 6}
+          b: {x: 8, y: 6}
+        - a: {x: 8, y: 6}
+          b: {x: 9, y: 6}
         - a: {x: 9, y: 7}
           b: {x: 9, y: 6}
+        - a: {x: 10, y: 7}
+          b: {x: 11, y: 7}
         - a: {x: 14, y: 7}
           b: {x: 14, y: 6}
         - a: {x: 17, y: 7}
@@ -855,6 +935,10 @@ MonoBehaviour:
           b: {x: 1, y: 1}
         - a: {x: 6, y: 2}
           b: {x: 6, y: 1}
+        - a: {x: 6, y: 2}
+          b: {x: 7, y: 2}
+        - a: {x: 8, y: 2}
+          b: {x: 9, y: 2}
         - a: {x: 9, y: 2}
           b: {x: 9, y: 1}
         - a: {x: 14, y: 1}
@@ -1030,16 +1114,16 @@ MonoBehaviour:
       EnemyId: 10101
   wallEvents:
     list:
-    - Id: Test.(10,09).(11,09).Door
+    - Id: Test.(10,09).(11,09).0.Door
       DungeonName: Dungeon.Test
       LeftX: 10
       LeftY: 9
       RightX: 11
       RightY: 9
       EventType: Door
-      PositiveSideCondition: Item
-      NegativeSideCondition: Item
-    - Id: Test.(01,10).(01,09).Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(01,10).(01,09).0.Door
       DungeonName: Dungeon.Test
       LeftX: 1
       LeftY: 10
@@ -1047,17 +1131,8 @@ MonoBehaviour:
       RightY: 9
       EventType: Door
       PositiveSideCondition: None
-      NegativeSideCondition: Lock
-    - Id: Test.(10,07).(11,07).Door
-      DungeonName: Dungeon.Test
-      LeftX: 10
-      LeftY: 7
-      RightX: 11
-      RightY: 7
-      EventType: Door
-      PositiveSideCondition: Lock
       NegativeSideCondition: None
-    - Id: Test.(01,20).(02,20).Door
+    - Id: Test.(01,20).(02,20).0.Door
       DungeonName: Dungeon.Test
       LeftX: 1
       LeftY: 20
@@ -1066,7 +1141,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-    - Id: Test.(03,20).(04,20).Door
+    - Id: Test.(03,20).(04,20).0.Door
       DungeonName: Dungeon.Test
       LeftX: 3
       LeftY: 20
@@ -1075,7 +1150,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-    - Id: Test.(02,24).(03,24).Door
+    - Id: Test.(02,24).(03,24).0.Door
       DungeonName: Dungeon.Test
       LeftX: 2
       LeftY: 24
@@ -1084,7 +1159,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-    - Id: Test.(06,23).(06,22).Door
+    - Id: Test.(06,23).(06,22).0.Door
       DungeonName: Dungeon.Test
       LeftX: 6
       LeftY: 23
@@ -1093,7 +1168,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-    - Id: Test.(06,18).(06,17).Door
+    - Id: Test.(06,18).(06,17).0.Door
       DungeonName: Dungeon.Test
       LeftX: 6
       LeftY: 18
@@ -1102,7 +1177,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-    - Id: Test.(09,19).(10,19).Door
+    - Id: Test.(09,19).(10,19).0.Door
       DungeonName: Dungeon.Test
       LeftX: 9
       LeftY: 19
@@ -1111,7 +1186,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-    - Id: Test.(14,25).(14,24).Door
+    - Id: Test.(14,25).(14,24).0.Door
       DungeonName: Dungeon.Test
       LeftX: 14
       LeftY: 25
@@ -1120,21 +1195,102 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-    - Id: Test.(14,17).(15,17).Door
+    - Id: Test.(14,17).(15,17).0.Door
       DungeonName: Dungeon.Test
       LeftX: 14
       LeftY: 17
       RightX: 15
       RightY: 17
       EventType: Door
-      PositiveSideCondition: Lock
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(01,13).(02,13).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 1
+      LeftY: 13
+      RightX: 2
+      RightY: 13
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(07,13).(07,12).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 7
+      LeftY: 13
+      RightX: 7
+      RightY: 12
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(00,06).(01,06).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 0
+      LeftY: 6
+      RightX: 1
+      RightY: 6
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(07,02).(08,02).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 7
+      LeftY: 2
+      RightX: 8
+      RightY: 2
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(12,09).(13,09).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 12
+      LeftY: 9
+      RightX: 13
+      RightY: 9
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(09,14).(10,14).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 9
+      LeftY: 14
+      RightX: 10
+      RightY: 14
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(11,19).(11,18).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 11
+      LeftY: 19
+      RightX: 11
+      RightY: 18
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(12,14).(13,14).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 12
+      LeftY: 14
+      RightX: 13
+      RightY: 14
+      EventType: Door
+      PositiveSideCondition: None
+      NegativeSideCondition: None
+    - Id: Test.(11,21).(11,20).0.Door
+      DungeonName: Dungeon.Test
+      LeftX: 11
+      LeftY: 21
+      RightX: 11
+      RightY: 20
+      EventType: Door
+      PositiveSideCondition: None
       NegativeSideCondition: None
   wallEventConditionItems:
     list:
-    - Key: Test.(10,09).(11,09).Door
+    - Key: Test.(10,09).(11,09).0.Door
       Value:
       - Id: 1
-        EventId: Test.(10,09).(11,09).Door
+        EventId: Test.(10,09).(11,09).0.Door
         ItemId: 101001
         Count: 1
   items:
@@ -1205,6 +1361,8 @@ MonoBehaviour:
       Id: 105002
     - Name: "\u9244\u306E\u6307\u8F2A"
       Id: 106001
+    - Name: "\u9244\u306E\u9375"
+      Id: 107001
   weapons:
     list:
     - ItemId: 101001
