@@ -27,6 +27,8 @@ namespace SoulRPG
         UniTask OnResetAsync(BattleCharacter battleCharacter, int newTurnCount, CancellationToken scope);
         
         UniTask OnTakeDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
+        
+        UniTask<int> OnCalculateBehaviourPointAsync(BattleCharacter battleCharacter, int behaviourPoint, CancellationToken scope);
 
         bool IsEnd();
 

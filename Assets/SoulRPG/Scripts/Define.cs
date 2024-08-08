@@ -97,6 +97,7 @@ namespace SoulRPG
             EvaluateEvade,
             OnReset,
             OnTakeDamage,
+            OnCalculateBehaviourPoint,
         }
 
         public enum AllyType
