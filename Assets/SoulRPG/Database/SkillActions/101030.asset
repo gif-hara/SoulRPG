@@ -17,9 +17,12 @@ MonoBehaviour:
   - rid: 3561509643546263640
   - rid: 3561509643546263631
   - rid: 3561509643546263644
+  - rid: 3561509643546263652
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3561509643546263631
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -52,6 +55,13 @@ MonoBehaviour:
       data:
         targetType: 0
         buffName: Skill.101030
+    - rid: 3561509643546263652
+      type: {class: RemoveAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 1
+        masterDataAilmentId: 101001
+        battleCharacterEvaluator:
+          rid: -2
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
