@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101012.OnCalculateBehaviourPoint
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 7538228103530414196
+  - rid: 3561509643546263647
+  references:
+    version: 2
+    RefIds:
+    - rid: 3561509643546263647
+      type: {class: IntAdd, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        leftIntResolver:
+          rid: 3561509643546263648
+        rightIntResolver:
+          rid: 3561509643546263650
+        intNameResolver:
+          rid: 3561509643546263649
+    - rid: 3561509643546263648
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: BehaviourPoint
+    - rid: 3561509643546263649
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: BehaviourPoint
+    - rid: 3561509643546263650
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: -1
+    - rid: 7538228103530414196
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306E\u75B2\u308C\u3066\u3044\u3066\u672C\u6765\u306E\u529B\u3092\u767A\u63EE\u3067\u304D\u306A\u3044\u3002"
+        ignoreIfCharacterDead: 0
