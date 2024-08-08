@@ -1072,39 +1072,35 @@ MonoBehaviour:
       X: 0
       Y: 1
       EventType: Item
-      IsOneTime: 1
     - Id: Test.00.03.Item
       DungeonName: Dungeon.Test
       X: 0
       Y: 3
       EventType: Item
-      IsOneTime: 1
     - Id: Test.00.02.SavePoint
       DungeonName: Dungeon.Test
       X: 0
       Y: 2
       EventType: SavePoint
-      IsOneTime: 0
     - Id: Test.00.06.Enemy
       DungeonName: Dungeon.Test
       X: 0
       Y: 6
       EventType: Enemy
-      IsOneTime: 0
   floorEventItems:
     list:
     - Key: Test.00.01.Item
       Value:
       - Id: 1
         EventId: Test.00.01.Item
-        ItemId: 101001
-        Count: 1
+        ItemId: 0
+        Count: 0
     - Key: Test.00.03.Item
       Value:
       - Id: 2
         EventId: Test.00.03.Item
-        ItemId: 101002
-        Count: 1
+        ItemId: 0
+        Count: 0
   floorEventEnemies:
     list:
     - Id: 1
@@ -1318,7 +1314,7 @@ MonoBehaviour:
       Value:
       - Id: 1
         EventId: Test.(10,09).(11,09).0.Door
-        ItemId: 101001
+        ItemId: 107001
         Count: 1
   items:
     list:
@@ -1390,6 +1386,75 @@ MonoBehaviour:
       Id: 106001
     - Name: "\u9244\u306E\u9375"
       Id: 107001
+  itemTables:
+    list:
+    - Key: 1
+      Value:
+      - Id: 1
+        TableId: 1
+        ItemId: 101001
+        Count: 1
+        Weight: 100
+      - Id: 2
+        TableId: 1
+        ItemId: 101002
+        Count: 1
+        Weight: 100
+      - Id: 3
+        TableId: 1
+        ItemId: 101003
+        Count: 1
+        Weight: 100
+      - Id: 4
+        TableId: 1
+        ItemId: 101004
+        Count: 1
+        Weight: 100
+      - Id: 5
+        TableId: 1
+        ItemId: 101005
+        Count: 1
+        Weight: 100
+      - Id: 6
+        TableId: 1
+        ItemId: 101006
+        Count: 1
+        Weight: 100
+      - Id: 7
+        TableId: 1
+        ItemId: 101007
+        Count: 1
+        Weight: 100
+      - Id: 8
+        TableId: 1
+        ItemId: 101008
+        Count: 1
+        Weight: 100
+      - Id: 9
+        TableId: 1
+        ItemId: 101009
+        Count: 1
+        Weight: 100
+      - Id: 10
+        TableId: 1
+        ItemId: 101010
+        Count: 1
+        Weight: 100
+      - Id: 11
+        TableId: 1
+        ItemId: 101011
+        Count: 1
+        Weight: 100
+      - Id: 12
+        TableId: 1
+        ItemId: 101012
+        Count: 1
+        Weight: 100
+      - Id: 13
+        TableId: 1
+        ItemId: 101013
+        Count: 1
+        Weight: 100
   weapons:
     list:
     - ItemId: 101001

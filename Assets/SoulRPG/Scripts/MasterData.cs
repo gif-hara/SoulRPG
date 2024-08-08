@@ -48,6 +48,10 @@ namespace SoulRPG
         public Item.DictionaryList Items => items;
 
         [SerializeField]
+        private ItemTable.Group itemTables;
+        public ItemTable.Group ItemTables => itemTables;
+
+        [SerializeField]
         private Weapon.DictionaryList weapons;
         public Weapon.DictionaryList Weapons => weapons;
 
@@ -111,7 +115,8 @@ namespace SoulRPG
                 "MasterData.Enemy.CharacterAttribute",
                 "MasterData.WallEvent",
                 "MasterData.WallEvent.Condition.Item",
-                "MasterData.DungeonSpec"
+                "MasterData.DungeonSpec",
+                "MasterData.ItemTable"
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -169,6 +174,7 @@ namespace SoulRPG
             wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[14]));
             wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[15]));
             dungeonSpecs.Set(JsonHelper.FromJson<DungeonSpec>(database.Item2[16]));
+            itemTables.Set(JsonHelper.FromJson<ItemTable>(database.Item2[17]));
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -595,6 +601,26 @@ namespace SoulRPG
             public class DictionaryList : DictionaryList<string, DungeonSpec>
             {
                 public DictionaryList() : base(x => x.Id) { }
+            }
+        }
+
+        [Serializable]
+        public class ItemTable
+        {
+            public int Id;
+
+            public int TableId;
+
+            public int ItemId;
+
+            public int Count;
+
+            public int Weight;
+
+            [Serializable]
+            public class Group : Group<int, ItemTable>
+            {
+                public Group() : base(x => x.TableId) { }
             }
         }
     }
