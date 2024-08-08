@@ -14,6 +14,8 @@ namespace SoulRPG
     {
         public MasterData.Dungeon CurrentDungeon { get; private set; }
 
+        public MasterData.DungeonSpec CurrentDungeonSpec { get; private set; }
+
         private readonly HKUIDocument gameMenuBundlePrefab;
 
         private Vector2Int checkPoint;
@@ -21,20 +23,22 @@ namespace SoulRPG
         private readonly IExplorationView view;
 
         public DungeonController(
-            Vector2Int initialCheckPoint,
             HKUIDocument gameMenuBundlePrefab,
             IExplorationView view
             )
         {
-            checkPoint = initialCheckPoint;
             this.gameMenuBundlePrefab = gameMenuBundlePrefab;
             this.view = view;
         }
 
-        public void Setup(string dungeonName)
+        public void Setup(string dungeonName, Character player)
         {
             var masterData = TinyServiceLocator.Resolve<MasterData>();
             CurrentDungeon = masterData.Dungeons.Get(dungeonName);
+            CurrentDungeonSpec = masterData.DungeonSpecs.Get(CurrentDungeon.name);
+            var initialPosition = new Vector2Int(CurrentDungeonSpec.InitialX, CurrentDungeonSpec.InitialY);
+            player.Warp(initialPosition);
+            checkPoint = initialPosition;
         }
 
         public UniTask EnterAsync(Character character)

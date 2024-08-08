@@ -42,6 +42,9 @@ namespace SoulRPG.SceneControllers
         private Vector2Int debugPosition;
 
         [SerializeField]
+        private bool isUseDebugPosition;
+
+        [SerializeField]
         private string debugPlayerName;
 
         [SerializeField]
@@ -78,13 +81,16 @@ namespace SoulRPG.SceneControllers
             inputController.ChangeInputType(InputController.InputType.InGame);
             TinyServiceLocator.Register(inputController);
             var dungeonController = new DungeonController(
-                player.Position,
                 gameMenuBundlePrefab,
                 explorationView
                 );
             TinyServiceLocator.Register(dungeonController);
             TinyServiceLocator.Register(new UserData());
-            dungeonController.Setup(debugDungeonName);
+            dungeonController.Setup(debugDungeonName, player);
+            if (isUseDebugPosition)
+            {
+                player.Warp(debugPosition);
+            }
             playerController.Attach(player, gameMenuBundlePrefab, destroyCancellationToken);
             explorationView.Open(destroyCancellationToken);
             Observable.EveryUpdate(destroyCancellationToken)
