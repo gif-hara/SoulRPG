@@ -42,7 +42,7 @@ MonoBehaviour:
         targetType: 0
         statusTypes: 0000000001000000
         buffName: Skill.101030
-        rate: 1.5
+        rate: 1.7
         battleCharacterEvaluator:
           rid: 3561509643546263643
     - rid: 3561509643546263643
