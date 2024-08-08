@@ -55,7 +55,10 @@ namespace SoulRPG
                 floorEvents.Add(new Vector2Int(floorEvent.X, floorEvent.Y), floorEvent);
             }
             wallEvents.Clear();
-            foreach (var wallEvent in masterData.WallEvents.List.Where(x => x.DungeonName == dungeonName))
+            var masterDataWallEvents = masterData.WallEvents.List
+                .Where(x => x.DungeonName == dungeonName)
+                .Where(x => x.CreateRate > Random.value);
+            foreach (var wallEvent in masterDataWallEvents)
             {
                 wallEvents.Add(
                     (new Vector2Int(wallEvent.LeftX, wallEvent.LeftY), new Vector2Int(wallEvent.RightX, wallEvent.RightY)),
