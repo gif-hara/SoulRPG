@@ -85,7 +85,6 @@ namespace SoulRPG.SceneControllers
                 explorationView
                 );
             TinyServiceLocator.Register(dungeonController);
-            TinyServiceLocator.Register(new UserData());
             dungeonController.Setup(debugDungeonName, player);
             if (isUseDebugPosition)
             {
@@ -119,7 +118,7 @@ namespace SoulRPG.SceneControllers
 
                         if (Keyboard.current.eKey.wasPressedThisFrame)
                         {
-                            TinyServiceLocator.Resolve<UserData>().AddExperience(100000);
+                            player.InstanceStatus.AddExperience(100000);
                             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("[DEBUG] Add Experience 100000");
                         }
                     }

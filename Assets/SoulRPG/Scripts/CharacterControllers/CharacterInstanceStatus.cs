@@ -26,6 +26,10 @@ namespace SoulRPG
         private readonly ReactiveProperty<int> staminaReactiveProperty;
         public ReadOnlyReactiveProperty<int> StaminaAsObservable() => staminaReactiveProperty;
         public int Stamina => staminaReactiveProperty.Value;
+        
+        private readonly ReactiveProperty<int> experienceReactiveProperty;
+        public ReadOnlyReactiveProperty<int> ExperienceAsObservable() => experienceReactiveProperty;
+        public int Experience => experienceReactiveProperty.Value;
 
         public CharacterInstanceStatus(CharacterGrowthParameter growthParameter)
         {
@@ -34,6 +38,7 @@ namespace SoulRPG
             guardPointReactiveProperty = new ReactiveProperty<int>(0);
             staminaMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.Stamina);
             staminaReactiveProperty = new ReactiveProperty<int>(growthParameter.Stamina);
+            experienceReactiveProperty = new ReactiveProperty<int>(0);
         }
 
         public void SetHitPointMax(int value)
@@ -70,6 +75,11 @@ namespace SoulRPG
         public void ResetGuardPoint()
         {
             guardPointReactiveProperty.Value = 0;
+        }
+        
+        public void AddExperience(int value)
+        {
+            experienceReactiveProperty.Value += value;
         }
     }
 }

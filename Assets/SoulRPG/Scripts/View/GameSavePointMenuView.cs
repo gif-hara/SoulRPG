@@ -80,7 +80,6 @@ namespace SoulRPG
 
         private async UniTask StateLevelUpAsync(CancellationToken scope)
         {
-            var userData = TinyServiceLocator.Resolve<UserData>();
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
             growthParameter = new CharacterGrowthParameter(character.GrowthParameter);
             useExperience = new ReactiveProperty<int>(0);
@@ -161,10 +160,10 @@ namespace SoulRPG
             var informationElementPrefab = documentBundlePrefab.Q<HKUIDocument>("UIElement.Info");
             var currentExperienceInfo = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
             currentExperienceInfo.Q<TMP_Text>("Header").text = "所持経験値";
-            Observable.Merge(useExperience, userData.Experience)
+            Observable.Merge(useExperience, character.InstanceStatus.ExperienceAsObservable())
                 .Subscribe(x =>
                 {
-                    currentExperienceInfo.Q<TMP_Text>("Value").text = (userData.Experience.CurrentValue - useExperience.Value).ToString();
+                    currentExperienceInfo.Q<TMP_Text>("Value").text = (character.InstanceStatus.ExperienceAsObservable().CurrentValue - useExperience.Value).ToString();
                 })
                 .RegisterTo(scope);
             var needExperienceInfo = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
@@ -239,7 +238,7 @@ namespace SoulRPG
                         if (result == 0)
                         {
                             character.GrowthParameter.Sync(growthParameter);
-                            userData.AddExperience(-useExperience.Value);
+                            character.InstanceStatus.AddExperience(-useExperience.Value);
                             stateMachine.Change(StateRootMenuAsync);
                         }
                     }
@@ -327,9 +326,8 @@ namespace SoulRPG
         private bool CanLevelUp()
         {
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
-            var userData = TinyServiceLocator.Resolve<UserData>();
             var needExperience = gameRule.ExperienceTable.GetNeedExperience(growthParameter.Level + 1);
-            return userData.Experience.CurrentValue - useExperience.Value >= needExperience;
+            return character.InstanceStatus.ExperienceAsObservable().CurrentValue - useExperience.Value >= needExperience;
         }
 
         private bool CanLevelDown()

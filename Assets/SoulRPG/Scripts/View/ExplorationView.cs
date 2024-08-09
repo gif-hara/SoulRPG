@@ -80,7 +80,6 @@ namespace SoulRPG
             var miniMapWallTopPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Top");
             var miniMapWallLeftPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Left");
             var shadowParent = areaDocument.Q<RectTransform>("Area.Shadow.Viewport");
-            var userData = TinyServiceLocator.Resolve<UserData>();
             characterAreaTransform.sizeDelta = tipSize;
             character.PositionAsObservable()
                 .Subscribe(x =>
@@ -344,7 +343,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var experience = areaDocument.Q<TMP_Text>("Text.Experience");
-            TinyServiceLocator.Resolve<UserData>().Experience
+            character.InstanceStatus.ExperienceAsObservable()
                 .Subscribe(x =>
                 {
                     experience.SetText(x.ToString());
