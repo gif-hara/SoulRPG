@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using HK;
 using R3;
 using UnityEngine;
 
@@ -23,15 +24,20 @@ namespace SoulRPG
         public ReadOnlyReactiveProperty<bool> IsOpenReactiveProperty => isOpen.ToReadOnlyReactiveProperty();
         public bool IsOpen => isOpen.Value;
         
-        public List<NeedItem> NeedItems { get; } = new();
+        public List<INeedItem> NeedItems { get; } = new();
 
-        public DungeonInstanceWallData(MasterData.WallEvent wallEventData)
+        public DungeonInstanceWallData(MasterData.WallEvent wallEvent)
         {
-            From = new Vector2Int(wallEventData.LeftX, wallEventData.LeftY);
-            To = new Vector2Int(wallEventData.RightX, wallEventData.RightY);
-            EventType = wallEventData.EventType;
-            PositiveSideCondition = wallEventData.PositiveSideCondition;
-            NegativeSideCondition = wallEventData.NegativeSideCondition;
+            From = new Vector2Int(wallEvent.LeftX, wallEvent.LeftY);
+            To = new Vector2Int(wallEvent.RightX, wallEvent.RightY);
+            EventType = wallEvent.EventType;
+            PositiveSideCondition = wallEvent.PositiveSideCondition;
+            NegativeSideCondition = wallEvent.NegativeSideCondition;
+            TinyServiceLocator.Resolve<MasterData>().WallEventConditionItems.TryGetValue(wallEvent.Id, out var items);
+            if (items != null)
+            {
+                NeedItems.AddRange(items);
+            }
         }
 
         public bool IsPositiveAccess(Define.Direction accessDirection)
