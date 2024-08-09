@@ -29,7 +29,7 @@ namespace SoulRPG
 
         public readonly Dictionary<
             (Vector2Int from, Vector2Int to),
-            (MasterData.WallEvent masterDataWallEvent, ReactiveProperty<bool> isOpen)
+            DungeonInstanceWallData
             > wallEvents = new();
         
         private readonly HashSet<Vector2Int> reachedPoints = new();
@@ -63,7 +63,7 @@ namespace SoulRPG
             {
                 wallEvents.Add(
                     (new Vector2Int(wallEvent.LeftX, wallEvent.LeftY), new Vector2Int(wallEvent.RightX, wallEvent.RightY)),
-                    (wallEvent, new ReactiveProperty<bool>(false))
+                    new DungeonInstanceWallData(wallEvent)
                 );
             }
         }
@@ -99,9 +99,9 @@ namespace SoulRPG
             }
             else if (wallEvents.TryGetValue(wallPositions, out var wallEvent))
             {
-                return wallEvent.masterDataWallEvent.EventType switch
+                return wallEvent.EventType switch
                 {
-                    "Door" => InvokeOnDoorAsync(character, wallPositions, wallEvent.masterDataWallEvent),
+                    "Door" => InvokeOnDoorAsync(character, wallEvent),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -126,7 +126,7 @@ namespace SoulRPG
             var key = direction.GetWallPosition(position);
             if (wallEvents.TryGetValue(key, out var wallEvent))
             {
-                return wallEvent.isOpen.Value;
+                return wallEvent.IsOpen;
             }
 
             return true;
@@ -215,41 +215,40 @@ namespace SoulRPG
             scope.Dispose();
         }
 
-        private async UniTask InvokeOnDoorAsync(Character character, (Vector2Int from, Vector2Int to) key, MasterData.WallEvent wallEvent)
+        private async UniTask InvokeOnDoorAsync(Character character, DungeonInstanceWallData wallEvent)
         {
             var isPositiveAccess = wallEvent.IsPositiveAccess(character.Direction);
             var condition = isPositiveAccess ? wallEvent.PositiveSideCondition : wallEvent.NegativeSideCondition;
             switch (condition)
             {
                 case "None":
-                    if (!wallEvents[key].isOpen.Value)
+                    if (!wallEvent.IsOpen)
                     {
                         TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
-                        wallEvents[key].isOpen.Value = true;
-                        await view.OnOpenDoorAsync(key);
+                        wallEvent.Open();   
+                        await view.OnOpenDoorAsync(wallEvent);
                     }
                     break;
                 case "Lock":
-                    if (!wallEvents[key].isOpen.Value)
+                    if (!wallEvent.IsOpen)
                     {
                         TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("こちらからは開かないようだ");
                     }
                     break;
                 case "Item":
-                    if (!wallEvents[key].isOpen.Value)
+                    if (!wallEvent.IsOpen)
                     {
-                        var masterDataWallEventConditionItems = TinyServiceLocator.Resolve<MasterData>().WallEventConditionItems.Get(wallEvent.Id);
-                        foreach (var item in masterDataWallEventConditionItems)
+                        foreach (var i in wallEvent.NeedItems)
                         {
-                            if (!character.Inventory.HasItem(item))
+                            if (!character.Inventory.HasItem(i))
                             {
                                 TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("鍵が必要のようだ");
                                 return;
                             }
                         }
                         TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
-                        wallEvents[key].isOpen.Value = true;
-                        await view.OnOpenDoorAsync(key);
+                        wallEvent.Open();
+                        await view.OnOpenDoorAsync(wallEvent);
                     }
                     break;
             }

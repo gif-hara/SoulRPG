@@ -28,9 +28,9 @@ namespace SoulRPG
 
         private readonly Dictionary<(string dungeonName, int x, int y), GameObject> maptipFloorEventObjects = new();
 
-        private readonly Dictionary<(Vector2Int from, Vector2Int to), HKUIDocument> maptipWallEventObjects = new();
+        private readonly Dictionary<DungeonInstanceWallData, HKUIDocument> maptipWallEventObjects = new();
 
-        private readonly Dictionary<(Vector2Int from, Vector2Int to), HKUIDocument> dungeonWallEventObjects = new();
+        private readonly Dictionary<DungeonInstanceWallData, HKUIDocument> dungeonWallEventObjects = new();
 
         private readonly Dictionary<Vector2Int, GameObject> maptipShadowObjects = new();
 
@@ -164,12 +164,12 @@ namespace SoulRPG
                 {
                     var isHorizontal = i.Key.from.y == i.Key.to.y;
                     var directionName = isHorizontal ? "Top" : "Left";
-                    var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.Value.masterDataWallEvent.EventType}.{directionName}"), tipsParent.transform);
-                    maptipWallEventObjects.Add(i.Key, element);
+                    var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.Value.EventType}.{directionName}"), tipsParent.transform);
+                    maptipWallEventObjects.Add(i.Value, element);
                     var elementTransform = element.transform as RectTransform;
                     elementTransform.anchoredPosition = new Vector2(i.Key.from.x * tipSize.x, i.Key.from.y * tipSize.y);
                     elementTransform.sizeDelta = tipSize;
-                    i.Value.isOpen
+                    i.Value.IsOpenReactiveProperty
                         .Subscribe(x =>
                         {
                             element.Q("Open").SetActive(x);
@@ -246,10 +246,10 @@ namespace SoulRPG
                 {
                     var isHorizontal = i.Key.from.y == i.Key.to.y;
                     var directionName = isHorizontal ? "Top" : "Left";
-                    var element = Object.Instantiate(dungeonDocument.Q<HKUIDocument>($"Dungeon.Wall.Event.{i.Value.masterDataWallEvent.EventType}.{directionName}"), dungeonDocument.transform);
-                    dungeonWallEventObjects.Add(i.Key, element);
+                    var element = Object.Instantiate(dungeonDocument.Q<HKUIDocument>($"Dungeon.Wall.Event.{i.Value.EventType}.{directionName}"), dungeonDocument.transform);
+                    dungeonWallEventObjects.Add(i.Value, element);
                     element.transform.position = new Vector3(i.Key.from.x, 0, i.Key.from.y);
-                    i.Value.isOpen
+                    i.Value.IsOpenReactiveProperty
                         .Subscribe(x =>
                         {
                             element.Q("Open").SetActive(x);
@@ -351,14 +351,14 @@ namespace SoulRPG
                 .RegisterTo(scope);
         }
 
-        public UniTask OnOpenDoorAsync((Vector2Int from, Vector2Int to) wallEvent)
+        public UniTask OnOpenDoorAsync(DungeonInstanceWallData wallData)
         {
-            if (maptipWallEventObjects.TryGetValue(wallEvent, out var element))
+            if (maptipWallEventObjects.TryGetValue(wallData, out var element))
             {
                 element.Q("Open").SetActive(true);
                 element.Q("Close").SetActive(false);
             }
-            if (dungeonWallEventObjects.TryGetValue(wallEvent, out var dungeonElement))
+            if (dungeonWallEventObjects.TryGetValue(wallData, out var dungeonElement))
             {
                 dungeonElement.Q("Open").SetActive(true);
                 dungeonElement.Q("Close").SetActive(false);
