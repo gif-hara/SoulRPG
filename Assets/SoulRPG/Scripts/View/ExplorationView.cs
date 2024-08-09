@@ -52,11 +52,10 @@ namespace SoulRPG
             var uiDocument = Object.Instantiate(uiDocumentPrefab);
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             var floorEvents = TinyServiceLocator.Resolve<MasterData>().FloorEvents.List
-                .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name);
-            var wallEvents = TinyServiceLocator.Resolve<MasterData>().WallEvents.List
-                .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name);
-            SetupMiniMap(uiDocument, dungeonController, floorEvents, wallEvents, character, scope);
-            SetupDungeon(dungeonController, floorEvents, wallEvents);
+                .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name)
+                .ToList();
+            SetupMiniMap(uiDocument, dungeonController, floorEvents, character, scope);
+            SetupDungeon(dungeonController, floorEvents);
             SetupMessage(uiDocument, character, scope);
             SetupStatuses(uiDocument, character, scope);
         }
@@ -65,7 +64,6 @@ namespace SoulRPG
             HKUIDocument uiDocument,
             DungeonController dungeonController,
             IEnumerable<MasterData.FloorEvent> floorEvents,
-            IEnumerable<MasterData.WallEvent> wallEvents,
             Character character,
             CancellationToken scope
             )
@@ -191,8 +189,7 @@ namespace SoulRPG
 
         private void SetupDungeon(
                 DungeonController dungeonController,
-                IEnumerable<MasterData.FloorEvent> floorEvents,
-                IEnumerable<MasterData.WallEvent> wallEvents
+                IEnumerable<MasterData.FloorEvent> floorEvents
                 )
         {
             var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);

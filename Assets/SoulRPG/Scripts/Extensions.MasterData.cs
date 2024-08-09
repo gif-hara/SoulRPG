@@ -94,24 +94,5 @@ namespace SoulRPG
         {
             return new BattleCharacter(new CharacterBattleStatus(self), new Constant(101999, 101001, false));
         }
-
-        public static bool TryGetValue(this MasterData.WallEvent.DictionaryList self, Character character, out MasterData.WallEvent wallEvent)
-        {
-            return self.TryGetValue(character.Position, character.Direction, out wallEvent);
-        }
-
-        public static bool TryGetValue(this MasterData.WallEvent.DictionaryList self, Vector2Int position, Define.Direction direction, out MasterData.WallEvent wallEvent)
-        {
-            var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
-            var wallPositions = direction.GetWallPosition(position);
-            var key = (
-                dungeonController.CurrentDungeon.name,
-                wallPositions.from.x,
-                wallPositions.from.y,
-                wallPositions.to.x,
-                wallPositions.to.y
-                );
-            return self.TryGetValue(key, out wallEvent);
-        }
     }
 }
