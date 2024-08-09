@@ -31,6 +31,8 @@ namespace SoulRPG
             (Vector2Int from, Vector2Int to),
             (MasterData.WallEvent masterDataWallEvent, ReactiveProperty<bool> isOpen)
             > wallEvents = new();
+        
+        private readonly HashSet<Vector2Int> reachedPoints = new();
 
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
@@ -133,24 +135,34 @@ namespace SoulRPG
 
         private void AddReachedPoint(Character character)
         {
-            var userData = TinyServiceLocator.Resolve<UserData>();
-            userData.AddReachedPoint(CurrentDungeon.name, character.Position);
+            Add(character.Position);
             if (CanMove(character.Position, Define.Direction.Up))
             {
-                userData.AddReachedPoint(CurrentDungeon.name, character.Position + Define.Direction.Up.ToVector2Int());
+                Add(character.Position + Define.Direction.Up.ToVector2Int());
             }
             if (CanMove(character.Position, Define.Direction.Down))
             {
-                userData.AddReachedPoint(CurrentDungeon.name, character.Position + Define.Direction.Down.ToVector2Int());
+                Add(character.Position + Define.Direction.Down.ToVector2Int());
             }
             if (CanMove(character.Position, Define.Direction.Left))
             {
-                userData.AddReachedPoint(CurrentDungeon.name, character.Position + Define.Direction.Left.ToVector2Int());
+                Add(character.Position + Define.Direction.Left.ToVector2Int());
             }
             if (CanMove(character.Position, Define.Direction.Right))
             {
-                userData.AddReachedPoint(CurrentDungeon.name, character.Position + Define.Direction.Right.ToVector2Int());
+                Add(character.Position + Define.Direction.Right.ToVector2Int());
             }
+
+            void Add(Vector2Int position)
+            {
+                reachedPoints.Add(position);
+                TinyServiceLocator.Resolve<GameEvents>().OnAddReachedPoint.OnNext(position);
+            }
+        }
+        
+        public bool ContainsReachedPoint(Vector2Int position)
+        {
+            return reachedPoints.Contains(position);
         }
 
         private UniTask InvokeOnItemAsync(Character character, MasterData.FloorEvent floorEvent)

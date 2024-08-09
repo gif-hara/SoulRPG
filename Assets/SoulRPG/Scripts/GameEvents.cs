@@ -21,7 +21,7 @@ namespace SoulRPG
 
         public readonly Subject<HashSet<string>> OnClearTemporaryCompletedEventIds = new();
 
-        public readonly Subject<(string dungeonName, Vector2Int reachedPosition)> OnAddReachedPoint = new();
+        public readonly Subject<Vector2Int> OnAddReachedPoint = new();
 
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();

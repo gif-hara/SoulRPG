@@ -113,7 +113,7 @@ namespace SoulRPG
             {
                 for (var x = 0; x <= dungeonController.CurrentDungeon.range.x; x++)
                 {
-                    if (userData.IsReachedPoint(dungeonController.CurrentDungeon.name, new Vector2Int(x, y)))
+                    if (dungeonController.ContainsReachedPoint(new Vector2Int(x, y)))
                     {
                         continue;
                     }
@@ -129,13 +129,7 @@ namespace SoulRPG
             CreateWallEventObjects();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAddReachedPoint
-                .Subscribe(x =>
-                {
-                    if (x.dungeonName == dungeonController.CurrentDungeon.name)
-                    {
-                        RemoveShadow(x.reachedPosition);
-                    }
-                })
+                .Subscribe(RemoveShadow)
                 .RegisterTo(scope);
             gameEvents.OnAcquiredDungeonEvent
                 .Subscribe(x =>
