@@ -1067,15 +1067,95 @@ MonoBehaviour:
       InitialY: 1
   floorEvents:
     list:
-    - Id: Test.00.01.Item
+    - Id: Test.00.00.Item
       DungeonName: Dungeon.Test
       X: 0
+      Y: 0
+      EventType: Item
+    - Id: Test.00.09.Item
+      DungeonName: Dungeon.Test
+      X: 0
+      Y: 9
+      EventType: Item
+    - Id: Test.01.03.Item
+      DungeonName: Dungeon.Test
+      X: 1
+      Y: 3
+      EventType: Item
+    - Id: Test.05.03.Item
+      DungeonName: Dungeon.Test
+      X: 5
+      Y: 3
+      EventType: Item
+    - Id: Test.01.00.Item
+      DungeonName: Dungeon.Test
+      X: 1
+      Y: 0
+      EventType: Item
+    - Id: Test.05.00.Item
+      DungeonName: Dungeon.Test
+      X: 5
+      Y: 0
+      EventType: Item
+    - Id: Test.08.06.Item
+      DungeonName: Dungeon.Test
+      X: 8
+      Y: 6
+      EventType: Item
+    - Id: Test.07.01.Item
+      DungeonName: Dungeon.Test
+      X: 7
       Y: 1
       EventType: Item
-    - Id: Test.00.03.Item
+    - Id: Test.10.11.Item
       DungeonName: Dungeon.Test
-      X: 0
-      Y: 3
+      X: 10
+      Y: 11
+      EventType: Item
+    - Id: Test.13.10.Item
+      DungeonName: Dungeon.Test
+      X: 13
+      Y: 10
+      EventType: Item
+    - Id: Test.13.08.Item
+      DungeonName: Dungeon.Test
+      X: 13
+      Y: 8
+      EventType: Item
+    - Id: Test.03.11.Item
+      DungeonName: Dungeon.Test
+      X: 3
+      Y: 11
+      EventType: Item
+    - Id: Test.01.09.Item
+      DungeonName: Dungeon.Test
+      X: 1
+      Y: 9
+      EventType: Item
+    - Id: Test.01.07.Item
+      DungeonName: Dungeon.Test
+      X: 1
+      Y: 7
+      EventType: Item
+    - Id: Test.02.08.Item
+      DungeonName: Dungeon.Test
+      X: 2
+      Y: 8
+      EventType: Item
+    - Id: Test.06.14.Item
+      DungeonName: Dungeon.Test
+      X: 6
+      Y: 14
+      EventType: Item
+    - Id: Test.02.15.Item
+      DungeonName: Dungeon.Test
+      X: 2
+      Y: 15
+      EventType: Item
+    - Id: Test.04.13.Item
+      DungeonName: Dungeon.Test
+      X: 4
+      Y: 13
       EventType: Item
     - Id: Test.00.02.SavePoint
       DungeonName: Dungeon.Test
@@ -1089,16 +1169,58 @@ MonoBehaviour:
       EventType: Enemy
   floorEventItems:
     list:
-    - Key: Test.00.01.Item
+    - Key: Test.00.00.Item
       Value:
       - Id: 1
-        EventId: Test.00.01.Item
+        EventId: Test.00.00.Item
         ItemId: 0
         Count: 0
-    - Key: Test.00.03.Item
+    - Key: Test.00.09.Item
       Value:
       - Id: 2
-        EventId: Test.00.03.Item
+        EventId: Test.00.09.Item
+        ItemId: 0
+        Count: 0
+    - Key: Test.01.03.Item
+      Value:
+      - Id: 3
+        EventId: Test.01.03.Item
+        ItemId: 0
+        Count: 0
+    - Key: Test.05.03.Item
+      Value:
+      - Id: 4
+        EventId: Test.05.03.Item
+        ItemId: 0
+        Count: 0
+    - Key: Test.01.00.Item
+      Value:
+      - Id: 5
+        EventId: Test.01.00.Item
+        ItemId: 0
+        Count: 0
+    - Key: Test.05.00.Item
+      Value:
+      - Id: 6
+        EventId: Test.05.00.Item
+        ItemId: 0
+        Count: 0
+    - Key: Test.08.06.Item
+      Value:
+      - Id: 7
+        EventId: Test.08.06.Item
+        ItemId: 0
+        Count: 0
+    - Key: Test.07.01.Item
+      Value:
+      - Id: 8
+        EventId: Test.07.01.Item
+        ItemId: 0
+        Count: 0
+    - Key: Test.10.11.Item
+      Value:
+      - Id: 9
+        EventId: Test.10.11.Item
         ItemId: 0
         Count: 0
   floorEventEnemies:
@@ -1117,7 +1239,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(01,10).(01,09).0.Door
       DungeonName: Dungeon.Test
       LeftX: 1
@@ -1127,7 +1249,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(01,20).(02,20).0.Door
       DungeonName: Dungeon.Test
       LeftX: 1
@@ -1137,7 +1259,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(03,20).(04,20).0.Door
       DungeonName: Dungeon.Test
       LeftX: 3
@@ -1147,7 +1269,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(02,24).(03,24).0.Door
       DungeonName: Dungeon.Test
       LeftX: 2
@@ -1157,7 +1279,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(06,23).(06,22).0.Door
       DungeonName: Dungeon.Test
       LeftX: 6
@@ -1167,7 +1289,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(06,18).(06,17).0.Door
       DungeonName: Dungeon.Test
       LeftX: 6
@@ -1177,7 +1299,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(09,19).(10,19).0.Door
       DungeonName: Dungeon.Test
       LeftX: 9
@@ -1187,7 +1309,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(14,25).(14,24).0.Door
       DungeonName: Dungeon.Test
       LeftX: 14
@@ -1197,7 +1319,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(14,17).(15,17).0.Door
       DungeonName: Dungeon.Test
       LeftX: 14
@@ -1207,7 +1329,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: Lock
       NegativeSideCondition: None
-      CreateRate: 1
+      CreateRate: 0
     - Id: Test.(01,13).(02,13).0.Door
       DungeonName: Dungeon.Test
       LeftX: 1
@@ -1217,7 +1339,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(07,13).(07,12).0.Door
       DungeonName: Dungeon.Test
       LeftX: 7
@@ -1227,7 +1349,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(00,06).(01,06).0.Door
       DungeonName: Dungeon.Test
       LeftX: 0
@@ -1237,7 +1359,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(07,02).(08,02).0.Door
       DungeonName: Dungeon.Test
       LeftX: 7
@@ -1247,7 +1369,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(12,09).(13,09).0.Door
       DungeonName: Dungeon.Test
       LeftX: 12
@@ -1257,7 +1379,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(09,14).(10,14).0.Door
       DungeonName: Dungeon.Test
       LeftX: 9
@@ -1267,7 +1389,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(11,19).(11,18).0.Door
       DungeonName: Dungeon.Test
       LeftX: 11
@@ -1277,7 +1399,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(12,14).(13,14).0.Door
       DungeonName: Dungeon.Test
       LeftX: 12
@@ -1287,7 +1409,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(11,21).(11,20).0.Door
       DungeonName: Dungeon.Test
       LeftX: 11
@@ -1297,7 +1419,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: None
       NegativeSideCondition: None
-      CreateRate: 0.5
+      CreateRate: 0
     - Id: Test.(10,07).(11,07).0.Door
       DungeonName: Dungeon.Test
       LeftX: 10
@@ -1307,7 +1429,7 @@ MonoBehaviour:
       EventType: Door
       PositiveSideCondition: Lock
       NegativeSideCondition: None
-      CreateRate: 1
+      CreateRate: 0
   wallEventConditionItems:
     list:
     - Key: Test.(10,09).(11,09).0.Door

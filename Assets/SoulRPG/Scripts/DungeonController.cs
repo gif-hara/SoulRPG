@@ -58,8 +58,7 @@ namespace SoulRPG
             }
             wallEvents.Clear();
             var masterDataWallEvents = masterData.WallEvents.List
-                .Where(x => x.DungeonName == dungeonName)
-                .Where(x => x.CreateRate > Random.value);
+                .Where(x => x.DungeonName == dungeonName);
             foreach (var wallEvent in masterDataWallEvents)
             {
                 wallEvents.Add(
