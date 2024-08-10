@@ -76,6 +76,10 @@ namespace SoulRPG
         private Ailment.DictionaryList ailments;
         public Ailment.DictionaryList Ailments => ailments;
 
+        [SerializeField]
+        private EnemyTable.Group enemyTables;
+        public EnemyTable.Group EnemyTables => enemyTables;
+
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
@@ -105,7 +109,8 @@ namespace SoulRPG
                 "MasterData.DungeonSpec",
                 "MasterData.ItemTable",
                 "MasterData.FloorItem.NoCost",
-                "MasterData.FloorItem.EnemyPlace"
+                "MasterData.FloorItem.EnemyPlace",
+                "MasterData.EnemyTable"
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -137,6 +142,7 @@ namespace SoulRPG
             floorItemNoCosts.Set(JsonHelper.FromJson<FloorItemNoCost>(database.Item2[16]));
             var floorItemEnemyPlaces = new FloorItemEnemyPlace.Group();
             floorItemEnemyPlaces.Set(JsonHelper.FromJson<FloorItemEnemyPlace>(database.Item2[17]));
+            enemyTables.Set(JsonHelper.FromJson<EnemyTable>(database.Item2[18]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -652,6 +658,24 @@ namespace SoulRPG
 
             [Serializable]
             public class Group : Group<int, ItemTable>
+            {
+                public Group() : base(x => x.TableId) { }
+            }
+        }
+
+        [Serializable]
+        public class EnemyTable
+        {
+            public int Id;
+
+            public int TableId;
+
+            public int EnemyId;
+
+            public int Weight;
+
+            [Serializable]
+            public class Group : Group<int, EnemyTable>
             {
                 public Group() : base(x => x.TableId) { }
             }
