@@ -17,7 +17,7 @@ namespace SoulRPG
 
         public readonly Subject<bool> OnRequestSetActiveMessageArrow = new();
 
-        public readonly Subject<(string dungeonName, int x, int y)> OnAcquiredDungeonEvent = new();
+        public readonly Subject<DungeonInstanceFloorData> OnAcquiredFloorData = new();
 
         public readonly Subject<HashSet<string>> OnClearTemporaryCompletedEventIds = new();
 

@@ -24,9 +24,9 @@ namespace SoulRPG
 
         private readonly Character character;
 
-        private readonly Dictionary<(string dungeonName, int x, int y), GameObject> dungeonFloorEventObjects = new();
+        private readonly Dictionary<DungeonInstanceFloorData, GameObject> dungeonFloorEventObjects = new();
 
-        private readonly Dictionary<(string dungeonName, int x, int y), GameObject> maptipFloorEventObjects = new();
+        private readonly Dictionary<DungeonInstanceFloorData, GameObject> maptipFloorEventObjects = new();
 
         private readonly Dictionary<DungeonInstanceWallData, HKUIDocument> maptipWallEventObjects = new();
 
@@ -124,7 +124,7 @@ namespace SoulRPG
             gameEvents.OnAddReachedPoint
                 .Subscribe(RemoveShadow)
                 .RegisterTo(scope);
-            gameEvents.OnAcquiredDungeonEvent
+            gameEvents.OnAcquiredFloorData
                 .Subscribe(x =>
                 {
                     if (maptipFloorEventObjects.TryGetValue(x, out var obj))
@@ -136,12 +136,12 @@ namespace SoulRPG
 
             void CreateFloorEventObjects()
             {
-                foreach (var i in dungeonController.FloorDatabase)
+                foreach (var (position, floorData) in dungeonController.FloorDatabase)
                 {
-                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{i.Value.EventType}"), tipsParent.transform);
-                    eventObject.anchoredPosition = new Vector2(i.Key.x * tipSize.x, i.Key.y * tipSize.y);
+                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{floorData.EventType}"), tipsParent.transform);
+                    eventObject.anchoredPosition = new Vector2(position.x * tipSize.x, position.y * tipSize.y);
                     eventObject.sizeDelta = tipSize;
-                    maptipFloorEventObjects.Add((dungeonController.CurrentDungeon.name, i.Key.x, i.Key.y), eventObject.gameObject);
+                    maptipFloorEventObjects.Add(floorData, eventObject.gameObject);
                 }
             }
 
@@ -198,7 +198,7 @@ namespace SoulRPG
             CreateFloorEventObjects();
             CreateWallEventObjects();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            gameEvents.OnAcquiredDungeonEvent
+            gameEvents.OnAcquiredFloorData
                 .Subscribe(x =>
                 {
                     if (dungeonFloorEventObjects.TryGetValue(x, out var obj))
@@ -209,11 +209,11 @@ namespace SoulRPG
                 });
             void CreateFloorEventObjects()
             {
-                foreach (var (position, data) in dungeonController.FloorDatabase)
+                foreach (var (position, floorData) in dungeonController.FloorDatabase)
                 {
-                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{data.EventType}"), dungeonDocument.transform);
+                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{floorData.EventType}"), dungeonDocument.transform);
                     eventObject.position = new Vector3(position.x, 0, position.y);
-                    dungeonFloorEventObjects.Add((dungeonController.CurrentDungeon.name, position.x, position.y), eventObject.gameObject);
+                    dungeonFloorEventObjects.Add(floorData, eventObject.gameObject);
                 }
             }
             void CreateWallEventObjects()
