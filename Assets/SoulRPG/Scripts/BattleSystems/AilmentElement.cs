@@ -163,7 +163,7 @@ namespace SoulRPG
                     x.Register("Cost", cost);
                 },
                 scope
-            ).ContinueWith(x => x.Resolve<int>("Cost"));
+            ).ContinueWith(x => x == null ? cost : x.Resolve<int>("Cost"));
         }
 
         public UniTask OnBehaviourEndAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
