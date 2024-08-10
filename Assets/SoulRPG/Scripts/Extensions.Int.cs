@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using HK;
 
 namespace SoulRPG
@@ -81,10 +82,15 @@ namespace SoulRPG
         {
             return TinyServiceLocator.Resolve<MasterData>().Skills.Get(self);
         }
-        
+
         public static MasterData.Ailment GetMasterDataAilment(this int self)
         {
             return TinyServiceLocator.Resolve<MasterData>().Ailments.Get(self);
+        }
+
+        public static List<MasterData.ItemTable> GetMasterDataItemTable(this int self)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().ItemTables.Get(self);
         }
     }
 }
