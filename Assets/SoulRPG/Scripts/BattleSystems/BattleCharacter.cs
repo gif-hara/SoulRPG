@@ -4,6 +4,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
+using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace SoulRPG
@@ -125,6 +126,12 @@ namespace SoulRPG
         public UniTask<bool> EvaluateEvaded()
         {
             return AilmentController.EvaluateEvadeAsync(this);
+        }
+
+        public async UniTask<int> GetFixedNeedBehaviourPointAsync(int cost)
+        {
+            var result = await AilmentController.OnCalculateNeedBehaviourPointAsync(cost);
+            return Mathf.Max(0, result);
         }
     }
 }
