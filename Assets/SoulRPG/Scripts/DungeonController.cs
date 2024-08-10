@@ -51,7 +51,10 @@ namespace SoulRPG
             checkPoint = initialPosition;
             FloorDatabase.Clear();
             var itemTables = new Dictionary<int, List<MasterData.ItemTable>>();
-            foreach (var floorItem in CurrentDungeonSpec.FloorItemNoCosts)
+            var floorItemNoCosts = CurrentDungeonSpec.FloorItemNoCosts
+                .OrderBy(_ => Random.value)
+                .Take(Random.Range(CurrentDungeonSpec.NoCostItemNumberMin, CurrentDungeonSpec.NoCostItemNumberMax));
+            foreach (var floorItem in floorItemNoCosts)
             {
                 var itemTableId = floorItem.ItemTableId;
                 if (!itemTables.ContainsKey(itemTableId))

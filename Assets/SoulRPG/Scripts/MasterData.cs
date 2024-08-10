@@ -104,7 +104,7 @@ namespace SoulRPG
                 "MasterData.WallEvent.Condition.Item",
                 "MasterData.DungeonSpec",
                 "MasterData.ItemTable",
-                "MasterData.FloorItemNoCost"
+                "MasterData.FloorItem.NoCost"
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -585,6 +585,10 @@ namespace SoulRPG
             public int InitialX;
 
             public int InitialY;
+
+            public int NoCostItemNumberMin;
+
+            public int NoCostItemNumberMax;
 
             public List<FloorItemNoCost> FloorItemNoCosts;
 
