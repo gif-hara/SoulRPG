@@ -14,11 +14,20 @@ namespace SoulRPG
 
         public List<(MasterData.Item item, int count)> Items { get; } = new();
 
-        public DungeonInstanceFloorData(Vector2Int position, string eventType, List<(MasterData.Item item, int count)> items)
+        public int EnemyId { get; set; }
+
+        public DungeonInstanceFloorData(Vector2Int position, List<(MasterData.Item item, int count)> items)
         {
             Position = position;
-            EventType = eventType;
+            EventType = "Item";
             Items = items;
+        }
+
+        public DungeonInstanceFloorData(Vector2Int position, int enemyId)
+        {
+            Position = position;
+            EventType = "Enemy";
+            EnemyId = enemyId;
         }
     }
 }
