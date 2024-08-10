@@ -49,9 +49,9 @@ namespace SoulRPG
             player.Warp(initialPosition);
             checkPoint = initialPosition;
             FloorDatabase.Clear();
-            foreach (var floorEvent in masterData.FloorEvents.List.Where(x => x.DungeonName == dungeonName))
+            foreach (var floorItem in CurrentDungeonSpec.FloorItems)
             {
-                FloorDatabase.Add(new Vector2Int(floorEvent.X, floorEvent.Y), new DungeonInstanceFloorData(floorEvent));
+                FloorDatabase.Add(new Vector2Int(floorItem.X, floorItem.Y), new DungeonInstanceFloorData(floorItem));
             }
             WallDatabase.Clear();
             var masterDataWallEvents = masterData.WallEvents.List
