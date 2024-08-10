@@ -25,7 +25,7 @@ namespace SoulRPG
 
         private readonly IExplorationView view;
 
-        public readonly Dictionary<Vector2Int, MasterData.FloorEvent> FloorEvents = new();
+        public readonly Dictionary<Vector2Int, DungeonInstanceFloorData> FloorDatabase = new();
 
         public readonly Dictionary<WallPosition, DungeonInstanceWallData> wallData = new();
 
@@ -48,10 +48,10 @@ namespace SoulRPG
             var initialPosition = new Vector2Int(CurrentDungeonSpec.InitialX, CurrentDungeonSpec.InitialY);
             player.Warp(initialPosition);
             checkPoint = initialPosition;
-            FloorEvents.Clear();
+            FloorDatabase.Clear();
             foreach (var floorEvent in masterData.FloorEvents.List.Where(x => x.DungeonName == dungeonName))
             {
-                FloorEvents.Add(new Vector2Int(floorEvent.X, floorEvent.Y), floorEvent);
+                FloorDatabase.Add(new Vector2Int(floorEvent.X, floorEvent.Y), new DungeonInstanceFloorData(floorEvent));
             }
             wallData.Clear();
             var masterDataWallEvents = masterData.WallEvents.List
@@ -68,11 +68,11 @@ namespace SoulRPG
         public UniTask EnterAsync(Character character)
         {
             AddReachedPoint(character);
-            if (FloorEvents.TryGetValue(character.Position, out var dungeonEvent))
+            if (FloorDatabase.TryGetValue(character.Position, out var floorData))
             {
-                return dungeonEvent.EventType switch
+                return floorData.EventType switch
                 {
-                    "Enemy" => InvokeOnEnemyAsync(character, dungeonEvent),
+                    "Enemy" => InvokeOnEnemyAsync(character, floorData),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -85,12 +85,12 @@ namespace SoulRPG
         public UniTask InteractAsync(Character character)
         {
             var wallPosition = character.Direction.GetWallPosition(character.Position);
-            if (FloorEvents.TryGetValue(character.Position, out var dungeonEvent))
+            if (FloorDatabase.TryGetValue(character.Position, out var floorData))
             {
-                return dungeonEvent.EventType switch
+                return floorData.EventType switch
                 {
-                    "Item" => InvokeOnItemAsync(character, dungeonEvent),
-                    "SavePoint" => InvokeOnSavePointAsync(character, dungeonEvent),
+                    "Item" => InvokeOnItemAsync(character, floorData),
+                    "SavePoint" => InvokeOnSavePointAsync(character),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -160,19 +160,20 @@ namespace SoulRPG
             return reachedPoints.Contains(position);
         }
 
-        private UniTask InvokeOnItemAsync(Character character, MasterData.FloorEvent floorEvent)
+        private UniTask InvokeOnItemAsync(Character character, DungeonInstanceFloorData floorData)
         {
-            var masterDataEventItems = TinyServiceLocator.Resolve<MasterData>().FloorEventItems.Get(floorEvent.Id);
-            foreach (var item in masterDataEventItems)
-            {
-                character.Inventory.Add(item.ItemId, item.Count);
-            }
-            TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorEvent.X, floorEvent.Y));
-            FloorEvents.Remove(character.Position);
             return UniTask.CompletedTask;
+            // var masterDataEventItems = TinyServiceLocator.Resolve<MasterData>().FloorEventItems.Get(floorData.Id);
+            // foreach (var item in masterDataEventItems)
+            // {
+            //     character.Inventory.Add(item.ItemId, item.Count);
+            // }
+            // TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorData.X, floorData.Y));
+            // FloorDatabase.Remove(character.Position);
+            // return UniTask.CompletedTask;
         }
 
-        private async UniTask InvokeOnSavePointAsync(Character character, MasterData.FloorEvent floorEvent)
+        private async UniTask InvokeOnSavePointAsync(Character character)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             await gameEvents.ShowMessageAndWaitForSubmitInputAsync("ここはセーブポイントのようだ。一休みしよう。");
@@ -182,33 +183,34 @@ namespace SoulRPG
             await view.OpenAsync();
         }
 
-        private async UniTask InvokeOnEnemyAsync(Character character, MasterData.FloorEvent floorEvent)
+        private UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData floorData)
         {
-            var scope = new CancellationTokenSource();
-            var masterDataEventEnemy = TinyServiceLocator.Resolve<MasterData>().FloorEventEnemies.Get(floorEvent.Id);
-            var masterDataEnemy = TinyServiceLocator.Resolve<MasterData>().Enemies.Get(masterDataEventEnemy.EnemyId);
-            var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
-            var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
-            BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
-            var battleResult = await BattleSystem.BeginAsync(
-                playerCharacter,
-                enemyCharacter,
-                scope.Token
-                );
-            character.InstanceStatus.ResetGuardPoint();
-            if (battleResult == Define.BattleResult.PlayerWin)
-            {
-                TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorEvent.X, floorEvent.Y));
-                FloorEvents.Remove(character.Position);
-            }
-            else
-            {
-                character.Warp(checkPoint);
-                character.InstanceStatus.FullRecovery();
-                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("どうやら安全な場所に移動されたようだ");
-            }
-            scope.Cancel();
-            scope.Dispose();
+            return UniTask.CompletedTask;
+            // var scope = new CancellationTokenSource();
+            // var masterDataEventEnemy = TinyServiceLocator.Resolve<MasterData>().FloorEventEnemies.Get(floorData.Id);
+            // var masterDataEnemy = TinyServiceLocator.Resolve<MasterData>().Enemies.Get(masterDataEventEnemy.EnemyId);
+            // var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
+            // var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
+            // BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
+            // var battleResult = await BattleSystem.BeginAsync(
+            //     playerCharacter,
+            //     enemyCharacter,
+            //     scope.Token
+            //     );
+            // character.InstanceStatus.ResetGuardPoint();
+            // if (battleResult == Define.BattleResult.PlayerWin)
+            // {
+            //     TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorData.X, floorData.Y));
+            //     FloorData.Remove(character.Position);
+            // }
+            // else
+            // {
+            //     character.Warp(checkPoint);
+            //     character.InstanceStatus.FullRecovery();
+            //     TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("どうやら安全な場所に移動されたようだ");
+            // }
+            // scope.Cancel();
+            // scope.Dispose();
         }
 
         private async UniTask InvokeOnDoorAsync(Character character, DungeonInstanceWallData wallEvent)

@@ -9,12 +9,12 @@ namespace SoulRPG
     {
         public Vector2Int Position { get; }
 
-        public string EventTypeName { get; }
+        public string EventType { get; }
 
         public DungeonInstanceFloorData(MasterData.FloorEvent floorEvent)
         {
             Position = new Vector2Int(floorEvent.X, floorEvent.Y);
-            EventTypeName = floorEvent.EventType;
+            EventType = floorEvent.EventType;
         }
     }
 }
