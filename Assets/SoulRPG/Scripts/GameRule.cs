@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using HK;
 using UnityEngine;
 
 namespace SoulRPG
@@ -21,6 +22,10 @@ namespace SoulRPG
         [SerializeField]
         private EquipmentBlueprint initialEquipment;
         public EquipmentBlueprint InitialEquipment => initialEquipment;
+
+        [SerializeField]
+        private AudioData.DictionaryList audioDatabase;
+        public AudioData.DictionaryList AudioDatabase => audioDatabase;
 
         [Serializable]
         public class ExperienceTableData
@@ -44,6 +49,20 @@ namespace SoulRPG
             [SerializeField]
             private int count;
             public int Count => count;
+        }
+
+        [Serializable]
+        public class AudioData
+        {
+            [SerializeField]
+            private AudioClip clip;
+            public AudioClip Clip => clip;
+
+            [Serializable]
+            public class DictionaryList : DictionaryList<string, AudioData>
+            {
+                public DictionaryList() : base(x => x.clip.name) { }
+            }
         }
     }
 }
