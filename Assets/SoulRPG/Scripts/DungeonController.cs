@@ -270,5 +270,21 @@ namespace SoulRPG
                     break;
             }
         }
+
+#if DEBUG
+        public void DebugAddAllReachedPoint()
+        {
+            reachedPoints.Clear();
+            for (var y = 0; y < CurrentDungeon.range.y; y++)
+            {
+                for (var x = 0; x < CurrentDungeon.range.x; x++)
+                {
+                    var position = new Vector2Int(x, y);
+                    reachedPoints.Add(position);
+                    TinyServiceLocator.Resolve<GameEvents>().OnAddReachedPoint.OnNext(position);
+                }
+            }
+        }
+#endif
     }
 }

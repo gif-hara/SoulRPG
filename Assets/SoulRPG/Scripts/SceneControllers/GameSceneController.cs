@@ -121,6 +121,11 @@ namespace SoulRPG.SceneControllers
                             player.InstanceStatus.AddExperience(100000);
                             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("[DEBUG] Add Experience 100000");
                         }
+
+                        if (Keyboard.current.rKey.wasPressedThisFrame)
+                        {
+                            dungeonController.DebugAddAllReachedPoint();
+                        }
                     }
                     catch (OperationCanceledException)
                     {
