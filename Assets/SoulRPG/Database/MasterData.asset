@@ -1065,6 +1065,102 @@ MonoBehaviour:
     - Id: Dungeon.Test
       InitialX: 3
       InitialY: 1
+      FloorItems:
+      - Id: 1
+        DungeonName: Dungeon.Test
+        X: 0
+        Y: 0
+        ItemTableId: 1
+      - Id: 2
+        DungeonName: Dungeon.Test
+        X: 0
+        Y: 9
+        ItemTableId: 1
+      - Id: 3
+        DungeonName: Dungeon.Test
+        X: 1
+        Y: 3
+        ItemTableId: 1
+      - Id: 4
+        DungeonName: Dungeon.Test
+        X: 5
+        Y: 3
+        ItemTableId: 1
+      - Id: 5
+        DungeonName: Dungeon.Test
+        X: 1
+        Y: 0
+        ItemTableId: 1
+      - Id: 6
+        DungeonName: Dungeon.Test
+        X: 5
+        Y: 0
+        ItemTableId: 1
+      - Id: 7
+        DungeonName: Dungeon.Test
+        X: 8
+        Y: 6
+        ItemTableId: 1
+      - Id: 8
+        DungeonName: Dungeon.Test
+        X: 7
+        Y: 1
+        ItemTableId: 1
+      - Id: 9
+        DungeonName: Dungeon.Test
+        X: 10
+        Y: 11
+        ItemTableId: 1
+      - Id: 10
+        DungeonName: Dungeon.Test
+        X: 13
+        Y: 10
+        ItemTableId: 1
+      - Id: 11
+        DungeonName: Dungeon.Test
+        X: 13
+        Y: 8
+        ItemTableId: 1
+      - Id: 12
+        DungeonName: Dungeon.Test
+        X: 3
+        Y: 11
+        ItemTableId: 1
+      - Id: 13
+        DungeonName: Dungeon.Test
+        X: 1
+        Y: 9
+        ItemTableId: 1
+      - Id: 14
+        DungeonName: Dungeon.Test
+        X: 1
+        Y: 7
+        ItemTableId: 1
+      - Id: 15
+        DungeonName: Dungeon.Test
+        X: 2
+        Y: 8
+        ItemTableId: 1
+      - Id: 16
+        DungeonName: Dungeon.Test
+        X: 6
+        Y: 14
+        ItemTableId: 1
+      - Id: 17
+        DungeonName: Dungeon.Test
+        X: 2
+        Y: 15
+        ItemTableId: 1
+      - Id: 18
+        DungeonName: Dungeon.Test
+        X: 4
+        Y: 13
+        ItemTableId: 1
+      - Id: 19
+        DungeonName: Dungeon.Test
+        X: 0
+        Y: 2
+        ItemTableId: 1
   floorEvents:
     list:
     - Id: Test.00.00.Item

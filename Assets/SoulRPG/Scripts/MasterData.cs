@@ -5,6 +5,7 @@ using Cysharp.Threading.Tasks;
 using HK;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnitySequencerSystem;
 
 namespace SoulRPG
@@ -116,7 +117,8 @@ namespace SoulRPG
                 "MasterData.WallEvent",
                 "MasterData.WallEvent.Condition.Item",
                 "MasterData.DungeonSpec",
-                "MasterData.ItemTable"
+                "MasterData.ItemTable",
+                "MasterData.FloorItem"
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -149,6 +151,12 @@ namespace SoulRPG
             ailments.Set(JsonHelper.FromJson<Ailment>(database.Item2[12]));
             var enemyCharacterAttributes = new EnemyCharacterAttribute.Group();
             enemyCharacterAttributes.Set(JsonHelper.FromJson<EnemyCharacterAttribute>(database.Item2[13]));
+            wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[14]));
+            wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[15]));
+            dungeonSpecs.Set(JsonHelper.FromJson<DungeonSpec>(database.Item2[16]));
+            itemTables.Set(JsonHelper.FromJson<ItemTable>(database.Item2[17]));
+            var floorItems = new FloorItem.Group();
+            floorItems.Set(JsonHelper.FromJson<FloorItem>(database.Item2[18]));
             foreach (var i in enemies.List)
             {
                 if (enemyCharacterAttributes.TryGetValue(i.Id, out var attributes))
@@ -171,10 +179,12 @@ namespace SoulRPG
                     Debug.LogWarning($"Not found AilmentSequences {i.Id}");
                 }
             }
-            wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[14]));
-            wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[15]));
-            dungeonSpecs.Set(JsonHelper.FromJson<DungeonSpec>(database.Item2[16]));
-            itemTables.Set(JsonHelper.FromJson<ItemTable>(database.Item2[17]));
+            foreach (var i in floorItems.List)
+            {
+                var dungeonSpec = dungeonSpecs.Get(i.Key);
+                Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
+                dungeonSpec.FloorItems = i.Value;
+            }
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -354,6 +364,26 @@ namespace SoulRPG
             public class DictionaryList : DictionaryList<string, FloorEventEnemy>
             {
                 public DictionaryList() : base(x => x.EventId) { }
+            }
+        }
+
+        [Serializable]
+        public class FloorItem
+        {
+            public int Id;
+
+            public string DungeonName;
+
+            public int X;
+
+            public int Y;
+
+            public int ItemTableId;
+
+            [Serializable]
+            public class Group : Group<string, FloorItem>
+            {
+                public Group() : base(x => x.DungeonName) { }
             }
         }
 
@@ -601,6 +631,8 @@ namespace SoulRPG
             public int InitialX;
 
             public int InitialY;
+
+            public List<FloorItem> FloorItems;
 
             [Serializable]
             public class DictionaryList : DictionaryList<string, DungeonSpec>
