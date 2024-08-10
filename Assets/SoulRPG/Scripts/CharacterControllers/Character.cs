@@ -57,6 +57,7 @@ namespace SoulRPG.CharacterControllers
             Inventory = new Inventory(this);
             Equipment = new Equipment(equipmentBlueprint);
             Attribute = attribute;
+            Equipment.BeginObserve(this);
         }
 
         public void Move(Vector2Int velocity)

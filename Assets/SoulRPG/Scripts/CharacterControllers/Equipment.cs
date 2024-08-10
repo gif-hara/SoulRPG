@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HK;
 using R3;
+using SoulRPG.CharacterControllers;
 
 namespace SoulRPG
 {
@@ -215,6 +216,60 @@ namespace SoulRPG
             {
                 accessoryIds.Add(new ReactiveProperty<int>(blueprint.AccessoryIds[i]));
             }
+        }
+
+        public void BeginObserve(Character character)
+        {
+            character.Events.OnAcquiredItem
+                .Subscribe(x =>
+                {
+                    var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+                    if (x.itemId.TryGetMasterDataWeapon(out var masterDataWeapon))
+                    {
+                        foreach (var i in weaponIds)
+                        {
+                            if (i.Value == 0)
+                            {
+                                i.Value = x.itemId;
+                                gameEvents.OnRequestShowMessage.OnNext($"ちょうどいいので空いてる武器枠に装備した。");
+                                break;
+                            }
+                        }
+                    }
+                    else if (x.itemId.TryGetMasterDataArmorHead(out var masterDataArmorHead) && headId.Value == 0)
+                    {
+                        headId.Value = x.itemId;
+                        gameEvents.OnRequestShowMessage.OnNext($"ちょうどいいので頭に装備した。");
+                    }
+                    else if (x.itemId.TryGetMasterDataArmorBody(out var masterDataArmorBody) && bodyId.Value == 0)
+                    {
+                        bodyId.Value = x.itemId;
+                        gameEvents.OnRequestShowMessage.OnNext($"ちょうどいいので胴に装備した。");
+                    }
+                    else if (x.itemId.TryGetMasterDataArmorArms(out var masterDataArmorArms) && armId.Value == 0)
+                    {
+                        armId.Value = x.itemId;
+                        gameEvents.OnRequestShowMessage.OnNext($"ちょうどいいので腕に装備した。");
+                    }
+                    else if (x.itemId.TryGetMasterDataArmorLegs(out var masterDataArmorLegs) && legId.Value == 0)
+                    {
+                        legId.Value = x.itemId;
+                        gameEvents.OnRequestShowMessage.OnNext($"ちょうどいいので脚に装備した。");
+                    }
+                    else if (x.itemId.TryGetMasterDataAccessory(out var masterDataAccessory))
+                    {
+                        foreach (var i in accessoryIds)
+                        {
+                            if (i.Value == 0)
+                            {
+                                i.Value = x.itemId;
+                                gameEvents.OnRequestShowMessage.OnNext($"ちょうどいいので空いてる装飾品枠に装備した。");
+                                break;
+                            }
+                        }
+                    }
+                })
+                .RegisterTo(character.LifeScope);
         }
 
         public void EquipWeapon(int index, int weaponId)
