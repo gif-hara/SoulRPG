@@ -33,7 +33,7 @@ namespace SoulRPG
             RemoveDebugPanel();
 #endif
         }
-        
+
         public bool Contains(int masterDataAilmentId)
         {
             return elements.Exists(x => x.GetMasterDataId() == masterDataAilmentId);
@@ -135,7 +135,7 @@ namespace SoulRPG
             }
             return false;
         }
-        
+
         public async UniTask OnTakeDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
             scope = CancellationTokenSource.CreateLinkedTokenSource(cancellationTokenSource.Token, scope).Token;
@@ -144,7 +144,7 @@ namespace SoulRPG
                 await element.OnTakeDamageAsync(actor, target, scope);
             }
         }
-        
+
         public async UniTask<int> OnCalculateBehaviourPointAsync(int behaviourPoint)
         {
             foreach (var element in elements)
@@ -152,6 +152,15 @@ namespace SoulRPG
                 behaviourPoint = await element.OnCalculateBehaviourPointAsync(battleCharacter, behaviourPoint, cancellationTokenSource.Token);
             }
             return behaviourPoint;
+        }
+
+        public async UniTask<int> OnCalculateNeedBehaviourPointAsync(int cost)
+        {
+            foreach (var element in elements)
+            {
+                cost = await element.OnCalculateNeedBehaviourPointAsync(battleCharacter, cost, cancellationTokenSource.Token);
+            }
+            return cost;
         }
 
 #if DEBUG
