@@ -140,7 +140,7 @@ namespace SoulRPG
         public async UniTask<int> OnCalculateBehaviourPointAsync(BattleCharacter battleCharacter, int behaviourPoint, CancellationToken scope)
         {
             var container = await PlaySequencesAsync(
-                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnCalculateBehaviourPoint),
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnCalculateRecoveryBehaviourPoint),
                 battleCharacter,
                 x =>
                 {

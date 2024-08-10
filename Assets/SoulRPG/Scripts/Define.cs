@@ -97,7 +97,7 @@ namespace SoulRPG
             EvaluateEvade,
             OnReset,
             OnTakeDamage,
-            OnCalculateBehaviourPoint,
+            OnCalculateRecoveryBehaviourPoint,
             OnCalculateNeedBehaviourPoint,
         }
 
