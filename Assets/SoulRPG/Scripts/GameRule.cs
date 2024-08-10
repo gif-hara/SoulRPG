@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SoulRPG
@@ -13,6 +14,10 @@ namespace SoulRPG
         private ExperienceTableData experienceTableData;
         public ExperienceTableData ExperienceTable => experienceTableData;
 
+        [SerializeField]
+        private List<InitialItemData> initialItemDatabase;
+        public List<InitialItemData> InitialItemDatabase => initialItemDatabase;
+
         [Serializable]
         public class ExperienceTableData
         {
@@ -23,6 +28,18 @@ namespace SoulRPG
             {
                 return Mathf.FloorToInt(Mathf.Pow(level, 2) * rate);
             }
+        }
+
+        [Serializable]
+        public class InitialItemData
+        {
+            [SerializeField]
+            private int itemId;
+            public int ItemId => itemId;
+
+            [SerializeField]
+            private int count;
+            public int Count => count;
         }
     }
 }

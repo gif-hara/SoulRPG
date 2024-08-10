@@ -90,6 +90,10 @@ namespace SoulRPG.SceneControllers
             {
                 player.Warp(debugPosition);
             }
+            foreach (var i in gameRule.InitialItemDatabase)
+            {
+                player.Inventory.Add(i.ItemId, i.Count);
+            }
             playerController.Attach(player, gameMenuBundlePrefab, destroyCancellationToken);
             explorationView.Open(destroyCancellationToken);
             Observable.EveryUpdate(destroyCancellationToken)
