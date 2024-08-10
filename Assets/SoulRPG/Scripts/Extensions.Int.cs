@@ -43,6 +43,11 @@ namespace SoulRPG
             return TinyServiceLocator.Resolve<MasterData>().ArmorLegs.TryGetValue(self, out armorLegs);
         }
 
+        public static bool TryGetMasterDataAccessory(this int self, out MasterData.Accessory accessory)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().Accessories.TryGetValue(self, out accessory);
+        }
+
         public static bool ContainsMasterDataWeapon(this int self)
         {
             return TinyServiceLocator.Resolve<MasterData>().Weapons.ContainsKey(self);
