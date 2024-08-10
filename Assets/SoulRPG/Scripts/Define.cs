@@ -99,6 +99,7 @@ namespace SoulRPG
             OnTakeDamage,
             OnCalculateRecoveryBehaviourPoint,
             OnCalculateNeedBehaviourPoint,
+            OnBehaviourEnd,
         }
 
         public enum AllyType

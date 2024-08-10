@@ -39,6 +39,11 @@ namespace SoulRPG
             return elements.Exists(x => x.GetMasterDataId() == masterDataAilmentId);
         }
 
+        public IAilmentElement Find(int masterDataAilmentId)
+        {
+            return elements.Find(x => x.GetMasterDataId() == masterDataAilmentId);
+        }
+
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
         {
             foreach (var i in elements)
@@ -161,6 +166,16 @@ namespace SoulRPG
                 cost = await element.OnCalculateNeedBehaviourPointAsync(battleCharacter, cost, cancellationTokenSource.Token);
             }
             return cost;
+        }
+
+        public async UniTask OnBehaviourEndAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        {
+            scope = CancellationTokenSource.CreateLinkedTokenSource(cancellationTokenSource.Token, scope).Token;
+            var tempElements = new List<IAilmentElement>(elements);
+            foreach (var element in tempElements)
+            {
+                await element.OnBehaviourEndAsync(actor, target, scope);
+            }
         }
 
 #if DEBUG

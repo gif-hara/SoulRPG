@@ -32,11 +32,15 @@ namespace SoulRPG
 
         UniTask<int> OnCalculateNeedBehaviourPointAsync(BattleCharacter battleCharacter, int cost, CancellationToken scope);
 
+        UniTask OnBehaviourEndAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
+
         bool IsEnd();
 
         int GetMasterDataId();
 
         int GetRemainingTurnCount();
+
+        int GetBehaviourCount();
 
         MasterData.Ailment GetMasterDataAilment();
     }

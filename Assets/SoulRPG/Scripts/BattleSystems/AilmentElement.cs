@@ -19,6 +19,8 @@ namespace SoulRPG
 
         private int currentTurnCount;
 
+        private int behaviourCount;
+
         public AilmentElement(int masterDataAilmentId, int turnCount)
         {
             masterDataAilment = masterDataAilmentId.GetMasterDataAilment();
@@ -164,6 +166,20 @@ namespace SoulRPG
             ).ContinueWith(x => x.Resolve<int>("Cost"));
         }
 
+        public UniTask OnBehaviourEndAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        {
+            behaviourCount++;
+            return PlaySequencesAsync(
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnBehaviourEnd),
+                actor,
+                x =>
+                {
+                    x.Register("Target", target);
+                },
+                scope
+            );
+        }
+
         public bool IsEnd()
         {
             if (turnCount == -1)
@@ -196,6 +212,11 @@ namespace SoulRPG
         public int GetRemainingTurnCount()
         {
             return turnCount - currentTurnCount;
+        }
+
+        public int GetBehaviourCount()
+        {
+            return behaviourCount;
         }
 
         public MasterData.Ailment GetMasterDataAilment()
