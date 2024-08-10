@@ -1161,213 +1161,212 @@ MonoBehaviour:
         X: 0
         Y: 2
         ItemTableId: 1
+      WallEvents:
+      - Id: Test.(10,09).(11,09).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 10
+        LeftY: 9
+        RightX: 11
+        RightY: 9
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(01,10).(01,09).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 1
+        LeftY: 10
+        RightX: 1
+        RightY: 9
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(01,20).(02,20).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 1
+        LeftY: 20
+        RightX: 2
+        RightY: 20
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(03,20).(04,20).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 3
+        LeftY: 20
+        RightX: 4
+        RightY: 20
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(02,24).(03,24).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 2
+        LeftY: 24
+        RightX: 3
+        RightY: 24
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(06,23).(06,22).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 6
+        LeftY: 23
+        RightX: 6
+        RightY: 22
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(06,18).(06,17).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 6
+        LeftY: 18
+        RightX: 6
+        RightY: 17
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(09,19).(10,19).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 9
+        LeftY: 19
+        RightX: 10
+        RightY: 19
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(14,25).(14,24).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 14
+        LeftY: 25
+        RightX: 14
+        RightY: 24
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(14,17).(15,17).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 14
+        LeftY: 17
+        RightX: 15
+        RightY: 17
+        EventType: Door
+        PositiveSideCondition: Lock
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(01,13).(02,13).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 1
+        LeftY: 13
+        RightX: 2
+        RightY: 13
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(07,13).(07,12).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 7
+        LeftY: 13
+        RightX: 7
+        RightY: 12
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(00,06).(01,06).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 0
+        LeftY: 6
+        RightX: 1
+        RightY: 6
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(07,02).(08,02).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 7
+        LeftY: 2
+        RightX: 8
+        RightY: 2
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(12,09).(13,09).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 12
+        LeftY: 9
+        RightX: 13
+        RightY: 9
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(09,14).(10,14).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 9
+        LeftY: 14
+        RightX: 10
+        RightY: 14
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(11,19).(11,18).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 11
+        LeftY: 19
+        RightX: 11
+        RightY: 18
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(12,14).(13,14).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 12
+        LeftY: 14
+        RightX: 13
+        RightY: 14
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(11,21).(11,20).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 11
+        LeftY: 21
+        RightX: 11
+        RightY: 20
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: Test.(10,07).(11,07).0.Door
+        DungeonName: Dungeon.Test
+        LeftX: 10
+        LeftY: 7
+        RightX: 11
+        RightY: 7
+        EventType: Door
+        PositiveSideCondition: Lock
+        NegativeSideCondition: None
+        CreateRate: 0
   floorEventEnemies:
     list:
     - Id: 1
       EventId: Test.00.06.Enemy
       EnemyId: 10101
-  wallEvents:
-    list:
-    - Id: Test.(10,09).(11,09).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 10
-      LeftY: 9
-      RightX: 11
-      RightY: 9
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(01,10).(01,09).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 1
-      LeftY: 10
-      RightX: 1
-      RightY: 9
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(01,20).(02,20).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 1
-      LeftY: 20
-      RightX: 2
-      RightY: 20
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(03,20).(04,20).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 3
-      LeftY: 20
-      RightX: 4
-      RightY: 20
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(02,24).(03,24).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 2
-      LeftY: 24
-      RightX: 3
-      RightY: 24
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(06,23).(06,22).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 6
-      LeftY: 23
-      RightX: 6
-      RightY: 22
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(06,18).(06,17).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 6
-      LeftY: 18
-      RightX: 6
-      RightY: 17
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(09,19).(10,19).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 9
-      LeftY: 19
-      RightX: 10
-      RightY: 19
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(14,25).(14,24).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 14
-      LeftY: 25
-      RightX: 14
-      RightY: 24
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(14,17).(15,17).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 14
-      LeftY: 17
-      RightX: 15
-      RightY: 17
-      EventType: Door
-      PositiveSideCondition: Lock
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(01,13).(02,13).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 1
-      LeftY: 13
-      RightX: 2
-      RightY: 13
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(07,13).(07,12).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 7
-      LeftY: 13
-      RightX: 7
-      RightY: 12
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(00,06).(01,06).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 0
-      LeftY: 6
-      RightX: 1
-      RightY: 6
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(07,02).(08,02).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 7
-      LeftY: 2
-      RightX: 8
-      RightY: 2
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(12,09).(13,09).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 12
-      LeftY: 9
-      RightX: 13
-      RightY: 9
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(09,14).(10,14).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 9
-      LeftY: 14
-      RightX: 10
-      RightY: 14
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(11,19).(11,18).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 11
-      LeftY: 19
-      RightX: 11
-      RightY: 18
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(12,14).(13,14).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 12
-      LeftY: 14
-      RightX: 13
-      RightY: 14
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(11,21).(11,20).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 11
-      LeftY: 21
-      RightX: 11
-      RightY: 20
-      EventType: Door
-      PositiveSideCondition: None
-      NegativeSideCondition: None
-      CreateRate: 0
-    - Id: Test.(10,07).(11,07).0.Door
-      DungeonName: Dungeon.Test
-      LeftX: 10
-      LeftY: 7
-      RightX: 11
-      RightY: 7
-      EventType: Door
-      PositiveSideCondition: Lock
-      NegativeSideCondition: None
-      CreateRate: 0
   wallEventConditionItems:
     list:
     - Key: Test.(10,09).(11,09).0.Door

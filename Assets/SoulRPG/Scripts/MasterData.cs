@@ -104,7 +104,7 @@ namespace SoulRPG
                 "MasterData.WallEvent.Condition.Item",
                 "MasterData.DungeonSpec",
                 "MasterData.ItemTable",
-                "MasterData.FloorItem"
+                "MasterData.FloorItemNoCost"
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -132,8 +132,8 @@ namespace SoulRPG
             wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[13]));
             dungeonSpecs.Set(JsonHelper.FromJson<DungeonSpec>(database.Item2[14]));
             itemTables.Set(JsonHelper.FromJson<ItemTable>(database.Item2[15]));
-            var floorItems = new FloorItem.Group();
-            floorItems.Set(JsonHelper.FromJson<FloorItem>(database.Item2[16]));
+            var floorItemNoCosts = new FloorItemNoCost.Group();
+            floorItemNoCosts.Set(JsonHelper.FromJson<FloorItemNoCost>(database.Item2[16]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -164,11 +164,11 @@ namespace SoulRPG
                     Debug.LogWarning($"Not found AilmentSequences {i.Id}");
                 }
             }
-            foreach (var i in floorItems.List)
+            foreach (var i in floorItemNoCosts.List)
             {
                 var dungeonSpec = dungeonSpecs.Get(i.Key);
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
-                dungeonSpec.FloorItems = i.Value;
+                dungeonSpec.FloorItemNoCosts = i.Value;
             }
             foreach (var i in wallEvents.List)
             {
@@ -316,7 +316,7 @@ namespace SoulRPG
         }
 
         [Serializable]
-        public class FloorItem
+        public class FloorItemNoCost
         {
             public int Id;
 
@@ -329,7 +329,7 @@ namespace SoulRPG
             public int ItemTableId;
 
             [Serializable]
-            public class Group : Group<string, FloorItem>
+            public class Group : Group<string, FloorItemNoCost>
             {
                 public Group() : base(x => x.DungeonName) { }
             }
@@ -586,7 +586,7 @@ namespace SoulRPG
 
             public int InitialY;
 
-            public List<FloorItem> FloorItems;
+            public List<FloorItemNoCost> FloorItemNoCosts;
 
             public List<WallEvent> WallEvents;
 
