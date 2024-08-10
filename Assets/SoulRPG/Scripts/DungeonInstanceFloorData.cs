@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SoulRPG
@@ -11,10 +12,13 @@ namespace SoulRPG
 
         public string EventType { get; }
 
-        public DungeonInstanceFloorData(MasterData.FloorItem floorItem)
+        public List<(MasterData.Item item, int count)> Items { get; } = new();
+
+        public DungeonInstanceFloorData(Vector2Int position, string eventType, List<(MasterData.Item item, int count)> items)
         {
-            Position = new Vector2Int(floorItem.X, floorItem.Y);
-            EventType = "Item";
+            Position = position;
+            EventType = eventType;
+            Items = items;
         }
     }
 }
