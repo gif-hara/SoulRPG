@@ -106,7 +106,8 @@ namespace SoulRPG
                     TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("このターンではもう使用出来ない。");
                     continue;
                 }
-                if(character.BattleStatus.BehaviourPointReactiveProperty.CurrentValue < skill.Cost)
+                var cost = await character.GetFixedNeedBehaviourPointAsync(skill.Cost);
+                if (character.BattleStatus.BehaviourPointReactiveProperty.CurrentValue < cost)
                 {
                     TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("BPが足りない。");
                     continue;
