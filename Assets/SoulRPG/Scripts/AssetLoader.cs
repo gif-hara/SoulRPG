@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace MahCard
+namespace SoulRPG
 {
     /// <summary>
     /// 

@@ -1,7 +1,7 @@
 using HK;
 using UnityEngine;
 
-namespace MahCard
+namespace SoulRPG
 {
     /// <summary>
     /// 
