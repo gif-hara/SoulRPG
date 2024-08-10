@@ -597,7 +597,7 @@ namespace SoulRPG
 
             public int Count;
 
-            public int Weight;
+            public int Rate;
 
             [Serializable]
             public class Group : Group<int, ItemTable>
