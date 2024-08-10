@@ -18,6 +18,10 @@ namespace SoulRPG
         private List<InitialItemData> initialItemDatabase;
         public List<InitialItemData> InitialItemDatabase => initialItemDatabase;
 
+        [SerializeField]
+        private EquipmentBlueprint initialEquipment;
+        public EquipmentBlueprint InitialEquipment => initialEquipment;
+
         [Serializable]
         public class ExperienceTableData
         {

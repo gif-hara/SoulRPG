@@ -51,9 +51,6 @@ namespace SoulRPG.SceneControllers
         private CharacterGrowthParameter debugPlayerGrowthParameter;
 
         [SerializeField]
-        private EquipmentBlueprint debugPlayerEquipment;
-
-        [SerializeField]
         private Define.CharacterAttribute debugPlayerAttribute;
 
         [SerializeField]
@@ -68,7 +65,7 @@ namespace SoulRPG.SceneControllers
 #if DEBUG
             GameDebugPanelView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.DebugPanel"), destroyCancellationToken).Forget();
 #endif
-            var player = new Character(debugPlayerName, debugPlayerGrowthParameter, debugPlayerEquipment, debugPlayerAttribute);
+            var player = new Character(debugPlayerName, debugPlayerGrowthParameter, gameRule.InitialEquipment, debugPlayerAttribute);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             var explorationView = new ExplorationView(
                 gameUIDocumentPrefab,

@@ -17,3 +17,10 @@ MonoBehaviour:
   initialItemDatabase:
   - itemId: 101002
     count: 1
+  initialEquipment:
+    weaponIds: 8a8a0100000000000000000000000000
+    headId: 0
+    bodyId: 0
+    armId: 0
+    legId: 0
+    accessoryIds: 00000000000000000000000000000000
