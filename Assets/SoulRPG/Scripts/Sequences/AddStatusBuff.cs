@@ -31,8 +31,8 @@ namespace SoulRPG
 
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
-            var actor = container.Resolve<BattleCharacter>("Actor");
-            var target = container.Resolve<BattleCharacter>("Target");
+            container.TryResolve<BattleCharacter>("Actor", out var actor);
+            container.TryResolve<BattleCharacter>("Target", out var target);
             if (battleCharacterEvaluator == null ||
                 battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
             {
