@@ -160,12 +160,12 @@ namespace SoulRPG
             {
                 foreach (var i in TinyServiceLocator.Resolve<DungeonController>().wallData)
                 {
-                    var isHorizontal = i.Key.from.y == i.Key.to.y;
+                    var isHorizontal = i.Key.From.y == i.Key.To.y;
                     var directionName = isHorizontal ? "Top" : "Left";
                     var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.Value.EventType}.{directionName}"), tipsParent.transform);
                     maptipWallEventObjects.Add(i.Value, element);
                     var elementTransform = element.transform as RectTransform;
-                    elementTransform.anchoredPosition = new Vector2(i.Key.from.x * tipSize.x, i.Key.from.y * tipSize.y);
+                    elementTransform.anchoredPosition = new Vector2(i.Key.From.x * tipSize.x, i.Key.From.y * tipSize.y);
                     elementTransform.sizeDelta = tipSize;
                     i.Value.IsOpenReactiveProperty
                         .Subscribe(x =>
@@ -241,11 +241,11 @@ namespace SoulRPG
             {
                 foreach (var i in TinyServiceLocator.Resolve<DungeonController>().wallData)
                 {
-                    var isHorizontal = i.Key.from.y == i.Key.to.y;
+                    var isHorizontal = i.Key.From.y == i.Key.To.y;
                     var directionName = isHorizontal ? "Top" : "Left";
                     var element = Object.Instantiate(dungeonDocument.Q<HKUIDocument>($"Dungeon.Wall.Event.{i.Value.EventType}.{directionName}"), dungeonDocument.transform);
                     dungeonWallEventObjects.Add(i.Value, element);
-                    element.transform.position = new Vector3(i.Key.from.x, 0, i.Key.from.y);
+                    element.transform.position = new Vector3(i.Key.From.x, 0, i.Key.From.y);
                     i.Value.IsOpenReactiveProperty
                         .Subscribe(x =>
                         {

@@ -564,6 +564,11 @@ namespace SoulRPG
                     )
                 { }
             }
+
+            public WallPosition GetWallPosition()
+            {
+                return new WallPosition(LeftX, LeftY, RightX, RightY);
+            }
         }
 
         [Serializable]

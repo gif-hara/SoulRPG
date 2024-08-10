@@ -118,10 +118,12 @@ namespace SoulRPG
             };
         }
 
-        public static (Vector2Int from, Vector2Int to) GetWallPosition(this Define.Direction self, Vector2Int position)
+        public static WallPosition GetWallPosition(this Define.Direction self, Vector2Int position)
         {
             var result = self.GetWallIndex();
-            return (position + result.from, position + result.to);
+            var from = position + result.from;
+            var to = position + result.to;
+            return new WallPosition(from, to);
         }
 
         public static string WithTag(this Define.AllyType self, string message)

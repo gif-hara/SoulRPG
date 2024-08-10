@@ -27,8 +27,8 @@ namespace SoulRPG
 
         private readonly Dictionary<Vector2Int, MasterData.FloorEvent> floorEvents = new();
 
-        public readonly Dictionary<(Vector2Int from, Vector2Int to), DungeonInstanceWallData> wallData = new();
-        
+        public readonly Dictionary<WallPosition, DungeonInstanceWallData> wallData = new();
+
         private readonly HashSet<Vector2Int> reachedPoints = new();
 
         public DungeonController(
@@ -59,7 +59,7 @@ namespace SoulRPG
             foreach (var wallEvent in masterDataWallEvents)
             {
                 wallData.Add(
-                    (new Vector2Int(wallEvent.LeftX, wallEvent.LeftY), new Vector2Int(wallEvent.RightX, wallEvent.RightY)),
+                    wallEvent.GetWallPosition(),
                     new DungeonInstanceWallData(wallEvent)
                 );
             }
@@ -84,7 +84,7 @@ namespace SoulRPG
 
         public UniTask InteractAsync(Character character)
         {
-            var wallPositions = character.Direction.GetWallPosition(character.Position);
+            var wallPosition = character.Direction.GetWallPosition(character.Position);
             if (floorEvents.TryGetValue(character.Position, out var dungeonEvent))
             {
                 return dungeonEvent.EventType switch
@@ -94,7 +94,7 @@ namespace SoulRPG
                     _ => UniTask.CompletedTask,
                 };
             }
-            else if (wallData.TryGetValue(wallPositions, out var wallEvent))
+            else if (wallData.TryGetValue(wallPosition, out var wallEvent))
             {
                 return wallEvent.EventType switch
                 {
@@ -120,8 +120,7 @@ namespace SoulRPG
                 return false;
             }
 
-            var key = direction.GetWallPosition(position);
-            if (wallData.TryGetValue(key, out var wallEvent))
+            if (wallData.TryGetValue(direction.GetWallPosition(position), out var wallEvent))
             {
                 return wallEvent.IsOpen;
             }
@@ -155,7 +154,7 @@ namespace SoulRPG
                 TinyServiceLocator.Resolve<GameEvents>().OnAddReachedPoint.OnNext(position);
             }
         }
-        
+
         public bool ContainsReachedPoint(Vector2Int position)
         {
             return reachedPoints.Contains(position);
@@ -222,7 +221,7 @@ namespace SoulRPG
                     if (!wallEvent.IsOpen)
                     {
                         TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
-                        wallEvent.Open();   
+                        wallEvent.Open();
                         await view.OnOpenDoorAsync(wallEvent);
                     }
                     break;
