@@ -587,7 +587,7 @@ namespace SoulRPG
         }
 
         [Serializable]
-        public class ItemTable
+        public class ItemTable : IWeight
         {
             public int Id;
 
@@ -597,7 +597,9 @@ namespace SoulRPG
 
             public int Count;
 
-            public int Rate;
+            public int Weight;
+
+            int IWeight.Weight => Weight;
 
             [Serializable]
             public class Group : Group<int, ItemTable>
