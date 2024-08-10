@@ -24,3 +24,6 @@ MonoBehaviour:
     armId: 0
     legId: 0
     accessoryIds: 00000000000000000000000000000000
+  audioDatabase:
+    list:
+    - clip: {fileID: 8300000, guid: 4f122d726e177e844831ec91924f82f2, type: 3}
