@@ -1065,8 +1065,10 @@ MonoBehaviour:
     - Id: Dungeon.Test
       InitialX: 3
       InitialY: 1
-      NoCostItemNumberMin: 6
-      NoCostItemNumberMax: 7
+      NoCostItemNumberMin: 10
+      NoCostItemNumberMax: 10
+      EnemyPlaceItemNumberMin: 10
+      EnemyPlaceItemNumberMax: 10
       FloorItemNoCosts:
       - Id: 1
         DungeonName: Dungeon.Test
@@ -1117,6 +1119,192 @@ MonoBehaviour:
         DungeonName: Dungeon.Test
         X: 13
         Y: 10
+        ItemTableId: 1
+      - Id: 11
+        DungeonName: Dungeon.Test
+        X: 1
+        Y: 21
+        ItemTableId: 1
+      - Id: 12
+        DungeonName: Dungeon.Test
+        X: 3
+        Y: 21
+        ItemTableId: 1
+      - Id: 13
+        DungeonName: Dungeon.Test
+        X: 18
+        Y: 20
+        ItemTableId: 1
+      - Id: 14
+        DungeonName: Dungeon.Test
+        X: 23
+        Y: 16
+        ItemTableId: 1
+      - Id: 15
+        DungeonName: Dungeon.Test
+        X: 22
+        Y: 15
+        ItemTableId: 1
+      - Id: 16
+        DungeonName: Dungeon.Test
+        X: 22
+        Y: 14
+        ItemTableId: 1
+      - Id: 17
+        DungeonName: Dungeon.Test
+        X: 18
+        Y: 11
+        ItemTableId: 1
+      - Id: 18
+        DungeonName: Dungeon.Test
+        X: 16
+        Y: 10
+        ItemTableId: 1
+      - Id: 19
+        DungeonName: Dungeon.Test
+        X: 24
+        Y: 7
+        ItemTableId: 1
+      - Id: 20
+        DungeonName: Dungeon.Test
+        X: 15
+        Y: 3
+        ItemTableId: 1
+      - Id: 21
+        DungeonName: Dungeon.Test
+        X: 18
+        Y: 3
+        ItemTableId: 1
+      - Id: 22
+        DungeonName: Dungeon.Test
+        X: 25
+        Y: 3
+        ItemTableId: 1
+      - Id: 23
+        DungeonName: Dungeon.Test
+        X: 25
+        Y: 2
+        ItemTableId: 1
+      FloorItemEnemyPlaces:
+      - Id: 1
+        DungeonName: Dungeon.Test
+        X: 3
+        Y: 8
+        ItemTableId: 1
+      - Id: 2
+        DungeonName: Dungeon.Test
+        X: 3
+        Y: 10
+        ItemTableId: 1
+      - Id: 3
+        DungeonName: Dungeon.Test
+        X: 2
+        Y: 15
+        ItemTableId: 1
+      - Id: 4
+        DungeonName: Dungeon.Test
+        X: 6
+        Y: 14
+        ItemTableId: 1
+      - Id: 5
+        DungeonName: Dungeon.Test
+        X: 10
+        Y: 13
+        ItemTableId: 1
+      - Id: 6
+        DungeonName: Dungeon.Test
+        X: 11
+        Y: 13
+        ItemTableId: 1
+      - Id: 7
+        DungeonName: Dungeon.Test
+        X: 11
+        Y: 16
+        ItemTableId: 1
+      - Id: 8
+        DungeonName: Dungeon.Test
+        X: 9
+        Y: 17
+        ItemTableId: 1
+      - Id: 9
+        DungeonName: Dungeon.Test
+        X: 7
+        Y: 18
+        ItemTableId: 1
+      - Id: 10
+        DungeonName: Dungeon.Test
+        X: 12
+        Y: 19
+        ItemTableId: 1
+      - Id: 11
+        DungeonName: Dungeon.Test
+        X: 2
+        Y: 23
+        ItemTableId: 1
+      - Id: 12
+        DungeonName: Dungeon.Test
+        X: 7
+        Y: 23
+        ItemTableId: 1
+      - Id: 13
+        DungeonName: Dungeon.Test
+        X: 16
+        Y: 23
+        ItemTableId: 1
+      - Id: 14
+        DungeonName: Dungeon.Test
+        X: 16
+        Y: 19
+        ItemTableId: 1
+      - Id: 15
+        DungeonName: Dungeon.Test
+        X: 22
+        Y: 20
+        ItemTableId: 1
+      - Id: 16
+        DungeonName: Dungeon.Test
+        X: 17
+        Y: 15
+        ItemTableId: 1
+      - Id: 17
+        DungeonName: Dungeon.Test
+        X: 21
+        Y: 11
+        ItemTableId: 1
+      - Id: 18
+        DungeonName: Dungeon.Test
+        X: 24
+        Y: 11
+        ItemTableId: 1
+      - Id: 19
+        DungeonName: Dungeon.Test
+        X: 16
+        Y: 8
+        ItemTableId: 1
+      - Id: 20
+        DungeonName: Dungeon.Test
+        X: 17
+        Y: 7
+        ItemTableId: 1
+      - Id: 21
+        DungeonName: Dungeon.Test
+        X: 16
+        Y: 6
+        ItemTableId: 1
+      - Id: 22
+        DungeonName: Dungeon.Test
+        X: 18
+        Y: 6
+        ItemTableId: 1
+      - Id: 23
+        DungeonName: Dungeon.Test
+        X: 21
+        Y: 7
+        ItemTableId: 1
+      - Id: 24
+        DungeonName: Dungeon.Test
+        X: 14
+        Y: 2
         ItemTableId: 1
       WallEvents:
       - Id: Test.(10,09).(11,09).0.Door
@@ -1376,6 +1564,12 @@ MonoBehaviour:
       Id: 101020
     - Name: "\u9244\u306E\u76FE"
       Id: 101021
+    - Name: "\u6B7B\u6BD2\u5263"
+      Id: 101022
+    - Name: "\u30EC\u30AA\u306E\u65AD\u7F6A\u5263"
+      Id: 101023
+    - Name: "\u5F71\u8D70\u306E\u77ED\u5263"
+      Id: 101024
     - Name: "\u30C6\u30B9\u30C8\u6B66\u5668"
       Id: 101997
     - Name: "\u7D20\u624B"
@@ -1473,40 +1667,95 @@ MonoBehaviour:
         Weight: 100
       - Id: 14
         TableId: 1
-        ItemId: 102001
+        ItemId: 101014
         Count: 1
         Weight: 100
       - Id: 15
         TableId: 1
-        ItemId: 103001
+        ItemId: 101015
         Count: 1
         Weight: 100
       - Id: 16
         TableId: 1
-        ItemId: 104001
+        ItemId: 101016
         Count: 1
         Weight: 100
       - Id: 17
         TableId: 1
-        ItemId: 105001
+        ItemId: 101017
         Count: 1
         Weight: 100
       - Id: 18
         TableId: 1
-        ItemId: 102002
+        ItemId: 101018
         Count: 1
         Weight: 100
       - Id: 19
         TableId: 1
-        ItemId: 103002
+        ItemId: 101019
         Count: 1
         Weight: 100
       - Id: 20
         TableId: 1
-        ItemId: 104002
+        ItemId: 101020
         Count: 1
         Weight: 100
       - Id: 21
+        TableId: 1
+        ItemId: 101021
+        Count: 1
+        Weight: 100
+      - Id: 22
+        TableId: 1
+        ItemId: 101022
+        Count: 1
+        Weight: 100
+      - Id: 23
+        TableId: 1
+        ItemId: 101023
+        Count: 1
+        Weight: 100
+      - Id: 24
+        TableId: 1
+        ItemId: 101024
+        Count: 1
+        Weight: 100
+      - Id: 25
+        TableId: 1
+        ItemId: 102001
+        Count: 1
+        Weight: 100
+      - Id: 26
+        TableId: 1
+        ItemId: 103001
+        Count: 1
+        Weight: 100
+      - Id: 27
+        TableId: 1
+        ItemId: 104001
+        Count: 1
+        Weight: 100
+      - Id: 28
+        TableId: 1
+        ItemId: 105001
+        Count: 1
+        Weight: 100
+      - Id: 29
+        TableId: 1
+        ItemId: 102002
+        Count: 1
+        Weight: 100
+      - Id: 30
+        TableId: 1
+        ItemId: 103002
+        Count: 1
+        Weight: 100
+      - Id: 31
+        TableId: 1
+        ItemId: 104002
+        Count: 1
+        Weight: 100
+      - Id: 32
         TableId: 1
         ItemId: 105002
         Count: 1
@@ -1658,6 +1907,27 @@ MonoBehaviour:
       AttackAttribute: 1
       Skill1: 101045
       Skill2: 101065
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101022
+      Strength: 111
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101030
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101023
+      Strength: 148
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101031
+      Skill3: 0
+      Skill4: 0
+    - ItemId: 101024
+      Strength: 100
+      AttackAttribute: 0
+      Skill1: 101001
+      Skill2: 101032
       Skill3: 0
       Skill4: 0
     - ItemId: 101997

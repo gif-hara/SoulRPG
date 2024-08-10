@@ -104,7 +104,8 @@ namespace SoulRPG
                 "MasterData.WallEvent.Condition.Item",
                 "MasterData.DungeonSpec",
                 "MasterData.ItemTable",
-                "MasterData.FloorItem.NoCost"
+                "MasterData.FloorItem.NoCost",
+                "MasterData.FloorItem.EnemyPlace"
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -134,6 +135,8 @@ namespace SoulRPG
             itemTables.Set(JsonHelper.FromJson<ItemTable>(database.Item2[15]));
             var floorItemNoCosts = new FloorItemNoCost.Group();
             floorItemNoCosts.Set(JsonHelper.FromJson<FloorItemNoCost>(database.Item2[16]));
+            var floorItemEnemyPlaces = new FloorItemEnemyPlace.Group();
+            floorItemEnemyPlaces.Set(JsonHelper.FromJson<FloorItemEnemyPlace>(database.Item2[17]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -170,14 +173,20 @@ namespace SoulRPG
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.FloorItemNoCosts = i.Value;
             }
+            foreach (var i in floorItemEnemyPlaces.List)
+            {
+                var dungeonSpec = dungeonSpecs.Get(i.Key);
+                Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
+                dungeonSpec.FloorItemEnemyPlaces = i.Value;
+            }
             foreach (var i in wallEvents.List)
             {
                 var dungeonSpec = dungeonSpecs.Get(i.Key);
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.WallEvents = i.Value;
             }
-            UnityEditor.EditorUtility.SetDirty(this);
-            UnityEditor.AssetDatabase.SaveAssets();
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
         }
 #endif
@@ -335,6 +344,25 @@ namespace SoulRPG
             }
         }
 
+        [Serializable]
+        public class FloorItemEnemyPlace
+        {
+            public int Id;
+
+            public string DungeonName;
+
+            public int X;
+
+            public int Y;
+
+            public int ItemTableId;
+
+            [Serializable]
+            public class Group : Group<string, FloorItemEnemyPlace>
+            {
+                public Group() : base(x => x.DungeonName) { }
+            }
+        }
 
         [Serializable]
         public class Item
@@ -590,7 +618,13 @@ namespace SoulRPG
 
             public int NoCostItemNumberMax;
 
+            public int EnemyPlaceItemNumberMin;
+
+            public int EnemyPlaceItemNumberMax;
+
             public List<FloorItemNoCost> FloorItemNoCosts;
+
+            public List<FloorItemEnemyPlace> FloorItemEnemyPlaces;
 
             public List<WallEvent> WallEvents;
 

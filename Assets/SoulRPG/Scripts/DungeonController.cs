@@ -51,36 +51,30 @@ namespace SoulRPG
             checkPoint = initialPosition;
             FloorDatabase.Clear();
             var itemTableDatabase = new Dictionary<int, List<MasterData.ItemTable>>();
+            var createdItemIds = new HashSet<int>();
             var floorItemNoCosts = CurrentDungeonSpec.FloorItemNoCosts
                 .OrderBy(_ => Random.value)
                 .Take(Random.Range(CurrentDungeonSpec.NoCostItemNumberMin, CurrentDungeonSpec.NoCostItemNumberMax));
-            var createdItemIds = new HashSet<int>();
             foreach (var floorItem in floorItemNoCosts)
             {
-                var itemTableId = floorItem.ItemTableId;
-                if (!itemTableDatabase.ContainsKey(itemTableId))
-                {
-                    itemTableDatabase.Add(itemTableId, new List<MasterData.ItemTable>(masterData.ItemTables.Get(itemTableId)));
-                }
-                var itemTables = itemTableDatabase[itemTableId];
-                int lotteryIndex;
-                MasterData.ItemTable itemTable;
-                do
-                {
-                    lotteryIndex = itemTables.LotteryIndex();
-                    itemTable = itemTables[lotteryIndex];
-                } while (createdItemIds.Contains(itemTable.ItemId));
-                var itemList = new List<(MasterData.Item item, int count)>
-                {
-                    (itemTable.ItemId.GetMasterDataItem(), itemTable.Count)
-                };
-                itemTables.RemoveAt(lotteryIndex);
-                createdItemIds.Add(itemTable.ItemId);
                 var floorData = new DungeonInstanceFloorData
                 (
                     new Vector2Int(floorItem.X, floorItem.Y),
                     "Item",
-                    itemList
+                    CreateItemList(floorItem.ItemTableId)
+                );
+                FloorDatabase.Add(new Vector2Int(floorItem.X, floorItem.Y), floorData);
+            }
+            var floorItemEnemyPlaces = CurrentDungeonSpec.FloorItemEnemyPlaces
+                .OrderBy(_ => Random.value)
+                .Take(Random.Range(CurrentDungeonSpec.EnemyPlaceItemNumberMin, CurrentDungeonSpec.EnemyPlaceItemNumberMax));
+            foreach (var floorItem in floorItemEnemyPlaces)
+            {
+                var floorData = new DungeonInstanceFloorData
+                (
+                    new Vector2Int(floorItem.X, floorItem.Y),
+                    "Item",
+                    CreateItemList(floorItem.ItemTableId)
                 );
                 FloorDatabase.Add(new Vector2Int(floorItem.X, floorItem.Y), floorData);
             }
@@ -91,6 +85,37 @@ namespace SoulRPG
                     wallEvent.GetWallPosition(),
                     new DungeonInstanceWallData(wallEvent)
                 );
+            }
+
+            List<(MasterData.Item item, int count)> CreateItemList(int itemTableId)
+            {
+                if (!itemTableDatabase.ContainsKey(itemTableId))
+                {
+                    itemTableDatabase.Add(itemTableId, new List<MasterData.ItemTable>(masterData.ItemTables.Get(itemTableId)));
+                }
+                var itemTables = itemTableDatabase[itemTableId];
+                int lotteryIndex;
+                MasterData.ItemTable itemTable;
+                while (true)
+                {
+                    lotteryIndex = itemTables.LotteryIndex();
+                    itemTable = itemTables[lotteryIndex];
+                    if (!createdItemIds.Contains(itemTable.ItemId))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        itemTables.RemoveAt(lotteryIndex);
+                    }
+                }
+                var itemList = new List<(MasterData.Item item, int count)>
+                {
+                    (itemTable.ItemId.GetMasterDataItem(), itemTable.Count)
+                };
+                itemTables.RemoveAt(lotteryIndex);
+                createdItemIds.Add(itemTable.ItemId);
+                return itemList;
             }
         }
 
