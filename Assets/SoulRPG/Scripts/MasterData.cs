@@ -29,10 +29,6 @@ namespace SoulRPG
         public FloorEventEnemy.DictionaryList FloorEventEnemies => floorEventEnemies;
 
         [SerializeField]
-        private WallEvent.DictionaryList wallEvents;
-        public WallEvent.DictionaryList WallEvents => wallEvents;
-
-        [SerializeField]
         private WallEventConditionItem.Group wallEventConditionItems;
         public WallEventConditionItem.Group WallEventConditionItems => wallEventConditionItems;
 
@@ -131,6 +127,7 @@ namespace SoulRPG
             ailments.Set(JsonHelper.FromJson<Ailment>(database.Item2[10]));
             var enemyCharacterAttributes = new EnemyCharacterAttribute.Group();
             enemyCharacterAttributes.Set(JsonHelper.FromJson<EnemyCharacterAttribute>(database.Item2[11]));
+            var wallEvents = new WallEvent.Group();
             wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[12]));
             wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[13]));
             dungeonSpecs.Set(JsonHelper.FromJson<DungeonSpec>(database.Item2[14]));
@@ -172,6 +169,12 @@ namespace SoulRPG
                 var dungeonSpec = dungeonSpecs.Get(i.Key);
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.FloorItems = i.Value;
+            }
+            foreach (var i in wallEvents.List)
+            {
+                var dungeonSpec = dungeonSpecs.Get(i.Key);
+                Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
+                dungeonSpec.WallEvents = i.Value;
             }
             UnityEditor.EditorUtility.SetDirty(this);
             UnityEditor.AssetDatabase.SaveAssets();
@@ -540,6 +543,12 @@ namespace SoulRPG
                 { }
             }
 
+            [Serializable]
+            public class Group : Group<string, WallEvent>
+            {
+                public Group() : base(x => x.DungeonName) { }
+            }
+
             public WallPosition GetWallPosition()
             {
                 return new WallPosition(LeftX, LeftY, RightX, RightY);
@@ -578,6 +587,8 @@ namespace SoulRPG
             public int InitialY;
 
             public List<FloorItem> FloorItems;
+
+            public List<WallEvent> WallEvents;
 
             [Serializable]
             public class DictionaryList : DictionaryList<string, DungeonSpec>

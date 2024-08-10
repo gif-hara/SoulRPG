@@ -74,9 +74,7 @@ namespace SoulRPG
                 FloorDatabase.Add(new Vector2Int(floorItem.X, floorItem.Y), floorData);
             }
             WallDatabase.Clear();
-            var masterDataWallEvents = masterData.WallEvents.List
-                .Where(x => x.DungeonName == dungeonName);
-            foreach (var wallEvent in masterDataWallEvents)
+            foreach (var wallEvent in CurrentDungeonSpec.WallEvents)
             {
                 WallDatabase.Add(
                     wallEvent.GetWallPosition(),
