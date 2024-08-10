@@ -50,24 +50,32 @@ namespace SoulRPG
             player.Warp(initialPosition);
             checkPoint = initialPosition;
             FloorDatabase.Clear();
-            var itemTables = new Dictionary<int, List<MasterData.ItemTable>>();
+            var itemTableDatabase = new Dictionary<int, List<MasterData.ItemTable>>();
             var floorItemNoCosts = CurrentDungeonSpec.FloorItemNoCosts
                 .OrderBy(_ => Random.value)
                 .Take(Random.Range(CurrentDungeonSpec.NoCostItemNumberMin, CurrentDungeonSpec.NoCostItemNumberMax));
+            var createdItemIds = new HashSet<int>();
             foreach (var floorItem in floorItemNoCosts)
             {
                 var itemTableId = floorItem.ItemTableId;
-                if (!itemTables.ContainsKey(itemTableId))
+                if (!itemTableDatabase.ContainsKey(itemTableId))
                 {
-                    itemTables.Add(itemTableId, new List<MasterData.ItemTable>(masterData.ItemTables.Get(itemTableId)));
+                    itemTableDatabase.Add(itemTableId, new List<MasterData.ItemTable>(masterData.ItemTables.Get(itemTableId)));
                 }
-                var itemTable = itemTables[itemTableId];
-                var lotteryIndex = itemTable.LotteryIndex();
+                var itemTables = itemTableDatabase[itemTableId];
+                int lotteryIndex;
+                MasterData.ItemTable itemTable;
+                do
+                {
+                    lotteryIndex = itemTables.LotteryIndex();
+                    itemTable = itemTables[lotteryIndex];
+                } while (createdItemIds.Contains(itemTable.ItemId));
                 var itemList = new List<(MasterData.Item item, int count)>
                 {
-                    (itemTable[lotteryIndex].ItemId.GetMasterDataItem(), itemTable[lotteryIndex].Count)
+                    (itemTable.ItemId.GetMasterDataItem(), itemTable.Count)
                 };
-                itemTable.RemoveAt(lotteryIndex);
+                itemTables.RemoveAt(lotteryIndex);
+                createdItemIds.Add(itemTable.ItemId);
                 var floorData = new DungeonInstanceFloorData
                 (
                     new Vector2Int(floorItem.X, floorItem.Y),
