@@ -92,5 +92,10 @@ namespace SoulRPG
         {
             return TinyServiceLocator.Resolve<MasterData>().ItemTables.Get(self);
         }
+
+        public static MasterData.Enemy GetMasterDataEnemy(this int self)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().Enemies.Get(self);
+        }
     }
 }
