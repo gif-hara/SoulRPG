@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using HK.Framework;
 using R3;
 using SoulRPG.BattleSystems;
 using SoulRPG.CharacterControllers;
@@ -49,9 +50,28 @@ namespace SoulRPG
             player.Warp(initialPosition);
             checkPoint = initialPosition;
             FloorDatabase.Clear();
+            var itemTables = new Dictionary<int, List<MasterData.ItemTable>>();
             foreach (var floorItem in CurrentDungeonSpec.FloorItems)
             {
-                FloorDatabase.Add(new Vector2Int(floorItem.X, floorItem.Y), new DungeonInstanceFloorData(floorItem));
+                var itemTableId = floorItem.ItemTableId;
+                if (!itemTables.ContainsKey(itemTableId))
+                {
+                    itemTables.Add(itemTableId, new List<MasterData.ItemTable>(masterData.ItemTables.Get(itemTableId)));
+                }
+                var itemTable = itemTables[itemTableId];
+                var lotteryIndex = itemTable.LotteryIndex();
+                var itemList = new List<(MasterData.Item item, int count)>
+                {
+                    (itemTable[lotteryIndex].ItemId.GetMasterDataItem(), itemTable[lotteryIndex].Count)
+                };
+                itemTable.RemoveAt(lotteryIndex);
+                var floorData = new DungeonInstanceFloorData
+                (
+                    new Vector2Int(floorItem.X, floorItem.Y),
+                    "Item",
+                    itemList
+                );
+                FloorDatabase.Add(new Vector2Int(floorItem.X, floorItem.Y), floorData);
             }
             WallDatabase.Clear();
             var masterDataWallEvents = masterData.WallEvents.List
@@ -162,15 +182,13 @@ namespace SoulRPG
 
         private UniTask InvokeOnItemAsync(Character character, DungeonInstanceFloorData floorData)
         {
+            foreach (var (item, count) in floorData.Items)
+            {
+                character.Inventory.Add(item.Id, count);
+            }
+            TinyServiceLocator.Resolve<GameEvents>().OnAcquiredFloorData.OnNext(floorData);
+            FloorDatabase.Remove(character.Position);
             return UniTask.CompletedTask;
-            // var masterDataEventItems = TinyServiceLocator.Resolve<MasterData>().FloorEventItems.Get(floorData.Id);
-            // foreach (var item in masterDataEventItems)
-            // {
-            //     character.Inventory.Add(item.ItemId, item.Count);
-            // }
-            // TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorData.X, floorData.Y));
-            // FloorDatabase.Remove(character.Position);
-            // return UniTask.CompletedTask;
         }
 
         private async UniTask InvokeOnSavePointAsync(Character character)
