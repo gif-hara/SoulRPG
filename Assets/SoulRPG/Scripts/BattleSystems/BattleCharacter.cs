@@ -133,5 +133,10 @@ namespace SoulRPG
             var result = await AilmentController.OnCalculateNeedBehaviourPointAsync(cost);
             return Mathf.Max(0, result);
         }
+
+        public UniTask OnBehaviourEndAsync(BattleCharacter target, CancellationToken scope)
+        {
+            return AilmentController.OnBehaviourEndAsync(this, target, scope);
+        }
     }
 }
