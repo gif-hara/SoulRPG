@@ -37,7 +37,7 @@ namespace SoulRPG
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             if (giveDamageType == Define.GiveDamageType.Direct && await t.EvaluateEvaded())
             {
-                await gameEvents.ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.NameWithTag}は攻撃を回避した。");
+                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}は攻撃を回避した。", "Sfx.Message.0"));
                 return;
             }
 
@@ -45,7 +45,7 @@ namespace SoulRPG
             var damage = damageCalculator.Calculate(actor, target, weapon, targetType);
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             t.BattleStatus.TakeDamage(damage);
-            await gameEvents.ShowMessageAndWaitForSubmitInputAsync($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。");
+            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。", "Sfx.Message.0"));
             var a = t == actor ? target : actor;
             await t.AilmentController.OnTakeDamageAsync(t, a, cancellationToken);
             if (giveDamageType == Define.GiveDamageType.Direct && !t.BattleStatus.IsDead)

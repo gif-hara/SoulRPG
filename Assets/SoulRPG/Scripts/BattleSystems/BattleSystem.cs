@@ -28,7 +28,7 @@ namespace SoulRPG.BattleSystems
                 .Subscribe(_ => gameEvents.OnSubmitInput.OnNext(Unit.Default))
                 .RegisterTo(scope);
 
-            gameEvents.OnRequestShowMessage.OnNext($"{enemy.BattleStatus.NameWithTag}が現れた。");
+            gameEvents.OnRequestShowMessage.OnNext(new($"{enemy.BattleStatus.NameWithTag}が現れた。", "Sfx.Message.0"));
             await gameEvents.WaitForSubmitInputAsync();
             var firstActor = player.BattleStatus.Speed > enemy.BattleStatus.Speed ? player : enemy;
             var secondActor = firstActor == player ? enemy : player;
@@ -42,11 +42,11 @@ namespace SoulRPG.BattleSystems
             var result = player.BattleStatus.IsDead ? Define.BattleResult.PlayerLose : Define.BattleResult.PlayerWin;
             if (result == Define.BattleResult.PlayerWin)
             {
-                await gameEvents.ShowMessageAndWaitForSubmitInputAsync($"{enemy.BattleStatus.NameWithTag}を倒した。");
+                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{enemy.BattleStatus.NameWithTag}を倒した。", "Sfx.Message.0"));
             }
             else
             {
-                await gameEvents.ShowMessageAndWaitForSubmitInputAsync($"{player.BattleStatus.NameWithTag}は倒れてしまった。");
+                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{player.BattleStatus.NameWithTag}は倒れてしまった。", "Sfx.Message.0"));
             }
             inputController.ChangeInputType(InputController.InputType.InGame);
             player.Dispose();

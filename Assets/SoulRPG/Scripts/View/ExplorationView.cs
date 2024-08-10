@@ -251,7 +251,7 @@ namespace SoulRPG
             gameEvents.OnRequestShowMessage
                 .Subscribe(x =>
                 {
-                    CreateElement(x);
+                    CreateElement(x.Message);
                 })
                 .RegisterTo(scope);
 

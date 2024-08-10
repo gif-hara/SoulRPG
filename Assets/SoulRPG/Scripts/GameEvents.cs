@@ -11,7 +11,7 @@ namespace SoulRPG
     /// </summary>
     public sealed class GameEvents
     {
-        public readonly Subject<string> OnRequestShowMessage = new();
+        public readonly Subject<ShowMessageData> OnRequestShowMessage = new();
 
         public readonly Subject<Unit> OnSubmitInput = new();
 
@@ -29,9 +29,9 @@ namespace SoulRPG
         public readonly Subject<string> OnRequestRemoveDebugPanelInformation = new();
 #endif
 
-        public async UniTask ShowMessageAndWaitForSubmitInputAsync(string message)
+        public async UniTask ShowMessageAndWaitForSubmitInputAsync(ShowMessageData data)
         {
-            OnRequestShowMessage.OnNext(message);
+            OnRequestShowMessage.OnNext(data);
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var tempInputType = inputController.CurrentInputType;
             await UniTask.NextFrame();

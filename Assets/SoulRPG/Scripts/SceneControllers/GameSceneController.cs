@@ -4,6 +4,7 @@ using HK;
 using R3;
 using SoulRPG.BattleSystems;
 using SoulRPG.CharacterControllers;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -60,7 +61,8 @@ namespace SoulRPG.SceneControllers
         {
             await BootSystem.IsReady;
             TinyServiceLocator.Register(masterData);
-            TinyServiceLocator.Register(new GameEvents());
+            var gameEvents = new GameEvents();
+            TinyServiceLocator.Register(gameEvents);
             TinyServiceLocator.Register(gameRule);
 #if DEBUG
             GameDebugPanelView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.DebugPanel"), destroyCancellationToken).Forget();
@@ -93,6 +95,13 @@ namespace SoulRPG.SceneControllers
             }
             playerController.Attach(player, gameMenuBundlePrefab, destroyCancellationToken);
             explorationView.Open(destroyCancellationToken);
+            gameEvents.OnRequestShowMessage
+                .Subscribe(x =>
+                {
+                    var sfxName = string.IsNullOrEmpty(x.SfxName) ? "Sfx.Message.0" : x.SfxName;
+                    AudioManager.PlaySFX(gameRule.AudioDatabase.Get(sfxName).Clip);
+                })
+                .RegisterTo(destroyCancellationToken);
             Observable.EveryUpdate(destroyCancellationToken)
                 .Subscribe(async _ =>
                 {
@@ -104,7 +113,7 @@ namespace SoulRPG.SceneControllers
                             {
                                 player.Inventory.Add(i.Id, 1);
                             }
-                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("[DEBUG] Add All Items");
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("[DEBUG] Add All Items", "Sfx.Message.0"));
                         }
 
                         if (Keyboard.current.wKey.wasPressedThisFrame)
@@ -120,7 +129,7 @@ namespace SoulRPG.SceneControllers
                         if (Keyboard.current.eKey.wasPressedThisFrame)
                         {
                             player.InstanceStatus.AddExperience(100000);
-                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("[DEBUG] Add Experience 100000");
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("[DEBUG] Add Experience 100000", "Sfx.Message.0"));
                         }
 
                         if (Keyboard.current.rKey.wasPressedThisFrame)

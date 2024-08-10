@@ -31,11 +31,11 @@ namespace SoulRPG
 
             if (count == 1)
             {
-                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext($"{itemId.GetMasterDataItem().Name}を手に入れた。");
+                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new($"{itemId.GetMasterDataItem().Name}を手に入れた。", "Sfx.Message.0"));
             }
             else
             {
-                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext($"{itemId.GetMasterDataItem().Name}を{count}個手に入れた。");
+                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new($"{itemId.GetMasterDataItem().Name}を{count}個手に入れた。", "Sfx.Message.0"));
             }
             character.Events.OnAcquiredItem.OnNext((itemId, count));
         }

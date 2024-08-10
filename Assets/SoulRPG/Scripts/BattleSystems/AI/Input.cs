@@ -55,11 +55,11 @@ namespace SoulRPG
                     stateMachine.Change(StateSelectWeaponAsync);
                     break;
                 case 1:
-                    gameEvents.OnRequestShowMessage.OnNext("どうやら未実装のようだ");
+                    gameEvents.OnRequestShowMessage.OnNext(new("どうやら未実装のようだ", "Sfx.Message.0"));
                     stateMachine.Change(StateSelectMainCommandAsync);
                     break;
                 case 2:
-                    gameEvents.OnRequestShowMessage.OnNext("どうやら未実装のようだ");
+                    gameEvents.OnRequestShowMessage.OnNext(new("どうやら未実装のようだ", "Sfx.Message.0"));
                     stateMachine.Change(StateSelectMainCommandAsync);
                     break;
             }
@@ -103,13 +103,13 @@ namespace SoulRPG
                 var identifier = Skill.CreateIdentifier(weapon.ItemId, skill.Id);
                 if (character.UsedSkills.Contains(identifier))
                 {
-                    TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("このターンではもう使用出来ない。");
+                    TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。", "Sfx.Message.0"));
                     continue;
                 }
                 var cost = await character.GetFixedNeedBehaviourPointAsync(skill.Cost);
                 if (character.BattleStatus.BehaviourPointReactiveProperty.CurrentValue < cost)
                 {
-                    TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("BPが足りない。");
+                    TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("BPが足りない。", "Sfx.Message.0"));
                     continue;
                 }
                 commandView.Close();

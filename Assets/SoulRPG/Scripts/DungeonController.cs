@@ -240,7 +240,7 @@ namespace SoulRPG
         private async UniTask InvokeOnSavePointAsync(Character character)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            await gameEvents.ShowMessageAndWaitForSubmitInputAsync("ここはセーブポイントのようだ。一休みしよう。");
+            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new("ここはセーブポイントのようだ。一休みしよう。", "Sfx.Message.0"));
             character.InstanceStatus.FullRecovery();
             checkPoint = character.Position;
             var view = new GameSavePointMenuView(gameMenuBundlePrefab, character);
@@ -268,7 +268,7 @@ namespace SoulRPG
             {
                 character.Warp(checkPoint);
                 character.InstanceStatus.FullRecovery();
-                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("どうやら安全な場所に移動されたようだ");
+                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("どうやら安全な場所に移動されたようだ", "Sfx.Message.0"));
             }
             scope.Cancel();
             scope.Dispose();
@@ -283,7 +283,7 @@ namespace SoulRPG
                 case "None":
                     if (!wallEvent.IsOpen)
                     {
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.Message.0"));
                         wallEvent.Open();
                         await view.OnOpenDoorAsync(wallEvent);
                     }
@@ -291,7 +291,7 @@ namespace SoulRPG
                 case "Lock":
                     if (!wallEvent.IsOpen)
                     {
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("こちらからは開かないようだ");
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("こちらからは開かないようだ", "Sfx.Message.0"));
                     }
                     break;
                 case "Item":
@@ -301,11 +301,11 @@ namespace SoulRPG
                         {
                             if (!character.Inventory.HasItem(i))
                             {
-                                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("鍵が必要のようだ");
+                                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("鍵が必要のようだ", "Sfx.Message.0"));
                                 return;
                             }
                         }
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("扉が開いた");
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.Message.0"));
                         wallEvent.Open();
                         await view.OnOpenDoorAsync(wallEvent);
                     }
