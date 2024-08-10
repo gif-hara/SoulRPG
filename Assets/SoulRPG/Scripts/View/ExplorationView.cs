@@ -51,11 +51,8 @@ namespace SoulRPG
         {
             var uiDocument = Object.Instantiate(uiDocumentPrefab);
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
-            var floorEvents = TinyServiceLocator.Resolve<MasterData>().FloorEvents.List
-                .Where(x => x.DungeonName == dungeonController.CurrentDungeon.name)
-                .ToList();
-            SetupMiniMap(uiDocument, dungeonController, floorEvents, character, scope);
-            SetupDungeon(dungeonController, floorEvents);
+            SetupMiniMap(uiDocument, dungeonController, character, scope);
+            SetupDungeon(dungeonController);
             SetupMessage(uiDocument, character, scope);
             SetupStatuses(uiDocument, character, scope);
         }
@@ -63,7 +60,6 @@ namespace SoulRPG
         private void SetupMiniMap(
             HKUIDocument uiDocument,
             DungeonController dungeonController,
-            IEnumerable<MasterData.FloorEvent> floorEvents,
             Character character,
             CancellationToken scope
             )
@@ -122,7 +118,7 @@ namespace SoulRPG
                 }
             }
 
-            CreateFloorEventObjects(floorEvents);
+            CreateFloorEventObjects();
             CreateWallEventObjects();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAddReachedPoint
@@ -137,22 +133,15 @@ namespace SoulRPG
                         maptipFloorEventObjects.Remove(x);
                     }
                 });
-            gameEvents.OnClearTemporaryCompletedEventIds
-                .Subscribe(x =>
-                {
-                    CreateFloorEventObjects(
-                        x.Select(y => y.GetMasterDataDungeonEvent())
-                    );
-                });
 
-            void CreateFloorEventObjects(IEnumerable<MasterData.FloorEvent> floorEvents)
+            void CreateFloorEventObjects()
             {
-                foreach (var i in floorEvents)
+                foreach (var i in dungeonController.FloorEvents)
                 {
-                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{i.EventType}"), tipsParent.transform);
-                    eventObject.anchoredPosition = new Vector2(i.X * tipSize.x, i.Y * tipSize.y);
+                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{i.Value.EventType}"), tipsParent.transform);
+                    eventObject.anchoredPosition = new Vector2(i.Key.x * tipSize.x, i.Key.y * tipSize.y);
                     eventObject.sizeDelta = tipSize;
-                    maptipFloorEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
+                    maptipFloorEventObjects.Add((dungeonController.CurrentDungeon.name, i.Key.x, i.Key.y), eventObject.gameObject);
                 }
             }
 
@@ -187,10 +176,7 @@ namespace SoulRPG
             }
         }
 
-        private void SetupDungeon(
-                DungeonController dungeonController,
-                IEnumerable<MasterData.FloorEvent> floorEvents
-                )
+        private void SetupDungeon(DungeonController dungeonController)
         {
             var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
             for (var i = 0; i <= dungeonController.CurrentDungeon.range.x; i++)
@@ -209,7 +195,7 @@ namespace SoulRPG
                 wallObject.position = new Vector3(i.a.x, 0, i.a.y);
             }
 
-            CreateFloorEventObjects(floorEvents);
+            CreateFloorEventObjects();
             CreateWallEventObjects();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAcquiredDungeonEvent
@@ -221,20 +207,13 @@ namespace SoulRPG
                         dungeonFloorEventObjects.Remove(x);
                     }
                 });
-            gameEvents.OnClearTemporaryCompletedEventIds
-                .Subscribe(x =>
-                {
-                    CreateFloorEventObjects(
-                        x.Select(y => y.GetMasterDataDungeonEvent())
-                    );
-                });
-            void CreateFloorEventObjects(IEnumerable<MasterData.FloorEvent> floorEvents)
+            void CreateFloorEventObjects()
             {
-                foreach (var i in floorEvents)
+                foreach (var (position, data) in dungeonController.FloorEvents)
                 {
-                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{i.EventType}"), dungeonDocument.transform);
-                    eventObject.position = new Vector3(i.X, 0, i.Y);
-                    dungeonFloorEventObjects.Add((dungeonController.CurrentDungeon.name, i.X, i.Y), eventObject.gameObject);
+                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{data.EventType}"), dungeonDocument.transform);
+                    eventObject.position = new Vector3(position.x, 0, position.y);
+                    dungeonFloorEventObjects.Add((dungeonController.CurrentDungeon.name, position.x, position.y), eventObject.gameObject);
                 }
             }
             void CreateWallEventObjects()

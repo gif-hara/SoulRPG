@@ -25,7 +25,7 @@ namespace SoulRPG
 
         private readonly IExplorationView view;
 
-        private readonly Dictionary<Vector2Int, MasterData.FloorEvent> floorEvents = new();
+        public readonly Dictionary<Vector2Int, MasterData.FloorEvent> FloorEvents = new();
 
         public readonly Dictionary<WallPosition, DungeonInstanceWallData> wallData = new();
 
@@ -48,10 +48,10 @@ namespace SoulRPG
             var initialPosition = new Vector2Int(CurrentDungeonSpec.InitialX, CurrentDungeonSpec.InitialY);
             player.Warp(initialPosition);
             checkPoint = initialPosition;
-            floorEvents.Clear();
+            FloorEvents.Clear();
             foreach (var floorEvent in masterData.FloorEvents.List.Where(x => x.DungeonName == dungeonName))
             {
-                floorEvents.Add(new Vector2Int(floorEvent.X, floorEvent.Y), floorEvent);
+                FloorEvents.Add(new Vector2Int(floorEvent.X, floorEvent.Y), floorEvent);
             }
             wallData.Clear();
             var masterDataWallEvents = masterData.WallEvents.List
@@ -68,7 +68,7 @@ namespace SoulRPG
         public UniTask EnterAsync(Character character)
         {
             AddReachedPoint(character);
-            if (floorEvents.TryGetValue(character.Position, out var dungeonEvent))
+            if (FloorEvents.TryGetValue(character.Position, out var dungeonEvent))
             {
                 return dungeonEvent.EventType switch
                 {
@@ -85,7 +85,7 @@ namespace SoulRPG
         public UniTask InteractAsync(Character character)
         {
             var wallPosition = character.Direction.GetWallPosition(character.Position);
-            if (floorEvents.TryGetValue(character.Position, out var dungeonEvent))
+            if (FloorEvents.TryGetValue(character.Position, out var dungeonEvent))
             {
                 return dungeonEvent.EventType switch
                 {
@@ -168,7 +168,7 @@ namespace SoulRPG
                 character.Inventory.Add(item.ItemId, item.Count);
             }
             TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorEvent.X, floorEvent.Y));
-            floorEvents.Remove(character.Position);
+            FloorEvents.Remove(character.Position);
             return UniTask.CompletedTask;
         }
 
@@ -199,7 +199,7 @@ namespace SoulRPG
             if (battleResult == Define.BattleResult.PlayerWin)
             {
                 TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorEvent.X, floorEvent.Y));
-                floorEvents.Remove(character.Position);
+                FloorEvents.Remove(character.Position);
             }
             else
             {
