@@ -25,10 +25,6 @@ namespace SoulRPG
         public DungeonSpec.DictionaryList DungeonSpecs => dungeonSpecs;
 
         [SerializeField]
-        private FloorEventItem.Group floorEventItems;
-        public FloorEventItem.Group FloorEventItems => floorEventItems;
-
-        [SerializeField]
         private FloorEventEnemy.DictionaryList floorEventEnemies;
         public FloorEventEnemy.DictionaryList FloorEventEnemies => floorEventEnemies;
 
@@ -96,7 +92,6 @@ namespace SoulRPG
             };
             var masterDataNames = new[]
             {
-                "MasterData.FloorEvent.Item",
                 "MasterData.Item",
                 "MasterData.Weapon",
                 "MasterData.Skill",
@@ -123,26 +118,25 @@ namespace SoulRPG
             );
             var database = await UniTask.WhenAll(dungeonDownloader, masterDataDownloader);
             dungeons.Set(database.Item1.Select((x, i) => Dungeon.Create(dungeonNames[i], x)));
-            floorEventItems.Set(JsonHelper.FromJson<FloorEventItem>(database.Item2[0]));
-            items.Set(JsonHelper.FromJson<Item>(database.Item2[1]));
-            weapons.Set(JsonHelper.FromJson<Weapon>(database.Item2[2]));
-            skills.Set(JsonHelper.FromJson<Skill>(database.Item2[3]));
-            armorHeads.Set(JsonHelper.FromJson<Armor>(database.Item2[4]));
-            armorBodies.Set(JsonHelper.FromJson<Armor>(database.Item2[5]));
-            armorArms.Set(JsonHelper.FromJson<Armor>(database.Item2[6]));
-            armorLegs.Set(JsonHelper.FromJson<Armor>(database.Item2[7]));
-            accessories.Set(JsonHelper.FromJson<Accessory>(database.Item2[8]));
-            enemies.Set(JsonHelper.FromJson<Enemy>(database.Item2[9]));
-            floorEventEnemies.Set(JsonHelper.FromJson<FloorEventEnemy>(database.Item2[10]));
-            ailments.Set(JsonHelper.FromJson<Ailment>(database.Item2[11]));
+            items.Set(JsonHelper.FromJson<Item>(database.Item2[0]));
+            weapons.Set(JsonHelper.FromJson<Weapon>(database.Item2[1]));
+            skills.Set(JsonHelper.FromJson<Skill>(database.Item2[2]));
+            armorHeads.Set(JsonHelper.FromJson<Armor>(database.Item2[3]));
+            armorBodies.Set(JsonHelper.FromJson<Armor>(database.Item2[4]));
+            armorArms.Set(JsonHelper.FromJson<Armor>(database.Item2[5]));
+            armorLegs.Set(JsonHelper.FromJson<Armor>(database.Item2[6]));
+            accessories.Set(JsonHelper.FromJson<Accessory>(database.Item2[7]));
+            enemies.Set(JsonHelper.FromJson<Enemy>(database.Item2[8]));
+            floorEventEnemies.Set(JsonHelper.FromJson<FloorEventEnemy>(database.Item2[9]));
+            ailments.Set(JsonHelper.FromJson<Ailment>(database.Item2[10]));
             var enemyCharacterAttributes = new EnemyCharacterAttribute.Group();
-            enemyCharacterAttributes.Set(JsonHelper.FromJson<EnemyCharacterAttribute>(database.Item2[12]));
-            wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[13]));
-            wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[14]));
-            dungeonSpecs.Set(JsonHelper.FromJson<DungeonSpec>(database.Item2[15]));
-            itemTables.Set(JsonHelper.FromJson<ItemTable>(database.Item2[16]));
+            enemyCharacterAttributes.Set(JsonHelper.FromJson<EnemyCharacterAttribute>(database.Item2[11]));
+            wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[12]));
+            wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[13]));
+            dungeonSpecs.Set(JsonHelper.FromJson<DungeonSpec>(database.Item2[14]));
+            itemTables.Set(JsonHelper.FromJson<ItemTable>(database.Item2[15]));
             var floorItems = new FloorItem.Group();
-            floorItems.Set(JsonHelper.FromJson<FloorItem>(database.Item2[17]));
+            floorItems.Set(JsonHelper.FromJson<FloorItem>(database.Item2[16]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -299,24 +293,6 @@ namespace SoulRPG
                 result.wall.Set(dw.Distinct());
                 result.range = new Vector2Int(cellData.List.Max(x => x.x), cellData.List.Max(x => x.y));
                 return result;
-            }
-        }
-
-        [Serializable]
-        public class FloorEventItem
-        {
-            public int Id;
-
-            public string EventId;
-
-            public int ItemId;
-
-            public int Count;
-
-            [Serializable]
-            public class Group : Group<string, FloorEventItem>
-            {
-                public Group() : base(x => x.EventId) { }
             }
         }
 
