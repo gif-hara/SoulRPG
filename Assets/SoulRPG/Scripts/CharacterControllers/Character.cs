@@ -1,3 +1,5 @@
+using System;
+using System.Threading;
 using HK;
 using R3;
 using UnityEngine;
@@ -7,7 +9,7 @@ namespace SoulRPG.CharacterControllers
     /// <summary>
     /// 
     /// </summary>
-    public sealed class Character
+    public sealed class Character : IDisposable
     {
         private readonly ReactiveProperty<Vector2Int> position = new();
 
@@ -43,6 +45,10 @@ namespace SoulRPG.CharacterControllers
 
         public string Name { get; }
 
+        private readonly CancellationTokenSource lifeScopeSource = new();
+
+        public CancellationToken LifeScope => lifeScopeSource.Token;
+
         public Character(string name, CharacterGrowthParameter growthParameter, EquipmentBlueprint equipmentBlueprint, Define.CharacterAttribute attribute)
         {
             Name = name;
@@ -66,6 +72,12 @@ namespace SoulRPG.CharacterControllers
         public void Warp(Vector2Int position)
         {
             Position = position;
+        }
+
+        public void Dispose()
+        {
+            lifeScopeSource.Cancel();
+            lifeScopeSource.Dispose();
         }
     }
 }
