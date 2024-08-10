@@ -363,6 +363,12 @@ namespace SoulRPG
 
             public int ItemTableId;
 
+            public int EnemyPositionX;
+
+            public int EnemyPositionY;
+
+            public int EnemyTableId;
+
             [Serializable]
             public class Group : Group<string, FloorItemEnemyPlace>
             {
@@ -664,7 +670,7 @@ namespace SoulRPG
         }
 
         [Serializable]
-        public class EnemyTable
+        public class EnemyTable : IWeight
         {
             public int Id;
 
@@ -673,6 +679,8 @@ namespace SoulRPG
             public int EnemyId;
 
             public int Weight;
+
+            int IWeight.Weight => Weight;
 
             [Serializable]
             public class Group : Group<int, EnemyTable>

@@ -1191,121 +1191,193 @@ MonoBehaviour:
         X: 3
         Y: 8
         ItemTableId: 1
+        EnemyPositionX: 5
+        EnemyPositionY: 10
+        EnemyTableId: 1
       - Id: 2
         DungeonName: Dungeon.Test
         X: 3
         Y: 10
         ItemTableId: 1
+        EnemyPositionX: 0
+        EnemyPositionY: 10
+        EnemyTableId: 1
       - Id: 3
         DungeonName: Dungeon.Test
         X: 2
         Y: 15
         ItemTableId: 1
+        EnemyPositionX: 1
+        EnemyPositionY: 14
+        EnemyTableId: 1
       - Id: 4
         DungeonName: Dungeon.Test
         X: 6
         Y: 14
         ItemTableId: 1
+        EnemyPositionX: 7
+        EnemyPositionY: 14
+        EnemyTableId: 1
       - Id: 5
         DungeonName: Dungeon.Test
         X: 10
         Y: 13
         ItemTableId: 1
+        EnemyPositionX: 9
+        EnemyPositionY: 15
+        EnemyTableId: 1
       - Id: 6
         DungeonName: Dungeon.Test
         X: 11
         Y: 13
         ItemTableId: 1
+        EnemyPositionX: 13
+        EnemyPositionY: 15
+        EnemyTableId: 1
       - Id: 7
         DungeonName: Dungeon.Test
         X: 11
         Y: 16
         ItemTableId: 1
+        EnemyPositionX: 12
+        EnemyPositionY: 15
+        EnemyTableId: 1
       - Id: 8
         DungeonName: Dungeon.Test
         X: 9
         Y: 17
         ItemTableId: 1
+        EnemyPositionX: 9
+        EnemyPositionY: 19
+        EnemyTableId: 1
       - Id: 9
         DungeonName: Dungeon.Test
         X: 7
         Y: 18
         ItemTableId: 1
+        EnemyPositionX: 5
+        EnemyPositionY: 18
+        EnemyTableId: 1
       - Id: 10
         DungeonName: Dungeon.Test
         X: 12
         Y: 19
         ItemTableId: 1
+        EnemyPositionX: 11
+        EnemyPositionY: 19
+        EnemyTableId: 1
       - Id: 11
         DungeonName: Dungeon.Test
         X: 2
         Y: 23
         ItemTableId: 1
+        EnemyPositionX: 2
+        EnemyPositionY: 24
+        EnemyTableId: 1
       - Id: 12
         DungeonName: Dungeon.Test
         X: 7
         Y: 23
         ItemTableId: 1
+        EnemyPositionX: 5
+        EnemyPositionY: 23
+        EnemyTableId: 1
       - Id: 13
         DungeonName: Dungeon.Test
         X: 16
         Y: 23
         ItemTableId: 1
+        EnemyPositionX: 18
+        EnemyPositionY: 24
+        EnemyTableId: 1
       - Id: 14
         DungeonName: Dungeon.Test
         X: 16
         Y: 19
         ItemTableId: 1
+        EnemyPositionX: 20
+        EnemyPositionY: 22
+        EnemyTableId: 1
       - Id: 15
         DungeonName: Dungeon.Test
         X: 22
         Y: 20
         ItemTableId: 1
+        EnemyPositionX: 24
+        EnemyPositionY: 23
+        EnemyTableId: 1
       - Id: 16
         DungeonName: Dungeon.Test
         X: 17
         Y: 15
         ItemTableId: 1
+        EnemyPositionX: 18
+        EnemyPositionY: 15
+        EnemyTableId: 1
       - Id: 17
         DungeonName: Dungeon.Test
         X: 21
         Y: 11
         ItemTableId: 1
+        EnemyPositionX: 21
+        EnemyPositionY: 12
+        EnemyTableId: 1
       - Id: 18
         DungeonName: Dungeon.Test
         X: 24
         Y: 11
         ItemTableId: 1
+        EnemyPositionX: 24
+        EnemyPositionY: 12
+        EnemyTableId: 1
       - Id: 19
         DungeonName: Dungeon.Test
         X: 16
         Y: 8
         ItemTableId: 1
+        EnemyPositionX: 15
+        EnemyPositionY: 7
+        EnemyTableId: 1
       - Id: 20
         DungeonName: Dungeon.Test
         X: 17
         Y: 7
         ItemTableId: 1
+        EnemyPositionX: 15
+        EnemyPositionY: 7
+        EnemyTableId: 1
       - Id: 21
         DungeonName: Dungeon.Test
         X: 16
         Y: 6
         ItemTableId: 1
+        EnemyPositionX: 15
+        EnemyPositionY: 7
+        EnemyTableId: 1
       - Id: 22
         DungeonName: Dungeon.Test
         X: 18
         Y: 6
         ItemTableId: 1
+        EnemyPositionX: 18
+        EnemyPositionY: 8
+        EnemyTableId: 1
       - Id: 23
         DungeonName: Dungeon.Test
         X: 21
         Y: 7
         ItemTableId: 1
+        EnemyPositionX: 21
+        EnemyPositionY: 8
+        EnemyTableId: 1
       - Id: 24
         DungeonName: Dungeon.Test
         X: 14
         Y: 2
         ItemTableId: 1
+        EnemyPositionX: 14
+        EnemyPositionY: 3
+        EnemyTableId: 1
       WallEvents:
       - Id: Test.(10,09).(11,09).0.Door
         DungeonName: Dungeon.Test
