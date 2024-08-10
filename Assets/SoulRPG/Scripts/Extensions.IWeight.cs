@@ -44,11 +44,13 @@ namespace HK.Framework
         /// </remarks>
         public static int LotteryIndex<T>(this IList<T> self, Func<int, int> randomSelector) where T : IWeight
         {
+            Assert.IsTrue(self.Count > 0, "要素が存在しません");
             var max = 0;
             foreach (var i in self)
             {
                 max += i.Weight;
             }
+            Assert.IsTrue(max > 0, "重みが0です");
 
             var current = 0;
             var random = randomSelector(max);
