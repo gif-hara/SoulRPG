@@ -1515,6 +1515,46 @@ MonoBehaviour:
         ItemId: 101013
         Count: 1
         Weight: 100
+      - Id: 14
+        TableId: 1
+        ItemId: 102001
+        Count: 1
+        Weight: 100
+      - Id: 15
+        TableId: 1
+        ItemId: 103001
+        Count: 1
+        Weight: 100
+      - Id: 16
+        TableId: 1
+        ItemId: 104001
+        Count: 1
+        Weight: 100
+      - Id: 17
+        TableId: 1
+        ItemId: 105001
+        Count: 1
+        Weight: 100
+      - Id: 18
+        TableId: 1
+        ItemId: 102002
+        Count: 1
+        Weight: 100
+      - Id: 19
+        TableId: 1
+        ItemId: 103002
+        Count: 1
+        Weight: 100
+      - Id: 20
+        TableId: 1
+        ItemId: 104002
+        Count: 1
+        Weight: 100
+      - Id: 21
+        TableId: 1
+        ItemId: 105002
+        Count: 1
+        Weight: 100
   weapons:
     list:
     - ItemId: 101001
