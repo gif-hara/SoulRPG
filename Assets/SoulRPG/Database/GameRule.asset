@@ -18,7 +18,7 @@ MonoBehaviour:
   - itemId: 101002
     count: 1
   initialEquipment:
-    weaponIds: 8a8a0100000000000000000000000000
+    weaponIds: 6d8e0100000000000000000000000000
     headId: 0
     bodyId: 0
     armId: 0
