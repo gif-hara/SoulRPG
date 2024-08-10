@@ -255,21 +255,6 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
 
-            character.Events.OnAcquiredItem
-                .Subscribe(x =>
-                {
-                    var masterDataItem = TinyServiceLocator.Resolve<MasterData>().Items.Get(x.itemId);
-                    if (x.count == 1)
-                    {
-                        CreateElement($"{masterDataItem.Name}を手に入れた。");
-                    }
-                    else
-                    {
-                        CreateElement($"{masterDataItem.Name}を{x.count}個手に入れた。");
-                    }
-                })
-                .RegisterTo(scope);
-
             gameEvents.OnRequestSetActiveMessageArrow
                 .Subscribe(x =>
                 {

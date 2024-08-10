@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using HK;
 using SoulRPG.CharacterControllers;
 
 namespace SoulRPG
@@ -26,6 +27,15 @@ namespace SoulRPG
             else
             {
                 Items[itemId] = count;
+            }
+
+            if (count == 1)
+            {
+                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext($"{itemId.GetMasterDataItem().Name}を手に入れた。");
+            }
+            else
+            {
+                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext($"{itemId.GetMasterDataItem().Name}を{count}個手に入れた。");
             }
             character.Events.OnAcquiredItem.OnNext((itemId, count));
         }
