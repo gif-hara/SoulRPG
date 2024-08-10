@@ -133,6 +133,10 @@ namespace SoulRPG.SceneControllers
                     }
                 })
                 .RegisterTo(destroyCancellationToken);
+
+            await destroyCancellationToken.WaitUntilCanceled();
+
+            player.Dispose();
         }
     }
 }
