@@ -68,6 +68,7 @@ namespace SoulRPG.BattleSystems
                     var cost = await actor.GetFixedNeedBehaviourPointAsync(commandInvoker.GetCost());
                     actor.BattleStatus.AddBehaviourPoint(-cost);
                     await commandInvoker.InvokeAsync(actor, target, scope);
+                    await actor.OnBehaviourEndAsync(target, scope);
                 }
                 await actor.InvokeAfterCommandAsync(target, scope);
                 await actor.TurnEndAsync();
