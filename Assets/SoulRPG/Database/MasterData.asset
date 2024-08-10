@@ -1275,14 +1275,22 @@ MonoBehaviour:
   dungeonSpecs:
     list:
     - Id: Dungeon.Test
-      InitialX: 3
-      InitialY: 1
+      InitialX: 0
+      InitialY: 0
       NoCostItemNumberMin: 0
       NoCostItemNumberMax: 0
-      EnemyPlaceItemNumberMin: 0
-      EnemyPlaceItemNumberMax: 0
+      EnemyPlaceItemNumberMin: 1
+      EnemyPlaceItemNumberMax: 1
       FloorItemNoCosts: []
-      FloorItemEnemyPlaces: []
+      FloorItemEnemyPlaces:
+      - Id: 1
+        DungeonName: Dungeon.Test
+        X: 0
+        Y: 2
+        ItemTableId: 1
+        EnemyPositionX: 0
+        EnemyPositionY: 1
+        EnemyTableId: 1
       WallEvents: []
     - Id: Dungeon.10101
       InitialX: 3
@@ -1408,7 +1416,7 @@ MonoBehaviour:
         Y: 2
         ItemTableId: 1
       FloorItemEnemyPlaces:
-      - Id: 1
+      - Id: 2
         DungeonName: Dungeon.10101
         X: 3
         Y: 8
@@ -1416,7 +1424,7 @@ MonoBehaviour:
         EnemyPositionX: 5
         EnemyPositionY: 10
         EnemyTableId: 1
-      - Id: 2
+      - Id: 3
         DungeonName: Dungeon.10101
         X: 3
         Y: 10
@@ -1424,7 +1432,7 @@ MonoBehaviour:
         EnemyPositionX: 0
         EnemyPositionY: 10
         EnemyTableId: 1
-      - Id: 3
+      - Id: 4
         DungeonName: Dungeon.10101
         X: 2
         Y: 15
@@ -1432,7 +1440,7 @@ MonoBehaviour:
         EnemyPositionX: 1
         EnemyPositionY: 14
         EnemyTableId: 1
-      - Id: 4
+      - Id: 5
         DungeonName: Dungeon.10101
         X: 6
         Y: 14
@@ -1440,7 +1448,7 @@ MonoBehaviour:
         EnemyPositionX: 7
         EnemyPositionY: 14
         EnemyTableId: 1
-      - Id: 5
+      - Id: 6
         DungeonName: Dungeon.10101
         X: 10
         Y: 13
@@ -1448,7 +1456,7 @@ MonoBehaviour:
         EnemyPositionX: 9
         EnemyPositionY: 15
         EnemyTableId: 1
-      - Id: 6
+      - Id: 7
         DungeonName: Dungeon.10101
         X: 11
         Y: 13
@@ -1456,7 +1464,7 @@ MonoBehaviour:
         EnemyPositionX: 13
         EnemyPositionY: 15
         EnemyTableId: 1
-      - Id: 7
+      - Id: 8
         DungeonName: Dungeon.10101
         X: 11
         Y: 16
@@ -1464,7 +1472,7 @@ MonoBehaviour:
         EnemyPositionX: 12
         EnemyPositionY: 15
         EnemyTableId: 1
-      - Id: 8
+      - Id: 9
         DungeonName: Dungeon.10101
         X: 9
         Y: 17
@@ -1472,7 +1480,7 @@ MonoBehaviour:
         EnemyPositionX: 9
         EnemyPositionY: 19
         EnemyTableId: 1
-      - Id: 9
+      - Id: 10
         DungeonName: Dungeon.10101
         X: 7
         Y: 18
@@ -1480,7 +1488,7 @@ MonoBehaviour:
         EnemyPositionX: 5
         EnemyPositionY: 18
         EnemyTableId: 1
-      - Id: 10
+      - Id: 11
         DungeonName: Dungeon.10101
         X: 12
         Y: 19
@@ -1488,7 +1496,7 @@ MonoBehaviour:
         EnemyPositionX: 11
         EnemyPositionY: 19
         EnemyTableId: 1
-      - Id: 11
+      - Id: 12
         DungeonName: Dungeon.10101
         X: 2
         Y: 23
@@ -1496,7 +1504,7 @@ MonoBehaviour:
         EnemyPositionX: 2
         EnemyPositionY: 24
         EnemyTableId: 1
-      - Id: 12
+      - Id: 13
         DungeonName: Dungeon.10101
         X: 7
         Y: 23
@@ -1504,7 +1512,7 @@ MonoBehaviour:
         EnemyPositionX: 5
         EnemyPositionY: 23
         EnemyTableId: 1
-      - Id: 13
+      - Id: 14
         DungeonName: Dungeon.10101
         X: 16
         Y: 23
@@ -1512,7 +1520,7 @@ MonoBehaviour:
         EnemyPositionX: 18
         EnemyPositionY: 24
         EnemyTableId: 1
-      - Id: 14
+      - Id: 15
         DungeonName: Dungeon.10101
         X: 16
         Y: 19
@@ -1520,7 +1528,7 @@ MonoBehaviour:
         EnemyPositionX: 20
         EnemyPositionY: 22
         EnemyTableId: 1
-      - Id: 15
+      - Id: 16
         DungeonName: Dungeon.10101
         X: 22
         Y: 20
@@ -1528,7 +1536,7 @@ MonoBehaviour:
         EnemyPositionX: 24
         EnemyPositionY: 23
         EnemyTableId: 1
-      - Id: 16
+      - Id: 17
         DungeonName: Dungeon.10101
         X: 17
         Y: 15
@@ -1536,7 +1544,7 @@ MonoBehaviour:
         EnemyPositionX: 18
         EnemyPositionY: 15
         EnemyTableId: 1
-      - Id: 17
+      - Id: 18
         DungeonName: Dungeon.10101
         X: 21
         Y: 11
@@ -1544,7 +1552,7 @@ MonoBehaviour:
         EnemyPositionX: 21
         EnemyPositionY: 12
         EnemyTableId: 1
-      - Id: 18
+      - Id: 19
         DungeonName: Dungeon.10101
         X: 24
         Y: 11
@@ -1552,7 +1560,7 @@ MonoBehaviour:
         EnemyPositionX: 24
         EnemyPositionY: 12
         EnemyTableId: 1
-      - Id: 19
+      - Id: 20
         DungeonName: Dungeon.10101
         X: 16
         Y: 8
@@ -1560,7 +1568,7 @@ MonoBehaviour:
         EnemyPositionX: 15
         EnemyPositionY: 7
         EnemyTableId: 1
-      - Id: 20
+      - Id: 21
         DungeonName: Dungeon.10101
         X: 17
         Y: 7
@@ -1568,7 +1576,7 @@ MonoBehaviour:
         EnemyPositionX: 15
         EnemyPositionY: 7
         EnemyTableId: 1
-      - Id: 21
+      - Id: 22
         DungeonName: Dungeon.10101
         X: 16
         Y: 6
@@ -1576,7 +1584,7 @@ MonoBehaviour:
         EnemyPositionX: 15
         EnemyPositionY: 7
         EnemyTableId: 1
-      - Id: 22
+      - Id: 23
         DungeonName: Dungeon.10101
         X: 18
         Y: 6
@@ -1584,7 +1592,7 @@ MonoBehaviour:
         EnemyPositionX: 18
         EnemyPositionY: 8
         EnemyTableId: 1
-      - Id: 23
+      - Id: 24
         DungeonName: Dungeon.10101
         X: 21
         Y: 7
@@ -1592,7 +1600,7 @@ MonoBehaviour:
         EnemyPositionX: 21
         EnemyPositionY: 8
         EnemyTableId: 1
-      - Id: 24
+      - Id: 25
         DungeonName: Dungeon.10101
         X: 14
         Y: 2
@@ -2228,8 +2236,8 @@ MonoBehaviour:
       Strength: 100
       AttackAttribute: 0
       Skill1: 101001
-      Skill2: 101031
-      Skill3: 0
+      Skill2: 101032
+      Skill3: 101015
       Skill4: 0
     - ItemId: 101998
       Strength: 50
@@ -2438,7 +2446,7 @@ MonoBehaviour:
       Cost: 1
       CanRegisterUsedSkills: 1
       Description: "\u7D20\u65E9\u3044\u8EAB\u306E\u3053\u306A\u3057\u3067\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u5148\u99C6\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: ad6bf537a0fa8c64295109c338430812, type: 2}
     - Name: "\u5897\u5E45\u3059\u308B\u9B54\u529B"
       Id: 101033
       Cost: 1
@@ -2842,7 +2850,7 @@ MonoBehaviour:
       Name: "\u5148\u99C6"
       Description: "\u98A8\u306E\u5982\u304F\u4FCA\u654F\u306A\u52D5\u304D\u3067\u3001\u6B21\u306E\u884C\u52D5\u3067\u6D88\u8CBB\u3055\u308C\u308BBP\u304C2\u5C11\u306A\u304F\u306A\u308B\u3002\u4F55\u304B\u884C\u52D5\u3092\u3059\u308B\u3053\u3068\u3067\u89E3\u9664\u3055\u308C\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: 85331336ce78c044898e042f379eaddd, type: 2}
     - Id: 101014
       Name: "\u9244\u58C1"
       Description: "\u92FC\u9244\u306E\u58C1\u306E\u5982\u304D\u529B\u3092\u5F97\u308B\u3002\u653B\u6483\u3092\u7121\u52B9\u5316\u3059\u308B\u3002\u4E00\u5EA6\u52B9\u679C\u3092\u767A\u63EE\u3057\u305F\u3089\u89E3\u9664\u3055\u308C\u308B\u3002"
