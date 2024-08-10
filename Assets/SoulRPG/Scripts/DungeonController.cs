@@ -27,7 +27,7 @@ namespace SoulRPG
 
         public readonly Dictionary<Vector2Int, DungeonInstanceFloorData> FloorDatabase = new();
 
-        public readonly Dictionary<WallPosition, DungeonInstanceWallData> wallData = new();
+        public readonly Dictionary<WallPosition, DungeonInstanceWallData> WallDatabase = new();
 
         private readonly HashSet<Vector2Int> reachedPoints = new();
 
@@ -53,12 +53,12 @@ namespace SoulRPG
             {
                 FloorDatabase.Add(new Vector2Int(floorEvent.X, floorEvent.Y), new DungeonInstanceFloorData(floorEvent));
             }
-            wallData.Clear();
+            WallDatabase.Clear();
             var masterDataWallEvents = masterData.WallEvents.List
                 .Where(x => x.DungeonName == dungeonName);
             foreach (var wallEvent in masterDataWallEvents)
             {
-                wallData.Add(
+                WallDatabase.Add(
                     wallEvent.GetWallPosition(),
                     new DungeonInstanceWallData(wallEvent)
                 );
@@ -94,7 +94,7 @@ namespace SoulRPG
                     _ => UniTask.CompletedTask,
                 };
             }
-            else if (wallData.TryGetValue(wallPosition, out var wallEvent))
+            else if (WallDatabase.TryGetValue(wallPosition, out var wallEvent))
             {
                 return wallEvent.EventType switch
                 {
@@ -120,7 +120,7 @@ namespace SoulRPG
                 return false;
             }
 
-            if (wallData.TryGetValue(direction.GetWallPosition(position), out var wallEvent))
+            if (WallDatabase.TryGetValue(direction.GetWallPosition(position), out var wallEvent))
             {
                 return wallEvent.IsOpen;
             }

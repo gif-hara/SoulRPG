@@ -147,7 +147,7 @@ namespace SoulRPG
 
             void CreateWallEventObjects()
             {
-                foreach (var i in TinyServiceLocator.Resolve<DungeonController>().wallData)
+                foreach (var i in TinyServiceLocator.Resolve<DungeonController>().WallDatabase)
                 {
                     var isHorizontal = i.Key.From.y == i.Key.To.y;
                     var directionName = isHorizontal ? "Top" : "Left";
@@ -218,7 +218,7 @@ namespace SoulRPG
             }
             void CreateWallEventObjects()
             {
-                foreach (var i in TinyServiceLocator.Resolve<DungeonController>().wallData)
+                foreach (var i in TinyServiceLocator.Resolve<DungeonController>().WallDatabase)
                 {
                     var isHorizontal = i.Key.From.y == i.Key.To.y;
                     var directionName = isHorizontal ? "Top" : "Left";
