@@ -88,7 +88,8 @@ namespace SoulRPG
             Debug.Log("Begin MasterData Update");
             var dungeonNames = new[]
             {
-                "Dungeon.Test"
+                "Dungeon.Test",
+                "Dungeon.10101",
             };
             var masterDataNames = new[]
             {

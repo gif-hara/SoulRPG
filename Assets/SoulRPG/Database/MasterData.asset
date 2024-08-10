@@ -43,6 +43,218 @@ MonoBehaviour:
           b: {x: 11, y: 25}
         - a: {x: 11, y: 25}
           b: {x: 12, y: 25}
+        - a: {x: 12, y: 25}
+          b: {x: 13, y: 25}
+        - a: {x: 13, y: 25}
+          b: {x: 14, y: 25}
+        - a: {x: 14, y: 25}
+          b: {x: 15, y: 25}
+        - a: {x: 15, y: 25}
+          b: {x: 16, y: 25}
+        - a: {x: 16, y: 25}
+          b: {x: 17, y: 25}
+        - a: {x: 17, y: 25}
+          b: {x: 18, y: 25}
+        - a: {x: 18, y: 25}
+          b: {x: 19, y: 25}
+        - a: {x: 19, y: 25}
+          b: {x: 20, y: 25}
+        - a: {x: 20, y: 25}
+          b: {x: 21, y: 25}
+        - a: {x: 21, y: 25}
+          b: {x: 22, y: 25}
+        - a: {x: 22, y: 25}
+          b: {x: 23, y: 25}
+        - a: {x: 23, y: 25}
+          b: {x: 24, y: 25}
+        - a: {x: 24, y: 25}
+          b: {x: 25, y: 25}
+        - a: {x: 25, y: 25}
+          b: {x: 26, y: 25}
+        - a: {x: 26, y: 25}
+          b: {x: 26, y: 24}
+        - a: {x: 0, y: 24}
+          b: {x: 0, y: 23}
+        - a: {x: 26, y: 24}
+          b: {x: 26, y: 23}
+        - a: {x: 0, y: 23}
+          b: {x: 0, y: 22}
+        - a: {x: 26, y: 23}
+          b: {x: 26, y: 22}
+        - a: {x: 0, y: 22}
+          b: {x: 0, y: 21}
+        - a: {x: 26, y: 22}
+          b: {x: 26, y: 21}
+        - a: {x: 0, y: 21}
+          b: {x: 0, y: 20}
+        - a: {x: 26, y: 21}
+          b: {x: 26, y: 20}
+        - a: {x: 0, y: 20}
+          b: {x: 0, y: 19}
+        - a: {x: 26, y: 20}
+          b: {x: 26, y: 19}
+        - a: {x: 0, y: 19}
+          b: {x: 0, y: 18}
+        - a: {x: 26, y: 19}
+          b: {x: 26, y: 18}
+        - a: {x: 0, y: 18}
+          b: {x: 0, y: 17}
+        - a: {x: 26, y: 18}
+          b: {x: 26, y: 17}
+        - a: {x: 0, y: 17}
+          b: {x: 0, y: 16}
+        - a: {x: 26, y: 17}
+          b: {x: 26, y: 16}
+        - a: {x: 0, y: 16}
+          b: {x: 0, y: 15}
+        - a: {x: 26, y: 16}
+          b: {x: 26, y: 15}
+        - a: {x: 0, y: 15}
+          b: {x: 0, y: 14}
+        - a: {x: 26, y: 15}
+          b: {x: 26, y: 14}
+        - a: {x: 0, y: 14}
+          b: {x: 0, y: 13}
+        - a: {x: 26, y: 14}
+          b: {x: 26, y: 13}
+        - a: {x: 0, y: 13}
+          b: {x: 0, y: 12}
+        - a: {x: 26, y: 13}
+          b: {x: 26, y: 12}
+        - a: {x: 0, y: 12}
+          b: {x: 0, y: 11}
+        - a: {x: 26, y: 12}
+          b: {x: 26, y: 11}
+        - a: {x: 0, y: 11}
+          b: {x: 0, y: 10}
+        - a: {x: 26, y: 11}
+          b: {x: 26, y: 10}
+        - a: {x: 0, y: 10}
+          b: {x: 0, y: 9}
+        - a: {x: 26, y: 10}
+          b: {x: 26, y: 9}
+        - a: {x: 0, y: 9}
+          b: {x: 0, y: 8}
+        - a: {x: 26, y: 9}
+          b: {x: 26, y: 8}
+        - a: {x: 0, y: 8}
+          b: {x: 0, y: 7}
+        - a: {x: 26, y: 8}
+          b: {x: 26, y: 7}
+        - a: {x: 0, y: 7}
+          b: {x: 0, y: 6}
+        - a: {x: 26, y: 7}
+          b: {x: 26, y: 6}
+        - a: {x: 0, y: 6}
+          b: {x: 0, y: 5}
+        - a: {x: 26, y: 6}
+          b: {x: 26, y: 5}
+        - a: {x: 0, y: 5}
+          b: {x: 0, y: 4}
+        - a: {x: 26, y: 5}
+          b: {x: 26, y: 4}
+        - a: {x: 0, y: 4}
+          b: {x: 0, y: 3}
+        - a: {x: 26, y: 4}
+          b: {x: 26, y: 3}
+        - a: {x: 0, y: 3}
+          b: {x: 0, y: 2}
+        - a: {x: 26, y: 3}
+          b: {x: 26, y: 2}
+        - a: {x: 0, y: 2}
+          b: {x: 0, y: 1}
+        - a: {x: 26, y: 2}
+          b: {x: 26, y: 1}
+        - a: {x: 0, y: 1}
+          b: {x: 0, y: 0}
+        - a: {x: 26, y: 1}
+          b: {x: 26, y: 0}
+        - a: {x: 0, y: -1}
+          b: {x: 1, y: -1}
+        - a: {x: 0, y: 0}
+          b: {x: 0, y: -1}
+        - a: {x: 1, y: -1}
+          b: {x: 2, y: -1}
+        - a: {x: 2, y: -1}
+          b: {x: 3, y: -1}
+        - a: {x: 3, y: -1}
+          b: {x: 4, y: -1}
+        - a: {x: 4, y: -1}
+          b: {x: 5, y: -1}
+        - a: {x: 5, y: -1}
+          b: {x: 6, y: -1}
+        - a: {x: 6, y: -1}
+          b: {x: 7, y: -1}
+        - a: {x: 7, y: -1}
+          b: {x: 8, y: -1}
+        - a: {x: 8, y: -1}
+          b: {x: 9, y: -1}
+        - a: {x: 9, y: -1}
+          b: {x: 10, y: -1}
+        - a: {x: 10, y: -1}
+          b: {x: 11, y: -1}
+        - a: {x: 11, y: -1}
+          b: {x: 12, y: -1}
+        - a: {x: 12, y: -1}
+          b: {x: 13, y: -1}
+        - a: {x: 13, y: -1}
+          b: {x: 14, y: -1}
+        - a: {x: 14, y: -1}
+          b: {x: 15, y: -1}
+        - a: {x: 15, y: -1}
+          b: {x: 16, y: -1}
+        - a: {x: 16, y: -1}
+          b: {x: 17, y: -1}
+        - a: {x: 17, y: -1}
+          b: {x: 18, y: -1}
+        - a: {x: 18, y: -1}
+          b: {x: 19, y: -1}
+        - a: {x: 19, y: -1}
+          b: {x: 20, y: -1}
+        - a: {x: 20, y: -1}
+          b: {x: 21, y: -1}
+        - a: {x: 21, y: -1}
+          b: {x: 22, y: -1}
+        - a: {x: 22, y: -1}
+          b: {x: 23, y: -1}
+        - a: {x: 23, y: -1}
+          b: {x: 24, y: -1}
+        - a: {x: 24, y: -1}
+          b: {x: 25, y: -1}
+        - a: {x: 25, y: -1}
+          b: {x: 26, y: -1}
+        - a: {x: 26, y: 0}
+          b: {x: 26, y: -1}
+      range: {x: 25, y: 25}
+    - name: Dungeon.10101
+      wall:
+        list:
+        - a: {x: 0, y: 25}
+          b: {x: 1, y: 25}
+        - a: {x: 0, y: 25}
+          b: {x: 0, y: 24}
+        - a: {x: 1, y: 25}
+          b: {x: 2, y: 25}
+        - a: {x: 2, y: 25}
+          b: {x: 3, y: 25}
+        - a: {x: 3, y: 25}
+          b: {x: 4, y: 25}
+        - a: {x: 4, y: 25}
+          b: {x: 5, y: 25}
+        - a: {x: 5, y: 25}
+          b: {x: 6, y: 25}
+        - a: {x: 6, y: 25}
+          b: {x: 7, y: 25}
+        - a: {x: 7, y: 25}
+          b: {x: 8, y: 25}
+        - a: {x: 8, y: 25}
+          b: {x: 9, y: 25}
+        - a: {x: 9, y: 25}
+          b: {x: 10, y: 25}
+        - a: {x: 10, y: 25}
+          b: {x: 11, y: 25}
+        - a: {x: 11, y: 25}
+          b: {x: 12, y: 25}
         - a: {x: 11, y: 25}
           b: {x: 11, y: 24}
         - a: {x: 12, y: 25}
@@ -1065,129 +1277,139 @@ MonoBehaviour:
     - Id: Dungeon.Test
       InitialX: 3
       InitialY: 1
+      NoCostItemNumberMin: 0
+      NoCostItemNumberMax: 0
+      EnemyPlaceItemNumberMin: 0
+      EnemyPlaceItemNumberMax: 0
+      FloorItemNoCosts: []
+      FloorItemEnemyPlaces: []
+      WallEvents: []
+    - Id: Dungeon.10101
+      InitialX: 3
+      InitialY: 1
       NoCostItemNumberMin: 10
       NoCostItemNumberMax: 10
       EnemyPlaceItemNumberMin: 10
       EnemyPlaceItemNumberMax: 10
       FloorItemNoCosts:
       - Id: 1
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 0
         Y: 0
         ItemTableId: 1
       - Id: 2
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 0
         Y: 9
         ItemTableId: 1
       - Id: 3
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 1
         Y: 3
         ItemTableId: 1
       - Id: 4
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 5
         Y: 3
         ItemTableId: 1
       - Id: 5
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 1
         Y: 0
         ItemTableId: 1
       - Id: 6
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 5
         Y: 0
         ItemTableId: 1
       - Id: 7
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 7
         Y: 1
         ItemTableId: 1
       - Id: 8
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 8
         Y: 6
         ItemTableId: 1
       - Id: 9
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 10
         Y: 11
         ItemTableId: 1
       - Id: 10
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 13
         Y: 10
         ItemTableId: 1
       - Id: 11
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 1
         Y: 21
         ItemTableId: 1
       - Id: 12
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 3
         Y: 21
         ItemTableId: 1
       - Id: 13
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 18
         Y: 20
         ItemTableId: 1
       - Id: 14
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 23
         Y: 16
         ItemTableId: 1
       - Id: 15
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 22
         Y: 15
         ItemTableId: 1
       - Id: 16
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 22
         Y: 14
         ItemTableId: 1
       - Id: 17
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 18
         Y: 11
         ItemTableId: 1
       - Id: 18
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 16
         Y: 10
         ItemTableId: 1
       - Id: 19
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 24
         Y: 7
         ItemTableId: 1
       - Id: 20
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 15
         Y: 3
         ItemTableId: 1
       - Id: 21
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 18
         Y: 3
         ItemTableId: 1
       - Id: 22
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 25
         Y: 3
         ItemTableId: 1
       - Id: 23
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 25
         Y: 2
         ItemTableId: 1
       FloorItemEnemyPlaces:
       - Id: 1
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 3
         Y: 8
         ItemTableId: 1
@@ -1195,7 +1417,7 @@ MonoBehaviour:
         EnemyPositionY: 10
         EnemyTableId: 1
       - Id: 2
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 3
         Y: 10
         ItemTableId: 1
@@ -1203,7 +1425,7 @@ MonoBehaviour:
         EnemyPositionY: 10
         EnemyTableId: 1
       - Id: 3
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 2
         Y: 15
         ItemTableId: 1
@@ -1211,7 +1433,7 @@ MonoBehaviour:
         EnemyPositionY: 14
         EnemyTableId: 1
       - Id: 4
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 6
         Y: 14
         ItemTableId: 1
@@ -1219,7 +1441,7 @@ MonoBehaviour:
         EnemyPositionY: 14
         EnemyTableId: 1
       - Id: 5
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 10
         Y: 13
         ItemTableId: 1
@@ -1227,7 +1449,7 @@ MonoBehaviour:
         EnemyPositionY: 15
         EnemyTableId: 1
       - Id: 6
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 11
         Y: 13
         ItemTableId: 1
@@ -1235,7 +1457,7 @@ MonoBehaviour:
         EnemyPositionY: 15
         EnemyTableId: 1
       - Id: 7
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 11
         Y: 16
         ItemTableId: 1
@@ -1243,7 +1465,7 @@ MonoBehaviour:
         EnemyPositionY: 15
         EnemyTableId: 1
       - Id: 8
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 9
         Y: 17
         ItemTableId: 1
@@ -1251,7 +1473,7 @@ MonoBehaviour:
         EnemyPositionY: 19
         EnemyTableId: 1
       - Id: 9
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 7
         Y: 18
         ItemTableId: 1
@@ -1259,7 +1481,7 @@ MonoBehaviour:
         EnemyPositionY: 18
         EnemyTableId: 1
       - Id: 10
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 12
         Y: 19
         ItemTableId: 1
@@ -1267,7 +1489,7 @@ MonoBehaviour:
         EnemyPositionY: 19
         EnemyTableId: 1
       - Id: 11
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 2
         Y: 23
         ItemTableId: 1
@@ -1275,7 +1497,7 @@ MonoBehaviour:
         EnemyPositionY: 24
         EnemyTableId: 1
       - Id: 12
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 7
         Y: 23
         ItemTableId: 1
@@ -1283,7 +1505,7 @@ MonoBehaviour:
         EnemyPositionY: 23
         EnemyTableId: 1
       - Id: 13
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 16
         Y: 23
         ItemTableId: 1
@@ -1291,7 +1513,7 @@ MonoBehaviour:
         EnemyPositionY: 24
         EnemyTableId: 1
       - Id: 14
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 16
         Y: 19
         ItemTableId: 1
@@ -1299,7 +1521,7 @@ MonoBehaviour:
         EnemyPositionY: 22
         EnemyTableId: 1
       - Id: 15
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 22
         Y: 20
         ItemTableId: 1
@@ -1307,7 +1529,7 @@ MonoBehaviour:
         EnemyPositionY: 23
         EnemyTableId: 1
       - Id: 16
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 17
         Y: 15
         ItemTableId: 1
@@ -1315,7 +1537,7 @@ MonoBehaviour:
         EnemyPositionY: 15
         EnemyTableId: 1
       - Id: 17
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 21
         Y: 11
         ItemTableId: 1
@@ -1323,7 +1545,7 @@ MonoBehaviour:
         EnemyPositionY: 12
         EnemyTableId: 1
       - Id: 18
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 24
         Y: 11
         ItemTableId: 1
@@ -1331,7 +1553,7 @@ MonoBehaviour:
         EnemyPositionY: 12
         EnemyTableId: 1
       - Id: 19
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 16
         Y: 8
         ItemTableId: 1
@@ -1339,7 +1561,7 @@ MonoBehaviour:
         EnemyPositionY: 7
         EnemyTableId: 1
       - Id: 20
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 17
         Y: 7
         ItemTableId: 1
@@ -1347,7 +1569,7 @@ MonoBehaviour:
         EnemyPositionY: 7
         EnemyTableId: 1
       - Id: 21
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 16
         Y: 6
         ItemTableId: 1
@@ -1355,7 +1577,7 @@ MonoBehaviour:
         EnemyPositionY: 7
         EnemyTableId: 1
       - Id: 22
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 18
         Y: 6
         ItemTableId: 1
@@ -1363,7 +1585,7 @@ MonoBehaviour:
         EnemyPositionY: 8
         EnemyTableId: 1
       - Id: 23
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 21
         Y: 7
         ItemTableId: 1
@@ -1371,7 +1593,7 @@ MonoBehaviour:
         EnemyPositionY: 8
         EnemyTableId: 1
       - Id: 24
-        DungeonName: Dungeon.Test
+        DungeonName: Dungeon.10101
         X: 14
         Y: 2
         ItemTableId: 1
@@ -1379,8 +1601,8 @@ MonoBehaviour:
         EnemyPositionY: 3
         EnemyTableId: 1
       WallEvents:
-      - Id: Test.(10,09).(11,09).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(10,09).(11,09).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 10
         LeftY: 9
         RightX: 11
@@ -1389,8 +1611,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(01,10).(01,09).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(01,10).(01,09).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 1
         LeftY: 10
         RightX: 1
@@ -1399,8 +1621,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(01,20).(02,20).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(01,20).(02,20).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 1
         LeftY: 20
         RightX: 2
@@ -1409,8 +1631,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(03,20).(04,20).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(03,20).(04,20).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 3
         LeftY: 20
         RightX: 4
@@ -1419,8 +1641,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(02,24).(03,24).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(02,24).(03,24).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 2
         LeftY: 24
         RightX: 3
@@ -1429,8 +1651,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(06,23).(06,22).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(06,23).(06,22).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 6
         LeftY: 23
         RightX: 6
@@ -1439,8 +1661,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(06,18).(06,17).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(06,18).(06,17).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 6
         LeftY: 18
         RightX: 6
@@ -1449,8 +1671,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(09,19).(10,19).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(09,19).(10,19).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 9
         LeftY: 19
         RightX: 10
@@ -1459,8 +1681,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(14,25).(14,24).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(14,25).(14,24).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 14
         LeftY: 25
         RightX: 14
@@ -1469,8 +1691,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(14,17).(15,17).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(14,17).(15,17).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 14
         LeftY: 17
         RightX: 15
@@ -1479,8 +1701,8 @@ MonoBehaviour:
         PositiveSideCondition: Lock
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(01,13).(02,13).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(01,13).(02,13).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 1
         LeftY: 13
         RightX: 2
@@ -1489,8 +1711,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(07,13).(07,12).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(07,13).(07,12).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 7
         LeftY: 13
         RightX: 7
@@ -1499,8 +1721,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(00,06).(01,06).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(00,06).(01,06).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 0
         LeftY: 6
         RightX: 1
@@ -1509,8 +1731,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(07,02).(08,02).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(07,02).(08,02).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 7
         LeftY: 2
         RightX: 8
@@ -1519,8 +1741,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(12,09).(13,09).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(12,09).(13,09).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 12
         LeftY: 9
         RightX: 13
@@ -1529,8 +1751,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(09,14).(10,14).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(09,14).(10,14).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 9
         LeftY: 14
         RightX: 10
@@ -1539,8 +1761,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(11,19).(11,18).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(11,19).(11,18).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 11
         LeftY: 19
         RightX: 11
@@ -1549,8 +1771,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(12,14).(13,14).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(12,14).(13,14).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 12
         LeftY: 14
         RightX: 13
@@ -1559,8 +1781,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(11,21).(11,20).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(11,21).(11,20).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 11
         LeftY: 21
         RightX: 11
@@ -1569,8 +1791,8 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: Test.(10,07).(11,07).0.Door
-        DungeonName: Dungeon.Test
+      - Id: 10101.(10,07).(11,07).0.Door
+        DungeonName: Dungeon.10101
         LeftX: 10
         LeftY: 7
         RightX: 11
@@ -1586,10 +1808,10 @@ MonoBehaviour:
       EnemyId: 10101
   wallEventConditionItems:
     list:
-    - Key: Test.(10,09).(11,09).0.Door
+    - Key: 10101.(10,09).(11,09).0.Door
       Value:
       - Id: 1
-        EventId: Test.(10,09).(11,09).0.Door
+        EventId: 10101.(10,09).(11,09).0.Door
         ItemId: 107001
         Count: 1
   items:
@@ -1842,7 +2064,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101002
-      Strength: 99
+      Strength: 100
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101005
