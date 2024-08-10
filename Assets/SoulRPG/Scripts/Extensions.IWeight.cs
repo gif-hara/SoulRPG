@@ -6,24 +6,24 @@ using Random = UnityEngine.Random;
 namespace HK.Framework
 {
     /// <summary>
-    /// <see cref="IRate"/>に関する拡張関数
+    /// <see cref="IWeight"/>に関する拡張関数
     /// </summary>
     public static class Extensions
     {
         /// <summary>
         /// 抽選を行う
         /// </summary>
-        public static T Lottery<T>(this IList<T> self) where T : IRate
+        public static T Lottery<T>(this IList<T> self) where T : IWeight
         {
-            return Lottery(self, () => Random.value);
+            return Lottery(self, max => Random.Range(0, max));
         }
 
         /// <summary>
         /// 抽選を行う
         /// </summary>
-        public static int LotteryIndex<T>(this IList<T> self) where T : IRate
+        public static int LotteryIndex<T>(this IList<T> self) where T : IWeight
         {
-            return LotteryIndex(self, () => Random.value);
+            return LotteryIndex(self, max => Random.Range(0, max));
         }
 
         /// <summary>
@@ -32,10 +32,9 @@ namespace HK.Framework
         /// <remarks>
         /// 乱数を独自で実装したい場合に利用します
         /// </remarks>
-        public static T Lottery<T>(this IList<T> self, Func<float> randomSelector) where T : IRate
+        public static T Lottery<T>(this IList<T> self, Func<int, int> randomSelector) where T : IWeight
         {
-            var index = self.LotteryIndex(randomSelector);
-            return self[index];
+            return self[self.LotteryIndex(randomSelector)];
         }
         /// <summary>
         /// 抽選を行う
@@ -43,19 +42,25 @@ namespace HK.Framework
         /// <remarks>
         /// 乱数を独自で実装したい場合に利用します
         /// </remarks>
-        public static int LotteryIndex<T>(this IList<T> self, Func<float> randomSelector) where T : IRate
+        public static int LotteryIndex<T>(this IList<T> self, Func<int, int> randomSelector) where T : IWeight
         {
+            var max = 0;
+            foreach (var i in self)
+            {
+                max += i.Weight;
+            }
+
             var current = 0;
-            var random = randomSelector();
+            var random = randomSelector(max);
             for (var i = 0; i < self.Count; i++)
             {
                 var element = self[i];
-                if (random >= current && random < current + element.Rate)
+                if (random >= current && random < current + element.Weight)
                 {
                     return i;
                 }
 
-                current += element.Rate;
+                current += element.Weight;
             }
 
             Assert.IsTrue(false, "未定義の動作です");
