@@ -34,20 +34,8 @@ namespace HK.Framework
         /// </remarks>
         public static T Lottery<T>(this IList<T> self, Func<float> randomSelector) where T : IRate
         {
-            var current = 0;
-            var random = randomSelector();
-            foreach (var i in self)
-            {
-                if (random >= current && random < current + i.Rate)
-                {
-                    return i;
-                }
-
-                current += i.Rate;
-            }
-
-            Assert.IsTrue(false, "未定義の動作です");
-            return default(T);
+            var index = self.LotteryIndex(randomSelector);
+            return self[index];
         }
         /// <summary>
         /// 抽選を行う
