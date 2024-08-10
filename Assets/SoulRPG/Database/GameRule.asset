@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   experienceTableData:
     rate: 3.4
+  initialItemDatabase:
+  - itemId: 101002
+    count: 1
