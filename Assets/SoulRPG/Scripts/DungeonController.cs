@@ -57,26 +57,38 @@ namespace SoulRPG
                 .Take(Random.Range(CurrentDungeonSpec.NoCostItemNumberMin, CurrentDungeonSpec.NoCostItemNumberMax));
             foreach (var floorItem in floorItemNoCosts)
             {
+                var position = new Vector2Int(floorItem.X, floorItem.Y);
                 var floorData = new DungeonInstanceFloorData
                 (
-                    new Vector2Int(floorItem.X, floorItem.Y),
-                    "Item",
+                    position,
                     CreateItemList(floorItem.ItemTableId)
                 );
-                FloorDatabase.Add(new Vector2Int(floorItem.X, floorItem.Y), floorData);
+                FloorDatabase.Add(position, floorData);
             }
             var floorItemEnemyPlaces = CurrentDungeonSpec.FloorItemEnemyPlaces
                 .OrderBy(_ => Random.value)
                 .Take(Random.Range(CurrentDungeonSpec.EnemyPlaceItemNumberMin, CurrentDungeonSpec.EnemyPlaceItemNumberMax));
             foreach (var floorItem in floorItemEnemyPlaces)
             {
+                var position = new Vector2Int(floorItem.X, floorItem.Y);
                 var floorData = new DungeonInstanceFloorData
                 (
-                    new Vector2Int(floorItem.X, floorItem.Y),
-                    "Item",
+                    position,
                     CreateItemList(floorItem.ItemTableId)
                 );
-                FloorDatabase.Add(new Vector2Int(floorItem.X, floorItem.Y), floorData);
+                FloorDatabase.Add(position, floorData);
+
+                position = new Vector2Int(floorItem.EnemyPositionX, floorItem.EnemyPositionY);
+                if (FloorDatabase.ContainsKey(position))
+                {
+                    continue;
+                }
+                var enemyData = new DungeonInstanceFloorData
+                (
+                    position,
+                    masterData.EnemyTables.Get(floorItem.EnemyTableId).Lottery().EnemyId
+                );
+                FloorDatabase.Add(position, enemyData);
             }
             WallDatabase.Clear();
             foreach (var wallEvent in CurrentDungeonSpec.WallEvents)
@@ -235,34 +247,31 @@ namespace SoulRPG
             await view.OpenAsync();
         }
 
-        private UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData floorData)
+        private async UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData floorData)
         {
-            return UniTask.CompletedTask;
-            // var scope = new CancellationTokenSource();
-            // var masterDataEventEnemy = TinyServiceLocator.Resolve<MasterData>().FloorEventEnemies.Get(floorData.Id);
-            // var masterDataEnemy = TinyServiceLocator.Resolve<MasterData>().Enemies.Get(masterDataEventEnemy.EnemyId);
-            // var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
-            // var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
-            // BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
-            // var battleResult = await BattleSystem.BeginAsync(
-            //     playerCharacter,
-            //     enemyCharacter,
-            //     scope.Token
-            //     );
-            // character.InstanceStatus.ResetGuardPoint();
-            // if (battleResult == Define.BattleResult.PlayerWin)
-            // {
-            //     TinyServiceLocator.Resolve<GameEvents>().OnAcquiredDungeonEvent.OnNext((CurrentDungeon.name, floorData.X, floorData.Y));
-            //     FloorData.Remove(character.Position);
-            // }
-            // else
-            // {
-            //     character.Warp(checkPoint);
-            //     character.InstanceStatus.FullRecovery();
-            //     TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("どうやら安全な場所に移動されたようだ");
-            // }
-            // scope.Cancel();
-            // scope.Dispose();
+            var scope = new CancellationTokenSource();
+            var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
+            var enemyCharacter = floorData.EnemyId.GetMasterDataEnemy().CreateBattleCharacter();
+            BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
+            var battleResult = await BattleSystem.BeginAsync(
+                playerCharacter,
+                enemyCharacter,
+                scope.Token
+                );
+            character.InstanceStatus.ResetGuardPoint();
+            if (battleResult == Define.BattleResult.PlayerWin)
+            {
+                TinyServiceLocator.Resolve<GameEvents>().OnAcquiredFloorData.OnNext(floorData);
+                FloorDatabase.Remove(character.Position);
+            }
+            else
+            {
+                character.Warp(checkPoint);
+                character.InstanceStatus.FullRecovery();
+                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext("どうやら安全な場所に移動されたようだ");
+            }
+            scope.Cancel();
+            scope.Dispose();
         }
 
         private async UniTask InvokeOnDoorAsync(Character character, DungeonInstanceWallData wallEvent)
@@ -308,9 +317,9 @@ namespace SoulRPG
         public void DebugAddAllReachedPoint()
         {
             reachedPoints.Clear();
-            for (var y = 0; y < CurrentDungeon.range.y; y++)
+            for (var y = 0; y <= CurrentDungeon.range.y; y++)
             {
-                for (var x = 0; x < CurrentDungeon.range.x; x++)
+                for (var x = 0; x <= CurrentDungeon.range.x; x++)
                 {
                     var position = new Vector2Int(x, y);
                     reachedPoints.Add(position);
