@@ -256,7 +256,7 @@ namespace SoulRPG
                             if (i.Value == 0)
                             {
                                 i.Value = x.itemId;
-                                gameEvents.OnRequestShowMessage.OnNext(new("ちょうどいいので空いてる武器枠に装備した。"));
+                                gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。空いてる武器枠に装備した。"));
                                 break;
                             }
                         }
@@ -264,22 +264,22 @@ namespace SoulRPG
                     else if (x.itemId.TryGetMasterDataArmorHead(out var masterDataArmorHead) && headId.Value == 0)
                     {
                         headId.Value = x.itemId;
-                        gameEvents.OnRequestShowMessage.OnNext(new("ちょうどいいので頭に装備した。"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。頭に装備した。"));
                     }
                     else if (x.itemId.TryGetMasterDataArmorBody(out var masterDataArmorBody) && bodyId.Value == 0)
                     {
                         bodyId.Value = x.itemId;
-                        gameEvents.OnRequestShowMessage.OnNext(new("ちょうどいいので胴に装備した。"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。胴に装備した。"));
                     }
                     else if (x.itemId.TryGetMasterDataArmorArms(out var masterDataArmorArms) && armId.Value == 0)
                     {
                         armId.Value = x.itemId;
-                        gameEvents.OnRequestShowMessage.OnNext(new("ちょうどいいので腕に装備した。"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。腕に装備した。"));
                     }
                     else if (x.itemId.TryGetMasterDataArmorLegs(out var masterDataArmorLegs) && legId.Value == 0)
                     {
                         legId.Value = x.itemId;
-                        gameEvents.OnRequestShowMessage.OnNext(new("ちょうどいいので脚に装備した。"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。脚に装備した。"));
                     }
                     else if (x.itemId.TryGetMasterDataAccessory(out var masterDataAccessory))
                     {
@@ -288,7 +288,7 @@ namespace SoulRPG
                             if (i.Value == 0)
                             {
                                 i.Value = x.itemId;
-                                gameEvents.OnRequestShowMessage.OnNext(new("ちょうどいいので空いてる装飾品枠に装備した。"));
+                                gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。空いてる装飾品枠に装備した。"));
                                 break;
                             }
                         }
