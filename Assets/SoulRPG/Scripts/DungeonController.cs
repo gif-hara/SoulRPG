@@ -251,8 +251,10 @@ namespace SoulRPG
         {
             var scope = new CancellationTokenSource();
             var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
-            var enemyCharacter = floorData.EnemyId.GetMasterDataEnemy().CreateBattleCharacter();
+            var masterDataEnemy = floorData.EnemyId.GetMasterDataEnemy();
+            var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
             BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
+            GameEnemyView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Enemy"), masterDataEnemy, scope.Token).Forget();
             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext("Bgm.Battle.0");
             var battleResult = await BattleSystem.BeginAsync(
                 playerCharacter,
