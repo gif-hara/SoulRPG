@@ -109,6 +109,17 @@ namespace SoulRPG
                 );
                 FloorDatabase.Add(position, floorData);
             }
+            foreach (var floorEnemy in CurrentDungeonSpec.FloorEnemyGuaranteeds)
+            {
+                var position = new Vector2Int(floorEnemy.X, floorEnemy.Y);
+                Assert.IsFalse(FloorDatabase.ContainsKey(position), $"すでに床データが存在しています position:{position}");
+                var floorData = DungeonInstanceFloorData.CreateAsEnemy
+                (
+                    position,
+                    masterData.EnemyTables.Get(floorEnemy.EnemyTableId).Lottery().EnemyId
+                );
+                FloorDatabase.Add(position, floorData);
+            }
             WallDatabase.Clear();
             foreach (var wallEvent in CurrentDungeonSpec.WallEvents)
             {
