@@ -28,8 +28,7 @@ namespace SoulRPG.BattleSystems
                 .Subscribe(_ => gameEvents.OnSubmitInput.OnNext(Unit.Default))
                 .RegisterTo(scope);
 
-            gameEvents.OnRequestShowMessage.OnNext(new($"{enemy.BattleStatus.NameWithTag}が現れた。", "Sfx.Message.0"));
-            await gameEvents.WaitForSubmitInputAsync();
+            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{enemy.BattleStatus.NameWithTag}が現れた。", "Sfx.EnemyAppearance.0"));
             var firstActor = player.BattleStatus.Speed > enemy.BattleStatus.Speed ? player : enemy;
             var secondActor = firstActor == player ? enemy : player;
 
