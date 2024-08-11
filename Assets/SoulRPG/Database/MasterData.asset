@@ -1292,6 +1292,7 @@ MonoBehaviour:
         EnemyPositionY: 1
         EnemyTableId: 1
       WallEvents: []
+      SavePoints: []
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
@@ -1809,6 +1810,13 @@ MonoBehaviour:
         PositiveSideCondition: Lock
         NegativeSideCondition: None
         CreateRate: 0
+      SavePoints:
+      - DungeonName: Dungeon.10101
+        X: 12
+        Y: 24
+      - DungeonName: Dungeon.10101
+        X: 14
+        Y: 1
   floorEventEnemies:
     list:
     - Id: 1

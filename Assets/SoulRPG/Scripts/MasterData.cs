@@ -111,7 +111,8 @@ namespace SoulRPG
                 "MasterData.ItemTable",
                 "MasterData.FloorItem.NoCost",
                 "MasterData.FloorItem.EnemyPlace",
-                "MasterData.EnemyTable"
+                "MasterData.EnemyTable",
+                "MasterData.SavePoint",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -144,6 +145,8 @@ namespace SoulRPG
             var floorItemEnemyPlaces = new FloorItemEnemyPlace.Group();
             floorItemEnemyPlaces.Set(JsonHelper.FromJson<FloorItemEnemyPlace>(database.Item2[17]));
             enemyTables.Set(JsonHelper.FromJson<EnemyTable>(database.Item2[18]));
+            var savePoints = new SavePoint.Group();
+            savePoints.Set(JsonHelper.FromJson<SavePoint>(database.Item2[19]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -191,6 +194,12 @@ namespace SoulRPG
                 var dungeonSpec = dungeonSpecs.Get(i.Key);
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.WallEvents = i.Value;
+            }
+            foreach (var i in savePoints.List)
+            {
+                var dungeonSpec = dungeonSpecs.Get(i.Key);
+                Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
+                dungeonSpec.SavePoints = i.Value;
             }
             foreach (var i in enemies.List)
             {
@@ -653,6 +662,8 @@ namespace SoulRPG
 
             public List<WallEvent> WallEvents;
 
+            public List<SavePoint> SavePoints;
+
             [Serializable]
             public class DictionaryList : DictionaryList<string, DungeonSpec>
             {
@@ -699,6 +710,22 @@ namespace SoulRPG
             public class Group : Group<int, EnemyTable>
             {
                 public Group() : base(x => x.TableId) { }
+            }
+        }
+
+        [Serializable]
+        public class SavePoint
+        {
+            public string DungeonName;
+
+            public int X;
+
+            public int Y;
+
+            [Serializable]
+            public class Group : Group<string, SavePoint>
+            {
+                public Group() : base(x => x.DungeonName) { }
             }
         }
     }
