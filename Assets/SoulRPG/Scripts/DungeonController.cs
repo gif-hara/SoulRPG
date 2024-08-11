@@ -58,7 +58,7 @@ namespace SoulRPG
             foreach (var floorItem in floorItemNoCosts)
             {
                 var position = new Vector2Int(floorItem.X, floorItem.Y);
-                var floorData = new DungeonInstanceFloorData
+                var floorData = DungeonInstanceFloorData.CreateAsItem
                 (
                     position,
                     CreateItemList(floorItem.ItemTableId)
@@ -66,12 +66,13 @@ namespace SoulRPG
                 FloorDatabase.Add(position, floorData);
             }
             var floorItemEnemyPlaces = CurrentDungeonSpec.FloorItemEnemyPlaces
+                .Where(x => !FloorDatabase.ContainsKey(new Vector2Int(x.X, x.Y)))
                 .OrderBy(_ => Random.value)
                 .Take(Random.Range(CurrentDungeonSpec.EnemyPlaceItemNumberMin, CurrentDungeonSpec.EnemyPlaceItemNumberMax));
             foreach (var floorItem in floorItemEnemyPlaces)
             {
                 var position = new Vector2Int(floorItem.X, floorItem.Y);
-                var floorData = new DungeonInstanceFloorData
+                var floorData = DungeonInstanceFloorData.CreateAsItem
                 (
                     position,
                     CreateItemList(floorItem.ItemTableId)
@@ -83,7 +84,7 @@ namespace SoulRPG
                 {
                     continue;
                 }
-                var enemyData = new DungeonInstanceFloorData
+                var enemyData = DungeonInstanceFloorData.CreateAsEnemy
                 (
                     position,
                     masterData.EnemyTables.Get(floorItem.EnemyTableId).Lottery().EnemyId
