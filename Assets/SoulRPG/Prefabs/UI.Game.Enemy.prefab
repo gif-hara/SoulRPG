@@ -312,13 +312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elements:
-  - document: {fileID: 0}
-    overrideName: 
-  - document: {fileID: 0}
-    overrideName: 
-  - document: {fileID: 0}
-    overrideName: 
-  - document: {fileID: 0}
+  - document: {fileID: 7483948135164866242}
+    overrideName: Area
+  - document: {fileID: 4319394343975911175}
     overrideName: 
 --- !u!224 &1306637489408541303 stripped
 RectTransform:
