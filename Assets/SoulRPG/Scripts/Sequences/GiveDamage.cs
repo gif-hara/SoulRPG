@@ -24,6 +24,9 @@ namespace SoulRPG
         [SerializeField]
         private Define.GiveDamageType giveDamageType;
 
+        [SerializeField]
+        private string sfxName;
+
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             container.TryResolve<BattleCharacter>("Actor", out var actor);
@@ -45,7 +48,7 @@ namespace SoulRPG
             var damage = damageCalculator.Calculate(actor, target, weapon, targetType);
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             t.BattleStatus.TakeDamage(damage);
-            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。", "Sfx.Message.0"));
+            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。", sfxName));
             var a = t == actor ? target : actor;
             await t.AilmentController.OnTakeDamageAsync(t, a, cancellationToken);
             if (giveDamageType == Define.GiveDamageType.Direct && !t.BattleStatus.IsDead)
