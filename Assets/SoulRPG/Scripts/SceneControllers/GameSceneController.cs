@@ -109,6 +109,13 @@ namespace SoulRPG.SceneControllers
                     AudioManager.PlaySFX(gameRule.AudioDatabase.Get(x).Clip);
                 })
                 .RegisterTo(destroyCancellationToken);
+            gameEvents.OnRequestPlayBgm
+                .Subscribe(x =>
+                {
+                    AudioManager.PlayBGM(gameRule.AudioDatabase.Get(x).Clip);
+                })
+                .RegisterTo(destroyCancellationToken);
+            gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
             Observable.EveryUpdate(destroyCancellationToken)
                 .Subscribe(async _ =>
                 {
