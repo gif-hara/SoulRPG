@@ -487,6 +487,8 @@ namespace SoulRPG
 
             public float ThunderCutRate;
 
+            public int Speed;
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Armor>
             {

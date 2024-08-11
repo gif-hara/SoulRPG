@@ -2778,6 +2778,7 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
+      Speed: -1
     - ItemId: 102002
       SlashCutRate: 0.02
       BlowCutRate: 0.031
@@ -2785,6 +2786,7 @@ MonoBehaviour:
       MagicCutRate: 0.024
       FireCutRate: 0.011
       ThunderCutRate: 0.051
+      Speed: 1
   armorBodies:
     list:
     - ItemId: 103001
@@ -2794,6 +2796,7 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
+      Speed: -1
     - ItemId: 103002
       SlashCutRate: 0.042
       BlowCutRate: 0.038
@@ -2801,6 +2804,7 @@ MonoBehaviour:
       MagicCutRate: 0.041
       FireCutRate: 0.034
       ThunderCutRate: 0.048
+      Speed: 1
   armorArms:
     list:
     - ItemId: 104001
@@ -2810,6 +2814,7 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
+      Speed: -1
     - ItemId: 104002
       SlashCutRate: 0.021
       BlowCutRate: 0.031
@@ -2817,6 +2822,7 @@ MonoBehaviour:
       MagicCutRate: 0.032
       FireCutRate: 0.012
       ThunderCutRate: 0.042
+      Speed: 1
   armorLegs:
     list:
     - ItemId: 105001
@@ -2826,6 +2832,7 @@ MonoBehaviour:
       MagicCutRate: 0.05
       FireCutRate: 0.05
       ThunderCutRate: 0.05
+      Speed: -1
     - ItemId: 105002
       SlashCutRate: 0.014
       BlowCutRate: 0.038
@@ -2833,6 +2840,7 @@ MonoBehaviour:
       MagicCutRate: 0.04
       FireCutRate: 0.01
       ThunderCutRate: 0.037
+      Speed: 1
   accessories:
     list:
     - ItemId: 106001
