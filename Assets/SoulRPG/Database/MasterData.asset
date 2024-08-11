@@ -1910,6 +1910,14 @@ MonoBehaviour:
       Id: 104002
     - Name: "\u9769\u306E\u8DB3\u7532"
       Id: 105002
+    - Name: "\u9752\u3044\u30D5\u30FC\u30C9"
+      Id: 102003
+    - Name: "\u9752\u3044\u30ED\u30FC\u30D6"
+      Id: 103003
+    - Name: "\u9752\u3044\u624B\u888B"
+      Id: 104003
+    - Name: "\u9752\u3044\u30BA\u30DC\u30F3"
+      Id: 105003
     - Name: "\u9244\u306E\u6307\u8F2A"
       Id: 106001
     - Name: "\u9244\u306E\u9375"
@@ -2076,6 +2084,26 @@ MonoBehaviour:
       - Id: 32
         TableId: 1
         ItemId: 105002
+        Count: 1
+        Weight: 100
+      - Id: 33
+        TableId: 1
+        ItemId: 102003
+        Count: 1
+        Weight: 100
+      - Id: 34
+        TableId: 1
+        ItemId: 103003
+        Count: 1
+        Weight: 100
+      - Id: 35
+        TableId: 1
+        ItemId: 104003
+        Count: 1
+        Weight: 100
+      - Id: 36
+        TableId: 1
+        ItemId: 105003
         Count: 1
         Weight: 100
   weapons:
@@ -2772,75 +2800,107 @@ MonoBehaviour:
   armorHeads:
     list:
     - ItemId: 102001
-      SlashCutRate: 0.05
-      BlowCutRate: 0.05
-      ThrustCutRate: 0.05
-      MagicCutRate: 0.05
-      FireCutRate: 0.05
-      ThunderCutRate: 0.05
+      SlashCutRate: 0.038
+      BlowCutRate: 0.036
+      ThrustCutRate: 0.037
+      MagicCutRate: 0.032
+      FireCutRate: 0.039
+      ThunderCutRate: 0.023
       Speed: -1
     - ItemId: 102002
-      SlashCutRate: 0.02
-      BlowCutRate: 0.031
-      ThrustCutRate: 0.017
-      MagicCutRate: 0.024
-      FireCutRate: 0.011
-      ThunderCutRate: 0.051
+      SlashCutRate: 0.026
+      BlowCutRate: 0.028
+      ThrustCutRate: 0.021
+      MagicCutRate: 0.03
+      FireCutRate: 0.024
+      ThunderCutRate: 0.033
       Speed: 1
+    - ItemId: 102003
+      SlashCutRate: 0.024
+      BlowCutRate: 0.023
+      ThrustCutRate: 0.022
+      MagicCutRate: 0.039
+      FireCutRate: 0.036
+      ThunderCutRate: 0.04
+      Speed: 0
   armorBodies:
     list:
     - ItemId: 103001
-      SlashCutRate: 0.05
-      BlowCutRate: 0.05
+      SlashCutRate: 0.051
+      BlowCutRate: 0.048
       ThrustCutRate: 0.05
-      MagicCutRate: 0.05
-      FireCutRate: 0.05
-      ThunderCutRate: 0.05
+      MagicCutRate: 0.043
+      FireCutRate: 0.052
+      ThunderCutRate: 0.031
       Speed: -1
     - ItemId: 103002
-      SlashCutRate: 0.042
+      SlashCutRate: 0.035
       BlowCutRate: 0.038
       ThrustCutRate: 0.029
-      MagicCutRate: 0.041
-      FireCutRate: 0.034
-      ThunderCutRate: 0.048
+      MagicCutRate: 0.04
+      FireCutRate: 0.033
+      ThunderCutRate: 0.045
       Speed: 1
+    - ItemId: 103003
+      SlashCutRate: 0.032
+      BlowCutRate: 0.031
+      ThrustCutRate: 0.03
+      MagicCutRate: 0.052
+      FireCutRate: 0.048
+      ThunderCutRate: 0.054
+      Speed: 0
   armorArms:
     list:
     - ItemId: 104001
-      SlashCutRate: 0.05
-      BlowCutRate: 0.05
-      ThrustCutRate: 0.05
-      MagicCutRate: 0.05
-      FireCutRate: 0.05
-      ThunderCutRate: 0.05
+      SlashCutRate: 0.03
+      BlowCutRate: 0.028
+      ThrustCutRate: 0.03
+      MagicCutRate: 0.025
+      FireCutRate: 0.031
+      ThunderCutRate: 0.018
       Speed: -1
     - ItemId: 104002
       SlashCutRate: 0.021
-      BlowCutRate: 0.031
-      ThrustCutRate: 0.018
-      MagicCutRate: 0.032
-      FireCutRate: 0.012
-      ThunderCutRate: 0.042
+      BlowCutRate: 0.022
+      ThrustCutRate: 0.017
+      MagicCutRate: 0.024
+      FireCutRate: 0.019
+      ThunderCutRate: 0.027
       Speed: 1
+    - ItemId: 104003
+      SlashCutRate: 0.019
+      BlowCutRate: 0.018
+      ThrustCutRate: 0.018
+      MagicCutRate: 0.031
+      FireCutRate: 0.028
+      ThunderCutRate: 0.032
+      Speed: 0
   armorLegs:
     list:
     - ItemId: 105001
-      SlashCutRate: 0.05
-      BlowCutRate: 0.05
-      ThrustCutRate: 0.05
-      MagicCutRate: 0.05
-      FireCutRate: 0.05
-      ThunderCutRate: 0.05
+      SlashCutRate: 0.033
+      BlowCutRate: 0.031
+      ThrustCutRate: 0.032
+      MagicCutRate: 0.027
+      FireCutRate: 0.033
+      ThunderCutRate: 0.02
       Speed: -1
     - ItemId: 105002
-      SlashCutRate: 0.014
-      BlowCutRate: 0.038
-      ThrustCutRate: 0.016
-      MagicCutRate: 0.04
-      FireCutRate: 0.01
-      ThunderCutRate: 0.037
+      SlashCutRate: 0.022
+      BlowCutRate: 0.024
+      ThrustCutRate: 0.018
+      MagicCutRate: 0.026
+      FireCutRate: 0.021
+      ThunderCutRate: 0.029
       Speed: 1
+    - ItemId: 105003
+      SlashCutRate: 0.02
+      BlowCutRate: 0.02
+      ThrustCutRate: 0.019
+      MagicCutRate: 0.033
+      FireCutRate: 0.031
+      ThunderCutRate: 0.035
+      Speed: 0
   accessories:
     list:
     - ItemId: 106001
