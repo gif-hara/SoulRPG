@@ -283,7 +283,7 @@ namespace SoulRPG
                 case "None":
                     if (!wallEvent.IsOpen)
                     {
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.Message.0"));
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.OpenDoor.0"));
                         wallEvent.Open();
                         AddReachedPoint(character);
                         await view.OnOpenDoorAsync(wallEvent);
@@ -306,7 +306,7 @@ namespace SoulRPG
                                 return;
                             }
                         }
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.Message.0"));
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.OpenDoor.0"));
                         wallEvent.Open();
                         AddReachedPoint(character);
                         await view.OnOpenDoorAsync(wallEvent);
