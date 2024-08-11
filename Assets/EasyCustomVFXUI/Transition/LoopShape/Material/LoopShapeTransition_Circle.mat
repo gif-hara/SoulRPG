@@ -31,13 +31,14 @@ Material:
     m_Floats:
     - _Angle: -24
     - _BUILTIN_QueueControl: 0
-    - _Progress: -0.0025849342
+    - _Progress: -0.00038790703
     - _RippleAmount: 5
     - _SHAPE: 0
     m_Colors:
     - _Color1: {r: 1, g: 0.9872364, b: 0.8915094, a: 1}
     - _Color2: {r: 1, g: 0.70051306, b: 0.3254717, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &3484982890501339239
 MonoBehaviour:
   m_ObjectHideFlags: 11

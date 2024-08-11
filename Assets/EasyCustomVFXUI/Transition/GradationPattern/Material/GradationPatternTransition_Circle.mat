@@ -45,11 +45,12 @@ Material:
     - _GRADATIONSTARTPOINT: 0
     - _GradationAngle: 360
     - _PATTERNTYPE: 2
-    - _Progress: -0.0024291277
+    - _Progress: -0.0014755726
     - _Tiling: 10
     m_Colors:
     - _Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &393594741315319738
 MonoBehaviour:
   m_ObjectHideFlags: 11

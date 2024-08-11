@@ -47,7 +47,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _DIRECTION: 0
-    - _Progress: -0.0013953447
+    - _Progress: -0.00091171265
     - _ScrollSpeed: -1.05
     - _WIPETYPE: 2
     - _WaveAmount: 0.82
@@ -55,6 +55,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _Vector2: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &3240692139313345508
 MonoBehaviour:
   m_ObjectHideFlags: 11

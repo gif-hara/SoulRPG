@@ -62,9 +62,10 @@ Material:
     - _EdgeWidth: 0.054
     - _NOISEPATTERN: 2
     - _NoiseEdgeWidth: 0.1
-    - _Progress: -0.0020961761
+    - _Progress: -0.0008074045
     - _Tiling: 6.1
     m_Colors:
     - _Color: {r: 1, g: 0.39011812, b: 0.1372549, a: 0}
     - _EdgeColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

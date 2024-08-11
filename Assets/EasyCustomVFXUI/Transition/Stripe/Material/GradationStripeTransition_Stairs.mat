@@ -44,10 +44,11 @@ Material:
     - _Frequency: 6
     - _GRADATIONSTARTPOINT: 0
     - _PATTERNTYPE: 0
-    - _Progress: -0.0013335943
+    - _Progress: -0.0007778406
     m_Colors:
     - _Color: {r: 0, g: 0.28917176, b: 0.3679245, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &5048517830788895293
 MonoBehaviour:
   m_ObjectHideFlags: 11

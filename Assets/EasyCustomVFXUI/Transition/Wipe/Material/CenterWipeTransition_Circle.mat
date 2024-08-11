@@ -45,13 +45,14 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _Float: 1.3
-    - _Progress: -0.00066304207
+    - _Progress: -0.0004671812
     - _WIPETYPE: 0
     - _XOffset: 0
     - _YOffset: 0
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &6335434878815405447
 MonoBehaviour:
   m_ObjectHideFlags: 11

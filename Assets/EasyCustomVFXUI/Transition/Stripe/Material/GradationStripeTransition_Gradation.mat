@@ -57,7 +57,8 @@ Material:
     - _Frequency: 5
     - _GRADATIONSTARTPOINT: 0
     - _PATTERNTYPE: 1
-    - _Progress: -0.00045871735
+    - _Progress: -0.0010671616
     m_Colors:
     - _Color: {r: 0.5518868, g: 0.626868, b: 1, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
