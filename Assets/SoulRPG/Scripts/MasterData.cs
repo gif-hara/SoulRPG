@@ -192,6 +192,14 @@ namespace SoulRPG
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.WallEvents = i.Value;
             }
+            foreach (var i in enemies.List)
+            {
+                i.Thumbnail = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/SoulRPG/Textures/Enemy.{i.ThumbnailId}.png");
+                if (i.Thumbnail == null)
+                {
+                    Debug.LogWarning($"Not found EnemyThumbnail {i.ThumbnailId}");
+                }
+            }
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -509,6 +517,10 @@ namespace SoulRPG
             public int BehaviourPoint;
 
             public Define.CharacterAttribute Attribute;
+
+            public string ThumbnailId;
+
+            public Sprite Thumbnail;
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Enemy>
