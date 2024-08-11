@@ -91,6 +91,12 @@ namespace SoulRPG
                 );
                 FloorDatabase.Add(position, enemyData);
             }
+            foreach (var floorItem in CurrentDungeonSpec.SavePoints)
+            {
+                var position = new Vector2Int(floorItem.X, floorItem.Y);
+                var floorData = DungeonInstanceFloorData.CreateAsSavePoint(position);
+                FloorDatabase.Add(position, floorData);
+            }
             WallDatabase.Clear();
             foreach (var wallEvent in CurrentDungeonSpec.WallEvents)
             {
