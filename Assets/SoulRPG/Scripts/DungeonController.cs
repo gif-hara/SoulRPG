@@ -8,6 +8,7 @@ using R3;
 using SoulRPG.BattleSystems;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace SoulRPG
 {
@@ -95,6 +96,17 @@ namespace SoulRPG
             {
                 var position = new Vector2Int(floorItem.X, floorItem.Y);
                 var floorData = DungeonInstanceFloorData.CreateAsSavePoint(position);
+                FloorDatabase.Add(position, floorData);
+            }
+            foreach (var wallEvent in CurrentDungeonSpec.FloorItemGuaranteeds)
+            {
+                var position = new Vector2Int(wallEvent.X, wallEvent.Y);
+                Assert.IsFalse(FloorDatabase.ContainsKey(position), $"すでに床データが存在しています position:{position}");
+                var floorData = DungeonInstanceFloorData.CreateAsItem
+                (
+                    position,
+                    CreateItemList(wallEvent.ItemTableId)
+                );
                 FloorDatabase.Add(position, floorData);
             }
             WallDatabase.Clear();
