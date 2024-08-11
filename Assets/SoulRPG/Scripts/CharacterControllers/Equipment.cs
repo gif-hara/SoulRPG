@@ -187,6 +187,31 @@ namespace SoulRPG
             }
         }
 
+        public int TotalSpeed
+        {
+            get
+            {
+                var result = 0;
+                if (HeadId.TryGetMasterDataArmorHead(out var armorHead))
+                {
+                    result += armorHead.Speed;
+                }
+                if (BodyId.TryGetMasterDataArmorBody(out var armorBody))
+                {
+                    result += armorBody.Speed;
+                }
+                if (ArmId.TryGetMasterDataArmorArms(out var armorArm))
+                {
+                    result += armorArm.Speed;
+                }
+                if (LegId.TryGetMasterDataArmorLegs(out var armorLeg))
+                {
+                    result += armorLeg.Speed;
+                }
+                return result;
+            }
+        }
+
         public Equipment()
         {
             for (var i = 0; i < 4; i++)

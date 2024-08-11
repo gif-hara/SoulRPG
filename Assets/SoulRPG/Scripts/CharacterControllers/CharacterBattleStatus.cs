@@ -24,7 +24,7 @@ namespace SoulRPG
         private readonly ReactiveProperty<int> hitPointReactiveProperty;
         public ReadOnlyReactiveProperty<int> HitPointReactiveProperty => hitPointReactiveProperty;
         public int HitPoint => hitPointReactiveProperty.Value;
-        
+
         private readonly ReactiveProperty<int> guardPointReactiveProperty;
         public ReadOnlyReactiveProperty<int> GuardPointReactiveProperty => guardPointReactiveProperty;
         public int GuardPoint => guardPointReactiveProperty.Value;
@@ -156,7 +156,7 @@ namespace SoulRPG
                 character.Equipment.TotalMagicCutRate,
                 character.Equipment.TotalFireCutRate,
                 character.Equipment.TotalThunderCutRate,
-                character.GrowthParameter.Speed,
+                character.GrowthParameter.Speed + character.Equipment.TotalSpeed,
                 0,
                 3,
                 3,
@@ -253,7 +253,7 @@ namespace SoulRPG
                 _ => throw new ArgumentOutOfRangeException(),
             };
         }
-        
+
         public float GetCutRate(Define.AttackAttribute attackAttribute)
         {
             return attackAttribute switch
@@ -284,12 +284,12 @@ namespace SoulRPG
         {
             return behaviourPointReactiveProperty.Value > 0;
         }
-        
+
         public void AddGuardPoint(int value)
         {
             guardPointReactiveProperty.Value = Mathf.Clamp(guardPointReactiveProperty.Value + value, 0, HitPointMax / 2);
         }
-        
+
         public void ResetGuardPoint()
         {
             guardPointReactiveProperty.Value = 0;
