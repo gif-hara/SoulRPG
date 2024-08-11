@@ -28,6 +28,8 @@ namespace SoulRPG
 
         public HashSet<string> UsedSkills { get; } = new();
 
+        public BattleCharacterEvents Events { get; } = new();
+
         public BattleCharacter(Character character, Define.AllyType allyType, IBattleAI battleAI)
         {
             BattleStatus = new CharacterBattleStatus(character, allyType);
