@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using R3;
 using SoulRPG.BattleSystems.CommandInvokers;
 using UnityEngine;
 
@@ -67,6 +68,12 @@ namespace SoulRPG
 
         private async UniTask StateSelectWeaponAsync(CancellationToken scope)
         {
+            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateSelectMainCommandAsync);
+                })
+                .RegisterTo(scope);
             var commands = character.Equipment.GetWeaponIds()
                 .Select(x =>
                 {
@@ -84,6 +91,12 @@ namespace SoulRPG
 
         private async UniTask StateSelectSkillAsync(CancellationToken scope)
         {
+            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateSelectWeaponAsync);
+                })
+                .RegisterTo(scope);
             MasterData.Weapon weapon;
             if (!character.Equipment.GetWeaponId(selectedWeaponId).TryGetMasterDataWeapon(out weapon))
             {
