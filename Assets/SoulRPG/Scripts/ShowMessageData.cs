@@ -14,5 +14,9 @@ namespace SoulRPG
             Message = message;
             SfxName = sfxName;
         }
+
+        public ShowMessageData(string message) : this(message, null)
+        {
+        }
     }
 }
