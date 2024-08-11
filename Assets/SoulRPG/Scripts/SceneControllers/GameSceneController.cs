@@ -95,14 +95,18 @@ namespace SoulRPG.SceneControllers
             }
             playerController.Attach(player, gameMenuBundlePrefab, destroyCancellationToken);
             explorationView.Open(destroyCancellationToken);
-            gameEvents.OnRequestShowMessage
+            Observable.Merge
+            (
+                gameEvents.OnRequestPlaySfx,
+                gameEvents.OnRequestShowMessage.Select(x => x.SfxName)
+            )
                 .Subscribe(x =>
                 {
-                    if (string.IsNullOrEmpty(x.SfxName))
+                    if (string.IsNullOrEmpty(x))
                     {
                         return;
                     }
-                    AudioManager.PlaySFX(gameRule.AudioDatabase.Get(x.SfxName).Clip);
+                    AudioManager.PlaySFX(gameRule.AudioDatabase.Get(x).Clip);
                 })
                 .RegisterTo(destroyCancellationToken);
             Observable.EveryUpdate(destroyCancellationToken)

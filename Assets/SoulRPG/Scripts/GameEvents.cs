@@ -23,6 +23,8 @@ namespace SoulRPG
 
         public readonly Subject<Vector2Int> OnAddReachedPoint = new();
 
+        public readonly Subject<string> OnRequestPlaySfx = new();
+
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();
 
