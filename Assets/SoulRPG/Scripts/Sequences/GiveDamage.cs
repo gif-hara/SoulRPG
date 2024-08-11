@@ -47,7 +47,7 @@ namespace SoulRPG
             container.TryResolve<MasterData.Weapon>(out var weapon);
             var damage = damageCalculator.Calculate(actor, target, weapon, targetType);
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
-            t.BattleStatus.TakeDamage(damage);
+            t.TakeDamage(damage);
             await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。", fixedSfxName));
             var a = t == actor ? target : actor;
             await t.AilmentController.OnTakeDamageAsync(t, a, cancellationToken);

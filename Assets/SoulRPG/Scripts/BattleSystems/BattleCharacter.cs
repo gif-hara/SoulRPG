@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using HK;
 using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
@@ -140,6 +141,12 @@ namespace SoulRPG
         public UniTask OnBehaviourEndAsync(BattleCharacter target, CancellationToken scope)
         {
             return AilmentController.OnBehaviourEndAsync(this, target, scope);
+        }
+
+        public void TakeDamage(int damage)
+        {
+            BattleStatus.TakeDamage(damage);
+            Events.OnTakeDamage.OnNext(damage);
         }
     }
 }
