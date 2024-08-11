@@ -5,6 +5,7 @@ using HK;
 using R3;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace SoulRPG
 {
@@ -39,6 +40,16 @@ namespace SoulRPG
                     {
                         Object.Destroy(messages[x].gameObject);
                         messages.Remove(x);
+                    }
+                })
+                .RegisterTo(scope);
+            document.gameObject.SetActive(false);
+            Observable.EveryUpdate()
+                .Subscribe(_ =>
+                {
+                    if (Keyboard.current.f1Key.wasPressedThisFrame)
+                    {
+                        document.gameObject.SetActive(!document.gameObject.activeSelf);
                     }
                 })
                 .RegisterTo(scope);
