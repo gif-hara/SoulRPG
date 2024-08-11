@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
+using SoulRPG.BattleSystems;
 using UnityEngine;
 
 namespace SoulRPG
@@ -26,6 +27,8 @@ namespace SoulRPG
         public readonly Subject<string> OnRequestPlaySfx = new();
 
         public readonly Subject<string> OnRequestPlayBgm = new();
+
+        public readonly Subject<BattleSystem> OnBeginBattle = new();
 
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();

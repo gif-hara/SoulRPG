@@ -2,7 +2,6 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
-using SoulRPG.BattleSystems.CommandInvokers;
 using UnityEngine;
 
 namespace SoulRPG.BattleSystems
@@ -12,16 +11,22 @@ namespace SoulRPG.BattleSystems
     /// </summary>
     public sealed class BattleSystem
     {
-        public static async UniTask<Define.BattleResult> BeginAsync(
-            BattleCharacter player,
-            BattleCharacter enemy,
-            CancellationToken scope
-            )
+        private readonly BattleCharacter player;
+
+        private readonly BattleCharacter enemy;
+
+        public BattleSystem(BattleCharacter player, BattleCharacter enemy)
+        {
+            this.player = player;
+            this.enemy = enemy;
+        }
+        public async UniTask<Define.BattleResult> BeginAsync(CancellationToken scope)
         {
             var cts = CancellationTokenSource.CreateLinkedTokenSource(scope);
             scope = cts.Token;
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            gameEvents.OnBeginBattle.OnNext(this);
             inputController.ChangeInputType(InputController.InputType.UI);
 
             inputController.InputActions.UI.Submit.OnPerformedAsObservable()

@@ -116,7 +116,7 @@ namespace SoulRPG.SceneControllers
                 .RegisterTo(destroyCancellationToken);
             gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
             Observable.EveryUpdate(destroyCancellationToken)
-                .Subscribe(async _ =>
+                .Subscribe(_ =>
                 {
                     try
                     {
@@ -127,16 +127,6 @@ namespace SoulRPG.SceneControllers
                                 player.Inventory.Add(i.Id, 1);
                             }
                             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("[DEBUG] Add All Items", "Sfx.Message.0"));
-                        }
-
-                        if (Keyboard.current.wKey.wasPressedThisFrame)
-                        {
-                            var battleResult = await BattleSystem.BeginAsync(
-                                new BattleCharacter(player, Define.AllyType.Player, new Input(commandDocumentPrefab)),
-                                new BattleCharacter(new CharacterBattleStatus(debugEnemyBattleStatus), new Constant(101998, 101001, false)),
-                                destroyCancellationToken
-                                );
-                            Debug.Log($"BattleResult: {battleResult}");
                         }
 
                         if (Keyboard.current.eKey.wasPressedThisFrame)

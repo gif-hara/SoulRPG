@@ -286,11 +286,8 @@ namespace SoulRPG
             BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
             GameEnemyView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Enemy"), masterDataEnemy, scope.Token).Forget();
             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext("Bgm.Battle.0");
-            var battleResult = await BattleSystem.BeginAsync(
-                playerCharacter,
-                enemyCharacter,
-                scope.Token
-                );
+            var battleSystem = new BattleSystem(playerCharacter, enemyCharacter);
+            var battleResult = await battleSystem.BeginAsync(scope.Token);
             character.InstanceStatus.ResetGuardPoint();
             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
             if (battleResult == Define.BattleResult.PlayerWin)
