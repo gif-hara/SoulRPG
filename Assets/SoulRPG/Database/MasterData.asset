@@ -1292,7 +1292,10 @@ MonoBehaviour:
         EnemyPositionY: 1
         EnemyTableId: 1
       WallEvents: []
-      SavePoints: []
+      SavePoints:
+      - DungeonName: Dungeon.Test
+        X: 0
+        Y: 3
       FloorItemGuaranteeds: []
       FloorEnemyGuaranteeds: []
     - Id: Dungeon.10101
