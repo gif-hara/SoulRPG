@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 8561540443494589379}
   - component: {fileID: 5483851559220226397}
   m_Layer: 0
-  m_Name: Dungeon.Wall.Event.Door.Top
+  m_Name: Dungeon.Wall.Event.Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

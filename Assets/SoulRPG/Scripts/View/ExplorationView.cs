@@ -152,12 +152,12 @@ namespace SoulRPG
                 foreach (var i in TinyServiceLocator.Resolve<DungeonController>().WallDatabase)
                 {
                     var isHorizontal = i.Key.From.y == i.Key.To.y;
-                    var directionName = isHorizontal ? "Top" : "Left";
-                    var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.Value.EventType}.{directionName}"), tipsParent.transform);
+                    var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.Value.EventType}"), tipsParent.transform);
                     maptipWallEventObjects.Add(i.Value, element);
                     var elementTransform = element.transform as RectTransform;
                     elementTransform.anchoredPosition = new Vector2(i.Key.From.x * tipSize.x, i.Key.From.y * tipSize.y);
                     elementTransform.sizeDelta = tipSize;
+                    elementTransform.rotation = Quaternion.Euler(0, 0, isHorizontal ? 0 : 90);
                     i.Value.IsOpenReactiveProperty
                         .Subscribe(x =>
                         {
@@ -224,10 +224,10 @@ namespace SoulRPG
                 foreach (var i in TinyServiceLocator.Resolve<DungeonController>().WallDatabase)
                 {
                     var isHorizontal = i.Key.From.y == i.Key.To.y;
-                    var directionName = isHorizontal ? "Top" : "Left";
-                    var element = Object.Instantiate(dungeonDocument.Q<HKUIDocument>($"Dungeon.Wall.Event.{i.Value.EventType}.{directionName}"), dungeonDocument.transform);
+                    var element = Object.Instantiate(dungeonDocument.Q<HKUIDocument>($"Dungeon.Wall.Event.{i.Value.EventType}"), dungeonDocument.transform);
                     dungeonWallEventObjects.Add(i.Value, element);
                     element.transform.position = new Vector3(i.Key.From.x, 0, i.Key.From.y);
+                    element.transform.rotation = Quaternion.Euler(0, isHorizontal ? 0 : -90, 0);
                     i.Value.IsOpenReactiveProperty
                         .Subscribe(x =>
                         {
