@@ -1294,6 +1294,7 @@ MonoBehaviour:
       WallEvents: []
       SavePoints: []
       FloorItemGuaranteeds: []
+      FloorEnemyGuaranteeds: []
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
@@ -1824,11 +1825,11 @@ MonoBehaviour:
         X: 10
         Y: 6
         ItemTableId: 1
-  floorEventEnemies:
-    list:
-    - Id: 1
-      EventId: Test.00.06.Enemy
-      EnemyId: 10101
+      FloorEnemyGuaranteeds:
+      - DungeonName: Dungeon.10101
+        X: 11
+        Y: 4
+        EnemyTableId: 1
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door

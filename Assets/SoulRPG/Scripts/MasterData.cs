@@ -25,10 +25,6 @@ namespace SoulRPG
         public DungeonSpec.DictionaryList DungeonSpecs => dungeonSpecs;
 
         [SerializeField]
-        private FloorEventEnemy.DictionaryList floorEventEnemies;
-        public FloorEventEnemy.DictionaryList FloorEventEnemies => floorEventEnemies;
-
-        [SerializeField]
         private WallEventConditionItem.Group wallEventConditionItems;
         public WallEventConditionItem.Group WallEventConditionItems => wallEventConditionItems;
 
@@ -102,7 +98,6 @@ namespace SoulRPG
                 "MasterData.Armor.Legs",
                 "MasterData.Accessory",
                 "MasterData.Enemy",
-                "MasterData.FloorEvent.Enemy",
                 "MasterData.Ailment",
                 "MasterData.Enemy.CharacterAttribute",
                 "MasterData.WallEvent",
@@ -114,6 +109,7 @@ namespace SoulRPG
                 "MasterData.EnemyTable",
                 "MasterData.SavePoint",
                 "MasterData.FloorItem.Guaranteed",
+                "MasterData.FloorEnemy.Guaranteed",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -132,24 +128,25 @@ namespace SoulRPG
             armorLegs.Set(JsonHelper.FromJson<Armor>(database.Item2[6]));
             accessories.Set(JsonHelper.FromJson<Accessory>(database.Item2[7]));
             enemies.Set(JsonHelper.FromJson<Enemy>(database.Item2[8]));
-            floorEventEnemies.Set(JsonHelper.FromJson<FloorEventEnemy>(database.Item2[9]));
-            ailments.Set(JsonHelper.FromJson<Ailment>(database.Item2[10]));
+            ailments.Set(JsonHelper.FromJson<Ailment>(database.Item2[9]));
             var enemyCharacterAttributes = new EnemyCharacterAttribute.Group();
-            enemyCharacterAttributes.Set(JsonHelper.FromJson<EnemyCharacterAttribute>(database.Item2[11]));
+            enemyCharacterAttributes.Set(JsonHelper.FromJson<EnemyCharacterAttribute>(database.Item2[10]));
             var wallEvents = new WallEvent.Group();
-            wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[12]));
-            wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[13]));
-            dungeonSpecs.Set(JsonHelper.FromJson<DungeonSpec>(database.Item2[14]));
-            itemTables.Set(JsonHelper.FromJson<ItemTable>(database.Item2[15]));
+            wallEvents.Set(JsonHelper.FromJson<WallEvent>(database.Item2[11]));
+            wallEventConditionItems.Set(JsonHelper.FromJson<WallEventConditionItem>(database.Item2[12]));
+            dungeonSpecs.Set(JsonHelper.FromJson<DungeonSpec>(database.Item2[13]));
+            itemTables.Set(JsonHelper.FromJson<ItemTable>(database.Item2[14]));
             var floorItemNoCosts = new FloorItem.Group();
-            floorItemNoCosts.Set(JsonHelper.FromJson<FloorItem>(database.Item2[16]));
+            floorItemNoCosts.Set(JsonHelper.FromJson<FloorItem>(database.Item2[15]));
             var floorItemEnemyPlaces = new FloorItemEnemyPlace.Group();
-            floorItemEnemyPlaces.Set(JsonHelper.FromJson<FloorItemEnemyPlace>(database.Item2[17]));
-            enemyTables.Set(JsonHelper.FromJson<EnemyTable>(database.Item2[18]));
+            floorItemEnemyPlaces.Set(JsonHelper.FromJson<FloorItemEnemyPlace>(database.Item2[16]));
+            enemyTables.Set(JsonHelper.FromJson<EnemyTable>(database.Item2[17]));
             var savePoints = new SavePoint.Group();
-            savePoints.Set(JsonHelper.FromJson<SavePoint>(database.Item2[19]));
+            savePoints.Set(JsonHelper.FromJson<SavePoint>(database.Item2[18]));
             var floorItemGuaranteeds = new FloorItem.Group();
-            floorItemGuaranteeds.Set(JsonHelper.FromJson<FloorItem>(database.Item2[20]));
+            floorItemGuaranteeds.Set(JsonHelper.FromJson<FloorItem>(database.Item2[19]));
+            var floorEnemyGuaranteeds = new FloorEnemy.Group();
+            floorEnemyGuaranteeds.Set(JsonHelper.FromJson<FloorEnemy>(database.Item2[20]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -209,6 +206,12 @@ namespace SoulRPG
                 var dungeonSpec = dungeonSpecs.Get(i.Key);
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.FloorItemGuaranteeds = i.Value;
+            }
+            foreach (var i in floorEnemyGuaranteeds.List)
+            {
+                var dungeonSpec = dungeonSpecs.Get(i.Key);
+                Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
+                dungeonSpec.FloorEnemyGuaranteeds = i.Value;
             }
             foreach (var i in enemies.List)
             {
@@ -342,18 +345,20 @@ namespace SoulRPG
         }
 
         [Serializable]
-        public class FloorEventEnemy
+        public class FloorEnemy
         {
-            public int Id;
+            public string DungeonName;
 
-            public string EventId;
+            public int X;
 
-            public int EnemyId;
+            public int Y;
+
+            public int EnemyTableId;
 
             [Serializable]
-            public class DictionaryList : DictionaryList<string, FloorEventEnemy>
+            public class Group : Group<string, FloorEnemy>
             {
-                public DictionaryList() : base(x => x.EventId) { }
+                public Group() : base(x => x.DungeonName) { }
             }
         }
 
@@ -674,6 +679,8 @@ namespace SoulRPG
             public List<SavePoint> SavePoints;
 
             public List<FloorItem> FloorItemGuaranteeds;
+
+            public List<FloorEnemy> FloorEnemyGuaranteeds;
 
             [Serializable]
             public class DictionaryList : DictionaryList<string, DungeonSpec>
