@@ -98,8 +98,11 @@ namespace SoulRPG.SceneControllers
             gameEvents.OnRequestShowMessage
                 .Subscribe(x =>
                 {
-                    var sfxName = string.IsNullOrEmpty(x.SfxName) ? "Sfx.Message.0" : x.SfxName;
-                    AudioManager.PlaySFX(gameRule.AudioDatabase.Get(sfxName).Clip);
+                    if (string.IsNullOrEmpty(x.SfxName))
+                    {
+                        return;
+                    }
+                    AudioManager.PlaySFX(gameRule.AudioDatabase.Get(x.SfxName).Clip);
                 })
                 .RegisterTo(destroyCancellationToken);
             Observable.EveryUpdate(destroyCancellationToken)
