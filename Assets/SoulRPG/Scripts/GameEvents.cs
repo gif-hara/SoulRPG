@@ -25,6 +25,8 @@ namespace SoulRPG
 
         public readonly Subject<string> OnRequestPlaySfx = new();
 
+        public readonly Subject<string> OnRequestPlayBgm = new();
+
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();
 
