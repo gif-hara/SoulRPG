@@ -1293,6 +1293,7 @@ MonoBehaviour:
         EnemyTableId: 1
       WallEvents: []
       SavePoints: []
+      FloorItemGuaranteeds: []
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
@@ -1817,6 +1818,12 @@ MonoBehaviour:
       - DungeonName: Dungeon.10101
         X: 14
         Y: 1
+      FloorItemGuaranteeds:
+      - Id: 1
+        DungeonName: Dungeon.10101
+        X: 10
+        Y: 6
+        ItemTableId: 1
   floorEventEnemies:
     list:
     - Id: 1
