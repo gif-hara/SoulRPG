@@ -46,6 +46,7 @@ namespace SoulRPG
 
         private async UniTask StateRootMenuAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var listDocument = CreateList(new List<Action<HKUIDocument>>
                 {
                     element =>
@@ -54,7 +55,15 @@ namespace SoulRPG
                         (
                             element,
                             "装備",
-                            _ => { stateMachine.Change(StateSelectEquipmentPartAsync); }
+                            _ =>
+                            {
+                                stateMachine.Change(StateSelectEquipmentPartAsync);
+                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                            },
+                            _ =>
+                            {
+                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            }
                         );
                     },
                     element =>
@@ -63,7 +72,15 @@ namespace SoulRPG
                         (
                             element,
                             "道具",
-                            _ => { Debug.Log("道具"); }
+                            _ =>
+                            {
+                                Debug.Log("道具");
+                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                            },
+                            _ =>
+                            {
+                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            }
                         );
                     },
                     element =>
@@ -72,7 +89,15 @@ namespace SoulRPG
                         (
                             element,
                             "ステータス",
-                            _ => { Debug.Log("ステータス"); }
+                            _ =>
+                            {
+                                Debug.Log("ステータス");
+                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                            },
+                            _ =>
+                            {
+                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            }
                         );
                     },
                     element =>
@@ -81,25 +106,35 @@ namespace SoulRPG
                         (
                             element,
                             "システム",
-                            _ => { Debug.Log("システム"); }
+                            _ =>
+                            {
+                                Debug.Log("システム");
+                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                            },
+                            _ =>
+                            {
+                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            }
                         );
                     },
                 },
                 0
             );
 
-        inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
-                .Subscribe(_ =>
-                {
-                    stateMachine.Change(StateCloseAsync);
-                })
-                .RegisterTo(scope);
+            inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        stateMachine.Change(StateCloseAsync);
+                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
+                    })
+                    .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
 
         private async UniTask StateSelectEquipmentPartAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var weaponElements = character.Equipment.GetWeaponIds().Select((x, i) =>
             {
                 var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
@@ -109,6 +144,11 @@ namespace SoulRPG
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Weapon1);
                         stateMachine.Change(StateSelectWeaponAsync);
+                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                    },
+                    _ =>
+                    {
+                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                     });
                 });
             });
@@ -118,6 +158,11 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Head);
                     stateMachine.Change(StateSelectArmorHeadAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                },
+                _ =>
+                {
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                 });
             });
             var bodyElement = new Action<HKUIDocument>(element =>
@@ -126,6 +171,11 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
                     stateMachine.Change(StateSelectArmorBodyAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                },
+                _ =>
+                {
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                 });
             });
             var armElement = new Action<HKUIDocument>(element =>
@@ -134,6 +184,11 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Arm);
                     stateMachine.Change(StateSelectArmorArmsAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                },
+                _ =>
+                {
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                 });
             });
             var legElement = new Action<HKUIDocument>(element =>
@@ -142,6 +197,11 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Leg);
                     stateMachine.Change(StateSelectArmorLegsAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                },
+                _ =>
+                {
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                 });
             });
             var accessoryElements = character.Equipment.GetAccessoryIds().Select((x, i) =>
@@ -153,6 +213,11 @@ namespace SoulRPG
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Accessory1);
                         stateMachine.Change(StateSelectAccessoryAsync);
+                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                    },
+                    _ =>
+                    {
+                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                     });
                 });
             });
@@ -174,6 +239,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateRootMenuAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
@@ -182,6 +248,7 @@ namespace SoulRPG
 
         private async UniTask StateSelectWeaponAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataWeapon())
                 .Select(x =>
@@ -205,6 +272,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
@@ -213,6 +281,7 @@ namespace SoulRPG
 
         private async UniTask StateSelectArmorHeadAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataArmorHead())
                 .Select(x =>
@@ -232,6 +301,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
@@ -240,6 +310,7 @@ namespace SoulRPG
 
         private async UniTask StateSelectArmorBodyAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataArmorBody())
                 .Select(x =>
@@ -259,6 +330,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
@@ -267,6 +339,7 @@ namespace SoulRPG
 
         private async UniTask StateSelectArmorArmsAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataArmorArms())
                 .Select(x =>
@@ -286,6 +359,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
@@ -294,6 +368,7 @@ namespace SoulRPG
 
         private async UniTask StateSelectArmorLegsAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataArmorLegs())
                 .Select(x =>
@@ -313,6 +388,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
@@ -321,6 +397,7 @@ namespace SoulRPG
 
         private async UniTask StateSelectAccessoryAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataAccessory())
                 .Select(x =>
@@ -340,6 +417,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
+                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);

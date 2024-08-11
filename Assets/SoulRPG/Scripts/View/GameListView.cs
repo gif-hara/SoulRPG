@@ -105,13 +105,25 @@ namespace SoulRPG
             return document;
         }
 
-        public static void ApplyAsSimpleElement(HKUIDocument element, string header, Action<Unit> onClick)
+        public static void ApplyAsSimpleElement
+        (
+            HKUIDocument element,
+            string header,
+            Action<Unit> onClick,
+            Action<BaseEventData> onSelect = null
+        )
         {
             element.Q<TMP_Text>("Header").text = header;
             var button = element.Q<Button>("Button");
             button.OnClickAsObservable()
                 .Subscribe(onClick)
                 .RegisterTo(element.destroyCancellationToken);
+            if (onSelect != null)
+            {
+                button.OnSelectAsObservable()
+                    .Subscribe(onSelect)
+                    .RegisterTo(element.destroyCancellationToken);
+            }
         }
     }
 }
