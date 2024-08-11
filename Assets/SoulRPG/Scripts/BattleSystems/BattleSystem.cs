@@ -28,11 +28,6 @@ namespace SoulRPG.BattleSystems
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnBeginBattle.OnNext(this);
             inputController.ChangeInputType(InputController.InputType.UI);
-
-            inputController.InputActions.UI.Submit.OnPerformedAsObservable()
-                .Subscribe(_ => gameEvents.OnSubmitInput.OnNext(Unit.Default))
-                .RegisterTo(scope);
-
             await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{enemy.BattleStatus.NameWithTag}が現れた。", "Sfx.EnemyAppearance.0"));
             var firstActor = player.BattleStatus.Speed > enemy.BattleStatus.Speed ? player : enemy;
             var secondActor = firstActor == player ? enemy : player;
