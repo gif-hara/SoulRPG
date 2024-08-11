@@ -47,8 +47,6 @@ MonoBehaviour:
   elements:
   - document: {fileID: 7158174451034942100, guid: 958daf0c2a66f79419ec46b70242fd62, type: 3}
     overrideName: 
-  - document: {fileID: 7158174451034942100, guid: e8d12f8658270ff42856a4f50c1330d7, type: 3}
-    overrideName: 
   - document: {fileID: 7158174451034942100, guid: b47be1cb01d8a0448b0fe737fb343c57, type: 3}
     overrideName: 
   - document: {fileID: 7158174451034942100, guid: ad646b53ad9c2420ebb498c3db68e319, type: 3}

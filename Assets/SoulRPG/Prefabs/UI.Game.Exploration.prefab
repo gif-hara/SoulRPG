@@ -1407,8 +1407,6 @@ MonoBehaviour:
     overrideName: 
   - document: {fileID: 8491296199173971465, guid: 151e3676282e4d54fba721b42625a448, type: 3}
     overrideName: 
-  - document: {fileID: 8491296199173971465, guid: abf75ac1f590d004cbb9ec8e5c2b93b1, type: 3}
-    overrideName: 
   - document: {fileID: 754261947443348434}
     overrideName: Area.Tips.Viewport
   - document: {fileID: 8101275882166660962, guid: 1567e08c4043b4a6182b938a6c7cfbaf, type: 3}

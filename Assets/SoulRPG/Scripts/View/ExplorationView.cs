@@ -71,8 +71,7 @@ namespace SoulRPG
             var tipSize = size / 10;
             var tipsParent = areaDocument.Q<RectTransform>("Area.Tips.Viewport");
             var characterAreaTransform = areaDocument.Q<RectTransform>("Area.Character");
-            var miniMapWallTopPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Top");
-            var miniMapWallLeftPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall.Left");
+            var miniMapWallPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall");
             var shadowParent = areaDocument.Q<RectTransform>("Area.Shadow.Viewport");
             characterAreaTransform.sizeDelta = tipSize;
             character.PositionAsObservable()
@@ -98,10 +97,11 @@ namespace SoulRPG
             foreach (var i in dungeonController.CurrentDungeon.wall.List)
             {
                 var isHorizontal = i.a.y == i.b.y;
-                var prefab = isHorizontal ? miniMapWallTopPrefab : miniMapWallLeftPrefab;
+                var prefab = miniMapWallPrefab;
                 var wallObject = Object.Instantiate(prefab, tipsParent.transform);
                 wallObject.anchoredPosition = new Vector2(i.a.x * tipSize.x, i.a.y * tipSize.y);
                 wallObject.sizeDelta = tipSize;
+                wallObject.rotation = Quaternion.Euler(0, 0, isHorizontal ? 0 : 90);
             }
 
             for (var y = 0; y <= dungeonController.CurrentDungeon.range.y; y++)
@@ -192,9 +192,10 @@ namespace SoulRPG
             foreach (var i in dungeonController.CurrentDungeon.wall.List)
             {
                 var isHorizontal = i.a.y == i.b.y;
-                var prefab = isHorizontal ? dungeonDocument.Q<Transform>("Dungeon.Wall.Top") : dungeonDocument.Q<Transform>("Dungeon.Wall.Left");
+                var prefab = dungeonDocument.Q<Transform>("Dungeon.Wall");
                 var wallObject = Object.Instantiate(prefab, dungeonDocument.transform);
                 wallObject.position = new Vector3(i.a.x, 0, i.a.y);
+                wallObject.rotation = Quaternion.Euler(0, isHorizontal ? 0 : -90, 0);
             }
 
             CreateFloorEventObjects();
