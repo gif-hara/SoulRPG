@@ -27,6 +27,10 @@ namespace SoulRPG
             this.canRegisterUsedIdentifier = canRegisterUsedIdentifier;
         }
 
+        public void Dispose()
+        {
+        }
+
         public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
         {
             return UniTask.FromResult(new Skill(weaponItemId, skillId, canRegisterUsedIdentifier) as ICommandInvoker);

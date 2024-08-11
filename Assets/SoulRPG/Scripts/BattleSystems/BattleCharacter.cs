@@ -88,6 +88,7 @@ namespace SoulRPG
         {
             BattleStatus.Dispose();
             AilmentController.Dispose();
+            battleAI.Dispose();
         }
 
         public float GetTotalCutRate(Define.AttackAttribute attackAttribute)

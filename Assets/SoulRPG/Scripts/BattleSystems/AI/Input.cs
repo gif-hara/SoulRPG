@@ -30,6 +30,11 @@ namespace SoulRPG
             commandView = new CommandView(commandDocumentPrefab);
         }
 
+        public void Dispose()
+        {
+            stateMachine.Dispose();
+        }
+
         public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
         {
             this.character = character;
