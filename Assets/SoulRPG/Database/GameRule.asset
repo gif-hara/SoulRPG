@@ -27,3 +27,5 @@ MonoBehaviour:
   audioDatabase:
     list:
     - clip: {fileID: 8300000, guid: 4f122d726e177e844831ec91924f82f2, type: 3}
+    - clip: {fileID: 8300000, guid: 9edaf353f41bfca469fc7a3a110c7126, type: 3}
+    - clip: {fileID: 8300000, guid: c0a19e1b237e6bd4491fad1d74179c2c, type: 3}
