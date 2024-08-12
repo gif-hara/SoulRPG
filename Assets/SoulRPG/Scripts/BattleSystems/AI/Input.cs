@@ -58,6 +58,7 @@ namespace SoulRPG
             switch (index)
             {
                 case 0:
+                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
                     stateMachine.Change(StateSelectWeaponAsync);
                     break;
                 case 1:
@@ -73,9 +74,11 @@ namespace SoulRPG
 
         private async UniTask StateSelectWeaponAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
+                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
                     stateMachine.Change(StateSelectMainCommandAsync);
                 })
                 .RegisterTo(scope);
@@ -89,16 +92,18 @@ namespace SoulRPG
                     return Define.HandWeaponId.GetMasterDataItem().Name;
                 });
             var index = await commandView.CreateCommandsAsync("武器を選べ", commands, 0);
-            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             selectedWeaponId = index;
+            gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
             stateMachine.Change(StateSelectSkillAsync);
         }
 
         private async UniTask StateSelectSkillAsync(CancellationToken scope)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
+                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
                     stateMachine.Change(StateSelectWeaponAsync);
                 })
                 .RegisterTo(scope);
@@ -121,18 +126,18 @@ namespace SoulRPG
                 var identifier = Skill.CreateIdentifier(weapon.ItemId, skill.Id);
                 if (character.UsedSkills.Contains(identifier))
                 {
-                    TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。", "Sfx.Message.0"));
+                    gameEvents.OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。", "Sfx.Message.0"));
                     continue;
                 }
                 var behaviourPoint = await character.GetFixedNeedBehaviourPointAsync(skill.NeedBehaviourPoint);
                 if (!character.BattleStatus.HasBehaviourPoint(behaviourPoint))
                 {
-                    TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("BPが足りない。", "Sfx.Message.0"));
+                    gameEvents.OnRequestShowMessage.OnNext(new("BPが足りない。", "Sfx.Message.0"));
                     continue;
                 }
                 if (!character.BattleStatus.HasStamina(skill.NeedStamina))
                 {
-                    TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("スタミナが足りない。", "Sfx.Message.0"));
+                    gameEvents.OnRequestShowMessage.OnNext(new("スタミナが足りない。", "Sfx.Message.0"));
                     continue;
                 }
                 commandView.Close();
