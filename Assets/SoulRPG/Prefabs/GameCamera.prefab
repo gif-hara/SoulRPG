@@ -1,5 +1,135 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &936549182310485869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4425938457507681588}
+  - component: {fileID: 2531461101566843547}
+  m_Layer: 0
+  m_Name: Animation.OnTakeDamage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4425938457507681588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936549182310485869}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6341488569040045495}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2531461101566843547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936549182310485869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868f96161af5bb04c877aea540858563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 3022425801709846865
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 3022425801709846865
+      type: {class: MotionVector2Shake, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        parameters:
+          rid: 3022425801709846866
+        bindTo:
+          rid: 3022425801709846873
+        addTo:
+          rid: 3022425801709846875
+    - rid: 3022425801709846866
+      type: {class: Vector2ShakeParameters, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        fromResolver:
+          rid: 3022425801709846867
+        toResolver:
+          rid: 3022425801709846868
+        durationResolver:
+          rid: 3022425801709846869
+        delayResolver:
+          rid: 3022425801709846870
+        loopCountResolver:
+          rid: 3022425801709846871
+        loopType: 0
+        motionSchedulerResolver:
+          rid: 3022425801709846872
+        ease: 0
+        customAnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        frequencyResolver:
+          rid: -2
+        dampingResolver:
+          rid: -2
+        randomSeedResolver:
+          rid: -2
+    - rid: 3022425801709846867
+      type: {class: Vector2Resolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: {x: 0, y: 0}
+    - rid: 3022425801709846868
+      type: {class: Vector2Resolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: {x: 5, y: 5}
+    - rid: 3022425801709846869
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0.3
+    - rid: 3022425801709846870
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 3022425801709846871
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 3022425801709846872
+      type: {class: MotionSchedulerResolver/Update, ns: UnitySequencerSystem.Resolvers.LitMotion, asm: UnitySequencerSystem}
+      data: 
+    - rid: 3022425801709846873
+      type: {class: BindToVector2Shake/TransformEulerAngleXY, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 3022425801709846874
+    - rid: 3022425801709846874
+      type: {class: TransformResolver/Reference, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        target: {fileID: 645185956684524663}
+    - rid: 3022425801709846875
+      type: {class: AddToTransform, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 3022425801709846876
+    - rid: 3022425801709846876
+      type: {class: TransformResolver/Reference, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        target: {fileID: 9083756189693624525}
 --- !u!1 &3600803084937579820
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +161,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 645185956684524663}
+  - {fileID: 6341488569040045495}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &362200604035762854
@@ -45,7 +176,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e694047104068c4dafc8abdf1f7597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  document: {fileID: 0}
+  document: {fileID: 6019146999050475882}
+--- !u!1 &4570697359188463075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6341488569040045495}
+  - component: {fileID: 6019146999050475882}
+  m_Layer: 0
+  m_Name: Sequences
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6341488569040045495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570697359188463075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4425938457507681588}
+  m_Father: {fileID: 9083756189693624525}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6019146999050475882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570697359188463075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0bca0e48c915f4eae5e0e88e6c9227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elements:
+  - document: {fileID: 936549182310485869}
+    overrideName: 
 --- !u!1 &4977815578923075362
 GameObject:
   m_ObjectHideFlags: 0

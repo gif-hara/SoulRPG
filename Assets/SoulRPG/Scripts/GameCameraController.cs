@@ -21,7 +21,7 @@ namespace SoulRPG
                     x.Player.Events.OnTakeDamage
                         .Subscribe(_ =>
                         {
-                            document.Q<SequenceMonobehaviour>("Animation.TakeDamage").PlayAsync().Forget();
+                            document.Q<SequenceMonobehaviour>("Animation.OnTakeDamage").PlayAsync().Forget();
                         })
                         .RegisterTo(destroyCancellationToken);
                 })
