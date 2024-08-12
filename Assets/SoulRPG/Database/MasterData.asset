@@ -3040,6 +3040,7 @@ MonoBehaviour:
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 0
+      BattleBgmId: 0
       Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
     - Id: 10102
       Name: "\u30B4\u30D6\u30EA\u30F3"
@@ -3058,6 +3059,7 @@ MonoBehaviour:
       BehaviourPoint: 1
       Attribute: 0
       ThumbnailId: 0
+      BattleBgmId: 0
       Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
     - Id: 10103
       Name: "\u30D8\u30C9\u30ED\u30B9\u30E9\u30A4\u30E0"
@@ -3076,6 +3078,7 @@ MonoBehaviour:
       BehaviourPoint: 1
       Attribute: 0
       ThumbnailId: 17
+      BattleBgmId: 0
       Thumbnail: {fileID: 21300000, guid: 53936c1bee7e7e84e8521ab1554671cd, type: 3}
     - Id: 10104
       Name: "\u546A\u3044\u306E\u4EBA\u5F62"
@@ -3094,6 +3097,7 @@ MonoBehaviour:
       BehaviourPoint: 1
       Attribute: 0
       ThumbnailId: 18
+      BattleBgmId: 0
       Thumbnail: {fileID: 21300000, guid: 47836f815c556844dae05db1f87b3f9e, type: 3}
     - Id: 10105
       Name: "\u5948\u843D\u306E\u6B7B\u8005"
@@ -3112,6 +3116,7 @@ MonoBehaviour:
       BehaviourPoint: 1
       Attribute: 0
       ThumbnailId: 1
+      BattleBgmId: 1
       Thumbnail: {fileID: 21300000, guid: 68474eeb70b256745a563ddf97dc3533, type: 3}
   ailments:
     list:

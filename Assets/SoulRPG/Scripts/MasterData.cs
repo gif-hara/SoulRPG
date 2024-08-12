@@ -549,6 +549,8 @@ namespace SoulRPG
 
             public string ThumbnailId;
 
+            public string BattleBgmId;
+
             public Sprite Thumbnail;
 
             [Serializable]
