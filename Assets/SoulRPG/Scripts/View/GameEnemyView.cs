@@ -23,6 +23,12 @@ namespace SoulRPG
                     sequenceDocument.Q<SequenceMonobehaviour>("Animation.OnTakeDamage").PlayAsync().Forget();
                 })
                 .RegisterTo(scope);
+            enemy.Events.OnDeadMessage
+                .Subscribe(_ =>
+                {
+                    sequenceDocument.Q<SequenceMonobehaviour>("Animation.OnDeadMessage").PlayAsync().Forget();
+                })
+                .RegisterTo(scope);
             await scope.WaitUntilCanceled();
             Object.Destroy(document.gameObject);
         }
