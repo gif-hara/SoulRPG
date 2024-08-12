@@ -2113,6 +2113,7 @@ MonoBehaviour:
     list:
     - ItemId: 101001
       Strength: 124
+      Speed: 0
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101002
@@ -2120,6 +2121,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101002
       Strength: 100
+      Speed: 2
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101005
@@ -2127,6 +2129,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101003
       Strength: 153
+      Speed: -3
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101004
@@ -2134,6 +2137,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101004
       Strength: 117
+      Speed: 0
       AttackAttribute: 2
       Skill1: 101001
       Skill2: 101003
@@ -2141,6 +2145,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101005
       Strength: 130
+      Speed: -2
       AttackAttribute: 1
       Skill1: 101001
       Skill2: 101007
@@ -2148,6 +2153,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101006
       Strength: 94
+      Speed: 2
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101008
@@ -2155,6 +2161,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101007
       Strength: 120
+      Speed: 0
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101009
@@ -2162,6 +2169,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101008
       Strength: 128
+      Speed: -2
       AttackAttribute: 1
       Skill1: 101001
       Skill2: 101010
@@ -2169,6 +2177,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101009
       Strength: 122
+      Speed: 0
       AttackAttribute: 3
       Skill1: 101012
       Skill2: 101013
@@ -2176,6 +2185,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101010
       Strength: 134
+      Speed: 0
       AttackAttribute: 1
       Skill1: 101001
       Skill2: 101014
@@ -2183,6 +2193,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101011
       Strength: 128
+      Speed: 0
       AttackAttribute: 3
       Skill1: 101012
       Skill2: 101021
@@ -2190,6 +2201,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101012
       Strength: 128
+      Speed: 0
       AttackAttribute: 0
       Skill1: 101012
       Skill2: 101016
@@ -2197,6 +2209,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101013
       Strength: 167
+      Speed: -3
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101017
@@ -2204,6 +2217,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101014
       Strength: 111
+      Speed: 2
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101011
@@ -2211,6 +2225,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101015
       Strength: 120
+      Speed: 0
       AttackAttribute: 5
       Skill1: 101012
       Skill2: 101019
@@ -2218,6 +2233,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101016
       Strength: 185
+      Speed: -2
       AttackAttribute: 1
       Skill1: 101001
       Skill2: 101022
@@ -2225,6 +2241,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101017
       Strength: 113
+      Speed: 1
       AttackAttribute: 2
       Skill1: 101026
       Skill2: 101027
@@ -2232,6 +2249,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101018
       Strength: 143
+      Speed: -2
       AttackAttribute: 2
       Skill1: 101001
       Skill2: 101046
@@ -2239,6 +2257,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101019
       Strength: 161
+      Speed: 0
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101018
@@ -2246,6 +2265,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101020
       Strength: 190
+      Speed: -1
       AttackAttribute: 2
       Skill1: 101001
       Skill2: 101024
@@ -2253,6 +2273,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101021
       Strength: 89
+      Speed: 2
       AttackAttribute: 1
       Skill1: 101045
       Skill2: 101065
@@ -2260,6 +2281,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101022
       Strength: 111
+      Speed: 0
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101030
@@ -2267,6 +2289,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101023
       Strength: 148
+      Speed: -3
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101031
@@ -2274,6 +2297,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101024
       Strength: 100
+      Speed: 2
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101032
@@ -2281,6 +2305,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101997
       Strength: 100
+      Speed: 0
       AttackAttribute: 0
       Skill1: 101001
       Skill2: 101065
@@ -2288,6 +2313,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101998
       Strength: 50
+      Speed: 0
       AttackAttribute: 1
       Skill1: 101001
       Skill2: 0
@@ -2295,6 +2321,7 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101999
       Strength: 100
+      Speed: 0
       AttackAttribute: 0
       Skill1: 0
       Skill2: 0

@@ -192,6 +192,13 @@ namespace SoulRPG
             get
             {
                 var result = 0;
+                foreach (var i in weaponIds)
+                {
+                    if (i.Value.TryGetMasterDataWeapon(out var weapon))
+                    {
+                        result += weapon.Speed;
+                    }
+                }
                 if (HeadId.TryGetMasterDataArmorHead(out var armorHead))
                 {
                     result += armorHead.Speed;
