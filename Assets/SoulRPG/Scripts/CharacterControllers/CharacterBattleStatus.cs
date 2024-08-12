@@ -295,6 +295,11 @@ namespace SoulRPG
             guardPointReactiveProperty.Value = 0;
         }
 
+        public void AddStamina(int value)
+        {
+            staminaReactiveProperty.Value = Mathf.Clamp(staminaReactiveProperty.Value + value, 0, staminaMaxReactiveProperty.Value);
+        }
+
         public bool HasBehaviourPoint(int needBehaviourPoint)
         {
             return behaviourPointReactiveProperty.Value >= needBehaviourPoint;

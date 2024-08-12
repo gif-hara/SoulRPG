@@ -15,28 +15,31 @@ namespace SoulRPG.BattleSystems.CommandInvokers
 
         private readonly int behaviourPriority;
 
-        private readonly int cost;
+        private readonly int needBehaviourPoint;
+
+        private readonly int needStamina;
 
         private readonly string identifier;
 
         private readonly bool canRegisterUsedIdentifier;
 
-        public Sequences(ScriptableSequences scriptableSequences, int weaponId, int behaviourPriority, int cost, string identifier)
-            : this(scriptableSequences, weaponId, behaviourPriority, cost, identifier, true)
+        public Sequences(ScriptableSequences scriptableSequences, int weaponId, int behaviourPriority, int needBehaviourPoint, int needStamina, string identifier)
+            : this(scriptableSequences, weaponId, behaviourPriority, needBehaviourPoint, needStamina, identifier, true)
         {
         }
 
-        public Sequences(ScriptableSequences scriptableSequences, int weaponId, int behaviourPriority, int cost)
-            : this(scriptableSequences, weaponId, behaviourPriority, cost, "", false)
+        public Sequences(ScriptableSequences scriptableSequences, int weaponId, int behaviourPriority, int needBehaviourPoint, int needStamina)
+            : this(scriptableSequences, weaponId, behaviourPriority, needBehaviourPoint, needStamina, "", false)
         {
         }
 
-        private Sequences(ScriptableSequences scriptableSequences, int weaponId, int behaviourPriority, int cost, string identifier, bool canRegisterUsedIdentifier)
+        private Sequences(ScriptableSequences scriptableSequences, int weaponId, int behaviourPriority, int needBehaviourPoint, int needStamina, string identifier, bool canRegisterUsedIdentifier)
         {
             this.scriptableSequences = scriptableSequences;
             this.weaponId = weaponId;
             this.behaviourPriority = behaviourPriority;
-            this.cost = cost;
+            this.needBehaviourPoint = needBehaviourPoint;
+            this.needStamina = needStamina;
             this.identifier = identifier;
             this.canRegisterUsedIdentifier = canRegisterUsedIdentifier;
         }
@@ -52,9 +55,9 @@ namespace SoulRPG.BattleSystems.CommandInvokers
             return sequencer.PlayAsync(scope);
         }
 
-        public int GetCost()
+        public int GetNeedBehaviourPoint()
         {
-            return cost;
+            return needBehaviourPoint;
         }
 
         public string GetIdentifier()
@@ -65,6 +68,11 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         public bool CanRegisterUsedIdentifier()
         {
             return canRegisterUsedIdentifier;
+        }
+
+        public int GetNeedStamina()
+        {
+            return needStamina;
         }
     }
 }

@@ -23,7 +23,10 @@ namespace SoulRPG
         private int behaviourPriority;
 
         [SerializeField]
-        private int cost;
+        private int needBehaviourPoint;
+
+        [SerializeField]
+        private int needStamina;
 
         [SerializeField]
         private string identifier;
@@ -42,7 +45,7 @@ namespace SoulRPG
                 return UniTask.CompletedTask;
             }
 
-            actor.EnqueueAfterCommandInvoker(key, new Sequences(scriptableSequences, weapon.ItemId, behaviourPriority, cost, identifier));
+            actor.EnqueueAfterCommandInvoker(key, new Sequences(scriptableSequences, weapon.ItemId, behaviourPriority, needBehaviourPoint, needStamina, identifier));
             return UniTask.CompletedTask;
         }
     }

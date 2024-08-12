@@ -34,9 +34,9 @@ namespace SoulRPG.BattleSystems.CommandInvokers
             return sequencer.PlayAsync(scope);
         }
 
-        public int GetCost()
+        public int GetNeedBehaviourPoint()
         {
-            return skillId.GetMasterDataSkill().Cost;
+            return skillId.GetMasterDataSkill().NeedBehaviourPoint;
         }
 
         public string GetIdentifier()
@@ -52,6 +52,11 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         public static string CreateIdentifier(int weaponId, int skillId)
         {
             return $"{weaponId}.{skillId}";
+        }
+
+        public int GetNeedStamina()
+        {
+            return skillId.GetMasterDataSkill().NeedStamina;
         }
     }
 }

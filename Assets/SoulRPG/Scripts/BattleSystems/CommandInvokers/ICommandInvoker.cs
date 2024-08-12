@@ -10,7 +10,9 @@ namespace SoulRPG.BattleSystems.CommandInvokers
     {
         UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
 
-        int GetCost();
+        int GetNeedBehaviourPoint();
+
+        int GetNeedStamina();
 
         string GetIdentifier();
 

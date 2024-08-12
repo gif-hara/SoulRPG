@@ -124,10 +124,15 @@ namespace SoulRPG
                     TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。", "Sfx.Message.0"));
                     continue;
                 }
-                var behaviourPoint = await character.GetFixedNeedBehaviourPointAsync(skill.Cost);
+                var behaviourPoint = await character.GetFixedNeedBehaviourPointAsync(skill.NeedBehaviourPoint);
                 if (!character.BattleStatus.HasBehaviourPoint(behaviourPoint))
                 {
                     TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("BPが足りない。", "Sfx.Message.0"));
+                    continue;
+                }
+                if (!character.BattleStatus.HasStamina(skill.NeedStamina))
+                {
+                    TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("スタミナが足りない。", "Sfx.Message.0"));
                     continue;
                 }
                 commandView.Close();
