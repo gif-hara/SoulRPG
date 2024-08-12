@@ -1827,12 +1827,12 @@ MonoBehaviour:
         DungeonName: Dungeon.10101
         X: 10
         Y: 6
-        ItemTableId: 1
+        ItemTableId: 2
       FloorEnemyGuaranteeds:
       - DungeonName: Dungeon.10101
         X: 11
         Y: 4
-        EnemyTableId: 1
+        EnemyTableId: 3
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
@@ -1929,184 +1929,186 @@ MonoBehaviour:
     list:
     - Key: 1
       Value:
-      - Id: 1
+      - Id: 0
         TableId: 1
         ItemId: 101001
         Count: 1
         Weight: 100
-      - Id: 2
+      - Id: 0
         TableId: 1
         ItemId: 101002
         Count: 1
         Weight: 100
-      - Id: 3
+      - Id: 0
         TableId: 1
         ItemId: 101003
         Count: 1
         Weight: 100
-      - Id: 4
+      - Id: 0
         TableId: 1
         ItemId: 101004
         Count: 1
         Weight: 100
-      - Id: 5
+      - Id: 0
         TableId: 1
         ItemId: 101005
         Count: 1
         Weight: 100
-      - Id: 6
+      - Id: 0
         TableId: 1
         ItemId: 101006
         Count: 1
         Weight: 100
-      - Id: 7
+      - Id: 0
         TableId: 1
         ItemId: 101007
         Count: 1
         Weight: 100
-      - Id: 8
+      - Id: 0
         TableId: 1
         ItemId: 101008
         Count: 1
         Weight: 100
-      - Id: 9
+      - Id: 0
         TableId: 1
         ItemId: 101009
         Count: 1
         Weight: 100
-      - Id: 10
-        TableId: 1
-        ItemId: 101010
-        Count: 1
-        Weight: 100
-      - Id: 11
+      - Id: 0
         TableId: 1
         ItemId: 101011
         Count: 1
         Weight: 100
-      - Id: 12
+      - Id: 0
         TableId: 1
         ItemId: 101012
         Count: 1
         Weight: 100
-      - Id: 13
+      - Id: 0
         TableId: 1
         ItemId: 101013
         Count: 1
         Weight: 100
-      - Id: 14
+      - Id: 0
         TableId: 1
         ItemId: 101014
         Count: 1
         Weight: 100
-      - Id: 15
+      - Id: 0
         TableId: 1
         ItemId: 101015
         Count: 1
         Weight: 100
-      - Id: 16
+      - Id: 0
         TableId: 1
         ItemId: 101016
         Count: 1
         Weight: 100
-      - Id: 17
+      - Id: 0
         TableId: 1
         ItemId: 101017
         Count: 1
         Weight: 100
-      - Id: 18
+      - Id: 0
         TableId: 1
         ItemId: 101018
         Count: 1
         Weight: 100
-      - Id: 19
+      - Id: 0
         TableId: 1
         ItemId: 101019
         Count: 1
         Weight: 100
-      - Id: 20
-        TableId: 1
-        ItemId: 101020
-        Count: 1
-        Weight: 100
-      - Id: 21
+      - Id: 0
         TableId: 1
         ItemId: 101021
         Count: 1
         Weight: 100
-      - Id: 22
-        TableId: 1
-        ItemId: 101022
-        Count: 1
-        Weight: 100
-      - Id: 23
-        TableId: 1
-        ItemId: 101023
-        Count: 1
-        Weight: 100
-      - Id: 24
+      - Id: 0
         TableId: 1
         ItemId: 101024
         Count: 1
         Weight: 100
-      - Id: 25
+      - Id: 0
         TableId: 1
         ItemId: 102001
         Count: 1
         Weight: 100
-      - Id: 26
+      - Id: 0
         TableId: 1
         ItemId: 103001
         Count: 1
         Weight: 100
-      - Id: 27
+      - Id: 0
         TableId: 1
         ItemId: 104001
         Count: 1
         Weight: 100
-      - Id: 28
+      - Id: 0
         TableId: 1
         ItemId: 105001
         Count: 1
         Weight: 100
-      - Id: 29
+      - Id: 0
         TableId: 1
         ItemId: 102002
         Count: 1
         Weight: 100
-      - Id: 30
+      - Id: 0
         TableId: 1
         ItemId: 103002
         Count: 1
         Weight: 100
-      - Id: 31
+      - Id: 0
         TableId: 1
         ItemId: 104002
         Count: 1
         Weight: 100
-      - Id: 32
+      - Id: 0
         TableId: 1
         ItemId: 105002
         Count: 1
         Weight: 100
-      - Id: 33
+      - Id: 0
         TableId: 1
         ItemId: 102003
         Count: 1
         Weight: 100
-      - Id: 34
+      - Id: 0
         TableId: 1
         ItemId: 103003
         Count: 1
         Weight: 100
-      - Id: 35
+      - Id: 0
         TableId: 1
         ItemId: 104003
         Count: 1
         Weight: 100
-      - Id: 36
+      - Id: 0
         TableId: 1
         ItemId: 105003
+        Count: 1
+        Weight: 100
+    - Key: 2
+      Value:
+      - Id: 0
+        TableId: 2
+        ItemId: 101010
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101020
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101022
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101023
         Count: 1
         Weight: 100
   weapons:
@@ -3021,7 +3023,7 @@ MonoBehaviour:
     list:
     - Id: 10101
       Name: "\u30C6\u30B9\u30C8\u30A8\u30CD\u30DF\u30FC"
-      HitPoint: 90
+      HitPoint: 136
       Stamina: 0
       PhysicalAttack: 12
       MagicalAttack: 12
@@ -3039,7 +3041,7 @@ MonoBehaviour:
       Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
     - Id: 10102
       Name: "\u30B4\u30D6\u30EA\u30F3"
-      HitPoint: 101
+      HitPoint: 151
       Stamina: 0
       PhysicalAttack: 11
       MagicalAttack: 11
@@ -3057,7 +3059,7 @@ MonoBehaviour:
       Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
     - Id: 10103
       Name: "\u30D8\u30C9\u30ED\u30B9\u30E9\u30A4\u30E0"
-      HitPoint: 74
+      HitPoint: 111
       Stamina: 0
       PhysicalAttack: 9
       MagicalAttack: 9
@@ -3075,7 +3077,7 @@ MonoBehaviour:
       Thumbnail: {fileID: 21300000, guid: 53936c1bee7e7e84e8521ab1554671cd, type: 3}
     - Id: 10104
       Name: "\u546A\u3044\u306E\u4EBA\u5F62"
-      HitPoint: 119
+      HitPoint: 179
       Stamina: 0
       PhysicalAttack: 11
       MagicalAttack: 11
@@ -3091,6 +3093,24 @@ MonoBehaviour:
       Attribute: 0
       ThumbnailId: 18
       Thumbnail: {fileID: 21300000, guid: 47836f815c556844dae05db1f87b3f9e, type: 3}
+    - Id: 10105
+      Name: "\u5948\u843D\u306E\u6B7B\u8005"
+      HitPoint: 452
+      Stamina: 0
+      PhysicalAttack: 13
+      MagicalAttack: 13
+      SlashCutRate: 0.04
+      BlowCutRate: 0.05
+      ThrustCutRate: 0
+      MagicCutRate: 0.09
+      FireCutRate: 0.6
+      ThunderCutRate: 0.08
+      Speed: 7
+      Experience: 112
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 1
+      Thumbnail: {fileID: 21300000, guid: 68474eeb70b256745a563ddf97dc3533, type: 3}
   ailments:
     list:
     - Id: 101001
@@ -3314,4 +3334,10 @@ MonoBehaviour:
       - Id: 0
         TableId: 2
         EnemyId: 10104
+        Weight: 100
+    - Key: 3
+      Value:
+      - Id: 0
+        TableId: 3
+        EnemyId: 10105
         Weight: 100
