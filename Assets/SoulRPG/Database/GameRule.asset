@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b7d6805734249bcb59852018c57458, type: 3}
   m_Name: GameRule
   m_EditorClassIdentifier: 
+  hitPointAmountRate: 8
+  staminaAmountRate: 5
   experienceTableData:
     rate: 3.4
   initialItemDatabase:
