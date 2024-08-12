@@ -295,6 +295,16 @@ namespace SoulRPG
             guardPointReactiveProperty.Value = 0;
         }
 
+        public bool HasBehaviourPoint(int needBehaviourPoint)
+        {
+            return behaviourPointReactiveProperty.Value >= needBehaviourPoint;
+        }
+
+        public bool HasStamina(int needStamina)
+        {
+            return staminaReactiveProperty.Value >= needStamina;
+        }
+
         public void Dispose()
         {
             scope.Cancel();
