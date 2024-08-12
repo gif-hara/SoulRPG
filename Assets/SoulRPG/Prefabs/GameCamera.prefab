@@ -57,7 +57,7 @@ MonoBehaviour:
         parameters:
           rid: 3022425801709846866
         bindTo:
-          rid: 3022425801709846873
+          rid: 9047573602810200137
         addTo:
           rid: 3022425801709846875
     - rid: 3022425801709846866
@@ -112,15 +112,6 @@ MonoBehaviour:
     - rid: 3022425801709846872
       type: {class: MotionSchedulerResolver/Update, ns: UnitySequencerSystem.Resolvers.LitMotion, asm: UnitySequencerSystem}
       data: 
-    - rid: 3022425801709846873
-      type: {class: BindToVector2Shake/TransformEulerAngleXY, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
-      data:
-        targetResolver:
-          rid: 3022425801709846874
-    - rid: 3022425801709846874
-      type: {class: TransformResolver/Reference, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
-      data:
-        target: {fileID: 645185956684524663}
     - rid: 3022425801709846875
       type: {class: AddToTransform, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
       data:
@@ -130,6 +121,15 @@ MonoBehaviour:
       type: {class: TransformResolver/Reference, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
         target: {fileID: 9083756189693624525}
+    - rid: 9047573602810200137
+      type: {class: BindToVector2Shake/TransformLocalEulerAnglesXY, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 9047573602810200138
+    - rid: 9047573602810200138
+      type: {class: TransformResolver/Reference, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        target: {fileID: 645185956684524663}
 --- !u!1 &3600803084937579820
 GameObject:
   m_ObjectHideFlags: 0
