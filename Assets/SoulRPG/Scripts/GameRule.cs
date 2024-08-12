@@ -12,6 +12,14 @@ namespace SoulRPG
     public sealed class GameRule : ScriptableObject
     {
         [SerializeField]
+        private int hitPointAmountRate;
+        public int HitPointAmountRate => hitPointAmountRate;
+
+        [SerializeField]
+        private int staminaAmountRate;
+        public int StaminaAmountRate => staminaAmountRate;
+
+        [SerializeField]
         private ExperienceTableData experienceTableData;
         public ExperienceTableData ExperienceTable => experienceTableData;
 
