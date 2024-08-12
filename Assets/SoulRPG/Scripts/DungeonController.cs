@@ -292,6 +292,7 @@ namespace SoulRPG
             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
             if (battleResult == Define.BattleResult.PlayerWin)
             {
+                character.InstanceStatus.AddExperience(enemyCharacter.BattleStatus.Experience);
                 TinyServiceLocator.Resolve<GameEvents>().OnAcquiredFloorData.OnNext(floorData);
                 FloorDatabase.Remove(character.Position);
             }
