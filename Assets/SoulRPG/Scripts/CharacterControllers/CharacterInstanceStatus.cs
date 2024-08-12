@@ -14,7 +14,7 @@ namespace SoulRPG
         private readonly ReactiveProperty<int> hitPointReactiveProperty;
         public ReadOnlyReactiveProperty<int> HitPointAsObservable() => hitPointReactiveProperty;
         public int HitPoint => hitPointReactiveProperty.Value;
-        
+
         private readonly ReactiveProperty<int> guardPointReactiveProperty;
         public ReadOnlyReactiveProperty<int> GuardPointAsObservable() => guardPointReactiveProperty;
         public int GuardPoint => guardPointReactiveProperty.Value;
@@ -26,18 +26,18 @@ namespace SoulRPG
         private readonly ReactiveProperty<int> staminaReactiveProperty;
         public ReadOnlyReactiveProperty<int> StaminaAsObservable() => staminaReactiveProperty;
         public int Stamina => staminaReactiveProperty.Value;
-        
+
         private readonly ReactiveProperty<int> experienceReactiveProperty;
         public ReadOnlyReactiveProperty<int> ExperienceAsObservable() => experienceReactiveProperty;
         public int Experience => experienceReactiveProperty.Value;
 
         public CharacterInstanceStatus(CharacterGrowthParameter growthParameter)
         {
-            hitPointMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPoint);
-            hitPointReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPoint);
+            hitPointMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPointMax);
+            hitPointReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPointMax);
             guardPointReactiveProperty = new ReactiveProperty<int>(0);
-            staminaMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.Stamina);
-            staminaReactiveProperty = new ReactiveProperty<int>(growthParameter.Stamina);
+            staminaMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.StaminaMax);
+            staminaReactiveProperty = new ReactiveProperty<int>(growthParameter.StaminaMax);
             experienceReactiveProperty = new ReactiveProperty<int>(0);
         }
 
@@ -50,7 +50,7 @@ namespace SoulRPG
         {
             hitPointReactiveProperty.Value = value;
         }
-        
+
         public void SetGuardPoint(int value)
         {
             guardPointReactiveProperty.Value = value;
@@ -76,7 +76,7 @@ namespace SoulRPG
         {
             guardPointReactiveProperty.Value = 0;
         }
-        
+
         public void AddExperience(int value)
         {
             experienceReactiveProperty.Value += value;
