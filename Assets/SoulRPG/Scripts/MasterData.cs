@@ -455,7 +455,9 @@ namespace SoulRPG
 
             public int Id;
 
-            public int Cost;
+            public int NeedBehaviourPoint;
+
+            public int NeedStamina;
 
             public bool CanRegisterUsedSkills;
 
