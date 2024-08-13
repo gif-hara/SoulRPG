@@ -1,6 +1,6 @@
 using UnitySequencerSystem;
 
-namespace SoulRPG
+namespace SoulRPG.SequenceSystems.Evaluates
 {
     /// <summary>
     /// 
