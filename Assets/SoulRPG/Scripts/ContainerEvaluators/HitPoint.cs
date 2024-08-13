@@ -1,15 +1,14 @@
 using System;
-using SoulRPG.ContainerEvaluators;
 using UnityEngine;
 using UnitySequencerSystem;
 
-namespace SoulRPG.SequenceSystems.Evaluates
+namespace SoulRPG.ContainerEvaluators
 {
     /// <summary>
     /// 
     /// </summary>
     [Serializable]
-    public sealed class HitPoint : IEvaluate
+    public sealed class HitPoint : IContainerEvaluator
     {
         [SerializeField]
         [Range(0, 1)]

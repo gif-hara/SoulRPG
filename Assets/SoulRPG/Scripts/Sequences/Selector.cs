@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using SoulRPG.SequenceSystems.Evaluates;
+using SoulRPG.ContainerEvaluators;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnitySequencerSystem;
@@ -22,7 +22,7 @@ namespace SoulRPG
         {
             foreach (var element in elements)
             {
-                if (element.Evaluate.Evaluate(container))
+                if (element.Evaluator.Evaluate(container))
                 {
                     return new Sequencer(container, element.Sequences.Sequences).PlayAsync(cancellationToken);
                 }
@@ -35,8 +35,8 @@ namespace SoulRPG
         public sealed class Element
         {
             [SerializeReference, SubclassSelector]
-            private IEvaluate evaluate;
-            public IEvaluate Evaluate => evaluate;
+            private IContainerEvaluator evaluator;
+            public IContainerEvaluator Evaluator => evaluator;
 
             [SerializeField]
             private ScriptableSequences sequences;

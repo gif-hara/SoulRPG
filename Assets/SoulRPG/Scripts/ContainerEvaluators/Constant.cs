@@ -2,21 +2,20 @@ using System;
 using UnityEngine;
 using UnitySequencerSystem;
 
-namespace SoulRPG.SequenceSystems.Evaluates
+namespace SoulRPG.ContainerEvaluators
 {
     /// <summary>
     /// 
     /// </summary>
     [Serializable]
-    public sealed class Random : IEvaluate
+    public sealed class Constant : IContainerEvaluator
     {
         [SerializeField]
-        [Range(0, 1)]
-        private float rate;
+        private bool value;
 
         public bool Evaluate(Container container)
         {
-            return UnityEngine.Random.value < rate;
+            return value;
         }
     }
 }
