@@ -15,7 +15,7 @@ namespace SoulRPG
     {
         public string Name { get; }
 
-        public string NameWithTag => allyType.WithTag(Name);
+        public string NameWithTag => AllyType.WithTag(Name);
 
         private readonly ReactiveProperty<int> hitPointMaxReactiveProperty;
         public ReadOnlyReactiveProperty<int> HitPointMaxReactiveProperty => hitPointMaxReactiveProperty;
@@ -86,7 +86,7 @@ namespace SoulRPG
         private readonly Define.CharacterAttribute attribute;
         public Define.CharacterAttribute Attribute => attribute;
 
-        private readonly Define.AllyType allyType;
+        public Define.AllyType AllyType { get; }
 
         public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
@@ -134,7 +134,7 @@ namespace SoulRPG
             behaviourPointMaxReactiveProperty = new ReactiveProperty<int>(behaviourPointMax);
             behaviourPointReactiveProperty = new ReactiveProperty<int>(behaviourPoint);
             this.attribute = attribute;
-            this.allyType = allyType;
+            this.AllyType = allyType;
 #if DEBUG
             AddDebugPanel();
 #endif
