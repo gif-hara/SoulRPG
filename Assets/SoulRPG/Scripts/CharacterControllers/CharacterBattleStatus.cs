@@ -90,6 +90,8 @@ namespace SoulRPG
 
         public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
+        public float HitPointRate => (float)hitPointReactiveProperty.Value / hitPointMaxReactiveProperty.Value;
+
         private readonly CancellationTokenSource scope = new();
 
         public CharacterBattleStatus
