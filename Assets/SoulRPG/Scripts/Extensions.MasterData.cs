@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HK;
+using SoulRPG.BattleSystems.AI;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
 
@@ -86,7 +87,7 @@ namespace SoulRPG
 
         public static BattleCharacter CreateBattleCharacter(this MasterData.Enemy self)
         {
-            return new BattleCharacter(new CharacterBattleStatus(self), new Constant(101999, 101001, false));
+            return new BattleCharacter(new CharacterBattleStatus(self), new Enemy(self.AISequences));
         }
     }
 }
