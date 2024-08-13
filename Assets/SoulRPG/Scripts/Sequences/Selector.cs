@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using SoulRPG.SequenceSystems.Evaluates;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnitySequencerSystem;
