@@ -1,3 +1,4 @@
+using SoulRPG.ContainerEvaluators;
 using UnityEngine;
 
 namespace SoulRPG
@@ -132,6 +133,34 @@ namespace SoulRPG
             {
                 Define.AllyType.Player => $"<color=#AAAAFF>{message}</color>",
                 Define.AllyType.Enemy => $"<color=#FFAAAA>{message}</color>",
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
+        }
+
+        public static bool Compare(this IContainerEvaluator.CompareType self, float value, float rate)
+        {
+            return self switch
+            {
+                IContainerEvaluator.CompareType.Equals => value == rate,
+                IContainerEvaluator.CompareType.NotEquals => value != rate,
+                IContainerEvaluator.CompareType.GreaterThan => value > rate,
+                IContainerEvaluator.CompareType.GreaterThanOrEquals => value >= rate,
+                IContainerEvaluator.CompareType.LessThan => value < rate,
+                IContainerEvaluator.CompareType.LessThanOrEquals => value <= rate,
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
+        }
+
+        public static bool Compare(this IContainerEvaluator.CompareType self, int value, int rate)
+        {
+            return self switch
+            {
+                IContainerEvaluator.CompareType.Equals => value == rate,
+                IContainerEvaluator.CompareType.NotEquals => value != rate,
+                IContainerEvaluator.CompareType.GreaterThan => value > rate,
+                IContainerEvaluator.CompareType.GreaterThanOrEquals => value >= rate,
+                IContainerEvaluator.CompareType.LessThan => value < rate,
+                IContainerEvaluator.CompareType.LessThanOrEquals => value <= rate,
                 _ => throw new System.ArgumentOutOfRangeException()
             };
         }
