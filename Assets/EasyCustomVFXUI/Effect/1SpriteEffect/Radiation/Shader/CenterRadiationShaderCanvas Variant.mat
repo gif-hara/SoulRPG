@@ -25,9 +25,10 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _CenterRadius: 0.93
-    - _Speed: 15
+    - _CenterRadius: 0.75
+    - _Speed: 5.4
+    - _WholeRadius: 1
     m_Colors:
-    - _Color: {r: 2.2528908, g: 2.670157, b: 0.36525738, a: 0}
+    - _Color: {r: 2.3336527, g: 2.6904676, b: 0.6726169, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
