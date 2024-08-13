@@ -25,7 +25,7 @@ namespace SoulRPG
         private Define.GiveDamageType giveDamageType;
 
         [SerializeField]
-        private string sfxName = "Sfx.Message.1";
+        private string sfxName = "Sfx.Message.2";
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
