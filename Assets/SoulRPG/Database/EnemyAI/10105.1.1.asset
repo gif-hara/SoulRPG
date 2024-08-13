@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 10105.1.1
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 3022425832378073187
+  - rid: 3022425832378073188
+  - rid: 3022425832378073189
+  - rid: 3022425832378073198
+  - rid: 3022425832378073199
+  - rid: 3022425832378073200
+  - rid: 3022425832378073201
+  references:
+    version: 2
+    RefIds:
+    - rid: 3022425832378073187
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u3053\u306E\u79C1\u3092\u3053\u3053\u307E\u3067\u8FFD\u3044\u8FBC\u3080\u3068\u306F\u30FB\u30FB\u30FB\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 3022425832378073188
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u8CB4\u69D8\u306F\u5FC5\u305A\u5730\u7344\u3078\u843D\u3068\u3059\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 3022425832378073189
+      type: {class: ChangeEnemyAI, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        scriptableSequences: {fileID: 11400000, guid: 23eae2eb29b9b4e2597315760221100f, type: 2}
+    - rid: 3022425832378073198
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u3046\u304A\u304A\u304A\u304A\u3042\u3042\u3042\u3042\u3042\u3042\uFF01\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 3022425832378073199
+      type: {class: ChangeEnemySprite, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        sprite: {fileID: 21300000, guid: c7dfda3bbd4aa4c1a993df177cc6acf6, type: 3}
+    - rid: 3022425832378073200
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u771F\u306E\u59FF\u3078\u3068\u5909\u8EAB\u3057\u305F\u3002"
+        sfxName: 
+        ignoreIfCharacterDead: 0
+    - rid: 3022425832378073201
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u3053\u306E\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8\u304C\u8CB4\u69D8\u3092\u7070\u306B\u3057\u3066\u304F\u308C\u308B\u300D"
+        sfxName: 
+        ignoreIfCharacterDead: 0
