@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: 10101.2
+  m_Name: 10103.2
   m_EditorClassIdentifier: 
   sequences:
   - rid: 3022425801709846951
@@ -21,8 +21,8 @@ MonoBehaviour:
     - rid: 3022425801709846951
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F{Target}\u306B\u8972\u3044\u304B\u304B\u308B\u3002"
-        sfxName: Sfx.Message.0
+        format: "{Actor}\u306F\u7A81\u7136\u306E\u3057\u304B\u304B\u3063\u3066\u304D\u305F\u3002"
+        sfxName: Sfx.Message.1
         ignoreIfCharacterDead: 0
     - rid: 3022425801709846952
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
@@ -37,4 +37,4 @@ MonoBehaviour:
       data:
         weaponRate: 1
         attackType: 0
-        attackAttribute: 1
+        attackAttribute: 2
