@@ -19,7 +19,7 @@ namespace SoulRPG
 
         public Equipment Equipment { get; }
 
-        private readonly IBattleAI battleAI;
+        private IBattleAI battleAI;
 
         public Queue<(string, ICommandInvoker)> AfterCommandInvokers { get; private set; } = new();
 
@@ -141,6 +141,11 @@ namespace SoulRPG
         public UniTask OnBehaviourEndAsync(BattleCharacter target, CancellationToken scope)
         {
             return AilmentController.OnBehaviourEndAsync(this, target, scope);
+        }
+
+        public void ChangeAI(IBattleAI battleAI)
+        {
+            this.battleAI = battleAI;
         }
 
         public void TakeDamage(int damage)
