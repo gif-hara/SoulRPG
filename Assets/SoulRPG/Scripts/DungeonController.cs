@@ -273,7 +273,11 @@ namespace SoulRPG
                     gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{item.Name}</color>を{count}個手に入れた。", "Sfx.Message.0"));
                 }
                 character.Events.OnAcquiredItem.OnNext((item.Id, count));
+                var acquireItemViewScope = new CancellationTokenSource();
+                AcquireItemView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.AcquireItem"), acquireItemViewScope.Token).Forget();
                 await gameEvents.WaitForSubmitInputAsync();
+                acquireItemViewScope.Cancel();
+                acquireItemViewScope.Dispose();
             }
         }
 
