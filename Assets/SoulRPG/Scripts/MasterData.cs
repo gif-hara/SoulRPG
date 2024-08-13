@@ -221,6 +221,14 @@ namespace SoulRPG
                     Debug.LogWarning($"Not found EnemyThumbnail {i.ThumbnailId}");
                 }
             }
+            foreach (var i in items.List)
+            {
+                i.Thumbnail = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/SoulRPG/Textures/{i.ThumbnailId}.png");
+                if (i.Thumbnail == null)
+                {
+                    Debug.LogWarning($"Not found ItemThumbnail {i.ThumbnailId}");
+                }
+            }
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -414,6 +422,10 @@ namespace SoulRPG
             public string Name;
 
             public int Id;
+
+            public string ThumbnailId;
+
+            public Sprite Thumbnail;
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Item>

@@ -1845,86 +1845,168 @@ MonoBehaviour:
     list:
     - Name: "\u30B7\u30E7\u30FC\u30C8\u30BD\u30FC\u30C9"
       Id: 101001
+      ThumbnailId: Weapon.0
+      Thumbnail: {fileID: 21300000, guid: 651edfbfe3c264189ae6ba247a3ba1d0, type: 3}
     - Name: "\u30C0\u30AC\u30FC"
       Id: 101002
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30D0\u30B9\u30BF\u30FC\u30BD\u30FC\u30C9"
       Id: 101003
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30DA\u30CD\u30C8\u30EC\u30FC\u30BF\u30FC"
       Id: 101004
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30AF\u30E9\u30D6"
       Id: 101005
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30DD\u30A4\u30BA\u30F3\u30C0\u30AC\u30FC"
       Id: 101006
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30B9\u30D1\u30FC\u30AF\u30A8\u30C3\u30B8"
       Id: 101007
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30A6\u30A3\u30EB\u30E1\u30A4\u30B9"
       Id: 101008
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30D5\u30EC\u30A4\u30E0\u30ED\u30C3\u30C9"
       Id: 101009
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u713C\u93DD"
       Id: 101010
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30B5\u30F3\u30C0\u30FC\u30ED\u30C3\u30C9"
       Id: 101011
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9752\u9B54\u5C0E\u58EB\u306E\u5263"
       Id: 101012
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30B0\u30EC\u30FC\u30C8\u30BD\u30FC\u30C9"
       Id: 101013
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u706B\u82B1\u306E\u77ED\u5263"
       Id: 101014
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u96F7\u546A\u306E\u6756"
       Id: 101015
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30D0\u30B9\u30BF\u30FC\u30AF\u30E9\u30D6"
       Id: 101016
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30AF\u30A4\u30C3\u30AF\u30DC\u30A6"
       Id: 101017
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30E9\u30F3\u30B9"
       Id: 101018
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u96F7\u306E\u5263"
       Id: 101019
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u5927\u69CD"
       Id: 101020
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9244\u306E\u76FE"
       Id: 101021
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u6B7B\u6BD2\u5263"
       Id: 101022
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30EC\u30AA\u306E\u65AD\u7F6A\u5263"
       Id: 101023
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u5F71\u8D70\u306E\u77ED\u5263"
       Id: 101024
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u30C6\u30B9\u30C8\u6B66\u5668"
       Id: 101997
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u7D20\u624B"
       Id: 101998
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u6575\u6B66\u5668"
       Id: 101999
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9A0E\u58EB\u306E\u515C"
       Id: 102001
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9A0E\u58EB\u306E\u93A7"
       Id: 103001
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9A0E\u58EB\u306E\u624B\u7532"
       Id: 104001
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9A0E\u58EB\u306E\u8DB3\u7532"
       Id: 105001
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9769\u306E\u515C"
       Id: 102002
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9769\u306E\u93A7"
       Id: 103002
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9769\u306E\u624B\u7532"
       Id: 104002
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9769\u306E\u8DB3\u7532"
       Id: 105002
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9752\u3044\u30D5\u30FC\u30C9"
       Id: 102003
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9752\u3044\u30ED\u30FC\u30D6"
       Id: 103003
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9752\u3044\u624B\u888B"
       Id: 104003
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9752\u3044\u30BA\u30DC\u30F3"
       Id: 105003
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9244\u306E\u6307\u8F2A"
       Id: 106001
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
     - Name: "\u9244\u306E\u9375"
       Id: 107001
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
   itemTables:
     list:
     - Key: 1
