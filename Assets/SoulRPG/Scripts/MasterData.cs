@@ -220,6 +220,12 @@ namespace SoulRPG
                 {
                     Debug.LogWarning($"Not found EnemyThumbnail {i.ThumbnailId}");
                 }
+                i.AISequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/EnemyAI/{i.Id}.asset");
+                if (i.AISequences == null)
+                {
+                    Debug.LogWarning($"Not found EnemyAI {i.Id}");
+                    i.AISequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/EnemyAI/0.asset");
+                }
             }
             foreach (var i in items.List)
             {
@@ -564,6 +570,8 @@ namespace SoulRPG
             public string BattleBgmId;
 
             public Sprite Thumbnail;
+
+            public ScriptableSequences AISequences;
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Enemy>
