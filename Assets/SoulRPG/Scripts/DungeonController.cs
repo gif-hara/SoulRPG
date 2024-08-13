@@ -256,9 +256,11 @@ namespace SoulRPG
             return reachedPoints.Contains(position);
         }
 
-        private UniTask InvokeOnItemAsync(Character character, DungeonInstanceFloorData floorData)
+        private async UniTask InvokeOnItemAsync(Character character, DungeonInstanceFloorData floorData)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            gameEvents.OnAcquiredFloorData.OnNext(floorData);
+            FloorDatabase.Remove(character.Position);
             foreach (var (item, count) in floorData.Items)
             {
                 character.Inventory.Add(item.Id, count);
@@ -271,10 +273,8 @@ namespace SoulRPG
                     gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{item.Name}</color>を{count}個手に入れた。", "Sfx.Message.0"));
                 }
                 character.Events.OnAcquiredItem.OnNext((item.Id, count));
+                await gameEvents.WaitForSubmitInputAsync();
             }
-            gameEvents.OnAcquiredFloorData.OnNext(floorData);
-            FloorDatabase.Remove(character.Position);
-            return UniTask.CompletedTask;
         }
 
         private async UniTask InvokeOnSavePointAsync(Character character)
