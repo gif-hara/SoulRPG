@@ -36,9 +36,14 @@ namespace SoulRPG
         public readonly Subject<string> OnRequestRemoveDebugPanelInformation = new();
 #endif
 
-        public async UniTask ShowMessageAndWaitForSubmitInputAsync(ShowMessageData data)
+        public UniTask ShowMessageAndWaitForSubmitInputAsync(ShowMessageData data)
         {
             OnRequestShowMessage.OnNext(data);
+            return WaitForSubmitInputAsync();
+        }
+
+        public async UniTask WaitForSubmitInputAsync()
+        {
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var tempInputType = inputController.CurrentInputType;
             await UniTask.NextFrame();
@@ -49,15 +54,10 @@ namespace SoulRPG
                 {
                     OnSubmitInput.OnNext(Unit.Default);
                 });
-            await WaitForSubmitInputAsync();
-            inputController.ChangeInputType(tempInputType);
-        }
-
-        public async UniTask WaitForSubmitInputAsync()
-        {
             OnRequestSetActiveMessageArrow.OnNext(true);
             await OnSubmitInput.FirstAsync();
             OnRequestSetActiveMessageArrow.OnNext(false);
+            inputController.ChangeInputType(tempInputType);
         }
     }
 }
