@@ -279,31 +279,11 @@ namespace SoulRPG
 
         private async UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData floorData)
         {
-            var scope = new CancellationTokenSource();
-            var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
-            var masterDataEnemy = floorData.EnemyId.GetMasterDataEnemy();
-            var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
-            BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
-            GameEnemyView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Enemy"), masterDataEnemy, enemyCharacter, scope.Token).Forget();
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext($"Bgm.Battle.{masterDataEnemy.BattleBgmId}");
-            var battleSystem = new BattleSystem(playerCharacter, enemyCharacter);
-            var battleResult = await battleSystem.BeginAsync(scope.Token);
-            character.InstanceStatus.ResetGuardPoint();
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
-            if (battleResult == Define.BattleResult.PlayerWin)
+            var result = await BeginBattleAsync(character, floorData.EnemyId.GetMasterDataEnemy());
+            if (result == Define.BattleResult.PlayerWin)
             {
-                character.InstanceStatus.AddExperience(enemyCharacter.BattleStatus.Experience);
                 TinyServiceLocator.Resolve<GameEvents>().OnAcquiredFloorData.OnNext(floorData);
-                FloorDatabase.Remove(character.Position);
             }
-            else
-            {
-                character.Warp(checkPoint);
-                character.InstanceStatus.FullRecovery();
-                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("どうやら安全な場所に移動されたようだ", "Sfx.Message.0"));
-            }
-            scope.Cancel();
-            scope.Dispose();
         }
 
         private async UniTask InvokeOnDoorAsync(Character character, DungeonInstanceWallData wallEvent)
@@ -347,6 +327,34 @@ namespace SoulRPG
             }
         }
 
+        private async UniTask<Define.BattleResult> BeginBattleAsync(Character character, MasterData.Enemy masterDataEnemy)
+        {
+            var scope = new CancellationTokenSource();
+            var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
+            var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
+            BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
+            GameEnemyView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Enemy"), masterDataEnemy, enemyCharacter, scope.Token).Forget();
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext($"Bgm.Battle.{masterDataEnemy.BattleBgmId}");
+            var battleSystem = new BattleSystem(playerCharacter, enemyCharacter);
+            var battleResult = await battleSystem.BeginAsync(scope.Token);
+            character.InstanceStatus.ResetGuardPoint();
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
+            if (battleResult == Define.BattleResult.PlayerWin)
+            {
+                character.InstanceStatus.AddExperience(enemyCharacter.BattleStatus.Experience);
+                FloorDatabase.Remove(character.Position);
+            }
+            else
+            {
+                character.Warp(checkPoint);
+                character.InstanceStatus.FullRecovery();
+                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("どうやら安全な場所に移動されたようだ", "Sfx.Message.0"));
+            }
+            scope.Cancel();
+            scope.Dispose();
+            return battleResult;
+        }
+
 #if DEBUG
         public void DebugAddAllReachedPoint()
         {
@@ -360,6 +368,13 @@ namespace SoulRPG
                     TinyServiceLocator.Resolve<GameEvents>().OnAddReachedPoint.OnNext(position);
                 }
             }
+        }
+
+        public void DebugBeginBattle(Character player, int masterDataEnemyId)
+        {
+            var masterData = TinyServiceLocator.Resolve<MasterData>();
+            var enemy = masterData.Enemies.Get(masterDataEnemyId);
+            BeginBattleAsync(player, enemy).Forget();
         }
 #endif
     }

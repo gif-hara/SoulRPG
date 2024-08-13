@@ -182,6 +182,7 @@ MonoBehaviour:
     magicalStrength: 10
     speed: 10
   debugPlayerAttribute: 1
+  debugEnemyMasterDataId: 10102
   debugEnemyBattleStatus:
     name: "\u30A8\u30CD\u30DF\u30FC"
     hitPoint: 10

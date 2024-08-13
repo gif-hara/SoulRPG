@@ -54,6 +54,9 @@ namespace SoulRPG.SceneControllers
         private Define.CharacterAttribute debugPlayerAttribute;
 
         [SerializeField]
+        private int debugEnemyMasterDataId;
+
+        [SerializeField]
         private CharacterBattleStatusBlueprint debugEnemyBattleStatus;
 
         async void Start()
@@ -129,6 +132,10 @@ namespace SoulRPG.SceneControllers
                             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("[DEBUG] Add All Items", "Sfx.Message.0"));
                         }
 
+                        if (Keyboard.current.wKey.wasPressedThisFrame)
+                        {
+                            dungeonController.DebugBeginBattle(player, debugEnemyMasterDataId);
+                        }
                         if (Keyboard.current.eKey.wasPressedThisFrame)
                         {
                             player.InstanceStatus.AddExperience(100000);
