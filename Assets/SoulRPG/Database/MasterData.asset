@@ -1849,96 +1849,96 @@ MonoBehaviour:
       Thumbnail: {fileID: 21300000, guid: 651edfbfe3c264189ae6ba247a3ba1d0, type: 3}
     - Name: "\u30C0\u30AC\u30FC"
       Id: 101002
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.1
+      Thumbnail: {fileID: 21300000, guid: b3efa5fcec47d4a7cbd6f9b6dde63ef0, type: 3}
     - Name: "\u30D0\u30B9\u30BF\u30FC\u30BD\u30FC\u30C9"
       Id: 101003
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.2
+      Thumbnail: {fileID: 21300000, guid: 1b14e640c058344c2b0ee1a210036ca2, type: 3}
     - Name: "\u30DA\u30CD\u30C8\u30EC\u30FC\u30BF\u30FC"
       Id: 101004
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.3
+      Thumbnail: {fileID: 21300000, guid: efa613a5abb604cefbfa9e62722ebaab, type: 3}
     - Name: "\u30AF\u30E9\u30D6"
       Id: 101005
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.4
+      Thumbnail: {fileID: 21300000, guid: c457ed6c320b24453bb67cec4bd2a3ce, type: 3}
     - Name: "\u30DD\u30A4\u30BA\u30F3\u30C0\u30AC\u30FC"
       Id: 101006
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.5
+      Thumbnail: {fileID: 21300000, guid: 852b5668f2d33487db4e645b808b7ae8, type: 3}
     - Name: "\u30B9\u30D1\u30FC\u30AF\u30A8\u30C3\u30B8"
       Id: 101007
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.6
+      Thumbnail: {fileID: 21300000, guid: c5f7af7d014034059bea4abcb01e211c, type: 3}
     - Name: "\u30A6\u30A3\u30EB\u30E1\u30A4\u30B9"
       Id: 101008
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.7
+      Thumbnail: {fileID: 21300000, guid: 960b9007731b7476e9bc7e0784d39adb, type: 3}
     - Name: "\u30D5\u30EC\u30A4\u30E0\u30ED\u30C3\u30C9"
       Id: 101009
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.8
+      Thumbnail: {fileID: 21300000, guid: 6078252b54fde467ba498d0f612872f2, type: 3}
     - Name: "\u713C\u93DD"
       Id: 101010
       ThumbnailId: 
       Thumbnail: {fileID: 0}
     - Name: "\u30B5\u30F3\u30C0\u30FC\u30ED\u30C3\u30C9"
       Id: 101011
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.9
+      Thumbnail: {fileID: 21300000, guid: cad37d0304ef44d8db7046fbf9044bef, type: 3}
     - Name: "\u9752\u9B54\u5C0E\u58EB\u306E\u5263"
       Id: 101012
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.10
+      Thumbnail: {fileID: 21300000, guid: 7fbf59a500e0840769db9b6adbffa8af, type: 3}
     - Name: "\u30B0\u30EC\u30FC\u30C8\u30BD\u30FC\u30C9"
       Id: 101013
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.11
+      Thumbnail: {fileID: 21300000, guid: 6aa88c1c62f85438291edf98ca933061, type: 3}
     - Name: "\u706B\u82B1\u306E\u77ED\u5263"
       Id: 101014
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.12
+      Thumbnail: {fileID: 21300000, guid: 36590175bff9b47e1a02562b6521a64b, type: 3}
     - Name: "\u96F7\u546A\u306E\u6756"
       Id: 101015
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.13
+      Thumbnail: {fileID: 21300000, guid: 899a3e08bca4c41ee9b4827fff3f07aa, type: 3}
     - Name: "\u30D0\u30B9\u30BF\u30FC\u30AF\u30E9\u30D6"
       Id: 101016
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.14
+      Thumbnail: {fileID: 21300000, guid: 16fd47c3289984a69bda5eced7705a11, type: 3}
     - Name: "\u30AF\u30A4\u30C3\u30AF\u30DC\u30A6"
       Id: 101017
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.15
+      Thumbnail: {fileID: 21300000, guid: bcb5b6977da0a44d4996a4865ca8fc72, type: 3}
     - Name: "\u30E9\u30F3\u30B9"
       Id: 101018
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.16
+      Thumbnail: {fileID: 21300000, guid: 203747f4c4e714b7d8f2db68f08b38cc, type: 3}
     - Name: "\u96F7\u306E\u5263"
       Id: 101019
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.17
+      Thumbnail: {fileID: 21300000, guid: f26359450550d48a2b7fc81fff564f18, type: 3}
     - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u5927\u69CD"
       Id: 101020
       ThumbnailId: 
       Thumbnail: {fileID: 0}
     - Name: "\u9244\u306E\u76FE"
       Id: 101021
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.18
+      Thumbnail: {fileID: 21300000, guid: 5c54b434bf4064053a8fa72405fb9707, type: 3}
     - Name: "\u6B7B\u6BD2\u5263"
       Id: 101022
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.19
+      Thumbnail: {fileID: 21300000, guid: b107d439b0e3e44bba326211daa54602, type: 3}
     - Name: "\u30EC\u30AA\u306E\u65AD\u7F6A\u5263"
       Id: 101023
       ThumbnailId: 
       Thumbnail: {fileID: 0}
     - Name: "\u5F71\u8D70\u306E\u77ED\u5263"
       Id: 101024
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.20
+      Thumbnail: {fileID: 21300000, guid: 40e8b2746365741dca1399750dc6a13e, type: 3}
     - Name: "\u30C6\u30B9\u30C8\u6B66\u5668"
       Id: 101997
       ThumbnailId: 
