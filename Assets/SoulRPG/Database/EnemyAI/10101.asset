@@ -21,17 +21,22 @@ MonoBehaviour:
       type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         elements:
-        - evaluate:
-            rid: 3022425801709846949
+        - evaluator:
+            rid: 3022425832378073174
           sequences: {fileID: 11400000, guid: da3da5a8f9fe84b87980592d3e90ba6a, type: 2}
-        - evaluate:
-            rid: 3022425801709846954
+        - evaluator:
+            rid: 3022425832378073181
           sequences: {fileID: 11400000, guid: 477ac52195f8e42ae9383c75d0d5505d, type: 2}
-    - rid: 3022425801709846949
-      type: {class: Random, ns: SoulRPG.SequenceSystems.Evaluates, asm: Assembly-CSharp}
+    - rid: 3022425832378073174
+      type: {class: Random, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
-        rate: 0.5
-    - rid: 3022425801709846954
-      type: {class: Constant, ns: SoulRPG.SequenceSystems.Evaluates, asm: Assembly-CSharp}
+        probabilityResolver:
+          rid: 3022425832378073175
+    - rid: 3022425832378073175
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0.5
+    - rid: 3022425832378073181
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
         value: 1
