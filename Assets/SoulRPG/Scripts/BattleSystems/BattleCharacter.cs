@@ -145,6 +145,17 @@ namespace SoulRPG
 
         public void TakeDamage(int damage)
         {
+#if DEBUG
+            var battleDebugData = TinyServiceLocator.Resolve<BattleDebugData>();
+            if (BattleStatus.AllyType == Define.AllyType.Player && battleDebugData.IsInvinciblePlayer)
+            {
+                return;
+            }
+            if (BattleStatus.AllyType == Define.AllyType.Enemy && battleDebugData.IsInvincibleEnemy)
+            {
+                return;
+            }
+#endif
             BattleStatus.TakeDamage(damage);
             Events.OnTakeDamage.OnNext(damage);
         }
