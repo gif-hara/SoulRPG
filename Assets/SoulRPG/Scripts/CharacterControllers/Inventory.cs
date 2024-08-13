@@ -28,16 +28,6 @@ namespace SoulRPG
             {
                 Items[itemId] = count;
             }
-
-            if (count == 1)
-            {
-                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new($"<color=#8888FF>{itemId.GetMasterDataItem().Name}</color>を手に入れた。", "Sfx.Message.0"));
-            }
-            else
-            {
-                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new($"<color=#8888FF>{itemId.GetMasterDataItem().Name}</color>を{count}個手に入れた。", "Sfx.Message.0"));
-            }
-            character.Events.OnAcquiredItem.OnNext((itemId, count));
         }
 
         public void Remove(int itemId, int count)

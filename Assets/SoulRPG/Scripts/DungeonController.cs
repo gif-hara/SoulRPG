@@ -258,11 +258,21 @@ namespace SoulRPG
 
         private UniTask InvokeOnItemAsync(Character character, DungeonInstanceFloorData floorData)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             foreach (var (item, count) in floorData.Items)
             {
                 character.Inventory.Add(item.Id, count);
+                if (count == 1)
+                {
+                    gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{item.Name}</color>を手に入れた。", "Sfx.Message.0"));
+                }
+                else
+                {
+                    gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{item.Name}</color>を{count}個手に入れた。", "Sfx.Message.0"));
+                }
+                character.Events.OnAcquiredItem.OnNext((item.Id, count));
             }
-            TinyServiceLocator.Resolve<GameEvents>().OnAcquiredFloorData.OnNext(floorData);
+            gameEvents.OnAcquiredFloorData.OnNext(floorData);
             FloorDatabase.Remove(character.Position);
             return UniTask.CompletedTask;
         }
