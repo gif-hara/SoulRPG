@@ -47,8 +47,8 @@ Material:
     - _Density: 1
     - _Movement: 0.92
     - _NoiseMovement: 0.5
-    - _Power: 6
-    - _ScrollSpeed: -0.1
+    - _Power: 3.94
+    - _ScrollSpeed: -1
     - _Speed: 0.1
     - _SurfaceRange: 6.71
     m_Colors:
