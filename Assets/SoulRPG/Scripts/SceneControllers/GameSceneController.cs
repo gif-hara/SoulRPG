@@ -118,6 +118,9 @@ namespace SoulRPG.SceneControllers
                 })
                 .RegisterTo(destroyCancellationToken);
             gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
+#if DEBUG
+            var battleDebugData = new BattleDebugData();
+            TinyServiceLocator.Register(battleDebugData);
             Observable.EveryUpdate(destroyCancellationToken)
                 .Subscribe(_ =>
                 {
@@ -131,7 +134,6 @@ namespace SoulRPG.SceneControllers
                             }
                             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("[DEBUG] Add All Items", "Sfx.Message.0"));
                         }
-
                         if (Keyboard.current.wKey.wasPressedThisFrame)
                         {
                             dungeonController.DebugBeginBattle(player, debugEnemyMasterDataId);
@@ -141,10 +143,19 @@ namespace SoulRPG.SceneControllers
                             player.InstanceStatus.AddExperience(100000);
                             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("[DEBUG] Add Experience 100000", "Sfx.Message.0"));
                         }
-
                         if (Keyboard.current.rKey.wasPressedThisFrame)
                         {
                             dungeonController.DebugAddAllReachedPoint();
+                        }
+                        if (Keyboard.current.tKey.wasPressedThisFrame)
+                        {
+                            battleDebugData.IsInvinciblePlayer = !battleDebugData.IsInvinciblePlayer;
+                            gameEvents.OnRequestShowMessage.OnNext(new($"プレイヤーの無敵：{battleDebugData.IsInvinciblePlayer}"));
+                        }
+                        if (Keyboard.current.yKey.wasPressedThisFrame)
+                        {
+                            battleDebugData.IsInvincibleEnemy = !battleDebugData.IsInvincibleEnemy;
+                            gameEvents.OnRequestShowMessage.OnNext(new($"敵の無敵：{battleDebugData.IsInvincibleEnemy}"));
                         }
                     }
                     catch (OperationCanceledException)
@@ -152,6 +163,7 @@ namespace SoulRPG.SceneControllers
                     }
                 })
                 .RegisterTo(destroyCancellationToken);
+#endif
 
             await destroyCancellationToken.WaitUntilCanceled();
 
