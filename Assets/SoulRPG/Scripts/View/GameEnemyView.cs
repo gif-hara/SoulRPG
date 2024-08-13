@@ -16,6 +16,7 @@ namespace SoulRPG
         {
             var document = Object.Instantiate(documentPrefab);
             var sequenceDocument = document.Q<HKUIDocument>("Sequences");
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             document.Q<Image>("Image").sprite = masterDataEnemy.Thumbnail;
             enemy.Events.OnTakeDamage
                 .Subscribe(_ =>
@@ -27,6 +28,12 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     sequenceDocument.Q<SequenceMonobehaviour>("Animation.OnDeadMessage").PlayAsync().Forget();
+                })
+                .RegisterTo(scope);
+            gameEvents.OnRequestChangeEnemySprite
+                .Subscribe(sprite =>
+                {
+                    document.Q<Image>("Image").sprite = sprite;
                 })
                 .RegisterTo(scope);
             await scope.WaitUntilCanceled();

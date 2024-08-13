@@ -30,6 +30,8 @@ namespace SoulRPG
 
         public readonly Subject<BattleSystem> OnBeginBattle = new();
 
+        public readonly Subject<Sprite> OnRequestChangeEnemySprite = new();
+
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();
 
