@@ -274,7 +274,7 @@ namespace SoulRPG
                 }
                 character.Events.OnAcquiredItem.OnNext((item.Id, count));
                 var acquireItemViewScope = new CancellationTokenSource();
-                AcquireItemView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.AcquireItem"), acquireItemViewScope.Token).Forget();
+                AcquireItemView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.AcquireItem"), item, acquireItemViewScope.Token).Forget();
                 await gameEvents.WaitForSubmitInputAsync();
                 acquireItemViewScope.Cancel();
                 acquireItemViewScope.Dispose();
