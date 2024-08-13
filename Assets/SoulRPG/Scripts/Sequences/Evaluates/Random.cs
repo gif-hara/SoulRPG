@@ -11,6 +11,7 @@ namespace SoulRPG.SequenceSystems.Evaluates
     public sealed class Random : IEvaluate
     {
         [SerializeField]
+        [Range(0, 1)]
         private float rate;
 
         public bool Evaluate(Container container)
