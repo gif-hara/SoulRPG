@@ -175,12 +175,12 @@ MonoBehaviour:
   isUseDebugPosition: 0
   debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
   debugPlayerGrowthParameter:
-    level: 5
-    vitality: 99
-    stamina: 10
-    physicalStrength: 10
-    magicalStrength: 10
-    speed: 10
+    level: 3
+    vitality: 8
+    stamina: 7
+    physicalStrength: 9
+    magicalStrength: 9
+    speed: 7
   debugPlayerAttribute: 1
   debugEnemyMasterDataId: 10105
   debugEnemyBattleStatus:
