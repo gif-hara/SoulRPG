@@ -18,7 +18,6 @@ namespace SoulRPG
         [SerializeField]
         private float duration;
 
-
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             return GameFadeView.BeginFadeAsync(to, duration, cancellationToken);
