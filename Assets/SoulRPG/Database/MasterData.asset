@@ -1953,52 +1953,52 @@ MonoBehaviour:
       Thumbnail: {fileID: 0}
     - Name: "\u9A0E\u58EB\u306E\u515C"
       Id: 102001
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.0
+      Thumbnail: {fileID: 21300000, guid: 502ae4221f0b2234594cf950271b77db, type: 3}
     - Name: "\u9A0E\u58EB\u306E\u93A7"
       Id: 103001
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.1
+      Thumbnail: {fileID: 21300000, guid: 91643e62f56a901449002e0bb964de90, type: 3}
     - Name: "\u9A0E\u58EB\u306E\u624B\u7532"
       Id: 104001
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.2
+      Thumbnail: {fileID: 21300000, guid: fef85df6e4ba76447aa2586eb263f6e0, type: 3}
     - Name: "\u9A0E\u58EB\u306E\u8DB3\u7532"
       Id: 105001
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.3
+      Thumbnail: {fileID: 21300000, guid: 42df1d6c8eb8b544d960487e22b8ebb2, type: 3}
     - Name: "\u9769\u306E\u515C"
       Id: 102002
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.4
+      Thumbnail: {fileID: 21300000, guid: 89a7d008ebd92054d82fa873a2db9a73, type: 3}
     - Name: "\u9769\u306E\u93A7"
       Id: 103002
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.5
+      Thumbnail: {fileID: 21300000, guid: 025092a14bfa900438a52a3696248e56, type: 3}
     - Name: "\u9769\u306E\u624B\u7532"
       Id: 104002
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.6
+      Thumbnail: {fileID: 21300000, guid: 07a32a1dc04e5e9469f8f5285ddd6f7b, type: 3}
     - Name: "\u9769\u306E\u8DB3\u7532"
       Id: 105002
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.7
+      Thumbnail: {fileID: 21300000, guid: cffaf3badc5bd3c40ade76fd56d9fa8e, type: 3}
     - Name: "\u9752\u3044\u30D5\u30FC\u30C9"
       Id: 102003
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.8
+      Thumbnail: {fileID: 21300000, guid: da1974c6dc4a0e94894e3ab0a78f534e, type: 3}
     - Name: "\u9752\u3044\u30ED\u30FC\u30D6"
       Id: 103003
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.9
+      Thumbnail: {fileID: 21300000, guid: 2532298952c76d943b696ac7c37a0dc6, type: 3}
     - Name: "\u9752\u3044\u624B\u888B"
       Id: 104003
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.10
+      Thumbnail: {fileID: 21300000, guid: 7da38717f24798e49a49fd1be04a20b5, type: 3}
     - Name: "\u9752\u3044\u30BA\u30DC\u30F3"
       Id: 105003
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Armor.11
+      Thumbnail: {fileID: 21300000, guid: 6df81d23970470f4ea8dc5aa5e19d9fe, type: 3}
     - Name: "\u9244\u306E\u6307\u8F2A"
       Id: 106001
       ThumbnailId: 
