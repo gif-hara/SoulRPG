@@ -27,4 +27,5 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306E\u6C17\u5408\u304C\u89E3\u9664\u3055\u308C\u305F\u3002"
-        ignoreIfCharacterDead: 0
+        sfxName: 
+        ignoreIfCharacterDead: 1

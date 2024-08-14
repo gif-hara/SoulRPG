@@ -18,6 +18,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3022425619933167715
       type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -25,8 +27,11 @@ MonoBehaviour:
         statusTypes: 00000000
         buffName: Ailment.101003
         rate: 1.2
+        battleCharacterEvaluator:
+          rid: -2
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u6C17\u5408\u306B\u6E80\u3061\u305F\u3002"
-        ignoreIfCharacterDead: 0
+        sfxName: 
+        ignoreIfCharacterDead: 1

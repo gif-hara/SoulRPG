@@ -25,6 +25,7 @@ MonoBehaviour:
           rid: 7288459838305337778
         targetType: 1
         giveDamageType: 1
+        sfxName: Sfx.Message.2
     - rid: 7288459838305337778
       type: {class: AttackPowerOnly, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
@@ -35,4 +36,5 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "\u708E\u306E\u8FFD\u6483\u304C{Target}\u3092\u8972\u3046\u3002"
+        sfxName: 
         ignoreIfCharacterDead: 0
