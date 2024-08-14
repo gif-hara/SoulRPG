@@ -16,8 +16,8 @@ MonoBehaviour:
   staminaAmountRate: 5
   hitPointMax: 1600
   staminaMax: 1000
-  hitPointGaugeAmount: 2
-  staminaGaugeAmount: 2
+  hitPointGaugeAmount: 4
+  staminaGaugeAmount: 4
   experienceTableData:
     rate: 3.4
   initialItemDatabase:
