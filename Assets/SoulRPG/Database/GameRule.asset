@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPointAmountRate: 8
   staminaAmountRate: 5
-  hitPointMax: 1200
-  staminaMax: 1200
-  hitPointGaugeAmount: 1
-  staminaGaugeAmount: 1
+  hitPointMax: 1600
+  staminaMax: 1000
+  hitPointGaugeAmount: 2
+  staminaGaugeAmount: 2
   experienceTableData:
     rate: 3.4
   initialItemDatabase:
