@@ -25,7 +25,7 @@ namespace SoulRPG
             });
         }
 
-        public UniTask BeginFadeAsync(Color from, Color to, float duration, CancellationToken scope)
+        public UniTask BeginFadeAsyncInternal(Color from, Color to, float duration, CancellationToken scope)
         {
             return LMotion.Create(from, to, duration)
                 .BindToColor(Image)
@@ -33,9 +33,16 @@ namespace SoulRPG
                 .ToUniTask(scope);
         }
 
-        public UniTask BeginFadeAsync(Color to, float duration, CancellationToken scope)
+        public static UniTask BeginFadeAsync(Color from, Color to, float duration, CancellationToken scope)
         {
-            return BeginFadeAsync(Image.color, to, duration, scope);
+            var instance = TinyServiceLocator.Resolve<GameFadeView>();
+            return instance.BeginFadeAsyncInternal(from, to, duration, scope);
+        }
+
+        public static UniTask BeginFadeAsync(Color to, float duration, CancellationToken scope)
+        {
+            var instance = TinyServiceLocator.Resolve<GameFadeView>();
+            return instance.BeginFadeAsyncInternal(instance.Image.color, to, duration, scope);
         }
 
         private Image Image => document.Q<Image>("Image");
