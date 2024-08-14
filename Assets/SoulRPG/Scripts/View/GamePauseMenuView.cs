@@ -249,6 +249,7 @@ namespace SoulRPG
         private async UniTask StateSelectWeaponAsync(CancellationToken scope)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var gameItemInformationView = new GameItemInformationView(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Item"), scope);
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataWeapon())
                 .Select(x =>
@@ -260,6 +261,11 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });

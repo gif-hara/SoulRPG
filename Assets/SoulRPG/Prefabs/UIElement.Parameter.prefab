@@ -66,6 +66,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7568793345981243336}
   - component: {fileID: 8956130035526797362}
+  - component: {fileID: 5262730645555546121}
   m_Layer: 0
   m_Name: UIElement.Parameter
   m_TagString: Untagged
@@ -121,6 +122,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &5262730645555546121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4118097688217169900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0bca0e48c915f4eae5e0e88e6c9227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elements:
+  - document: {fileID: 7919177329980497393}
+    overrideName: 
+  - document: {fileID: 6252127526656456375}
+    overrideName: 
 --- !u!1 &6252127526656456375
 GameObject:
   m_ObjectHideFlags: 0
