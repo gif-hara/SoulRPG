@@ -1,6 +1,7 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,7 @@ namespace SoulRPG
         {
             var document = Object.Instantiate(documentPrefab);
             document.Q<Image>("Image").sprite = masterDataItem.Thumbnail;
+            document.Q<TMP_Text>("Name").text = masterDataItem.Name;
             await scope.WaitUntilCanceled();
             Object.Destroy(document.gameObject);
         }
