@@ -280,6 +280,10 @@ namespace SoulRPG
         {
             var areaDocument = uiDocument.Q<HKUIDocument>("Area.Status");
             var hitPointGauge = areaDocument.Q<Slider>("Gauge.HitPoint");
+            var hitPointGaugeTransform = hitPointGauge.transform as RectTransform;
+            var guardGauge = areaDocument.Q<Slider>("Gauge.Guard");
+            var guardGaugeTransform = guardGauge.transform as RectTransform;
+            var gameRule = TinyServiceLocator.Resolve<GameRule>();
             Observable.Merge(
                 character.InstanceStatus.HitPointAsObservable(),
                 character.InstanceStatus.HitPointMaxAsObservable()
@@ -287,9 +291,13 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     hitPointGauge.value = character.InstanceStatus.HitPoint / (float)character.InstanceStatus.HitPointMax;
+                    var anchorMax = hitPointGaugeTransform.anchorMax;
+                    anchorMax.x = character.InstanceStatus.HitPointMax * gameRule.HitPointGaugeAmount / (float)gameRule.HitPointMax;
+                    anchorMax.x = Mathf.Clamp(anchorMax.x, 0, 1);
+                    hitPointGaugeTransform.anchorMax = anchorMax;
+                    guardGaugeTransform.anchorMax = anchorMax;
                 })
                 .RegisterTo(scope);
-            var guardGauge = areaDocument.Q<Slider>("Gauge.Guard");
             character.InstanceStatus.GuardPointAsObservable()
                 .Subscribe(x =>
                 {
@@ -297,6 +305,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var staminaGauge = areaDocument.Q<Slider>("Gauge.Stamina");
+            var staminaGaugeTransform = staminaGauge.transform as RectTransform;
             Observable.Merge(
                 character.InstanceStatus.StaminaAsObservable(),
                 character.InstanceStatus.StaminaMaxAsObservable()
@@ -304,6 +313,10 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     staminaGauge.value = character.InstanceStatus.Stamina / (float)character.InstanceStatus.StaminaMax;
+                    var anchorMax = staminaGaugeTransform.anchorMax;
+                    anchorMax.x = character.InstanceStatus.StaminaMax * gameRule.StaminaGaugeAmount / (float)gameRule.StaminaMax;
+                    anchorMax.x = Mathf.Clamp(anchorMax.x, 0, 1);
+                    staminaGaugeTransform.anchorMax = anchorMax;
                 })
                 .RegisterTo(scope);
             var experience = areaDocument.Q<TMP_Text>("Text.Experience");
