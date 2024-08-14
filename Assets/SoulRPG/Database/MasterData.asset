@@ -3242,10 +3242,10 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 9bf75c17ce2c1407ebb81d07c8e59355, type: 2}
     - Id: 10105
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
-      HitPoint: 207
+      HitPoint: 345
       Stamina: 0
-      PhysicalAttack: 13
-      MagicalAttack: 13
+      PhysicalAttack: 25
+      MagicalAttack: 25
       SlashCutRate: 0.04
       BlowCutRate: 0.05
       ThrustCutRate: 0
