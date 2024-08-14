@@ -9,6 +9,7 @@ using SoulRPG.BattleSystems;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnitySequencerSystem;
 
 namespace SoulRPG
 {
@@ -346,6 +347,10 @@ namespace SoulRPG
             var scope = new CancellationTokenSource();
             var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
             var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
+            var gameRule = TinyServiceLocator.Resolve<GameRule>();
+            var sequences = gameRule.SequenceDatabase.Get("Battle.Begin.0");
+            var container = new Container();
+            await new Sequencer(container, sequences.Sequences).PlayAsync(scope.Token);
             BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
             GameEnemyView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Enemy"), masterDataEnemy, enemyCharacter, scope.Token).Forget();
             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext($"Bgm.Battle.{masterDataEnemy.BattleBgmId}");
