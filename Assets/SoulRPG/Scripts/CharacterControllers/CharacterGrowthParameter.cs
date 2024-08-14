@@ -19,7 +19,7 @@ namespace SoulRPG
         public int Vitality { get => vitality; set => vitality = value; }
 
         [SerializeField]
-        public int stamina;
+        private int stamina;
         public int Stamina { get => stamina; set => stamina = value; }
 
         [SerializeField]
