@@ -69,6 +69,7 @@ namespace SoulRPG.SceneControllers
 #if DEBUG
             GameDebugPanelView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.DebugPanel"), destroyCancellationToken).Forget();
 #endif
+            TinyServiceLocator.Register(new GameFadeView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Fade"), destroyCancellationToken));
             var player = new Character(debugPlayerName, debugPlayerGrowthParameter, gameRule.InitialEquipment, debugPlayerAttribute);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             var explorationView = new ExplorationView(
