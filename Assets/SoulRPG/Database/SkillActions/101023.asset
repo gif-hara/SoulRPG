@@ -24,7 +24,7 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u7A32\u59BB\u304B\u3089\u93A7\u3092\u4F5C\u308A\u51FA\u3059\u3002"
-        waitForInput: 1
+        sfxName: Sfx.Message.12
         ignoreIfCharacterDead: 0
     - rid: 7538228103530414726
       type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}

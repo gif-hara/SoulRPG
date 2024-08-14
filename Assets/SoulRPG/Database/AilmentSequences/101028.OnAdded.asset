@@ -33,5 +33,5 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u7A32\u59BB\u306E\u93A7\u3092\u8EAB\u306B\u7E8F\u3063\u305F\u3002"
-        sfxName: 
+        sfxName: Sfx.Message.11
         ignoreIfCharacterDead: 1
