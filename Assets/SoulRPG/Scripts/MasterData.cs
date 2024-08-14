@@ -433,6 +433,8 @@ namespace SoulRPG
 
             public Sprite Thumbnail;
 
+            public string Description;
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Item>
             {

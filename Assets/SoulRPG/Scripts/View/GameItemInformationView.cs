@@ -44,6 +44,7 @@ namespace SoulRPG
         {
             Thumbnail.sprite = item.Thumbnail;
             Name.text = item.Name;
+            Description.text = item.Description;
             foreach (var element in skillElements)
             {
                 Object.Destroy(element);
@@ -123,5 +124,7 @@ namespace SoulRPG
         private Image Thumbnail => document.Q<Image>("Thumbnail");
 
         private TMP_Text Name => document.Q<TMP_Text>("Name");
+
+        private TMP_Text Description => document.Q<TMP_Text>("Description");
     }
 }

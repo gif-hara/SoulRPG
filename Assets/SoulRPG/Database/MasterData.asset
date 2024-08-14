@@ -1847,166 +1847,207 @@ MonoBehaviour:
       Id: 101001
       ThumbnailId: Weapon.0
       Thumbnail: {fileID: 21300000, guid: 651edfbfe3c264189ae6ba247a3ba1d0, type: 3}
+      Description: "\u7C21\u7D20\u3060\u304C\u6D17\u7DF4\u3055\u308C\u305F\u5203\u3002\u8EAB\u8EFD\u306B\u3057\u3066\u92ED\u3044\u3001\u6226\u5834\u3067\u306E\u983C\u308C\u308B\u76F8\u68D2\u3002"
     - Name: "\u30C0\u30AC\u30FC"
       Id: 101002
       ThumbnailId: Weapon.1
       Thumbnail: {fileID: 21300000, guid: b3efa5fcec47d4a7cbd6f9b6dde63ef0, type: 3}
+      Description: "\u77ED\u3044\u304C\u92ED\u5229\u306A\u5203\u3002\u5F71\u306B\u96A0\u308C\u3066\u5149\u308B\u3001\u6697\u6BBA\u8005\u306E\u4FE1\u983C\u3067\u304D\u308B\u53CB\u3002"
     - Name: "\u30D0\u30B9\u30BF\u30FC\u30BD\u30FC\u30C9"
       Id: 101003
       ThumbnailId: Weapon.2
       Thumbnail: {fileID: 21300000, guid: 1b14e640c058344c2b0ee1a210036ca2, type: 3}
+      Description: "\u5727\u5012\u7684\u306A\u91CD\u3055\u3068\u5A01\u529B\u3092\u8A87\u308B\u5DE8\u5927\u306A\u5263\u3002\u3059\u3079\u3066\u3092\u5207\u308A\u88C2\u304F\u5727\u5012\u7684\u306A\u529B\u3092\u79D8\u3081\u308B\u3002"
     - Name: "\u30DA\u30CD\u30C8\u30EC\u30FC\u30BF\u30FC"
       Id: 101004
       ThumbnailId: Weapon.3
       Thumbnail: {fileID: 21300000, guid: efa613a5abb604cefbfa9e62722ebaab, type: 3}
+      Description: "\u92ED\u304F\u7D30\u3044\u5203\u306F\u3001\u93A7\u3092\u3082\u8CAB\u304F\u3002\u7CBE\u5BC6\u3067\u51B7\u9177\u306A\u523A\u7A81\u306E\u9054\u4EBA\u306E\u305F\u3081\u306E\u5263\u3002"
     - Name: "\u30AF\u30E9\u30D6"
       Id: 101005
       ThumbnailId: Weapon.4
       Thumbnail: {fileID: 21300000, guid: c457ed6c320b24453bb67cec4bd2a3ce, type: 3}
+      Description: "\u7D20\u6734\u3060\u304C\u81F4\u547D\u7684\u306A\u6B66\u5668\u3002\u91CD\u539A\u306A\u6253\u6483\u3067\u6575\u3092\u7C89\u7815\u3059\u308B\u3002"
     - Name: "\u30DD\u30A4\u30BA\u30F3\u30C0\u30AC\u30FC"
       Id: 101006
       ThumbnailId: Weapon.5
       Thumbnail: {fileID: 21300000, guid: 852b5668f2d33487db4e645b808b7ae8, type: 3}
+      Description: "\u6BD2\u3067\u67D3\u307E\u3063\u305F\u5203\u304C\u3001\u5207\u3089\u308C\u305F\u8005\u306B\u82E6\u75DB\u3068\u6B7B\u3092\u3082\u305F\u3089\u3059\u3002\u3072\u3068\u523A\u3057\u3067\u547D\u3092\u596A\u3046\u81F4\u547D\u306E\u4E00\u6483\u3002"
     - Name: "\u30B9\u30D1\u30FC\u30AF\u30A8\u30C3\u30B8"
       Id: 101007
       ThumbnailId: Weapon.6
       Thumbnail: {fileID: 21300000, guid: c5f7af7d014034059bea4abcb01e211c, type: 3}
+      Description: "\u5200\u8EAB\u306B\u96F7\u3092\u7E8F\u3046\u3001\u9583\u5149\u306E\u3088\u3046\u306B\u7D20\u65E9\u3044\u5263\u3002\u6575\u3092\u77AC\u6642\u306B\u5207\u308A\u88C2\u304D\u3001\u6226\u5834\u3092\u99C6\u3051\u629C\u3051\u308B\u3002"
     - Name: "\u30A6\u30A3\u30EB\u30E1\u30A4\u30B9"
       Id: 101008
       ThumbnailId: Weapon.7
       Thumbnail: {fileID: 21300000, guid: 960b9007731b7476e9bc7e0784d39adb, type: 3}
+      Description: "\u5F37\u56FA\u306A\u610F\u5FD7\u3092\u6301\u3064\u8005\u306B\u3075\u3055\u308F\u3057\u3044\u30E1\u30A4\u30B9\u3002\u6575\u306E\u9AA8\u3092\u7815\u304D\u3001\u6226\u610F\u3092\u6D88\u3057\u53BB\u308B\u3002"
     - Name: "\u30D5\u30EC\u30A4\u30E0\u30ED\u30C3\u30C9"
       Id: 101009
       ThumbnailId: Weapon.8
       Thumbnail: {fileID: 21300000, guid: 6078252b54fde467ba498d0f612872f2, type: 3}
+      Description: "\u708E\u306E\u529B\u3092\u64CD\u308B\u9B54\u6CD5\u306E\u6756\u3002\u305D\u306E\u5148\u7AEF\u306B\u306F\u5E38\u306B\u5C0F\u3055\u306A\u708E\u304C\u71C3\u3048\u3001\u6575\u3092\u713C\u304D\u5C3D\u304F\u3059\u529B\u3092\u79D8\u3081\u308B\u3002"
     - Name: "\u713C\u93DD"
       Id: 101010
       ThumbnailId: 
       Thumbnail: {fileID: 0}
+      Description: "\u706B\u306E\u529B\u3092\u5BBF\u3059\u6253\u6483\u6B66\u5668\u3002\u6575\u3092\u713C\u304D\u7126\u304C\u3057\u306A\u304C\u3089\u3001\u5727\u5012\u7684\u306A\u529B\u3067\u53E9\u304D\u6F70\u3059\u3002"
     - Name: "\u30B5\u30F3\u30C0\u30FC\u30ED\u30C3\u30C9"
       Id: 101011
       ThumbnailId: Weapon.9
       Thumbnail: {fileID: 21300000, guid: cad37d0304ef44d8db7046fbf9044bef, type: 3}
+      Description: "\u96F7\u306E\u9B54\u529B\u3092\u5BBF\u3057\u305F\u6756\u3002\u7A32\u59BB\u306E\u4E00\u6483\u3067\u6575\u3092\u611F\u96FB\u3055\u305B\u3001\u7ACB\u3061\u3059\u304F\u307E\u305B\u308B\u3002"
     - Name: "\u9752\u9B54\u5C0E\u58EB\u306E\u5263"
       Id: 101012
       ThumbnailId: Weapon.10
       Thumbnail: {fileID: 21300000, guid: 7fbf59a500e0840769db9b6adbffa8af, type: 3}
+      Description: "\u9752\u767D\u3044\u5149\u3092\u7E8F\u3046\u9B54\u6CD5\u306E\u5263\u3002\u9752\u9B54\u5C0E\u58EB\u306B\u306E\u307F\u6271\u3048\u308B\u3001\u672A\u77E5\u306E\u529B\u304C\u79D8\u3081\u3089\u308C\u3066\u3044\u308B\u3002"
     - Name: "\u30B0\u30EC\u30FC\u30C8\u30BD\u30FC\u30C9"
       Id: 101013
       ThumbnailId: Weapon.11
       Thumbnail: {fileID: 21300000, guid: 6aa88c1c62f85438291edf98ca933061, type: 3}
+      Description: "\u91CD\u91CF\u611F\u3042\u3075\u308C\u308B\u5927\u5263\u3002\u5168\u3066\u3092\u5207\u308A\u88C2\u304F\u7834\u58CA\u529B\u3092\u6301\u3061\u3001\u4E00\u632F\u308A\u3067\u6226\u5834\u3092\u652F\u914D\u3059\u308B\u3002"
     - Name: "\u706B\u82B1\u306E\u77ED\u5263"
       Id: 101014
       ThumbnailId: Weapon.12
       Thumbnail: {fileID: 21300000, guid: 36590175bff9b47e1a02562b6521a64b, type: 3}
+      Description: "\u8D64\u304F\u8F1D\u304F\u5203\u304B\u3089\u706B\u82B1\u3092\u6563\u3089\u3059\u77ED\u5263\u3002\u4E00\u9583\u3067\u6575\u3092\u7126\u304C\u3057\u3001\u7D20\u65E9\u3044\u653B\u6483\u3067\u5727\u5012\u3059\u308B\u3002"
     - Name: "\u96F7\u546A\u306E\u6756"
       Id: 101015
       ThumbnailId: Weapon.13
       Thumbnail: {fileID: 21300000, guid: 899a3e08bca4c41ee9b4827fff3f07aa, type: 3}
+      Description: "\u9EC4\u8272\u3068\u9ED2\u306E\u5149\u304C\u8822\u304F\u546A\u308F\u308C\u305F\u6756\u3002\u96F7\u306E\u546A\u3044\u3092\u89E3\u304D\u653E\u3061\u3001\u6575\u3092\u7834\u6EC5\u3078\u3068\u5C0E\u304F\u3002"
     - Name: "\u30D0\u30B9\u30BF\u30FC\u30AF\u30E9\u30D6"
       Id: 101016
       ThumbnailId: Weapon.14
       Thumbnail: {fileID: 21300000, guid: 16fd47c3289984a69bda5eced7705a11, type: 3}
+      Description: "\u5727\u5012\u7684\u306A\u7834\u58CA\u529B\u3092\u6301\u3064\u5DE8\u5927\u306A\u68CD\u68D2\u3002\u3042\u3089\u3086\u308B\u6575\u3092\u7C89\u7815\u3057\u3001\u305D\u306E\u8DE1\u306B\u4F55\u3082\u6B8B\u3055\u306A\u3044\u3002"
     - Name: "\u30AF\u30A4\u30C3\u30AF\u30DC\u30A6"
       Id: 101017
       ThumbnailId: Weapon.15
       Thumbnail: {fileID: 21300000, guid: bcb5b6977da0a44d4996a4865ca8fc72, type: 3}
+      Description: "\u7D20\u65E9\u3044\u52D5\u4F5C\u304C\u53EF\u80FD\u306A\u8EFD\u91CF\u5F13\u3002\u77AC\u6642\u306B\u77E2\u3092\u653E\u3061\u3001\u6575\u3092\u72D9\u3044\u6483\u3064\u30B9\u30CA\u30A4\u30D1\u30FC\u306E\u6B66\u5668\u3002"
     - Name: "\u30E9\u30F3\u30B9"
       Id: 101018
       ThumbnailId: Weapon.16
       Thumbnail: {fileID: 21300000, guid: 203747f4c4e714b7d8f2db68f08b38cc, type: 3}
+      Description: "\u69CD\u3068\u76FE\u3092\u4E00\u5BFE\u3068\u3059\u308B\u9A0E\u58EB\u306E\u6B66\u5668\u3002\u7A81\u6483\u306B\u7279\u5316\u3057\u3001\u6575\u306E\u9632\u5FA1\u3092\u7A81\u7834\u3059\u308B\u3002"
     - Name: "\u96F7\u306E\u5263"
       Id: 101019
       ThumbnailId: Weapon.17
       Thumbnail: {fileID: 21300000, guid: f26359450550d48a2b7fc81fff564f18, type: 3}
+      Description: "\u96F7\u306E\u529B\u3092\u5BBF\u3059\u7D30\u8EAB\u306E\u5263\u3002\u96FB\u5149\u306E\u3054\u3068\u304F\u7D20\u65E9\u304F\u3001\u6575\u3092\u611F\u96FB\u3055\u305B\u306A\u304C\u3089\u5207\u308A\u88C2\u304F\u3002"
     - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u5927\u69CD"
       Id: 101020
       ThumbnailId: 
       Thumbnail: {fileID: 0}
+      Description: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u5BB6\u306B\u4F1D\u308F\u308B\u708E\u306B\u5305\u307E\u308C\u305F\u5DE8\u5927\u306A\u69CD\u3002\u6EB6\u5CA9\u306E\u5982\u304D\u71B1\u3055\u3067\u6575\u3092\u713C\u304D\u5C3D\u304F\u3059\u3001\u7834\u58CA\u529B\u306B\u6E80\u3061\u305F\u6B66\u5668\u3002"
     - Name: "\u9244\u306E\u76FE"
       Id: 101021
       ThumbnailId: Weapon.18
       Thumbnail: {fileID: 21300000, guid: 5c54b434bf4064053a8fa72405fb9707, type: 3}
+      Description: "\u5F37\u56FA\u306A\u9244\u3067\u4F5C\u3089\u308C\u305F\u30B7\u30F3\u30D7\u30EB\u306A\u76FE\u3002\u5805\u5B9F\u306A\u9632\u5FA1\u529B\u3067\u3001\u3044\u304B\u306A\u308B\u653B\u6483\u306B\u3082\u8010\u3048\u308B\u3002"
     - Name: "\u6B7B\u6BD2\u5263"
       Id: 101022
       ThumbnailId: Weapon.19
       Thumbnail: {fileID: 21300000, guid: b107d439b0e3e44bba326211daa54602, type: 3}
+      Description: "\u7DD1\u8272\u306E\u6BD2\u304C\u67D3\u307F\u8FBC\u3093\u3060\u81F4\u547D\u306E\u5263\u3002\u4E00\u6483\u3067\u6575\u306E\u4F53\u306B\u6B7B\u306E\u6BD2\u3092\u6D41\u3057\u8FBC\u3080\u3001\u6050\u6016\u306E\u6B66\u5668\u3002"
     - Name: "\u30EC\u30AA\u306E\u65AD\u7F6A\u5263"
       Id: 101023
       ThumbnailId: 
       Thumbnail: {fileID: 0}
+      Description: "\u52C7\u8005\u30EC\u30AA\u304C\u4F7F\u3063\u305F\u65AD\u7F6A\u306E\u5263\u3002\u6B63\u7FA9\u306E\u5149\u3067\u60AA\u3092\u5207\u308A\u88C2\u304D\u3001\u88C1\u304D\u3092\u4E0B\u3059\u3002"
     - Name: "\u5F71\u8D70\u306E\u77ED\u5263"
       Id: 101024
       ThumbnailId: Weapon.20
       Thumbnail: {fileID: 21300000, guid: 40e8b2746365741dca1399750dc6a13e, type: 3}
+      Description: "\u95C7\u306B\u7D1B\u308C\u3066\u8FC5\u901F\u306B\u52D5\u304F\u8005\u306E\u77ED\u5263\u3002\u9ED2\u3044\u5203\u304C\u5F71\u306E\u3088\u3046\u306B\u5FCD\u3073\u5BC4\u308A\u3001\u6575\u3092\u7121\u97F3\u3067\u4ED5\u7559\u3081\u308B\u3002"
     - Name: "\u30C6\u30B9\u30C8\u6B66\u5668"
       Id: 101997
       ThumbnailId: 
       Thumbnail: {fileID: 0}
+      Description: 
     - Name: "\u7D20\u624B"
       Id: 101998
       ThumbnailId: 
       Thumbnail: {fileID: 0}
+      Description: 
     - Name: "\u6575\u6B66\u5668"
       Id: 101999
       ThumbnailId: 
       Thumbnail: {fileID: 0}
+      Description: 
     - Name: "\u9A0E\u58EB\u306E\u515C"
       Id: 102001
       ThumbnailId: Armor.0
       Thumbnail: {fileID: 21300000, guid: 502ae4221f0b2234594cf950271b77db, type: 3}
+      Description: "\u9280\u8272\u306B\u8F1D\u304F\u5805\u56FA\u306A\u515C\u3002\u6226\u58EB\u306E\u9854\u3092\u5B88\u308A\u3001\u6575\u306E\u4E00\u6483\u3092\u3082\u306E\u3068\u3082\u3057\u306A\u3044\u3002"
     - Name: "\u9A0E\u58EB\u306E\u93A7"
       Id: 103001
       ThumbnailId: Armor.1
       Thumbnail: {fileID: 21300000, guid: 91643e62f56a901449002e0bb964de90, type: 3}
+      Description: "\u91CD\u539A\u306A\u9280\u306E\u93A7\u3002\u6226\u5834\u3067\u306E\u5B88\u8B77\u8005\u3001\u3059\u3079\u3066\u306E\u653B\u6483\u3092\u8DF3\u306D\u8FD4\u3059\u5805\u7262\u306A\u9632\u5177\u3002"
     - Name: "\u9A0E\u58EB\u306E\u624B\u7532"
       Id: 104001
       ThumbnailId: Armor.2
       Thumbnail: {fileID: 21300000, guid: fef85df6e4ba76447aa2586eb263f6e0, type: 3}
+      Description: "\u92FC\u9244\u3067\u4F5C\u3089\u308C\u305F\u624B\u7532\u3002\u6226\u58EB\u306E\u8155\u3092\u5B88\u308A\u3001\u5263\u3092\u63E1\u308B\u529B\u3092\u5F37\u5316\u3059\u308B\u3002"
     - Name: "\u9A0E\u58EB\u306E\u8DB3\u7532"
       Id: 105001
       ThumbnailId: Armor.3
       Thumbnail: {fileID: 21300000, guid: 42df1d6c8eb8b544d960487e22b8ebb2, type: 3}
+      Description: "\u9A0E\u58EB\u306E\u8DB3\u3092\u5B88\u308B\u9811\u4E08\u306A\u91D1\u5C5E\u88FD\u306E\u8DB3\u7532\u3002\u6226\u5834\u3067\u306E\u6A5F\u52D5\u529B\u3092\u4FDD\u3061\u306A\u304C\u3089\u3001\u3057\u3063\u304B\u308A\u3068\u9632\u5FA1\u3059\u308B\u3002"
     - Name: "\u9769\u306E\u515C"
       Id: 102002
       ThumbnailId: Armor.4
       Thumbnail: {fileID: 21300000, guid: 89a7d008ebd92054d82fa873a2db9a73, type: 3}
+      Description: "\u67D4\u8EDF\u306A\u9769\u3067\u4F5C\u3089\u308C\u305F\u515C\u3002\u8EFD\u91CF\u306A\u304C\u3089\u3082\u78BA\u5B9F\u306A\u4FDD\u8B77\u3092\u63D0\u4F9B\u3059\u308B\u3001\u5192\u967A\u8005\u306B\u6700\u9069\u306A\u88C5\u5099\u3002"
     - Name: "\u9769\u306E\u93A7"
       Id: 103002
       ThumbnailId: Armor.5
       Thumbnail: {fileID: 21300000, guid: 025092a14bfa900438a52a3696248e56, type: 3}
+      Description: "\u5E03\u3068\u9769\u3092\u7D44\u307F\u5408\u308F\u305B\u305F\u9632\u5177\u3002\u52D5\u304D\u3084\u3059\u3055\u3068\u9632\u5FA1\u529B\u3092\u4E21\u7ACB\u3057\u305F\u5B9F\u7528\u7684\u306A\u93A7\u3002"
     - Name: "\u9769\u306E\u624B\u7532"
       Id: 104002
       ThumbnailId: Armor.6
       Thumbnail: {fileID: 21300000, guid: 07a32a1dc04e5e9469f8f5285ddd6f7b, type: 3}
+      Description: "\u6307\u5148\u307E\u3067\u5B88\u308B\u9769\u306E\u624B\u7532\u3002\u7E4A\u7D30\u306A\u4F5C\u696D\u304B\u3089\u6226\u95D8\u307E\u3067\u3001\u5E45\u5E83\u3044\u72B6\u6CC1\u306B\u5BFE\u5FDC\u3002"
     - Name: "\u9769\u306E\u8DB3\u7532"
       Id: 105002
       ThumbnailId: Armor.7
       Thumbnail: {fileID: 21300000, guid: cffaf3badc5bd3c40ade76fd56d9fa8e, type: 3}
+      Description: "\u67D4\u8EDF\u6027\u3092\u6301\u3064\u9769\u3068\u5E03\u3067\u4F5C\u3089\u308C\u305F\u8DB3\u7532\u3002\u9577\u8DDD\u96E2\u306E\u79FB\u52D5\u3084\u6226\u95D8\u3067\u3082\u5FEB\u9069\u306A\u5C65\u304D\u5FC3\u5730\u3092\u63D0\u4F9B\u3059\u308B\u3002"
     - Name: "\u9752\u3044\u30D5\u30FC\u30C9"
       Id: 102003
       ThumbnailId: Armor.8
       Thumbnail: {fileID: 21300000, guid: da1974c6dc4a0e94894e3ab0a78f534e, type: 3}
+      Description: "\u6DF1\u3044\u9752\u306E\u30D5\u30FC\u30C9\u3002\u96A0\u5BC6\u884C\u52D5\u3084\u9B54\u6CD5\u306E\u5100\u5F0F\u306B\u9069\u3057\u305F\u3001\u8B0E\u3081\u3044\u305F\u96F0\u56F2\u6C17\u3092\u91B8\u3057\u51FA\u3059\u3002"
     - Name: "\u9752\u3044\u30ED\u30FC\u30D6"
       Id: 103003
       ThumbnailId: Armor.9
       Thumbnail: {fileID: 21300000, guid: 2532298952c76d943b696ac7c37a0dc6, type: 3}
+      Description: "\u9752\u304F\u67D3\u3081\u3089\u308C\u305F\u30ED\u30FC\u30D6\u3002\u9B54\u6CD5\u4F7F\u3044\u306E\u8C61\u5FB4\u3067\u3042\u308A\u3001\u77E5\u8B58\u3068\u529B\u3092\u79D8\u3081\u3066\u3044\u308B\u3002"
     - Name: "\u9752\u3044\u624B\u888B"
       Id: 104003
       ThumbnailId: Armor.10
       Thumbnail: {fileID: 21300000, guid: 7da38717f24798e49a49fd1be04a20b5, type: 3}
+      Description: "\u9B54\u6CD5\u306E\u529B\u3092\u5897\u5E45\u3059\u308B\u9752\u3044\u624B\u888B\u3002\u7D30\u304B\u306A\u52D5\u304D\u3092\u652F\u3048\u3001\u9B54\u529B\u3092\u64CD\u308B\u52A9\u3051\u3068\u306A\u308B\u3002"
     - Name: "\u9752\u3044\u30BA\u30DC\u30F3"
       Id: 105003
       ThumbnailId: Armor.11
       Thumbnail: {fileID: 21300000, guid: 6df81d23970470f4ea8dc5aa5e19d9fe, type: 3}
+      Description: "\u52D5\u304D\u3084\u3059\u3055\u3092\u91CD\u8996\u3057\u305F\u9752\u8272\u306E\u5E03\u30BA\u30DC\u30F3\u3002\u65C5\u3084\u5192\u967A\u306B\u6700\u9069\u306A\u5FEB\u9069\u306A\u5C65\u304D\u5FC3\u5730\u3002"
     - Name: "\u9244\u306E\u6307\u8F2A"
       Id: 106001
       ThumbnailId: 
       Thumbnail: {fileID: 0}
+      Description: 
     - Name: "\u9244\u306E\u9375"
       Id: 107001
       ThumbnailId: 
       Thumbnail: {fileID: 0}
+      Description: 
   itemTables:
     list:
     - Key: 1
