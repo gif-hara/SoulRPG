@@ -3162,10 +3162,10 @@ MonoBehaviour:
     list:
     - Id: 10101
       Name: "\u30C6\u30B9\u30C8\u30A8\u30CD\u30DF\u30FC"
-      HitPoint: 41
+      HitPoint: 48
       Stamina: 0
-      PhysicalAttack: 12
-      MagicalAttack: 12
+      PhysicalAttack: 17
+      MagicalAttack: 17
       SlashCutRate: 0
       BlowCutRate: 0
       ThrustCutRate: 0
@@ -3182,10 +3182,10 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: f9317d34f60914b29ac4199dffd411f3, type: 2}
     - Id: 10102
       Name: "\u30B4\u30D6\u30EA\u30F3"
-      HitPoint: 75
+      HitPoint: 87
       Stamina: 0
-      PhysicalAttack: 11
-      MagicalAttack: 11
+      PhysicalAttack: 15
+      MagicalAttack: 15
       SlashCutRate: 0.03
       BlowCutRate: 0.01
       ThrustCutRate: 0.02
@@ -3202,10 +3202,10 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: ca3b96fb5dfd942ed98c7c1922217be2, type: 2}
     - Id: 10103
       Name: "\u30D8\u30C9\u30ED\u30B9\u30E9\u30A4\u30E0"
-      HitPoint: 49
+      HitPoint: 57
       Stamina: 0
-      PhysicalAttack: 9
-      MagicalAttack: 9
+      PhysicalAttack: 12
+      MagicalAttack: 12
       SlashCutRate: 0.24
       BlowCutRate: 0.54
       ThrustCutRate: 0.1
@@ -3222,10 +3222,10 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 99bbd1b817bfe4757befd21bd8db65f0, type: 2}
     - Id: 10104
       Name: "\u546A\u3044\u306E\u4EBA\u5F62"
-      HitPoint: 62
+      HitPoint: 72
       Stamina: 0
-      PhysicalAttack: 11
-      MagicalAttack: 11
+      PhysicalAttack: 15
+      MagicalAttack: 15
       SlashCutRate: 0.04
       BlowCutRate: 0.05
       ThrustCutRate: 0
@@ -3242,10 +3242,10 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 9bf75c17ce2c1407ebb81d07c8e59355, type: 2}
     - Id: 10105
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
-      HitPoint: 345
+      HitPoint: 422
       Stamina: 0
-      PhysicalAttack: 25
-      MagicalAttack: 25
+      PhysicalAttack: 36
+      MagicalAttack: 36
       SlashCutRate: 0.04
       BlowCutRate: 0.05
       ThrustCutRate: 0
