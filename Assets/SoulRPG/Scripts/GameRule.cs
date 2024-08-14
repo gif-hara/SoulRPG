@@ -20,6 +20,22 @@ namespace SoulRPG
         public int StaminaAmountRate => staminaAmountRate;
 
         [SerializeField]
+        private int hitPointMax;
+        public int HitPointMax => hitPointMax;
+
+        [SerializeField]
+        private int staminaMax;
+        public int StaminaMax => staminaMax;
+
+        [SerializeField]
+        private int hitPointGaugeAmount;
+        public int HitPointGaugeAmount => hitPointGaugeAmount;
+
+        [SerializeField]
+        private int staminaGaugeAmount;
+        public int StaminaGaugeAmount => staminaGaugeAmount;
+
+        [SerializeField]
         private ExperienceTableData experienceTableData;
         public ExperienceTableData ExperienceTable => experienceTableData;
 
