@@ -288,6 +288,7 @@ namespace SoulRPG
         private async UniTask StateSelectArmorHeadAsync(CancellationToken scope)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var gameItemInformationView = new GameItemInformationView(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Item"), scope);
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataArmorHead())
                 .Select(x =>
@@ -299,6 +300,11 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -317,6 +323,7 @@ namespace SoulRPG
         private async UniTask StateSelectArmorBodyAsync(CancellationToken scope)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var gameItemInformationView = new GameItemInformationView(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Item"), scope);
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataArmorBody())
                 .Select(x =>
@@ -328,6 +335,11 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -346,6 +358,7 @@ namespace SoulRPG
         private async UniTask StateSelectArmorArmsAsync(CancellationToken scope)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var gameItemInformationView = new GameItemInformationView(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Item"), scope);
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataArmorArms())
                 .Select(x =>
@@ -357,6 +370,11 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -375,6 +393,7 @@ namespace SoulRPG
         private async UniTask StateSelectArmorLegsAsync(CancellationToken scope)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var gameItemInformationView = new GameItemInformationView(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Item"), scope);
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataArmorLegs())
                 .Select(x =>
@@ -386,6 +405,11 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -404,6 +428,7 @@ namespace SoulRPG
         private async UniTask StateSelectAccessoryAsync(CancellationToken scope)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var gameItemInformationView = new GameItemInformationView(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Item"), scope);
             var listElements = character.Inventory.Items
                 .Where(x => x.Key.ContainsMasterDataAccessory())
                 .Select(x =>
@@ -415,6 +440,11 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });

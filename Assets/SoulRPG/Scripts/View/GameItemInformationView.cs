@@ -79,6 +79,38 @@ namespace SoulRPG
                     skillElements.Add(skillElement.gameObject);
                 }
             }
+            else if (item.Id.TryGetMasterDataArmorHead(out var armor))
+            {
+                SetupAsArmor(armor);
+            }
+            else if (item.Id.TryGetMasterDataArmorBody(out armor))
+            {
+                SetupAsArmor(armor);
+            }
+            else if (item.Id.TryGetMasterDataArmorArms(out armor))
+            {
+                SetupAsArmor(armor);
+            }
+            else if (item.Id.TryGetMasterDataArmorLegs(out armor))
+            {
+                SetupAsArmor(armor);
+            }
+            else if (item.Id.TryGetMasterDataAccessory(out var accessory))
+            {
+                Debug.Log("Accessory");
+            }
+        }
+
+        private void SetupAsArmor(MasterData.Armor armor)
+        {
+            SetActiveFromEquipmentType(EquipmentType.Armor);
+            document.Q<HKUIDocument>("Armor.Speed").Q<TMP_Text>("Value").text = armor.Speed.ToString();
+            document.Q<HKUIDocument>("Armor.SlashCutRate").Q<TMP_Text>("Value").text = $"{armor.SlashCutRate.ToPercentage()}%";
+            document.Q<HKUIDocument>("Armor.BlowCutRate").Q<TMP_Text>("Value").text = $"{armor.BlowCutRate.ToPercentage()}%";
+            document.Q<HKUIDocument>("Armor.ThrustCutRate").Q<TMP_Text>("Value").text = $"{armor.ThrustCutRate.ToPercentage()}%";
+            document.Q<HKUIDocument>("Armor.MagicCutRate").Q<TMP_Text>("Value").text = $"{armor.MagicCutRate.ToPercentage()}%";
+            document.Q<HKUIDocument>("Armor.FireCutRate").Q<TMP_Text>("Value").text = $"{armor.FireCutRate.ToPercentage()}%";
+            document.Q<HKUIDocument>("Armor.ThunderCutRate").Q<TMP_Text>("Value").text = $"{armor.ThunderCutRate.ToPercentage()}%";
         }
 
         private void SetActiveFromEquipmentType(EquipmentType equipmentType)
