@@ -3195,7 +3195,7 @@ MonoBehaviour:
       Speed: 6
       Experience: 104
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 0
       BattleBgmId: 0
       Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
@@ -3215,7 +3215,7 @@ MonoBehaviour:
       Speed: 5
       Experience: 98
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 2
       ThumbnailId: 17
       BattleBgmId: 0
       Thumbnail: {fileID: 21300000, guid: 53936c1bee7e7e84e8521ab1554671cd, type: 3}
@@ -3235,7 +3235,7 @@ MonoBehaviour:
       Speed: 7
       Experience: 112
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 18
       BattleBgmId: 0
       Thumbnail: {fileID: 21300000, guid: 47836f815c556844dae05db1f87b3f9e, type: 3}
@@ -3255,7 +3255,7 @@ MonoBehaviour:
       Speed: 7
       Experience: 112
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 20
       BattleBgmId: 1
       Thumbnail: {fileID: 21300000, guid: b734fc263697e48049f437555386150e, type: 3}
