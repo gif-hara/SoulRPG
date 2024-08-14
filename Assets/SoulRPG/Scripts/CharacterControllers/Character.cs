@@ -53,7 +53,7 @@ namespace SoulRPG.CharacterControllers
         {
             Name = name;
             GrowthParameter = growthParameter;
-            InstanceStatus = new CharacterInstanceStatus(growthParameter);
+            InstanceStatus = new CharacterInstanceStatus(this, growthParameter);
             Inventory = new Inventory(this);
             Equipment = new Equipment(equipmentBlueprint);
             Attribute = attribute;

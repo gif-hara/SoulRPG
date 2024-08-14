@@ -1,4 +1,6 @@
 using R3;
+using SoulRPG.CharacterControllers;
+using UnityEngine;
 
 namespace SoulRPG
 {
@@ -31,7 +33,7 @@ namespace SoulRPG
         public ReadOnlyReactiveProperty<int> ExperienceAsObservable() => experienceReactiveProperty;
         public int Experience => experienceReactiveProperty.Value;
 
-        public CharacterInstanceStatus(CharacterGrowthParameter growthParameter)
+        public CharacterInstanceStatus(Character character, CharacterGrowthParameter growthParameter)
         {
             hitPointMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPointMax);
             hitPointReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPointMax);
@@ -39,6 +41,14 @@ namespace SoulRPG
             staminaMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.StaminaMax);
             staminaReactiveProperty = new ReactiveProperty<int>(growthParameter.StaminaMax);
             experienceReactiveProperty = new ReactiveProperty<int>(0);
+
+            character.Events.OnLevelUp
+                .Subscribe(_ =>
+                {
+                    SetHitPointMax(growthParameter.HitPointMax);
+                    SetStaminaMax(growthParameter.StaminaMax);
+                })
+                .RegisterTo(character.LifeScope);
         }
 
         public void SetHitPointMax(int value)

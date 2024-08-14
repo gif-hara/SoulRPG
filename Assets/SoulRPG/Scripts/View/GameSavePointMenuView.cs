@@ -239,6 +239,8 @@ namespace SoulRPG
                         {
                             character.GrowthParameter.Sync(growthParameter);
                             character.InstanceStatus.AddExperience(-useExperience.Value);
+                            character.Events.OnLevelUp.OnNext(growthParameter);
+                            character.InstanceStatus.FullRecovery();
                             stateMachine.Change(StateRootMenuAsync);
                         }
                     }
