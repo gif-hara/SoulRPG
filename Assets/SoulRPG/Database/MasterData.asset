@@ -3244,8 +3244,8 @@ MonoBehaviour:
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
       HitPoint: 422
       Stamina: 0
-      PhysicalAttack: 36
-      MagicalAttack: 36
+      PhysicalAttack: 45
+      MagicalAttack: 45
       SlashCutRate: 0.04
       BlowCutRate: 0.05
       ThrustCutRate: 0
