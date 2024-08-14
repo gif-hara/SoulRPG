@@ -24,7 +24,7 @@ MonoBehaviour:
   - itemId: 101002
     count: 1
   initialEquipment:
-    weaponIds: 8a8a0100000000000000000000000000
+    weaponIds: 6d8e0100000000000000000000000000
     headId: 0
     bodyId: 0
     armId: 0
@@ -45,6 +45,14 @@ MonoBehaviour:
     - clip: {fileID: 8300000, guid: 8cd364d2c77e9de498479a7bcf11a537, type: 3}
     - clip: {fileID: 8300000, guid: 4c7df7e7cbd0d4a4ca09e9bf06086679, type: 3}
     - clip: {fileID: 8300000, guid: afdb3024601c1d6429ad613e1eb3e7fc, type: 3}
+    - clip: {fileID: 8300000, guid: 6f5d6b67865d24e419d35df985e61f2e, type: 3}
+    - clip: {fileID: 8300000, guid: 3303085461f444590a7ec15edfec5644, type: 3}
+    - clip: {fileID: 8300000, guid: 3e3ab1408bb314eb9b34918fc88c5882, type: 3}
+    - clip: {fileID: 8300000, guid: 76bbec92b8e9d48e4945b2049a118eee, type: 3}
+    - clip: {fileID: 8300000, guid: b35f13a88021d4256a30841772cf1e87, type: 3}
+    - clip: {fileID: 8300000, guid: 776ed69df00f74c24a18264193793b70, type: 3}
+    - clip: {fileID: 8300000, guid: 300cfe1c920554511b03099900aa2fa4, type: 3}
+    - clip: {fileID: 8300000, guid: a6b9669f8826c4cecac72ace5f194194, type: 3}
   sequenceDatabase:
     list:
     - sequences: {fileID: 11400000, guid: 2b4851b2e8d13ab429a10a6a6ede6f8b, type: 2}
