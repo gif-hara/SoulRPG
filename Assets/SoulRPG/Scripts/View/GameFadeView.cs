@@ -21,6 +21,10 @@ namespace SoulRPG
             document.Q<Image>("Image").color = new Color(0, 0, 0, 0);
             scope.Register(() =>
             {
+                if (document == null)
+                {
+                    return;
+                }
                 Object.Destroy(document.gameObject);
             });
         }
