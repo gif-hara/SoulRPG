@@ -18,6 +18,8 @@ MonoBehaviour:
   - rid: 3022425832378073189
   - rid: 3022425832378073198
   - rid: 3022425832378073199
+  - rid: 9047573634008219745
+  - rid: 9047573634008219746
   - rid: 3022425832378073200
   - rid: 3022425832378073201
   references:
@@ -61,3 +63,13 @@ MonoBehaviour:
         format: "{Actor}\u300C\u3053\u306E\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8\u304C\u8CB4\u69D8\u3092\u7070\u306B\u3057\u3066\u304F\u308C\u308B\u300D"
         sfxName: 
         ignoreIfCharacterDead: 0
+    - rid: 9047573634008219745
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 0.8792453, g: 0.8792453, b: 0.8792453, a: 1}
+        to: {r: 0.88235295, g: 0.88235295, b: 0.88235295, a: 0}
+        duration: 1
+    - rid: 9047573634008219746
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1
