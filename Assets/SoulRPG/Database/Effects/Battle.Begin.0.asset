@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: Battle.Begin.0
   m_EditorClassIdentifier: 
   sequences:
+  - rid: 3022425853439508554
   - rid: 9047573634008219748
   - rid: 9047573634008219749
   references:
     version: 2
     RefIds:
+    - rid: 3022425853439508554
+      type: {class: PlaySfx, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        sfxName: Sfx.Message.16
     - rid: 9047573634008219748
       type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
       data:
