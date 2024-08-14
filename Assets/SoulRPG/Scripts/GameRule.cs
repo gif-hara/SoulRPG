@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using HK;
 using UnityEngine;
+using UnitySequencerSystem;
 
 namespace SoulRPG
 {
@@ -51,6 +52,10 @@ namespace SoulRPG
         private AudioData.DictionaryList audioDatabase;
         public AudioData.DictionaryList AudioDatabase => audioDatabase;
 
+        [SerializeField]
+        private SequenceData.DictionaryList sequenceDatabase;
+        public SequenceData.DictionaryList SequenceDatabase => sequenceDatabase;
+
         [Serializable]
         public class ExperienceTableData
         {
@@ -86,6 +91,20 @@ namespace SoulRPG
             public class DictionaryList : DictionaryList<string, AudioData>
             {
                 public DictionaryList() : base(x => x.clip.name) { }
+            }
+        }
+
+        [Serializable]
+        public class SequenceData
+        {
+            [SerializeField]
+            private ScriptableSequences sequences;
+            public List<ISequence> Sequences => sequences.Sequences;
+
+            [Serializable]
+            public class DictionaryList : DictionaryList<string, SequenceData>
+            {
+                public DictionaryList() : base(x => x.sequences.name) { }
             }
         }
     }
