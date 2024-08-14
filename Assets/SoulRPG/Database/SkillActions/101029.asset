@@ -28,6 +28,7 @@ MonoBehaviour:
           rid: 3561509643546263632
         targetType: 1
         giveDamageType: 0
+        sfxName: Sfx.Message.2
     - rid: 3561509643546263632
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
@@ -41,6 +42,7 @@ MonoBehaviour:
           rid: 3561509643546263634
         targetType: 1
         giveDamageType: 0
+        sfxName: Sfx.Message.2
     - rid: 3561509643546263634
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
@@ -54,6 +56,7 @@ MonoBehaviour:
           rid: 3561509643546263636
         targetType: 1
         giveDamageType: 0
+        sfxName: Sfx.Message.2
     - rid: 3561509643546263636
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
@@ -64,6 +67,7 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u821E\u3044\u3068\u4E71\u6483\u3092\u5408\u308F\u305B\u305F\u83EF\u9E97\u306A\u653B\u6483\u3002"
+        sfxName: Sfx.Message.1
         ignoreIfCharacterDead: 0
     - rid: 7288459789387432197
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
@@ -72,6 +76,7 @@ MonoBehaviour:
           rid: 7288459789387432198
         targetType: 1
         giveDamageType: 0
+        sfxName: Sfx.Message.2
     - rid: 7288459789387432198
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
