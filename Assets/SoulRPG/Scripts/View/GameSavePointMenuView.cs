@@ -108,7 +108,7 @@ namespace SoulRPG
                             "持久力",
                             x =>
                             {
-                                growthParameter.stamina += x;
+                                growthParameter.Stamina += x;
                                 return growthParameter.Stamina;
                             }
                         );
