@@ -19,6 +19,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3022425624344264782
       type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -26,11 +28,13 @@ MonoBehaviour:
         statusTypes: 00000000
         buffName: Skill.101002
         rate: 1.1
+        battleCharacterEvaluator:
+          rid: -2
     - rid: 6411493576093728937
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u7D20\u65E9\u304F\u69CB\u3048\u3066\u653B\u6483\u3092\u5F37\u5316\u3059\u308B\u4F53\u52E2\u3092\u53D6\u3063\u305F\u3002"
-        waitForInput: 1
+        sfxName: Sfx.Message.3
         ignoreIfCharacterDead: 0
     - rid: 6411493576093728944
       type: {class: RegisterAfterCommandInvoker, ns: SoulRPG, asm: Assembly-CSharp}
@@ -38,4 +42,6 @@ MonoBehaviour:
         scriptableSequences: {fileID: 11400000, guid: 954ec1d2022b545c486046460f52a60d, type: 2}
         key: 
         behaviourPriority: 0
-        cost: 0
+        needBehaviourPoint: 0
+        needStamina: 0
+        identifier: 
