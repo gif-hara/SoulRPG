@@ -3488,5 +3488,5 @@ MonoBehaviour:
       Value:
       - Id: 0
         TableId: 3
-        EnemyId: 0
+        EnemyId: 10105
         Weight: 100
