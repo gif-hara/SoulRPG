@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnitySequencerSystem;
 
 namespace SoulRPG
 {
@@ -12,10 +13,10 @@ namespace SoulRPG
 
         public string ViewName { get; }
 
-        protected DungeonInstanceFloorData(Vector2Int position, string eventType)
+        protected DungeonInstanceFloorData(Vector2Int position, string viewName)
         {
             Position = position;
-            ViewName = eventType;
+            ViewName = viewName;
         }
 
         public sealed class Item : DungeonInstanceFloorData
@@ -40,14 +41,14 @@ namespace SoulRPG
             }
         }
 
-        public sealed class Message : DungeonInstanceFloorData
+        public sealed class SequenceEvent : DungeonInstanceFloorData
         {
-            public int MessageGroupId { get; }
+            public ScriptableSequences Sequences { get; }
 
-            public Message(Vector2Int position, int messageGroupId)
-                : base(position, "Message")
+            public SequenceEvent(Vector2Int position, string viewName, ScriptableSequences sequences)
+                : base(position, viewName)
             {
-                MessageGroupId = messageGroupId;
+                Sequences = sequences;
             }
         }
 

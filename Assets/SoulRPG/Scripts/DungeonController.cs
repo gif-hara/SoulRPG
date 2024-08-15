@@ -34,6 +34,8 @@ namespace SoulRPG
 
         private readonly HashSet<Vector2Int> reachedPoints = new();
 
+        private readonly CancellationTokenSource scope = new();
+
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
             IExplorationView view
@@ -119,13 +121,14 @@ namespace SoulRPG
                 );
                 AddFloorData(position, floorData);
             }
-            foreach (var i in CurrentDungeonSpec.FloorMessages)
+            foreach (var i in CurrentDungeonSpec.FloorEvents)
             {
                 var position = new Vector2Int(i.X, i.Y);
-                var floorData = new DungeonInstanceFloorData.Message
+                var floorData = new DungeonInstanceFloorData.SequenceEvent
                 (
                     position,
-                    i.MessageGroupId
+                    i.ViewName,
+                    i.Sequences
                 );
                 AddFloorData(position, floorData);
             }
@@ -202,7 +205,7 @@ namespace SoulRPG
                 {
                     DungeonInstanceFloorData.Item itemData => InvokeOnItemAsync(character, itemData),
                     DungeonInstanceFloorData.SavePoint => InvokeOnSavePointAsync(character),
-                    DungeonInstanceFloorData.Message messageData => InvokeOnMessageAsync(messageData),
+                    DungeonInstanceFloorData.SequenceEvent messageData => InvokeOnSequenceEventAsync(messageData),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -307,14 +310,10 @@ namespace SoulRPG
             await view.OpenAsync();
         }
 
-        private async UniTask InvokeOnMessageAsync(DungeonInstanceFloorData.Message messageData)
+        private async UniTask InvokeOnSequenceEventAsync(DungeonInstanceFloorData.SequenceEvent sequenceData)
         {
-            var messages = TinyServiceLocator.Resolve<MasterData>().MessageGroups.Get(messageData.MessageGroupId);
-            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            foreach (var i in messages)
-            {
-                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new(i.Message, "Sfx.Message.0"));
-            }
+            var container = new Container();
+            await new Sequencer(container, sequenceData.Sequences.Sequences).PlayAsync(CancellationToken.None);
         }
 
         private async UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData.Enemy enemyData)
