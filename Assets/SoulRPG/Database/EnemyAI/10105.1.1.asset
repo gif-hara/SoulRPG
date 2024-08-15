@@ -18,6 +18,7 @@ MonoBehaviour:
   - rid: 3022425832378073189
   - rid: 3022425832378073198
   - rid: 3022425832378073199
+  - rid: 9047573673540321374
   - rid: 9047573634008219745
   - rid: 9047573634008219746
   - rid: 3022425832378073200
@@ -73,3 +74,7 @@ MonoBehaviour:
       type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
       data:
         seconds: 1
+    - rid: 9047573673540321374
+      type: {class: PlaySfx, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        sfxName: Sfx.Message.18
