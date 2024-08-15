@@ -10,12 +10,12 @@ namespace SoulRPG
     {
         public Vector2Int Position { get; }
 
-        public string EventType { get; }
+        public string ViewName { get; }
 
         protected DungeonInstanceFloorData(Vector2Int position, string eventType)
         {
             Position = position;
-            EventType = eventType;
+            ViewName = eventType;
         }
 
         public sealed class Item : DungeonInstanceFloorData

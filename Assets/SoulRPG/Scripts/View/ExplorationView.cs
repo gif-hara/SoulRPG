@@ -140,7 +140,7 @@ namespace SoulRPG
             {
                 foreach (var (position, floorData) in dungeonController.FloorDatabase)
                 {
-                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{floorData.EventType}"), tipsParent.transform);
+                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{floorData.ViewName}"), tipsParent.transform);
                     eventObject.anchoredPosition = new Vector2(position.x * tipSize.x, position.y * tipSize.y);
                     eventObject.sizeDelta = tipSize;
                     maptipFloorEventObjects.Add(floorData, eventObject.gameObject);
@@ -214,7 +214,7 @@ namespace SoulRPG
             {
                 foreach (var (position, floorData) in dungeonController.FloorDatabase)
                 {
-                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{floorData.EventType}"), dungeonDocument.transform);
+                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{floorData.ViewName}"), dungeonDocument.transform);
                     eventObject.position = new Vector3(position.x, 0, position.y);
                     dungeonFloorEventObjects.Add(floorData, eventObject.gameObject);
                 }
