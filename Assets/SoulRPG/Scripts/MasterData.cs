@@ -76,6 +76,10 @@ namespace SoulRPG
         private EnemyTable.Group enemyTables;
         public EnemyTable.Group EnemyTables => enemyTables;
 
+        [SerializeField]
+        private MessageGroup.Group messageGroups;
+        public MessageGroup.Group MessageGroups => messageGroups;
+
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
@@ -110,6 +114,8 @@ namespace SoulRPG
                 "MasterData.SavePoint",
                 "MasterData.FloorItem.Guaranteed",
                 "MasterData.FloorEnemy.Guaranteed",
+                "MasterData.FloorMessage",
+                "MasterData.MessageGroup",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -147,6 +153,9 @@ namespace SoulRPG
             floorItemGuaranteeds.Set(JsonHelper.FromJson<FloorItem>(database.Item2[19]));
             var floorEnemyGuaranteeds = new FloorEnemy.Group();
             floorEnemyGuaranteeds.Set(JsonHelper.FromJson<FloorEnemy>(database.Item2[20]));
+            var floorMessages = new FloorMessage.Group();
+            floorMessages.Set(JsonHelper.FromJson<FloorMessage>(database.Item2[21]));
+            messageGroups.Set(JsonHelper.FromJson<MessageGroup>(database.Item2[22]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -234,6 +243,12 @@ namespace SoulRPG
                 {
                     Debug.LogWarning($"Not found ItemThumbnail {i.ThumbnailId}");
                 }
+            }
+            foreach (var i in floorMessages.List)
+            {
+                var dungeonSpec = dungeonSpecs.Get(i.Key);
+                Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
+                dungeonSpec.FloorMessages = i.Value;
             }
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
@@ -712,6 +727,8 @@ namespace SoulRPG
 
             public List<FloorEnemy> FloorEnemyGuaranteeds;
 
+            public List<FloorMessage> FloorMessages;
+
             [Serializable]
             public class DictionaryList : DictionaryList<string, DungeonSpec>
             {
@@ -774,6 +791,40 @@ namespace SoulRPG
             public class Group : Group<string, SavePoint>
             {
                 public Group() : base(x => x.DungeonName) { }
+            }
+        }
+
+        [Serializable]
+        public class FloorMessage
+        {
+            public int Id;
+
+            public int MessageGroupId;
+
+            public string DungeonName;
+
+            public int X;
+
+            public int Y;
+
+            [Serializable]
+            public class Group : Group<string, FloorMessage>
+            {
+                public Group() : base(x => x.DungeonName) { }
+            }
+        }
+
+        [Serializable]
+        public class MessageGroup
+        {
+            public int GroupId;
+
+            public string Message;
+
+            [Serializable]
+            public class Group : Group<int, MessageGroup>
+            {
+                public Group() : base(x => x.GroupId) { }
             }
         }
     }
