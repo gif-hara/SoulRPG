@@ -1298,6 +1298,12 @@ MonoBehaviour:
         Y: 3
       FloorItemGuaranteeds: []
       FloorEnemyGuaranteeds: []
+      FloorMessages:
+      - Id: 1
+        MessageGroupId: 101001
+        DungeonName: Dungeon.Test
+        X: 0
+        Y: 4
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
@@ -1833,6 +1839,12 @@ MonoBehaviour:
         X: 11
         Y: 4
         EnemyTableId: 3
+      FloorMessages:
+      - Id: 2
+        MessageGroupId: 101002
+        DungeonName: Dungeon.10101
+        X: 4
+        Y: 3
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
@@ -3490,3 +3502,25 @@ MonoBehaviour:
         TableId: 3
         EnemyId: 10105
         Weight: 100
+  messageGroups:
+    list:
+    - Key: 101001
+      Value:
+      - GroupId: 101001
+        Message: "\u3053\u308C\u306F\u30C6\u30B9\u30C8\u30E1\u30C3\u30BB\u30FC\u30B8\u306E\u3088\u3046\u3060\u3002"
+      - GroupId: 101001
+        Message: "\u3053\u308C\u3067\u7D42\u308F\u308A\u306E\u3088\u3046\u3060\u3002"
+    - Key: 101002
+      Value:
+      - GroupId: 101002
+        Message: "\u30FB\u30FB\u30FB\u8133\u5185\u306B\u76F4\u63A5\u8A9E\u308A\u304B\u3051\u3066\u304F\u308B\u3002"
+      - GroupId: 101002
+        Message: "\u300C\u3053\u306E\u30B2\u30FC\u30E0\u3092\u30D7\u30EC\u30A4\u3057\u3066\u304F\u308C\u3066\u3042\u308A\u304C\u3068\u3046\u300D"
+      - GroupId: 101002
+        Message: "\u300C\u3060\u3051\u3069\u307E\u3060\u4F53\u9A13\u7248\u3067\u672A\u5B8C\u6210\u306A\u3093\u3060\u300D"
+      - GroupId: 101002
+        Message: "\u300C\u3072\u3068\u307E\u305A1\u3064\u306E\u30C0\u30F3\u30B8\u30E7\u30F3\u304C\u51FA\u6765\u305F\u306E\u3067\u8A66\u3057\u306B\u516C\u958B\u3057\u3066\u307F\u305F\u3001\u3068\u3044\u3046\u611F\u3058\u306A\u3093\u3060\u300D"
+      - GroupId: 101002
+        Message: "\u300C\u81F3\u3089\u306A\u3044\u70B9\u3060\u3089\u3051\u3060\u3051\u3069\u6700\u5965\u90E8\u307E\u3067\u9032\u3093\u3067\u307B\u3057\u3044\u300D"
+      - GroupId: 101002
+        Message: "\u300C\u7121\u4E8B\u3092\u7948\u3063\u3066\u3044\u308B\u3088\u300D"
