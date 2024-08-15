@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101002
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 3022425853439508561
+  - rid: 3022425853439508564
+  - rid: 3022425853439508566
+  - rid: 9047573673540321355
+  - rid: 9047573673540321356
+  - rid: 9047573673540321357
+  - rid: 9047573673540321358
+  - rid: 9047573673540321372
+  - rid: 9047573673540321371
+  - rid: 9047573673540321373
+  references:
+    version: 2
+    RefIds:
+    - rid: 3022425853439508561
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u30FB\u30FB\u30FB\u8133\u5185\u306B\u8A71\u3057\u304B\u3051\u3066\u304F\u308B\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 3022425853439508564
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u3088\u304F\u305E\u6211\u306E\u7247\u5272\u308C\u3092\u898B\u3064\u3051\u3066\u304F\u308C\u305F\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 3022425853439508566
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u3060\u304C\u3057\u304B\u3057\u3001\u3053\u308C\u4EE5\u964D\u306F\u307E\u3060\u672A\u5B9F\u88C5\u3068\u306A\u3063\u3066\u3044\u308B\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573673540321355
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u92ED\u610F\u958B\u767A\u4E2D\u3068\u306A\u3063\u3066\u3044\u308B\u306E\u3067\u671F\u5F85\u3057\u3066\u3066\u6B32\u3057\u3044\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573673540321356
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u3082\u3057\u3088\u308D\u3057\u3051\u308C\u3070\u5FDC\u63F4\u30B3\u30E1\u30F3\u30C8\u3092\u66F8\u3044\u3066\u304F\u308C\u308B\u3068\u5927\u5909\u559C\u3070\u3057\u3044\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573673540321357
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u3067\u306F\u307E\u305F\u4F1A\u304A\u3046\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573673540321358
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 0, g: 0, b: 0, a: 0}
+        to: {r: 0, g: 0, b: 0, a: 1}
+        duration: 3
+    - rid: 9047573673540321371
+      type: {class: BeginToBeContinued, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        documentPrefab: {fileID: 3672498495014125879, guid: b879f9386deec5149a4ed05d13aaf27c, type: 3}
+    - rid: 9047573673540321372
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1
+    - rid: 9047573673540321373
+      type: {class: Never, ns: SoulRPG, asm: Assembly-CSharp}
+      data: 
