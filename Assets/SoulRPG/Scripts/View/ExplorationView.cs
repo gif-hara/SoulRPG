@@ -246,9 +246,13 @@ namespace SoulRPG
         {
             var areaDocument = uiDocument.Q<HKUIDocument>("Area.Message");
             var messageParent = areaDocument.Q<RectTransform>("ListParent");
-            var arrowObject = areaDocument.Q("Arrow");
+            var arrowObject = areaDocument.Q("Area.Arrow");
             var messagePrefab = areaDocument.Q<HKUIDocument>("UIElement.Message");
+            var arrowAnimation = uiDocument
+                .Q<HKUIDocument>("Sequences")
+                .Q<SequenceMonobehaviour>("Animation.Arrow");
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            CancellationTokenSource arrowAnimationScope = null;
             arrowObject.SetActive(false);
 
             gameEvents.OnRequestShowMessage
@@ -262,6 +266,14 @@ namespace SoulRPG
                 .Subscribe(x =>
                 {
                     arrowObject.SetActive(x);
+                    arrowAnimationScope?.Cancel();
+                    arrowAnimationScope?.Dispose();
+                    arrowAnimationScope = null;
+                    if (x)
+                    {
+                        arrowAnimationScope = new CancellationTokenSource();
+                        arrowAnimation.PlayAsync(arrowAnimationScope.Token).Forget();
+                    }
                 })
                 .RegisterTo(scope);
 
