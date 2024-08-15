@@ -76,10 +76,6 @@ namespace SoulRPG
         private EnemyTable.Group enemyTables;
         public EnemyTable.Group EnemyTables => enemyTables;
 
-        [SerializeField]
-        private MessageGroup.Group messageGroups;
-        public MessageGroup.Group MessageGroups => messageGroups;
-
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
@@ -114,8 +110,7 @@ namespace SoulRPG
                 "MasterData.SavePoint",
                 "MasterData.FloorItem.Guaranteed",
                 "MasterData.FloorEnemy.Guaranteed",
-                "MasterData.FloorMessage",
-                "MasterData.MessageGroup",
+                "MasterData.FloorEvent",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -153,9 +148,8 @@ namespace SoulRPG
             floorItemGuaranteeds.Set(JsonHelper.FromJson<FloorItem>(database.Item2[19]));
             var floorEnemyGuaranteeds = new FloorEnemy.Group();
             floorEnemyGuaranteeds.Set(JsonHelper.FromJson<FloorEnemy>(database.Item2[20]));
-            var floorMessages = new FloorMessage.Group();
-            floorMessages.Set(JsonHelper.FromJson<FloorMessage>(database.Item2[21]));
-            messageGroups.Set(JsonHelper.FromJson<MessageGroup>(database.Item2[22]));
+            var floorEvents = new FloorEvent.Group();
+            floorEvents.Set(JsonHelper.FromJson<FloorEvent>(database.Item2[21]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -241,14 +235,25 @@ namespace SoulRPG
                 i.Thumbnail = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/SoulRPG/Textures/{i.ThumbnailId}.png");
                 if (i.Thumbnail == null)
                 {
-                    Debug.LogWarning($"Not found ItemThumbnail {i.ThumbnailId}");
+                    Debug.LogWarning($"Not found ItemThumbnail ItemId:{i.Id} ThumbnailId:{i.ThumbnailId}");
                 }
             }
-            foreach (var i in floorMessages.List)
+            foreach (var i in floorEvents.List)
+            {
+                foreach (var j in i.Value)
+                {
+                    j.Sequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/FloorEvent/{j.SequenceId}.asset");
+                    if (j.Sequences == null)
+                    {
+                        Debug.LogWarning($"Not found FloorEventSequence {j.SequenceId}");
+                    }
+                }
+            }
+            foreach (var i in floorEvents.List)
             {
                 var dungeonSpec = dungeonSpecs.Get(i.Key);
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
-                dungeonSpec.FloorMessages = i.Value;
+                dungeonSpec.FloorEvents = i.Value;
             }
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
@@ -727,7 +732,7 @@ namespace SoulRPG
 
             public List<FloorEnemy> FloorEnemyGuaranteeds;
 
-            public List<FloorMessage> FloorMessages;
+            public List<FloorEvent> FloorEvents;
 
             [Serializable]
             public class DictionaryList : DictionaryList<string, DungeonSpec>
@@ -795,11 +800,9 @@ namespace SoulRPG
         }
 
         [Serializable]
-        public class FloorMessage
+        public class FloorEvent
         {
             public int Id;
-
-            public int MessageGroupId;
 
             public string DungeonName;
 
@@ -807,24 +810,16 @@ namespace SoulRPG
 
             public int Y;
 
+            public string ViewName;
+
+            public int SequenceId;
+
+            public ScriptableSequences Sequences;
+
             [Serializable]
-            public class Group : Group<string, FloorMessage>
+            public class Group : Group<string, FloorEvent>
             {
                 public Group() : base(x => x.DungeonName) { }
-            }
-        }
-
-        [Serializable]
-        public class MessageGroup
-        {
-            public int GroupId;
-
-            public string Message;
-
-            [Serializable]
-            public class Group : Group<int, MessageGroup>
-            {
-                public Group() : base(x => x.GroupId) { }
             }
         }
     }

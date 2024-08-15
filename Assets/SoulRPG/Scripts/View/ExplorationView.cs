@@ -140,7 +140,7 @@ namespace SoulRPG
             {
                 foreach (var (position, floorData) in dungeonController.FloorDatabase)
                 {
-                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{floorData.EventType}"), tipsParent.transform);
+                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{floorData.ViewName}"), tipsParent.transform);
                     eventObject.anchoredPosition = new Vector2(position.x * tipSize.x, position.y * tipSize.y);
                     eventObject.sizeDelta = tipSize;
                     maptipFloorEventObjects.Add(floorData, eventObject.gameObject);
@@ -214,7 +214,7 @@ namespace SoulRPG
             {
                 foreach (var (position, floorData) in dungeonController.FloorDatabase)
                 {
-                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{floorData.EventType}"), dungeonDocument.transform);
+                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{floorData.ViewName}"), dungeonDocument.transform);
                     eventObject.position = new Vector3(position.x, 0, position.y);
                     dungeonFloorEventObjects.Add(floorData, eventObject.gameObject);
                 }
@@ -246,9 +246,13 @@ namespace SoulRPG
         {
             var areaDocument = uiDocument.Q<HKUIDocument>("Area.Message");
             var messageParent = areaDocument.Q<RectTransform>("ListParent");
-            var arrowObject = areaDocument.Q("Arrow");
+            var arrowObject = areaDocument.Q("Area.Arrow");
             var messagePrefab = areaDocument.Q<HKUIDocument>("UIElement.Message");
+            var arrowAnimation = uiDocument
+                .Q<HKUIDocument>("Sequences")
+                .Q<SequenceMonobehaviour>("Animation.Arrow");
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            CancellationTokenSource arrowAnimationScope = null;
             arrowObject.SetActive(false);
 
             gameEvents.OnRequestShowMessage
@@ -262,6 +266,14 @@ namespace SoulRPG
                 .Subscribe(x =>
                 {
                     arrowObject.SetActive(x);
+                    arrowAnimationScope?.Cancel();
+                    arrowAnimationScope?.Dispose();
+                    arrowAnimationScope = null;
+                    if (x)
+                    {
+                        arrowAnimationScope = new CancellationTokenSource();
+                        arrowAnimation.PlayAsync(arrowAnimationScope.Token).Forget();
+                    }
                 })
                 .RegisterTo(scope);
 

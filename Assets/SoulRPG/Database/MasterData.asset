@@ -1298,6 +1298,14 @@ MonoBehaviour:
         Y: 3
       FloorItemGuaranteeds: []
       FloorEnemyGuaranteeds: []
+      FloorEvents:
+      - Id: 1
+        DungeonName: Dungeon.Test
+        X: 0
+        Y: 4
+        ViewName: Message
+        SequenceId: 101001
+        Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
@@ -1833,6 +1841,14 @@ MonoBehaviour:
         X: 11
         Y: 4
         EnemyTableId: 3
+      FloorEvents:
+      - Id: 2
+        DungeonName: Dungeon.10101
+        X: 4
+        Y: 3
+        ViewName: Message
+        SequenceId: 101001
+        Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
