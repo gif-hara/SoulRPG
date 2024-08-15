@@ -119,6 +119,16 @@ namespace SoulRPG
                 );
                 AddFloorData(position, floorData);
             }
+            foreach (var i in CurrentDungeonSpec.FloorMessages)
+            {
+                var position = new Vector2Int(i.X, i.Y);
+                var floorData = new DungeonInstanceFloorData.Message
+                (
+                    position,
+                    i.MessageGroupId
+                );
+                AddFloorData(position, floorData);
+            }
             WallDatabase.Clear();
             foreach (var wallEvent in CurrentDungeonSpec.WallEvents)
             {
@@ -192,6 +202,7 @@ namespace SoulRPG
                 {
                     DungeonInstanceFloorData.Item itemData => InvokeOnItemAsync(character, itemData),
                     DungeonInstanceFloorData.SavePoint => InvokeOnSavePointAsync(character),
+                    DungeonInstanceFloorData.Message messageData => InvokeOnMessageAsync(messageData),
                     _ => UniTask.CompletedTask,
                 };
             }
