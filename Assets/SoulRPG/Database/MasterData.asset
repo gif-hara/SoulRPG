@@ -1296,7 +1296,12 @@ MonoBehaviour:
       - DungeonName: Dungeon.Test
         X: 0
         Y: 3
-      FloorItemGuaranteeds: []
+      FloorItemGuaranteeds:
+      - Id: 1
+        DungeonName: Dungeon.Test
+        X: 10
+        Y: 6
+        ItemTableId: 2
       FloorEnemyGuaranteeds: []
       FloorEvents:
       - Id: 1
@@ -1830,12 +1835,7 @@ MonoBehaviour:
       - DungeonName: Dungeon.10101
         X: 14
         Y: 1
-      FloorItemGuaranteeds:
-      - Id: 1
-        DungeonName: Dungeon.10101
-        X: 10
-        Y: 6
-        ItemTableId: 2
+      FloorItemGuaranteeds: []
       FloorEnemyGuaranteeds:
       - DungeonName: Dungeon.10101
         X: 11
