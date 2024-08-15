@@ -57,13 +57,13 @@ namespace SoulRPG
             var floorItemNoCosts = CurrentDungeonSpec.FloorItemNoCosts
                 .OrderBy(_ => Random.value)
                 .Take(Random.Range(CurrentDungeonSpec.NoCostItemNumberMin, CurrentDungeonSpec.NoCostItemNumberMax));
-            foreach (var floorItem in floorItemNoCosts)
+            foreach (var i in floorItemNoCosts)
             {
-                var position = new Vector2Int(floorItem.X, floorItem.Y);
+                var position = new Vector2Int(i.X, i.Y);
                 var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
-                    CreateItemList(floorItem.ItemTableId)
+                    CreateItemList(i.ItemTableId)
                 );
                 FloorDatabase.Add(position, floorData);
             }
@@ -71,17 +71,17 @@ namespace SoulRPG
                 .Where(x => !FloorDatabase.ContainsKey(new Vector2Int(x.X, x.Y)))
                 .OrderBy(_ => Random.value)
                 .Take(Random.Range(CurrentDungeonSpec.EnemyPlaceItemNumberMin, CurrentDungeonSpec.EnemyPlaceItemNumberMax));
-            foreach (var floorItem in floorItemEnemyPlaces)
+            foreach (var i in floorItemEnemyPlaces)
             {
-                var position = new Vector2Int(floorItem.X, floorItem.Y);
+                var position = new Vector2Int(i.X, i.Y);
                 var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
-                    CreateItemList(floorItem.ItemTableId)
+                    CreateItemList(i.ItemTableId)
                 );
                 FloorDatabase.Add(position, floorData);
 
-                position = new Vector2Int(floorItem.EnemyPositionX, floorItem.EnemyPositionY);
+                position = new Vector2Int(i.EnemyPositionX, i.EnemyPositionY);
                 if (FloorDatabase.ContainsKey(position))
                 {
                     continue;
@@ -89,37 +89,35 @@ namespace SoulRPG
                 var enemyData = new DungeonInstanceFloorData.Enemy
                 (
                     position,
-                    masterData.EnemyTables.Get(floorItem.EnemyTableId).Lottery().EnemyId
+                    masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId
                 );
                 FloorDatabase.Add(position, enemyData);
             }
-            foreach (var floorItem in CurrentDungeonSpec.SavePoints)
+            foreach (var i in CurrentDungeonSpec.SavePoints)
             {
-                var position = new Vector2Int(floorItem.X, floorItem.Y);
+                var position = new Vector2Int(i.X, i.Y);
                 var floorData = new DungeonInstanceFloorData.SavePoint(position);
                 FloorDatabase.Add(position, floorData);
             }
-            foreach (var wallEvent in CurrentDungeonSpec.FloorItemGuaranteeds)
+            foreach (var i in CurrentDungeonSpec.FloorItemGuaranteeds)
             {
-                var position = new Vector2Int(wallEvent.X, wallEvent.Y);
-                Assert.IsFalse(FloorDatabase.ContainsKey(position), $"すでに床データが存在しています position:{position}");
+                var position = new Vector2Int(i.X, i.Y);
                 var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
-                    CreateItemList(wallEvent.ItemTableId)
+                    CreateItemList(i.ItemTableId)
                 );
-                FloorDatabase.Add(position, floorData);
+                AddFloorData(position, floorData);
             }
-            foreach (var floorEnemy in CurrentDungeonSpec.FloorEnemyGuaranteeds)
+            foreach (var i in CurrentDungeonSpec.FloorEnemyGuaranteeds)
             {
-                var position = new Vector2Int(floorEnemy.X, floorEnemy.Y);
-                Assert.IsFalse(FloorDatabase.ContainsKey(position), $"すでに床データが存在しています position:{position}");
+                var position = new Vector2Int(i.X, i.Y);
                 var floorData = new DungeonInstanceFloorData.Enemy
                 (
                     position,
-                    masterData.EnemyTables.Get(floorEnemy.EnemyTableId).Lottery().EnemyId
+                    masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId
                 );
-                FloorDatabase.Add(position, floorData);
+                AddFloorData(position, floorData);
             }
             WallDatabase.Clear();
             foreach (var wallEvent in CurrentDungeonSpec.WallEvents)
@@ -128,6 +126,12 @@ namespace SoulRPG
                     wallEvent.GetWallPosition(),
                     new DungeonInstanceWallData(wallEvent)
                 );
+            }
+
+            void AddFloorData(Vector2Int position, DungeonInstanceFloorData floorData)
+            {
+                Assert.IsFalse(FloorDatabase.ContainsKey(position), $"すでに床データが存在しています position:{position}");
+                FloorDatabase.Add(position, floorData);
             }
 
             List<(MasterData.Item item, int count)> CreateItemList(int itemTableId)
@@ -290,6 +294,16 @@ namespace SoulRPG
             checkPoint = character.Position;
             var view = new GameSavePointMenuView(gameMenuBundlePrefab, character);
             await view.OpenAsync();
+        }
+
+        private async UniTask InvokeOnMessageAsync(DungeonInstanceFloorData.Message messageData)
+        {
+            var messages = TinyServiceLocator.Resolve<MasterData>().MessageGroups.Get(messageData.MessageGroupId);
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            foreach (var i in messages)
+            {
+                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new(i.Message, "Sfx.Message.0"));
+            }
         }
 
         private async UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData.Enemy enemyData)
