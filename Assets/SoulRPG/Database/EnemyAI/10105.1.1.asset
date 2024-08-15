@@ -55,13 +55,13 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u771F\u306E\u59FF\u3078\u3068\u5909\u8EAB\u3057\u305F\u3002"
-        sfxName: 
+        sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0
     - rid: 3022425832378073201
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u300C\u3053\u306E\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8\u304C\u8CB4\u69D8\u3092\u7070\u306B\u3057\u3066\u304F\u308C\u308B\u300D"
-        sfxName: 
+        sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0
     - rid: 9047573634008219745
       type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
