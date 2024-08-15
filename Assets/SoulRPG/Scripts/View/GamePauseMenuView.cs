@@ -61,46 +61,7 @@ namespace SoulRPG
                                 gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
                             }
                         );
-                    },
-                    element =>
-                    {
-                        GameListView.ApplyAsSimpleElement
-                        (
-                            element,
-                            "道具",
-                            _ =>
-                            {
-                                Debug.Log("道具");
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                            }
-                        );
-                    },
-                    element =>
-                    {
-                        GameListView.ApplyAsSimpleElement
-                        (
-                            element,
-                            "ステータス",
-                            _ =>
-                            {
-                                Debug.Log("ステータス");
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                            }
-                        );
-                    },
-                    element =>
-                    {
-                        GameListView.ApplyAsSimpleElement
-                        (
-                            element,
-                            "システム",
-                            _ =>
-                            {
-                                Debug.Log("システム");
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                            }
-                        );
-                    },
+                    }
                 },
                 0
             );
