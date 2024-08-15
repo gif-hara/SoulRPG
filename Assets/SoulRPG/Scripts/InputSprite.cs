@@ -1,10 +1,8 @@
 using System.Linq;
-using System.Threading;
 using R3;
 using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.DualShock;
-using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Switch;
 using UnityEngine.InputSystem.XInput;
 
@@ -15,32 +13,12 @@ namespace HK
     /// </summary>
     public sealed class InputSprite
     {
-        public enum InputSchemeType
+        public static string GetTag(InputAction action, InputScheme inputScheme)
         {
-            KeyboardAndMouse,
-            GamePad
-        }
-
-        private readonly ReactiveProperty<InputSchemeType> inputSchemeTypeReactiveProperty = new();
-        public ReadOnlyReactiveProperty<InputSchemeType> InputSchemeTypeReactiveProperty => inputSchemeTypeReactiveProperty;
-        public InputSchemeType CurrentInputSchemeType => inputSchemeTypeReactiveProperty.Value;
-
-        private readonly ReactiveProperty<Gamepad> gamepadReactiveProperty = new();
-        public ReadOnlyReactiveProperty<Gamepad> GamepadReactiveProperty => gamepadReactiveProperty;
-        public Gamepad CurrentGamepad => gamepadReactiveProperty.Value;
-
-        public InputSprite(CancellationToken scope)
-        {
-            InputSystem.onEvent += OnEvent;
-            scope.Register(() => InputSystem.onEvent -= OnEvent);
-        }
-
-        public string GetTag(InputAction action)
-        {
-            var schemeName = CurrentInputSchemeType switch
+            var schemeName = inputScheme.CurrentInputSchemeType switch
             {
-                InputSchemeType.KeyboardAndMouse => "Keyboard&Mouse",
-                InputSchemeType.GamePad => "GamePad",
+                InputScheme.InputSchemeType.KeyboardAndMouse => "Keyboard&Mouse",
+                InputScheme.InputSchemeType.GamePad => "GamePad",
                 _ => "Unknown"
             };
 
@@ -61,9 +39,9 @@ namespace HK
                     {
                         continue;
                     }
-                    if (control.device is Gamepad && CurrentGamepad != null)
+                    if (control.device is Gamepad && inputScheme.CurrentGamepad != null)
                     {
-                        if (control.device != CurrentGamepad)
+                        if (control.device != inputScheme.CurrentGamepad)
                         {
                             continue;
                         }
@@ -86,44 +64,6 @@ namespace HK
             }
 
             return $"<sprite=UnknownTag schemeName:{schemeName} action:{action.name}>";
-        }
-
-        private void OnEvent(InputEventPtr inputEventPtr, InputDevice inputDevice)
-        {
-            var eventType = inputEventPtr.type;
-            if (eventType != StateEvent.Type && eventType != DeltaStateEvent.Type)
-            {
-                return;
-            }
-
-            var controls = inputEventPtr.EnumerateControls(
-                InputControlExtensions.Enumerate.IncludeNonLeafControls |
-                InputControlExtensions.Enumerate.IncludeSyntheticControls |
-                InputControlExtensions.Enumerate.IgnoreControlsInCurrentState |
-                InputControlExtensions.Enumerate.IgnoreControlsInDefaultState
-                );
-            var anyControl = controls.GetEnumerator().MoveNext();
-            if (!anyControl)
-            {
-                return;
-            }
-
-            if (inputDevice is Gamepad gamepad && gamepadReactiveProperty.Value != gamepad)
-            {
-                gamepadReactiveProperty.Value = gamepad;
-            }
-
-            var newSchemeType = inputDevice switch
-            {
-                Keyboard or Mouse => InputSchemeType.KeyboardAndMouse,
-                Gamepad => InputSchemeType.GamePad,
-                _ => CurrentInputSchemeType
-            };
-
-            if (newSchemeType != CurrentInputSchemeType)
-            {
-                inputSchemeTypeReactiveProperty.Value = newSchemeType;
-            }
         }
     }
 }
