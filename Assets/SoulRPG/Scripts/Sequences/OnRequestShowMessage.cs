@@ -17,7 +17,7 @@ namespace SoulRPG
         private string format;
 
         [SerializeField]
-        private string sfxName;
+        private string sfxName = "Sfx.Message.0";
 
         [SerializeField]
         private bool ignoreIfCharacterDead = false;
