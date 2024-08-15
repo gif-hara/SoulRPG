@@ -60,7 +60,7 @@ namespace SoulRPG
             foreach (var floorItem in floorItemNoCosts)
             {
                 var position = new Vector2Int(floorItem.X, floorItem.Y);
-                var floorData = DungeonInstanceFloorData.CreateAsItem
+                var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
                     CreateItemList(floorItem.ItemTableId)
@@ -74,7 +74,7 @@ namespace SoulRPG
             foreach (var floorItem in floorItemEnemyPlaces)
             {
                 var position = new Vector2Int(floorItem.X, floorItem.Y);
-                var floorData = DungeonInstanceFloorData.CreateAsItem
+                var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
                     CreateItemList(floorItem.ItemTableId)
@@ -86,7 +86,7 @@ namespace SoulRPG
                 {
                     continue;
                 }
-                var enemyData = DungeonInstanceFloorData.CreateAsEnemy
+                var enemyData = new DungeonInstanceFloorData.Enemy
                 (
                     position,
                     masterData.EnemyTables.Get(floorItem.EnemyTableId).Lottery().EnemyId
@@ -96,14 +96,14 @@ namespace SoulRPG
             foreach (var floorItem in CurrentDungeonSpec.SavePoints)
             {
                 var position = new Vector2Int(floorItem.X, floorItem.Y);
-                var floorData = DungeonInstanceFloorData.CreateAsSavePoint(position);
+                var floorData = new DungeonInstanceFloorData.SavePoint(position);
                 FloorDatabase.Add(position, floorData);
             }
             foreach (var wallEvent in CurrentDungeonSpec.FloorItemGuaranteeds)
             {
                 var position = new Vector2Int(wallEvent.X, wallEvent.Y);
                 Assert.IsFalse(FloorDatabase.ContainsKey(position), $"すでに床データが存在しています position:{position}");
-                var floorData = DungeonInstanceFloorData.CreateAsItem
+                var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
                     CreateItemList(wallEvent.ItemTableId)
@@ -114,7 +114,7 @@ namespace SoulRPG
             {
                 var position = new Vector2Int(floorEnemy.X, floorEnemy.Y);
                 Assert.IsFalse(FloorDatabase.ContainsKey(position), $"すでに床データが存在しています position:{position}");
-                var floorData = DungeonInstanceFloorData.CreateAsEnemy
+                var floorData = new DungeonInstanceFloorData.Enemy
                 (
                     position,
                     masterData.EnemyTables.Get(floorEnemy.EnemyTableId).Lottery().EnemyId
@@ -167,9 +167,9 @@ namespace SoulRPG
             AddReachedPoint(character);
             if (FloorDatabase.TryGetValue(character.Position, out var floorData))
             {
-                return floorData.EventType switch
+                return floorData switch
                 {
-                    "Enemy" => InvokeOnEnemyAsync(character, floorData),
+                    DungeonInstanceFloorData.Enemy enemyData => InvokeOnEnemyAsync(character, enemyData),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -184,10 +184,10 @@ namespace SoulRPG
             var wallPosition = character.Direction.GetWallPosition(character.Position);
             if (FloorDatabase.TryGetValue(character.Position, out var floorData))
             {
-                return floorData.EventType switch
+                return floorData switch
                 {
-                    "Item" => InvokeOnItemAsync(character, floorData),
-                    "SavePoint" => InvokeOnSavePointAsync(character),
+                    DungeonInstanceFloorData.Item itemData => InvokeOnItemAsync(character, itemData),
+                    DungeonInstanceFloorData.SavePoint => InvokeOnSavePointAsync(character),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -257,12 +257,12 @@ namespace SoulRPG
             return reachedPoints.Contains(position);
         }
 
-        private async UniTask InvokeOnItemAsync(Character character, DungeonInstanceFloorData floorData)
+        private async UniTask InvokeOnItemAsync(Character character, DungeonInstanceFloorData.Item itemData)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            gameEvents.OnAcquiredFloorData.OnNext(floorData);
+            gameEvents.OnAcquiredFloorData.OnNext(itemData);
             FloorDatabase.Remove(character.Position);
-            foreach (var (item, count) in floorData.Items)
+            foreach (var (item, count) in itemData.Items)
             {
                 character.Inventory.Add(item.Id, count);
                 if (count == 1)
@@ -292,12 +292,12 @@ namespace SoulRPG
             await view.OpenAsync();
         }
 
-        private async UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData floorData)
+        private async UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData.Enemy enemyData)
         {
-            var result = await BeginBattleAsync(character, floorData.EnemyId.GetMasterDataEnemy());
+            var result = await BeginBattleAsync(character, enemyData.EnemyId.GetMasterDataEnemy());
             if (result == Define.BattleResult.PlayerWin)
             {
-                TinyServiceLocator.Resolve<GameEvents>().OnAcquiredFloorData.OnNext(floorData);
+                TinyServiceLocator.Resolve<GameEvents>().OnAcquiredFloorData.OnNext(enemyData);
             }
         }
 
