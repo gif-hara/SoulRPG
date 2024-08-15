@@ -55,6 +55,7 @@ namespace SoulRPG
                     button.OnSelectAsObservable()
                         .Subscribe(_ =>
                         {
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Navigate.OnPerformedAsObservable()
                                 .TakeUntil(button.OnDeselectAsObservable())
                                 .Subscribe(x =>

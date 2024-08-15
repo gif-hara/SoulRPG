@@ -59,10 +59,6 @@ namespace SoulRPG
                             {
                                 stateMachine.Change(StateSelectEquipmentPartAsync);
                                 gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                            },
-                            _ =>
-                            {
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                             }
                         );
                     },
@@ -76,10 +72,6 @@ namespace SoulRPG
                             {
                                 Debug.Log("道具");
                                 gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                            },
-                            _ =>
-                            {
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                             }
                         );
                     },
@@ -93,10 +85,6 @@ namespace SoulRPG
                             {
                                 Debug.Log("ステータス");
                                 gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                            },
-                            _ =>
-                            {
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                             }
                         );
                     },
@@ -110,10 +98,6 @@ namespace SoulRPG
                             {
                                 Debug.Log("システム");
                                 gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                            },
-                            _ =>
-                            {
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                             }
                         );
                     },
@@ -145,10 +129,6 @@ namespace SoulRPG
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Weapon1);
                         stateMachine.Change(StateSelectWeaponAsync);
                         gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                    },
-                    _ =>
-                    {
-                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                     });
                 });
             });
@@ -159,10 +139,6 @@ namespace SoulRPG
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Head);
                     stateMachine.Change(StateSelectArmorHeadAsync);
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                },
-                _ =>
-                {
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                 });
             });
             var bodyElement = new Action<HKUIDocument>(element =>
@@ -172,10 +148,6 @@ namespace SoulRPG
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
                     stateMachine.Change(StateSelectArmorBodyAsync);
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                },
-                _ =>
-                {
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                 });
             });
             var armElement = new Action<HKUIDocument>(element =>
@@ -185,10 +157,6 @@ namespace SoulRPG
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Arm);
                     stateMachine.Change(StateSelectArmorArmsAsync);
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                },
-                _ =>
-                {
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                 });
             });
             var legElement = new Action<HKUIDocument>(element =>
@@ -198,10 +166,6 @@ namespace SoulRPG
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Leg);
                     stateMachine.Change(StateSelectArmorLegsAsync);
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                },
-                _ =>
-                {
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                 });
             });
             var accessoryElements = character.Equipment.GetAccessoryIds().Select((x, i) =>
@@ -214,10 +178,6 @@ namespace SoulRPG
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Accessory1);
                         stateMachine.Change(StateSelectAccessoryAsync);
                         gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
-                    },
-                    _ =>
-                    {
-                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
                     });
                 });
             });
@@ -261,11 +221,6 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        },
-                        _ =>
-                        {
-                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
-                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -300,11 +255,6 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        },
-                        _ =>
-                        {
-                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
-                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -335,11 +285,6 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        },
-                        _ =>
-                        {
-                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
-                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -370,11 +315,6 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        },
-                        _ =>
-                        {
-                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
-                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -405,11 +345,6 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        },
-                        _ =>
-                        {
-                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
-                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -440,11 +375,6 @@ namespace SoulRPG
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
-                        },
-                        _ =>
-                        {
-                            gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
-                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
