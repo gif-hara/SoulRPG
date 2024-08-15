@@ -55,6 +55,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BUILTIN_QueueControl: 0
     - _QueueControl: 0
     m_Colors:
     - _Color: {r: 90.509674, g: 90.509674, b: 90.509674, a: 0}

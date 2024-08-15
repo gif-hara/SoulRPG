@@ -71,6 +71,7 @@ namespace SoulRPG
             var tipSize = size / 10;
             var tipsParent = areaDocument.Q<RectTransform>("Area.Tips.Viewport");
             var characterAreaTransform = areaDocument.Q<RectTransform>("Area.Character");
+            var characterRotationObject = areaDocument.Q<RectTransform>("Character.RotationObject");
             var miniMapWallPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall");
             var shadowParent = areaDocument.Q<RectTransform>("Area.Shadow.Viewport");
             characterAreaTransform.sizeDelta = tipSize;
@@ -88,7 +89,7 @@ namespace SoulRPG
             character.DirectionAsObservable()
                 .Subscribe(x =>
                 {
-                    characterAreaTransform.rotation = Quaternion.Euler(0, 0, -x.ToAngle());
+                    characterRotationObject.rotation = Quaternion.Euler(0, 0, -x.ToAngle());
                     gameCameraController.transform.rotation = Quaternion.Euler(0, x.ToAngle(), 0);
                     TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext($"Sfx.Walk.{Random.Range(0, 2)}");
                 })

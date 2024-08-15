@@ -52,9 +52,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
-    - _NoiseScale: 2.8
-    - _ScrollSpeed: 0.6
-    - _WallHeight: 1.5
+    - _NoiseScale: 0.89
+    - _ScrollSpeed: 3
+    - _WallHeight: 1
     m_Colors:
     - _Color3: {r: 0.5949227, g: 0.4660111, b: 0.45741698, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

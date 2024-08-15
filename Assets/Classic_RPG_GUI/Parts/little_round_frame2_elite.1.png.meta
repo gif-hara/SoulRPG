@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: 90ef21589078a9d4aaa982eb1258d332
-AssetOrigin:
-  serializedVersion: 1
-  productId: 160253
-  packageName: Classic RPG GUI
-  packageVersion: 1.1
-  assetPath: Assets/Classic_RPG_GUI/Parts/big_bar_bg.png
-  uploadId: 445012
+guid: 27066f3904a38f641add7387388599ef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -76,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -86,7 +79,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -99,7 +92,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -112,14 +105,14 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9af8f232b4660fc4b8e49b6199fe2ed9
+    spriteID: 60ce03d2e6165a04aa760355526d6578
     internalID: 0
     vertices: []
     indices: 
