@@ -47,9 +47,8 @@ namespace SoulRPG
         public async UniTask WaitForSubmitInputAsync()
         {
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            var tempInputType = inputController.CurrentInputType;
             await UniTask.NextFrame();
-            inputController.ChangeInputType(InputController.InputType.UI);
+            inputController.PushInputType(InputController.InputType.UI);
             inputController.InputActions.UI.Submit.OnPerformedAsObservable()
                 .Take(1)
                 .Subscribe(_ =>
@@ -59,7 +58,7 @@ namespace SoulRPG
             OnRequestSetActiveMessageArrow.OnNext(true);
             await OnSubmitInput.FirstAsync();
             OnRequestSetActiveMessageArrow.OnNext(false);
-            inputController.ChangeInputType(tempInputType);
+            inputController.PopInputType();
         }
     }
 }

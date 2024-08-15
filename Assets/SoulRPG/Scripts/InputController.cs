@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using UnityEngine.Assertions;
+
 namespace SoulRPG
 {
     /// <summary>
@@ -11,6 +14,8 @@ namespace SoulRPG
 
         public InputType CurrentInputType { get; private set; }
 
+        private readonly Stack<InputType> inputTypeStack = new();
+
         public enum InputType
         {
             InGame,
@@ -22,7 +27,24 @@ namespace SoulRPG
             inputActions.Enable();
         }
 
-        public void ChangeInputType(InputType inputType)
+        public void PushInputType(InputType inputType)
+        {
+            inputTypeStack.Push(CurrentInputType);
+            ChangeInputType(inputType);
+        }
+
+        public void PopInputType()
+        {
+            if (inputTypeStack.Count <= 0)
+            {
+                return;
+            }
+            inputTypeStack.Pop();
+            Assert.IsTrue(inputTypeStack.Count > 0);
+            ChangeInputType(inputTypeStack.Peek());
+        }
+
+        private void ChangeInputType(InputType inputType)
         {
             CurrentInputType = inputType;
             switch (inputType)

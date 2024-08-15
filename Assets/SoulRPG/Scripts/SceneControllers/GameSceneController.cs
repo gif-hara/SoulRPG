@@ -80,7 +80,7 @@ namespace SoulRPG.SceneControllers
                 );
             var playerController = new PlayerController();
             var inputController = new InputController();
-            inputController.ChangeInputType(InputController.InputType.InGame);
+            inputController.PushInputType(InputController.InputType.InGame);
             TinyServiceLocator.Register(inputController);
             var dungeonController = new DungeonController(
                 gameMenuBundlePrefab,

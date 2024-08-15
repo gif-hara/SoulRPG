@@ -42,10 +42,10 @@ namespace SoulRPG
         public async UniTask OpenAsync()
         {
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            inputController.ChangeInputType(InputController.InputType.UI);
+            inputController.PushInputType(InputController.InputType.UI);
             stateMachine.Change(StateRootMenuAsync);
             await openCompletionSource.Task;
-            inputController.ChangeInputType(InputController.InputType.InGame);
+            inputController.PopInputType();
         }
 
         private async UniTask StateRootMenuAsync(CancellationToken scope)

@@ -315,11 +315,10 @@ namespace SoulRPG
         private async UniTask InvokeOnSequenceEventAsync(DungeonInstanceFloorData.SequenceEvent sequenceData)
         {
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            var tempInputType = inputController.CurrentInputType;
-            inputController.ChangeInputType(InputController.InputType.UI);
+            inputController.PushInputType(InputController.InputType.UI);
             var container = new Container();
             await new Sequencer(container, sequenceData.Sequences.Sequences).PlayAsync(scope.Token);
-            inputController.ChangeInputType(tempInputType);
+            inputController.PopInputType();
         }
 
         private async UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData.Enemy enemyData)

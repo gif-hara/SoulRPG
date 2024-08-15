@@ -27,7 +27,7 @@ namespace SoulRPG.BattleSystems
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnBeginBattle.OnNext(this);
-            inputController.ChangeInputType(InputController.InputType.UI);
+            inputController.PushInputType(InputController.InputType.UI);
             await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{Enemy.BattleStatus.NameWithTag}が現れた。", "Sfx.EnemyAppearance.0"));
             var firstActor = Player.BattleStatus.Speed > Enemy.BattleStatus.Speed ? Player : Enemy;
             var secondActor = firstActor == Player ? Enemy : Player;
@@ -49,7 +49,7 @@ namespace SoulRPG.BattleSystems
                 Player.Events.OnDeadMessage.OnNext(Unit.Default);
                 await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{Player.BattleStatus.NameWithTag}は倒れてしまった。", "Sfx.Defeat.0"));
             }
-            inputController.ChangeInputType(InputController.InputType.InGame);
+            inputController.PopInputType();
             Player.Dispose();
             Enemy.Dispose();
             cts.Cancel();
