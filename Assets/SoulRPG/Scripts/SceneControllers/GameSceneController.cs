@@ -84,7 +84,8 @@ namespace SoulRPG.SceneControllers
             TinyServiceLocator.Register(inputController);
             var dungeonController = new DungeonController(
                 gameMenuBundlePrefab,
-                explorationView
+                explorationView,
+                destroyCancellationToken
                 );
             TinyServiceLocator.Register(dungeonController);
             dungeonController.Setup(debugDungeonName, player);

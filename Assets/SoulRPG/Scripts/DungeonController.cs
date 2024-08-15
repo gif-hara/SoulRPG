@@ -34,15 +34,17 @@ namespace SoulRPG
 
         private readonly HashSet<Vector2Int> reachedPoints = new();
 
-        private readonly CancellationTokenSource scope = new();
+        private readonly CancellationTokenSource scope;
 
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
-            IExplorationView view
+            IExplorationView view,
+            CancellationToken scope
             )
         {
             this.gameMenuBundlePrefab = gameMenuBundlePrefab;
             this.view = view;
+            this.scope = CancellationTokenSource.CreateLinkedTokenSource(scope);
         }
 
         public void Setup(string dungeonName, Character player)
@@ -313,7 +315,7 @@ namespace SoulRPG
         private async UniTask InvokeOnSequenceEventAsync(DungeonInstanceFloorData.SequenceEvent sequenceData)
         {
             var container = new Container();
-            await new Sequencer(container, sequenceData.Sequences.Sequences).PlayAsync(CancellationToken.None);
+            await new Sequencer(container, sequenceData.Sequences.Sequences).PlayAsync(scope.Token);
         }
 
         private async UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData.Enemy enemyData)
