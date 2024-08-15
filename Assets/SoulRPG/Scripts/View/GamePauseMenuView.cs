@@ -177,11 +177,16 @@ namespace SoulRPG
                 {
                     return new Action<HKUIDocument>(element =>
                     {
-                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
+                        GameListView.ApplyAsSimpleElement(element,
+                        x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -211,11 +216,16 @@ namespace SoulRPG
                 {
                     return new Action<HKUIDocument>(element =>
                     {
-                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
+                        GameListView.ApplyAsSimpleElement(element,
+                        x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -241,11 +251,16 @@ namespace SoulRPG
                 {
                     return new Action<HKUIDocument>(element =>
                     {
-                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
+                        GameListView.ApplyAsSimpleElement(element,
+                        x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -271,11 +286,16 @@ namespace SoulRPG
                 {
                     return new Action<HKUIDocument>(element =>
                     {
-                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
+                        GameListView.ApplyAsSimpleElement(element,
+                        x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -301,11 +321,16 @@ namespace SoulRPG
                 {
                     return new Action<HKUIDocument>(element =>
                     {
-                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
+                        GameListView.ApplyAsSimpleElement(element,
+                        x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
@@ -331,11 +356,16 @@ namespace SoulRPG
                 {
                     return new Action<HKUIDocument>(element =>
                     {
-                        GameListView.ApplyAsSimpleElement(element, x.Key.GetMasterDataItem().Name, _ =>
+                        GameListView.ApplyAsSimpleElement(element,
+                        x.Key.GetMasterDataItem().Name, _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
                             stateMachine.Change(StateSelectEquipmentPartAsync);
+                        },
+                        _ =>
+                        {
+                            gameItemInformationView.Setup(x.Key.GetMasterDataItem());
                         });
                     });
                 });
