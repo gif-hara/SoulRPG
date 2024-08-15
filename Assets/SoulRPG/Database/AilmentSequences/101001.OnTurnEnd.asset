@@ -22,7 +22,7 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u6BD2\u306B\u4FB5\u3055\u308C\u3066\u3044\u308B\u3002"
-        sfxName: 
+        sfxName: Sfx.Message.5
         ignoreIfCharacterDead: 1
     - rid: 7538228103530414682
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
