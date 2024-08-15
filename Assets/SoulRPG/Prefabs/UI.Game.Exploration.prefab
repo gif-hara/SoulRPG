@@ -1421,6 +1421,8 @@ MonoBehaviour:
     overrideName: 
   - document: {fileID: 5204252489954840457}
     overrideName: Area.Shadow.Viewport
+  - document: {fileID: 8101275882166660962, guid: 4485e6d7af01240b2a5aaadf6cc314b3, type: 3}
+    overrideName: 
 --- !u!1 &8855925960892168799
 GameObject:
   m_ObjectHideFlags: 0
