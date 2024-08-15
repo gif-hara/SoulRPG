@@ -1849,6 +1849,13 @@ MonoBehaviour:
         ViewName: Message
         SequenceId: 101001
         Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
+      - Id: 3
+        DungeonName: Dungeon.10101
+        X: 12
+        Y: 6
+        ViewName: Message
+        SequenceId: 101002
+        Sequences: {fileID: 11400000, guid: ac9cc6ffdd07dc846bd602035afc47d4, type: 2}
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
