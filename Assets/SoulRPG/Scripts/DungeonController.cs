@@ -352,8 +352,8 @@ namespace SoulRPG
         {
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, itemData.LifeScope.Token);
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            var message = $"{inputController.InputActions.InGame.Interact.GetTag()}アイテムを拾う";
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(
+                (() => $"{inputController.InputActions.InGame.Interact.GetTag()}アイテムを拾う", scope.Token));
             return UniTask.CompletedTask;
         }
 
@@ -361,8 +361,8 @@ namespace SoulRPG
         {
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, savePointData.LifeScope.Token);
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            var message = $"{inputController.InputActions.InGame.Interact.GetTag()}休憩する";
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(
+                (() => $"{inputController.InputActions.InGame.Interact.GetTag()}休憩する", scope.Token));
             return UniTask.CompletedTask;
         }
 
@@ -370,8 +370,8 @@ namespace SoulRPG
         {
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, sequenceData.LifeScope.Token);
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            var message = $"{inputController.InputActions.InGame.Interact.GetTag()}{sequenceData.PromptMessage}";
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(
+                (() => $"{inputController.InputActions.InGame.Interact.GetTag()}{sequenceData.PromptMessage}", scope.Token));
             return UniTask.CompletedTask;
         }
 
@@ -383,8 +383,8 @@ namespace SoulRPG
             }
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token);
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            var message = $"{inputController.InputActions.InGame.Interact.GetTag()}開ける";
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(
+                (() => $"{inputController.InputActions.InGame.Interact.GetTag()}開ける", scope.Token));
             return UniTask.CompletedTask;
         }
 
@@ -437,6 +437,8 @@ namespace SoulRPG
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
             var sequences = gameRule.SequenceDatabase.Get("Battle.Begin.0");
             var container = new Container();
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            inputController.PushInputType(InputController.InputType.UI);
             await new Sequencer(container, sequences.Sequences).PlayAsync(scope.Token);
             BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
             var gameEnemyView = new GameEnemyView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Enemy"), scope.Token);
@@ -457,6 +459,7 @@ namespace SoulRPG
                 character.InstanceStatus.FullRecovery();
                 TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("どうやら安全な場所に移動されたようだ", "Sfx.Message.0"));
             }
+            inputController.PopInputType();
             scope.Cancel();
             scope.Dispose();
             return battleResult;
