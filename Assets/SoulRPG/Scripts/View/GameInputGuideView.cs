@@ -22,10 +22,14 @@ namespace SoulRPG
             });
         }
 
-        public void Open(string message)
+        public void Open(string message, CancellationToken scope)
         {
             document.gameObject.SetActive(true);
             document.Q<TMP_Text>("Message").text = message;
+            scope.Register(() =>
+            {
+                document.gameObject.SetActive(false);
+            });
         }
     }
 }
