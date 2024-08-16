@@ -36,6 +36,8 @@ namespace SoulRPG
 
         private readonly CancellationTokenSource scope;
 
+        private CancellationTokenSource enterScope;
+
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
             IExplorationView view,
@@ -183,12 +185,15 @@ namespace SoulRPG
 
         public UniTask EnterAsync(Character character)
         {
+            enterScope?.Cancel();
+            enterScope?.Dispose();
+            enterScope = new CancellationTokenSource();
             AddReachedPoint(character);
             if (FloorDatabase.TryGetValue(character.Position, out var floorData))
             {
                 return floorData switch
                 {
-                    DungeonInstanceFloorData.Enemy enemyData => InvokeOnEnemyAsync(character, enemyData),
+                    DungeonInstanceFloorData.Enemy enemyData => OnEnterEnemyAsync(character, enemyData),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -205,9 +210,9 @@ namespace SoulRPG
             {
                 return floorData switch
                 {
-                    DungeonInstanceFloorData.Item itemData => InvokeOnItemAsync(character, itemData),
-                    DungeonInstanceFloorData.SavePoint => InvokeOnSavePointAsync(character),
-                    DungeonInstanceFloorData.SequenceEvent messageData => InvokeOnSequenceEventAsync(messageData),
+                    DungeonInstanceFloorData.Item itemData => OnInteractItemAsync(character, itemData),
+                    DungeonInstanceFloorData.SavePoint => OnInteractSavePointAsync(character),
+                    DungeonInstanceFloorData.SequenceEvent messageData => OnInteractSequenceEventAsync(messageData),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -215,7 +220,7 @@ namespace SoulRPG
             {
                 return wallEvent.EventType switch
                 {
-                    "Door" => InvokeOnDoorAsync(character, wallEvent),
+                    "Door" => OnInteractDoorAsync(character, wallEvent),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -277,7 +282,7 @@ namespace SoulRPG
             return reachedPoints.Contains(position);
         }
 
-        private async UniTask InvokeOnItemAsync(Character character, DungeonInstanceFloorData.Item itemData)
+        private async UniTask OnInteractItemAsync(Character character, DungeonInstanceFloorData.Item itemData)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAcquiredFloorData.OnNext(itemData);
@@ -302,7 +307,7 @@ namespace SoulRPG
             }
         }
 
-        private async UniTask InvokeOnSavePointAsync(Character character)
+        private async UniTask OnInteractSavePointAsync(Character character)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new("ここはセーブポイントのようだ。一休みしよう。", "Sfx.Message.0"));
@@ -312,7 +317,7 @@ namespace SoulRPG
             await view.OpenAsync();
         }
 
-        private async UniTask InvokeOnSequenceEventAsync(DungeonInstanceFloorData.SequenceEvent sequenceData)
+        private async UniTask OnInteractSequenceEventAsync(DungeonInstanceFloorData.SequenceEvent sequenceData)
         {
             var inputController = TinyServiceLocator.Resolve<InputController>();
             inputController.PushInputType(InputController.InputType.UI);
@@ -321,7 +326,7 @@ namespace SoulRPG
             inputController.PopInputType();
         }
 
-        private async UniTask InvokeOnEnemyAsync(Character character, DungeonInstanceFloorData.Enemy enemyData)
+        private async UniTask OnEnterEnemyAsync(Character character, DungeonInstanceFloorData.Enemy enemyData)
         {
             var result = await BeginBattleAsync(character, enemyData.EnemyId.GetMasterDataEnemy());
             if (result == Define.BattleResult.PlayerWin)
@@ -330,7 +335,7 @@ namespace SoulRPG
             }
         }
 
-        private async UniTask InvokeOnDoorAsync(Character character, DungeonInstanceWallData wallEvent)
+        private async UniTask OnInteractDoorAsync(Character character, DungeonInstanceWallData wallEvent)
         {
             var isPositiveAccess = wallEvent.IsPositiveAccess(character.Direction);
             var condition = isPositiveAccess ? wallEvent.PositiveSideCondition : wallEvent.NegativeSideCondition;
