@@ -194,6 +194,7 @@ namespace SoulRPG
                 return floorData switch
                 {
                     DungeonInstanceFloorData.Enemy enemyData => OnEnterEnemyAsync(character, enemyData),
+                    DungeonInstanceFloorData.Item itemData => OnEnterItemAsync(itemData),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -286,7 +287,7 @@ namespace SoulRPG
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAcquiredFloorData.OnNext(itemData);
-            FloorDatabase.Remove(character.Position);
+            RemoveFloorData(character.Position);
             foreach (var (item, count) in itemData.Items)
             {
                 character.Inventory.Add(item.Id, count);
@@ -333,6 +334,13 @@ namespace SoulRPG
             {
                 TinyServiceLocator.Resolve<GameEvents>().OnAcquiredFloorData.OnNext(enemyData);
             }
+        }
+
+        private UniTask OnEnterItemAsync(DungeonInstanceFloorData.Item itemData)
+        {
+            var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, itemData.LifeScope.Token);
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(("アイテムを拾う", scope.Token));
+            return UniTask.CompletedTask;
         }
 
         private async UniTask OnInteractDoorAsync(Character character, DungeonInstanceWallData wallEvent)
@@ -395,7 +403,7 @@ namespace SoulRPG
             if (battleResult == Define.BattleResult.PlayerWin)
             {
                 character.InstanceStatus.AddExperience(enemyCharacter.BattleStatus.Experience);
-                FloorDatabase.Remove(character.Position);
+                RemoveFloorData(character.Position);
             }
             else
             {
@@ -406,6 +414,15 @@ namespace SoulRPG
             scope.Cancel();
             scope.Dispose();
             return battleResult;
+        }
+
+        private void RemoveFloorData(Vector2Int position)
+        {
+            if (FloorDatabase.TryGetValue(position, out var floorData))
+            {
+                floorData.OnRemove();
+                FloorDatabase.Remove(position);
+            }
         }
 
 #if DEBUG
