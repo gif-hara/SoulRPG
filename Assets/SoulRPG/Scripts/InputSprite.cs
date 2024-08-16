@@ -18,7 +18,7 @@ namespace HK
             var schemeName = inputScheme.CurrentInputSchemeType switch
             {
                 InputScheme.InputSchemeType.KeyboardAndMouse => "Keyboard&Mouse",
-                InputScheme.InputSchemeType.GamePad => "GamePad",
+                InputScheme.InputSchemeType.GamePad => "Gamepad",
                 _ => "Unknown"
             };
 
