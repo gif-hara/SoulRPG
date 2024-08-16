@@ -54,10 +54,13 @@ namespace SoulRPG
         {
             public ScriptableSequences Sequences { get; }
 
-            public SequenceEvent(Vector2Int position, string viewName, ScriptableSequences sequences)
+            public string PromptMessage { get; }
+
+            public SequenceEvent(Vector2Int position, string viewName, ScriptableSequences sequences, string promptMessage)
                 : base(position, viewName)
             {
                 Sequences = sequences;
+                PromptMessage = promptMessage;
             }
         }
 

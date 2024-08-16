@@ -18,6 +18,10 @@ namespace SoulRPG
             document.gameObject.SetActive(false);
             scope.Register(() =>
             {
+                if (document == null)
+                {
+                    return;
+                }
                 Object.Destroy(document.gameObject);
             });
         }

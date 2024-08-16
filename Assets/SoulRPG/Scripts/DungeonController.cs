@@ -132,7 +132,8 @@ namespace SoulRPG
                 (
                     position,
                     i.ViewName,
-                    i.Sequences
+                    i.Sequences,
+                    i.PromptMessage
                 );
                 AddFloorData(position, floorData);
             }
@@ -195,6 +196,8 @@ namespace SoulRPG
                 {
                     DungeonInstanceFloorData.Enemy enemyData => OnEnterEnemyAsync(character, enemyData),
                     DungeonInstanceFloorData.Item itemData => OnEnterItemAsync(itemData),
+                    DungeonInstanceFloorData.SavePoint savePointData => OnEnterSavePointAsync(savePointData),
+                    DungeonInstanceFloorData.SequenceEvent sequenceData => OnEnterSequenceEventAsync(sequenceData),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -206,6 +209,9 @@ namespace SoulRPG
 
         public UniTask InteractAsync(Character character)
         {
+            enterScope?.Cancel();
+            enterScope?.Dispose();
+            enterScope = null;
             var wallPosition = character.Direction.GetWallPosition(character.Position);
             if (FloorDatabase.TryGetValue(character.Position, out var floorData))
             {
@@ -213,7 +219,7 @@ namespace SoulRPG
                 {
                     DungeonInstanceFloorData.Item itemData => OnInteractItemAsync(character, itemData),
                     DungeonInstanceFloorData.SavePoint => OnInteractSavePointAsync(character),
-                    DungeonInstanceFloorData.SequenceEvent messageData => OnInteractSequenceEventAsync(messageData),
+                    DungeonInstanceFloorData.SequenceEvent messageData => OnInteractSequenceEventAsync(character, messageData),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -316,15 +322,17 @@ namespace SoulRPG
             checkPoint = character.Position;
             var view = new GameSavePointMenuView(gameMenuBundlePrefab, character);
             await view.OpenAsync();
+            EnterAsync(character).Forget();
         }
 
-        private async UniTask OnInteractSequenceEventAsync(DungeonInstanceFloorData.SequenceEvent sequenceData)
+        private async UniTask OnInteractSequenceEventAsync(Character character, DungeonInstanceFloorData.SequenceEvent sequenceData)
         {
             var inputController = TinyServiceLocator.Resolve<InputController>();
             inputController.PushInputType(InputController.InputType.UI);
             var container = new Container();
             await new Sequencer(container, sequenceData.Sequences.Sequences).PlayAsync(scope.Token);
             inputController.PopInputType();
+            EnterAsync(character).Forget();
         }
 
         private async UniTask OnEnterEnemyAsync(Character character, DungeonInstanceFloorData.Enemy enemyData)
@@ -341,6 +349,24 @@ namespace SoulRPG
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, itemData.LifeScope.Token);
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var message = $"{inputController.InputActions.InGame.Interact.GetTag()}アイテムを拾う";
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
+            return UniTask.CompletedTask;
+        }
+
+        private UniTask OnEnterSavePointAsync(DungeonInstanceFloorData.SavePoint savePointData)
+        {
+            var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, savePointData.LifeScope.Token);
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            var message = $"{inputController.InputActions.InGame.Interact.GetTag()}休憩する";
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
+            return UniTask.CompletedTask;
+        }
+
+        private UniTask OnEnterSequenceEventAsync(DungeonInstanceFloorData.SequenceEvent sequenceData)
+        {
+            var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, sequenceData.LifeScope.Token);
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            var message = $"{inputController.InputActions.InGame.Interact.GetTag()}{sequenceData.PromptMessage}";
             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
             return UniTask.CompletedTask;
         }
