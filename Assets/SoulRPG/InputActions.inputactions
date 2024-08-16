@@ -18,7 +18,7 @@
                     "name": "Shift",
                     "type": "Value",
                     "id": "f4f1721d-2ec0-4ac0-aeb7-e257c05de594",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
