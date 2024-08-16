@@ -339,7 +339,9 @@ namespace SoulRPG
         private UniTask OnEnterItemAsync(DungeonInstanceFloorData.Item itemData)
         {
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, itemData.LifeScope.Token);
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(("アイテムを拾う", scope.Token));
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            var message = $"{inputController.InputActions.InGame.Interact.GetTag()}アイテムを拾う";
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
             return UniTask.CompletedTask;
         }
 
