@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
@@ -31,6 +32,8 @@ namespace SoulRPG
         public readonly Subject<BattleSystem> OnBeginBattle = new();
 
         public readonly Subject<Sprite> OnRequestChangeEnemySprite = new();
+
+        public readonly Subject<(string message, CancellationToken scope)> OnRequestShowInputGuideCenter = new();
 
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();
