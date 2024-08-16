@@ -79,6 +79,7 @@ namespace SoulRPG.SceneControllers
                 player
                 );
             var playerController = new PlayerController();
+            TinyServiceLocator.Register(new InputScheme(destroyCancellationToken));
             var inputController = new InputController();
             inputController.PushInputType(InputController.InputType.InGame);
             TinyServiceLocator.Register(inputController);
