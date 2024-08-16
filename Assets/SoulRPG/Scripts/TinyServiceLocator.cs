@@ -59,9 +59,19 @@ namespace HK
             RegisterAsync(service).Forget();
         }
 
+        public static void Register<T>(T servive, CancellationToken cancellationToken)
+        {
+            RegisterAsync(servive, cancellationToken).Forget();
+        }
+
         public static void Register<T>(string name, T service)
         {
             RegisterAsync(name, service).Forget();
+        }
+
+        public static void Register<T>(string name, T service, CancellationToken cancellationToken)
+        {
+            RegisterAsync(name, service, cancellationToken).Forget();
         }
 
         public static T Resolve<T>()
