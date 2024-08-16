@@ -30,6 +30,11 @@ namespace SoulRPG
             });
         }
 
+        public UniTask BeginAnimationAsync(string animationName)
+        {
+            return document.Q<HKUIDocument>("Sequences").Q<SequenceMonobehaviour>(animationName).PlayAsync();
+        }
+
         public void Open(MasterData.Enemy masterDataEnemy, BattleCharacter enemy, CancellationToken scope)
         {
             document.gameObject.SetActive(true);
