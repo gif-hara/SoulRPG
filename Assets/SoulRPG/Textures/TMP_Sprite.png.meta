@@ -147,11 +147,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DualShockGamepad-
+      name: DualShockGamepad-buttonSouth
       rect:
         serializedVersion: 2
         x: 0
-        y: 1792
+        y: 1794
         width: 128
         height: 128
       alignment: 0
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TMP_Sprite_2
+      name: XInputController-buttonSouth
       rect:
         serializedVersion: 2
         x: 0
@@ -189,7 +189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TMP_Sprite_3
+      name: SwitchProController-buttonSouth
       rect:
         serializedVersion: 2
         x: 0
@@ -220,10 +220,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DualShockGamepad-: 1255463246
+      DualShockGamepad-buttonSouth: 1255463246
       Keyboard-enter: 1191674108
-      TMP_Sprite_2: -348098766
-      TMP_Sprite_3: -2039786858
+      SwitchProController-buttonSouth: -2039786858
+      XInputController-buttonSouth: -348098766
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
