@@ -65,5 +65,10 @@ namespace HK
 
             return $"<sprite=UnknownTag schemeName:{schemeName} action:{action.name}>";
         }
+
+        public static string GetTag(InputAction action)
+        {
+            return GetTag(action, TinyServiceLocator.Resolve<InputScheme>());
+        }
     }
 }
