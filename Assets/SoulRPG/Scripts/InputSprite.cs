@@ -47,10 +47,6 @@ namespace HK
                         }
                     }
 
-                    switch (control.device)
-                    {
-                    }
-
                     var deviceIconGroup = control.device switch
                     {
                         Keyboard => "Keyboard",
