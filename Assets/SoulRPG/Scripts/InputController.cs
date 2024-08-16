@@ -13,8 +13,6 @@ namespace SoulRPG
 
         public InputActions InputActions => inputActions;
 
-        public InputType CurrentInputType { get; private set; }
-
         private readonly Stack<InputType> inputTypeStack = new();
 
         public enum InputType
@@ -47,7 +45,6 @@ namespace SoulRPG
 
         private void ChangeInputType(InputType inputType)
         {
-            CurrentInputType = inputType;
             switch (inputType)
             {
                 case InputType.InGame:
