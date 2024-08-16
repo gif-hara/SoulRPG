@@ -48,6 +48,7 @@ namespace SoulRPG
                         {
                             var direction = velocity.ToDirection();
                             player.Direction = player.Direction.Rotate(direction);
+                            dungeonController.EnterAsync(player).Forget();
                         }
                     }
                 })
