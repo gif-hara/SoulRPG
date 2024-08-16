@@ -1,12 +1,8 @@
-using System.Linq;
 using System.Threading;
 using R3;
-using TMPro;
+using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.DualShock;
 using UnityEngine.InputSystem.LowLevel;
-using UnityEngine.InputSystem.Switch;
-using UnityEngine.InputSystem.XInput;
 
 namespace HK
 {
@@ -28,6 +24,14 @@ namespace HK
         private readonly ReactiveProperty<Gamepad> gamepadReactiveProperty = new();
         public ReadOnlyReactiveProperty<Gamepad> GamepadReactiveProperty => gamepadReactiveProperty;
         public Gamepad CurrentGamepad => gamepadReactiveProperty.Value;
+
+        public Observable<Unit> AnyChangedAsObservable()
+        {
+            return Observable.Merge(
+                inputSchemeTypeReactiveProperty.AsUnitObservable(),
+                gamepadReactiveProperty.AsUnitObservable()
+                );
+        }
 
         public InputScheme(CancellationToken scope)
         {

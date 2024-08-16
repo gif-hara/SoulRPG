@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace SoulRPG
 
         public readonly Subject<Sprite> OnRequestChangeEnemySprite = new();
 
-        public readonly Subject<(string message, CancellationToken scope)> OnRequestShowInputGuideCenter = new();
+        public readonly Subject<(Func<string> messageSelector, CancellationToken scope)> OnRequestShowInputGuideCenter = new();
 
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();

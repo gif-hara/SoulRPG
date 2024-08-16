@@ -124,7 +124,7 @@ namespace SoulRPG.SceneControllers
             gameEvents.OnRequestShowInputGuideCenter
                 .Subscribe(x =>
                 {
-                    inputGuideCenter.Open(x.message, x.scope);
+                    inputGuideCenter.Open(x.messageSelector, x.scope);
                 })
                 .RegisterTo(destroyCancellationToken);
             gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");

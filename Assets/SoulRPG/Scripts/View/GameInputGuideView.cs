@@ -1,7 +1,8 @@
+using System;
 using System.Threading;
 using HK;
+using R3;
 using TMPro;
-using UnityEngine;
 
 namespace SoulRPG
 {
@@ -14,7 +15,7 @@ namespace SoulRPG
 
         public GameInputGuideView(HKUIDocument documentPrefab, CancellationToken scope)
         {
-            document = Object.Instantiate(documentPrefab);
+            document = UnityEngine.Object.Instantiate(documentPrefab);
             document.gameObject.SetActive(false);
             scope.Register(() =>
             {
@@ -22,14 +23,19 @@ namespace SoulRPG
                 {
                     return;
                 }
-                Object.Destroy(document.gameObject);
+                UnityEngine.Object.Destroy(document.gameObject);
             });
         }
 
-        public void Open(string message, CancellationToken scope)
+        public void Open(Func<string> messageSelector, CancellationToken scope)
         {
             document.gameObject.SetActive(true);
-            document.Q<TMP_Text>("Message").text = message;
+            TinyServiceLocator.Resolve<InputScheme>().AnyChangedAsObservable()
+                .Subscribe(_ =>
+                {
+                    document.Q<TMP_Text>("Message").text = messageSelector();
+                })
+                .RegisterTo(scope);
             scope.Register(() =>
             {
                 document.gameObject.SetActive(false);

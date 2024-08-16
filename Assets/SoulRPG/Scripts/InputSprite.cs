@@ -1,9 +1,10 @@
 using System.Linq;
 using R3;
-using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.DualShock;
+#if !UNITY_WEBGL
 using UnityEngine.InputSystem.Switch;
+#endif
 using UnityEngine.InputSystem.XInput;
 
 namespace HK
@@ -26,6 +27,10 @@ namespace HK
 
             foreach (var binding in action.bindings)
             {
+                if (!bindingMask.Matches(binding))
+                {
+                    continue;
+                }
                 var path = binding.effectivePath;
                 var matchedControls = action.controls.Where(x => InputControlPath.Matches(path, x));
                 foreach (var control in matchedControls)
@@ -42,14 +47,20 @@ namespace HK
                         }
                     }
 
+                    switch (control.device)
+                    {
+                    }
+
                     var deviceIconGroup = control.device switch
                     {
                         Keyboard => "Keyboard",
                         Mouse => "Mouse",
                         XInputController => "XInputController",
                         DualShockGamepad => "DualShockGamepad",
+#if !UNITY_WEBGL
                         SwitchProControllerHID => "SwitchProController",
-                        _ => "Unknown"
+#endif
+                        _ => "DualShockGamepad"
                     };
                     var controlPathContent = control.path.Substring(control.device.name.Length + 2);
                     return $"<sprite name={deviceIconGroup}-{controlPathContent}>";
