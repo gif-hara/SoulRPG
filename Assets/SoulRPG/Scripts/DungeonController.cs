@@ -432,13 +432,12 @@ namespace SoulRPG
         private async UniTask<Define.BattleResult> BeginBattleAsync(Character character, MasterData.Enemy masterDataEnemy)
         {
             var scope = new CancellationTokenSource();
+            TinyServiceLocator.Resolve<InputController>().PushInputType(InputController.InputType.UI, scope.Token);
             var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
             var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
             var sequences = gameRule.SequenceDatabase.Get("Battle.Begin.0");
             var container = new Container();
-            var inputController = TinyServiceLocator.Resolve<InputController>();
-            inputController.PushInputType(InputController.InputType.UI);
             await new Sequencer(container, sequences.Sequences).PlayAsync(scope.Token);
             BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
             var gameEnemyView = new GameEnemyView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Enemy"), scope.Token);
@@ -459,7 +458,6 @@ namespace SoulRPG
                 character.InstanceStatus.FullRecovery();
                 TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("どうやら安全な場所に移動されたようだ", "Sfx.Message.0"));
             }
-            inputController.PopInputType();
             scope.Cancel();
             scope.Dispose();
             return battleResult;
