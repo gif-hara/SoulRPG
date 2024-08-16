@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnitySequencerSystem;
 
@@ -13,10 +14,18 @@ namespace SoulRPG
 
         public string ViewName { get; }
 
+        public CancellationTokenSource LifeScope { get; } = new();
+
         protected DungeonInstanceFloorData(Vector2Int position, string viewName)
         {
             Position = position;
             ViewName = viewName;
+        }
+
+        public void OnRemove()
+        {
+            LifeScope.Cancel();
+            LifeScope.Dispose();
         }
 
         public sealed class Item : DungeonInstanceFloorData
