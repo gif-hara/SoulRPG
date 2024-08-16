@@ -12,9 +12,27 @@ namespace SoulRPG
     /// </summary>
     public sealed class GameEnemyView
     {
-        public static async UniTask OpenAsync(HKUIDocument documentPrefab, MasterData.Enemy masterDataEnemy, BattleCharacter enemy, CancellationToken scope)
+        private readonly HKUIDocument document;
+
+        public GameEnemyView(HKUIDocument documentPrefab, CancellationToken scope)
         {
-            var document = Object.Instantiate(documentPrefab);
+            TinyServiceLocator.Register(this);
+            document = Object.Instantiate(documentPrefab);
+            document.gameObject.SetActive(false);
+            scope.Register(() =>
+            {
+                TinyServiceLocator.Remove<GameEnemyView>();
+                if (document == null)
+                {
+                    return;
+                }
+                Object.Destroy(document.gameObject);
+            });
+        }
+
+        public void Open(MasterData.Enemy masterDataEnemy, BattleCharacter enemy, CancellationToken scope)
+        {
+            document.gameObject.SetActive(true);
             var sequenceDocument = document.Q<HKUIDocument>("Sequences");
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             document.Q<Image>("Image").sprite = masterDataEnemy.Thumbnail;
@@ -36,8 +54,6 @@ namespace SoulRPG
                     document.Q<Image>("Image").sprite = sprite;
                 })
                 .RegisterTo(scope);
-            await scope.WaitUntilCanceled();
-            Object.Destroy(document.gameObject);
         }
     }
 }
