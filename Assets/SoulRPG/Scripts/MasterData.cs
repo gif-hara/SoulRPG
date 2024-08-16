@@ -814,6 +814,8 @@ namespace SoulRPG
 
             public int SequenceId;
 
+            public string PromptMessage;
+
             public ScriptableSequences Sequences;
 
             [Serializable]
