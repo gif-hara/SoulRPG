@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -30,6 +31,12 @@ namespace SoulRPG
         {
             inputTypeStack.Push(inputType);
             ChangeInputType(inputType);
+        }
+
+        public void PushInputType(InputType inputType, CancellationToken scope)
+        {
+            PushInputType(inputType);
+            scope.Register(() => PopInputType());
         }
 
         public void PopInputType()
