@@ -201,6 +201,10 @@ namespace SoulRPG
                     _ => UniTask.CompletedTask,
                 };
             }
+            else if (WallDatabase.TryGetValue(character.Direction.GetWallPosition(character.Position), out var wallEvent))
+            {
+                return OnEnterDoorAsync(wallEvent);
+            }
             else
             {
                 return UniTask.CompletedTask;
@@ -367,6 +371,19 @@ namespace SoulRPG
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, sequenceData.LifeScope.Token);
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var message = $"{inputController.InputActions.InGame.Interact.GetTag()}{sequenceData.PromptMessage}";
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
+            return UniTask.CompletedTask;
+        }
+
+        private UniTask OnEnterDoorAsync(DungeonInstanceWallData wallEvent)
+        {
+            if (wallEvent.IsOpen)
+            {
+                return UniTask.CompletedTask;
+            }
+            var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token);
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            var message = $"{inputController.InputActions.InGame.Interact.GetTag()}開ける";
             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((message, scope.Token));
             return UniTask.CompletedTask;
         }
