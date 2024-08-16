@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace SoulRPG
@@ -29,7 +30,7 @@ namespace SoulRPG
 
         public void PushInputType(InputType inputType)
         {
-            inputTypeStack.Push(CurrentInputType);
+            inputTypeStack.Push(inputType);
             ChangeInputType(inputType);
         }
 
