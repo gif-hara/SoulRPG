@@ -26,11 +26,6 @@ namespace HK
 
             foreach (var binding in action.bindings)
             {
-                if (!bindingMask.Matches(binding))
-                {
-                    continue;
-                }
-
                 var path = binding.effectivePath;
                 var matchedControls = action.controls.Where(x => InputControlPath.Matches(path, x));
                 foreach (var control in matchedControls)
@@ -57,9 +52,7 @@ namespace HK
                         _ => "Unknown"
                     };
                     var controlPathContent = control.path.Substring(control.device.name.Length + 2);
-                    var iconName = $"{deviceIconGroup}-{controlPathContent}";
-                    var spriteIndex = TMP_Settings.GetSpriteAsset().GetSpriteIndexFromName(iconName);
-                    return spriteIndex >= 0 ? $"<sprite={spriteIndex}>" : $"<sprite=UnknownTag iconName:{iconName}>";
+                    return $"<sprite name={deviceIconGroup}-{controlPathContent}>";
                 }
             }
 
