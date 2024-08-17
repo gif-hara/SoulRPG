@@ -31,19 +31,23 @@ namespace SoulRPG
 
         public BattleCharacterEvents Events { get; } = new();
 
-        public BattleCharacter(Character character, Define.AllyType allyType, IBattleAI battleAI)
+        private readonly BattleCharacterSequences sequences;
+
+        public BattleCharacter(Character character, Define.AllyType allyType, IBattleAI battleAI, BattleCharacterSequences sequences)
         {
             BattleStatus = new CharacterBattleStatus(character, allyType);
             Equipment = character.Equipment;
             this.battleAI = battleAI;
             AilmentController = new AilmentController(this);
+            this.sequences = sequences;
         }
 
-        public BattleCharacter(CharacterBattleStatus battleStatus, IBattleAI battleAI)
+        public BattleCharacter(CharacterBattleStatus battleStatus, IBattleAI battleAI, BattleCharacterSequences sequences)
         {
             BattleStatus = battleStatus;
             this.battleAI = battleAI;
             AilmentController = new AilmentController(this);
+            this.sequences = sequences;
         }
 
         public async UniTask<ICommandInvoker> ThinkAsync()
