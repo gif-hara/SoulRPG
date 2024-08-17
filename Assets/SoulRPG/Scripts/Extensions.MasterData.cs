@@ -87,7 +87,7 @@ namespace SoulRPG
 
         public static BattleCharacter CreateBattleCharacter(this MasterData.Enemy self)
         {
-            return new BattleCharacter(new CharacterBattleStatus(self), new Enemy(self.AISequences));
+            return new BattleCharacter(new CharacterBattleStatus(self), new Enemy(self.AISequences), self.BattleCharacterSequences);
         }
     }
 }
