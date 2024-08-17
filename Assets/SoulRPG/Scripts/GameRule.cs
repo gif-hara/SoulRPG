@@ -56,6 +56,10 @@ namespace SoulRPG
         private SequenceData.DictionaryList sequenceDatabase;
         public SequenceData.DictionaryList SequenceDatabase => sequenceDatabase;
 
+        [SerializeField]
+        private BattleCharacterSequences playerBattleCharacterSequences;
+        public BattleCharacterSequences PlayerBattleCharacterSequences => playerBattleCharacterSequences;
+
         [Serializable]
         public class ExperienceTableData
         {
