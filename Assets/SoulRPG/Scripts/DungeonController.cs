@@ -445,6 +445,7 @@ namespace SoulRPG
             var container = new Container();
             await new Sequencer(container, sequences.Sequences).PlayAsync(scope.Token);
             BehaviourPointView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.BehaviourPoint"), playerCharacter, scope.Token).Forget();
+            MagicCountView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.MagicCount"), playerCharacter, scope.Token).Forget();
             var gameEnemyView = new GameEnemyView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Enemy"), scope.Token);
             gameEnemyView.Open(masterDataEnemy, enemyCharacter, scope.Token);
             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext($"Bgm.Battle.{masterDataEnemy.BattleBgmId}");
