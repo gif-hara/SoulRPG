@@ -170,7 +170,7 @@ MonoBehaviour:
   gameMenuBundlePrefab: {fileID: 6138824259176453115, guid: d58e9662b67901746a479003070fb56f, type: 3}
   dungeonDocumentPrefab: {fileID: 4041864904137408651, guid: 3ac1c3ec8df76f547abe7a635ad62857, type: 3}
   commandDocumentPrefab: {fileID: 3672498495014125879, guid: 65d5d3d49490d8c47806f799c59bc1a4, type: 3}
-  debugDungeonName: Dungeon.10101
+  debugDungeonName: Dungeon.Test
   debugPosition: {x: 0, y: 0}
   isUseDebugPosition: 0
   debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"

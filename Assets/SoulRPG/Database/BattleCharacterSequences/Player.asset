@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   onTakeDamage: {fileID: 11400000, guid: a13e5a2ac9eaa764592d1abc3b10ec33, type: 2}
+  onDeadMessage: {fileID: 11400000, guid: 154913e025db7a64da97f62cb575ab4c, type: 2}

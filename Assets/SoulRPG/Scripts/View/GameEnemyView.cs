@@ -41,12 +41,6 @@ namespace SoulRPG
             var sequenceDocument = document.Q<HKUIDocument>("Sequences");
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             document.Q<Image>("Image").sprite = masterDataEnemy.Thumbnail;
-            enemy.Events.OnDeadMessage
-                .Subscribe(_ =>
-                {
-                    sequenceDocument.Q<SequenceMonobehaviour>("Animation.OnDeadMessage").PlayAsync().Forget();
-                })
-                .RegisterTo(scope);
             gameEvents.OnRequestChangeEnemySprite
                 .Subscribe(sprite =>
                 {

@@ -173,5 +173,10 @@ namespace SoulRPG
             Events.OnTakeDamage.OnNext(damage);
             return sequences.PlayOnTakeDamageAsync(scope.Token);
         }
+
+        public UniTask OnDeadMessageAsync()
+        {
+            return sequences.PlayOnDeadMessageAsync(this, scope.Token);
+        }
     }
 }

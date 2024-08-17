@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Enemy.0
   m_EditorClassIdentifier: 
   onTakeDamage: {fileID: 11400000, guid: cac4da8cfac73d943b04d4171ba35bb7, type: 2}
+  onDeadMessage: {fileID: 11400000, guid: 28b92f44e0dfcbb46847a696279f9159, type: 2}
