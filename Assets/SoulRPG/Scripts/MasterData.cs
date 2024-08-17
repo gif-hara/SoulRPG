@@ -229,6 +229,11 @@ namespace SoulRPG
                     Debug.LogWarning($"Not found EnemyAI {i.Id}");
                     i.AISequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/EnemyAI/0.asset");
                 }
+                i.BattleCharacterSequences = AssetDatabase.LoadAssetAtPath<BattleCharacterSequences>($"Assets/SoulRPG/Database/BattleCharacterSequences/Enemy.{i.SequencesId}.asset");
+                if (i.BattleCharacterSequences == null)
+                {
+                    Debug.LogWarning($"Not found EnemyBattleCharacter {i.SequencesId}");
+                }
             }
             foreach (var i in items.List)
             {
@@ -591,9 +596,13 @@ namespace SoulRPG
 
             public string BattleBgmId;
 
+            public string SequencesId;
+
             public Sprite Thumbnail;
 
             public ScriptableSequences AISequences;
+
+            public BattleCharacterSequences BattleCharacterSequences;
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Enemy>
