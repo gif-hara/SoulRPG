@@ -27,7 +27,8 @@ MonoBehaviour:
         targetType: 0
         statusTypes: 00000000
         buffName: Skill.101002
-        rate: 1.1
+        rateSelector:
+          rid: 9047573724747792462
         battleCharacterEvaluator:
           rid: -2
     - rid: 6411493576093728937
@@ -45,3 +46,7 @@ MonoBehaviour:
         needBehaviourPoint: 0
         needStamina: 0
         identifier: 
+    - rid: 9047573724747792462
+      type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1.1

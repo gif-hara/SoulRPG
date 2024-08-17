@@ -26,7 +26,8 @@ MonoBehaviour:
         targetType: 0
         statusTypes: 0000000001000000
         buffName: Ailment.101008
-        rate: 0.8
+        rateSelector:
+          rid: 9047573724747792457
         battleCharacterEvaluator:
           rid: -2
     - rid: 7538228103530414196
@@ -35,3 +36,7 @@ MonoBehaviour:
         format: "{Actor}\u306F\u8EAB\u4F53\u304C\u75FA\u308C\u3066\u3057\u307E\u3063\u305F\u3002"
         sfxName: Sfx.Message.5
         ignoreIfCharacterDead: 1
+    - rid: 9047573724747792457
+      type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 0.8

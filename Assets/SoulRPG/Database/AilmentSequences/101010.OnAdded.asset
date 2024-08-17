@@ -27,7 +27,8 @@ MonoBehaviour:
         targetType: 0
         statusTypes: 020000000300000004000000050000000600000007000000
         buffName: Ailment.101010
-        rate: 0.15
+        rateSelector:
+          rid: 9047573724747792460
         battleCharacterEvaluator:
           rid: -2
     - rid: 7538228103530414196
@@ -42,6 +43,15 @@ MonoBehaviour:
         targetType: 0
         statusTypes: 0000000001000000
         buffName: Ailment.101010
-        rate: 1.2
+        rateSelector:
+          rid: 9047573724747792459
         battleCharacterEvaluator:
           rid: -2
+    - rid: 9047573724747792459
+      type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1.2
+    - rid: 9047573724747792460
+      type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 0.15

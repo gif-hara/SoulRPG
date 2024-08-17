@@ -23,8 +23,8 @@ namespace SoulRPG
         [SerializeField]
         private string buffName;
 
-        [SerializeField]
-        private float rate;
+        [SerializeReference, SubclassSelector]
+        private IBattleCharacterEvaluatorFloat rateSelector;
 
         [SerializeReference, SubclassSelector]
         private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
@@ -37,7 +37,7 @@ namespace SoulRPG
                 battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
-                t.StatusBuffController.Add(statusTypes, buffName, rate);
+                t.StatusBuffController.Add(statusTypes, buffName, rateSelector.Evaluate(actor, target));
             }
             return UniTask.CompletedTask;
         }
