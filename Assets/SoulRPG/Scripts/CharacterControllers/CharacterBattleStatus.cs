@@ -318,7 +318,11 @@ namespace SoulRPG
 
         public void AddMagicCount(int value)
         {
-            magicCountReactiveProperty.Value += value;
+            magicCountReactiveProperty.Value = Mathf.Clamp(
+                magicCountReactiveProperty.Value + value,
+                0,
+                TinyServiceLocator.Resolve<GameRule>().MagicCountMax
+            );
         }
 
         public void ResetMagicCount()

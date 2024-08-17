@@ -64,6 +64,10 @@ namespace SoulRPG
         private int behaviourPointMax;
         public int BehaviourPointMax => behaviourPointMax;
 
+        [SerializeField]
+        private int magicCountMax;
+        public int MagicCountMax => magicCountMax;
+
         [Serializable]
         public class ExperienceTableData
         {
