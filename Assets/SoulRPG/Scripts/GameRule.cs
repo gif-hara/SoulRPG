@@ -60,6 +60,10 @@ namespace SoulRPG
         private BattleCharacterSequences playerBattleCharacterSequences;
         public BattleCharacterSequences PlayerBattleCharacterSequences => playerBattleCharacterSequences;
 
+        [SerializeField]
+        private int behaviourPointMax;
+        public int BehaviourPointMax => behaviourPointMax;
+
         [Serializable]
         public class ExperienceTableData
         {

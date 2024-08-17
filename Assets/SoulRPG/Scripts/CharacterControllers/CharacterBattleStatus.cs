@@ -160,8 +160,8 @@ namespace SoulRPG
                 character.Equipment.TotalThunderCutRate,
                 character.GrowthParameter.Speed + character.Equipment.TotalSpeed + character.GrowthParameter.Level,
                 0,
-                3,
-                3,
+                TinyServiceLocator.Resolve<GameRule>().BehaviourPointMax,
+                TinyServiceLocator.Resolve<GameRule>().BehaviourPointMax,
                 character.Attribute,
                 allyType
             )
