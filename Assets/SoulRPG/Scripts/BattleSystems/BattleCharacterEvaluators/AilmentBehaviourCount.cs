@@ -8,7 +8,7 @@ namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
     /// 
     /// </summary>
     [Serializable]
-    public sealed class AilmentBehaviourCount : IBattleCharacterEvaluator
+    public sealed class AilmentBehaviourCount : IBattleCharacterEvaluatorBoolean
     {
         [SerializeField]
         private Define.TargetType targetType;

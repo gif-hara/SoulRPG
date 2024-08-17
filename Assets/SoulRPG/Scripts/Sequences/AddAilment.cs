@@ -23,7 +23,7 @@ namespace SoulRPG
         private int turnCount;
 
         [SerializeReference, SubclassSelector]
-        private IBattleCharacterEvaluator battleCharacterEvaluator;
+        private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {

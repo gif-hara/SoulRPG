@@ -7,7 +7,7 @@ namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
     /// 
     /// </summary>
     [Serializable]
-    public sealed class Random : IBattleCharacterEvaluator
+    public sealed class Random : IBattleCharacterEvaluatorBoolean
     {
         [SerializeField]
         [Range(0, 1)]

@@ -27,7 +27,7 @@ namespace SoulRPG
         private float rate;
 
         [SerializeReference, SubclassSelector]
-        private IBattleCharacterEvaluator battleCharacterEvaluator;
+        private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
 
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {

@@ -18,7 +18,7 @@ namespace SoulRPG
         private Define.TargetType targetType;
 
         [SerializeReference, SubclassSelector]
-        private IBattleCharacterEvaluator battleCharacterEvaluator;
+        private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
 
         [SerializeField]
         private int behaviourPriority;

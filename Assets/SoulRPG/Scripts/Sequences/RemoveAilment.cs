@@ -20,7 +20,7 @@ namespace SoulRPG
         private int masterDataAilmentId;
 
         [SerializeReference, SubclassSelector]
-        private IBattleCharacterEvaluator battleCharacterEvaluator;
+        private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
