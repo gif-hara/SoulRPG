@@ -38,6 +38,8 @@ namespace SoulRPG
                             elements.RemoveAt(elements.Count - 1);
                         }
                     }
+
+                    elementParent.gameObject.SetActive(elements.Count > 0);
                 })
                 .RegisterTo(scope);
 
