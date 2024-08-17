@@ -433,9 +433,14 @@ namespace SoulRPG
         {
             var scope = new CancellationTokenSource();
             TinyServiceLocator.Resolve<InputController>().PushInputType(InputController.InputType.UI, scope.Token);
-            var playerCharacter = new BattleCharacter(character, Define.AllyType.Player, new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")));
-            var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
+            var playerCharacter = new BattleCharacter(
+                character,
+                Define.AllyType.Player,
+                new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")),
+                gameRule.PlayerBattleCharacterSequences
+                );
+            var enemyCharacter = masterDataEnemy.CreateBattleCharacter();
             var sequences = gameRule.SequenceDatabase.Get("Battle.Begin.0");
             var container = new Container();
             await new Sequencer(container, sequences.Sequences).PlayAsync(scope.Token);
