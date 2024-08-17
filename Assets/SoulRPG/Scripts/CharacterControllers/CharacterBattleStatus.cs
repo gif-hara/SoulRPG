@@ -321,6 +321,11 @@ namespace SoulRPG
             magicCountReactiveProperty.Value += value;
         }
 
+        public void ResetMagicCount()
+        {
+            magicCountReactiveProperty.Value = 0;
+        }
+
         public void Dispose()
         {
             scope.Cancel();
