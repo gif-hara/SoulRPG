@@ -33,6 +33,8 @@ namespace SoulRPG
 
         private readonly BattleCharacterSequences sequences;
 
+        private readonly CancellationTokenSource scope = new();
+
         public BattleCharacter(Character character, Define.AllyType allyType, IBattleAI battleAI, BattleCharacterSequences sequences)
         {
             BattleStatus = new CharacterBattleStatus(character, allyType);
@@ -96,6 +98,8 @@ namespace SoulRPG
             BattleStatus.Dispose();
             AilmentController.Dispose();
             battleAI.Dispose();
+            scope.Cancel();
+            scope.Dispose();
         }
 
         public float GetTotalCutRate(Define.AttackAttribute attackAttribute)
@@ -152,21 +156,22 @@ namespace SoulRPG
             this.battleAI = battleAI;
         }
 
-        public void TakeDamage(int damage)
+        public UniTask TakeDamageAsync(int damage)
         {
 #if DEBUG
             var battleDebugData = TinyServiceLocator.Resolve<BattleDebugData>();
             if (BattleStatus.AllyType == Define.AllyType.Player && battleDebugData.IsInvinciblePlayer)
             {
-                return;
+                return UniTask.CompletedTask;
             }
             if (BattleStatus.AllyType == Define.AllyType.Enemy && battleDebugData.IsInvincibleEnemy)
             {
-                return;
+                return UniTask.CompletedTask;
             }
 #endif
             BattleStatus.TakeDamage(damage);
             Events.OnTakeDamage.OnNext(damage);
+            return sequences.PlayOnTakeDamageAsync(scope.Token);
         }
     }
 }
