@@ -88,6 +88,10 @@ namespace SoulRPG
 
         public Define.AllyType AllyType { get; }
 
+        private readonly ReactiveProperty<int> magicCountReactiveProperty = new(0);
+        public ReadOnlyReactiveProperty<int> MagicCountReactiveProperty => magicCountReactiveProperty;
+        public int MagicCount => magicCountReactiveProperty.Value;
+
         public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
         public float HitPointRate => (float)hitPointReactiveProperty.Value / hitPointMaxReactiveProperty.Value;
@@ -310,6 +314,11 @@ namespace SoulRPG
         public bool HasStamina(int needStamina)
         {
             return staminaReactiveProperty.Value >= needStamina;
+        }
+
+        public void AddMagicCount(int value)
+        {
+            magicCountReactiveProperty.Value += value;
         }
 
         public void Dispose()
