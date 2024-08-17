@@ -9,8 +9,8 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    [Serializable]
-    public sealed class BattleCharacterSequences
+    [CreateAssetMenu(menuName = "SoulRPG/BattleCharacterSequences")]
+    public sealed class BattleCharacterSequences : ScriptableObject
     {
         [SerializeField]
         private ScriptableSequences onTakeDamage;
