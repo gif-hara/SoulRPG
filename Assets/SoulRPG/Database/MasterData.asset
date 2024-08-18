@@ -2824,7 +2824,7 @@ MonoBehaviour:
       NeedStamina: 1
       CanRegisterUsedSkills: 1
       Description: "\u81EA\u8EAB\u306E\u9632\u5177\u3092\u5F37\u5316\u3059\u308B\u6280\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9244\u58C1\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: dd04cc594f85f7841ba6de45a026e529, type: 2}
     - Name: "\u9B54\u529B\u306E\u76FE"
       Id: 101037
       NeedBehaviourPoint: 1
@@ -3479,7 +3479,7 @@ MonoBehaviour:
       Name: "\u9244\u58C1"
       Description: "\u92FC\u9244\u306E\u58C1\u306E\u5982\u304D\u529B\u3092\u5F97\u308B\u3002\u30BF\u30FC\u30F3\u958B\u59CB\u6642\u306BGP\u3092\u5F97\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: f3deb686d6141194380c26d7c3ca256f, type: 2}
     - Id: 101015
       Name: "\u9B54\u529B\u306E\u76FE"
       Description: "\u9B54\u529B\u3067\u4F5C\u3089\u308C\u305F\u76FE\u3092\u524D\u65B9\u306B\u5C55\u958B\u3057\u3001\u9B54\u529B\u306E\u30C0\u30E1\u30FC\u30B8\u3092\u5927\u5E45\u306B\u6E1B\u5C11\u3059\u308B\u3002"
