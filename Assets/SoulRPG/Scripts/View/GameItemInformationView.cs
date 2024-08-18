@@ -42,6 +42,7 @@ namespace SoulRPG
 
         public void Setup(MasterData.Item item)
         {
+            SetActiveEmptyArea(false);
             Thumbnail.sprite = item.Thumbnail;
             Name.text = item.Name;
             Description.text = item.Description;
@@ -100,6 +101,17 @@ namespace SoulRPG
             {
                 Debug.Log("Accessory");
             }
+        }
+
+        public void SetupAsEmpty()
+        {
+            SetActiveEmptyArea(true);
+        }
+
+        private void SetActiveEmptyArea(bool isEmpty)
+        {
+            document.Q("Area.Empty").SetActive(isEmpty);
+            document.Q("Viewport").SetActive(!isEmpty);
         }
 
         private void SetupAsArmor(MasterData.Armor armor)

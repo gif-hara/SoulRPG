@@ -195,6 +195,10 @@ namespace SoulRPG
                 listElements,
                 0
             );
+            if (!listElements.Any())
+            {
+                gameItemInformationView.SetupAsEmpty();
+            }
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -230,6 +234,10 @@ namespace SoulRPG
                     });
                 });
             var listDocument = CreateList(listElements, 0);
+            if (!listElements.Any())
+            {
+                gameItemInformationView.SetupAsEmpty();
+            }
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -265,6 +273,10 @@ namespace SoulRPG
                     });
                 });
             var listDocument = CreateList(listElements, 0);
+            if (!listElements.Any())
+            {
+                gameItemInformationView.SetupAsEmpty();
+            }
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -300,6 +312,10 @@ namespace SoulRPG
                     });
                 });
             var listDocument = CreateList(listElements, 0);
+            if (!listElements.Any())
+            {
+                gameItemInformationView.SetupAsEmpty();
+            }
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -335,6 +351,10 @@ namespace SoulRPG
                     });
                 });
             var listDocument = CreateList(listElements, 0);
+            if (!listElements.Any())
+            {
+                gameItemInformationView.SetupAsEmpty();
+            }
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -370,6 +390,10 @@ namespace SoulRPG
                     });
                 });
             var listDocument = CreateList(listElements, 0);
+            if (!listElements.Any())
+            {
+                gameItemInformationView.SetupAsEmpty();
+            }
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
