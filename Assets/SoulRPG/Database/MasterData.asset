@@ -2554,7 +2554,7 @@ MonoBehaviour:
       Skill1: 101001
       Skill2: 101033
       Skill3: 101034
-      Skill4: 101012
+      Skill4: 101035
     - ItemId: 101998
       Strength: 80
       Speed: 0
@@ -2817,7 +2817,7 @@ MonoBehaviour:
       NeedStamina: 1
       CanRegisterUsedSkills: 1
       Description: "\u7D20\u65E9\u3044\u8A60\u5531\u306B\u3088\u308A\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u30AB\u30A6\u30F3\u30C8\u300D\u30921\u84C4\u7A4D\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: bf06a13725236da46bcbf049d13a7c1c, type: 2}
     - Name: "\u9244\u58C1"
       Id: 101036
       NeedBehaviourPoint: 1
