@@ -237,7 +237,7 @@ namespace SoulRPG
                             });
                     });
                 });
-            var listDocument = GameListView.CreateAsCommand(listDocumentPrefab, listElements, 0);
+            var listDocument = GameListView.CreateWithPages(listDocumentPrefab, listElements, 0);
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {
