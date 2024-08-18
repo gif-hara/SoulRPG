@@ -46,7 +46,7 @@ namespace SoulRPG.BattleSystems
 
             async UniTask ProcessActorAction(BattleCharacter actor, BattleCharacter target)
             {
-                await actor.TurnStartAsync();
+                await actor.TurnStartAsync(target);
                 while (!IsBattleEnd() && actor.BattleStatus.CanBehaviour())
                 {
                     var commandInvoker = await actor.ThinkAsync();
