@@ -329,6 +329,11 @@ namespace SoulRPG
             magicCountReactiveProperty.Value = 0;
         }
 
+        public void RecoveryHitPoint(int value)
+        {
+            hitPointReactiveProperty.Value = Mathf.Min(hitPointMaxReactiveProperty.Value, hitPointReactiveProperty.Value + value);
+        }
+
         public void Dispose()
         {
             scope.Cancel();
