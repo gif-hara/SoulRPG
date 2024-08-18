@@ -164,5 +164,19 @@ namespace SoulRPG
                 _ => throw new System.ArgumentOutOfRangeException()
             };
         }
+
+        public static string ToUIString(this Define.AttackAttribute self)
+        {
+            return self switch
+            {
+                Define.AttackAttribute.Slash => "斬撃",
+                Define.AttackAttribute.Blow => "打撃",
+                Define.AttackAttribute.Thrust => "刺突",
+                Define.AttackAttribute.Magic => "魔力",
+                Define.AttackAttribute.Fire => "火炎",
+                Define.AttackAttribute.Thunder => "雷撃",
+                _ => throw new System.ArgumentOutOfRangeException()
+            };
+        }
     }
 }
