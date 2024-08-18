@@ -18,12 +18,14 @@ namespace SoulRPG
             var elementParent = document.Q<Transform>("ElementParent");
             var elementPrefab = document.Q<HKUIDocument>("ElementPrefab");
             var elements = new List<HKUIDocument>();
+            var additinalElements = new List<HKUIDocument>();
             var activeIndex = 0;
-            for (var i = 0; i < character.BattleStatus.BehaviorPointMaxReactiveProperty.CurrentValue; i++)
+            var behaviourPointMax = character.BattleStatus.BehaviorPointMaxReactiveProperty.CurrentValue;
+            for (var i = 0; i < behaviourPointMax; i++)
             {
                 var element = Object.Instantiate(elementPrefab, elementParent);
                 elements.Add(element);
-                SetActiveElement(i, false);
+                SetActiveElement(element, false);
             }
             character.BattleStatus.BehaviourPointReactiveProperty
                 .Subscribe(x =>
@@ -32,7 +34,24 @@ namespace SoulRPG
                     var max = x > activeIndex ? x : activeIndex;
                     for (var i = min; i < max; i++)
                     {
-                        SetActiveElement(i, x > activeIndex);
+                        if (i < elements.Count)
+                        {
+                            SetActiveElement(elements[i], x > activeIndex);
+                        }
+                        else
+                        {
+                            if (x > activeIndex)
+                            {
+                                var element = Object.Instantiate(elementPrefab, elementParent);
+                                additinalElements.Add(element);
+                                SetActiveElement(element, x > activeIndex);
+                            }
+                            else
+                            {
+                                Object.Destroy(additinalElements[i - behaviourPointMax].gameObject);
+                                additinalElements.RemoveAt(i - behaviourPointMax);
+                            }
+                        }
                     }
                     activeIndex = x;
                 })
@@ -45,10 +64,10 @@ namespace SoulRPG
                 Object.Destroy(document.gameObject);
             }
 
-            void SetActiveElement(int index, bool isActive)
+            void SetActiveElement(HKUIDocument element, bool isActive)
             {
-                elements[index].Q("Active").SetActive(isActive);
-                elements[index].Q("Deactive").SetActive(!isActive);
+                element.Q("Active").SetActive(isActive);
+                element.Q("Deactive").SetActive(!isActive);
             }
         }
     }
