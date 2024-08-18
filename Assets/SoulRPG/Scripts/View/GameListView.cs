@@ -35,6 +35,11 @@ namespace SoulRPG
             var pageMax = elementActivateActions.Count() / (elementCount + 1);
             var elementIndex = 0;
             var elements = new List<HKUIDocument>();
+            var emptyArea = document.TryQ("Area.Empty");
+            if (emptyArea != null)
+            {
+                emptyArea.SetActive(!elementActivateActions.Any());
+            }
             CreateList(initialElementIndex);
 
             void CreateList(int selectIndex)
