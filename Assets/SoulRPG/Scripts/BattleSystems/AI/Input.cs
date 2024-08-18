@@ -116,6 +116,7 @@ namespace SoulRPG
             }
 #endif
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            listDocument.Q<TMP_Text>("Header").text = "選べ";
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {
@@ -145,6 +146,7 @@ namespace SoulRPG
                     });
                 });
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            listDocument.Q<TMP_Text>("Header").text = "武器を選べ";
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -211,6 +213,7 @@ namespace SoulRPG
                 });
             });
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            listDocument.Q<TMP_Text>("Header").text = "スキルを選べ";
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {
@@ -243,6 +246,7 @@ namespace SoulRPG
                 }),
             };
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            listDocument.Q<TMP_Text>("Header").text = "情報を選べ";
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {
