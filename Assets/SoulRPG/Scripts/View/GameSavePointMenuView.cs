@@ -305,7 +305,7 @@ namespace SoulRPG
             int initialElement
         )
         {
-            return GameListView.Create
+            return GameListView.CreateWithPages
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
                 elementActivateActions,

@@ -150,7 +150,7 @@ namespace SoulRPG
             listElements.Add(legElement);
             listElements.AddRange(accessoryElements);
 
-            var listDocument = GameListView.Create
+            var listDocument = GameListView.CreateWithPages
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
                 listElements,
@@ -393,7 +393,7 @@ namespace SoulRPG
             int initialElement
         )
         {
-            return GameListView.Create
+            return GameListView.CreateWithPages
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
                 elements,

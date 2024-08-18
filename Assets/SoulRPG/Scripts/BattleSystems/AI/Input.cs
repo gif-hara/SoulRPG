@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
@@ -20,7 +21,7 @@ namespace SoulRPG
 
         private readonly TinyStateMachine stateMachine = new();
 
-        private readonly CommandView commandView;
+        private readonly HKUIDocument commandDocumentPrefab;
 
         private readonly HKUIDocument listDocumentPrefab;
 
@@ -31,7 +32,7 @@ namespace SoulRPG
         public Input(HKUIDocument commandDocumentPrefab, HKUIDocument listDocumentPrefab)
         {
             this.listDocumentPrefab = listDocumentPrefab;
-            commandView = new CommandView(commandDocumentPrefab);
+            this.commandDocumentPrefab = commandDocumentPrefab;
         }
 
         public void Dispose()
@@ -42,7 +43,6 @@ namespace SoulRPG
         public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
         {
             this.character = character;
-            commandView.Open();
             stateMachine.Change(StateSelectMainCommandAsync);
             source = new UniTaskCompletionSource<ICommandInvoker>();
             return source.Task;
@@ -55,47 +55,88 @@ namespace SoulRPG
 
         private async UniTask StateSelectMainCommandAsync(CancellationToken scope)
         {
-            var commands = new List<string>
+            var commands = new List<Action<HKUIDocument>>
             {
-                "武器",
-                "道具",
-                "逃亡"
+                new(x =>
+                {
+                    GameListView.ApplyAsSimpleElement(
+                        x,
+                        "武器",
+                        _ =>
+                        {
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                            stateMachine.Change(StateSelectWeaponAsync);
+                        });
+                }),
+                new(x =>
+                {
+                    GameListView.ApplyAsSimpleElement(
+                        x,
+                        "ステータス",
+                        _ =>
+                        {
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("どうやら未実装のようだ", "Sfx.Message.0"));
+                        });
+                }),
+                new(x =>
+                {
+                    GameListView.ApplyAsSimpleElement(
+                        x,
+                        "逃走",
+                        _ =>
+                        {
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("どうやら未実装のようだ", "Sfx.Message.0"));
+                        });
+                }),
             };
 #if DEBUG
             if (TinyServiceLocator.Resolve<BattleDebugData>().IsAllSkillAvailable)
             {
-                commands.Add("全スキル");
+                commands.Add(
+                    x =>
+                    {
+                        GameListView.ApplyAsSimpleElement(
+                            x,
+                            "全スキル",
+                            _ =>
+                            {
+                                TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                                stateMachine.Change(StateSelectAllSkillAsync);
+                            });
+                    }
+                );
             }
 #endif
-
-            var index = await commandView.CreateCommandsAsync("選べ", commands, 0);
-            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            switch (index)
+            var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            await scope.WaitUntilCanceled();
+            if (listDocument != null)
             {
-                case 0:
-                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
-                    stateMachine.Change(StateSelectWeaponAsync);
-                    break;
-                case 1:
-                    gameEvents.OnRequestShowMessage.OnNext(new("どうやら未実装のようだ", "Sfx.Message.0"));
-                    stateMachine.Change(StateSelectMainCommandAsync);
-                    break;
-                case 2:
-                    gameEvents.OnRequestShowMessage.OnNext(new("どうやら未実装のようだ", "Sfx.Message.0"));
-                    stateMachine.Change(StateSelectMainCommandAsync);
-                    break;
-#if DEBUG
-                case 3:
-                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
-                    stateMachine.Change(StateSelectAllSkillAsync);
-                    break;
-#endif
+                UnityEngine.Object.Destroy(listDocument.gameObject);
             }
         }
 
         private async UniTask StateSelectWeaponAsync(CancellationToken scope)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var commands = character.Equipment.GetWeaponIds()
+                .Select((weaponId, index) =>
+                {
+                    return new Action<HKUIDocument>(element =>
+                    {
+                        GameListView.ApplyAsSimpleElement(
+                            element,
+                            weaponId.TryGetMasterDataWeapon(out var weapon)
+                                ? weapon.ItemId.GetMasterDataItem().Name
+                                : Define.HandWeaponId.GetMasterDataItem().Name,
+                            _ =>
+                            {
+                                selectedWeaponId = index;
+                                gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                                stateMachine.Change(StateSelectSkillAsync);
+                            });
+                    });
+                });
+            var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -103,19 +144,11 @@ namespace SoulRPG
                     stateMachine.Change(StateSelectMainCommandAsync);
                 })
                 .RegisterTo(scope);
-            var commands = character.Equipment.GetWeaponIds()
-                .Select(x =>
-                {
-                    if (x.TryGetMasterDataWeapon(out var weapon))
-                    {
-                        return weapon.ItemId.GetMasterDataItem().Name;
-                    }
-                    return Define.HandWeaponId.GetMasterDataItem().Name;
-                });
-            var index = await commandView.CreateCommandsAsync("武器を選べ", commands, 0);
-            selectedWeaponId = index;
-            gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
-            stateMachine.Change(StateSelectSkillAsync);
+            await scope.WaitUntilCanceled();
+            if (listDocument != null)
+            {
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
         }
 
         private async UniTask StateSelectSkillAsync(CancellationToken scope)
@@ -129,6 +162,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             MasterData.Weapon weapon;
+            Debug.Log(selectedWeaponId);
             if (!character.Equipment.GetWeaponId(selectedWeaponId).TryGetMasterDataWeapon(out weapon))
             {
                 weapon = Define.HandWeaponId.GetMasterDataWeapon();
@@ -137,44 +171,52 @@ namespace SoulRPG
                 .Where(x => x.ContainsMasterDataSkill())
                 .Select(x => x.GetMasterDataSkill())
                 .ToList();
-            var commands = skills.Select(x => x.Name);
-            var selectedIndex = 0;
-            while (true)
+            var commands = skills.Select(x =>
             {
-                var index = await commandView.CreateCommandsAsync("スキルを選べ", commands, selectedIndex);
-                var skill = skills.ElementAt(index);
-                selectedIndex = index;
-                var identifier = Skill.CreateIdentifier(weapon.ItemId, skill.Id);
-                if (character.UsedSkills.Contains(identifier))
+                return new Action<HKUIDocument>(element =>
                 {
-                    gameEvents.OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。", "Sfx.Message.0"));
-                    continue;
-                }
-                var behaviourPoint = await character.GetFixedNeedBehaviourPointAsync(skill.NeedBehaviourPoint);
-                if (!character.BattleStatus.HasBehaviourPoint(behaviourPoint))
-                {
-                    gameEvents.OnRequestShowMessage.OnNext(new("BPが足りない。", "Sfx.Message.0"));
-                    continue;
-                }
-                if (!character.BattleStatus.HasStamina(skill.NeedStamina))
-                {
-                    gameEvents.OnRequestShowMessage.OnNext(new("スタミナが足りない。", "Sfx.Message.0"));
-                    continue;
-                }
-                commandView.Close();
-                source.TrySetResult(new Skill(weapon.ItemId, skill.Id, skill.CanRegisterUsedSkills));
-                break;
+                    GameListView.ApplyAsSimpleElement(
+                        element,
+                        x.Name,
+                        async _ =>
+                        {
+                            gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                            var identifier = Skill.CreateIdentifier(weapon.ItemId, x.Id);
+                            if (character.UsedSkills.Contains(identifier))
+                            {
+                                gameEvents.OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。", "Sfx.Message.0"));
+                                return;
+                            }
+                            var behaviourPoint = await character.GetFixedNeedBehaviourPointAsync(x.NeedBehaviourPoint);
+                            if (!character.BattleStatus.HasBehaviourPoint(behaviourPoint))
+                            {
+                                gameEvents.OnRequestShowMessage.OnNext(new("BPが足りない。", "Sfx.Message.0"));
+                                return;
+                            }
+                            if (!character.BattleStatus.HasStamina(x.NeedStamina))
+                            {
+                                gameEvents.OnRequestShowMessage.OnNext(new("スタミナが足りない。", "Sfx.Message.0"));
+                                return;
+                            }
+                            source.TrySetResult(new Skill(weapon.ItemId, x.Id, x.CanRegisterUsedSkills));
+                            stateMachine.Change(StateNothingAsync);
+                        });
+                });
+            });
+            var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            await scope.WaitUntilCanceled();
+            if (listDocument != null)
+            {
+                UnityEngine.Object.Destroy(listDocument.gameObject);
             }
         }
 
         private async UniTask StateSelectAllSkillAsync(CancellationToken scope)
         {
-            commandView.SetActive(false);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    commandView.SetActive(true);
                     gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
                     stateMachine.Change(StateSelectMainCommandAsync);
                 })
@@ -192,12 +234,11 @@ namespace SoulRPG
                             _ =>
                             {
                                 source.TrySetResult(new Skill(Define.TestWeaponId, x.Id, x.CanRegisterUsedSkills));
-                                commandView.Close();
                                 stateMachine.Change(StateNothingAsync);
                             });
                     });
                 });
-            var listDocument = GameListView.Create(listDocumentPrefab, listElements, 0);
+            var listDocument = GameListView.CreateAsCommand(listDocumentPrefab, listElements, 0);
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {

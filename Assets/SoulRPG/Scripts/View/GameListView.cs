@@ -17,11 +17,11 @@ namespace SoulRPG
     /// </summary>
     public sealed class GameListView
     {
-        public static HKUIDocument Create
+        public static HKUIDocument CreateWithPages
         (
             HKUIDocument listDocumentPrefab,
             IEnumerable<Action<HKUIDocument>> elementActivateActions,
-            int initialElement
+            int initialElementIndex
         )
         {
             var document = Object.Instantiate(listDocumentPrefab);
@@ -35,7 +35,7 @@ namespace SoulRPG
             var pageMax = elementActivateActions.Count() / (elementCount + 1);
             var elementIndex = 0;
             var elements = new List<HKUIDocument>();
-            CreateList(initialElement);
+            CreateList(initialElementIndex);
 
             void CreateList(int selectIndex)
             {
@@ -107,6 +107,37 @@ namespace SoulRPG
                     pageArea.SetActive(true);
                     document.Q<TMP_Text>("Text.Page").text = $"{index + 1}/{pageMax + 1}";
                 }
+            }
+            return document;
+        }
+
+        public static HKUIDocument CreateAsCommand
+        (
+            HKUIDocument listDocumentPrefab,
+            IEnumerable<Action<HKUIDocument>> elementActivateActions,
+            int initialElementIndex
+        )
+        {
+            var document = Object.Instantiate(listDocumentPrefab);
+            var listParent = document.Q<RectTransform>("ListParent");
+            var listElementPrefab = document.Q<HKUIDocument>("ListElementPrefab");
+            var elementIndex = 0;
+            foreach (var action in elementActivateActions)
+            {
+                var element = Object.Instantiate(listElementPrefab, listParent);
+                var button = element.Q<Button>("Button");
+                action(element);
+                button.OnSelectAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                    })
+                    .RegisterTo(element.destroyCancellationToken);
+                if (elementIndex == initialElementIndex)
+                {
+                    EventSystem.current.SetSelectedGameObject(button.gameObject);
+                }
+                elementIndex++;
             }
             return document;
         }
