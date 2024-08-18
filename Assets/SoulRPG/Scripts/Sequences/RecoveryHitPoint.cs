@@ -36,8 +36,7 @@ namespace SoulRPG
             var t = targetType == Define.TargetType.Self ? actor : target;
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             var fixedSfxName = string.IsNullOrEmpty(sfxName) ? "Sfx.Message.19" : sfxName;
-            container.TryResolve<MasterData.Weapon>(out var weapon);
-            var recovery = recoveryCalculator.Calculate(actor, target, weapon, targetType);
+            var recovery = recoveryCalculator.Calculate(container);
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             await UniTask.WhenAll(
                 t.RecoveryHitPointAsync(recovery),

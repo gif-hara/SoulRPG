@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnitySequencerSystem;
 
 namespace SoulRPG.BattleSystems.RecoveryCalculators
 {
@@ -16,12 +17,15 @@ namespace SoulRPG.BattleSystems.RecoveryCalculators
         private Define.AttackType attackType;
 
         [SerializeField]
-        private Define.AttackAttribute attackAttribute;
+        private Define.TargetType targetType;
 
-        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType)
+        public int Calculate(Container container)
         {
-            var attackPower = attacker.BattleStatus.GetAttackPower(attackType) * rate;
-            var recovery = (int)(attackPower * attacker.StatusBuffController.GetStrengthRate(attackType));
+            container.TryResolve<BattleCharacter>("Actor", out var actor);
+            container.TryResolve<BattleCharacter>("Target", out var target);
+            var t = targetType == Define.TargetType.Self ? actor : target;
+            var attackPower = t.BattleStatus.GetAttackPower(attackType) * rate;
+            var recovery = (int)(attackPower * t.StatusBuffController.GetStrengthRate(attackType));
             recovery = Mathf.Max(1, recovery);
             return recovery;
         }

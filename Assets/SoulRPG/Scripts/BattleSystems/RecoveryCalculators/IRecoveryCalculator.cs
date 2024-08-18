@@ -1,3 +1,5 @@
+using UnitySequencerSystem;
+
 namespace SoulRPG.BattleSystems.RecoveryCalculators
 {
     /// <summary>
@@ -5,6 +7,6 @@ namespace SoulRPG.BattleSystems.RecoveryCalculators
     /// </summary>
     public interface IRecoveryCalculator
     {
-        int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType);
+        int Calculate(Container container);
     }
 }
