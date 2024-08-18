@@ -46,6 +46,7 @@ namespace SoulRPG
             var fixedSfxName = string.IsNullOrEmpty(sfxName) ? "Sfx.Message.2" : sfxName;
             container.TryResolve<MasterData.Weapon>(out var weapon);
             var damage = damageCalculator.Calculate(actor, target, weapon, targetType);
+            container.Register("Damage", damage);
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             await UniTask.WhenAll(
                 t.TakeDamageAsync(damage),
