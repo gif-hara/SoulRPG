@@ -87,20 +87,19 @@ namespace SoulRPG
 
         public enum AilmentBehaviourType
         {
-            OnAdded,
-            OnRemoved,
-            OnTurnEnd,
-            CanExecutableTurn,
-            OnComboFromGivedDamage,
-            OnComboFromTakedDamage,
-            CanAddAilment,
-            EvaluateEvade,
-            OnReset,
-            OnTakeDamage,
-            OnCalculateRecoveryBehaviourPoint,
-            OnCalculateNeedBehaviourPoint,
-            OnBehaviourEnd,
-            OnTurnStart,
+            OnAdded = 0,
+            OnRemoved = 1,
+            OnTurnEnd = 2,
+            CanExecutableTurn = 3,
+            OnComboFromGivedDamage = 4,
+            OnComboFromTakedDamage = 5,
+            CanAddAilment = 6,
+            EvaluateEvade = 7,
+            OnReset = 8,
+            OnTakeDamage = 9,
+            OnCalculateNeedBehaviourPoint = 11,
+            OnBehaviourEnd = 12,
+            OnTurnStart = 13,
         }
 
         public enum AllyType

@@ -150,15 +150,6 @@ namespace SoulRPG
             }
         }
 
-        public async UniTask<int> OnCalculateBehaviourPointAsync(int behaviourPoint)
-        {
-            foreach (var element in elements)
-            {
-                behaviourPoint = await element.OnCalculateBehaviourPointAsync(battleCharacter, behaviourPoint, cancellationTokenSource.Token);
-            }
-            return behaviourPoint;
-        }
-
         public async UniTask<int> OnCalculateNeedBehaviourPointAsync(int cost)
         {
             foreach (var element in elements)

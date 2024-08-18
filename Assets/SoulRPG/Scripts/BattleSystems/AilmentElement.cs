@@ -139,20 +139,6 @@ namespace SoulRPG
             );
         }
 
-        public async UniTask<int> OnCalculateBehaviourPointAsync(BattleCharacter battleCharacter, int behaviourPoint, CancellationToken scope)
-        {
-            var container = await PlaySequencesAsync(
-                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnCalculateRecoveryBehaviourPoint),
-                battleCharacter,
-                x =>
-                {
-                    x.Register("BehaviourPoint", behaviourPoint);
-                },
-                scope
-            );
-            return container?.Resolve<int>("BehaviourPoint") ?? behaviourPoint;
-        }
-
         public UniTask<int> OnCalculateNeedBehaviourPointAsync(BattleCharacter battleCharacter, int cost, CancellationToken scope)
         {
             return PlaySequencesAsync(
