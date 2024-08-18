@@ -15,7 +15,7 @@ MonoBehaviour:
   sequences:
   - rid: 7288459789387432183
   - rid: 9047573724747792487
-  - rid: 9047573724747792489
+  - rid: 9047573724747792526
   references:
     version: 2
     RefIds:
@@ -39,9 +39,14 @@ MonoBehaviour:
         weaponRate: 1
         attackType: 0
         attackAttribute: 0
-    - rid: 9047573724747792489
-      type: {class: RecoveryFromDamage, ns: SoulRPG, asm: Assembly-CSharp}
+    - rid: 9047573724747792526
+      type: {class: RecoveryHitPoint, ns: SoulRPG, asm: Assembly-CSharp}
       data:
+        recoveryCalculator:
+          rid: 9047573724747792527
         targetType: 0
-        rate: 0.4
         sfxName: Sfx.Message.19
+    - rid: 9047573724747792527
+      type: {class: FromGiveDamage, ns: SoulRPG.BattleSystems.RecoveryCalculators, asm: Assembly-CSharp}
+      data:
+        rate: 0.4
