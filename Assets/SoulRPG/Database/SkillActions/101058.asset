@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101058
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 7288459789387432183
+  - rid: 9047573724747792493
+  - rid: 7288459789387432197
+  - rid: 9047573724747792496
+  references:
+    version: 2
+    RefIds:
+    - rid: 7288459789387432183
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u4E0D\u5B9A\u5F62\u7A2E\u306E\u6838\u3068\u306A\u308B\u90E8\u5206\u3092\u65AC\u308A\u523B\u3080\u3002"
+        sfxName: Sfx.Message.1
+        ignoreIfCharacterDead: 0
+    - rid: 7288459789387432197
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 7288459789387432198
+        targetType: 1
+        giveDamageType: 0
+        sfxName: Sfx.Message.2
+    - rid: 7288459789387432198
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 1
+        attackType: 0
+        attackAttribute: 0
+    - rid: 9047573724747792493
+      type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        statusTypes: 00000000
+        buffName: Skill.101058
+        rateSelector:
+          rid: 9047573724747792494
+        battleCharacterEvaluator:
+          rid: 9047573724747792495
+    - rid: 9047573724747792494
+      type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1.7
+    - rid: 9047573724747792495
+      type: {class: IncludeCharacterAttribute, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+      data:
+        targetType: 1
+        whiteList: 2
+    - rid: 9047573724747792496
+      type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        buffName: Skill.101058
