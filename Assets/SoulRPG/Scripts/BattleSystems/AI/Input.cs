@@ -79,11 +79,11 @@ namespace SoulRPG
                 {
                     GameListView.ApplyAsSimpleElement(
                         x,
-                        "ステータス",
+                        "確認",
                         _ =>
                         {
                             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
-                            stateMachine.Change(StateStatusAsync);
+                            stateMachine.Change(StateConfirmAsync);
                         });
                 }),
                 new(x =>
@@ -210,6 +210,38 @@ namespace SoulRPG
                         });
                 });
             });
+            var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            await scope.WaitUntilCanceled();
+            if (listDocument != null)
+            {
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
+        }
+
+        private async UniTask StateConfirmAsync(CancellationToken scope)
+        {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
+                    stateMachine.Change(StateSelectMainCommandAsync);
+                })
+                .RegisterTo(scope);
+            var commands = new List<Action<HKUIDocument>>
+            {
+                new(x =>
+                {
+                    GameListView.ApplyAsSimpleElement(
+                        x,
+                        "状態異常",
+                        _ =>
+                        {
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                            stateMachine.Change(StateStatusAsync);
+                        });
+                }),
+            };
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
             await scope.WaitUntilCanceled();
             if (listDocument != null)
