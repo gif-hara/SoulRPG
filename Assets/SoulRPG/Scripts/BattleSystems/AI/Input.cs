@@ -162,7 +162,6 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             MasterData.Weapon weapon;
-            Debug.Log(selectedWeaponId);
             if (!character.Equipment.GetWeaponId(selectedWeaponId).TryGetMasterDataWeapon(out weapon))
             {
                 weapon = Define.HandWeaponId.GetMasterDataWeapon();
