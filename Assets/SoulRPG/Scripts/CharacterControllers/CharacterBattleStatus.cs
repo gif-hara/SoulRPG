@@ -165,7 +165,7 @@ namespace SoulRPG
                 character.GrowthParameter.Speed + character.Equipment.TotalSpeed + character.GrowthParameter.Level,
                 0,
                 TinyServiceLocator.Resolve<GameRule>().BehaviourPointMax,
-                TinyServiceLocator.Resolve<GameRule>().BehaviourPointMax,
+                0,
                 character.Attribute,
                 allyType
             )
@@ -209,7 +209,7 @@ namespace SoulRPG
                 blueprint.Speed,
                 blueprint.Experience,
                 blueprint.BehaviourPoint,
-                blueprint.BehaviourPoint,
+                0,
                 blueprint.Attribute,
                 blueprint.AllyType
             )
@@ -235,7 +235,7 @@ namespace SoulRPG
                 enemy.Speed,
                 enemy.Experience,
                 enemy.BehaviourPoint,
-                enemy.BehaviourPoint,
+                0,
                 enemy.Attribute,
                 Define.AllyType.Enemy
             )
@@ -277,13 +277,12 @@ namespace SoulRPG
 
         public void AddBehaviourPoint(int value)
         {
-            behaviourPointReactiveProperty.Value =
-                Mathf.Clamp(behaviourPointReactiveProperty.Value + value, 0, behaviourPointMaxReactiveProperty.Value);
+            behaviourPointReactiveProperty.Value += value;
         }
 
         public void RecoveryBehaviourPoint()
         {
-            behaviourPointReactiveProperty.Value = behaviourPointMaxReactiveProperty.Value;
+            behaviourPointReactiveProperty.Value += behaviourPointMaxReactiveProperty.Value;
         }
 
         public bool CanBehaviour()
