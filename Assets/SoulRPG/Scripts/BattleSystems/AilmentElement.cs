@@ -180,6 +180,19 @@ namespace SoulRPG
             );
         }
 
+        public UniTask OnTurnStartAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        {
+            return PlaySequencesAsync(
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnTurnStart),
+                actor,
+                x =>
+                {
+                    x.Register("Target", target);
+                },
+                scope
+            );
+        }
+
         public bool IsEnd()
         {
             if (turnCount == -1)

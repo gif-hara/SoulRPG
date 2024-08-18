@@ -178,6 +178,15 @@ namespace SoulRPG
             }
         }
 
+        public async UniTask OnTurnStartAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        {
+            scope = CancellationTokenSource.CreateLinkedTokenSource(cancellationTokenSource.Token, scope).Token;
+            foreach (var element in elements)
+            {
+                await element.OnTurnStartAsync(actor, target, scope);
+            }
+        }
+
 #if DEBUG
         private void AddDebugPanel()
         {

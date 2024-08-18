@@ -34,6 +34,8 @@ namespace SoulRPG
 
         UniTask OnBehaviourEndAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
 
+        UniTask OnTurnStartAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
+
         bool IsEnd();
 
         int GetMasterDataId();
