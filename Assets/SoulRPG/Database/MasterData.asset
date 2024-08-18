@@ -2831,7 +2831,7 @@ MonoBehaviour:
       NeedStamina: 1
       CanRegisterUsedSkills: 1
       Description: "\u81EA\u8EAB\u306E\u524D\u65B9\u306B\u9B54\u529B\u3067\u51FA\u6765\u305F\u76FE\u3092\u5C55\u958B\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u529B\u306E\u76FE\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 0ccdf71a7cf40a344adbfe8662abbacc, type: 2}
     - Name: "\u30A8\u30F4\u30A1\u30FC\u30B8"
       Id: 101038
       NeedBehaviourPoint: 2
@@ -3442,7 +3442,7 @@ MonoBehaviour:
       Sequences: {fileID: 11400000, guid: 2df05f64a322247a4a58fd2d1413686e, type: 2}
     - Id: 101007
       Name: "\u7269\u7406\u534A\u6E1B"
-      Description: "\u93A7\u306A\u3069\u3092\u3088\u308A\u786C\u5316\u3055\u305B\u3001\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u304C\u534A\u6E1B\u3059\u308B\u3002"
+      Description: "\u93A7\u306A\u3069\u3092\u3088\u308A\u786C\u5316\u3055\u305B\u3001\u7269\u7406\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u534A\u6E1B\u3059\u308B\u3002"
       CanReset: 0
       Sequences: {fileID: 11400000, guid: 129dbad0ac5174d4795f00a8e7a22f47, type: 2}
     - Id: 101008
@@ -3482,9 +3482,9 @@ MonoBehaviour:
       Sequences: {fileID: 11400000, guid: f3deb686d6141194380c26d7c3ca256f, type: 2}
     - Id: 101015
       Name: "\u9B54\u529B\u306E\u76FE"
-      Description: "\u9B54\u529B\u3067\u4F5C\u3089\u308C\u305F\u76FE\u3092\u524D\u65B9\u306B\u5C55\u958B\u3057\u3001\u9B54\u529B\u306E\u30C0\u30E1\u30FC\u30B8\u3092\u5927\u5E45\u306B\u6E1B\u5C11\u3059\u308B\u3002"
+      Description: "\u9B54\u529B\u3067\u4F5C\u3089\u308C\u305F\u76FE\u3092\u524D\u65B9\u306B\u5C55\u958B\u3057\u3001\u9B54\u5C5E\u6027\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u534A\u6E1B\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: 656333d33b92844408eec58b2c7e3ac9, type: 2}
     - Id: 101016
       Name: "BP\u52A0\u901F"
       Description: "\u7981\u5FCC\u9B54\u6CD5\u306E1\u3064\u3068\u3055\u308C\u3066\u304A\u308A\u3001BP\u304C1\u591A\u3044\u72B6\u614B\u3067\u30BF\u30FC\u30F3\u304C\u958B\u59CB\u3055\u308C\u308B\u3002"
