@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101014.TurnEnd
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 9047573724747792472
+  - rid: 9047573724747792473
+  references:
+    version: 2
+    RefIds:
+    - rid: 9047573724747792472
+      type: {class: AddGuardPoint, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        rate: 0.1
+    - rid: 9047573724747792473
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u9244\u58C1\u306E\u69CB\u3048\u306B\u3088\u308AGP\u3092\u5F97\u305F\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
