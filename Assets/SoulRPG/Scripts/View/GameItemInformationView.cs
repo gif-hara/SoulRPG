@@ -55,6 +55,10 @@ namespace SoulRPG
             {
                 SetActiveFromEquipmentType(EquipmentType.Weapon);
                 document
+                    .Q<HKUIDocument>("Weapon.Attribute")
+                    .Q<TMP_Text>("Value")
+                    .text = weapon.AttackAttribute.ToUIString();
+                document
                     .Q<HKUIDocument>("Weapon.Strength")
                     .Q<TMP_Text>("Value")
                     .text = weapon.Strength.ToString();
