@@ -199,7 +199,10 @@ namespace SoulRPG
                 });
             var listDocument = GameListView.Create(listDocumentPrefab, listElements, 0);
             await scope.WaitUntilCanceled();
-            UnityEngine.Object.Destroy(listDocument.gameObject);
+            if (listDocument != null)
+            {
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
         }
     }
 }
