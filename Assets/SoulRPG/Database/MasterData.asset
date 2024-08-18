@@ -1917,7 +1917,7 @@ MonoBehaviour:
     - Name: "\u713C\u93DD"
       Id: 101010
       ThumbnailId: Weapon.21
-      Thumbnail: {fileID: -4558393291478503221, guid: 545f028d871ac1046b4666fa17fcb781, type: 3}
+      Thumbnail: {fileID: 21300000, guid: 545f028d871ac1046b4666fa17fcb781, type: 3}
       Description: "\u706B\u306E\u529B\u3092\u5BBF\u3059\u6253\u6483\u6B66\u5668\u3002\u6575\u3092\u713C\u304D\u7126\u304C\u3057\u306A\u304C\u3089\u3001\u5727\u5012\u7684\u306A\u529B\u3067\u53E9\u304D\u6F70\u3059\u3002"
     - Name: "\u30B5\u30F3\u30C0\u30FC\u30ED\u30C3\u30C9"
       Id: 101011
@@ -1967,7 +1967,7 @@ MonoBehaviour:
     - Name: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u306E\u5927\u69CD"
       Id: 101020
       ThumbnailId: Weapon.23
-      Thumbnail: {fileID: -1649379955943937773, guid: 3b93f26e73b968141833ef1ffe9a5200, type: 3}
+      Thumbnail: {fileID: 21300000, guid: 3b93f26e73b968141833ef1ffe9a5200, type: 3}
       Description: "\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8\u5BB6\u306B\u4F1D\u308F\u308B\u708E\u306B\u5305\u307E\u308C\u305F\u5DE8\u5927\u306A\u69CD\u3002\u6EB6\u5CA9\u306E\u5982\u304D\u71B1\u3055\u3067\u6575\u3092\u713C\u304D\u5C3D\u304F\u3059\u3001\u7834\u58CA\u529B\u306B\u6E80\u3061\u305F\u6B66\u5668\u3002"
     - Name: "\u9244\u306E\u76FE"
       Id: 101021
@@ -1981,8 +1981,8 @@ MonoBehaviour:
       Description: "\u7DD1\u8272\u306E\u6BD2\u304C\u67D3\u307F\u8FBC\u3093\u3060\u81F4\u547D\u306E\u5263\u3002\u4E00\u6483\u3067\u6575\u306E\u4F53\u306B\u6B7B\u306E\u6BD2\u3092\u6D41\u3057\u8FBC\u3080\u3001\u6050\u6016\u306E\u6B66\u5668\u3002"
     - Name: "\u30EC\u30AA\u306E\u65AD\u7F6A\u5263"
       Id: 101023
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.26
+      Thumbnail: {fileID: 21300000, guid: 7a2b1473c944b244a95b2e8371510c79, type: 3}
       Description: "\u52C7\u8005\u30EC\u30AA\u304C\u4F7F\u3063\u305F\u65AD\u7F6A\u306E\u5263\u3002\u6B63\u7FA9\u306E\u5149\u3067\u60AA\u3092\u5207\u308A\u88C2\u304D\u3001\u88C1\u304D\u3092\u4E0B\u3059\u3002"
     - Name: "\u5F71\u8D70\u306E\u77ED\u5263"
       Id: 101024
@@ -1992,22 +1992,22 @@ MonoBehaviour:
     - Name: "\u30B9\u30E9\u30A4\u30E0\u30B9\u30EC\u30A4\u30E4\u30FC"
       Id: 101025
       ThumbnailId: Weapon.22
-      Thumbnail: {fileID: -3881039115253278685, guid: 4153a54855df1104a87daa4147b4a1be, type: 3}
+      Thumbnail: {fileID: 21300000, guid: 4153a54855df1104a87daa4147b4a1be, type: 3}
       Description: "\u30B9\u30E9\u30A4\u30E0\u3092\u72E9\u308B\u305F\u3081\u306B\u935B\u3048\u3089\u308C\u305F\u7279\u5225\u306A\u76F4\u5263\u3002\u305D\u306E\u5203\u306F\u3001\u3069\u3093\u306A\u306B\u7C98\u308A\u5F37\u3044\u6575\u3067\u3082\u4E00\u9583\u3067\u5207\u308A\u88C2\u304D\u3001\u305D\u306E\u75D5\u8DE1\u3059\u3089\u6B8B\u3055\u306A\u3044\u3002"
     - Name: "\u30A2\u30F3\u30D7\u30EA\u30D5\u30A1\u30A4\u30ED\u30C3\u30C9"
       Id: 101026
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.25
+      Thumbnail: {fileID: 21300000, guid: b99ee023273d8a4489f1ce43edbc7fbd, type: 3}
       Description: "\u9B54\u529B\u3092\u5897\u5E45\u3057\u3001\u305D\u306E\u529B\u3092\u9650\u754C\u307E\u3067\u5F15\u304D\u51FA\u3059\u6756\u3002\u6301\u3064\u8005\u306E\u9B54\u6CD5\u306F\u5F37\u5927\u306A\u529B\u3092\u5F97\u3066\u3001\u6575\u3092\u5727\u5012\u3059\u308B\u5B58\u5728\u3068\u306A\u308B\u3002"
     - Name: "\u7D0B\u69D8\u306E\u76FE"
       Id: 101027
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
+      ThumbnailId: Weapon.27
+      Thumbnail: {fileID: 21300000, guid: 86db0180bf405c34aa7db4e9f3a7a1a2, type: 3}
       Description: "\u5931\u308F\u308C\u305F\u53E4\u4EE3\u6587\u660E\u304C\u4F5C\u308A\u4E0A\u3052\u305F\u76FE\u3002\u305D\u306E\u8868\u9762\u306F\u795E\u79D8\u7684\u306A\u7D0B\u69D8\u3067\u8986\u308F\u308C\u3001\u6301\u3061\u4E3B\u3092\u3042\u3089\u3086\u308B\u653B\u6483\u304B\u3089\u5B88\u308B\u9B54\u529B\u3092\u653E\u3064\u3002\u307E\u308B\u3067\u76EE\u306B\u898B\u3048\u306A\u3044\u58C1\u304C\u5F35\u308A\u5DE1\u3089\u3055\u308C\u305F\u304B\u306E\u3088\u3046\u306B\u3001\u3069\u3093\u306A\u731B\u653B\u306B\u3082\u3073\u304F\u3068\u3082\u3057\u306A\u3044\u3002"
     - Name: "\u30AF\u30ED\u30CE\u30BB\u30D7\u30BF\u30FC"
       Id: 101028
       ThumbnailId: Weapon.24
-      Thumbnail: {fileID: 3754048672142184944, guid: ab024d2632a50ee4d9fcfeb615f5ee2e, type: 3}
+      Thumbnail: {fileID: 21300000, guid: ab024d2632a50ee4d9fcfeb615f5ee2e, type: 3}
       Description: "\u6642\u9593\u306E\u6D41\u308C\u3092\u64CD\u308B\u529B\u3092\u5BBF\u3057\u305F\u4F1D\u8AAC\u306E\u6756\u3002\u3053\u306E\u6756\u3092\u632F\u308B\u3046\u8005\u306F\u3001\u77AC\u6642\u306B\u6642\u3092\u52A0\u901F\u3055\u305B\u3001\u6575\u306E\u52D5\u304D\u3092\u5C01\u3058\u3001\u81EA\u3089\u306E\u884C\u52D5\u3092\u500D\u5897\u3055\u305B\u308B\u3002\u30AF\u30ED\u30CE\u30BB\u30D7\u30BF\u30FC\u304C\u653E\u3064\u9B54\u529B\u306F\u3001\u6642\u306E\u5883\u754C\u3092\u8D8A\u3048\u3001\u904E\u53BB\u3068\u672A\u6765\u3092\u7E4B\u3050\u3002"
     - Name: "\u5996\u5200\u30DF\u30BC\u30EA\u30B3\u30EB\u30C7"
       Id: 101029
@@ -2446,12 +2446,12 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101018
-      Strength: 114
+      Strength: 118
       Speed: -2
       AttackAttribute: 2
       Skill1: 101001
       Skill2: 101046
-      Skill3: 0
+      Skill3: 101003
       Skill4: 0
     - ItemId: 101019
       Strength: 97
@@ -2463,11 +2463,11 @@ MonoBehaviour:
       Skill4: 0
     - ItemId: 101020
       Strength: 140
-      Speed: -1
+      Speed: -2
       AttackAttribute: 2
       Skill1: 101001
       Skill2: 101024
-      Skill3: 0
+      Skill3: 101013
       Skill4: 0
     - ItemId: 101021
       Strength: 89
