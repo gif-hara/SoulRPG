@@ -177,5 +177,11 @@ namespace SoulRPG
         {
             return sequences.PlayOnDeadMessageAsync(this, scope.Token);
         }
+
+        public UniTask RecoveryHitPointAsync(int recovery)
+        {
+            BattleStatus.RecoveryHitPoint(recovery);
+            return UniTask.CompletedTask;
+        }
     }
 }
