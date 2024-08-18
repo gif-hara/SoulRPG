@@ -232,7 +232,7 @@ namespace SoulRPG
                             $"{x.Id}: {x.Name}",
                             _ =>
                             {
-                                source.TrySetResult(new Skill(Define.TestWeaponId, x.Id, x.CanRegisterUsedSkills));
+                                source.TrySetResult(new Skill(Define.TestWeaponId, x.Id, false));
                                 stateMachine.Change(StateNothingAsync);
                             });
                     });
