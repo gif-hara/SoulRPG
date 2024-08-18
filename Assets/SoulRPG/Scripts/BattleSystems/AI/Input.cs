@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
@@ -21,12 +22,15 @@ namespace SoulRPG
 
         private readonly CommandView commandView;
 
+        private readonly HKUIDocument listDocumentPrefab;
+
         private UniTaskCompletionSource<ICommandInvoker> source;
 
         private int selectedWeaponId;
 
-        public Input(HKUIDocument commandDocumentPrefab)
+        public Input(HKUIDocument commandDocumentPrefab, HKUIDocument listDocumentPrefab)
         {
+            this.listDocumentPrefab = listDocumentPrefab;
             commandView = new CommandView(commandDocumentPrefab);
         }
 
@@ -44,14 +48,25 @@ namespace SoulRPG
             return source.Task;
         }
 
+        private UniTask StateNothingAsync(CancellationToken scope)
+        {
+            return UniTask.CompletedTask;
+        }
+
         private async UniTask StateSelectMainCommandAsync(CancellationToken scope)
         {
-            var commands = new[]
+            var commands = new List<string>
             {
                 "武器",
                 "道具",
                 "逃亡"
             };
+#if DEBUG
+            if (TinyServiceLocator.Resolve<BattleDebugData>().IsAllSkillAvailable)
+            {
+                commands.Add("全スキル");
+            }
+#endif
 
             var index = await commandView.CreateCommandsAsync("選べ", commands, 0);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
@@ -69,6 +84,12 @@ namespace SoulRPG
                     gameEvents.OnRequestShowMessage.OnNext(new("どうやら未実装のようだ", "Sfx.Message.0"));
                     stateMachine.Change(StateSelectMainCommandAsync);
                     break;
+#if DEBUG
+                case 3:
+                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                    stateMachine.Change(StateSelectAllSkillAsync);
+                    break;
+#endif
             }
         }
 
@@ -144,6 +165,41 @@ namespace SoulRPG
                 source.TrySetResult(new Skill(weapon.ItemId, skill.Id, skill.CanRegisterUsedSkills));
                 break;
             }
+        }
+
+        private async UniTask StateSelectAllSkillAsync(CancellationToken scope)
+        {
+            commandView.SetActive(false);
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    commandView.SetActive(true);
+                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
+                    stateMachine.Change(StateSelectMainCommandAsync);
+                })
+                .RegisterTo(scope);
+            var listElements = TinyServiceLocator.Resolve<MasterData>()
+                .Skills
+                .List
+                .Select(x =>
+                {
+                    return new Action<HKUIDocument>(element =>
+                    {
+                        GameListView.ApplyAsSimpleElement(
+                            element,
+                            $"{x.Id}: {x.Name}",
+                            _ =>
+                            {
+                                source.TrySetResult(new Skill(Define.TestWeaponId, x.Id, x.CanRegisterUsedSkills));
+                                commandView.Close();
+                                stateMachine.Change(StateNothingAsync);
+                            });
+                    });
+                });
+            var listDocument = GameListView.Create(listDocumentPrefab, listElements, 0);
+            await scope.WaitUntilCanceled();
+            UnityEngine.Object.Destroy(listDocument.gameObject);
         }
     }
 }

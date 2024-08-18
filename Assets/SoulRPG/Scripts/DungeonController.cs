@@ -437,7 +437,10 @@ namespace SoulRPG
             var playerCharacter = new BattleCharacter(
                 character,
                 Define.AllyType.Player,
-                new Input(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command")),
+                new Input(
+                    gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command"),
+                    gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List")
+                    ),
                 gameRule.PlayerBattleCharacterSequences
                 );
             var enemyCharacter = masterDataEnemy.CreateBattleCharacter();

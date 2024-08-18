@@ -37,6 +37,11 @@ namespace SoulRPG
             Object.Destroy(document.gameObject);
         }
 
+        public void SetActive(bool value)
+        {
+            document.gameObject.SetActive(value);
+        }
+
         public UniTask<int> CreateCommandsAsync(
             string header,
             IEnumerable<string> commands,
