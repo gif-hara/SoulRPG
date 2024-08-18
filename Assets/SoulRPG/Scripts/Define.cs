@@ -127,5 +127,7 @@ namespace SoulRPG
         }
 
         public const int HandWeaponId = 101998;
+
+        public const int TestWeaponId = 101997;
     }
 }
