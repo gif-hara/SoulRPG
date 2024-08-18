@@ -97,7 +97,8 @@ namespace SoulRPG
                             {
                                 growthParameter.Vitality += x;
                                 return growthParameter.Vitality;
-                            }
+                            },
+                            character.GrowthParameter.Vitality
                         );
                     },
                     element =>
@@ -110,7 +111,8 @@ namespace SoulRPG
                             {
                                 growthParameter.Stamina += x;
                                 return growthParameter.Stamina;
-                            }
+                            },
+                            character.GrowthParameter.Stamina
                         );
                     },
                     element =>
@@ -123,7 +125,8 @@ namespace SoulRPG
                             {
                                 growthParameter.PhysicalStrength += x;
                                 return growthParameter.PhysicalStrength;
-                            }
+                            },
+                            character.GrowthParameter.PhysicalStrength
                         );
                     },
                     element =>
@@ -136,7 +139,8 @@ namespace SoulRPG
                             {
                                 growthParameter.MagicalStrength += x;
                                 return growthParameter.MagicalStrength;
-                            }
+                            },
+                            character.GrowthParameter.MagicalStrength
                         );
                     },
                     element =>
@@ -149,7 +153,8 @@ namespace SoulRPG
                             {
                                 growthParameter.Speed += x;
                                 return growthParameter.Speed;
-                            }
+                            },
+                            character.GrowthParameter.Speed
                         );
                     },
                 },
@@ -206,7 +211,8 @@ namespace SoulRPG
             (
                 HKUIDocument element,
                 string header,
-                Func<int, int> valueSelector
+                Func<int, int> valueSelector,
+                int minValue
             )
             {
                 GameListView.ApplyAsSimpleElement
@@ -272,7 +278,7 @@ namespace SoulRPG
                                     growthParameter.Level += 1;
                                     useExperience.Value += gameRule.ExperienceTable.GetNeedExperience(growthParameter.Level);
                                 }
-                                else if (velocity.x < 0 && CanLevelDown())
+                                else if (velocity.x < 0 && CanLevelDown(minValue, valueSelector(0)))
                                 {
                                     valueSelector(-1);
                                     growthParameter.Level -= 1;
@@ -332,9 +338,9 @@ namespace SoulRPG
             return character.InstanceStatus.ExperienceAsObservable().CurrentValue - useExperience.Value >= needExperience;
         }
 
-        private bool CanLevelDown()
+        private bool CanLevelDown(int min, int current)
         {
-            return character.GrowthParameter.Level < growthParameter.Level;
+            return character.GrowthParameter.Level < growthParameter.Level && min < current;
         }
     }
 }
