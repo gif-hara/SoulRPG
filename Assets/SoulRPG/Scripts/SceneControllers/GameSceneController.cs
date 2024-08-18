@@ -167,6 +167,11 @@ namespace SoulRPG.SceneControllers
                             battleDebugData.IsInvincibleEnemy = !battleDebugData.IsInvincibleEnemy;
                             gameEvents.OnRequestShowMessage.OnNext(new($"敵の無敵：{battleDebugData.IsInvincibleEnemy}"));
                         }
+                        if (Keyboard.current.uKey.wasPressedThisFrame)
+                        {
+                            battleDebugData.IsAllSkillAvailable = !battleDebugData.IsAllSkillAvailable;
+                            gameEvents.OnRequestShowMessage.OnNext(new($"全スキル使用可能：{battleDebugData.IsAllSkillAvailable}"));
+                        }
                     }
                     catch (OperationCanceledException)
                     {
