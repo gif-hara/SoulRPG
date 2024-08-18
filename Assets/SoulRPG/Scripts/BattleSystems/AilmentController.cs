@@ -18,6 +18,8 @@ namespace SoulRPG
 
         private readonly BattleCharacter battleCharacter;
 
+        public IReadOnlyList<IAilmentElement> Elements => elements;
+
         public AilmentController(BattleCharacter battleCharacter)
         {
             this.battleCharacter = battleCharacter;

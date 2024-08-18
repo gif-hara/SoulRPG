@@ -439,7 +439,8 @@ namespace SoulRPG
                 Define.AllyType.Player,
                 new Input(
                     gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command"),
-                    gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List")
+                    gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
+                    gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Ailment")
                     ),
                 gameRule.PlayerBattleCharacterSequences
                 );

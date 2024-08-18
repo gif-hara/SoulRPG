@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.BattleSystems.CommandInvokers;
+using TMPro;
 using UnityEngine;
 
 namespace SoulRPG
@@ -24,14 +25,21 @@ namespace SoulRPG
 
         private readonly HKUIDocument listDocumentPrefab;
 
+        private readonly HKUIDocument ailmentInformationDocumentPrefab;
+
         private UniTaskCompletionSource<ICommandInvoker> source;
 
         private int selectedWeaponId;
 
-        public Input(HKUIDocument commandDocumentPrefab, HKUIDocument listDocumentPrefab)
+        public Input(
+            HKUIDocument commandDocumentPrefab,
+            HKUIDocument listDocumentPrefab,
+            HKUIDocument ailmentInformationDocumentPrefab
+            )
         {
             this.listDocumentPrefab = listDocumentPrefab;
             this.commandDocumentPrefab = commandDocumentPrefab;
+            this.ailmentInformationDocumentPrefab = ailmentInformationDocumentPrefab;
         }
 
         public void Dispose()
@@ -74,7 +82,8 @@ namespace SoulRPG
                         "ステータス",
                         _ =>
                         {
-                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("どうやら未実装のようだ", "Sfx.Message.0"));
+                            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                            stateMachine.Change(StateStatusAsync);
                         });
                 }),
                 new(x =>
@@ -206,6 +215,47 @@ namespace SoulRPG
             if (listDocument != null)
             {
                 UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
+        }
+
+        private async UniTask StateStatusAsync(CancellationToken scope)
+        {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var informationDocument = UnityEngine.Object.Instantiate(ailmentInformationDocumentPrefab);
+            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
+                    stateMachine.Change(StateSelectMainCommandAsync);
+                })
+                .RegisterTo(scope);
+            var listElements = character.AilmentController.Elements
+                .Select(x =>
+                {
+                    return new Action<HKUIDocument>(element =>
+                    {
+                        GameListView.ApplyAsSimpleElement(
+                            element,
+                            x.GetMasterDataAilment().Name,
+                            _ =>
+                            {
+                            },
+                            _ =>
+                            {
+                                informationDocument.Q<TMP_Text>("Name").text = x.GetMasterDataAilment().Name;
+                                informationDocument.Q<TMP_Text>("Description").text = x.GetMasterDataAilment().Description;
+                            });
+                    });
+                });
+            var listDocument = GameListView.CreateWithPages(listDocumentPrefab, listElements, 0);
+            await scope.WaitUntilCanceled();
+            if (listDocument != null)
+            {
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
+            if (informationDocument != null)
+            {
+                UnityEngine.Object.Destroy(informationDocument.gameObject);
             }
         }
 
