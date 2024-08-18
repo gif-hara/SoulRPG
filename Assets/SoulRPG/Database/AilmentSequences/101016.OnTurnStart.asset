@@ -32,4 +32,4 @@ MonoBehaviour:
         targetType: 0
         battleCharacterEvaluator:
           rid: -2
-        behaviourPriority: 1
+        behaviourPriority: 2
