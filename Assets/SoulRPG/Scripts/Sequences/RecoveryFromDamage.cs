@@ -31,7 +31,7 @@ namespace SoulRPG
             var recoveryPoint = Mathf.FloorToInt(damage * rate);
             t.BattleStatus.RecoveryHitPoint(recoveryPoint);
             await TinyServiceLocator.Resolve<GameEvents>()
-                .ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}は<color=#88FF88>{recoveryPoint}</color>回復した。", sfxName));
+                .ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}のHPが<color=#88FF88>{recoveryPoint}</color>回復した。", sfxName));
         }
     }
 }
