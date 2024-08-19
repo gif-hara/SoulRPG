@@ -19,4 +19,4 @@ MonoBehaviour:
     - type: 1
       sequences: {fileID: 11400000, guid: f3bceb1d42ea9481bbf5298e3fe9e8f6, type: 2}
     - type: 2
-      sequences: {fileID: 11400000, guid: f3bceb1d42ea9481bbf5298e3fe9e8f6, type: 2}
+      sequences: {fileID: 11400000, guid: faa75cfb64e854d6eb1a4469d52f0fbc, type: 2}
