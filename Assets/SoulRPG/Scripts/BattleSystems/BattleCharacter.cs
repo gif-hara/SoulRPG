@@ -101,9 +101,9 @@ namespace SoulRPG
             scope.Dispose();
         }
 
-        public float GetTotalCutRate(Define.AttackAttribute attackAttribute)
+        public float GetTotalCutRate(Define.AttackAttribute attackAttribute, BattleCharacter target)
         {
-            return BattleStatus.GetCutRate(attackAttribute) + StatusBuffController.GetCutRate(attackAttribute);
+            return BattleStatus.GetCutRate(attackAttribute) + StatusBuffController.GetCutRate(attackAttribute, this, target);
         }
 
         public bool ContainsAfterCommandInvoker(string key)

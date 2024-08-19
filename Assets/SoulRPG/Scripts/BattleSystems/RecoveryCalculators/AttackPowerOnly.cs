@@ -24,8 +24,9 @@ namespace SoulRPG.BattleSystems.RecoveryCalculators
             container.TryResolve<BattleCharacter>("Actor", out var actor);
             container.TryResolve<BattleCharacter>("Target", out var target);
             var t = targetType == Define.TargetType.Self ? actor : target;
+            var a = targetType == Define.TargetType.Self ? target : actor;
             var attackPower = t.BattleStatus.GetAttackPower(attackType) * rate;
-            var recovery = (int)(attackPower * t.StatusBuffController.GetStrengthRate(attackType));
+            var recovery = (int)(attackPower * t.StatusBuffController.GetStrengthRate(attackType, t, a));
             recovery = Mathf.Max(1, recovery);
             return recovery;
         }

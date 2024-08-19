@@ -23,8 +23,8 @@ namespace SoulRPG.BattleSystems.DamageCalculators
             var fixedAttackAttribute = attackAttribute.ToAttackAttribute(attackerWeapon);
             var attackPower = attacker.BattleStatus.GetAttackPower(attackType);
             var weaponPower = attackerWeapon.Strength * weaponRate / 100.0f;
-            var cutRate = defender.GetTotalCutRate(fixedAttackAttribute);
-            var damage = (int)(attackPower * weaponPower * attacker.StatusBuffController.GetStrengthRate(attackType) * (1.0f - cutRate));
+            var cutRate = defender.GetTotalCutRate(fixedAttackAttribute, attacker);
+            var damage = (int)(attackPower * weaponPower * attacker.StatusBuffController.GetStrengthRate(attackType, attacker, defender) * (1.0f - cutRate));
             damage = Mathf.Max(1, damage);
             return damage;
         }
