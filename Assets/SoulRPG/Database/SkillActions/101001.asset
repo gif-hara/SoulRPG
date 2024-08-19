@@ -15,9 +15,22 @@ MonoBehaviour:
   sequences:
   - rid: 7288459789387432183
   - rid: 7288459789387432197
+  - rid: 3561509643546263716
   references:
     version: 2
     RefIds:
+    - rid: 3561509643546263716
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 3561509643546263717
+          sequences: {fileID: 11400000, guid: 0252a761078174250a2e171da899b369, type: 2}
+    - rid: 3561509643546263717
+      type: {class: ContainsAilment, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        ailmentMasterDataIds: a28a0100
+        targetType: 0
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
