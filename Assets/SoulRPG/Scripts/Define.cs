@@ -71,6 +71,15 @@ namespace SoulRPG
 
             /// <summary>甲羅</summary>
             Shell = 1 << 3,
+            
+            /// <summary>岩石</summary>
+            Rock = 1 << 4,
+            
+            /// <summary>植物</summary>
+            Plant = 1 << 5,
+            
+            /// <summary>獣</summary>
+            Beast = 1 << 6,
         }
 
         public enum StatusType
@@ -100,6 +109,7 @@ namespace SoulRPG
             OnCalculateNeedBehaviourPoint = 11,
             OnBehaviourEnd = 12,
             OnTurnStart = 13,
+            CanExecutableTurnOpponent = 14,
         }
 
         public enum AllyType

@@ -29,6 +29,9 @@ namespace SoulRPG
         [SerializeReference, SubclassSelector]
         private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
 
+        [SerializeReference, SubclassSelector]
+        private IBattleCharacterEvaluatorBoolean buffCondition;
+
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             container.TryResolve<BattleCharacter>("Actor", out var actor);
@@ -37,7 +40,7 @@ namespace SoulRPG
                 battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
-                t.StatusBuffController.Add(statusTypes, buffName, rateSelector.Evaluate(actor, target));
+                t.StatusBuffController.Add(statusTypes, buffName, rateSelector.Evaluate(actor, target), buffCondition);
             }
             return UniTask.CompletedTask;
         }

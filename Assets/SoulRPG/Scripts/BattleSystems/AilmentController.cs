@@ -46,6 +46,11 @@ namespace SoulRPG
             return elements.Find(x => x.GetMasterDataId() == masterDataAilmentId);
         }
 
+        public bool ContainsDebuff()
+        {
+            return elements.Exists(x => x.GetMasterDataAilment().IsDebuff);
+        }
+
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
         {
             foreach (var i in elements)
@@ -178,6 +183,18 @@ namespace SoulRPG
             {
                 await element.OnTurnStartAsync(actor, target, scope);
             }
+        }
+        
+        public async UniTask<bool> CanExecutableTurnOpponentAsync(BattleCharacter target)
+        {
+            foreach (var element in elements)
+            {
+                if (!await element.CanExecutableTurnOpponentAsync(battleCharacter, target, cancellationTokenSource.Token))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
 #if DEBUG

@@ -179,6 +179,19 @@ namespace SoulRPG
             );
         }
 
+        public UniTask<bool> CanExecutableTurnOpponentAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        {
+            return PlaySequencesAsync(
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.CanExecutableTurnOpponent),
+                actor,
+                x =>
+                {
+                    x.Register("Target", target);
+                },
+                scope
+            ).ContinueWith(x => x == null || x.Resolve<bool>("CanExecutableTurn"));
+        }
+
         public bool IsEnd()
         {
             if (turnCount == -1)

@@ -52,9 +52,14 @@ namespace SoulRPG
             this.sequences = sequences;
         }
 
-        public async UniTask<ICommandInvoker> ThinkAsync()
+        public async UniTask<ICommandInvoker> ThinkAsync(BattleCharacter target)
         {
             if (!await AilmentController.CanExecutableTurnAsync())
+            {
+                return null;
+            }
+
+            if (!await target.AilmentController.CanExecutableTurnOpponentAsync(this))
             {
                 return null;
             }
@@ -101,9 +106,9 @@ namespace SoulRPG
             scope.Dispose();
         }
 
-        public float GetTotalCutRate(Define.AttackAttribute attackAttribute)
+        public float GetTotalCutRate(Define.AttackAttribute attackAttribute, BattleCharacter target)
         {
-            return BattleStatus.GetCutRate(attackAttribute) + StatusBuffController.GetCutRate(attackAttribute);
+            return BattleStatus.GetCutRate(attackAttribute) + StatusBuffController.GetCutRate(attackAttribute, this, target);
         }
 
         public bool ContainsAfterCommandInvoker(string key)
