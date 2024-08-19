@@ -86,9 +86,9 @@ namespace SoulRPG
             return true;
         }
 
-        public UniTask TurnEndAsync()
+        public UniTask TurnEndAsync(BattleCharacter target)
         {
-            return AilmentController.OnTurnEndAsync();
+            return AilmentController.OnTurnEndAsync(target);
         }
 
         public async UniTask BeginComboAsync(BattleCharacter target, CancellationToken scope)

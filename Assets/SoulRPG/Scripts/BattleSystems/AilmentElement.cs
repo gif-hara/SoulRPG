@@ -40,10 +40,18 @@ namespace SoulRPG
             return PlaySequencesAsync(masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnRemoved), battleCharacter, null, scope);
         }
 
-        public UniTask OnTurnEndAsync(BattleCharacter battleCharacter, CancellationToken scope)
+        public UniTask OnTurnEndAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
             currentTurnCount++;
-            return PlaySequencesAsync(masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnTurnEnd), battleCharacter, null, scope);
+            return PlaySequencesAsync(
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnTurnEnd),
+                actor,
+                c =>
+                {
+                    c.Register("Target", target);
+                },
+                scope
+                );
         }
 
         public async UniTask<bool> CanExecutableTurnAsync(BattleCharacter battleCharacter, CancellationToken scope)

@@ -89,12 +89,12 @@ namespace SoulRPG
             elements.Remove(element);
         }
 
-        public async UniTask OnTurnEndAsync()
+        public async UniTask OnTurnEndAsync(BattleCharacter target)
         {
             var tempElement = new List<IAilmentElement>(elements);
             foreach (var element in tempElement)
             {
-                await element.OnTurnEndAsync(battleCharacter, cancellationTokenSource.Token);
+                await element.OnTurnEndAsync(battleCharacter, target, cancellationTokenSource.Token);
                 if (element.IsEnd())
                 {
                     await element.OnRemovedAsync(battleCharacter, cancellationTokenSource.Token);
@@ -184,7 +184,7 @@ namespace SoulRPG
                 await element.OnTurnStartAsync(actor, target, scope);
             }
         }
-        
+
         public async UniTask<bool> CanExecutableTurnOpponentAsync(BattleCharacter target)
         {
             foreach (var element in elements)

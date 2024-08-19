@@ -69,7 +69,7 @@ namespace SoulRPG.BattleSystems
                     await actor.OnBehaviourEndAsync(target, scope);
                 }
                 await actor.InvokeAfterCommandAsync(target, scope);
-                await actor.TurnEndAsync();
+                await actor.TurnEndAsync(target);
             }
 
             bool IsBattleEnd()
