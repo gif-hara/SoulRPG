@@ -46,6 +46,11 @@ namespace SoulRPG
             return elements.Find(x => x.GetMasterDataId() == masterDataAilmentId);
         }
 
+        public bool ContainsDebuff()
+        {
+            return elements.Exists(x => x.GetMasterDataAilment().IsDebuff);
+        }
+
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
         {
             foreach (var i in elements)
