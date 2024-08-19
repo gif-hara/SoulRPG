@@ -80,6 +80,7 @@ namespace SoulRPG
 
         private async UniTask StateLevelUpAsync(CancellationToken scope)
         {
+            var isConfirming = false;
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
             growthParameter = new CharacterGrowthParameter(character.GrowthParameter);
             useExperience = new ReactiveProperty<int>(0);
@@ -182,8 +183,13 @@ namespace SoulRPG
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(async _ =>
                 {
+                    if (isConfirming)
+                    {
+                        return;
+                    }
                     if (growthParameter.Level != character.GrowthParameter.Level)
                     {
+                        isConfirming = true;
                         var result = await DialogView.ConfirmAsync
                         (
                             documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
@@ -192,6 +198,7 @@ namespace SoulRPG
                             0,
                             scope
                         );
+                        isConfirming = false;
                         if (result == 0)
                         {
                             stateMachine.Change(StateRootMenuAsync);
@@ -221,18 +228,25 @@ namespace SoulRPG
                     header,
                     async _ =>
                     {
+                        if (isConfirming)
+                        {
+                            return;
+                        }
                         if (character.GrowthParameter.Level == growthParameter.Level)
                         {
-                            DialogView.ConfirmAsync
+                            isConfirming = true;
+                            await DialogView.ConfirmAsync
                             (
                                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
                                 "パラメーターを割り振ってください",
                                 new[] { "OK" },
                                 0,
                                 scope
-                            ).Forget();
+                            );
+                            isConfirming = false;
                             return;
                         }
+                        isConfirming = true;
                         var result = await DialogView.ConfirmAsync
                         (
                             documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
@@ -241,6 +255,7 @@ namespace SoulRPG
                             0,
                             scope
                         );
+                        isConfirming = false;
                         if (result == 0)
                         {
                             character.GrowthParameter.Sync(growthParameter);
