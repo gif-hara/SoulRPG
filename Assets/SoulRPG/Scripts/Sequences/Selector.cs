@@ -27,7 +27,6 @@ namespace SoulRPG
                     return new Sequencer(container, element.Sequences.Sequences).PlayAsync(cancellationToken);
                 }
             }
-            Assert.IsTrue(false, "Not found any element");
             return UniTask.CompletedTask;
         }
 
