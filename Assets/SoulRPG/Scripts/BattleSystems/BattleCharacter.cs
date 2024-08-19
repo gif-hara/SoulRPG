@@ -54,16 +54,6 @@ namespace SoulRPG
 
         public async UniTask<ICommandInvoker> ThinkAsync(BattleCharacter target)
         {
-            if (!await AilmentController.CanExecutableTurnAsync())
-            {
-                return null;
-            }
-
-            if (!await target.AilmentController.CanExecutableTurnOpponentAsync(this))
-            {
-                return null;
-            }
-
             var result = await battleAI.ThinkAsync(this);
             Assert.IsNotNull(result);
             if (!result.CanRegisterUsedIdentifier())
@@ -79,11 +69,21 @@ namespace SoulRPG
             }
         }
 
-        public async UniTask TurnStartAsync(BattleCharacter target)
+        public async UniTask<bool> TurnStartAsync(BattleCharacter target)
         {
             UsedSkills.Clear();
+            if (!await AilmentController.CanExecutableTurnAsync())
+            {
+                return false;
+            }
+
+            if (!await target.AilmentController.CanExecutableTurnOpponentAsync(this))
+            {
+                return false;
+            }
             BattleStatus.RecoveryBehaviourPoint();
             await AilmentController.OnTurnStartAsync(this, target, scope.Token);
+            return true;
         }
 
         public UniTask TurnEndAsync()
