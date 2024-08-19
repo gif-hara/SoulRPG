@@ -39,7 +39,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "9992056bfb8bc69fd0be7a12eefbd38f2b2abc24"
+      "hash": "d1fef65af57e18bdfe94008c9a501a5903a57f48"
     },
     "com.mackysoft.serializereference-extensions": {
       "version": "https://github.com/mackysoft/Unity-SerializeReferenceExtensions.git?path=Assets/MackySoft/MackySoft.SerializeReferenceExtensions",
