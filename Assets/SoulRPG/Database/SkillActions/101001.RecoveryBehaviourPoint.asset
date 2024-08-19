@@ -27,4 +27,4 @@ MonoBehaviour:
     - rid: 3561509643546263719
       type: {class: Random, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
-        probability: 0.7
+        probability: 0.6
