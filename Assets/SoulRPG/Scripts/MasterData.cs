@@ -638,6 +638,8 @@ namespace SoulRPG
 
             public AilmentSequences Sequences;
 
+            public bool IsDebuff;
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Ailment>
             {
