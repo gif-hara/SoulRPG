@@ -177,6 +177,11 @@ namespace SoulRPG.SceneControllers
                             battleDebugData.NoCost = !battleDebugData.NoCost;
                             gameEvents.OnRequestShowMessage.OnNext(new($"コスト無し：{battleDebugData.NoCost}"));
                         }
+                        if (Keyboard.current.oKey.wasPressedThisFrame)
+                        {
+                            battleDebugData.IsBigDamage = !battleDebugData.IsBigDamage;
+                            gameEvents.OnRequestShowMessage.OnNext(new($"大ダメージ：{battleDebugData.IsBigDamage}"));
+                        }
                     }
                     catch (OperationCanceledException)
                     {

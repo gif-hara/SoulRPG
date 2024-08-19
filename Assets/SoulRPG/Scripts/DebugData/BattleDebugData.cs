@@ -12,5 +12,7 @@ namespace SoulRPG
         public bool IsAllSkillAvailable { get; set; }
 
         public bool NoCost { get; set; }
+
+        public bool IsBigDamage { get; set; }
     }
 }
