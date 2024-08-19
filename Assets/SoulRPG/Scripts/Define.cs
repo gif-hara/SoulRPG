@@ -71,6 +71,15 @@ namespace SoulRPG
 
             /// <summary>甲羅</summary>
             Shell = 1 << 3,
+            
+            /// <summary>岩石</summary>
+            Rock = 1 << 4,
+            
+            /// <summary>植物</summary>
+            Plant = 1 << 5,
+            
+            /// <summary>獣</summary>
+            Beast = 1 << 6,
         }
 
         public enum StatusType
