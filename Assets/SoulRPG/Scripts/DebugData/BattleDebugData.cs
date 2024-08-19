@@ -10,5 +10,7 @@ namespace SoulRPG
         public bool IsInvincibleEnemy { get; set; }
 
         public bool IsAllSkillAvailable { get; set; }
+
+        public bool NoCost { get; set; }
     }
 }

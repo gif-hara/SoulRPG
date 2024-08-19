@@ -55,8 +55,16 @@ namespace SoulRPG.BattleSystems
                         break;
                     }
                     var needBehaviourPoint = await actor.GetFixedNeedBehaviourPointAsync(commandInvoker.GetNeedBehaviourPoint());
+                    var needStamina = commandInvoker.GetNeedStamina();
+#if DEBUG
+                    if (TinyServiceLocator.Resolve<BattleDebugData>().NoCost)
+                    {
+                        needBehaviourPoint = 0;
+                        needStamina = 0;
+                    }
+#endif
                     actor.BattleStatus.AddBehaviourPoint(-needBehaviourPoint);
-                    actor.BattleStatus.AddStamina(-commandInvoker.GetNeedStamina());
+                    actor.BattleStatus.AddStamina(-needStamina);
                     await commandInvoker.InvokeAsync(actor, target, scope);
                     await actor.OnBehaviourEndAsync(target, scope);
                 }

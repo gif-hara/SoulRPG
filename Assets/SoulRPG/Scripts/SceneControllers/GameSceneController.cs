@@ -172,6 +172,11 @@ namespace SoulRPG.SceneControllers
                             battleDebugData.IsAllSkillAvailable = !battleDebugData.IsAllSkillAvailable;
                             gameEvents.OnRequestShowMessage.OnNext(new($"全スキル使用可能：{battleDebugData.IsAllSkillAvailable}"));
                         }
+                        if (Keyboard.current.iKey.wasPressedThisFrame)
+                        {
+                            battleDebugData.NoCost = !battleDebugData.NoCost;
+                            gameEvents.OnRequestShowMessage.OnNext(new($"コスト無し：{battleDebugData.NoCost}"));
+                        }
                     }
                     catch (OperationCanceledException)
                     {
