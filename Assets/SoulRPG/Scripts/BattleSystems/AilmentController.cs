@@ -184,6 +184,18 @@ namespace SoulRPG
                 await element.OnTurnStartAsync(actor, target, scope);
             }
         }
+        
+        public async UniTask<bool> CanExecutableTurnOpponentAsync(BattleCharacter target)
+        {
+            foreach (var element in elements)
+            {
+                if (!await element.CanExecutableTurnOpponentAsync(battleCharacter, target, cancellationTokenSource.Token))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
 #if DEBUG
         private void AddDebugPanel()

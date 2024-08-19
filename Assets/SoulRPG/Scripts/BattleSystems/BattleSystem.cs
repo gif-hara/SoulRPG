@@ -49,7 +49,7 @@ namespace SoulRPG.BattleSystems
                 await actor.TurnStartAsync(target);
                 while (!IsBattleEnd() && actor.BattleStatus.CanBehaviour())
                 {
-                    var commandInvoker = await actor.ThinkAsync();
+                    var commandInvoker = await actor.ThinkAsync(target);
                     if (commandInvoker == null)
                     {
                         break;

@@ -52,9 +52,14 @@ namespace SoulRPG
             this.sequences = sequences;
         }
 
-        public async UniTask<ICommandInvoker> ThinkAsync()
+        public async UniTask<ICommandInvoker> ThinkAsync(BattleCharacter target)
         {
             if (!await AilmentController.CanExecutableTurnAsync())
+            {
+                return null;
+            }
+
+            if (!await target.AilmentController.CanExecutableTurnOpponentAsync(this))
             {
                 return null;
             }

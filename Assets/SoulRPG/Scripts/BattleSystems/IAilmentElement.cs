@@ -34,6 +34,8 @@ namespace SoulRPG
 
         UniTask OnTurnStartAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
 
+        UniTask<bool> CanExecutableTurnOpponentAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
+
         bool IsEnd();
 
         int GetMasterDataId();
