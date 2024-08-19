@@ -12,7 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
   m_Name: 101048.Success
   m_EditorClassIdentifier: 
-  sequences: []
+  sequences:
+  - rid: 3561509643546263691
+  - rid: 3561509643546263693
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 3561509643546263691
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 3561509643546263692
+        targetType: 1
+        giveDamageType: 0
+        sfxName: Sfx.Message.2
+    - rid: 3561509643546263692
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 2.1
+        attackType: 0
+        attackAttribute: 0
+    - rid: 3561509643546263693
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101022
+        turnCount: 1
+        battleCharacterEvaluator:
+          rid: -2
