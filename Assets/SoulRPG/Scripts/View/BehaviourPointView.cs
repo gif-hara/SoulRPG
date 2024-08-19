@@ -48,8 +48,8 @@ namespace SoulRPG
                             }
                             else
                             {
-                                Object.Destroy(additinalElements[i - behaviourPointMax].gameObject);
-                                additinalElements.RemoveAt(i - behaviourPointMax);
+                                Object.Destroy(additinalElements[0].gameObject);
+                                additinalElements.RemoveAt(0);
                             }
                         }
                     }
