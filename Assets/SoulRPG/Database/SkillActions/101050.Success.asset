@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 3561509643546263691
+  - rid: 3561509643546263694
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3561509643546263691
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -28,6 +31,14 @@ MonoBehaviour:
     - rid: 3561509643546263692
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        weaponRate: 3.2
+        weaponRate: 3
         attackType: 0
         attackAttribute: 0
+    - rid: 3561509643546263694
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101016
+        turnCount: 3
+        battleCharacterEvaluator:
+          rid: -2

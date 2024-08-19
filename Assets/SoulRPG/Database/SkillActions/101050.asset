@@ -24,10 +24,10 @@ MonoBehaviour:
         elements:
         - evaluator:
             rid: 3561509643546263687
-          sequences: {fileID: 11400000, guid: b6e46936f0acc49edb9e0af4b80cf464, type: 2}
+          sequences: {fileID: 11400000, guid: 7477359d37dfc4e91beb5c87ef3bee9d, type: 2}
         - evaluator:
             rid: 3561509643546263689
-          sequences: {fileID: 11400000, guid: d772b1fbc486047b3bfd7e8725422a43, type: 2}
+          sequences: {fileID: 11400000, guid: 56aa60145f11e408e91d9c399a25bbec, type: 2}
     - rid: 3561509643546263687
       type: {class: ContainsAilment, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
@@ -40,6 +40,6 @@ MonoBehaviour:
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u3092\u884C\u3063\u305F\u3002"
+        format: "{Actor}\u306F\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u79D8\u9023\u6483\u3092\u884C\u3063\u305F\u3002"
         sfxName: Sfx.Message.1
         ignoreIfCharacterDead: 0
