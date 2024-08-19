@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101049
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 7288459789387432183
+  - rid: 3561509643546263682
+  references:
+    version: 2
+    RefIds:
+    - rid: 3561509643546263682
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 3561509643546263687
+          sequences: {fileID: 11400000, guid: b6e46936f0acc49edb9e0af4b80cf464, type: 2}
+        - evaluator:
+            rid: 3561509643546263689
+          sequences: {fileID: 11400000, guid: d772b1fbc486047b3bfd7e8725422a43, type: 2}
+    - rid: 3561509643546263687
+      type: {class: ContainsAilment, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        ailmentMasterDataIds: 9e8a0100
+        targetType: 0
+    - rid: 3561509643546263689
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
+    - rid: 7288459789387432183
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u3092\u884C\u3063\u305F\u3002"
+        sfxName: Sfx.Message.1
+        ignoreIfCharacterDead: 0
