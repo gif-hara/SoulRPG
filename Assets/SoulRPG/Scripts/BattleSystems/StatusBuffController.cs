@@ -10,21 +10,21 @@ namespace SoulRPG
     /// </summary>
     public sealed class StatusBuffController
     {
-        private readonly List<(string, float)> physicalStrengthBuffList = new();
+        private readonly List<(string id, float rate)> physicalStrengthBuffList = new();
 
-        private readonly List<(string, float)> magicalStrengthBuffList = new();
+        private readonly List<(string id, float rate)> magicalStrengthBuffList = new();
 
-        private readonly List<(string, float)> slashCutRateBuffList = new();
+        private readonly List<(string id, float rate)> slashCutRateBuffList = new();
 
-        private readonly List<(string, float)> blowCutRateBuffList = new();
+        private readonly List<(string id, float rate)> blowCutRateBuffList = new();
 
-        private readonly List<(string, float)> thrustCutRateBuffList = new();
+        private readonly List<(string id, float rate)> thrustCutRateBuffList = new();
 
-        private readonly List<(string, float)> magicCutRateBuffList = new();
+        private readonly List<(string id, float rate)> magicCutRateBuffList = new();
 
-        private readonly List<(string, float)> fireCutRateBuffList = new();
+        private readonly List<(string id, float rate)> fireCutRateBuffList = new();
 
-        private readonly List<(string, float)> thunderCutRateBuffList = new();
+        private readonly List<(string id, float rate)> thunderCutRateBuffList = new();
 
         public void Add(IEnumerable<Define.StatusType> statusTypes, string name, float rate)
         {
@@ -48,7 +48,7 @@ namespace SoulRPG
                 Define.StatusType.ThunderCutRate => thunderCutRateBuffList,
                 _ => throw new System.ArgumentOutOfRangeException(statusType.ToString())
             };
-            if (buffList.Any(x => x.Item1 == name))
+            if (buffList.Any(x => x.id == name))
             {
                 return;
             }
@@ -57,14 +57,14 @@ namespace SoulRPG
 
         public void Remove(string name)
         {
-            physicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
-            magicalStrengthBuffList.RemoveAll(x => x.Item1 == name);
-            slashCutRateBuffList.RemoveAll(x => x.Item1 == name);
-            blowCutRateBuffList.RemoveAll(x => x.Item1 == name);
-            thrustCutRateBuffList.RemoveAll(x => x.Item1 == name);
-            magicCutRateBuffList.RemoveAll(x => x.Item1 == name);
-            fireCutRateBuffList.RemoveAll(x => x.Item1 == name);
-            thunderCutRateBuffList.RemoveAll(x => x.Item1 == name);
+            physicalStrengthBuffList.RemoveAll(x => x.id == name);
+            magicalStrengthBuffList.RemoveAll(x => x.id == name);
+            slashCutRateBuffList.RemoveAll(x => x.id == name);
+            blowCutRateBuffList.RemoveAll(x => x.id == name);
+            thrustCutRateBuffList.RemoveAll(x => x.id == name);
+            magicCutRateBuffList.RemoveAll(x => x.id == name);
+            fireCutRateBuffList.RemoveAll(x => x.id == name);
+            thunderCutRateBuffList.RemoveAll(x => x.id == name);
         }
 
         public float GetStrengthRate(Define.AttackType attackType)
@@ -87,12 +87,12 @@ namespace SoulRPG
         {
             return attackAttribute switch
             {
-                Define.AttackAttribute.Slash => slashCutRateBuffList.Select(x => x.Item2).Sum(),
-                Define.AttackAttribute.Blow => blowCutRateBuffList.Select(x => x.Item2).Sum(),
-                Define.AttackAttribute.Thrust => thrustCutRateBuffList.Select(x => x.Item2).Sum(),
-                Define.AttackAttribute.Magic => magicCutRateBuffList.Select(x => x.Item2).Sum(),
-                Define.AttackAttribute.Fire => fireCutRateBuffList.Select(x => x.Item2).Sum(),
-                Define.AttackAttribute.Thunder => thunderCutRateBuffList.Select(x => x.Item2).Sum(),
+                Define.AttackAttribute.Slash => slashCutRateBuffList.Select(x => x.rate).Sum(),
+                Define.AttackAttribute.Blow => blowCutRateBuffList.Select(x => x.rate).Sum(),
+                Define.AttackAttribute.Thrust => thrustCutRateBuffList.Select(x => x.rate).Sum(),
+                Define.AttackAttribute.Magic => magicCutRateBuffList.Select(x => x.rate).Sum(),
+                Define.AttackAttribute.Fire => fireCutRateBuffList.Select(x => x.rate).Sum(),
+                Define.AttackAttribute.Thunder => thunderCutRateBuffList.Select(x => x.rate).Sum(),
                 _ => throw new System.ArgumentOutOfRangeException(attackAttribute.ToString())
             };
         }
