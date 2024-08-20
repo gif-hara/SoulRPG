@@ -68,3 +68,4 @@ MonoBehaviour:
   playerBattleCharacterSequences: {fileID: 11400000, guid: a957c01110075ba48abc7780cc38bcfe, type: 2}
   behaviourPointMax: 3
   magicCountMax: 9
+  knifeCountMax: 9
