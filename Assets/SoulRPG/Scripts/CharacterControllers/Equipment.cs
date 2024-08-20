@@ -463,14 +463,14 @@ namespace SoulRPG
             character.Events.OnChangedEquipment.OnNext(Unit.Default);
         }
 
-        public async UniTask BeginBattleAsync(BattleCharacter target, CancellationToken scope)
+        public async UniTask BeginBattleAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
             foreach (var i in accessoryIds)
             {
                 if (i.Value.TryGetMasterDataAccessory(out var accessory))
                 {
                     var container = new Container();
-                    container.Register("Actor", character);
+                    container.Register("Actor", actor);
                     container.Register("Target", target);
                     await new Sequencer(container, accessory.BeginBattleSequences.Sequences).PlayAsync(scope);
                 }

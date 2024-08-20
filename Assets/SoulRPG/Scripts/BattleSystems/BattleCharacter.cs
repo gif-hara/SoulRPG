@@ -195,7 +195,11 @@ namespace SoulRPG
 
         public UniTask BeginBattleAsync(BattleCharacter target)
         {
-            return Equipment.BeginBattleAsync(target, scope.Token);
+            if (Equipment == null)
+            {
+                return UniTask.CompletedTask;
+            }
+            return Equipment.BeginBattleAsync(this, target, scope.Token);
         }
     }
 }

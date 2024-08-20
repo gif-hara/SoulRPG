@@ -29,6 +29,9 @@ namespace SoulRPG.BattleSystems
             var firstActor = Player.BattleStatus.Speed > Enemy.BattleStatus.Speed ? Player : Enemy;
             var secondActor = firstActor == Player ? Enemy : Player;
 
+            await Player.BeginBattleAsync(Enemy);
+            await Enemy.BeginBattleAsync(Player);
+
             while (!IsBattleEnd())
             {
                 await ProcessActorAction(firstActor, secondActor);
