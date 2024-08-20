@@ -91,11 +91,11 @@ namespace SoulRPG
         private readonly ReactiveProperty<int> magicCountReactiveProperty = new(0);
         public ReadOnlyReactiveProperty<int> MagicCountReactiveProperty => magicCountReactiveProperty;
         public int MagicCount => magicCountReactiveProperty.Value;
-        
+
         private readonly ReactiveProperty<int> knifeCountReactiveProperty = new(0);
         public ReadOnlyReactiveProperty<int> KnifeCountReactiveProperty => knifeCountReactiveProperty;
         public int KnifeCount => knifeCountReactiveProperty.Value;
-        
+
         public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
         public float HitPointRate => (float)hitPointReactiveProperty.Value / hitPointMaxReactiveProperty.Value;
@@ -158,15 +158,15 @@ namespace SoulRPG
                 character.InstanceStatus.HitPoint,
                 character.InstanceStatus.StaminaMax,
                 character.InstanceStatus.Stamina,
-                character.GrowthParameter.PhysicalStrength + character.GrowthParameter.Level,
-                character.GrowthParameter.MagicalStrength + character.GrowthParameter.Level,
+                character.GrowthParameter.PhysicalStrength + character.GrowthParameter.Level + character.Equipment.TotalPhysicalAttack,
+                character.GrowthParameter.MagicalStrength + character.GrowthParameter.Level + character.Equipment.TotalMagicalAttack,
                 character.Equipment.TotalSlashCutRate,
                 character.Equipment.TotalBlowCutRate,
                 character.Equipment.TotalThrustCutRate,
                 character.Equipment.TotalMagicCutRate,
                 character.Equipment.TotalFireCutRate,
                 character.Equipment.TotalThunderCutRate,
-                character.GrowthParameter.Speed + character.Equipment.TotalSpeed + character.GrowthParameter.Level,
+                character.GrowthParameter.Speed + character.Equipment.TotalSpeed + character.GrowthParameter.Level + character.Equipment.TotalSpeed,
                 0,
                 TinyServiceLocator.Resolve<GameRule>().BehaviourPointMax,
                 0,
@@ -327,7 +327,7 @@ namespace SoulRPG
                 TinyServiceLocator.Resolve<GameRule>().MagicCountMax
             );
         }
-        
+
         public void AddKnifeCount(int value)
         {
             knifeCountReactiveProperty.Value = Mathf.Clamp(

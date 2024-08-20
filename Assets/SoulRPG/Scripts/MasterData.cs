@@ -562,9 +562,9 @@ namespace SoulRPG
 
             public int Stamina;
 
-            public int PhysicalStrength;
+            public int PhysicalAttack;
 
-            public int MagicalStrength;
+            public int MagicalAttack;
 
             public int Speed;
 

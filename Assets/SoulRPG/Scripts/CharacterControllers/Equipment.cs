@@ -11,6 +11,8 @@ namespace SoulRPG
     /// </summary>
     public sealed class Equipment
     {
+        private readonly Character character;
+
         private readonly List<ReactiveProperty<int>> weaponIds = new();
         public ReadOnlyReactiveProperty<int> WeaponIdAsObservable(int index) => weaponIds[index];
         public int GetWeaponId(int index) => weaponIds[index].Value;
@@ -36,6 +38,70 @@ namespace SoulRPG
         public ReadOnlyReactiveProperty<int> AccessoryIdAsObservable(int index) => accessoryIds[index];
         public int GetAccessoryId(int index) => accessoryIds[index].Value;
         public IEnumerable<int> GetAccessoryIds() => accessoryIds.Select(x => x.Value);
+
+        public int TotalVitality
+        {
+            get
+            {
+                var result = 0;
+                foreach (var i in accessoryIds)
+                {
+                    if (i.Value.TryGetMasterDataAccessory(out var accessory))
+                    {
+                        result += accessory.Vitality;
+                    }
+                }
+                return result;
+            }
+        }
+
+        public int TotalStamina
+        {
+            get
+            {
+                var result = 0;
+                foreach (var i in accessoryIds)
+                {
+                    if (i.Value.TryGetMasterDataAccessory(out var accessory))
+                    {
+                        result += accessory.Stamina;
+                    }
+                }
+                return result;
+            }
+        }
+
+        public int TotalPhysicalAttack
+        {
+            get
+            {
+                var result = 0;
+                foreach (var i in accessoryIds)
+                {
+                    if (i.Value.TryGetMasterDataAccessory(out var accessory))
+                    {
+                        result += accessory.PhysicalAttack;
+                    }
+                }
+                return result;
+            }
+        }
+
+        public int TotalMagicalAttack
+        {
+            get
+            {
+                var result = 0;
+                foreach (var i in accessoryIds)
+                {
+                    if (i.Value.TryGetMasterDataAccessory(out var accessory))
+                    {
+                        result += accessory.MagicalAttack;
+                    }
+                }
+                return result;
+            }
+        }
 
         public float TotalSlashCutRate
         {
@@ -215,6 +281,13 @@ namespace SoulRPG
                 {
                     result += armorLeg.Speed;
                 }
+                foreach (var i in accessoryIds)
+                {
+                    if (i.Value.TryGetMasterDataAccessory(out var accessory))
+                    {
+                        result += accessory.Speed;
+                    }
+                }
                 return result;
             }
         }
@@ -232,8 +305,9 @@ namespace SoulRPG
             }
         }
 
-        public Equipment(EquipmentBlueprint blueprint)
+        public Equipment(Character character, EquipmentBlueprint blueprint)
         {
+            this.character = character;
             for (var i = 0; i < 4; i++)
             {
                 weaponIds.Add(new ReactiveProperty<int>(blueprint.WeaponIds[i]));
@@ -316,6 +390,7 @@ namespace SoulRPG
                 }
             }
             weaponIds[index].Value = weaponId;
+            character.Events.OnChangedEquipment.OnNext(Unit.Default);
         }
 
         public void EquipHead(int headId)
@@ -328,6 +403,7 @@ namespace SoulRPG
             {
                 this.headId.Value = headId;
             }
+            character.Events.OnChangedEquipment.OnNext(Unit.Default);
         }
 
         public void EquipBody(int bodyId)
@@ -340,6 +416,7 @@ namespace SoulRPG
             {
                 this.bodyId.Value = bodyId;
             }
+            character.Events.OnChangedEquipment.OnNext(Unit.Default);
         }
 
         public void EquipArms(int armId)
@@ -352,6 +429,7 @@ namespace SoulRPG
             {
                 this.armId.Value = armId;
             }
+            character.Events.OnChangedEquipment.OnNext(Unit.Default);
         }
 
         public void EquipLegs(int legId)
@@ -364,6 +442,7 @@ namespace SoulRPG
             {
                 this.legId.Value = legId;
             }
+            character.Events.OnChangedEquipment.OnNext(Unit.Default);
         }
 
         public void EquipAccessory(int index, int accessoryId)
@@ -378,6 +457,7 @@ namespace SoulRPG
                 }
             }
             accessoryIds[index].Value = accessoryId;
+            character.Events.OnChangedEquipment.OnNext(Unit.Default);
         }
     }
 }

@@ -1,3 +1,4 @@
+using HK;
 using R3;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
@@ -35,25 +36,44 @@ namespace SoulRPG
 
         public CharacterInstanceStatus(Character character, CharacterGrowthParameter growthParameter)
         {
-            hitPointMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPointMax);
-            hitPointReactiveProperty = new ReactiveProperty<int>(growthParameter.HitPointMax);
+            hitPointMaxReactiveProperty = new ReactiveProperty<int>(GetHitPointMax());
+            hitPointReactiveProperty = new ReactiveProperty<int>(GetHitPointMax());
             guardPointReactiveProperty = new ReactiveProperty<int>(0);
-            staminaMaxReactiveProperty = new ReactiveProperty<int>(growthParameter.StaminaMax);
-            staminaReactiveProperty = new ReactiveProperty<int>(growthParameter.StaminaMax);
+            staminaMaxReactiveProperty = new ReactiveProperty<int>(GetStaminaMax());
+            staminaReactiveProperty = new ReactiveProperty<int>(GetStaminaMax());
             experienceReactiveProperty = new ReactiveProperty<int>(0);
 
             character.Events.OnLevelUp
                 .Subscribe(_ =>
                 {
-                    SetHitPointMax(growthParameter.HitPointMax);
-                    SetStaminaMax(growthParameter.StaminaMax);
+                    SetHitPointMax(GetHitPointMax());
+                    SetStaminaMax(GetStaminaMax());
                 })
                 .RegisterTo(character.LifeScope);
+
+            character.Events.OnChangedEquipment
+                .Subscribe(_ =>
+                {
+                    SetHitPointMax(GetHitPointMax());
+                    SetStaminaMax(GetStaminaMax());
+                })
+                .RegisterTo(character.LifeScope);
+
+            int GetHitPointMax() =>
+                (growthParameter.Vitality + growthParameter.Level + character.Equipment.TotalVitality)
+                * TinyServiceLocator.Resolve<GameRule>().HitPointAmountRate;
+            int GetStaminaMax() =>
+                (growthParameter.Stamina + growthParameter.Level + character.Equipment.TotalStamina)
+                * TinyServiceLocator.Resolve<GameRule>().StaminaAmountRate;
         }
 
         public void SetHitPointMax(int value)
         {
             hitPointMaxReactiveProperty.Value = value;
+            if (hitPointReactiveProperty.Value > value)
+            {
+                hitPointReactiveProperty.Value = value;
+            }
         }
 
         public void SetHitPoint(int value)
@@ -69,6 +89,10 @@ namespace SoulRPG
         public void SetStaminaMax(int value)
         {
             staminaMaxReactiveProperty.Value = value;
+            if (staminaReactiveProperty.Value > value)
+            {
+                staminaReactiveProperty.Value = value;
+            }
         }
 
         public void SetStamina(int value)

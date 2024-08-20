@@ -34,10 +34,6 @@ namespace SoulRPG
         private int speed;
         public int Speed { get => speed; set => speed = value; }
 
-        public int HitPointMax => (vitality + level) * TinyServiceLocator.Resolve<GameRule>().HitPointAmountRate;
-
-        public int StaminaMax => (stamina + level) * TinyServiceLocator.Resolve<GameRule>().StaminaAmountRate;
-
         public CharacterGrowthParameter()
         {
         }
