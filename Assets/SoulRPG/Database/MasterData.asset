@@ -2523,6 +2523,31 @@ MonoBehaviour:
         ItemId: 105003
         Count: 1
         Weight: 100
+      - Id: 0
+        TableId: 1
+        ItemId: 106001
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 1
+        ItemId: 106002
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 1
+        ItemId: 106003
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 1
+        ItemId: 106004
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 1
+        ItemId: 106005
+        Count: 1
+        Weight: 100
     - Key: 2
       Value:
       - Id: 0
