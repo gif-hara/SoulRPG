@@ -24,14 +24,7 @@ MonoBehaviour:
         - evaluator:
             rid: 3561509643546263731
           sequences: {fileID: 11400000, guid: e1dd862fe7cbe4e70b2760f65f34ba52, type: 2}
-        - evaluator:
-            rid: 3561509643546263733
-          sequences: {fileID: 11400000, guid: 5d6b4bcddd80a44e4a072d7e9b039406, type: 2}
     - rid: 3561509643546263731
       type: {class: ContainsDebuff, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
         targetType: 0
-    - rid: 3561509643546263733
-      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
-      data:
-        value: 1

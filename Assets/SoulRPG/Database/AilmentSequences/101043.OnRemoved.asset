@@ -10,9 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: 101031.OnTurnStart.Failure
+  m_Name: 101043.OnRemoved
   m_EditorClassIdentifier: 
-  sequences: []
+  sequences:
+  - rid: 7538228103530414196
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 7538228103530414196
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u72D9\u3044\u6F84\u307E\u3057\u3092\u6B62\u3081\u305F\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 1

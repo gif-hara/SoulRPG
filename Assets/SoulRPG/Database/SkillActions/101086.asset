@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: 101031.OnTurnStart.Success
+  m_Name: 101086
   m_EditorClassIdentifier: 
   sequences:
-  - rid: 3561509643546263734
-  - rid: 3561509643546263735
+  - rid: 7288459789387432183
+  - rid: 3561509643546263744
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 3561509643546263734
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "{Actor}\u306B\u9006\u5883\u306E\u8FFD\u3044\u98A8\u304C\u5439\u3044\u3066\u3044\u308B\u3002"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 1
-    - rid: 3561509643546263735
-      type: {class: AddBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
+    - rid: 3561509643546263744
+      type: {class: AddKnifeCount, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         targetType: 0
         battleCharacterEvaluator:
           rid: -2
-        behaviourPriority: 2
+        value: 2
+    - rid: 7288459789387432183
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u30CA\u30A4\u30D5\u3092\u61D0\u306B\u4ED5\u8FBC\u3093\u3060\u3002"
+        sfxName: Sfx.Message.6
+        ignoreIfCharacterDead: 0

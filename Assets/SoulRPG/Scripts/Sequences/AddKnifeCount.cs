@@ -12,7 +12,7 @@ namespace SoulRPG
     /// 
     /// </summary>
     [Serializable]
-    public sealed class AddMagicCount : ISequence
+    public sealed class AddKnifeCount : ISequence
     {
         [SerializeField]
         private Define.TargetType targetType;
@@ -22,9 +22,6 @@ namespace SoulRPG
 
         [SerializeField]
         private int value;
-        
-        [SerializeField]
-        private bool isSilent;
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
@@ -34,16 +31,11 @@ namespace SoulRPG
             {
                 return;
             }
-
-            if (battleCharacterEvaluator == null ||
-                battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
+            if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
-                t.BattleStatus.AddMagicCount(value);
-                if (!isSilent)
-                {
-                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}の魔カウントが<color=#99FF99>{value}</color>蓄積した", "Sfx.Message.0"));
-                }
+                t.BattleStatus.AddKnifeCount(value);
+                await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}のナイフストックが<color=#99FF99>{value}</color>蓄積した", "Sfx.Message.0"));
             }
         }
     }

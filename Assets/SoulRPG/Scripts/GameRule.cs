@@ -67,6 +67,10 @@ namespace SoulRPG
         [SerializeField]
         private int magicCountMax;
         public int MagicCountMax => magicCountMax;
+        
+        [SerializeField]
+        private int knifeCountMax;
+        public int KnifeCountMax => knifeCountMax;
 
         [Serializable]
         public class ExperienceTableData
