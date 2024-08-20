@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101087
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 7288459789387432183
+  - rid: 9047573786005602757
+  - rid: 9047573786005602755
+  references:
+    version: 2
+    RefIds:
+    - rid: 7288459789387432183
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u4ED5\u8FBC\u3093\u3060\u30CA\u30A4\u30D5\u3092\u4E00\u6589\u306B\u6295\u3052\u653E\u3064\u3002"
+        sfxName: Sfx.Message.1
+        ignoreIfCharacterDead: 0
+    - rid: 9047573786005602755
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 9047573786005602756
+          sequences: {fileID: 11400000, guid: c701970ad5218eb408be7db884b123de, type: 2}
+        - evaluator:
+            rid: 9047573786005602761
+          sequences: {fileID: 11400000, guid: 4ebd3041b168b1b408810cb23246494f, type: 2}
+    - rid: 9047573786005602756
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 9047573786005602759
+        valueResolver:
+          rid: 9047573786005602760
+        compareType: 5
+    - rid: 9047573786005602757
+      type: {class: RegisterContainerKnifeCount, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        keyResolver:
+          rid: 9047573786005602758
+    - rid: 9047573786005602758
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: KnifeCount
+    - rid: 9047573786005602759
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: KnifeCount
+    - rid: 9047573786005602760
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 9047573786005602761
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
