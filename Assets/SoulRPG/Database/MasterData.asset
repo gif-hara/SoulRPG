@@ -2094,7 +2094,7 @@ MonoBehaviour:
       ThumbnailId: 
       Thumbnail: {fileID: 0}
       Description: 
-    - Name: "101046\u5927\u5263"
+    - Name: "\u7126\u708E\u5263"
       Id: 101046
       ThumbnailId: 
       Thumbnail: {fileID: 0}
@@ -3811,168 +3811,168 @@ MonoBehaviour:
     - ItemId: 106001
       Vitality: 1
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106002
       Vitality: 0
       Stamina: 1
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106003
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 1
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106004
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 1
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106005
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 1
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106006
       Vitality: 3
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106007
       Vitality: 0
       Stamina: 3
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106008
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 3
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106009
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 3
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106010
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 3
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106011
       Vitality: 5
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106012
       Vitality: 0
       Stamina: 5
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106013
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 5
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106014
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 5
       Speed: 0
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106015
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 5
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
     - ItemId: 106016
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 1
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106016
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: e8697325db170a94186e9666db2b6a91, type: 2}
     - ItemId: 106017
       Vitality: 1
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106017
       BeginBattleSequences: {fileID: 0}
     - ItemId: 106018
       Vitality: 0
       Stamina: 1
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106018
       BeginBattleSequences: {fileID: 0}
     - ItemId: 106019
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 5
+      MagicalAttack: 5
       Speed: 0
       BeginBattleSequencesId: 106019
       BeginBattleSequences: {fileID: 0}
     - ItemId: 106020
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106020
       BeginBattleSequences: {fileID: 0}
     - ItemId: 106021
       Vitality: 0
       Stamina: 0
-      PhysicalStrength: 0
-      MagicalStrength: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106021
       BeginBattleSequences: {fileID: 0}
@@ -4358,7 +4358,7 @@ MonoBehaviour:
       Name: "\u5C0F\u60AA\u9B54\u306E\u652F\u63F4"
       Description: "\u540D\u3082\u306A\u304D\u5C0F\u3055\u306A\u60AA\u9B54\u304C\u652F\u63F4\u3057\u3066\u304F\u308C\u308B\u3002\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306B\u653B\u6483\u3092\u884C\u3046\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: 57b07487221771a4cb7438d2cf674e1b, type: 2}
       IsDebuff: 0
     - Id: 101046
       Name: "\u86CD\u706B\u5996\u7CBE\u306E\u652F\u63F4"
