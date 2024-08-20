@@ -91,7 +91,11 @@ namespace SoulRPG
         private readonly ReactiveProperty<int> magicCountReactiveProperty = new(0);
         public ReadOnlyReactiveProperty<int> MagicCountReactiveProperty => magicCountReactiveProperty;
         public int MagicCount => magicCountReactiveProperty.Value;
-
+        
+        private readonly ReactiveProperty<int> knifeCountReactiveProperty = new(0);
+        public ReadOnlyReactiveProperty<int> KnifeCountReactiveProperty => knifeCountReactiveProperty;
+        public int KnifeCount => knifeCountReactiveProperty.Value;
+        
         public bool IsDead => hitPointReactiveProperty.Value <= 0;
 
         public float HitPointRate => (float)hitPointReactiveProperty.Value / hitPointMaxReactiveProperty.Value;
