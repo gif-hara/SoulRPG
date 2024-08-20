@@ -134,7 +134,7 @@ namespace SoulRPG
             return PlaySequencesAsync(masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnReset), battleCharacter, null, scope);
         }
 
-        public UniTask OnTakeDamageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        public UniTask OnTakeDamageAsync(BattleCharacter actor, BattleCharacter target, DamageData damageData, CancellationToken scope)
         {
             return PlaySequencesAsync(
                 masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnTakeDamage),
@@ -142,6 +142,7 @@ namespace SoulRPG
                 x =>
                 {
                     x.Register("Target", target);
+                    x.Register("DamageData", damageData);
                 },
                 scope
             );

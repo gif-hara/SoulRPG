@@ -160,22 +160,26 @@ namespace SoulRPG
             this.battleAI = battleAI;
         }
 
-        public UniTask TakeDamageAsync(int damage)
+        public async UniTask TakeDamageAsync(int damage)
         {
+            var canDamage = true;
 #if DEBUG
             var battleDebugData = TinyServiceLocator.Resolve<BattleDebugData>();
             if (BattleStatus.AllyType == Define.AllyType.Player && battleDebugData.IsInvinciblePlayer)
             {
-                return UniTask.CompletedTask;
+                canDamage = false;
             }
             if (BattleStatus.AllyType == Define.AllyType.Enemy && battleDebugData.IsInvincibleEnemy)
             {
-                return UniTask.CompletedTask;
+                canDamage = false;
             }
 #endif
-            BattleStatus.TakeDamage(damage);
+            if (canDamage)
+            {
+                BattleStatus.TakeDamage(damage);
+            }
             Events.OnTakeDamage.OnNext(damage);
-            return sequences.PlayOnTakeDamageAsync(scope.Token);
+            await sequences.PlayOnTakeDamageAsync(scope.Token);
         }
 
         public UniTask OnDeadMessageAsync()
