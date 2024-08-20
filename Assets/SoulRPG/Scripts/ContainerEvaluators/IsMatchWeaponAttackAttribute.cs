@@ -16,8 +16,8 @@ namespace SoulRPG.ContainerEvaluators
 
         public bool Evaluate(Container container)
         {
-            var weaponAttackAttribute = container.Resolve<Define.AttackAttribute>("WeaponAttackAttribute");
-            return attackAttributes.Contains(weaponAttackAttribute);
+            var damageData = container.Resolve<DamageData>("DamageData");
+            return attackAttributes.Contains(damageData.AttackAttribute);
         }
     }
 }
