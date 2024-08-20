@@ -260,6 +260,14 @@ namespace SoulRPG
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.FloorEvents = i.Value;
             }
+            foreach (var i in accessories.List)
+            {
+                i.BeginBattleSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/AccessorySequences/{i.BeginBattleSequencesId}.BeginBattle.asset");
+                if (i.BeginBattleSequences == null)
+                {
+                    Debug.LogWarning($"Not found AccessoryBeginBattle {i.BeginBattleSequencesId}");
+                }
+            }
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -549,6 +557,20 @@ namespace SoulRPG
         public class Accessory
         {
             public int ItemId;
+
+            public int Vitality;
+
+            public int Stamina;
+
+            public int PhysicalStrength;
+
+            public int MagicalStrength;
+
+            public int Speed;
+
+            public string BeginBattleSequencesId;
+
+            public ScriptableSequences BeginBattleSequences;
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Accessory>
