@@ -30,14 +30,14 @@ MonoBehaviour:
     - rid: 3561509643546263741
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        weaponRate: 0.75
+        weaponRate: 1.2
         attackType: 1
         attackAttribute: 4
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u5C0F\u3055\u306A\u661F\u3064\u3076\u3066\u3092\u4E8C\u3064\u4F5C\u308A\u653B\u6483\u3057\u305F\u3002"
-        sfxName: Sfx.Message.1
+        sfxName: Sfx.Message.10
         ignoreIfCharacterDead: 0
     - rid: 7288459789387432197
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
@@ -50,6 +50,6 @@ MonoBehaviour:
     - rid: 7288459789387432198
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        weaponRate: 0.75
+        weaponRate: 1.2
         attackType: 1
         attackAttribute: 4
