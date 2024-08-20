@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
+using UnitySequencerSystem;
 
 namespace SoulRPG
 {
@@ -458,6 +461,20 @@ namespace SoulRPG
             }
             accessoryIds[index].Value = accessoryId;
             character.Events.OnChangedEquipment.OnNext(Unit.Default);
+        }
+
+        public async UniTask BeginBattleAsync(BattleCharacter target, CancellationToken scope)
+        {
+            foreach (var i in accessoryIds)
+            {
+                if (i.Value.TryGetMasterDataAccessory(out var accessory))
+                {
+                    var container = new Container();
+                    container.Register("Actor", character);
+                    container.Register("Target", target);
+                    await new Sequencer(container, accessory.BeginBattleSequences.Sequences).PlayAsync(scope);
+                }
+            }
         }
     }
 }

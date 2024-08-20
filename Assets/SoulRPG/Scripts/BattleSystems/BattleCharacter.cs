@@ -192,5 +192,10 @@ namespace SoulRPG
             BattleStatus.RecoveryHitPoint(recovery);
             return UniTask.CompletedTask;
         }
+
+        public UniTask BeginBattleAsync(BattleCharacter target)
+        {
+            return Equipment.BeginBattleAsync(target, scope.Token);
+        }
     }
 }
