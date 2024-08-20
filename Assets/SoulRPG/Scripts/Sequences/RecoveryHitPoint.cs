@@ -42,8 +42,6 @@ namespace SoulRPG
                 t.RecoveryHitPointAsync(recovery),
                 gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}のHPが<color=#88FF88>{recovery}</color>回復した。", fixedSfxName))
             );
-            var a = t == actor ? target : actor;
-            await t.AilmentController.OnTakeDamageAsync(t, a, cancellationToken);
         }
     }
 }
