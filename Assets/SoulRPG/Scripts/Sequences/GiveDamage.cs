@@ -53,6 +53,7 @@ namespace SoulRPG
             }
 #endif
             container.Register("Damage", damage);
+            container.Register("WeaponAttackAttribute", weapon.AttackAttribute);
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             await UniTask.WhenAll(
                 t.TakeDamageAsync(damage),
