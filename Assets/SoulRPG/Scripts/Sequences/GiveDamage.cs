@@ -53,14 +53,14 @@ namespace SoulRPG
             }
 #endif
             container.Register("Damage", damage);
-            container.Register("WeaponAttackAttribute", weapon.AttackAttribute);
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             await UniTask.WhenAll(
                 t.TakeDamageAsync(damage),
                 gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。", fixedSfxName))
             );
             var a = t == actor ? target : actor;
-            await t.AilmentController.OnTakeDamageAsync(t, a, cancellationToken);
+            var damageData = new DamageData(damage, weapon.AttackAttribute);
+            await t.AilmentController.OnTakeDamageAsync(t, a, damageData, cancellationToken);
             if (giveDamageType == Define.GiveDamageType.Direct && !t.BattleStatus.IsDead)
             {
                 await a.BeginComboAsync(target, cancellationToken);
