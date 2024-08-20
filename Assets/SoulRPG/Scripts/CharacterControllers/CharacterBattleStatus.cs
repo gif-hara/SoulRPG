@@ -327,6 +327,15 @@ namespace SoulRPG
                 TinyServiceLocator.Resolve<GameRule>().MagicCountMax
             );
         }
+        
+        public void AddKnifeCount(int value)
+        {
+            knifeCountReactiveProperty.Value = Mathf.Clamp(
+                knifeCountReactiveProperty.Value + value,
+                0,
+                TinyServiceLocator.Resolve<GameRule>().KnifeCountMax
+            );
+        }
 
         public void ResetMagicCount()
         {
