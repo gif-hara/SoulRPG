@@ -372,7 +372,7 @@ namespace SoulRPG
                             if (i.Value == 0)
                             {
                                 i.Value = x.itemId;
-                                gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。空いてる装飾品枠に装備した。"));
+                                gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。空いてるアクセサリー枠に装備した。"));
                                 break;
                             }
                         }
