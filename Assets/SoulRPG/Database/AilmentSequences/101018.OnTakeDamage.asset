@@ -13,28 +13,18 @@ MonoBehaviour:
   m_Name: 101018.OnTakeDamage
   m_EditorClassIdentifier: 
   sequences:
-  - rid: 7538228103530414196
-  - rid: 9047573724747792491
+  - rid: 9047573785431769158
   references:
     version: 2
     RefIds:
-    - rid: 7538228103530414196
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+    - rid: 9047573785431769158
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F\u76F8\u624B\u306E\u653B\u6483\u306B\u53CD\u6483\u3057\u305F\u3002"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 1
-    - rid: 9047573724747792491
-      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+        elements:
+        - evaluator:
+            rid: 9047573785431769163
+          sequences: {fileID: 11400000, guid: 2f11ef199be335748866b5e12aad0103, type: 2}
+    - rid: 9047573785431769163
+      type: {class: IsMatchAttackAttribute, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
-        damageCalculator:
-          rid: 9047573724747792492
-        targetType: 1
-        giveDamageType: 1
-        sfxName: Sfx.Message.2
-    - rid: 9047573724747792492
-      type: {class: AttackPowerOnly, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
-      data:
-        rate: 1
-        attackType: 0
-        attackAttribute: 2
+        attackAttributes: 000000000100000002000000
