@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101046.OnRemoved
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 7538228103530414196
+  references:
+    version: 2
+    RefIds:
+    - rid: 7538228103530414196
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306B\u6F02\u3063\u3066\u3044\u305F\u86CD\u706B\u5996\u7CBE\u304C\u3069\u3053\u304B\u3078\u6D88\u3048\u305F\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 1
