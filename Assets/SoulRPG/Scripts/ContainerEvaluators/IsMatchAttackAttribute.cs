@@ -9,7 +9,7 @@ namespace SoulRPG.ContainerEvaluators
     /// 
     /// </summary>
     [Serializable]
-    public sealed class IsMatchWeaponAttackAttribute : IContainerEvaluator
+    public sealed class IsMatchAttackAttribute : IContainerEvaluator
     {
         [SerializeField]
         private List<Define.AttackAttribute> attackAttributes;
