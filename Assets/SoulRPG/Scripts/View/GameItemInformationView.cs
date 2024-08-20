@@ -103,7 +103,7 @@ namespace SoulRPG
             }
             else if (item.Id.TryGetMasterDataAccessory(out var accessory))
             {
-                Debug.Log("Accessory");
+                SetupAccessory(accessory);
             }
         }
 
@@ -128,6 +128,16 @@ namespace SoulRPG
             document.Q<HKUIDocument>("Armor.MagicCutRate").Q<TMP_Text>("Value").text = $"{armor.MagicCutRate.ToPercentage()}%";
             document.Q<HKUIDocument>("Armor.FireCutRate").Q<TMP_Text>("Value").text = $"{armor.FireCutRate.ToPercentage()}%";
             document.Q<HKUIDocument>("Armor.ThunderCutRate").Q<TMP_Text>("Value").text = $"{armor.ThunderCutRate.ToPercentage()}%";
+        }
+
+        private void SetupAccessory(MasterData.Accessory accessory)
+        {
+            SetActiveFromEquipmentType(EquipmentType.Accessory);
+            document.Q<HKUIDocument>("Accessory.Vitality").Q<TMP_Text>("Value").text = accessory.Vitality.ToString();
+            document.Q<HKUIDocument>("Accessory.Stamina").Q<TMP_Text>("Value").text = accessory.Stamina.ToString();
+            document.Q<HKUIDocument>("Accessory.PhysicalAttack").Q<TMP_Text>("Value").text = accessory.PhysicalAttack.ToString();
+            document.Q<HKUIDocument>("Accessory.MagicalAttack").Q<TMP_Text>("Value").text = accessory.MagicalAttack.ToString();
+            document.Q<HKUIDocument>("Accessory.Speed").Q<TMP_Text>("Value").text = accessory.Speed.ToString();
         }
 
         private void SetActiveFromEquipmentType(EquipmentType equipmentType)
