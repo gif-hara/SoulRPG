@@ -14,12 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 7538228103530414196
+  - rid: 9047573786005602752
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u72D9\u3044\u3092\u7814\u304E\u6F84\u307E\u3057\u305F\u3002"
         sfxName: Sfx.Message.11
         ignoreIfCharacterDead: 1
+    - rid: 9047573786005602752
+      type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        statusTypes: 0000000001000000
+        buffName: Ailment.101043
+        rateSelector:
+          rid: 9047573786005602753
+        battleCharacterEvaluator:
+          rid: -2
+        buffCondition:
+          rid: -2
+    - rid: 9047573786005602753
+      type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 2.1
