@@ -18,6 +18,7 @@ namespace SoulRPG
         {
             var stateMachine = new TinyStateMachine();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var inputController = TinyServiceLocator.Resolve<InputController>();
             enemy.LifeScope.Register(() =>
             {
                 stateMachine.Dispose();
@@ -148,16 +149,10 @@ namespace SoulRPG
                         }
                     })
                     .RegisterTo(cancellationToken);
-                gameEvents.OnBeginBattle
-                    .Subscribe(_ =>
+                inputController.OnChangeInputType
+                    .Subscribe(x =>
                     {
-                        canMove = false;
-                    })
-                    .RegisterTo(cancellationToken);
-                gameEvents.OnEndBattle
-                    .Subscribe(_ =>
-                    {
-                        canMove = true;
+                        canMove = x == InputController.InputType.InGame;
                     })
                     .RegisterTo(cancellationToken);
                 return UniTask.CompletedTask;

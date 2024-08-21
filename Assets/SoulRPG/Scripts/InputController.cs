@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading;
+using R3;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -15,6 +16,8 @@ namespace SoulRPG
         public InputActions InputActions => inputActions;
 
         private readonly Stack<InputType> inputTypeStack = new();
+
+        public Subject<InputType> OnChangeInputType = new();
 
         public enum InputType
         {
@@ -63,6 +66,7 @@ namespace SoulRPG
                     inputActions.UI.Enable();
                     break;
             }
+            OnChangeInputType.OnNext(inputType);
         }
     }
 }
