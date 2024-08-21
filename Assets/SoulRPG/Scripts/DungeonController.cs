@@ -478,7 +478,6 @@ namespace SoulRPG
             if (battleResult == Define.BattleResult.PlayerWin)
             {
                 character.InstanceStatus.AddExperience(enemyCharacter.BattleStatus.Experience);
-                RemoveFloorData(character.Position);
             }
             else
             {
