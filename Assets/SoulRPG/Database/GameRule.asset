@@ -71,3 +71,4 @@ MonoBehaviour:
   behaviourPointMax: 3
   magicCountMax: 9
   knifeCountMax: 9
+  pinchThreshold: 0.3
