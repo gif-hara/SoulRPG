@@ -10,5 +10,7 @@ namespace SoulRPG
         public readonly Subject<int> OnTakeDamage = new();
 
         public readonly Subject<Unit> OnDeadMessage = new();
+
+        public readonly Subject<MasterData.Ailment> OnAddAilment = new();
     }
 }

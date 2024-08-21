@@ -67,10 +67,12 @@ namespace SoulRPG
             {
                 element = new AilmentElement(masterDataAilmentId, turnCount);
                 elements.Add(element);
+                battleCharacter.Events.OnAddAilment.OnNext(masterDataAilmentId.GetMasterDataAilment());
                 await element.OnAddedAsync(battleCharacter, cancellationTokenSource.Token);
             }
             else if (masterDataAilmentId.GetMasterDataAilment().CanReset)
             {
+                battleCharacter.Events.OnAddAilment.OnNext(masterDataAilmentId.GetMasterDataAilment());
                 await element.OnResetAsync(battleCharacter, turnCount, cancellationTokenSource.Token);
             }
 #if DEBUG
@@ -197,7 +199,7 @@ namespace SoulRPG
             }
             return true;
         }
-        
+
         public async UniTask<int> OnCalculateAilmentTurnCountAsync(int turnCount)
         {
             foreach (var element in elements)
