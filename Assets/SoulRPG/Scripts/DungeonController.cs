@@ -99,9 +99,7 @@ namespace SoulRPG
                 {
                     continue;
                 }
-                var enemy = new Character(masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId.GetMasterDataEnemy());
-                Enemies.Add(enemy);
-                enemy.Warp(position);
+                CreateEnemy(masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId, position);
             }
             foreach (var i in CurrentDungeonSpec.SavePoints)
             {
@@ -121,10 +119,7 @@ namespace SoulRPG
             }
             foreach (var i in CurrentDungeonSpec.FloorEnemyGuaranteeds)
             {
-                var position = new Vector2Int(i.X, i.Y);
-                var enemy = new Character(masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId.GetMasterDataEnemy());
-                Enemies.Add(enemy);
-                enemy.Warp(position);
+                CreateEnemy(masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId, new Vector2Int(i.X, i.Y));
             }
             foreach (var i in CurrentDungeonSpec.FloorEvents)
             {
@@ -182,6 +177,14 @@ namespace SoulRPG
                 itemTables.RemoveAt(lotteryIndex);
                 createdItemIds.Add(itemTable.ItemId);
                 return itemList;
+            }
+
+            void CreateEnemy(int masterDataEnemyId, Vector2Int position)
+            {
+                var enemy = new Character(masterData.Enemies.Get(masterDataEnemyId));
+                Enemies.Add(enemy);
+                enemy.Warp(position);
+                EnemyController.Attach(enemy, player, this);
             }
         }
 
@@ -244,6 +247,11 @@ namespace SoulRPG
             {
                 return UniTask.CompletedTask;
             }
+        }
+
+        public void BeginForceBattle(Character player, Character enemy)
+        {
+            OnEnterEnemyAsync(player, enemy).Forget();
         }
 
         public bool IsExistWall(Vector2Int position, Define.Direction direction)
