@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101078.AfterCommand
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 6411493576093728937
+  - rid: 6411493576093728945
+  references:
+    version: 2
+    RefIds:
+    - rid: 6411493576093728937
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u304C\u653E\u3063\u305F\u6642\u306E\u77E2\u304C{Target}\u3092\u66F4\u306B\u8CAB\u304F\u3002"
+        sfxName: Sfx.Message.15
+        ignoreIfCharacterDead: 1
+    - rid: 6411493576093728945
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 6411493576093728946
+        targetType: 1
+        giveDamageType: 1
+        sfxName: Sfx.Message.2
+    - rid: 6411493576093728946
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 1.6
+        attackType: 0
+        attackAttribute: 0
