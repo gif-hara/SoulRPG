@@ -32,6 +32,8 @@ namespace SoulRPG
 
         public readonly Subject<BattleSystem> OnBeginBattle = new();
 
+        public readonly Subject<Unit> OnEndBattle = new();
+
         public readonly Subject<Sprite> OnRequestChangeEnemySprite = new();
 
         public readonly Subject<(Func<string> messageSelector, CancellationToken scope)> OnRequestShowInputGuideCenter = new();

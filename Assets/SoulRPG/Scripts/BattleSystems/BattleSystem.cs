@@ -45,6 +45,7 @@ namespace SoulRPG.BattleSystems
             Enemy.Dispose();
             cts.Cancel();
             cts.Dispose();
+            gameEvents.OnEndBattle.OnNext(Unit.Default);
             return result;
 
             async UniTask ProcessActorAction(BattleCharacter actor, BattleCharacter target)
