@@ -4506,8 +4506,8 @@ MonoBehaviour:
       BlowCutRate: 0.05
       ThrustCutRate: 0
       MagicCutRate: 0.09
-      FireCutRate: 0.6
-      ThunderCutRate: 0.08
+      FireCutRate: -0.2
+      ThunderCutRate: 0.06
       Speed: 7
       Experience: 170
       BehaviourPoint: 1
@@ -4528,8 +4528,8 @@ MonoBehaviour:
       BlowCutRate: 0.05
       ThrustCutRate: 0
       MagicCutRate: 0.09
-      FireCutRate: 0.6
-      ThunderCutRate: 0.08
+      FireCutRate: 0.12
+      ThunderCutRate: 0.06
       Speed: 7
       Experience: 2055
       BehaviourPoint: 1
