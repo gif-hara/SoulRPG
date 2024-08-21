@@ -52,6 +52,6 @@ MonoBehaviour:
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F\u7570\u56FD\u306E\u6B66\u5668\u3092{Target}\u306B\u5411\u304B\u3063\u3066\u6295\u3052\u305F\u3002"
+        format: "{Actor}\u306F\u5999\u306A\u5F62\u3092\u3057\u305F\u7570\u56FD\u306E\u6B66\u5668\u3092{Target}\u306B\u5411\u304B\u3063\u3066\u6295\u3052\u305F\u3002"
         sfxName: Sfx.Message.3
         ignoreIfCharacterDead: 0
