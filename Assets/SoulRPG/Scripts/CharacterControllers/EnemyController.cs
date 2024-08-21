@@ -27,7 +27,10 @@ namespace SoulRPG
 
             UniTask StateIdleAsync(CancellationToken cancellationToken)
             {
-                player.PositionAsObservable()
+                Observable.Merge(
+                    player.PositionAsObservable().AsUnitObservable(),
+                    gameEvents.OnOpenDoor
+                    )
                     .Subscribe(x =>
                     {
                         if (
