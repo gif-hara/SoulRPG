@@ -29,7 +29,7 @@ MonoBehaviour:
     - rid: 9047573561671680003
       type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        name: Cost
+        name: NeedBehaviourPoint
     - rid: 9047573561671680004
       type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
@@ -37,4 +37,4 @@ MonoBehaviour:
     - rid: 9047573561671680006
       type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        value: Cost
+        value: NeedBehaviourPoint
