@@ -34,6 +34,8 @@ namespace SoulRPG
 
         private readonly HashSet<Vector2Int> reachedPoints = new();
 
+        public readonly List<Character> Enemies = new();
+
         private readonly CancellationTokenSource scope;
 
         private CancellationTokenSource enterScope;
@@ -51,6 +53,7 @@ namespace SoulRPG
 
         public void Setup(string dungeonName, Character player)
         {
+            Enemies.Clear();
             var masterData = TinyServiceLocator.Resolve<MasterData>();
             CurrentDungeon = masterData.Dungeons.Get(dungeonName);
             CurrentDungeonSpec = masterData.DungeonSpecs.Get(CurrentDungeon.name);
@@ -92,12 +95,19 @@ namespace SoulRPG
                 {
                     continue;
                 }
-                var enemyData = new DungeonInstanceFloorData.Enemy
-                (
-                    position,
-                    masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId
-                );
-                FloorDatabase.Add(position, enemyData);
+                if (Enemies.Any(x => x.Position == position))
+                {
+                    continue;
+                }
+                var enemy = new Character(masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId.GetMasterDataEnemy());
+                Enemies.Add(enemy);
+                enemy.Warp(position);
+                // var enemyData = new DungeonInstanceFloorData.Enemy
+                // (
+                //     position,
+                //     masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId
+                // );
+                // FloorDatabase.Add(position, enemyData);
             }
             foreach (var i in CurrentDungeonSpec.SavePoints)
             {
@@ -190,11 +200,15 @@ namespace SoulRPG
             enterScope?.Dispose();
             enterScope = new CancellationTokenSource();
             AddReachedPoint(character);
+            var enemy = Enemies.Find(x => x.Position == character.Position);
+            if (enemy != null)
+            {
+                return OnEnterEnemyAsync(character, enemy);
+            }
             if (FloorDatabase.TryGetValue(character.Position, out var floorData))
             {
                 return floorData switch
                 {
-                    DungeonInstanceFloorData.Enemy enemyData => OnEnterEnemyAsync(character, enemyData),
                     DungeonInstanceFloorData.Item itemData => OnEnterItemAsync(itemData),
                     DungeonInstanceFloorData.SavePoint savePointData => OnEnterSavePointAsync(savePointData),
                     DungeonInstanceFloorData.SequenceEvent sequenceData => OnEnterSequenceEventAsync(sequenceData),
@@ -339,12 +353,13 @@ namespace SoulRPG
             EnterAsync(character).Forget();
         }
 
-        private async UniTask OnEnterEnemyAsync(Character character, DungeonInstanceFloorData.Enemy enemyData)
+        private async UniTask OnEnterEnemyAsync(Character player, Character enemy)
         {
-            var result = await BeginBattleAsync(character, enemyData.EnemyId.GetMasterDataEnemy());
+            var result = await BeginBattleAsync(player, enemy.MasterDataEnemy);
             if (result == Define.BattleResult.PlayerWin)
             {
-                TinyServiceLocator.Resolve<GameEvents>().OnAcquiredFloorData.OnNext(enemyData);
+                Enemies.Remove(enemy);
+                enemy.Dispose();
             }
         }
 

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
@@ -121,8 +120,50 @@ namespace SoulRPG
                 }
             }
 
-            CreateFloorEventObjects();
-            CreateWallEventObjects();
+            foreach (var (position, floorData) in dungeonController.FloorDatabase)
+            {
+                var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{floorData.ViewName}"), tipsParent.transform);
+                eventObject.anchoredPosition = new Vector2(position.x * tipSize.x, position.y * tipSize.y);
+                eventObject.sizeDelta = tipSize;
+                maptipFloorEventObjects.Add(floorData, eventObject.gameObject);
+            }
+            foreach (var i in TinyServiceLocator.Resolve<DungeonController>().WallDatabase)
+            {
+                var isHorizontal = i.Key.From.y == i.Key.To.y;
+                var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.Value.EventType}"), tipsParent.transform);
+                maptipWallEventObjects.Add(i.Value, element);
+                var elementTransform = element.transform as RectTransform;
+                elementTransform.anchoredPosition = new Vector2(i.Key.From.x * tipSize.x, i.Key.From.y * tipSize.y);
+                elementTransform.sizeDelta = tipSize;
+                elementTransform.rotation = Quaternion.Euler(0, 0, isHorizontal ? 0 : 90);
+                i.Value.IsOpenReactiveProperty
+                    .Subscribe(x =>
+                    {
+                        element.Q("Open").SetActive(x);
+                        element.Q("Close").SetActive(!x);
+                    })
+                    .RegisterTo(scope);
+            }
+            foreach (var i in dungeonController.Enemies)
+            {
+                var characterObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Enemy"), tipsParent.transform);
+                characterObject.anchoredPosition = new Vector2(i.Position.x * tipSize.x, i.Position.y * tipSize.y);
+                characterObject.sizeDelta = tipSize;
+                i.PositionAsObservable()
+                    .Subscribe(x =>
+                    {
+                        characterObject.anchoredPosition = new Vector2(x.x * tipSize.x, x.y * tipSize.y);
+                    })
+                    .RegisterTo(i.LifeScope);
+                i.LifeScope.Register(() =>
+                {
+                    if (characterObject == null)
+                    {
+                        return;
+                    }
+                    Object.Destroy(characterObject.gameObject);
+                });
+            }
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAddReachedPoint
                 .Subscribe(RemoveShadow)
@@ -136,38 +177,6 @@ namespace SoulRPG
                         maptipFloorEventObjects.Remove(x);
                     }
                 });
-
-            void CreateFloorEventObjects()
-            {
-                foreach (var (position, floorData) in dungeonController.FloorDatabase)
-                {
-                    var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{floorData.ViewName}"), tipsParent.transform);
-                    eventObject.anchoredPosition = new Vector2(position.x * tipSize.x, position.y * tipSize.y);
-                    eventObject.sizeDelta = tipSize;
-                    maptipFloorEventObjects.Add(floorData, eventObject.gameObject);
-                }
-            }
-
-            void CreateWallEventObjects()
-            {
-                foreach (var i in TinyServiceLocator.Resolve<DungeonController>().WallDatabase)
-                {
-                    var isHorizontal = i.Key.From.y == i.Key.To.y;
-                    var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.Value.EventType}"), tipsParent.transform);
-                    maptipWallEventObjects.Add(i.Value, element);
-                    var elementTransform = element.transform as RectTransform;
-                    elementTransform.anchoredPosition = new Vector2(i.Key.From.x * tipSize.x, i.Key.From.y * tipSize.y);
-                    elementTransform.sizeDelta = tipSize;
-                    elementTransform.rotation = Quaternion.Euler(0, 0, isHorizontal ? 0 : 90);
-                    i.Value.IsOpenReactiveProperty
-                        .Subscribe(x =>
-                        {
-                            element.Q("Open").SetActive(x);
-                            element.Q("Close").SetActive(!x);
-                        })
-                        .RegisterTo(scope);
-                }
-            }
 
             void RemoveShadow(Vector2Int position)
             {
@@ -199,8 +208,45 @@ namespace SoulRPG
                 wallObject.rotation = Quaternion.Euler(0, isHorizontal ? 0 : -90, 0);
             }
 
-            CreateFloorEventObjects();
-            CreateWallEventObjects();
+            foreach (var (position, floorData) in dungeonController.FloorDatabase)
+            {
+                var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{floorData.ViewName}"), dungeonDocument.transform);
+                eventObject.position = new Vector3(position.x, 0, position.y);
+                dungeonFloorEventObjects.Add(floorData, eventObject.gameObject);
+            }
+            foreach (var i in dungeonController.WallDatabase)
+            {
+                var isHorizontal = i.Key.From.y == i.Key.To.y;
+                var element = Object.Instantiate(dungeonDocument.Q<HKUIDocument>($"Dungeon.Wall.Event.{i.Value.EventType}"), dungeonDocument.transform);
+                dungeonWallEventObjects.Add(i.Value, element);
+                element.transform.position = new Vector3(i.Key.From.x, 0, i.Key.From.y);
+                element.transform.rotation = Quaternion.Euler(0, isHorizontal ? 0 : -90, 0);
+                i.Value.IsOpenReactiveProperty
+                    .Subscribe(x =>
+                    {
+                        element.Q("Open").SetActive(x);
+                        element.Q("Close").SetActive(!x);
+                    });
+            }
+            foreach (var i in dungeonController.Enemies)
+            {
+                var characterObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Enemy"), dungeonDocument.transform);
+                characterObject.position = new Vector3(i.Position.x, 0, i.Position.y);
+                i.PositionAsObservable()
+                    .Subscribe(x =>
+                    {
+                        characterObject.position = new Vector3(x.x, 0, x.y);
+                    })
+                    .RegisterTo(i.LifeScope);
+                i.LifeScope.Register(() =>
+                {
+                    if (characterObject == null)
+                    {
+                        return;
+                    }
+                    Object.Destroy(characterObject.gameObject);
+                });
+            }
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAcquiredFloorData
                 .Subscribe(x =>
@@ -211,32 +257,6 @@ namespace SoulRPG
                         dungeonFloorEventObjects.Remove(x);
                     }
                 });
-            void CreateFloorEventObjects()
-            {
-                foreach (var (position, floorData) in dungeonController.FloorDatabase)
-                {
-                    var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{floorData.ViewName}"), dungeonDocument.transform);
-                    eventObject.position = new Vector3(position.x, 0, position.y);
-                    dungeonFloorEventObjects.Add(floorData, eventObject.gameObject);
-                }
-            }
-            void CreateWallEventObjects()
-            {
-                foreach (var i in TinyServiceLocator.Resolve<DungeonController>().WallDatabase)
-                {
-                    var isHorizontal = i.Key.From.y == i.Key.To.y;
-                    var element = Object.Instantiate(dungeonDocument.Q<HKUIDocument>($"Dungeon.Wall.Event.{i.Value.EventType}"), dungeonDocument.transform);
-                    dungeonWallEventObjects.Add(i.Value, element);
-                    element.transform.position = new Vector3(i.Key.From.x, 0, i.Key.From.y);
-                    element.transform.rotation = Quaternion.Euler(0, isHorizontal ? 0 : -90, 0);
-                    i.Value.IsOpenReactiveProperty
-                        .Subscribe(x =>
-                        {
-                            element.Q("Open").SetActive(x);
-                            element.Q("Close").SetActive(!x);
-                        });
-                }
-            }
         }
 
         private void SetupMessage(

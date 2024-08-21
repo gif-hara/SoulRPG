@@ -45,6 +45,10 @@ namespace SoulRPG.CharacterControllers
 
         public string Name { get; }
 
+        public Define.AllyType AllyType { get; }
+
+        public MasterData.Enemy MasterDataEnemy { get; }
+
         private readonly CancellationTokenSource lifeScopeSource = new();
 
         public CancellationToken LifeScope => lifeScopeSource.Token;
@@ -58,6 +62,13 @@ namespace SoulRPG.CharacterControllers
             Inventory = new Inventory(this);
             Attribute = attribute;
             Equipment.BeginObserve(this);
+            AllyType = Define.AllyType.Player;
+        }
+
+        public Character(MasterData.Enemy masterDataEnemy)
+        {
+            MasterDataEnemy = masterDataEnemy;
+            AllyType = Define.AllyType.Enemy;
         }
 
         public void Move(Vector2Int velocity)
