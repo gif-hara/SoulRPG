@@ -104,6 +104,7 @@ namespace SoulRPG
 
             UniTask StateChaseAsync(CancellationToken cancellationToken)
             {
+                AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get("Sfx.FindPlayer.0").Clip);
                 var canMove = true;
                 Observable.Interval(TimeSpan.FromSeconds(enemy.MasterDataEnemy.MoveIntervalSeconds))
                     .Subscribe(_ =>
@@ -130,6 +131,12 @@ namespace SoulRPG
                         {
                             directions.Add(Define.Direction.Down);
                         }
+                        if (directions.Count == 0)
+                        {
+                            return;
+                        }
+                        var walkId = UnityEngine.Random.Range(0, 2);
+                        AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get($"Sfx.Walk.{walkId}").Clip);
                         var direction = directions[UnityEngine.Random.Range(0, directions.Count)];
                         enemy.Move(direction.ToVector2Int());
                         if (enemy.Position == player.Position)
