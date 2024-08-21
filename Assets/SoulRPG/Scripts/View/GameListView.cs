@@ -33,6 +33,10 @@ namespace SoulRPG
             var elementCount = Mathf.FloorToInt(parentSize / elementSize);
             var pageIndex = 0;
             var pageMax = elementActivateActions.Count() / elementCount;
+            if (elementActivateActions.Count() % elementCount == 0)
+            {
+                pageMax--;
+            }
             var elementIndex = 0;
             var elements = new List<HKUIDocument>();
             var emptyArea = document.TryQ("Area.Empty");
