@@ -38,6 +38,8 @@ namespace SoulRPG
 
         public readonly Subject<(Func<string> messageSelector, CancellationToken scope)> OnRequestShowInputGuideCenter = new();
 
+        public readonly Subject<Unit> OnOpenDoor = new();
+
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();
 

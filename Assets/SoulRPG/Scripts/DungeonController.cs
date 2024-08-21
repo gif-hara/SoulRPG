@@ -406,21 +406,23 @@ namespace SoulRPG
         {
             var isPositiveAccess = wallEvent.IsPositiveAccess(character.Direction);
             var condition = isPositiveAccess ? wallEvent.PositiveSideCondition : wallEvent.NegativeSideCondition;
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             switch (condition)
             {
                 case "None":
                     if (!wallEvent.IsOpen)
                     {
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.OpenDoor.0"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.OpenDoor.0"));
                         wallEvent.Open();
                         AddReachedPoint(character);
+                        gameEvents.OnOpenDoor.OnNext(Unit.Default);
                         await view.OnOpenDoorAsync(wallEvent);
                     }
                     break;
                 case "Lock":
                     if (!wallEvent.IsOpen)
                     {
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("こちらからは開かないようだ", "Sfx.Message.0"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("こちらからは開かないようだ", "Sfx.Message.0"));
                     }
                     break;
                 case "Item":
@@ -430,11 +432,11 @@ namespace SoulRPG
                         {
                             if (!character.Inventory.HasItem(i))
                             {
-                                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("鍵が必要のようだ", "Sfx.Message.0"));
+                                gameEvents.OnRequestShowMessage.OnNext(new("鍵が必要のようだ", "Sfx.Message.0"));
                                 return;
                             }
                         }
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.OpenDoor.0"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.OpenDoor.0"));
                         wallEvent.Open();
                         AddReachedPoint(character);
                         await view.OnOpenDoorAsync(wallEvent);
