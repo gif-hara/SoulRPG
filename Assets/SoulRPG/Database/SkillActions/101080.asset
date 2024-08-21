@@ -39,7 +39,7 @@ MonoBehaviour:
     - rid: 3561509643546263774
       type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        targetType: 1
+        targetType: 0
         masterDataAilmentId: 101013
         turnCount: 2
         battleCharacterEvaluator:
@@ -54,5 +54,5 @@ MonoBehaviour:
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306F\u6B8B\u50CF\u3092\u4F5C\u308A\u4E0A\u3052\u3066\u653B\u6483\u3057\u305F\u3002"
-        sfxName: Sfx.Message.10
+        sfxName: Sfx.Message.6
         ignoreIfCharacterDead: 0
