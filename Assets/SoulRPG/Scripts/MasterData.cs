@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using R3;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -81,6 +83,16 @@ namespace SoulRPG
         [ContextMenu("Update")]
         private async void UpdateMasterData()
         {
+            var startTime = DateTime.Now;
+            var progressId = UnityEditor.Progress.Start("MasterData Update");
+            var scope = new CancellationTokenSource();
+            Observable.EveryUpdate()
+                .Subscribe(_ =>
+                {
+                    var elapsed = DateTime.Now - startTime;
+                    UnityEditor.Progress.Report(progressId, (float)elapsed.TotalSeconds / 10.0f);
+                })
+                .RegisterTo(scope.Token);
             Debug.Log("Begin MasterData Update");
             var dungeonNames = new[]
             {
@@ -271,6 +283,9 @@ namespace SoulRPG
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
+            UnityEditor.Progress.Remove(progressId);
+            scope.Cancel();
+            scope.Dispose();
         }
 #endif
 
