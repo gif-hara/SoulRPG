@@ -4449,6 +4449,8 @@ MonoBehaviour:
       ThumbnailId: 0
       BattleBgmId: 0
       SequencesId: 0
+      FieldOfVision: 3
+      MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
       AISequences: {fileID: 11400000, guid: f9317d34f60914b29ac4199dffd411f3, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
@@ -4471,6 +4473,8 @@ MonoBehaviour:
       ThumbnailId: 0
       BattleBgmId: 0
       SequencesId: 0
+      FieldOfVision: 3
+      MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
       AISequences: {fileID: 11400000, guid: ca3b96fb5dfd942ed98c7c1922217be2, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
@@ -4493,6 +4497,8 @@ MonoBehaviour:
       ThumbnailId: 17
       BattleBgmId: 0
       SequencesId: 0
+      FieldOfVision: 3
+      MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: 53936c1bee7e7e84e8521ab1554671cd, type: 3}
       AISequences: {fileID: 11400000, guid: 99bbd1b817bfe4757befd21bd8db65f0, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
@@ -4515,6 +4521,8 @@ MonoBehaviour:
       ThumbnailId: 18
       BattleBgmId: 0
       SequencesId: 0
+      FieldOfVision: 3
+      MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: 47836f815c556844dae05db1f87b3f9e, type: 3}
       AISequences: {fileID: 11400000, guid: 9bf75c17ce2c1407ebb81d07c8e59355, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
@@ -4537,6 +4545,8 @@ MonoBehaviour:
       ThumbnailId: 20
       BattleBgmId: 1
       SequencesId: 10105
+      FieldOfVision: 3
+      MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: b734fc263697e48049f437555386150e, type: 3}
       AISequences: {fileID: 11400000, guid: 081d14a8dd78045c9a95ca9c1f7ff551, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 4f081eff7afdef04da4b3efa8e407c0e, type: 2}
@@ -4559,6 +4569,8 @@ MonoBehaviour:
       ThumbnailId: 0
       BattleBgmId: 0
       SequencesId: 0
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
       AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}

@@ -635,6 +635,10 @@ namespace SoulRPG
 
             public string SequencesId;
 
+            public int FieldOfVision;
+
+            public float MoveIntervalSeconds;
+
             public Sprite Thumbnail;
 
             public ScriptableSequences AISequences;
