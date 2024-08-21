@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2155894977563045692, guid: 68aa9474f6900644da42d4dddebf0acc, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2155894977563045692, guid: 68aa9474f6900644da42d4dddebf0acc, type: 3}
       propertyPath: m_SortingLayer
@@ -213,6 +213,11 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2217822706400270882, guid: 68aa9474f6900644da42d4dddebf0acc, type: 3}
   m_PrefabInstance: {fileID: 316645460467892723}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2523742384970962842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2838060572017645161, guid: 68aa9474f6900644da42d4dddebf0acc, type: 3}
+  m_PrefabInstance: {fileID: 316645460467892723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4902132249909033918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4639600494178581069, guid: 68aa9474f6900644da42d4dddebf0acc, type: 3}
@@ -226,6 +231,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5863839850100362306}
     m_Modifications:
+    - target: {fileID: 2155894977563045692, guid: f7feca70aeab4444183611a251c64005, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2155894977563045692, guid: f7feca70aeab4444183611a251c64005, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -322,6 +331,11 @@ PrefabInstance:
 --- !u!198 &912773825430373322 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2217822706400270882, guid: f7feca70aeab4444183611a251c64005, type: 3}
+  m_PrefabInstance: {fileID: 1327885645137697256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3823355941431185281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2838060572017645161, guid: f7feca70aeab4444183611a251c64005, type: 3}
   m_PrefabInstance: {fileID: 1327885645137697256}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5912862252934390693 stripped
@@ -457,7 +471,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0bca0e48c915f4eae5e0e88e6c9227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elements: []
+  elements:
+  - document: {fileID: 2523742384970962842}
+    overrideName: 
+  - document: {fileID: 3823355941431185281}
+    overrideName: 
 --- !u!224 &6798720951424866096 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1631187264992967448, guid: e54d68a6d5884844e820d71b07d0449a, type: 3}
