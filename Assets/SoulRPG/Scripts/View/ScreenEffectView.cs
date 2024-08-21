@@ -16,7 +16,14 @@ namespace SoulRPG
         public ScreenEffectView(HKUIDocument documentPrefab, CancellationToken scope)
         {
             document = Object.Instantiate(documentPrefab);
-            scope.Register(() => Object.Destroy(document.gameObject));
+            scope.Register(() =>
+            {
+                if (document == null)
+                {
+                    return;
+                }
+                Object.Destroy(document.gameObject);
+            });
         }
 
         public void Subscribe(BattleCharacter battleCharacter, CancellationToken scope)
