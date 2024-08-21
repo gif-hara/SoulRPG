@@ -102,12 +102,6 @@ namespace SoulRPG
                 var enemy = new Character(masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId.GetMasterDataEnemy());
                 Enemies.Add(enemy);
                 enemy.Warp(position);
-                // var enemyData = new DungeonInstanceFloorData.Enemy
-                // (
-                //     position,
-                //     masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId
-                // );
-                // FloorDatabase.Add(position, enemyData);
             }
             foreach (var i in CurrentDungeonSpec.SavePoints)
             {
@@ -128,12 +122,9 @@ namespace SoulRPG
             foreach (var i in CurrentDungeonSpec.FloorEnemyGuaranteeds)
             {
                 var position = new Vector2Int(i.X, i.Y);
-                var floorData = new DungeonInstanceFloorData.Enemy
-                (
-                    position,
-                    masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId
-                );
-                AddFloorData(position, floorData);
+                var enemy = new Character(masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId.GetMasterDataEnemy());
+                Enemies.Add(enemy);
+                enemy.Warp(position);
             }
             foreach (var i in CurrentDungeonSpec.FloorEvents)
             {
