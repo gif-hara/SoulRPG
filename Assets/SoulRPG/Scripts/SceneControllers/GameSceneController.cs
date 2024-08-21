@@ -128,6 +128,8 @@ namespace SoulRPG.SceneControllers
                 })
                 .RegisterTo(destroyCancellationToken);
             gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
+            var screenEffectView = new ScreenEffectView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.ScreenEffect"), destroyCancellationToken);
+            TinyServiceLocator.Register(screenEffectView);
 #if DEBUG
             var battleDebugData = new BattleDebugData();
             TinyServiceLocator.Register(battleDebugData);

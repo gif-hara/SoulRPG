@@ -9,11 +9,11 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    public sealed class AilmentEffectView
+    public sealed class ScreenEffectView
     {
         private readonly HKUIDocument document;
 
-        public AilmentEffectView(HKUIDocument documentPrefab, CancellationToken scope)
+        public ScreenEffectView(HKUIDocument documentPrefab, CancellationToken scope)
         {
             document = Object.Instantiate(documentPrefab);
             scope.Register(() => Object.Destroy(document.gameObject));
