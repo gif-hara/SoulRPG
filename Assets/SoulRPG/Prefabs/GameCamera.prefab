@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   document: {fileID: 6019146999050475882}
+  pinchPostProcessVolume: {fileID: 1035813531505184796}
 --- !u!1 &4570697359188463075
 GameObject:
   m_ObjectHideFlags: 0

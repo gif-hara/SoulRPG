@@ -34,6 +34,8 @@ namespace SoulRPG
         public ReadOnlyReactiveProperty<int> ExperienceAsObservable() => experienceReactiveProperty;
         public int Experience => experienceReactiveProperty.Value;
 
+        public bool IsPinch => (HitPoint / HitPointMax) < TinyServiceLocator.Resolve<GameRule>().PinchThreshold;
+
         public CharacterInstanceStatus(Character character, CharacterGrowthParameter growthParameter)
         {
             hitPointMaxReactiveProperty = new ReactiveProperty<int>(GetHitPointMax());

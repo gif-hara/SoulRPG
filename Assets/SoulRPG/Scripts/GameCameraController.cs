@@ -1,7 +1,9 @@
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
+using SoulRPG.CharacterControllers;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 namespace SoulRPG
 {
@@ -13,7 +15,10 @@ namespace SoulRPG
         [SerializeField]
         private HKUIDocument document;
 
-        void Start()
+        [SerializeField]
+        private PostProcessVolume pinchPostProcessVolume;
+
+        public void Setup(Character player)
         {
             TinyServiceLocator.Resolve<GameEvents>().OnBeginBattle
                 .Subscribe(x =>
@@ -26,6 +31,22 @@ namespace SoulRPG
                         .RegisterTo(destroyCancellationToken);
                 })
                 .RegisterTo(destroyCancellationToken);
+            var isPinch = player.InstanceStatus.IsPinch;
+            Observable.Merge(
+                player.InstanceStatus.HitPointAsObservable(),
+                player.InstanceStatus.HitPointMaxAsObservable()
+            )
+            .Subscribe(x =>
+            {
+                var newIsPinch = player.InstanceStatus.IsPinch;
+                if (isPinch != newIsPinch)
+                {
+                    pinchPostProcessVolume.weight = newIsPinch ? 1.0f : 0.0f;
+                    isPinch = newIsPinch;
+                }
+            })
+            .RegisterTo(destroyCancellationToken);
+            pinchPostProcessVolume.weight = isPinch ? 1.0f : 0.0f;
         }
     }
 }
