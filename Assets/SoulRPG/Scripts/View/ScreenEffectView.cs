@@ -11,17 +11,23 @@ namespace SoulRPG
     /// </summary>
     public sealed class AilmentEffectView
     {
-        public static async UniTask OpenAsync(HKUIDocument documentPrefab, BattleCharacter battleCharacter, CancellationToken scope)
+        private readonly HKUIDocument document;
+
+        public AilmentEffectView(HKUIDocument documentPrefab, CancellationToken scope)
         {
-            var document = Object.Instantiate(documentPrefab);
+            document = Object.Instantiate(documentPrefab);
+            scope.Register(() => Object.Destroy(document.gameObject));
+        }
+
+        public void Subscribe(BattleCharacter battleCharacter, CancellationToken scope)
+        {
             battleCharacter.Events.OnAddAilment
                 .Subscribe(document, (x, _document) =>
                 {
                     var name = !x.IsDebuff ? "PowerUp" : "PowerDown";
                     _document.Q<ParticleSystem>(name).Play();
-                });
-            await scope.WaitUntilCanceled();
-            Object.Destroy(document.gameObject);
+                })
+                .RegisterTo(scope);
         }
     }
 }
