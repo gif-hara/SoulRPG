@@ -53,6 +53,7 @@ namespace SoulRPG
 
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
         {
+            turnCount = await OnCalculateAilmentTurnCountAsync(turnCount);
             foreach (var i in elements)
             {
                 var canAdd = await i.CanAddAilmentAsync(battleCharacter, masterDataAilmentId, cancellationTokenSource.Token);
@@ -195,6 +196,15 @@ namespace SoulRPG
                 }
             }
             return true;
+        }
+        
+        public async UniTask<int> OnCalculateAilmentTurnCountAsync(int turnCount)
+        {
+            foreach (var element in elements)
+            {
+                turnCount = await element.OnCalculateAilmentTurnCountAsync(battleCharacter, turnCount, cancellationTokenSource.Token);
+            }
+            return turnCount;
         }
 
 #if DEBUG

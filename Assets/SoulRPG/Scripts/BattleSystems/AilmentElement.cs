@@ -201,6 +201,19 @@ namespace SoulRPG
             ).ContinueWith(x => x == null || x.Resolve<bool>("CanExecutableTurn"));
         }
 
+        public UniTask<int> OnCalculateAilmentTurnCountAsync(BattleCharacter battleCharacter, int turnCount, CancellationToken scope)
+        {
+            return PlaySequencesAsync(
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnCalculateAilmentTurnCount),
+                battleCharacter,
+                x =>
+                {
+                    x.Register("TurnCount", turnCount);
+                },
+                scope
+            ).ContinueWith(x => x?.Resolve<int>("TurnCount") ?? turnCount);
+        }
+
         public bool IsEnd()
         {
             if (turnCount == -1)

@@ -35,6 +35,8 @@ namespace SoulRPG
         UniTask OnTurnStartAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
 
         UniTask<bool> CanExecutableTurnOpponentAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
+        
+        UniTask<int> OnCalculateAilmentTurnCountAsync(BattleCharacter battleCharacter, int turnCount, CancellationToken scope);
 
         bool IsEnd();
 

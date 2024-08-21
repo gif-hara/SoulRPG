@@ -111,6 +111,7 @@ namespace SoulRPG
             OnBehaviourEnd = 12,
             OnTurnStart = 13,
             CanExecutableTurnOpponent = 14,
+            OnCalculateAilmentTurnCount = 15,
         }
 
         public enum AllyType
