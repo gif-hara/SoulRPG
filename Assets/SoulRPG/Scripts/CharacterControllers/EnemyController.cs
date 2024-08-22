@@ -118,7 +118,7 @@ namespace SoulRPG
                             return;
                         }
                         var path = dungeonController.FindPath(enemy.Position, player.Position);
-                        if (path.Count > 2)
+                        if (path?.Count > 2)
                         {
                             var walkId = UnityEngine.Random.Range(0, 2);
                             AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get($"Sfx.Walk.{walkId}").Clip);
