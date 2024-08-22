@@ -65,6 +65,15 @@ namespace SoulRPG
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleMiniMapView"",
+                    ""type"": ""Button"",
+                    ""id"": ""a1dc2fb7-fafd-4164-9b4a-82ab68d9f7b0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -230,6 +239,28 @@ namespace SoulRPG
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse;Gamepad"",
                     ""action"": ""ToMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""969dd4b7-baff-4b04-bc87-2a6838d59d90"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleMiniMapView"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""133c3599-e87b-413d-bb5f-ea4c5128077f"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleMiniMapView"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -634,6 +665,7 @@ namespace SoulRPG
             m_InGame_Shift = m_InGame.FindAction("Shift", throwIfNotFound: true);
             m_InGame_Interact = m_InGame.FindAction("Interact", throwIfNotFound: true);
             m_InGame_ToMenu = m_InGame.FindAction("ToMenu", throwIfNotFound: true);
+            m_InGame_ToggleMiniMapView = m_InGame.FindAction("ToggleMiniMapView", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -717,6 +749,7 @@ namespace SoulRPG
         private readonly InputAction m_InGame_Shift;
         private readonly InputAction m_InGame_Interact;
         private readonly InputAction m_InGame_ToMenu;
+        private readonly InputAction m_InGame_ToggleMiniMapView;
         public struct InGameActions
         {
             private @InputActions m_Wrapper;
@@ -725,6 +758,7 @@ namespace SoulRPG
             public InputAction @Shift => m_Wrapper.m_InGame_Shift;
             public InputAction @Interact => m_Wrapper.m_InGame_Interact;
             public InputAction @ToMenu => m_Wrapper.m_InGame_ToMenu;
+            public InputAction @ToggleMiniMapView => m_Wrapper.m_InGame_ToggleMiniMapView;
             public InputActionMap Get() { return m_Wrapper.m_InGame; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -746,6 +780,9 @@ namespace SoulRPG
                 @ToMenu.started += instance.OnToMenu;
                 @ToMenu.performed += instance.OnToMenu;
                 @ToMenu.canceled += instance.OnToMenu;
+                @ToggleMiniMapView.started += instance.OnToggleMiniMapView;
+                @ToggleMiniMapView.performed += instance.OnToggleMiniMapView;
+                @ToggleMiniMapView.canceled += instance.OnToggleMiniMapView;
             }
 
             private void UnregisterCallbacks(IInGameActions instance)
@@ -762,6 +799,9 @@ namespace SoulRPG
                 @ToMenu.started -= instance.OnToMenu;
                 @ToMenu.performed -= instance.OnToMenu;
                 @ToMenu.canceled -= instance.OnToMenu;
+                @ToggleMiniMapView.started -= instance.OnToggleMiniMapView;
+                @ToggleMiniMapView.performed -= instance.OnToggleMiniMapView;
+                @ToggleMiniMapView.canceled -= instance.OnToggleMiniMapView;
             }
 
             public void RemoveCallbacks(IInGameActions instance)
@@ -921,6 +961,7 @@ namespace SoulRPG
             void OnShift(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
             void OnToMenu(InputAction.CallbackContext context);
+            void OnToggleMiniMapView(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {
