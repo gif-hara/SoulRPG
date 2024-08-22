@@ -329,6 +329,7 @@ namespace SoulRPG
         private async UniTask OnInteractItemAsync(Character character, DungeonInstanceFloorData.Item itemData)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            gameEvents.OnRequestChangeMiniMapType.OnNext(Define.MiniMapType.Default);
             gameEvents.OnAcquiredFloorData.OnNext(itemData);
             RemoveFloorData(character.Position);
             foreach (var (item, count) in itemData.Items)
