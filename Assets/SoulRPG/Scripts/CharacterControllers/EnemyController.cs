@@ -117,35 +117,17 @@ namespace SoulRPG
                         {
                             return;
                         }
-                        var diff = player.Position - enemy.Position;
-                        var directions = new List<Define.Direction>();
-                        if (diff.x > 0 && dungeonController.CanMove(enemy.Position, Define.Direction.Right))
+                        var path = dungeonController.FindPath(enemy.Position, player.Position);
+                        if (path.Count > 2)
                         {
-                            directions.Add(Define.Direction.Right);
-                        }
-                        else if (diff.x < 0 && dungeonController.CanMove(enemy.Position, Define.Direction.Left))
-                        {
-                            directions.Add(Define.Direction.Left);
-                        }
-                        if (diff.y > 0 && dungeonController.CanMove(enemy.Position, Define.Direction.Up))
-                        {
-                            directions.Add(Define.Direction.Up);
-                        }
-                        else if (diff.y < 0 && dungeonController.CanMove(enemy.Position, Define.Direction.Down))
-                        {
-                            directions.Add(Define.Direction.Down);
-                        }
-                        if (directions.Count == 0)
-                        {
-                            return;
-                        }
-                        var walkId = UnityEngine.Random.Range(0, 2);
-                        AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get($"Sfx.Walk.{walkId}").Clip);
-                        var direction = directions[UnityEngine.Random.Range(0, directions.Count)];
-                        enemy.Move(direction.ToVector2Int());
-                        if (enemy.Position == player.Position)
-                        {
-                            dungeonController.BeginForceBattle(player, enemy);
+                            var walkId = UnityEngine.Random.Range(0, 2);
+                            AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get($"Sfx.Walk.{walkId}").Clip);
+                            var direction = path[1] - enemy.Position;
+                            enemy.Move(direction);
+                            if (enemy.Position == player.Position)
+                            {
+                                dungeonController.BeginForceBattle(player, enemy);
+                            }
                         }
                     })
                     .RegisterTo(cancellationToken);
