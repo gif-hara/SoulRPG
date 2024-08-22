@@ -117,12 +117,12 @@ namespace SoulRPG
                         {
                             return;
                         }
-                        var path = dungeonController.FindPath(enemy.Position, player.Position);
-                        if (path?.Count > 2)
+                        var next = dungeonController.FindNextPosition(enemy.Position, player.Position);
+                        if (next.HasValue)
                         {
                             var walkId = UnityEngine.Random.Range(0, 2);
                             AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get($"Sfx.Walk.{walkId}").Clip);
-                            var direction = path[1] - enemy.Position;
+                            var direction = next.Value - enemy.Position;
                             enemy.Move(direction);
                             if (enemy.Position == player.Position)
                             {

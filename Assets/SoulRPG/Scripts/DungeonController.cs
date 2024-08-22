@@ -538,7 +538,7 @@ namespace SoulRPG
             }
         }
 
-        public List<Vector2Int> FindPath(Vector2Int start, Vector2Int goal)
+        public Vector2Int? FindNextPosition(Vector2Int start, Vector2Int goal)
         {
             var distances = new Dictionary<Vector2Int, int>();
             var previous = new Dictionary<Vector2Int, Vector2Int>();
@@ -576,15 +576,14 @@ namespace SoulRPG
                 // ゴールに到達した場合
                 if (current == goal)
                 {
-                    var path = new List<Vector2Int>();
+                    var result = current;
                     while (previous.ContainsKey(current))
                     {
-                        path.Insert(0, current);
+                        result = current;
                         current = previous[current];
                     }
 
-                    path.Insert(0, current); // スタートノードを追加
-                    return path;
+                    return result;
                 }
 
                 unvisited.Remove(current);
