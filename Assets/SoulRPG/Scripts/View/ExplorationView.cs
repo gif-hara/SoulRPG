@@ -73,6 +73,8 @@ namespace SoulRPG
             var characterRotationObject = areaDocument.Q<RectTransform>("Character.RotationObject");
             var miniMapWallPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall");
             var shadowParent = areaDocument.Q<RectTransform>("Area.Shadow.Viewport");
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var miniMapType = Define.MiniMapType.Default;
             characterAreaTransform.sizeDelta = tipSize;
             character.PositionAsObservable()
                 .Subscribe(x =>
@@ -91,6 +93,18 @@ namespace SoulRPG
                     characterRotationObject.rotation = Quaternion.Euler(0, 0, -x.ToAngle());
                     gameCameraController.transform.rotation = Quaternion.Euler(0, x.ToAngle(), 0);
                     TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext($"Sfx.Walk.{Random.Range(0, 2)}");
+                })
+                .RegisterTo(scope);
+            gameEvents.OnRequestChangeMiniMapType
+                .Subscribe(x =>
+                {
+                    ChangeViewType(x);
+                })
+                .RegisterTo(scope);
+            gameEvents.OnRequestToggleMiniMapType
+                .Subscribe(_ =>
+                {
+                    ChangeViewType(miniMapType == Define.MiniMapType.Default ? Define.MiniMapType.View : Define.MiniMapType.Default);
                 })
                 .RegisterTo(scope);
 
@@ -164,7 +178,6 @@ namespace SoulRPG
                     Object.Destroy(characterObject.gameObject);
                 });
             }
-            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAddReachedPoint
                 .Subscribe(RemoveShadow)
                 .RegisterTo(scope);
@@ -185,6 +198,14 @@ namespace SoulRPG
                     Object.Destroy(shadowObject);
                     maptipShadowObjects.Remove(position);
                 }
+            }
+
+            void ChangeViewType(Define.MiniMapType type)
+            {
+                miniMapType = type;
+                var miniMapStyleDocument = uiDocument.Q<HKUIDocument>($"MiniMapStyles");
+                var styleRectTransform = miniMapStyleDocument.Q<RectTransform>(type.ToString());
+                areaTransform.SetParent(styleRectTransform, false);
             }
         }
 
