@@ -573,15 +573,45 @@ namespace SoulRPG
                 }
                 var current = minNode;
 
+                // ゴールに到達した場合
                 if (current == goal)
                 {
-                    // ゴールに到達した場合
-                    return ConstructPath(previous, current);
+                    var path = new List<Vector2Int>();
+                    while (previous.ContainsKey(current))
+                    {
+                        path.Insert(0, current);
+                        current = previous[current];
+                    }
+
+                    path.Insert(0, current); // スタートノードを追加
+                    return path;
                 }
 
                 unvisited.Remove(current);
+                var neighbors = new List<Vector2Int>();
 
-                foreach (var neighbor in GetNeighbors(current))
+                Vector2Int[] directions =
+                {
+                    new(0, 1),
+                    new(1, 0),
+                    new(0, -1),
+                    new(-1, 0)
+                };
+
+                foreach (var direction in directions)
+                {
+                    if(!CanMove(current, direction.ToDirection()))
+                    {
+                        continue;
+                    }
+                    var neighbor = current + direction;
+                    if (neighbor.x >= 0 && neighbor.x < CurrentDungeon.range.x && neighbor.y >= 0 && neighbor.y < CurrentDungeon.range.y)
+                    {
+                        neighbors.Add(neighbor);
+                    }
+                }
+
+                foreach (var neighbor in neighbors)
                 {
                     var tentativeDistance = distances[current] + 1;
 
@@ -597,47 +627,6 @@ namespace SoulRPG
             return null;
         }
         
-        private List<Vector2Int> GetNeighbors(Vector2Int node)
-        {
-            var neighbors = new List<Vector2Int>();
-
-            Vector2Int[] directions =
-            {
-                new(0, 1),
-                new(1, 0),
-                new(0, -1),
-                new(-1, 0)
-            };
-
-            foreach (var direction in directions)
-            {
-                var neighbor = node + direction;
-                if(!CanMove(node, direction.ToDirection()))
-                {
-                    continue;
-                }
-                if (neighbor.x >= 0 && neighbor.x < CurrentDungeon.range.x && neighbor.y >= 0 && neighbor.y < CurrentDungeon.range.y)
-                {
-                    neighbors.Add(neighbor);
-                }
-            }
-
-            return neighbors;
-        }
-
-        private static List<Vector2Int> ConstructPath(Dictionary<Vector2Int, Vector2Int> previous, Vector2Int current)
-        {
-            var path = new List<Vector2Int>();
-            while (previous.ContainsKey(current))
-            {
-                path.Insert(0, current);
-                current = previous[current];
-            }
-
-            path.Insert(0, current); // スタートノードを追加
-            return path;
-        }
-
 #if DEBUG
         public void DebugAddAllReachedPoint()
         {
