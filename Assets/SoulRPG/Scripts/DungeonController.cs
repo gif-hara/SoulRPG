@@ -36,7 +36,7 @@ namespace SoulRPG
 
         public readonly List<Character> Enemies = new();
         
-        private readonly Dictionary<Vector2Int, int> weight = new();
+        private readonly DungeonPathFinder pathFinder = new();
 
         private readonly CancellationTokenSource scope;
 
@@ -540,90 +540,7 @@ namespace SoulRPG
 
         public Vector2Int? FindNextPosition(Vector2Int start, Vector2Int goal)
         {
-            var distances = new Dictionary<Vector2Int, int>();
-            var previous = new Dictionary<Vector2Int, Vector2Int>();
-            var unvisited = new List<Vector2Int>();
-
-            // 初期化
-            for (var x = 0; x < CurrentDungeon.range.x; x++)
-            {
-                for (var y = 0; y < CurrentDungeon.range.y; y++)
-                {
-                    var pos = new Vector2Int(x, y);
-                    distances[pos] = int.MaxValue;
-                    unvisited.Add(pos);
-                }
-            }
-
-            distances[start] = 0;
-
-            while (unvisited.Count > 0)
-            {
-                // 最小距離のノードを取得
-                var minNode = unvisited[0];
-                var minDistance = distances[minNode];
-
-                foreach (var node in unvisited)
-                {
-                    if (distances[node] < minDistance)
-                    {
-                        minDistance = distances[node];
-                        minNode = node;
-                    }
-                }
-                var current = minNode;
-
-                // ゴールに到達した場合
-                if (current == goal)
-                {
-                    var result = current;
-                    while (previous.ContainsKey(current))
-                    {
-                        result = current;
-                        current = previous[current];
-                    }
-
-                    return result;
-                }
-
-                unvisited.Remove(current);
-                var neighbors = new List<Vector2Int>();
-
-                Vector2Int[] directions =
-                {
-                    new(0, 1),
-                    new(1, 0),
-                    new(0, -1),
-                    new(-1, 0)
-                };
-
-                foreach (var direction in directions)
-                {
-                    if(!CanMove(current, direction.ToDirection()))
-                    {
-                        continue;
-                    }
-                    var neighbor = current + direction;
-                    if (neighbor.x >= 0 && neighbor.x < CurrentDungeon.range.x && neighbor.y >= 0 && neighbor.y < CurrentDungeon.range.y)
-                    {
-                        neighbors.Add(neighbor);
-                    }
-                }
-
-                foreach (var neighbor in neighbors)
-                {
-                    var tentativeDistance = distances[current] + 1;
-
-                    if (tentativeDistance < distances[neighbor])
-                    {
-                        distances[neighbor] = tentativeDistance;
-                        previous[neighbor] = current;
-                    }
-                }
-            }
-
-            // パスが見つからなかった場合
-            return null;
+            return pathFinder.FindPath(this, start, goal);
         }
         
 #if DEBUG
