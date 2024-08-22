@@ -24,6 +24,7 @@ namespace HK
             };
 
             var bindingMask = InputBinding.MaskByGroup(schemeName);
+            var sb = new System.Text.StringBuilder();
 
             foreach (var binding in action.bindings)
             {
@@ -59,11 +60,18 @@ namespace HK
                         _ => "DualShockGamepad"
                     };
                     var controlPathContent = control.path.Substring(control.device.name.Length + 2);
-                    return $"<sprite name={deviceIconGroup}-{controlPathContent}>";
+                    sb.Append($"<sprite name={deviceIconGroup}-{controlPathContent}>");
                 }
             }
 
-            return $"<sprite=UnknownTag schemeName:{schemeName} action:{action.name}>";
+            if (sb.Length > 0)
+            {
+                return sb.ToString();
+            }
+            else
+            {
+                return $"<sprite=UnknownTag schemeName:{schemeName} action:{action.name}>";
+            }
         }
 
         public static string GetTag(InputAction action)

@@ -82,7 +82,6 @@ namespace SoulRPG.SceneControllers
             var playerController = new PlayerController();
             TinyServiceLocator.Register(new InputScheme(destroyCancellationToken));
             var inputController = new InputController();
-            inputController.PushInputType(InputController.InputType.InGame);
             TinyServiceLocator.Register(inputController);
             var dungeonController = new DungeonController(
                 gameMenuBundlePrefab,
@@ -128,9 +127,17 @@ namespace SoulRPG.SceneControllers
                     inputGuideCenter.Open(x.messageSelector, x.scope);
                 })
                 .RegisterTo(destroyCancellationToken);
+            var inputGuideBottom = new GameInputGuideView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.InputGuide.Bottom"), destroyCancellationToken);
+            gameEvents.OnRequestShowInputGuideBottom
+                .Subscribe(x =>
+                {
+                    inputGuideBottom.Open(x.messageSelector, x.scope);
+                })
+                .RegisterTo(destroyCancellationToken);
             gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
             var screenEffectView = new ScreenEffectView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.ScreenEffect"), destroyCancellationToken);
             TinyServiceLocator.Register(screenEffectView);
+            inputController.PushInputType(InputController.InputType.InGame);
 #if DEBUG
             var battleDebugData = new BattleDebugData();
             TinyServiceLocator.Register(battleDebugData);

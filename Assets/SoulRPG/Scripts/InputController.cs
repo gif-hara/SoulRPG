@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Text;
 using System.Threading;
+using HK;
 using R3;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -18,6 +20,8 @@ namespace SoulRPG
         private readonly Stack<InputType> inputTypeStack = new();
 
         public Subject<InputType> OnChangeInputType = new();
+
+        private CancellationTokenSource inputGuideScope;
 
         public enum InputType
         {
@@ -55,15 +59,29 @@ namespace SoulRPG
 
         private void ChangeInputType(InputType inputType)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            inputGuideScope?.Cancel();
+            inputGuideScope?.Dispose();
+            inputGuideScope = new CancellationTokenSource();
+            var sb = new StringBuilder();
             switch (inputType)
             {
                 case InputType.InGame:
                     inputActions.InGame.Enable();
                     inputActions.UI.Disable();
+                    // gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
+                    // {
+                    //     return
+                    //         inputActions.InGame.Move.GetTag() + ":移動" +
+                    //         inputActions.InGame.Shift.GetTag() + ":水平移動" +
+                    //         inputActions.InGame.ToMenu.GetTag() + ":メニュー" +
+                    //         inputActions.InGame.ToggleMiniMapView.GetTag() + ":マップ切り替え";
+                    // }, inputGuideScope.Token));
                     break;
                 case InputType.UI:
                     inputActions.InGame.Disable();
                     inputActions.UI.Enable();
+                    // gameEvents.OnRequestShowInputGuideBottom.OnNext((() => "UI", inputGuideScope.Token));
                     break;
             }
             OnChangeInputType.OnNext(inputType);

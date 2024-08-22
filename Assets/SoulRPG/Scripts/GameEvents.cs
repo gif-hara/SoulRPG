@@ -38,6 +38,8 @@ namespace SoulRPG
 
         public readonly Subject<(Func<string> messageSelector, CancellationToken scope)> OnRequestShowInputGuideCenter = new();
 
+        public readonly Subject<(Func<string> messageSelector, CancellationToken scope)> OnRequestShowInputGuideBottom = new();
+
         public readonly Subject<Unit> OnOpenDoor = new();
 
         public readonly Subject<Define.MiniMapType> OnRequestChangeMiniMapType = new();
