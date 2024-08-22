@@ -118,9 +118,9 @@ namespace SoulRPG
                 wallObject.rotation = Quaternion.Euler(0, 0, isHorizontal ? 0 : 90);
             }
 
-            for (var y = 0; y <= dungeonController.CurrentDungeon.range.y; y++)
+            for (var y = 0; y < dungeonController.CurrentDungeon.range.y; y++)
             {
-                for (var x = 0; x <= dungeonController.CurrentDungeon.range.x; x++)
+                for (var x = 0; x < dungeonController.CurrentDungeon.range.x; x++)
                 {
                     if (dungeonController.ContainsReachedPoint(new Vector2Int(x, y)))
                     {
