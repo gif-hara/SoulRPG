@@ -225,7 +225,7 @@ MonoBehaviour:
           b: {x: 26, y: -1}
         - a: {x: 26, y: 0}
           b: {x: 26, y: -1}
-      range: {x: 25, y: 25}
+      range: {x: 26, y: 26}
     - name: Dungeon.10101
       wall:
         list:
@@ -1271,7 +1271,7 @@ MonoBehaviour:
           b: {x: 26, y: -1}
         - a: {x: 26, y: 0}
           b: {x: 26, y: -1}
-      range: {x: 25, y: 25}
+      range: {x: 26, y: 26}
   dungeonSpecs:
     list:
     - Id: Dungeon.Test

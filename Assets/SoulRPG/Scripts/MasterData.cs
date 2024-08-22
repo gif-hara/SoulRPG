@@ -401,7 +401,7 @@ namespace SoulRPG
                     name = name
                 };
                 result.wall.Set(dw.Distinct());
-                result.range = new Vector2Int(cellData.List.Max(x => x.x), cellData.List.Max(x => x.y));
+                result.range = new Vector2Int(cellData.List.Max(x => x.x) + 1, cellData.List.Max(x => x.y) + 1);
                 return result;
             }
         }
