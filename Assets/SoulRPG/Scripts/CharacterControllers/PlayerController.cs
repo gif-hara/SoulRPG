@@ -17,6 +17,7 @@ namespace SoulRPG
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var inGameActions = inputController.InputActions.InGame;
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             dungeonController.EnterAsync(player).Forget();
             inGameActions.Move.OnPerformedAsObservable()
                 .Subscribe(x =>
@@ -64,6 +65,12 @@ namespace SoulRPG
                 {
                     var view = new GamePauseMenuView(gameMenuBundlePrefab, player);
                     view.OpenAsync().Forget();
+                })
+                .RegisterTo(scope);
+            inGameActions.ToggleMiniMapView.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    gameEvents.OnRequestToggleMiniMapType.OnNext(Unit.Default);
                 })
                 .RegisterTo(scope);
         }

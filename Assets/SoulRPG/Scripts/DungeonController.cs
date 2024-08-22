@@ -35,7 +35,7 @@ namespace SoulRPG
         private readonly HashSet<Vector2Int> reachedPoints = new();
 
         public readonly List<Character> Enemies = new();
-        
+
         private readonly DungeonPathFinder pathFinder = new();
 
         private readonly CancellationTokenSource scope;
@@ -482,6 +482,8 @@ namespace SoulRPG
         {
             var scope = new CancellationTokenSource();
             TinyServiceLocator.Resolve<InputController>().PushInputType(InputController.InputType.UI, scope.Token);
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            gameEvents.OnRequestChangeMiniMapType.OnNext(Define.MiniMapType.Default);
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
             var playerCharacter = new BattleCharacter(
                 character,
@@ -542,7 +544,7 @@ namespace SoulRPG
         {
             return pathFinder.FindPath(this, start, goal);
         }
-        
+
 #if DEBUG
         public void DebugAddAllReachedPoint()
         {
