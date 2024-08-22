@@ -234,10 +234,21 @@ namespace SoulRPG
                 {
                     ""name"": """",
                     ""id"": ""64655203-68cf-4de9-b086-3fc4f3ad8ad5"",
-                    ""path"": ""*/{Back}"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse;Gamepad"",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""ToMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a7f4edde-decc-4cab-8211-5c4b2d935e19"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""ToMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -248,7 +259,7 @@ namespace SoulRPG
                     ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Gamepad"",
                     ""action"": ""ToggleMiniMapView"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -259,7 +270,7 @@ namespace SoulRPG
                     ""path"": ""<Keyboard>/m"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""ToggleMiniMapView"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
