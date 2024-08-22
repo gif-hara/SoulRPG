@@ -40,6 +40,10 @@ namespace SoulRPG
 
         public readonly Subject<Unit> OnOpenDoor = new();
 
+        public readonly Subject<Define.MiniMapType> OnRequestChangeMiniMapType = new();
+
+        public readonly Subject<Unit> OnRequestToggleMiniMapType = new();
+
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();
 
