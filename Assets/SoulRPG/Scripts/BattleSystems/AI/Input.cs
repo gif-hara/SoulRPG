@@ -27,19 +27,25 @@ namespace SoulRPG
 
         private readonly HKUIDocument ailmentInformationDocumentPrefab;
 
+        private readonly HKUIDocument informationWeaponDocumentPrefab;
+
         private UniTaskCompletionSource<ICommandInvoker> source;
 
         private int selectedWeaponId;
 
+        private CancellationTokenSource informationWeaponScope;
+
         public Input(
             HKUIDocument commandDocumentPrefab,
             HKUIDocument listDocumentPrefab,
-            HKUIDocument ailmentInformationDocumentPrefab
+            HKUIDocument ailmentInformationDocumentPrefab,
+            HKUIDocument informationWeaponDocumentPrefab
             )
         {
             this.listDocumentPrefab = listDocumentPrefab;
             this.commandDocumentPrefab = commandDocumentPrefab;
             this.ailmentInformationDocumentPrefab = ailmentInformationDocumentPrefab;
+            this.informationWeaponDocumentPrefab = informationWeaponDocumentPrefab;
         }
 
         public void Dispose()
@@ -62,6 +68,9 @@ namespace SoulRPG
 
         private async UniTask StateSelectMainCommandAsync(CancellationToken scope)
         {
+            informationWeaponScope?.Cancel();
+            informationWeaponScope?.Dispose();
+            informationWeaponScope = null;
             var commands = new List<Action<HKUIDocument>>
             {
                 new(x =>
@@ -124,6 +133,10 @@ namespace SoulRPG
 
         private async UniTask StateSelectWeaponAsync(CancellationToken scope)
         {
+            informationWeaponScope?.Cancel();
+            informationWeaponScope?.Dispose();
+            informationWeaponScope = new CancellationTokenSource();
+            var informationWeaponView = new BattleInformationWeaponView(informationWeaponDocumentPrefab, informationWeaponScope.Token);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var commands = character.Equipment.GetWeaponIds()
                 .Select((weaponId, index) =>
@@ -145,6 +158,7 @@ namespace SoulRPG
                             _ =>
                             {
                                 GameTipsView.SetTip($"{fixedWeaponId.GetMasterDataItem().Name}を使って行動する。");
+                                informationWeaponView.Setup(fixedWeaponId);
                             });
                     });
                 });
