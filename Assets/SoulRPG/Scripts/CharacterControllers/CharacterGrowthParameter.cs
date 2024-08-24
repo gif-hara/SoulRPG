@@ -34,6 +34,10 @@ namespace SoulRPG
         private int speed;
         public int Speed { get => speed; set => speed = value; }
 
+        [SerializeField]
+        private int behaviourPoint;
+        public int BehaviourPoint { get => behaviourPoint; set => behaviourPoint = value; }
+
         public CharacterGrowthParameter()
         {
         }
@@ -46,6 +50,7 @@ namespace SoulRPG
             physicalStrength = parameter.physicalStrength;
             magicalStrength = parameter.magicalStrength;
             speed = parameter.speed;
+            behaviourPoint = parameter.behaviourPoint;
         }
 
         public void Sync(CharacterGrowthParameter parameter)
@@ -56,6 +61,7 @@ namespace SoulRPG
             physicalStrength = parameter.physicalStrength;
             magicalStrength = parameter.magicalStrength;
             speed = parameter.speed;
+            behaviourPoint = parameter.behaviourPoint;
         }
     }
 }
