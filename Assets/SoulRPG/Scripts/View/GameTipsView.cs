@@ -1,12 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using LitMotion;
 using LitMotion.Extensions;
-using R3;
 using TMPro;
 using UnityEngine;
 
