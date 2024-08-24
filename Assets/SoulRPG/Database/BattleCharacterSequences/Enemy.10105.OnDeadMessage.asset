@@ -18,6 +18,8 @@ MonoBehaviour:
   - rid: 9047573762785673732
   - rid: 9047573712770170971
   - rid: 9047573712770170969
+  - rid: 9047573875847332061
+  - rid: 9047573875847332063
   references:
     version: 2
     RefIds:
@@ -48,4 +50,19 @@ MonoBehaviour:
       data:
         format: "{Actor}\u300C\u3050\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u300D"
         sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573875847332061
+      type: {class: AddPlayerBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        valueResolver:
+          rid: 9047573875847332062
+    - rid: 9047573875847332062
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 9047573875847332063
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u3092\u5012\u3057\u305F\u3053\u3068\u3067{Target}\u306E\u6700\u5927BP\u304C<color=#88FF88>1</color>\u5897\u3048\u305F\u3002"
+        sfxName: Sfx.Message.22
         ignoreIfCharacterDead: 0
