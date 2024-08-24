@@ -44,6 +44,19 @@ namespace SoulRPG
             {
                 emptyArea.SetActive(!elementActivateActions.Any());
             }
+            Selectable defaultSelectable = null;
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            inputController.InputActions.UI.Navigate
+                .OnPerformedAsObservable()
+                .Subscribe(x =>
+                {
+                    if (EventSystem.current.currentSelectedGameObject != null || defaultSelectable == null)
+                    {
+                        return;
+                    }
+                    EventSystem.current.SetSelectedGameObject(defaultSelectable.gameObject);
+                })
+                .RegisterTo(document.destroyCancellationToken);
             CreateList(initialElementIndex);
 
             void CreateList(int selectIndex)
@@ -95,6 +108,7 @@ namespace SoulRPG
                     if (elementIndex == selectIndex)
                     {
                         EventSystem.current.SetSelectedGameObject(button.gameObject);
+                        defaultSelectable = button;
                     }
                     elementIndex++;
                 }
