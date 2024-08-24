@@ -49,16 +49,18 @@ namespace SoulRPG
             });
         }
 
-        public void PushTip(string tip)
+        public static void PushTip(string tip)
         {
-            tips.Push(tip);
-            UpdateTextAsync();
+            var instance = TinyServiceLocator.Resolve<GameTipsView>();
+            instance.tips.Push(tip);
+            instance.UpdateTextAsync();
         }
 
         public void PopTip()
         {
-            tips.Pop();
-            UpdateTextAsync();
+            var instance = TinyServiceLocator.Resolve<GameTipsView>();
+            instance.tips.Pop();
+            instance.UpdateTextAsync();
         }
 
         private void UpdateTextAsync()
