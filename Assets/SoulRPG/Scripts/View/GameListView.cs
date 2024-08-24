@@ -145,6 +145,7 @@ namespace SoulRPG
             var listParent = document.Q<RectTransform>("ListParent");
             var listElementPrefab = document.Q<HKUIDocument>("ListElementPrefab");
             var elementIndex = 0;
+            Selectable defaultSelectable = null;
             foreach (var action in elementActivateActions)
             {
                 var element = Object.Instantiate(listElementPrefab, listParent);
@@ -159,9 +160,22 @@ namespace SoulRPG
                 if (elementIndex == initialElementIndex)
                 {
                     EventSystem.current.SetSelectedGameObject(button.gameObject);
+                    defaultSelectable = button;
                 }
                 elementIndex++;
             }
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            inputController.InputActions.UI.Navigate
+                .OnPerformedAsObservable()
+                .Subscribe(x =>
+                {
+                    if (EventSystem.current.currentSelectedGameObject != null || defaultSelectable == null)
+                    {
+                        return;
+                    }
+                    EventSystem.current.SetSelectedGameObject(defaultSelectable.gameObject);
+                })
+                .RegisterTo(document.destroyCancellationToken);
             return document;
         }
 
