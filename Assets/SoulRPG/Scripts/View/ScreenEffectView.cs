@@ -35,6 +35,16 @@ namespace SoulRPG
                     _document.Q<ParticleSystem>(name).Play();
                 })
                 .RegisterTo(scope);
+            battleCharacter.Events.OnTakeDamage
+                .Subscribe(document, (_x, _document) =>
+                {
+                    _document
+                        .Q<HKUIDocument>("Sequences")
+                        .Q<SequenceMonobehaviour>("Animation.OnTakeDamage")
+                        .PlayAsync(scope)
+                        .Forget();
+                })
+                .RegisterTo(scope);
         }
     }
 }

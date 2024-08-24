@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using Mono.Cecil.Cil;
 using R3;
 using SoulRPG.CharacterControllers;
 using TMPro;
@@ -33,6 +34,8 @@ namespace SoulRPG
 
         private readonly Dictionary<Vector2Int, GameObject> maptipShadowObjects = new();
 
+        private HKUIDocument uiDocument;
+
         public ExplorationView(
             HKUIDocument uiDocumentPrefab,
             HKUIDocument dungeonDocumentPrefab,
@@ -48,12 +51,25 @@ namespace SoulRPG
 
         public void Open(CancellationToken scope)
         {
-            var uiDocument = Object.Instantiate(uiDocumentPrefab);
+            uiDocument = Object.Instantiate(uiDocumentPrefab);
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             SetupMiniMap(uiDocument, dungeonController, character, scope);
             SetupDungeon(dungeonController);
             SetupMessage(uiDocument, character, scope);
             SetupStatuses(uiDocument, character, scope);
+        }
+
+        public void BeginSubscribe(BattleCharacter battleCharacter, CancellationToken scope)
+        {
+            battleCharacter.Events.OnTakeDamage
+                .Subscribe(_ =>
+                {
+                    uiDocument.Q<HKUIDocument>("Sequences")
+                        .Q<SequenceMonobehaviour>("Animation.OnTakeDamage")
+                        .PlayAsync(scope)
+                        .Forget();
+                })
+                .RegisterTo(scope);
         }
 
         private void SetupMiniMap(

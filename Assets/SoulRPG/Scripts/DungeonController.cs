@@ -507,6 +507,7 @@ namespace SoulRPG
             KnifeCountView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.KnifeCount"), playerCharacter,
                 scope.Token).Forget();
             TinyServiceLocator.Resolve<ScreenEffectView>().Subscribe(playerCharacter, scope.Token);
+            TinyServiceLocator.Resolve<ExplorationView>().BeginSubscribe(playerCharacter, scope.Token);
             var gameEnemyView = new GameEnemyView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Enemy"), scope.Token);
             gameEnemyView.Open(masterDataEnemy, enemyCharacter, scope.Token);
             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm

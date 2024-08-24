@@ -79,6 +79,7 @@ namespace SoulRPG.SceneControllers
                 gameCameraController,
                 player
                 );
+            TinyServiceLocator.Register(explorationView);
             var playerController = new PlayerController();
             TinyServiceLocator.Register(new InputScheme(destroyCancellationToken));
             var inputController = new InputController();
