@@ -361,7 +361,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 129
-        y: 1792
+        y: 1794
         width: 128
         height: 128
       alignment: 0
@@ -444,7 +444,7 @@ TextureImporter:
       name: DualShockGamepad-buttonEast
       rect:
         serializedVersion: 2
-        x: 640
+        x: 638
         y: 1792
         width: 128
         height: 128
@@ -504,7 +504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TMP_Sprite_14
+      name: XInputController-dpad-up
       rect:
         serializedVersion: 2
         x: 128
@@ -525,7 +525,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TMP_Sprite_15
+      name: XInputController-dpad-down
       rect:
         serializedVersion: 2
         x: 256
@@ -546,7 +546,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TMP_Sprite_16
+      name: XInputController-dpad-left
       rect:
         serializedVersion: 2
         x: 384
@@ -567,7 +567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TMP_Sprite_17
+      name: XInputController-dpad-right
       rect:
         serializedVersion: 2
         x: 512
@@ -588,7 +588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TMP_Sprite_18
+      name: XInputController-buttonEast
       rect:
         serializedVersion: 2
         x: 640
@@ -609,11 +609,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TMP_Sprite_19
+      name: XInputController-rightShoulder
       rect:
         serializedVersion: 2
         x: 768
-        y: 1664
+        y: 1666
         width: 128
         height: 128
       alignment: 0
@@ -630,7 +630,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TMP_Sprite_20
+      name: XInputController-buttonNorth
       rect:
         serializedVersion: 2
         x: 896
@@ -825,13 +825,6 @@ TextureImporter:
       Keyboard-shift: 955303962
       Keyboard-upArrow: 871192529
       SwitchProController-buttonSouth: -2039786858
-      TMP_Sprite_14: 1793513967
-      TMP_Sprite_15: 1125502780
-      TMP_Sprite_16: 1900868345
-      TMP_Sprite_17: -1700364811
-      TMP_Sprite_18: -60466587
-      TMP_Sprite_19: 1186265356
-      TMP_Sprite_20: 138978868
       TMP_Sprite_21: -208855279
       TMP_Sprite_22: -1337858512
       TMP_Sprite_23: -175046112
@@ -839,7 +832,14 @@ TextureImporter:
       TMP_Sprite_25: 1444451027
       TMP_Sprite_26: -41315327
       TMP_Sprite_27: -1142399824
+      XInputController-buttonEast: 1186265356
+      XInputController-buttonNorth: -208855279
       XInputController-buttonSouth: -348098766
+      XInputController-dpad-down: 1900868345
+      XInputController-dpad-left: -1700364811
+      XInputController-dpad-right: -60466587
+      XInputController-dpad-up: 1125502780
+      XInputController-rightShoulder: 138978868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
