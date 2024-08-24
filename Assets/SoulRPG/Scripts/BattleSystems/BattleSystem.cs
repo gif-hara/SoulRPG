@@ -50,6 +50,10 @@ namespace SoulRPG.BattleSystems
 
             async UniTask ProcessActorAction(BattleCharacter actor, BattleCharacter target)
             {
+                if (actor.BattleStatus.IsDead)
+                {
+                    return;
+                }
                 var canBehaviour = await actor.TurnStartAsync(target);
                 while (canBehaviour && !IsBattleEnd() && actor.BattleStatus.CanBehaviour())
                 {
