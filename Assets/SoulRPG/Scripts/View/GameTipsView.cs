@@ -59,6 +59,9 @@ namespace SoulRPG
             message.text = tip;
             messageRectTransform.anchoredPosition = Vector2.zero;
             messageRectTransform.sizeDelta = new Vector2(message.preferredWidth, messageParent.sizeDelta.y);
+            animationScope?.Cancel();
+            animationScope?.Dispose();
+            animationScope = new CancellationTokenSource();
             if (message.preferredWidth > messageParent.rect.width)
             {
                 BeginSlideAnimationAsync();
@@ -68,25 +71,29 @@ namespace SoulRPG
         private async void BeginSlideAnimationAsync()
         {
             Debug.Log("BeginSlideAnimationAsync");
-            animationScope?.Cancel();
-            animationScope?.Dispose();
-            animationScope = new CancellationTokenSource();
-            while (true)
+            try
             {
-                await UniTask.Delay(TimeSpan.FromSeconds(3.0f), cancellationToken: animationScope.Token);
-                await LMotion.Create(0.0f, -message.preferredWidth, message.preferredWidth / 100.0f)
-                    .BindToAnchoredPositionX(messageRectTransform)
-                    .ToUniTask(animationScope.Token);
-                await UniTask.Delay(TimeSpan.FromSeconds(0.5f), cancellationToken: animationScope.Token);
-                await UniTask.WhenAll
-                (
-                    LMotion.Create(0.0f, 1.0f, 0.3f)
-                        .BindToCanvasGroupAlpha(canvasGroup)
-                        .ToUniTask(animationScope.Token),
-                    LMotion.Create(20.0f, 0.0f, 0.3f)
+                while (true)
+                {
+                    await UniTask.Delay(TimeSpan.FromSeconds(3.0f), cancellationToken: animationScope.Token);
+                    await LMotion.Create(0.0f, -message.preferredWidth, message.preferredWidth / 100.0f)
                         .BindToAnchoredPositionX(messageRectTransform)
-                        .ToUniTask(animationScope.Token)
-                );
+                        .ToUniTask(animationScope.Token);
+                    await UniTask.Delay(TimeSpan.FromSeconds(0.5f), cancellationToken: animationScope.Token);
+                    await UniTask.WhenAll
+                    (
+                        LMotion.Create(0.0f, 1.0f, 0.3f)
+                            .BindToCanvasGroupAlpha(canvasGroup)
+                            .ToUniTask(animationScope.Token),
+                        LMotion.Create(20.0f, 0.0f, 0.3f)
+                            .BindToAnchoredPositionX(messageRectTransform)
+                            .ToUniTask(animationScope.Token)
+                    );
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                Debug.Log("SlideAnimationAsync canceled");
             }
         }
     }
