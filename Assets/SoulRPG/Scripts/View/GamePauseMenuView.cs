@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
+using TMPro;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -54,7 +55,7 @@ namespace SoulRPG
                         GameListView.ApplyAsSimpleElement
                         (
                             element,
-                            "装備",
+                            "装備変更",
                             _ =>
                             {
                                 stateMachine.Change(StateSelectEquipmentPartAsync);
@@ -97,8 +98,10 @@ namespace SoulRPG
                         gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                     })
                     .RegisterTo(scope);
+            var header = CreateHeader("メニュー");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
+            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectEquipmentPartAsync(CancellationToken scope)
@@ -187,8 +190,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
+            var header = CreateHeader("装備変更");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
+            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectWeaponAsync(CancellationToken scope)
@@ -230,8 +235,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
+            var header = CreateHeader("武器変更");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
+            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectArmorHeadAsync(CancellationToken scope)
@@ -270,7 +277,9 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
+            var header = CreateHeader("頭防具変更");
             Object.Destroy(listDocument.gameObject);
+            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectArmorBodyAsync(CancellationToken scope)
@@ -308,8 +317,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
+            var header = CreateHeader("胴防具変更");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
+            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectArmorArmsAsync(CancellationToken scope)
@@ -347,8 +358,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
+            var header = CreateHeader("腕防具変更");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
+            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectArmorLegsAsync(CancellationToken scope)
@@ -386,8 +399,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
+            var header = CreateHeader("脚防具変更");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
+            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectAccessoryAsync(CancellationToken scope)
@@ -425,8 +440,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
+            var header = CreateHeader("アクセサリー変更");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
+            Object.Destroy(header.gameObject);
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)
@@ -447,6 +464,13 @@ namespace SoulRPG
                 elements,
                 initialElement
             );
+        }
+
+        private HKUIDocument CreateHeader(string header)
+        {
+            var document = Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"));
+            document.Q<TMP_Text>("Header").text = header;
+            return document;
         }
 
         public interface IContext
