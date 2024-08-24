@@ -241,6 +241,9 @@ namespace SoulRPG
             {
                 UnityEngine.Object.Destroy(listDocument.gameObject);
             }
+            informationWeaponScope?.Cancel();
+            informationWeaponScope?.Dispose();
+            informationWeaponScope = null;
         }
 
         private async UniTask StateConfirmAsync(CancellationToken scope)
