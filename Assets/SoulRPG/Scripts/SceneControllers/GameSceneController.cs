@@ -138,6 +138,8 @@ namespace SoulRPG.SceneControllers
             var screenEffectView = new ScreenEffectView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.ScreenEffect"), destroyCancellationToken);
             TinyServiceLocator.Register(screenEffectView);
             inputController.PushInputType(InputController.InputType.InGame);
+            var gameTipsView = new GameTipsView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Tips"), destroyCancellationToken);
+            TinyServiceLocator.Register(gameTipsView);
 #if DEBUG
             var battleDebugData = new BattleDebugData();
             TinyServiceLocator.Register(battleDebugData);
