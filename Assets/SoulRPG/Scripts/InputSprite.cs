@@ -59,7 +59,7 @@ namespace HK
 #endif
                         _ => "DualShockGamepad"
                     };
-                    var controlPathContent = control.path.Substring(control.device.name.Length + 2);
+                    var controlPathContent = control.path.Substring(control.device.name.Length + 2).Replace('/', '-');
                     sb.Append($"<sprite name={deviceIconGroup}-{controlPathContent}>");
                 }
             }
