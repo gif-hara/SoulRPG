@@ -59,6 +59,11 @@ namespace SoulRPG
             SetupStatuses(uiDocument, character, scope);
         }
 
+        public void SetActive(bool isActive)
+        {
+            uiDocument.gameObject.SetActive(isActive);
+        }
+
         public void BeginSubscribe(BattleCharacter battleCharacter, CancellationToken scope)
         {
             battleCharacter.Events.OnTakeDamage

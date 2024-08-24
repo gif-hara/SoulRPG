@@ -41,8 +41,11 @@ namespace SoulRPG
         {
             inputController.PushInputType(InputController.InputType.UI);
             stateMachine.Change(StateRootMenuAsync);
+            var explorationView = TinyServiceLocator.Resolve<ExplorationView>();
+            explorationView.SetActive(false);
             await openCompletionSource.Task;
             inputController.PopInputType();
+            explorationView.SetActive(true);
         }
 
         private async UniTask StateRootMenuAsync(CancellationToken scope)
