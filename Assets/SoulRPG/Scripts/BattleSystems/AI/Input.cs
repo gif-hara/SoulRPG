@@ -73,6 +73,10 @@ namespace SoulRPG
                         {
                             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
                             stateMachine.Change(StateSelectWeaponAsync);
+                        },
+                        _ =>
+                        {
+                            GameTipsView.SetTip("武器を利用して攻撃などを行う。");
                         });
                 }),
                 new(x =>
@@ -84,18 +88,12 @@ namespace SoulRPG
                         {
                             TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
                             stateMachine.Change(StateConfirmAsync);
-                        });
-                }),
-                new(x =>
-                {
-                    GameListView.ApplyAsSimpleElement(
-                        x,
-                        "逃走",
+                        },
                         _ =>
                         {
-                            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("どうやら未実装のようだ", "Sfx.Message.0"));
+                            GameTipsView.SetTip("状態異常・ステータスなどの情報を確認する。");
                         });
-                }),
+                })
             };
 #if DEBUG
             if (TinyServiceLocator.Resolve<BattleDebugData>().IsAllSkillAvailable)
@@ -132,16 +130,21 @@ namespace SoulRPG
                 {
                     return new Action<HKUIDocument>(element =>
                     {
+                        var fixedWeaponId = weaponId.TryGetMasterDataWeapon(out var weapon)
+                            ? weapon.ItemId
+                            : Define.HandWeaponId;
                         GameListView.ApplyAsSimpleElement(
                             element,
-                            weaponId.TryGetMasterDataWeapon(out var weapon)
-                                ? weapon.ItemId.GetMasterDataItem().Name
-                                : Define.HandWeaponId.GetMasterDataItem().Name,
+                            fixedWeaponId.GetMasterDataItem().Name,
                             _ =>
                             {
                                 selectedWeaponId = index;
                                 gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
                                 stateMachine.Change(StateSelectSkillAsync);
+                            },
+                            _ =>
+                            {
+                                GameTipsView.SetTip($"{fixedWeaponId.GetMasterDataItem().Name}を使って行動する。");
                             });
                     });
                 });
@@ -209,12 +212,17 @@ namespace SoulRPG
                             }
                             source.TrySetResult(new Skill(weapon.ItemId, x.Id, x.CanRegisterUsedSkills));
                             stateMachine.Change(StateNothingAsync);
+                        },
+                        _ =>
+                        {
+                            GameTipsView.SetTip(x.Description);
                         });
                 });
             });
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
             listDocument.Q<TMP_Text>("Header").text = "スキルを選べ";
             await scope.WaitUntilCanceled();
+            GameTipsView.SetTip(string.Empty);
             if (listDocument != null)
             {
                 UnityEngine.Object.Destroy(listDocument.gameObject);
@@ -322,6 +330,10 @@ namespace SoulRPG
                             {
                                 source.TrySetResult(new Skill(Define.TestWeaponId, x.Id, false));
                                 stateMachine.Change(StateNothingAsync);
+                            },
+                            _ =>
+                            {
+                                GameTipsView.SetTip(x.Description);
                             });
                     });
                 });
