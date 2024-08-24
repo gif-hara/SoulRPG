@@ -67,7 +67,6 @@ namespace SoulRPG
 
         private async void BeginSlideAnimationAsync()
         {
-            Debug.Log("BeginSlideAnimationAsync");
             try
             {
                 while (true)
@@ -90,7 +89,6 @@ namespace SoulRPG
             }
             catch (OperationCanceledException)
             {
-                Debug.Log("SlideAnimationAsync canceled");
             }
         }
     }
