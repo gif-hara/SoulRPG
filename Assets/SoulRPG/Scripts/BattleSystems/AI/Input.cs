@@ -157,7 +157,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip($"{fixedWeaponId.GetMasterDataItem().Name}を使って行動する。");
+                                GameTipsView.SetTip(fixedWeaponId.GetMasterDataItem().Description);
                                 informationWeaponView.Setup(fixedWeaponId);
                             });
                     });
