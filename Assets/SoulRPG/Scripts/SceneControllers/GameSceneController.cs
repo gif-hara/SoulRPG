@@ -195,6 +195,11 @@ namespace SoulRPG.SceneControllers
                             battleDebugData.IsBigDamage = !battleDebugData.IsBigDamage;
                             gameEvents.OnRequestShowMessage.OnNext(new($"大ダメージ：{battleDebugData.IsBigDamage}"));
                         }
+                        if (Keyboard.current.pKey.wasPressedThisFrame)
+                        {
+                            player.GrowthParameter.BehaviourPoint += 1;
+                            gameEvents.OnRequestShowMessage.OnNext(new($"行動ポイント：{player.GrowthParameter.BehaviourPoint}"));
+                        }
                     }
                     catch (OperationCanceledException)
                     {
