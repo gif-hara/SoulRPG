@@ -61,6 +61,10 @@ namespace SoulRPG
                         _ =>
                         {
                             stateMachine.Change(StateLevelUpAsync);
+                        },
+                        _ =>
+                        {
+                            GameTipsView.SetTip("経験値を消費してレベルアップを行います。");
                         }
                     );
                 },
@@ -74,8 +78,10 @@ namespace SoulRPG
                     stateMachine.Change(StateCloseAsync);
                 })
                 .RegisterTo(scope);
+            var header = CreateHeader("チェックポイント");
             await UniTask.WaitUntilCanceled(scope);
             UnityEngine.Object.Destroy(listDocument.gameObject);
+            UnityEngine.Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateLevelUpAsync(CancellationToken scope)
@@ -99,7 +105,8 @@ namespace SoulRPG
                                 growthParameter.Vitality += x;
                                 return growthParameter.Vitality;
                             },
-                            character.GrowthParameter.Vitality
+                            character.GrowthParameter.Vitality,
+                            "生命力を上げるとHP（ヒットポイント）が増加します。"
                         );
                     },
                     element =>
@@ -113,7 +120,8 @@ namespace SoulRPG
                                 growthParameter.Stamina += x;
                                 return growthParameter.Stamina;
                             },
-                            character.GrowthParameter.Stamina
+                            character.GrowthParameter.Stamina,
+                            "持久力を上げるとST（スタミナ）が増加します。"
                         );
                     },
                     element =>
@@ -121,13 +129,14 @@ namespace SoulRPG
                         SetupElement
                         (
                             element,
-                            "物理攻撃力",
+                            "筋力",
                             x =>
                             {
                                 growthParameter.PhysicalStrength += x;
                                 return growthParameter.PhysicalStrength;
                             },
-                            character.GrowthParameter.PhysicalStrength
+                            character.GrowthParameter.PhysicalStrength,
+                            "筋力を上げると物理攻撃の威力が増加します。"
                         );
                     },
                     element =>
@@ -135,13 +144,14 @@ namespace SoulRPG
                         SetupElement
                         (
                             element,
-                            "魔法攻撃力",
+                            "精神力",
                             x =>
                             {
                                 growthParameter.MagicalStrength += x;
                                 return growthParameter.MagicalStrength;
                             },
-                            character.GrowthParameter.MagicalStrength
+                            character.GrowthParameter.MagicalStrength,
+                            "精神力を上げると魔法攻撃の威力が増加します。"
                         );
                     },
                     element =>
@@ -155,7 +165,8 @@ namespace SoulRPG
                                 growthParameter.Speed += x;
                                 return growthParameter.Speed;
                             },
-                            character.GrowthParameter.Speed
+                            character.GrowthParameter.Speed,
+                            "素早さを上げると先手を取りやすくなります。"
                         );
                     },
                 },
@@ -210,16 +221,19 @@ namespace SoulRPG
                     }
                 })
                 .RegisterTo(scope);
+            var header = CreateHeader("レベルアップ");
             await UniTask.WaitUntilCanceled(scope);
             UnityEngine.Object.Destroy(listDocument.gameObject);
             UnityEngine.Object.Destroy(informationDocument.gameObject);
+            UnityEngine.Object.Destroy(header.gameObject);
 
             void SetupElement
             (
                 HKUIDocument element,
                 string header,
                 Func<int, int> valueSelector,
-                int minValue
+                int minValue,
+                string tip
             )
             {
                 GameListView.ApplyAsSimpleElement
@@ -264,6 +278,10 @@ namespace SoulRPG
                             character.InstanceStatus.FullRecovery();
                             stateMachine.Change(StateRootMenuAsync);
                         }
+                    },
+                    _ =>
+                    {
+                        GameTipsView.SetTip(tip);
                     }
                 );
                 var horizontalInterface = CreateHorizontalInterface(element);
@@ -316,6 +334,7 @@ namespace SoulRPG
 
         private UniTask StateCloseAsync(CancellationToken scope)
         {
+            GameTipsView.SetTip(string.Empty);
             openCompletionSource.TrySetResult();
             return UniTask.CompletedTask;
         }
@@ -356,6 +375,13 @@ namespace SoulRPG
         private bool CanLevelDown(int min, int current)
         {
             return character.GrowthParameter.Level < growthParameter.Level && min < current;
+        }
+
+        private HKUIDocument CreateHeader(string header)
+        {
+            var document = UnityEngine.Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"));
+            document.Q<TMP_Text>("Header").text = header;
+            return document;
         }
     }
 }

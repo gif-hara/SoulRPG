@@ -359,7 +359,7 @@ namespace SoulRPG
         private async UniTask OnInteractSavePointAsync(Character character)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new("ここはセーブポイントのようだ。一休みしよう。", "Sfx.Message.0"));
+            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new("ここはチェックポイントのようだ。一休みしよう。", "Sfx.Message.0"));
             character.InstanceStatus.FullRecovery();
             checkPoint = character.Position;
             var view = new GameSavePointMenuView(gameMenuBundlePrefab, character);

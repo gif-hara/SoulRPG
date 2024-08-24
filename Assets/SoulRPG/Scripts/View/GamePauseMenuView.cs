@@ -467,6 +467,7 @@ namespace SoulRPG
 
         private UniTask StateCloseAsync(CancellationToken scope)
         {
+            GameTipsView.SetTip(string.Empty);
             openCompletionSource.TrySetResult();
             return UniTask.CompletedTask;
         }
