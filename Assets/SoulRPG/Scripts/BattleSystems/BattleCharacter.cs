@@ -183,9 +183,9 @@ namespace SoulRPG
             await sequences.PlayOnTakeDamageAsync(scope.Token);
         }
 
-        public UniTask OnDeadMessageAsync()
+        public UniTask OnDeadMessageAsync(BattleCharacter target)
         {
-            return sequences.PlayOnDeadMessageAsync(this, scope.Token);
+            return sequences.PlayOnDeadMessageAsync(this, target, scope.Token);
         }
 
         public UniTask RecoveryHitPointAsync(int recovery)

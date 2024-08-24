@@ -26,10 +26,11 @@ namespace SoulRPG
             return new Sequencer(new Container(), onTakeDamage.Sequences).PlayAsync(scope);
         }
 
-        public UniTask PlayOnDeadMessageAsync(BattleCharacter actor, CancellationToken scope)
+        public UniTask PlayOnDeadMessageAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
             var container = new Container();
             container.Register("Actor", actor);
+            container.Register("Target", target);
             return new Sequencer(container, onDeadMessage.Sequences).PlayAsync(scope);
         }
 
