@@ -69,19 +69,25 @@ namespace SoulRPG
                 case InputType.InGame:
                     inputActions.InGame.Enable();
                     inputActions.UI.Disable();
-                    // gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
-                    // {
-                    //     return
-                    //         inputActions.InGame.Move.GetTag() + ":移動" +
-                    //         inputActions.InGame.Shift.GetTag() + ":水平移動" +
-                    //         inputActions.InGame.ToMenu.GetTag() + ":メニュー" +
-                    //         inputActions.InGame.ToggleMiniMapView.GetTag() + ":マップ切り替え";
-                    // }, inputGuideScope.Token));
+                    gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
+                    {
+                        return
+                            inputActions.InGame.Move.GetTag() + ":移動" +
+                            inputActions.InGame.Shift.GetTag() + ":水平移動" +
+                            inputActions.InGame.ToMenu.GetTag() + ":メニュー" +
+                            inputActions.InGame.ToggleMiniMapView.GetTag() + ":マップ切り替え";
+                    }, inputGuideScope.Token));
                     break;
                 case InputType.UI:
                     inputActions.InGame.Disable();
                     inputActions.UI.Enable();
-                    // gameEvents.OnRequestShowInputGuideBottom.OnNext((() => "UI", inputGuideScope.Token));
+                    gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
+                    {
+                        return
+                            inputActions.UI.Navigate.GetTag() + ":選択" +
+                            inputActions.UI.Submit.GetTag() + ":決定" +
+                            inputActions.UI.Cancel.GetTag() + ":キャンセル";
+                    }, inputGuideScope.Token));
                     break;
             }
             OnChangeInputType.OnNext(inputType);
