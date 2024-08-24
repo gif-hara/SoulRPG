@@ -27,8 +27,6 @@ namespace SoulRPG
 
         private readonly CanvasGroup canvasGroup;
 
-        private readonly Stack<string> tips = new();
-
         private CancellationTokenSource animationScope = null;
 
         public GameTipsView(HKUIDocument documentPrefab, CancellationToken scope)
@@ -49,29 +47,16 @@ namespace SoulRPG
             });
         }
 
-        public static void PushTip(string tip)
+        public static void SetTip(string tip)
         {
             var instance = TinyServiceLocator.Resolve<GameTipsView>();
-            instance.tips.Push(tip);
-            instance.UpdateTextAsync();
+            instance.UpdateTextAsync(tip);
         }
 
-        public void PopTip()
+        private void UpdateTextAsync(string tip)
         {
-            var instance = TinyServiceLocator.Resolve<GameTipsView>();
-            instance.tips.Pop();
-            instance.UpdateTextAsync();
-        }
-
-        private void UpdateTextAsync()
-        {
-            if (tips.Count == 0)
-            {
-                document.gameObject.SetActive(false);
-                return;
-            }
             document.gameObject.SetActive(true);
-            message.text = tips.Peek();
+            message.text = tip;
             messageRectTransform.anchoredPosition = Vector2.zero;
             messageRectTransform.sizeDelta = new Vector2(message.preferredWidth, messageParent.sizeDelta.y);
             if (message.preferredWidth > messageParent.rect.width)

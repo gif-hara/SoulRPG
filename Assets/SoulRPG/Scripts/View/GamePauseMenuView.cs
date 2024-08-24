@@ -60,6 +60,10 @@ namespace SoulRPG
                             {
                                 stateMachine.Change(StateSelectEquipmentPartAsync);
                                 gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                            },
+                            _ =>
+                            {
+                                GameTipsView.SetTip("装備を変更します。");
                             }
                         );
                     },
@@ -72,6 +76,10 @@ namespace SoulRPG
                             _ =>
                             {
                                 gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                            },
+                            _ =>
+                            {
+                                GameTipsView.SetTip("ステータスを確認します。");
                             }
                         );
                     },
@@ -84,6 +92,10 @@ namespace SoulRPG
                             _ =>
                             {
                                 gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                            },
+                            _ =>
+                            {
+                                GameTipsView.SetTip("システム設定を行います。");
                             }
                         );
                     },
@@ -191,6 +203,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var header = CreateHeader("装備変更");
+            GameTipsView.SetTip("変更したい部位を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
             Object.Destroy(header.gameObject);
@@ -236,6 +249,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var header = CreateHeader("武器変更");
+            GameTipsView.SetTip("装備したい武器を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
             Object.Destroy(header.gameObject);
@@ -278,6 +292,7 @@ namespace SoulRPG
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
             var header = CreateHeader("頭防具変更");
+            GameTipsView.SetTip("装備したい頭防具を選択してください。");
             Object.Destroy(listDocument.gameObject);
             Object.Destroy(header.gameObject);
         }
@@ -318,6 +333,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var header = CreateHeader("胴防具変更");
+            GameTipsView.SetTip("装備したい胴防具を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
             Object.Destroy(header.gameObject);
@@ -359,6 +375,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var header = CreateHeader("腕防具変更");
+            GameTipsView.SetTip("装備したい腕防具を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
             Object.Destroy(header.gameObject);
@@ -400,6 +417,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var header = CreateHeader("脚防具変更");
+            GameTipsView.SetTip("装備したい脚防具を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
             Object.Destroy(header.gameObject);
@@ -441,6 +459,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var header = CreateHeader("アクセサリー変更");
+            GameTipsView.SetTip("装備したいアクセサリーを選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
             Object.Destroy(header.gameObject);
