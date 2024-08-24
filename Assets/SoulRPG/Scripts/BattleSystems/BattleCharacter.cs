@@ -83,6 +83,7 @@ namespace SoulRPG
             }
             BattleStatus.RecoveryBehaviourPoint();
             await AilmentController.OnTurnStartAsync(this, target, scope.Token);
+            await sequences.PlayOnBeginTurnAsync(this, scope.Token);
             return true;
         }
 
