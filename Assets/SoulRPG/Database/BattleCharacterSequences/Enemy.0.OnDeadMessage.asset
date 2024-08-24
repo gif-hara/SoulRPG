@@ -13,18 +13,28 @@ MonoBehaviour:
   m_Name: Enemy.0.OnDeadMessage
   m_EditorClassIdentifier: 
   sequences:
-  - rid: 9047573712770170971
-  - rid: 9047573712770170969
+  - rid: 9047573875847332014
   references:
     version: 2
     RefIds:
-    - rid: 9047573712770170969
+    - rid: 9047573875847332014
+      type: {class: WhenAll, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        sequencesResolver:
+          rid: 9047573875847332015
+    - rid: 9047573875847332015
+      type: {class: SequencesResolver/List, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value:
+        - rid: 9047573875847332016
+        - rid: 9047573875847332017
+    - rid: 9047573875847332016
+      type: {class: BeginAnimationGameEnemyView, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        animationName: Animation.OnDeadMessage
+    - rid: 9047573875847332017
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u3092\u5012\u3057\u305F\u3002"
         sfxName: Sfx.Defeat.0
         ignoreIfCharacterDead: 0
-    - rid: 9047573712770170971
-      type: {class: BeginAnimationGameEnemyView, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        animationName: Animation.OnDeadMessage
