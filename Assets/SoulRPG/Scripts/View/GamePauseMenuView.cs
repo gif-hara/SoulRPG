@@ -94,6 +94,7 @@ namespace SoulRPG
                             "システム（未実装）",
                             _ =>
                             {
+                                stateMachine.Change(StateOptionsAsync);
                                 gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
                             },
                             _ =>
@@ -466,6 +467,12 @@ namespace SoulRPG
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
             Object.Destroy(header.gameObject);
+        }
+
+        private async UniTask StateOptionsAsync(CancellationToken scope)
+        {
+            await OptionsView.OpenAsync(documentBundlePrefab.Q<HKUIDocument>("UI.Options"), scope);
+            stateMachine.Change(StateRootMenuAsync);
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)
