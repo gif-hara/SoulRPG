@@ -18,6 +18,9 @@ namespace SoulRPG
         [SerializeField]
         private ScriptableSequences onDeadMessage;
 
+        [SerializeField]
+        private ScriptableSequences onBeginTurn;
+
         public UniTask PlayOnTakeDamageAsync(CancellationToken scope)
         {
             return new Sequencer(new Container(), onTakeDamage.Sequences).PlayAsync(scope);
@@ -28,6 +31,13 @@ namespace SoulRPG
             var container = new Container();
             container.Register("Actor", actor);
             return new Sequencer(container, onDeadMessage.Sequences).PlayAsync(scope);
+        }
+
+        public UniTask PlayOnBeginTurnAsync(BattleCharacter actor, CancellationToken scope)
+        {
+            var container = new Container();
+            container.Register("Actor", actor);
+            return new Sequencer(container, onBeginTurn.Sequences).PlayAsync(scope);
         }
     }
 }
