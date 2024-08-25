@@ -276,7 +276,7 @@ TextureImporter:
       name: Keyboard-rightArrow
       rect:
         serializedVersion: 2
-        x: 510
+        x: 512
         y: 1920
         width: 128
         height: 128
@@ -465,7 +465,7 @@ TextureImporter:
       name: DualShockGamepad-rightShoulder
       rect:
         serializedVersion: 2
-        x: 766
+        x: 768
         y: 1792
         width: 128
         height: 128
@@ -487,7 +487,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 896
-        y: 1788
+        y: 1792
         width: 128
         height: 128
       alignment: 0
@@ -613,7 +613,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 1666
+        y: 1664
         width: 128
         height: 128
       alignment: 0
@@ -865,7 +865,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1666
+        y: 1664
         width: 128
         height: 128
       alignment: 0
@@ -881,6 +881,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BehaviourPoint
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d7456d7bf81f746a76f0971f1d2973
+      internalID: -413825540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -892,6 +913,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BehaviourPoint: -413825540
       DualShockGamepad-buttonEast: 168364804
       DualShockGamepad-buttonNorth: 1793513967
       DualShockGamepad-buttonSouth: 1255463246
