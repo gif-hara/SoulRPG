@@ -18,6 +18,13 @@ namespace SoulRPG
         [SerializeField]
         private AudioMixer audioMixer;
 
+        void Start()
+        {
+            SetVolumeMaster(PlayerPrefs.GetFloat("MasterVolume", 0.8f));
+            SetVolumeBGM(PlayerPrefs.GetFloat("BgmVolume", 0.8f));
+            SetVolumeSFX(PlayerPrefs.GetFloat("SfxVolume", 0.8f));
+        }
+
         public static void PlayBGM(AudioClip clip)
         {
             var instance = TinyServiceLocator.Resolve<AudioManager>();
@@ -78,6 +85,7 @@ namespace SoulRPG
         {
             var instance = TinyServiceLocator.Resolve<AudioManager>();
             volume = Mathf.Clamp01(volume);
+            PlayerPrefs.SetFloat(name, volume);
             if (volume > 0)
             {
                 volume = Mathf.Log10(volume) * 20;
