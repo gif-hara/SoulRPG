@@ -71,14 +71,15 @@ namespace SoulRPG.CharacterControllers
             AllyType = Define.AllyType.Enemy;
         }
 
-        public void Move(Vector2Int velocity)
+        public bool Move(Vector2Int velocity)
         {
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             if (!dungeonController.CanMove(Position, velocity.ToDirection()))
             {
-                return;
+                return false;
             }
             Position += velocity;
+            return true;
         }
 
         public void Warp(Vector2Int position)

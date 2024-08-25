@@ -30,9 +30,12 @@ namespace SoulRPG
                             return;
                         }
                         velocity = player.Direction.TransformVelocityByDirection(velocity);
-                        player.Move(velocity);
+                        var moved = player.Move(velocity);
                         dungeonController.EnterAsync(player).Forget();
-                        AudioManager.PlaySFX($"Sfx.Walk.{Random.Range(0, 2)}");
+                        if (moved)
+                        {
+                            AudioManager.PlaySFX($"Sfx.Walk.{Random.Range(0, 2)}");
+                        }
                     }
                     else
                     {
@@ -43,9 +46,12 @@ namespace SoulRPG
                         if (velocity.y == 1 || velocity.y == -1)
                         {
                             velocity = player.Direction.TransformVelocityByDirection(velocity);
-                            player.Move(velocity);
+                            var moved = player.Move(velocity);
                             dungeonController.EnterAsync(player).Forget();
-                            AudioManager.PlaySFX($"Sfx.Walk.{Random.Range(0, 2)}");
+                            if (moved)
+                            {
+                                AudioManager.PlaySFX($"Sfx.Walk.{Random.Range(0, 2)}");
+                            }
                         }
                         else if (velocity.x == 1 || velocity.x == -1)
                         {
