@@ -47,6 +47,7 @@ namespace SoulRPG
                     document.Q<Image>("Image").sprite = sprite;
                 })
                 .RegisterTo(scope);
+            BeginAnimationAsync("Animation.Idle").Forget();
         }
     }
 }
