@@ -62,6 +62,10 @@ namespace SoulRPG
             dungeonScope?.Dispose();
             dungeonScope = new CancellationTokenSource();
             reachedPoints.Clear();
+            foreach (var enemy in Enemies)
+            {
+                enemy.Dispose();
+            }
             Enemies.Clear();
             var masterData = TinyServiceLocator.Resolve<MasterData>();
             CurrentDungeon = masterData.Dungeons.Get(dungeonName);
@@ -82,10 +86,15 @@ namespace SoulRPG
             foreach (var i in floorItemNoCosts)
             {
                 var position = new Vector2Int(i.X, i.Y);
+                var items = CreateItemList(i.ItemTableId);
+                if (items == null)
+                {
+                    continue;
+                }
                 var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
-                    CreateItemList(i.ItemTableId)
+                    items
                 );
                 FloorDatabase.Add(position, floorData);
             }
@@ -98,12 +107,16 @@ namespace SoulRPG
             foreach (var i in floorItemEnemyPlaces)
             {
                 var position = new Vector2Int(i.X, i.Y);
-                var floorData = new DungeonInstanceFloorData.Item
-                (
-                    position,
-                    CreateItemList(i.ItemTableId)
-                );
-                FloorDatabase.Add(position, floorData);
+                var items = CreateItemList(i.ItemTableId);
+                if (items != null)
+                {
+                    var floorData = new DungeonInstanceFloorData.Item
+                    (
+                        position,
+                        items
+                    );
+                    FloorDatabase.Add(position, floorData);
+                }
 
                 position = new Vector2Int(i.EnemyPositionX, i.EnemyPositionY);
                 if (FloorDatabase.ContainsKey(position))
@@ -129,10 +142,15 @@ namespace SoulRPG
             foreach (var i in CurrentDungeonSpec.FloorItemGuaranteeds)
             {
                 var position = new Vector2Int(i.X, i.Y);
+                var items = CreateItemList(i.ItemTableId);
+                if (items == null)
+                {
+                    continue;
+                }
                 var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
-                    CreateItemList(i.ItemTableId)
+                    items
                 );
                 AddFloorData(position, floorData);
             }
@@ -184,6 +202,10 @@ namespace SoulRPG
                 MasterData.ItemTable itemTable;
                 while (true)
                 {
+                    if (itemTables.Count == 0)
+                    {
+                        return null;
+                    }
                     lotteryIndex = itemTables.LotteryIndex();
                     itemTable = itemTables[lotteryIndex];
                     if (!createdItemIds.Contains(itemTable.ItemId))
