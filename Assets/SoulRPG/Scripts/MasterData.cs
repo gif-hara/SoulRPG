@@ -123,6 +123,7 @@ namespace SoulRPG
                 "MasterData.FloorItem.Guaranteed",
                 "MasterData.FloorEnemy.Guaranteed",
                 "MasterData.FloorEvent",
+                "MasterData.Skill.AdditionalDescription",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -162,6 +163,8 @@ namespace SoulRPG
             floorEnemyGuaranteeds.Set(JsonHelper.FromJson<FloorEnemy>(database.Item2[20]));
             var floorEvents = new FloorEvent.Group();
             floorEvents.Set(JsonHelper.FromJson<FloorEvent>(database.Item2[21]));
+            var skillAdditionalDescriptions = new SkillAdditionalDescription.Group();
+            skillAdditionalDescriptions.Set(JsonHelper.FromJson<SkillAdditionalDescription>(database.Item2[22]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -279,6 +282,12 @@ namespace SoulRPG
                 {
                     Debug.LogWarning($"Not found AccessoryBeginBattle {i.BeginBattleSequencesId}");
                 }
+            }
+            foreach (var i in skillAdditionalDescriptions.List)
+            {
+                var skill = skills.Get(i.Key);
+                Assert.IsNotNull(skill, $"Not found Skill {i.Key}");
+                skill.AdditionalDescriptions = i.Value;
             }
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
@@ -535,28 +544,28 @@ namespace SoulRPG
 
             public ScriptableSequences ActionSequences;
 
-            public string FullDescription
-            {
-                get
-                {
-                    var sb = new System.Text.StringBuilder();
-                    sb.Append("[BP:");
-                    for (var i = 0; i < NeedBehaviourPoint; i++)
-                    {
-                        sb.Append("<sprite name=\"BehaviourPoint\">");
-                    }
-                    sb.Append(" ST:");
-                    sb.Append(NeedStamina);
-                    sb.Append("] ");
-                    sb.Append(Description);
-                    return sb.ToString();
-                }
-            }
+            public List<SkillAdditionalDescription> AdditionalDescriptions;
 
             [Serializable]
             public class DictionaryList : DictionaryList<int, Skill>
             {
                 public DictionaryList() : base(x => x.Id) { }
+            }
+        }
+
+        [Serializable]
+        public class SkillAdditionalDescription
+        {
+            public int SkillId;
+
+            public int Type;
+
+            public int Id;
+
+            [Serializable]
+            public class Group : Group<int, SkillAdditionalDescription>
+            {
+                public Group() : base(x => x.SkillId) { }
             }
         }
 
