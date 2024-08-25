@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 6556875792000848142}
   sfxSource: {fileID: 7818374603875282333}
+  audioMixer: {fileID: 24100000, guid: 1b628c384636b6742b46595e8de06195, type: 2}
 --- !u!1 &5008122830172710167
 GameObject:
   m_ObjectHideFlags: 0
