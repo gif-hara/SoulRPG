@@ -374,8 +374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 314.31, y: 168.3}
+  m_AnchoredPosition: {x: 22.904907, y: -18.534912}
+  m_SizeDelta: {x: 360.1198, y: 205.3698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5565729528115225239
 MonoBehaviour:
@@ -528,6 +528,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7927702467018964912}
     m_Modifications:
+    - target: {fileID: 1946331095754469514, guid: d61a7567bf450fc418985746856f285f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2917733805254906345, guid: d61a7567bf450fc418985746856f285f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -683,13 +687,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4118097688217169900, guid: d61a7567bf450fc418985746856f285f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1202142283021163575}
   m_SourcePrefab: {fileID: 100100000, guid: d61a7567bf450fc418985746856f285f, type: 3}
 --- !u!1 &1893875361642501867 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4118097688217169900, guid: d61a7567bf450fc418985746856f285f, type: 3}
   m_PrefabInstance: {fileID: 2552988604705700103}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1202142283021163575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893875361642501867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 200
+  m_PreferredHeight: -1
+  m_FlexibleWidth: 1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!224 &5361474808059471567 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7568793345981243336, guid: d61a7567bf450fc418985746856f285f, type: 3}
@@ -703,6 +730,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7927702467018964912}
     m_Modifications:
+    - target: {fileID: 1946331095754469514, guid: d61a7567bf450fc418985746856f285f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2917733805254906345, guid: d61a7567bf450fc418985746856f285f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -855,10 +886,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8347490721847536702, guid: d61a7567bf450fc418985746856f285f, type: 3}
+      propertyPath: m_text
+      value: <sprite name="BehaviourPoint"><sprite name="BehaviourPoint"><sprite
+        name="BehaviourPoint">
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4118097688217169900, guid: d61a7567bf450fc418985746856f285f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7428870535412461812}
   m_SourcePrefab: {fileID: 100100000, guid: d61a7567bf450fc418985746856f285f, type: 3}
 --- !u!224 &332559057431932894 stripped
 RectTransform:
@@ -870,3 +909,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4118097688217169900, guid: d61a7567bf450fc418985746856f285f, type: 3}
   m_PrefabInstance: {fileID: 7896144683458162710}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7428870535412461812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103171095120470010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 200
+  m_PreferredHeight: -1
+  m_FlexibleWidth: 1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1

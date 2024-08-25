@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
@@ -74,10 +75,15 @@ namespace SoulRPG
                     var skillElement = Object.Instantiate(skillElementPrefab, skillParent);
                     skillElement.Q<TMP_Text>("Name").text = masterDataSkill.Name;
                     skillElement.Q<TMP_Text>("Description").text = masterDataSkill.Description;
+                    var sb = new StringBuilder();
+                    for (var bp = 0; bp < masterDataSkill.NeedBehaviourPoint; bp++)
+                    {
+                        sb.Append("<sprite name=\"BehaviourPoint\">");
+                    }
                     skillElement
                         .Q<HKUIDocument>("Parameter.BehaviourPoint")
                         .Q<TMP_Text>("Value")
-                        .text = masterDataSkill.NeedBehaviourPoint.ToString();
+                        .text = sb.ToString();
                     skillElement
                         .Q<HKUIDocument>("Parameter.Stamina")
                         .Q<TMP_Text>("Value")
