@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using HK;
 using SoulRPG.BattleSystems.AI;
-using SoulRPG.CharacterControllers;
 using UnityEngine;
 
 namespace SoulRPG
@@ -89,5 +89,42 @@ namespace SoulRPG
         {
             return new BattleCharacter(new CharacterBattleStatus(self), new Enemy(self.AISequences), self.BattleCharacterSequences);
         }
+
+        public static string CreateAdditionalDescription(this MasterData.SkillAdditionalDescription self)
+        {
+            switch (self.Type)
+            {
+                case 0:
+                    var ailment = TinyServiceLocator.Resolve<MasterData>().Ailments.Get(self.Id);
+                    return $"{ailment.Name} : {ailment.Description}";
+                default:
+                    Debug.LogError($"Invalid type: {self.Type}");
+                    return string.Empty;
+            }
+        }
+
+        public static string FullDescription(this MasterData.Skill self)
+        {
+            var sb = new StringBuilder();
+            sb.Append("[BP:");
+            for (var i = 0; i < self.NeedBehaviourPoint; i++)
+            {
+                sb.Append("<sprite name=\"BehaviourPoint\">");
+            }
+            sb.Append(" ST:");
+            sb.Append(self.NeedStamina);
+            sb.Append("] ");
+            sb.Append(self.Description);
+            sb.Append("<size=80%>");
+            sb.Append("<color=#FFDDDD>");
+            foreach (var i in self.AdditionalDescriptions)
+            {
+                sb.Append(i.CreateAdditionalDescription());
+            }
+            sb.Append("</color>");
+            sb.Append("</size>");
+            return sb.ToString();
+        }
+
     }
 }
