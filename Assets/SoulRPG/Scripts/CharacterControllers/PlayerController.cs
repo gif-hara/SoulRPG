@@ -32,6 +32,7 @@ namespace SoulRPG
                         velocity = player.Direction.TransformVelocityByDirection(velocity);
                         player.Move(velocity);
                         dungeonController.EnterAsync(player).Forget();
+                        AudioManager.PlaySFX($"Sfx.Walk.{Random.Range(0, 2)}");
                     }
                     else
                     {
@@ -44,12 +45,14 @@ namespace SoulRPG
                             velocity = player.Direction.TransformVelocityByDirection(velocity);
                             player.Move(velocity);
                             dungeonController.EnterAsync(player).Forget();
+                            AudioManager.PlaySFX($"Sfx.Walk.{Random.Range(0, 2)}");
                         }
                         else if (velocity.x == 1 || velocity.x == -1)
                         {
                             var direction = velocity.ToDirection();
                             player.Direction = player.Direction.Rotate(direction);
                             dungeonController.EnterAsync(player).Forget();
+                            AudioManager.PlaySFX($"Sfx.Walk.{Random.Range(0, 2)}");
                         }
                     }
                 })

@@ -226,7 +226,6 @@ namespace SoulRPG
                     tipsParent.anchoredPosition = viewportPosition;
                     shadowParent.anchoredPosition = viewportPosition;
                     gameCameraController.transform.position = new Vector3(x.x, 0, x.y);
-                    TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext($"Sfx.Walk.{Random.Range(0, 2)}");
                 })
                 .RegisterTo(scope);
             character.DirectionAsObservable()
@@ -234,7 +233,6 @@ namespace SoulRPG
                 {
                     characterRotationObject.rotation = Quaternion.Euler(0, 0, -x.ToAngle());
                     gameCameraController.transform.rotation = Quaternion.Euler(0, x.ToAngle(), 0);
-                    TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext($"Sfx.Walk.{Random.Range(0, 2)}");
                 })
                 .RegisterTo(scope);
             gameEvents.OnRequestChangeMiniMapType
