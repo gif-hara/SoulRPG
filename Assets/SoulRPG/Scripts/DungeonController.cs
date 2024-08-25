@@ -42,6 +42,9 @@ namespace SoulRPG
 
         private CancellationTokenSource enterScope;
 
+        private CancellationTokenSource dungeonScope;
+        public CancellationToken DungeonScope => dungeonScope.Token;
+
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
             IExplorationView view,
@@ -55,6 +58,10 @@ namespace SoulRPG
 
         public void Setup(string dungeonName, Character player)
         {
+            dungeonScope?.Cancel();
+            dungeonScope?.Dispose();
+            dungeonScope = new CancellationTokenSource();
+            reachedPoints.Clear();
             Enemies.Clear();
             var masterData = TinyServiceLocator.Resolve<MasterData>();
             CurrentDungeon = masterData.Dungeons.Get(dungeonName);
@@ -156,6 +163,7 @@ namespace SoulRPG
                     new DungeonInstanceWallData(wallEvent)
                 );
             }
+            AddReachedPoint(player);
 
             void AddFloorData(Vector2Int position, DungeonInstanceFloorData floorData)
             {

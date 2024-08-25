@@ -91,7 +91,9 @@ namespace SoulRPG.SceneControllers
                 destroyCancellationToken
                 );
             TinyServiceLocator.Register(dungeonController);
+            explorationView.Open(destroyCancellationToken);
             dungeonController.Setup(debugDungeonName, player);
+            explorationView.CreateDungeonViews();
             if (isUseDebugPosition)
             {
                 player.Warp(debugPosition);
@@ -101,7 +103,6 @@ namespace SoulRPG.SceneControllers
                 player.Inventory.Add(i.ItemId, i.Count);
             }
             playerController.Attach(player, gameMenuBundlePrefab, destroyCancellationToken);
-            explorationView.Open(destroyCancellationToken);
             Observable.Merge
             (
                 gameEvents.OnRequestPlaySfx,
@@ -204,6 +205,7 @@ namespace SoulRPG.SceneControllers
                         if (Keyboard.current.aKey.wasPressedThisFrame)
                         {
                             dungeonController.Setup(debugDungeonName, player);
+                            explorationView.CreateDungeonViews();
                         }
                     }
                     catch (OperationCanceledException)

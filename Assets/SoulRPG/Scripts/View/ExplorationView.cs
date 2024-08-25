@@ -31,6 +31,8 @@ namespace SoulRPG
 
         private readonly Dictionary<DungeonInstanceWallData, HKUIDocument> dungeonWallEventObjects = new();
 
+        private readonly List<GameObject> dungeonObjects = new();
+
         private readonly Dictionary<Vector2Int, GameObject> maptipShadowObjects = new();
 
         private HKUIDocument uiDocument;
@@ -51,11 +53,46 @@ namespace SoulRPG
         public void Open(CancellationToken scope)
         {
             uiDocument = Object.Instantiate(uiDocumentPrefab);
-            var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
-            SetupMiniMap(uiDocument, dungeonController, character, scope);
-            SetupDungeon(dungeonController);
+            SetupMiniMap(uiDocument, character, scope);
+            SetupDungeon(scope);
             SetupMessage(uiDocument, character, scope);
             SetupStatuses(uiDocument, character, scope);
+        }
+
+        public void CreateDungeonViews()
+        {
+            foreach (var i in dungeonFloorEventObjects)
+            {
+                Object.Destroy(i.Value);
+            }
+            dungeonFloorEventObjects.Clear();
+            foreach (var i in maptipFloorEventObjects)
+            {
+                Object.Destroy(i.Value);
+            }
+            maptipFloorEventObjects.Clear();
+            foreach (var i in maptipWallEventObjects)
+            {
+                Object.Destroy(i.Value.gameObject);
+            }
+            maptipWallEventObjects.Clear();
+            foreach (var i in dungeonWallEventObjects)
+            {
+                Object.Destroy(i.Value.gameObject);
+            }
+            dungeonWallEventObjects.Clear();
+            foreach (var i in dungeonObjects)
+            {
+                Object.Destroy(i);
+            }
+            dungeonObjects.Clear();
+            foreach (var i in maptipShadowObjects)
+            {
+                Object.Destroy(i.Value);
+            }
+            maptipShadowObjects.Clear();
+            CreateMiniMap();
+            CreateDungeon();
         }
 
         public void SetActive(bool isActive)
@@ -76,9 +113,94 @@ namespace SoulRPG
                 .RegisterTo(scope);
         }
 
+        private void CreateMiniMap()
+        {
+            var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
+            var scope = dungeonController.DungeonScope;
+            var areaDocument = uiDocument.Q<HKUIDocument>("Area.MiniMap");
+            var miniMapWallPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall");
+            var tipsParent = areaDocument.Q<RectTransform>("Area.Tips.Viewport");
+            var size = areaDocument.Q<RectTransform>("Area.Tips").rect.size;
+            var tipSize = size / 10;
+            var shadowParent = areaDocument.Q<RectTransform>("Area.Shadow.Viewport");
+
+            foreach (var i in dungeonController.CurrentDungeon.wall.List)
+            {
+                var isHorizontal = i.a.y == i.b.y;
+                var prefab = miniMapWallPrefab;
+                var wallObject = Object.Instantiate(prefab, tipsParent.transform);
+                wallObject.anchoredPosition = new Vector2(i.a.x * tipSize.x, i.a.y * tipSize.y);
+                wallObject.sizeDelta = tipSize;
+                wallObject.rotation = Quaternion.Euler(0, 0, isHorizontal ? 0 : 90);
+                dungeonObjects.Add(wallObject.gameObject);
+            }
+
+            for (var y = 0; y < dungeonController.CurrentDungeon.range.y; y++)
+            {
+                for (var x = 0; x < dungeonController.CurrentDungeon.range.x; x++)
+                {
+                    if (dungeonController.ContainsReachedPoint(new Vector2Int(x, y)))
+                    {
+                        continue;
+                    }
+                    var position = new Vector2Int(x, y);
+                    var shadowObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Shadow"), shadowParent);
+                    shadowObject.anchoredPosition = new Vector2(x * tipSize.x, y * tipSize.y);
+                    shadowObject.sizeDelta = tipSize;
+                    maptipShadowObjects.Add(position, shadowObject.gameObject);
+                }
+            }
+
+            foreach (var (position, floorData) in dungeonController.FloorDatabase)
+            {
+                var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{floorData.ViewName}"), tipsParent.transform);
+                eventObject.anchoredPosition = new Vector2(position.x * tipSize.x, position.y * tipSize.y);
+                eventObject.sizeDelta = tipSize;
+                maptipFloorEventObjects.Add(floorData, eventObject.gameObject);
+            }
+            foreach (var i in TinyServiceLocator.Resolve<DungeonController>().WallDatabase)
+            {
+                var isHorizontal = i.Key.From.y == i.Key.To.y;
+                var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.Value.EventType}"), tipsParent.transform);
+                maptipWallEventObjects.Add(i.Value, element);
+                var elementTransform = element.transform as RectTransform;
+                elementTransform.anchoredPosition = new Vector2(i.Key.From.x * tipSize.x, i.Key.From.y * tipSize.y);
+                elementTransform.sizeDelta = tipSize;
+                elementTransform.rotation = Quaternion.Euler(0, 0, isHorizontal ? 0 : 90);
+                i.Value.IsOpenReactiveProperty
+                    .Subscribe(x =>
+                    {
+                        element.Q("Open").SetActive(x);
+                        element.Q("Close").SetActive(!x);
+                    })
+                    .RegisterTo(scope);
+                dungeonObjects.Add(element.gameObject);
+            }
+            foreach (var i in dungeonController.Enemies)
+            {
+                var characterObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Enemy"), tipsParent.transform);
+                characterObject.anchoredPosition = new Vector2(i.Position.x * tipSize.x, i.Position.y * tipSize.y);
+                characterObject.sizeDelta = tipSize;
+                i.PositionAsObservable()
+                    .Subscribe(x =>
+                    {
+                        characterObject.anchoredPosition = new Vector2(x.x * tipSize.x, x.y * tipSize.y);
+                    })
+                    .RegisterTo(i.LifeScope);
+                i.LifeScope.Register(() =>
+                {
+                    if (characterObject == null)
+                    {
+                        return;
+                    }
+                    Object.Destroy(characterObject.gameObject);
+                });
+                dungeonObjects.Add(characterObject.gameObject);
+            }
+        }
+
         private void SetupMiniMap(
             HKUIDocument uiDocument,
-            DungeonController dungeonController,
             Character character,
             CancellationToken scope
             )
@@ -127,77 +249,6 @@ namespace SoulRPG
                     ChangeViewType(miniMapType == Define.MiniMapType.Default ? Define.MiniMapType.View : Define.MiniMapType.Default);
                 })
                 .RegisterTo(scope);
-
-            foreach (var i in dungeonController.CurrentDungeon.wall.List)
-            {
-                var isHorizontal = i.a.y == i.b.y;
-                var prefab = miniMapWallPrefab;
-                var wallObject = Object.Instantiate(prefab, tipsParent.transform);
-                wallObject.anchoredPosition = new Vector2(i.a.x * tipSize.x, i.a.y * tipSize.y);
-                wallObject.sizeDelta = tipSize;
-                wallObject.rotation = Quaternion.Euler(0, 0, isHorizontal ? 0 : 90);
-            }
-
-            for (var y = 0; y < dungeonController.CurrentDungeon.range.y; y++)
-            {
-                for (var x = 0; x < dungeonController.CurrentDungeon.range.x; x++)
-                {
-                    if (dungeonController.ContainsReachedPoint(new Vector2Int(x, y)))
-                    {
-                        continue;
-                    }
-                    var position = new Vector2Int(x, y);
-                    var shadowObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Shadow"), shadowParent);
-                    shadowObject.anchoredPosition = new Vector2(x * tipSize.x, y * tipSize.y);
-                    shadowObject.sizeDelta = tipSize;
-                    maptipShadowObjects.Add(position, shadowObject.gameObject);
-                }
-            }
-
-            foreach (var (position, floorData) in dungeonController.FloorDatabase)
-            {
-                var eventObject = Object.Instantiate(areaDocument.Q<RectTransform>($"UIElement.MapTip.Floor.Event.{floorData.ViewName}"), tipsParent.transform);
-                eventObject.anchoredPosition = new Vector2(position.x * tipSize.x, position.y * tipSize.y);
-                eventObject.sizeDelta = tipSize;
-                maptipFloorEventObjects.Add(floorData, eventObject.gameObject);
-            }
-            foreach (var i in TinyServiceLocator.Resolve<DungeonController>().WallDatabase)
-            {
-                var isHorizontal = i.Key.From.y == i.Key.To.y;
-                var element = Object.Instantiate(areaDocument.Q<HKUIDocument>($"UIElement.MapTip.Wall.Event.{i.Value.EventType}"), tipsParent.transform);
-                maptipWallEventObjects.Add(i.Value, element);
-                var elementTransform = element.transform as RectTransform;
-                elementTransform.anchoredPosition = new Vector2(i.Key.From.x * tipSize.x, i.Key.From.y * tipSize.y);
-                elementTransform.sizeDelta = tipSize;
-                elementTransform.rotation = Quaternion.Euler(0, 0, isHorizontal ? 0 : 90);
-                i.Value.IsOpenReactiveProperty
-                    .Subscribe(x =>
-                    {
-                        element.Q("Open").SetActive(x);
-                        element.Q("Close").SetActive(!x);
-                    })
-                    .RegisterTo(scope);
-            }
-            foreach (var i in dungeonController.Enemies)
-            {
-                var characterObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Enemy"), tipsParent.transform);
-                characterObject.anchoredPosition = new Vector2(i.Position.x * tipSize.x, i.Position.y * tipSize.y);
-                characterObject.sizeDelta = tipSize;
-                i.PositionAsObservable()
-                    .Subscribe(x =>
-                    {
-                        characterObject.anchoredPosition = new Vector2(x.x * tipSize.x, x.y * tipSize.y);
-                    })
-                    .RegisterTo(i.LifeScope);
-                i.LifeScope.Register(() =>
-                {
-                    if (characterObject == null)
-                    {
-                        return;
-                    }
-                    Object.Destroy(characterObject.gameObject);
-                });
-            }
             gameEvents.OnAddReachedPoint
                 .Subscribe(RemoveShadow)
                 .RegisterTo(scope);
@@ -209,8 +260,8 @@ namespace SoulRPG
                         Object.Destroy(obj);
                         maptipFloorEventObjects.Remove(x);
                     }
-                });
-
+                })
+                .RegisterTo(scope);
             void RemoveShadow(Vector2Int position)
             {
                 if (maptipShadowObjects.TryGetValue(position, out var shadowObject))
@@ -229,15 +280,17 @@ namespace SoulRPG
             }
         }
 
-        private void SetupDungeon(DungeonController dungeonController)
+        private void CreateDungeon()
         {
             var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
+            var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             for (var i = 0; i <= dungeonController.CurrentDungeon.range.x; i++)
             {
                 for (var j = 0; j <= dungeonController.CurrentDungeon.range.y; j++)
                 {
                     var floorObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Floor"), dungeonDocument.transform);
                     floorObject.position = new Vector3(i, 0, j);
+                    dungeonObjects.Add(floorObject.gameObject);
                 }
             }
             foreach (var i in dungeonController.CurrentDungeon.wall.List)
@@ -247,6 +300,7 @@ namespace SoulRPG
                 var wallObject = Object.Instantiate(prefab, dungeonDocument.transform);
                 wallObject.position = new Vector3(i.a.x, 0, i.a.y);
                 wallObject.rotation = Quaternion.Euler(0, isHorizontal ? 0 : -90, 0);
+                dungeonObjects.Add(wallObject.gameObject);
             }
 
             foreach (var (position, floorData) in dungeonController.FloorDatabase)
@@ -287,7 +341,12 @@ namespace SoulRPG
                     }
                     Object.Destroy(characterObject.gameObject);
                 });
+                dungeonObjects.Add(characterObject.gameObject);
             }
+        }
+
+        private void SetupDungeon(CancellationToken scope)
+        {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnAcquiredFloorData
                 .Subscribe(x =>
@@ -297,7 +356,8 @@ namespace SoulRPG
                         Object.Destroy(obj);
                         dungeonFloorEventObjects.Remove(x);
                     }
-                });
+                })
+                .RegisterTo(scope);
         }
 
         private void SetupMessage(
