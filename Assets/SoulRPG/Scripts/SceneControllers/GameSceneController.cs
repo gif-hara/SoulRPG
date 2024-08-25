@@ -201,6 +201,10 @@ namespace SoulRPG.SceneControllers
                             player.GrowthParameter.BehaviourPoint += 1;
                             gameEvents.OnRequestShowMessage.OnNext(new($"行動ポイント：{player.GrowthParameter.BehaviourPoint}"));
                         }
+                        if (Keyboard.current.aKey.wasPressedThisFrame)
+                        {
+                            dungeonController.Setup(debugDungeonName, player);
+                        }
                     }
                     catch (OperationCanceledException)
                     {
