@@ -102,7 +102,7 @@ namespace SoulRPG
                             inputActions.Options.Navigate.GetTag() + ":選択" +
                             inputActions.Options.Submit.GetTag() + ":決定" +
                             inputActions.Options.Cancel.GetTag() + ":キャンセル" +
-                            inputActions.Options.NextTab.GetTag() + inputActions.Options.PreviousTab.GetTag() + ":カテゴリ移動";
+                            inputActions.Options.PreviousTab.GetTag() + inputActions.Options.NextTab.GetTag() + ":カテゴリ移動";
                     }, inputGuideScope.Token));
                     break;
             }
