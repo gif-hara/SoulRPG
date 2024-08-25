@@ -65,6 +65,10 @@ namespace SoulRPG
             FloorDatabase.Clear();
             var itemTableDatabase = new Dictionary<int, List<MasterData.ItemTable>>();
             var createdItemIds = new HashSet<int>();
+            foreach (var i in player.Inventory.Items)
+            {
+                createdItemIds.Add(i.Key);
+            }
             var floorItemNoCosts = CurrentDungeonSpec.FloorItemNoCosts
                 .OrderBy(_ => Random.value)
                 .Take(Random.Range(CurrentDungeonSpec.NoCostItemNumberMin, CurrentDungeonSpec.NoCostItemNumberMax));
