@@ -260,6 +260,11 @@ MonoBehaviour:
     m_GlyphIndex: 35
     m_Scale: 1
     m_Name: TMP_Sprite_27
+  - m_ElementType: 2
+    m_Unicode: 65534
+    m_GlyphIndex: 36
+    m_Scale: 1
+    m_Name: BehaviourPoint
   m_GlyphTable:
   - m_Index: 0
     m_Metrics:
@@ -333,7 +338,7 @@ MonoBehaviour:
       m_HorizontalBearingY: 100
       m_HorizontalAdvance: 156
     m_GlyphRect:
-      m_X: 510
+      m_X: 512
       m_Y: 1920
       m_Width: 128
       m_Height: 128
@@ -525,7 +530,7 @@ MonoBehaviour:
       m_HorizontalBearingY: 100
       m_HorizontalAdvance: 156
     m_GlyphRect:
-      m_X: 766
+      m_X: 768
       m_Y: 1792
       m_Width: 128
       m_Height: 128
@@ -558,7 +563,7 @@ MonoBehaviour:
       m_HorizontalAdvance: 156
     m_GlyphRect:
       m_X: 896
-      m_Y: 1788
+      m_Y: 1792
       m_Width: 128
       m_Height: 128
     m_Scale: 1
@@ -574,7 +579,7 @@ MonoBehaviour:
       m_HorizontalAdvance: 156
     m_GlyphRect:
       m_X: 768
-      m_Y: 1666
+      m_Y: 1664
       m_Width: 128
       m_Height: 128
     m_Scale: 1
@@ -590,7 +595,7 @@ MonoBehaviour:
       m_HorizontalAdvance: 156
     m_GlyphRect:
       m_X: 1024
-      m_Y: 1666
+      m_Y: 1664
       m_Width: 128
       m_Height: 128
     m_Scale: 1
@@ -837,5 +842,21 @@ MonoBehaviour:
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
     sprite: {fileID: -1937751284, guid: f252ef72559fa634dae0b9f1403686a5, type: 3}
+  - m_Index: 36
+    m_Metrics:
+      m_Width: 128
+      m_Height: 128
+      m_HorizontalBearingX: 12
+      m_HorizontalBearingY: 100
+      m_HorizontalAdvance: 156
+    m_GlyphRect:
+      m_X: 0
+      m_Y: 0
+      m_Width: 128
+      m_Height: 128
+    m_Scale: 1
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
+    sprite: {fileID: -413825540, guid: f252ef72559fa634dae0b9f1403686a5, type: 3}
   spriteInfoList: []
   fallbackSpriteAssets: []
