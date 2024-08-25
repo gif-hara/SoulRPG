@@ -114,10 +114,9 @@ namespace SoulRPG
                         gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                     })
                     .RegisterTo(scope);
-            var header = CreateHeader("メニュー");
+            CreateHeader("メニュー", scope);
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
-            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectEquipmentPartAsync(CancellationToken scope)
@@ -206,11 +205,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
-            var header = CreateHeader("装備変更");
+            CreateHeader("装備変更", scope);
             GameTipsView.SetTip("変更したい部位を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
-            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectWeaponAsync(CancellationToken scope)
@@ -252,11 +250,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
-            var header = CreateHeader("武器変更");
+            CreateHeader("武器変更", scope);
             GameTipsView.SetTip("装備したい武器を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
-            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectArmorHeadAsync(CancellationToken scope)
@@ -295,10 +292,9 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
-            var header = CreateHeader("頭防具変更");
+            CreateHeader("頭防具変更", scope);
             GameTipsView.SetTip("装備したい頭防具を選択してください。");
             Object.Destroy(listDocument.gameObject);
-            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectArmorBodyAsync(CancellationToken scope)
@@ -336,11 +332,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
-            var header = CreateHeader("胴防具変更");
+            CreateHeader("胴防具変更", scope);
             GameTipsView.SetTip("装備したい胴防具を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
-            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectArmorArmsAsync(CancellationToken scope)
@@ -378,11 +373,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
-            var header = CreateHeader("腕防具変更");
+            CreateHeader("腕防具変更", scope);
             GameTipsView.SetTip("装備したい腕防具を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
-            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectArmorLegsAsync(CancellationToken scope)
@@ -420,11 +414,10 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
-            var header = CreateHeader("脚防具変更");
+            CreateHeader("脚防具変更", scope);
             GameTipsView.SetTip("装備したい脚防具を選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
-            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateSelectAccessoryAsync(CancellationToken scope)
@@ -462,16 +455,15 @@ namespace SoulRPG
                     gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
                 })
                 .RegisterTo(scope);
-            var header = CreateHeader("アクセサリー変更");
+            CreateHeader("アクセサリー変更", scope);
             GameTipsView.SetTip("装備したいアクセサリーを選択してください。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
-            Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateOptionsAsync(CancellationToken scope)
         {
-            await OptionsView.OpenAsync(documentBundlePrefab.Q<HKUIDocument>("UI.Options"), scope);
+            await OptionsView.OpenAsync(documentBundlePrefab, scope);
             stateMachine.Change(StateRootMenuAsync);
         }
 
@@ -496,11 +488,9 @@ namespace SoulRPG
             );
         }
 
-        private HKUIDocument CreateHeader(string header)
+        private HKUIDocument CreateHeader(string header, CancellationToken scope)
         {
-            var document = Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"));
-            document.Q<TMP_Text>("Header").text = header;
-            return document;
+            return HeaderView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"), header, scope);
         }
 
         public interface IContext

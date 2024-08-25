@@ -14,9 +14,10 @@ namespace SoulRPG
     /// </summary>
     public sealed class OptionsView
     {
-        public static UniTask OpenAsync(HKUIDocument documentPrefab, CancellationToken scope)
+        public static UniTask OpenAsync(HKUIDocument documentBundlePrefab, CancellationToken scope)
         {
-            var document = UnityEngine.Object.Instantiate(documentPrefab);
+            var document = UnityEngine.Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Options"));
+            var header = HeaderView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"), "システム", scope);
             var source = new UniTaskCompletionSource();
             var stateMachine = new TinyStateMachine();
             HKUIDocument currentTabObject = null;

@@ -81,10 +81,9 @@ namespace SoulRPG
                     stateMachine.Change(StateCloseAsync);
                 })
                 .RegisterTo(scope);
-            var header = CreateHeader("チェックポイント");
+            CreateHeader("チェックポイント", scope);
             await UniTask.WaitUntilCanceled(scope);
             UnityEngine.Object.Destroy(listDocument.gameObject);
-            UnityEngine.Object.Destroy(header.gameObject);
         }
 
         private async UniTask StateLevelUpAsync(CancellationToken scope)
@@ -224,11 +223,10 @@ namespace SoulRPG
                     }
                 })
                 .RegisterTo(scope);
-            var header = CreateHeader("レベルアップ");
+            CreateHeader("レベルアップ", scope);
             await UniTask.WaitUntilCanceled(scope);
             UnityEngine.Object.Destroy(listDocument.gameObject);
             UnityEngine.Object.Destroy(informationDocument.gameObject);
-            UnityEngine.Object.Destroy(header.gameObject);
 
             void SetupElement
             (
@@ -380,11 +378,9 @@ namespace SoulRPG
             return character.GrowthParameter.Level < growthParameter.Level && min < current;
         }
 
-        private HKUIDocument CreateHeader(string header)
+        private HKUIDocument CreateHeader(string header, CancellationToken scope)
         {
-            var document = UnityEngine.Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"));
-            document.Q<TMP_Text>("Header").text = header;
-            return document;
+            return HeaderView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"), header, scope);
         }
     }
 }
