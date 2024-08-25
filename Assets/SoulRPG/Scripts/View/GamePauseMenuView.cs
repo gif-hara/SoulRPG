@@ -62,7 +62,7 @@ namespace SoulRPG
                             _ =>
                             {
                                 stateMachine.Change(StateSelectEquipmentPartAsync);
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                                AudioManager.PlaySFX("Sfx.Message.0");
                             },
                             _ =>
                             {
@@ -78,7 +78,7 @@ namespace SoulRPG
                             "ステータス（未実装）",
                             _ =>
                             {
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                                AudioManager.PlaySFX("Sfx.Message.0");
                             },
                             _ =>
                             {
@@ -95,7 +95,7 @@ namespace SoulRPG
                             _ =>
                             {
                                 stateMachine.Change(StateOptionsAsync);
-                                gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                                AudioManager.PlaySFX("Sfx.Message.0");
                             },
                             _ =>
                             {
@@ -111,7 +111,7 @@ namespace SoulRPG
                     .Subscribe(_ =>
                     {
                         stateMachine.Change(StateCloseAsync);
-                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
+                        AudioManager.PlaySFX("Sfx.Cancel.0");
                     })
                     .RegisterTo(scope);
             CreateHeader("メニュー", scope);
@@ -131,7 +131,7 @@ namespace SoulRPG
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Weapon1);
                         stateMachine.Change(StateSelectWeaponAsync);
-                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                        AudioManager.PlaySFX("Sfx.Message.0");
                     });
                 });
             });
@@ -141,7 +141,7 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Head);
                     stateMachine.Change(StateSelectArmorHeadAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                    AudioManager.PlaySFX("Sfx.Message.0");
                 });
             });
             var bodyElement = new Action<HKUIDocument>(element =>
@@ -150,7 +150,7 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
                     stateMachine.Change(StateSelectArmorBodyAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                    AudioManager.PlaySFX("Sfx.Message.0");
                 });
             });
             var armElement = new Action<HKUIDocument>(element =>
@@ -159,7 +159,7 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Arm);
                     stateMachine.Change(StateSelectArmorArmsAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                    AudioManager.PlaySFX("Sfx.Message.0");
                 });
             });
             var legElement = new Action<HKUIDocument>(element =>
@@ -168,7 +168,7 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Leg);
                     stateMachine.Change(StateSelectArmorLegsAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                    AudioManager.PlaySFX("Sfx.Message.0");
                 });
             });
             var accessoryElements = character.Equipment.GetAccessoryIds().Select((x, i) =>
@@ -180,7 +180,7 @@ namespace SoulRPG
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Accessory1);
                         stateMachine.Change(StateSelectAccessoryAsync);
-                        gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Message.0"));
+                        AudioManager.PlaySFX("Sfx.Message.0");
                     });
                 });
             });
@@ -202,7 +202,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateRootMenuAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
             CreateHeader("装備変更", scope);
@@ -247,7 +247,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
             CreateHeader("武器変更", scope);
@@ -288,7 +288,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
@@ -329,7 +329,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
             CreateHeader("胴防具変更", scope);
@@ -370,7 +370,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
             CreateHeader("腕防具変更", scope);
@@ -411,7 +411,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
             CreateHeader("脚防具変更", scope);
@@ -452,7 +452,7 @@ namespace SoulRPG
                 .Subscribe(_ =>
                 {
                     stateMachine.Change(StateSelectEquipmentPartAsync);
-                    gameEvents.OnRequestPlaySfx.OnNext(new("Sfx.Cancel.0"));
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
             CreateHeader("アクセサリー変更", scope);

@@ -80,7 +80,7 @@ namespace SoulRPG
                         "武器",
                         _ =>
                         {
-                            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                            AudioManager.PlaySFX("Sfx.Message.0");
                             stateMachine.Change(StateSelectWeaponAsync);
                         },
                         _ =>
@@ -95,7 +95,7 @@ namespace SoulRPG
                         "確認",
                         _ =>
                         {
-                            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                            AudioManager.PlaySFX("Sfx.Message.0");
                             stateMachine.Change(StateConfirmAsync);
                         },
                         _ =>
@@ -115,7 +115,7 @@ namespace SoulRPG
                             "全スキル",
                             _ =>
                             {
-                                TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                                AudioManager.PlaySFX("Sfx.Message.0");
                                 stateMachine.Change(StateSelectAllSkillAsync);
                             });
                     }
@@ -152,7 +152,7 @@ namespace SoulRPG
                             _ =>
                             {
                                 selectedWeaponId = index;
-                                gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                                AudioManager.PlaySFX("Sfx.Message.0");
                                 stateMachine.Change(StateSelectSkillAsync);
                             },
                             _ =>
@@ -167,7 +167,7 @@ namespace SoulRPG
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                     stateMachine.Change(StateSelectMainCommandAsync);
                 })
                 .RegisterTo(scope);
@@ -184,7 +184,7 @@ namespace SoulRPG
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                     stateMachine.Change(StateSelectWeaponAsync);
                 })
                 .RegisterTo(scope);
@@ -206,7 +206,7 @@ namespace SoulRPG
                         x.Name,
                         async _ =>
                         {
-                            gameEvents.OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                            AudioManager.PlaySFX("Sfx.Message.0");
                             var identifier = Skill.CreateIdentifier(weapon.ItemId, x.Id);
                             if (character.UsedSkills.Contains(identifier))
                             {
@@ -252,7 +252,7 @@ namespace SoulRPG
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                     stateMachine.Change(StateSelectMainCommandAsync);
                 })
                 .RegisterTo(scope);
@@ -265,7 +265,7 @@ namespace SoulRPG
                         "状態異常",
                         _ =>
                         {
-                            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext("Sfx.Message.0");
+                            AudioManager.PlaySFX("Sfx.Message.0");
                             stateMachine.Change(StateStatusAsync);
                         });
                 }),
@@ -286,7 +286,7 @@ namespace SoulRPG
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                     stateMachine.Change(StateSelectMainCommandAsync);
                 })
                 .RegisterTo(scope);
@@ -329,7 +329,7 @@ namespace SoulRPG
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
-                    gameEvents.OnRequestPlaySfx.OnNext("Sfx.Cancel.0");
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
                     stateMachine.Change(StateSelectMainCommandAsync);
                 })
                 .RegisterTo(scope);

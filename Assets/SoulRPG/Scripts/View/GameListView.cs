@@ -77,7 +77,7 @@ namespace SoulRPG
                     button.OnSelectAsObservable()
                         .Subscribe(_ =>
                         {
-                            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                            AudioManager.PlaySFX("Sfx.Select.0");
                             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Navigate.OnPerformedAsObservable()
                                 .TakeUntil(button.OnDeselectAsObservable())
                                 .Subscribe(x =>
@@ -154,7 +154,7 @@ namespace SoulRPG
                 button.OnSelectAsObservable()
                     .Subscribe(_ =>
                     {
-                        TinyServiceLocator.Resolve<GameEvents>().OnRequestPlaySfx.OnNext(new("Sfx.Select.0"));
+                        AudioManager.PlaySFX("Sfx.Select.0");
                     })
                     .RegisterTo(element.destroyCancellationToken);
                 if (elementIndex == initialElementIndex)

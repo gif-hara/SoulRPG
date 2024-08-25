@@ -103,12 +103,8 @@ namespace SoulRPG.SceneControllers
                 player.Inventory.Add(i.ItemId, i.Count);
             }
             playerController.Attach(player, gameMenuBundlePrefab, destroyCancellationToken);
-            Observable.Merge
-            (
-                gameEvents.OnRequestPlaySfx,
-                gameEvents.OnRequestShowMessage.Select(x => x.SfxName)
-            )
-                .Subscribe(x =>
+            gameEvents.OnRequestShowMessage.Select(x => x.SfxName)
+            .Subscribe(x =>
                 {
                     if (string.IsNullOrEmpty(x))
                     {
