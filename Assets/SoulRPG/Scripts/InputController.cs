@@ -27,6 +27,7 @@ namespace SoulRPG
         {
             InGame,
             UI,
+            Options,
         }
 
         public InputController()
@@ -69,6 +70,7 @@ namespace SoulRPG
                 case InputType.InGame:
                     inputActions.InGame.Enable();
                     inputActions.UI.Disable();
+                    inputActions.Options.Disable();
                     gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
                     {
                         return
@@ -81,12 +83,26 @@ namespace SoulRPG
                 case InputType.UI:
                     inputActions.InGame.Disable();
                     inputActions.UI.Enable();
+                    inputActions.Options.Disable();
                     gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
                     {
                         return
                             inputActions.UI.Navigate.GetTag() + ":選択" +
                             inputActions.UI.Submit.GetTag() + ":決定" +
                             inputActions.UI.Cancel.GetTag() + ":キャンセル";
+                    }, inputGuideScope.Token));
+                    break;
+                case InputType.Options:
+                    inputActions.InGame.Disable();
+                    inputActions.UI.Disable();
+                    inputActions.Options.Enable();
+                    gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
+                    {
+                        return
+                            inputActions.Options.Navigate.GetTag() + ":選択" +
+                            inputActions.Options.Submit.GetTag() + ":決定" +
+                            inputActions.Options.Cancel.GetTag() + ":キャンセル" +
+                            inputActions.Options.NextTab.GetTag() + inputActions.Options.PreviousTab.GetTag() + ":カテゴリ移動";
                     }, inputGuideScope.Token));
                     break;
             }
