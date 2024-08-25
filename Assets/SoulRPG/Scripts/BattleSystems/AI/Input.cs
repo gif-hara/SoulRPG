@@ -229,7 +229,7 @@ namespace SoulRPG
                         },
                         _ =>
                         {
-                            GameTipsView.SetTip(x.Description);
+                            GameTipsView.SetTip(x.FullDescription);
                         });
                 });
             });
@@ -350,7 +350,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip(x.Description);
+                                GameTipsView.SetTip(x.FullDescription);
                             });
                     });
                 });

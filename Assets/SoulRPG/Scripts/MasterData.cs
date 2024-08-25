@@ -535,6 +535,24 @@ namespace SoulRPG
 
             public ScriptableSequences ActionSequences;
 
+            public string FullDescription
+            {
+                get
+                {
+                    var sb = new System.Text.StringBuilder();
+                    sb.Append("[BP:");
+                    for (var i = 0; i < NeedBehaviourPoint; i++)
+                    {
+                        sb.Append("<sprite name=\"BehaviourPoint\">");
+                    }
+                    sb.Append(" ST:");
+                    sb.Append(NeedStamina);
+                    sb.Append("] ");
+                    sb.Append(Description);
+                    return sb.ToString();
+                }
+            }
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Skill>
             {
