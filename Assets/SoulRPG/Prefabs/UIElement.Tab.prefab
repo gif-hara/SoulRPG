@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 5507590118151950915}
   - component: {fileID: 7923832562459848680}
   - component: {fileID: 8118673097994757448}
+  - component: {fileID: 8247567116766990661}
   m_Layer: 0
   m_Name: LeftArrow
   m_TagString: Untagged
@@ -160,6 +161,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &8247567116766990661
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2373943260555999181}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2720846813037204178
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text
+  m_text: "\u30B5\u30A6\u30F3\u30C9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c264efebd36074641a2ade60187127e4, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e76d65064303bf849a01609fd3140b4a, type: 2}
@@ -307,6 +320,7 @@ GameObject:
   - component: {fileID: 6276435643004243811}
   - component: {fileID: 6844056170168149926}
   - component: {fileID: 4314909667219869964}
+  - component: {fileID: 1135250817265448026}
   m_Layer: 0
   m_Name: RightArrow
   m_TagString: Untagged
@@ -371,3 +385,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &1135250817265448026
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058026522164794971}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
