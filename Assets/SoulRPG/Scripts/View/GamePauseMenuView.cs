@@ -91,7 +91,7 @@ namespace SoulRPG
                         GameListView.ApplyAsSimpleElement
                         (
                             element,
-                            "システム（未実装）",
+                            "システム",
                             _ =>
                             {
                                 stateMachine.Change(StateOptionsAsync);
