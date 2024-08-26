@@ -177,6 +177,14 @@ namespace SoulRPG
             var informationDocument = UnityEngine.Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.LevelUp"));
             var informationViewport = informationDocument.Q<RectTransform>("Viewport");
             var informationElementPrefab = documentBundlePrefab.Q<HKUIDocument>("UIElement.Info");
+            var currentLevelInfo = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
+            currentLevelInfo.Q<TMP_Text>("Header").text = "レベル";
+            Observable.Merge(useExperience)
+                .Subscribe(x =>
+                {
+                    currentLevelInfo.Q<TMP_Text>("Value").text = growthParameter.Level.ToString();
+                })
+                .RegisterTo(scope);
             var currentExperienceInfo = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
             currentExperienceInfo.Q<TMP_Text>("Header").text = "所持経験値";
             Observable.Merge(useExperience, character.InstanceStatus.ExperienceAsObservable())
