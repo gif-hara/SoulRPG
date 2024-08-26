@@ -122,6 +122,7 @@ namespace SoulRPG
         private async UniTask StateSelectEquipmentPartAsync(CancellationToken scope)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var gameItemInformationView = new GameItemInformationView(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Item"), scope);
             var weaponElements = character.Equipment.GetWeaponIds().Select((x, i) =>
             {
                 var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
@@ -132,6 +133,17 @@ namespace SoulRPG
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Weapon1);
                         stateMachine.Change(StateSelectWeaponAsync);
                         AudioManager.PlaySFX("Sfx.Message.0");
+                    },
+                    _ =>
+                    {
+                        if (x != 0)
+                        {
+                            gameItemInformationView.Setup(x.GetMasterDataItem());
+                        }
+                        else
+                        {
+                            gameItemInformationView.SetupAsEmpty();
+                        }
                     });
                 });
             });
@@ -142,6 +154,17 @@ namespace SoulRPG
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Head);
                     stateMachine.Change(StateSelectArmorHeadAsync);
                     AudioManager.PlaySFX("Sfx.Message.0");
+                },
+                _ =>
+                {
+                    if (character.Equipment.HeadId != 0)
+                    {
+                        gameItemInformationView.Setup(character.Equipment.HeadId.GetMasterDataItem());
+                    }
+                    else
+                    {
+                        gameItemInformationView.SetupAsEmpty();
+                    }
                 });
             });
             var bodyElement = new Action<HKUIDocument>(element =>
@@ -151,6 +174,17 @@ namespace SoulRPG
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
                     stateMachine.Change(StateSelectArmorBodyAsync);
                     AudioManager.PlaySFX("Sfx.Message.0");
+                },
+                _ =>
+                {
+                    if (character.Equipment.BodyId != 0)
+                    {
+                        gameItemInformationView.Setup(character.Equipment.BodyId.GetMasterDataItem());
+                    }
+                    else
+                    {
+                        gameItemInformationView.SetupAsEmpty();
+                    }
                 });
             });
             var armElement = new Action<HKUIDocument>(element =>
@@ -160,6 +194,17 @@ namespace SoulRPG
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Arm);
                     stateMachine.Change(StateSelectArmorArmsAsync);
                     AudioManager.PlaySFX("Sfx.Message.0");
+                },
+                _ =>
+                {
+                    if (character.Equipment.ArmId != 0)
+                    {
+                        gameItemInformationView.Setup(character.Equipment.ArmId.GetMasterDataItem());
+                    }
+                    else
+                    {
+                        gameItemInformationView.SetupAsEmpty();
+                    }
                 });
             });
             var legElement = new Action<HKUIDocument>(element =>
@@ -169,6 +214,17 @@ namespace SoulRPG
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Leg);
                     stateMachine.Change(StateSelectArmorLegsAsync);
                     AudioManager.PlaySFX("Sfx.Message.0");
+                },
+                _ =>
+                {
+                    if (character.Equipment.LegId != 0)
+                    {
+                        gameItemInformationView.Setup(character.Equipment.LegId.GetMasterDataItem());
+                    }
+                    else
+                    {
+                        gameItemInformationView.SetupAsEmpty();
+                    }
                 });
             });
             var accessoryElements = character.Equipment.GetAccessoryIds().Select((x, i) =>
@@ -181,6 +237,17 @@ namespace SoulRPG
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Accessory1);
                         stateMachine.Change(StateSelectAccessoryAsync);
                         AudioManager.PlaySFX("Sfx.Message.0");
+                    },
+                    _ =>
+                    {
+                        if (x != 0)
+                        {
+                            gameItemInformationView.Setup(x.GetMasterDataItem());
+                        }
+                        else
+                        {
+                            gameItemInformationView.SetupAsEmpty();
+                        }
                     });
                 });
             });
