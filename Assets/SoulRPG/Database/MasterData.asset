@@ -4634,9 +4634,9 @@ MonoBehaviour:
       Speed: 0
     - ItemId: 102004
       SlashCutRate: 0.086
-      BlowCutRate: 0.735
-      ThrustCutRate: 0.742
-      MagicCutRate: 0.607
+      BlowCutRate: 0.073
+      ThrustCutRate: 0.074
+      MagicCutRate: 0.06
       FireCutRate: 0.076
       ThunderCutRate: 0.05
       Speed: -1
@@ -4684,9 +4684,9 @@ MonoBehaviour:
       Speed: 0
     - ItemId: 103004
       SlashCutRate: 0.115
-      BlowCutRate: 0.98
-      ThrustCutRate: 0.99
-      MagicCutRate: 0.81
+      BlowCutRate: 0.098
+      ThrustCutRate: 0.099
+      MagicCutRate: 0.081
       FireCutRate: 0.102
       ThunderCutRate: 0.067
       Speed: -2
@@ -4734,9 +4734,9 @@ MonoBehaviour:
       Speed: 0
     - ItemId: 104004
       SlashCutRate: 0.069
-      BlowCutRate: 0.588
-      ThrustCutRate: 0.594
-      MagicCutRate: 0.486
+      BlowCutRate: 0.058
+      ThrustCutRate: 0.059
+      MagicCutRate: 0.048
       FireCutRate: 0.061
       ThunderCutRate: 0.04
       Speed: -1
@@ -4784,9 +4784,9 @@ MonoBehaviour:
       Speed: 0
     - ItemId: 105004
       SlashCutRate: 0.074
-      BlowCutRate: 0.637
-      ThrustCutRate: 0.643
-      MagicCutRate: 0.526
+      BlowCutRate: 0.063
+      ThrustCutRate: 0.064
+      MagicCutRate: 0.052
       FireCutRate: 0.066
       ThunderCutRate: 0.043
       Speed: -1
@@ -5278,7 +5278,7 @@ MonoBehaviour:
       IsDebuff: 1
     - Id: 101009
       Name: "\u93A7\u7815\u304D"
-      Description: "\u8EAB\u306B\u7E8F\u3046\u93A7\u306A\u3069\u304C\u8106\u304F\u7815\u3051\u305F\u72B6\u614B\u3002\u7269\u7406\u7CFB\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u52A0\u3057\u3066\u3057\u307E\u3046\u3002"
+      Description: "\u8EAB\u306B\u7E8F\u3046\u93A7\u306A\u3069\u304C\u8106\u304F\u7815\u3051\u305F\u72B6\u614B\u3002\u7269\u7406\u7CFB\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u52A0\u3057\u3066\u3057\u307E\u3046\u3002"
       CanReset: 0
       Sequences: {fileID: 11400000, guid: 361eeccf20aaa4c34a1e3d5c2bd2bee1, type: 2}
       IsDebuff: 1
