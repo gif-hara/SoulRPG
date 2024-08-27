@@ -36,6 +36,9 @@ namespace SoulRPG.SceneControllers
         private HKUIDocument commandDocumentPrefab;
 
         [SerializeField]
+        private int initialFloorId;
+
+        [SerializeField]
         private string debugDungeonName;
 
         [SerializeField]
@@ -88,7 +91,8 @@ namespace SoulRPG.SceneControllers
             var dungeonController = new DungeonController(
                 gameMenuBundlePrefab,
                 explorationView,
-                destroyCancellationToken
+                destroyCancellationToken,
+                initialFloorId
                 );
             TinyServiceLocator.Register(dungeonController);
             explorationView.Open(destroyCancellationToken);

@@ -47,15 +47,19 @@ namespace SoulRPG
 
         private readonly HashSet<Vector2Int> restedCheckPoints = new();
 
+        private int currentFloorId;
+
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
             IExplorationView view,
-            CancellationToken scope
+            CancellationToken scope,
+            int initialFloorId
         )
         {
             this.gameMenuBundlePrefab = gameMenuBundlePrefab;
             this.view = view;
             this.scope = CancellationTokenSource.CreateLinkedTokenSource(scope);
+            currentFloorId = initialFloorId;
             TinyServiceLocator.Resolve<GameEvents>().OnRequestChangeDungeon
             .Subscribe(x =>
                 {
@@ -237,6 +241,16 @@ namespace SoulRPG
                 enemy.Warp(position);
                 EnemyController.Attach(enemy, player, this);
             }
+        }
+
+        public void NextFloor()
+        {
+            currentFloorId++;
+            var masterData = TinyServiceLocator.Resolve<MasterData>();
+            var dungeonTables = masterData.DungeonTables.Get(currentFloorId);
+            Assert.IsNotNull(dungeonTables, $"ダンジョンが存在しません id:{currentFloorId}");
+            var dungeonTable = dungeonTables[Random.Range(0, dungeonTables.Count)];
+            Setup(dungeonTable.DungeonName, TinyServiceLocator.Resolve<Character>("Player"));
         }
 
         public UniTask EnterAsync(Character character)
