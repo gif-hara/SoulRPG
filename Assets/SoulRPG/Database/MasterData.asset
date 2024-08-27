@@ -1312,6 +1312,14 @@ MonoBehaviour:
         SequenceId: 101001
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
+      - Id: 2
+        DungeonName: Dungeon.Test
+        X: 0
+        Y: 5
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
@@ -1843,7 +1851,7 @@ MonoBehaviour:
         Y: 4
         EnemyTableId: 3
       FloorEvents:
-      - Id: 2
+      - Id: 3
         DungeonName: Dungeon.10101
         X: 4
         Y: 3
@@ -1851,7 +1859,7 @@ MonoBehaviour:
         SequenceId: 101001
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
-      - Id: 3
+      - Id: 4
         DungeonName: Dungeon.10101
         X: 12
         Y: 6
