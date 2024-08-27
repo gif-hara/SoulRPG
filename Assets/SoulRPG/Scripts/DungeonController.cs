@@ -47,6 +47,8 @@ namespace SoulRPG
 
         private readonly HashSet<Vector2Int> restedCheckPoints = new();
 
+        private int currentFloorId = 0;
+
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
             IExplorationView view,
@@ -253,6 +255,12 @@ namespace SoulRPG
             Assert.IsNotNull(dungeonTables, $"ダンジョンが存在しません id:{floorId}");
             var dungeonTable = dungeonTables[Random.Range(0, dungeonTables.Count)];
             Setup(dungeonTable.DungeonName, TinyServiceLocator.Resolve<Character>("Player"));
+        }
+
+        public void NextFloor()
+        {
+            currentFloorId++;
+            NextFloor(currentFloorId);
         }
 
         public UniTask EnterAsync(Character character)
