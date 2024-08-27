@@ -37,6 +37,8 @@ namespace SoulRPG
 
         private HKUIDocument uiDocument;
 
+        private readonly List<GameObject> messageElements = new();
+
         public ExplorationView(
             HKUIDocument uiDocumentPrefab,
             HKUIDocument dungeonDocumentPrefab,
@@ -55,12 +57,17 @@ namespace SoulRPG
             uiDocument = Object.Instantiate(uiDocumentPrefab);
             SetupMiniMap(uiDocument, character, scope);
             SetupDungeon(scope);
-            SetupMessage(uiDocument, character, scope);
+            SetupMessage(uiDocument, scope);
             SetupStatuses(uiDocument, character, scope);
             TinyServiceLocator.Resolve<GameEvents>().OnSetupDungeon
                 .Subscribe(_ =>
                 {
                     CreateDungeonViews();
+                    foreach (var i in messageElements)
+                    {
+                        Object.Destroy(i);
+                    }
+                    messageElements.Clear();
                 })
                 .RegisterTo(scope);
         }
@@ -366,7 +373,6 @@ namespace SoulRPG
 
         private void SetupMessage(
             HKUIDocument uiDocument,
-            Character character,
             CancellationToken scope
             )
         {
@@ -406,6 +412,7 @@ namespace SoulRPG
             void CreateElement(string message)
             {
                 var element = Object.Instantiate(messagePrefab, messageParent);
+                messageElements.Add(element.gameObject);
                 element.Q<TMP_Text>("Message").text = message;
             }
         }
