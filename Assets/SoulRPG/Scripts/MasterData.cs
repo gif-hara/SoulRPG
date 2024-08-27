@@ -78,6 +78,9 @@ namespace SoulRPG
         private EnemyTable.Group enemyTables;
         public EnemyTable.Group EnemyTables => enemyTables;
 
+        [SerializeField]
+        private DungeonTable.Group dungeonTables;
+
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
@@ -123,6 +126,7 @@ namespace SoulRPG
                 "MasterData.FloorEnemy.Guaranteed",
                 "MasterData.FloorEvent",
                 "MasterData.Skill.AdditionalDescription",
+                "MasterData.DungeonTable",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -162,6 +166,7 @@ namespace SoulRPG
             floorEvents.Set(JsonHelper.FromJson<FloorEvent>(database.Item2[20]));
             var skillAdditionalDescriptions = new SkillAdditionalDescription.Group();
             skillAdditionalDescriptions.Set(JsonHelper.FromJson<SkillAdditionalDescription>(database.Item2[21]));
+            dungeonTables.Set(JsonHelper.FromJson<DungeonTable>(database.Item2[22]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -874,6 +879,20 @@ namespace SoulRPG
             public class Group : Group<string, FloorEvent>
             {
                 public Group() : base(x => x.DungeonName) { }
+            }
+        }
+
+        [Serializable]
+        public class DungeonTable
+        {
+            public int FloorId;
+
+            public string DungeonName;
+
+            [Serializable]
+            public class Group : Group<int, DungeonTable>
+            {
+                public Group() : base(x => x.FloorId) { }
             }
         }
     }

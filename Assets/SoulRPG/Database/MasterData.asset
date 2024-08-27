@@ -5599,3 +5599,9 @@ MonoBehaviour:
         TableId: 3
         EnemyId: 10105
         Weight: 100
+  dungeonTables:
+    list:
+    - Key: 1
+      Value:
+      - FloorId: 1
+        DungeonName: 10101
