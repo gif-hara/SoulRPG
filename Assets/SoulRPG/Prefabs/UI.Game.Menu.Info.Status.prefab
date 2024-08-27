@@ -423,7 +423,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 380, y: 34.78}
-  m_Spacing: {x: 20, y: 10}
+  m_Spacing: {x: 20, y: 20}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &3977482857782899259
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 380, y: 34.78}
-  m_Spacing: {x: 20, y: 10}
+  m_Spacing: {x: 20, y: 20}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1001 &1979156580420948705
@@ -2481,7 +2481,7 @@ MonoBehaviour:
   - document: {fileID: 3445727757175700695}
     overrideName: Stamina
   - document: {fileID: 6261902840556420486}
-    overrideName: PhysicalAttack
+    overrideName: Speed
   - document: {fileID: 477910539336666005}
     overrideName: BehaviourPoint
   - document: {fileID: 3039531468667106554}
@@ -3191,7 +3191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3793947674549890614, guid: 93b40fdafbaab4781bd45a208b094b1e, type: 3}
       propertyPath: m_Name
-      value: UIElement.Info.PhysicalAttack
+      value: UIElement.Info.Speed
       objectReference: {fileID: 0}
     - target: {fileID: 6235801495552572052, guid: 93b40fdafbaab4781bd45a208b094b1e, type: 3}
       propertyPath: m_AnchorMax.y
