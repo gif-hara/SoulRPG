@@ -13,10 +13,40 @@ MonoBehaviour:
   m_Name: 101004.0
   m_EditorClassIdentifier: 
   sequences:
+  - rid: 9047573942057041923
+  - rid: 9047573942057041924
+  - rid: 9047573942057041920
   - rid: 9047573935336718874
+  - rid: 9047573942057041922
+  - rid: 9047573942057041921
   references:
     version: 2
     RefIds:
     - rid: 9047573935336718874
       type: {class: NextFloor, ns: SoulRPG, asm: Assembly-CSharp}
       data: 
+    - rid: 9047573942057041920
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 0, g: 0, b: 0, a: 0}
+        to: {r: 0, g: 0, b: 0, a: 1}
+        duration: 0.5
+    - rid: 9047573942057041921
+      type: {class: BeginFadeTo, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        to: {r: 0, g: 0, b: 0, a: 0}
+        duration: 1
+    - rid: 9047573942057041922
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1
+    - rid: 9047573942057041923
+      type: {class: PlaySfx, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        sfxName: Sfx.Message.23
+    - rid: 9047573942057041924
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 1, g: 1, b: 1, a: 0.5019608}
+        to: {r: 1, g: 1, b: 1, a: 0}
+        duration: 0.3
