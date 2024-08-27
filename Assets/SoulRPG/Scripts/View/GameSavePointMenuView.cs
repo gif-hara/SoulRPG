@@ -301,6 +301,7 @@ namespace SoulRPG
                             character.InstanceStatus.AddExperience(-useExperience.Value);
                             character.Events.OnLevelUp.OnNext(growthParameter);
                             stateMachine.Change(StateRootMenuAsync);
+                            AudioManager.PlaySFX("Sfx.Message.22");
                         }
                     },
                     _ =>
