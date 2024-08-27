@@ -71,6 +71,22 @@ namespace SoulRPG
                         }
                     );
                 },
+                element =>
+                {
+                    GameListView.ApplyAsSimpleElement
+                    (
+                        element,
+                        "休憩",
+                        _ =>
+                        {
+                            stateMachine.Change(StateRestAsync);
+                        },
+                        _ =>
+                        {
+                            GameTipsView.SetTip("HPとSTを回復します。これは一度しか使用できません。");
+                        }
+                    );
+                },
             },
             0
             );
@@ -339,6 +355,39 @@ namespace SoulRPG
                     })
                     .RegisterTo(scope);
             }
+        }
+
+        private async UniTask StateRestAsync(CancellationToken scope)
+        {
+            var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
+            if (!dungeonController.CanRestCheckPoint(character.Position))
+            {
+                await DialogView.ConfirmAsync
+                (
+                    documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                    "もう休憩できません。",
+                    new[] { "OK" },
+                    0,
+                    scope
+                );
+                stateMachine.Change(StateRootMenuAsync);
+                return;
+            }
+            var result = await DialogView.ConfirmAsync
+            (
+                documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                "HPとSTを回復します。よろしいですか？休憩は一度しか使用できません。",
+                new[] { "はい", "いいえ" },
+                0,
+                scope
+            );
+            if (result == 0)
+            {
+                AudioManager.PlaySFX("Sfx.Message.19");
+                character.InstanceStatus.FullRecovery();
+                dungeonController.RestCheckPoint(character.Position);
+            }
+            stateMachine.Change(StateRootMenuAsync);
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)

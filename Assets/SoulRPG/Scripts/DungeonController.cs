@@ -45,6 +45,8 @@ namespace SoulRPG
         private CancellationTokenSource dungeonScope;
         public CancellationToken DungeonScope => dungeonScope.Token;
 
+        private readonly HashSet<Vector2Int> restedCheckPoints = new();
+
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
             IExplorationView view,
@@ -73,6 +75,7 @@ namespace SoulRPG
                 enemy.Dispose();
             }
             Enemies.Clear();
+            restedCheckPoints.Clear();
             var masterData = TinyServiceLocator.Resolve<MasterData>();
             CurrentDungeon = masterData.Dungeons.Get(dungeonName);
             CurrentDungeonSpec = masterData.DungeonSpecs.Get(CurrentDungeon.name);
@@ -557,6 +560,17 @@ namespace SoulRPG
         public Vector2Int? FindNextPosition(Vector2Int start, Vector2Int goal)
         {
             return pathFinder.FindPath(this, start, goal);
+        }
+
+        public void RestCheckPoint(Vector2Int position)
+        {
+            restedCheckPoints.Add(position);
+            checkPoint = position;
+        }
+
+        public bool CanRestCheckPoint(Vector2Int position)
+        {
+            return !restedCheckPoints.Contains(position);
         }
 
 #if DEBUG
