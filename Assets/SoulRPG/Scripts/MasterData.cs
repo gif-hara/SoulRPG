@@ -80,6 +80,7 @@ namespace SoulRPG
 
         [SerializeField]
         private DungeonTable.Group dungeonTables;
+        public DungeonTable.Group DungeonTables => dungeonTables;
 
 
 #if UNITY_EDITOR
