@@ -60,12 +60,19 @@ namespace SoulRPG
             this.view = view;
             this.scope = CancellationTokenSource.CreateLinkedTokenSource(scope);
             currentFloorId = initialFloorId;
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestChangeDungeon
-            .Subscribe(x =>
-                {
-                    Setup(x, TinyServiceLocator.Resolve<Character>("Player"));
-                })
-            .RegisterTo(this.scope.Token);
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            gameEvents.OnRequestChangeDungeon
+                .Subscribe(x =>
+                    {
+                        Setup(x, TinyServiceLocator.Resolve<Character>("Player"));
+                    })
+                .RegisterTo(this.scope.Token);
+            gameEvents.OnRequestNextFloor
+                .Subscribe(_ =>
+                    {
+                        NextFloor();
+                    })
+                .RegisterTo(this.scope.Token);
         }
 
         public void Setup(string dungeonName, Character player)

@@ -48,6 +48,8 @@ namespace SoulRPG
 
         public readonly Subject<string> OnRequestChangeDungeon = new();
 
+        public readonly Subject<Unit> OnRequestNextFloor = new();
+
         public readonly Subject<DungeonController> OnSetupDungeon = new();
 
 #if DEBUG
