@@ -6,7 +6,6 @@ using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
-using TMPro;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -75,9 +74,10 @@ namespace SoulRPG
                         GameListView.ApplyAsSimpleElement
                         (
                             element,
-                            "ステータス（未実装）",
+                            "ステータス",
                             _ =>
                             {
+                                stateMachine.Change(StateStatusAsync);
                                 AudioManager.PlaySFX("Sfx.Message.0");
                             },
                             _ =>
@@ -532,6 +532,20 @@ namespace SoulRPG
         {
             await OptionsView.OpenAsync(documentBundlePrefab, scope);
             stateMachine.Change(StateRootMenuAsync);
+        }
+
+        private UniTask StateStatusAsync(CancellationToken scope)
+        {
+            GameStatusInformationView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Status"), character, scope);
+            CreateHeader("ステータス", scope);
+            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(StateRootMenuAsync);
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
+                })
+                .RegisterTo(scope);
+            return UniTask.CompletedTask;
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)
