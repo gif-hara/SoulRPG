@@ -1856,6 +1856,22 @@ MonoBehaviour:
         SequenceId: 101002
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: ac9cc6ffdd07dc846bd602035afc47d4, type: 2}
+      - Id: 5
+        DungeonName: Dungeon.10101
+        X: 12
+        Y: 24
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+      - Id: 6
+        DungeonName: Dungeon.10101
+        X: 14
+        Y: 1
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
