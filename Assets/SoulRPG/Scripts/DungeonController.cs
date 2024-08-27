@@ -132,13 +132,6 @@ namespace SoulRPG
                 CreateEnemy(masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId, position);
             }
 
-            foreach (var i in CurrentDungeonSpec.SavePoints)
-            {
-                var position = new Vector2Int(i.X, i.Y);
-                var floorData = new DungeonInstanceFloorData.SavePoint(position);
-                FloorDatabase.Add(position, floorData);
-            }
-
             foreach (var i in CurrentDungeonSpec.FloorItemGuaranteeds)
             {
                 var position = new Vector2Int(i.X, i.Y);

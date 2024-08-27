@@ -119,7 +119,6 @@ namespace SoulRPG
                 "MasterData.FloorItem.NoCost",
                 "MasterData.FloorItem.EnemyPlace",
                 "MasterData.EnemyTable",
-                "MasterData.SavePoint",
                 "MasterData.FloorItem.Guaranteed",
                 "MasterData.FloorEnemy.Guaranteed",
                 "MasterData.FloorEvent",
@@ -155,16 +154,14 @@ namespace SoulRPG
             var floorItemEnemyPlaces = new FloorItemEnemyPlace.Group();
             floorItemEnemyPlaces.Set(JsonHelper.FromJson<FloorItemEnemyPlace>(database.Item2[16]));
             enemyTables.Set(JsonHelper.FromJson<EnemyTable>(database.Item2[17]));
-            var savePoints = new SavePoint.Group();
-            savePoints.Set(JsonHelper.FromJson<SavePoint>(database.Item2[18]));
             var floorItemGuaranteeds = new FloorItem.Group();
-            floorItemGuaranteeds.Set(JsonHelper.FromJson<FloorItem>(database.Item2[19]));
+            floorItemGuaranteeds.Set(JsonHelper.FromJson<FloorItem>(database.Item2[18]));
             var floorEnemyGuaranteeds = new FloorEnemy.Group();
-            floorEnemyGuaranteeds.Set(JsonHelper.FromJson<FloorEnemy>(database.Item2[20]));
+            floorEnemyGuaranteeds.Set(JsonHelper.FromJson<FloorEnemy>(database.Item2[19]));
             var floorEvents = new FloorEvent.Group();
-            floorEvents.Set(JsonHelper.FromJson<FloorEvent>(database.Item2[21]));
+            floorEvents.Set(JsonHelper.FromJson<FloorEvent>(database.Item2[20]));
             var skillAdditionalDescriptions = new SkillAdditionalDescription.Group();
-            skillAdditionalDescriptions.Set(JsonHelper.FromJson<SkillAdditionalDescription>(database.Item2[22]));
+            skillAdditionalDescriptions.Set(JsonHelper.FromJson<SkillAdditionalDescription>(database.Item2[21]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -212,12 +209,6 @@ namespace SoulRPG
                 var dungeonSpec = dungeonSpecs.Get(i.Key);
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.WallEvents = i.Value;
-            }
-            foreach (var i in savePoints.List)
-            {
-                var dungeonSpec = dungeonSpecs.Get(i.Key);
-                Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
-                dungeonSpec.SavePoints = i.Value;
             }
             foreach (var i in floorItemGuaranteeds.List)
             {
@@ -805,8 +796,6 @@ namespace SoulRPG
 
             public List<WallEvent> WallEvents;
 
-            public List<SavePoint> SavePoints;
-
             public List<FloorItem> FloorItemGuaranteeds;
 
             public List<FloorEnemy> FloorEnemyGuaranteeds;
@@ -859,22 +848,6 @@ namespace SoulRPG
             public class Group : Group<int, EnemyTable>
             {
                 public Group() : base(x => x.TableId) { }
-            }
-        }
-
-        [Serializable]
-        public class SavePoint
-        {
-            public string DungeonName;
-
-            public int X;
-
-            public int Y;
-
-            [Serializable]
-            public class Group : Group<string, SavePoint>
-            {
-                public Group() : base(x => x.DungeonName) { }
             }
         }
 

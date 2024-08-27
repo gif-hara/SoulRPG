@@ -1292,10 +1292,6 @@ MonoBehaviour:
         EnemyPositionY: 5
         EnemyTableId: 2
       WallEvents: []
-      SavePoints:
-      - DungeonName: Dungeon.Test
-        X: 0
-        Y: 3
       FloorItemGuaranteeds:
       - Id: 1
         DungeonName: Dungeon.Test
@@ -1837,13 +1833,6 @@ MonoBehaviour:
         PositiveSideCondition: Lock
         NegativeSideCondition: None
         CreateRate: 0
-      SavePoints:
-      - DungeonName: Dungeon.10101
-        X: 12
-        Y: 24
-      - DungeonName: Dungeon.10101
-        X: 14
-        Y: 1
       FloorItemGuaranteeds: []
       FloorEnemyGuaranteeds:
       - DungeonName: Dungeon.10101
