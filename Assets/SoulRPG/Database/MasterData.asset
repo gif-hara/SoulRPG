@@ -1300,7 +1300,7 @@ MonoBehaviour:
         ItemTableId: 2
       FloorEnemyGuaranteeds: []
       FloorEvents:
-      - Id: 1
+      - Id: 0
         DungeonName: Dungeon.Test
         X: 0
         Y: 4
@@ -1308,7 +1308,7 @@ MonoBehaviour:
         SequenceId: 101001
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
-      - Id: 2
+      - Id: 0
         DungeonName: Dungeon.Test
         X: 0
         Y: 5
@@ -1316,6 +1316,14 @@ MonoBehaviour:
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+      - Id: 0
+        DungeonName: Dungeon.Test
+        X: 1
+        Y: 1
+        ViewName: Message
+        SequenceId: 101004
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: dc13576ad584fdd42ac671f298449ff8, type: 2}
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
@@ -1840,7 +1848,7 @@ MonoBehaviour:
         Y: 4
         EnemyTableId: 3
       FloorEvents:
-      - Id: 3
+      - Id: 0
         DungeonName: Dungeon.10101
         X: 4
         Y: 3
@@ -1848,7 +1856,7 @@ MonoBehaviour:
         SequenceId: 101001
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
-      - Id: 4
+      - Id: 0
         DungeonName: Dungeon.10101
         X: 12
         Y: 6
@@ -1856,7 +1864,7 @@ MonoBehaviour:
         SequenceId: 101002
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: ac9cc6ffdd07dc846bd602035afc47d4, type: 2}
-      - Id: 5
+      - Id: 0
         DungeonName: Dungeon.10101
         X: 12
         Y: 24
@@ -1864,7 +1872,7 @@ MonoBehaviour:
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
-      - Id: 6
+      - Id: 0
         DungeonName: Dungeon.10101
         X: 14
         Y: 1
@@ -5604,4 +5612,4 @@ MonoBehaviour:
     - Key: 1
       Value:
       - FloorId: 1
-        DungeonName: 10101
+        DungeonName: Dungeon.10101
