@@ -47,19 +47,15 @@ namespace SoulRPG
 
         private readonly HashSet<Vector2Int> restedCheckPoints = new();
 
-        private int currentFloorId;
-
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
             IExplorationView view,
-            CancellationToken scope,
-            int initialFloorId
+            CancellationToken scope
         )
         {
             this.gameMenuBundlePrefab = gameMenuBundlePrefab;
             this.view = view;
             this.scope = CancellationTokenSource.CreateLinkedTokenSource(scope);
-            currentFloorId = initialFloorId;
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnRequestChangeDungeon
                 .Subscribe(x =>
@@ -68,9 +64,9 @@ namespace SoulRPG
                     })
                 .RegisterTo(this.scope.Token);
             gameEvents.OnRequestNextFloor
-                .Subscribe(_ =>
+                .Subscribe(x =>
                     {
-                        NextFloor();
+                        NextFloor(x);
                     })
                 .RegisterTo(this.scope.Token);
         }
@@ -250,12 +246,11 @@ namespace SoulRPG
             }
         }
 
-        public void NextFloor()
+        public void NextFloor(int floorId)
         {
-            currentFloorId++;
             var masterData = TinyServiceLocator.Resolve<MasterData>();
-            var dungeonTables = masterData.DungeonTables.Get(currentFloorId);
-            Assert.IsNotNull(dungeonTables, $"ダンジョンが存在しません id:{currentFloorId}");
+            var dungeonTables = masterData.DungeonTables.Get(floorId);
+            Assert.IsNotNull(dungeonTables, $"ダンジョンが存在しません id:{floorId}");
             var dungeonTable = dungeonTables[Random.Range(0, dungeonTables.Count)];
             Setup(dungeonTable.DungeonName, TinyServiceLocator.Resolve<Character>("Player"));
         }
