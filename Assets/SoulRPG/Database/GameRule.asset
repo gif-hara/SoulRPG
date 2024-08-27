@@ -66,6 +66,7 @@ MonoBehaviour:
     - clip: {fileID: 8300000, guid: 4b54179733c32094cb1cc66ccf69857e, type: 3}
     - clip: {fileID: 8300000, guid: f0b5775007814d64a906a55ac18396cb, type: 3}
     - clip: {fileID: 8300000, guid: 71db330aff87d2f48b939fc422e6fa05, type: 3}
+    - clip: {fileID: 8300000, guid: 10d9cebf72cecab4592167e9c5efb88e, type: 3}
   sequenceDatabase:
     list:
     - sequences: {fileID: 11400000, guid: 2b4851b2e8d13ab429a10a6a6ede6f8b, type: 2}
