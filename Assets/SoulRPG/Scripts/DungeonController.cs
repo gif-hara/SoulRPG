@@ -253,7 +253,6 @@ namespace SoulRPG
                 return floorData switch
                 {
                     DungeonInstanceFloorData.Item itemData => OnEnterItemAsync(itemData),
-                    DungeonInstanceFloorData.SavePoint savePointData => OnEnterSavePointAsync(savePointData),
                     DungeonInstanceFloorData.SequenceEvent sequenceData => OnEnterSequenceEventAsync(sequenceData),
                     _ => UniTask.CompletedTask,
                 };
@@ -280,7 +279,6 @@ namespace SoulRPG
                 return floorData switch
                 {
                     DungeonInstanceFloorData.Item itemData => OnInteractItemAsync(character, itemData),
-                    DungeonInstanceFloorData.SavePoint => OnInteractSavePointAsync(character),
                     DungeonInstanceFloorData.SequenceEvent messageData => OnInteractSequenceEventAsync(character,
                         messageData),
                     _ => UniTask.CompletedTask,
@@ -390,17 +388,6 @@ namespace SoulRPG
             }
         }
 
-        private async UniTask OnInteractSavePointAsync(Character character)
-        {
-            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new("ここはチェックポイントのようだ。一休みしよう。", "Sfx.Message.0"));
-            character.InstanceStatus.FullRecovery();
-            checkPoint = character.Position;
-            var view = new GameSavePointMenuView(gameMenuBundlePrefab, character);
-            await view.OpenAsync();
-            EnterAsync(character).Forget();
-        }
-
         private async UniTask OnInteractSequenceEventAsync(Character character,
             DungeonInstanceFloorData.SequenceEvent sequenceData)
         {
@@ -428,16 +415,6 @@ namespace SoulRPG
             var inputController = TinyServiceLocator.Resolve<InputController>();
             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(
                 (() => $"{inputController.InputActions.InGame.Interact.GetTag()}アイテムを拾う", scope.Token));
-            return UniTask.CompletedTask;
-        }
-
-        private UniTask OnEnterSavePointAsync(DungeonInstanceFloorData.SavePoint savePointData)
-        {
-            var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token,
-                savePointData.LifeScope.Token);
-            var inputController = TinyServiceLocator.Resolve<InputController>();
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(
-                (() => $"{inputController.InputActions.InGame.Interact.GetTag()}休憩する", scope.Token));
             return UniTask.CompletedTask;
         }
 

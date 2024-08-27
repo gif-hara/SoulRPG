@@ -63,13 +63,5 @@ namespace SoulRPG
                 PromptMessage = promptMessage;
             }
         }
-
-        public sealed class SavePoint : DungeonInstanceFloorData
-        {
-            public SavePoint(Vector2Int position)
-                : base(position, "SavePoint")
-            {
-            }
-        }
     }
 }
