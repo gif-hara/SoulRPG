@@ -1944,6 +1944,8 @@ MonoBehaviour:
     overrideName: Character.RotationObject
   - document: {fileID: 8101275882166660962, guid: bb396e07200b8ff4fa30ec4c0f4709de, type: 3}
     overrideName: 
+  - document: {fileID: 8101275882166660962, guid: 032c065cb0d7f634d8e5881b7f44876b, type: 3}
+    overrideName: 
 --- !u!1 &8855925960892168799
 GameObject:
   m_ObjectHideFlags: 0

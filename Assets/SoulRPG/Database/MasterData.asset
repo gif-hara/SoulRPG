@@ -1320,7 +1320,7 @@ MonoBehaviour:
         DungeonName: Dungeon.Test
         X: 1
         Y: 1
-        ViewName: Message
+        ViewName: NextFloor
         SequenceId: 101004
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: dc13576ad584fdd42ac671f298449ff8, type: 2}

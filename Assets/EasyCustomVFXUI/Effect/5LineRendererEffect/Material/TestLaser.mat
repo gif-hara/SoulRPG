@@ -32,6 +32,7 @@ Material:
     - _AddNoiseContrast: 0.518
     - _AddNoiseScale: 5.5
     - _AddNoiseSpeed: -1.96
+    - _BUILTIN_QueueControl: 0
     - _Contrast: 0.3
     - _DistortionNoisePower: 0.0201
     - _DistortionNoiseSpeed: 1.9
