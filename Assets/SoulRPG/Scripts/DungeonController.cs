@@ -54,6 +54,12 @@ namespace SoulRPG
             this.gameMenuBundlePrefab = gameMenuBundlePrefab;
             this.view = view;
             this.scope = CancellationTokenSource.CreateLinkedTokenSource(scope);
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestChangeDungeon
+            .Subscribe(x =>
+                {
+                    Setup(x, TinyServiceLocator.Resolve<Character>("Player"));
+                })
+            .RegisterTo(this.scope.Token);
         }
 
         public void Setup(string dungeonName, Character player)
@@ -175,6 +181,7 @@ namespace SoulRPG
                 );
             }
             AddReachedPoint(player);
+            TinyServiceLocator.Resolve<GameEvents>().OnSetupDungeon.OnNext(this);
 
             void AddFloorData(Vector2Int position, DungeonInstanceFloorData floorData)
             {

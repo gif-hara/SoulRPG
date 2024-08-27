@@ -92,8 +92,6 @@ namespace SoulRPG.SceneControllers
                 );
             TinyServiceLocator.Register(dungeonController);
             explorationView.Open(destroyCancellationToken);
-            dungeonController.Setup(debugDungeonName, player);
-            explorationView.CreateDungeonViews();
             if (isUseDebugPosition)
             {
                 player.Warp(debugPosition);
@@ -139,6 +137,7 @@ namespace SoulRPG.SceneControllers
             inputController.PushInputType(InputController.InputType.InGame);
             var gameTipsView = new GameTipsView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Tips"), destroyCancellationToken);
             TinyServiceLocator.Register(gameTipsView);
+            gameEvents.OnRequestChangeDungeon.OnNext(debugDungeonName);
 #if DEBUG
             var battleDebugData = new BattleDebugData();
             TinyServiceLocator.Register(battleDebugData);

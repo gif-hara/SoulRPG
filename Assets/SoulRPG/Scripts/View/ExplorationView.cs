@@ -57,6 +57,12 @@ namespace SoulRPG
             SetupDungeon(scope);
             SetupMessage(uiDocument, character, scope);
             SetupStatuses(uiDocument, character, scope);
+            TinyServiceLocator.Resolve<GameEvents>().OnSetupDungeon
+                .Subscribe(_ =>
+                {
+                    CreateDungeonViews();
+                })
+                .RegisterTo(scope);
         }
 
         public void CreateDungeonViews()
