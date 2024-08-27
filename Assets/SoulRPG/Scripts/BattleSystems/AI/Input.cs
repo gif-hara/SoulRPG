@@ -29,6 +29,8 @@ namespace SoulRPG
 
         private readonly HKUIDocument informationWeaponDocumentPrefab;
 
+        private readonly HKUIDocument informationStatusDocumentPrefab;
+
         private UniTaskCompletionSource<ICommandInvoker> source;
 
         private int selectedWeaponId;
@@ -39,13 +41,15 @@ namespace SoulRPG
             HKUIDocument commandDocumentPrefab,
             HKUIDocument listDocumentPrefab,
             HKUIDocument ailmentInformationDocumentPrefab,
-            HKUIDocument informationWeaponDocumentPrefab
+            HKUIDocument informationWeaponDocumentPrefab,
+            HKUIDocument informationStatusDocumentPrefab
             )
         {
             this.listDocumentPrefab = listDocumentPrefab;
             this.commandDocumentPrefab = commandDocumentPrefab;
             this.ailmentInformationDocumentPrefab = ailmentInformationDocumentPrefab;
             this.informationWeaponDocumentPrefab = informationWeaponDocumentPrefab;
+            this.informationStatusDocumentPrefab = informationStatusDocumentPrefab;
         }
 
         public void Dispose()
@@ -262,11 +266,22 @@ namespace SoulRPG
                 {
                     GameListView.ApplyAsSimpleElement(
                         x,
-                        "状態異常",
+                        "ステータス",
                         _ =>
                         {
                             AudioManager.PlaySFX("Sfx.Message.0");
                             stateMachine.Change(StateStatusAsync);
+                        });
+                }),
+                new(x =>
+                {
+                    GameListView.ApplyAsSimpleElement(
+                        x,
+                        "状態異常",
+                        _ =>
+                        {
+                            AudioManager.PlaySFX("Sfx.Message.0");
+                            stateMachine.Change(StateAilmentAsync);
                         });
                 }),
             };
@@ -279,7 +294,20 @@ namespace SoulRPG
             }
         }
 
-        private async UniTask StateStatusAsync(CancellationToken scope)
+        private UniTask StateStatusAsync(CancellationToken scope)
+        {
+            GameStatusInformationView.Open(informationStatusDocumentPrefab, character.Character, scope);
+            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
+                    stateMachine.Change(StateSelectMainCommandAsync);
+                })
+                .RegisterTo(scope);
+            return UniTask.CompletedTask;
+        }
+
+        private async UniTask StateAilmentAsync(CancellationToken scope)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var informationDocument = UnityEngine.Object.Instantiate(ailmentInformationDocumentPrefab);

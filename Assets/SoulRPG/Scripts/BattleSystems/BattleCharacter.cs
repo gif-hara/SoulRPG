@@ -35,8 +35,11 @@ namespace SoulRPG
 
         private readonly CancellationTokenSource scope = new();
 
+        public Character Character { get; }
+
         public BattleCharacter(Character character, Define.AllyType allyType, IBattleAI battleAI, BattleCharacterSequences sequences)
         {
+            Character = character;
             BattleStatus = new CharacterBattleStatus(character, allyType);
             Equipment = character.Equipment;
             this.battleAI = battleAI;

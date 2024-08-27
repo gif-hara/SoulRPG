@@ -531,7 +531,8 @@ namespace SoulRPG
                     gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Command"),
                     gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
                     gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Ailment"),
-                    gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Battle.Info.Weapon")
+                    gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Battle.Info.Weapon"),
+                    gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Status")
                 ),
                 gameRule.PlayerBattleCharacterSequences
             );
