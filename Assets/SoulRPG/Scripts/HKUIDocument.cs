@@ -27,7 +27,7 @@ namespace HK
             var e = TryQ<T>(name);
             if (e == null)
             {
-                Debug.LogError($"Component not found: {typeof(T)} on object {name}");
+                Debug.LogError($"\"{this.name}\" Component not found: {typeof(T)} on object {name}", this);
             }
             return e;
         }
