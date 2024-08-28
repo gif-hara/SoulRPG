@@ -148,19 +148,22 @@ namespace SoulRPG
                 dungeonObjects.Add(wallObject.gameObject);
             }
 
-            for (var y = 0; y < dungeonController.CurrentDungeon.range.y; y++)
+            if (dungeonController.CurrentDungeonSpec.RequireShadow)
             {
-                for (var x = 0; x < dungeonController.CurrentDungeon.range.x; x++)
+                for (var y = 0; y < dungeonController.CurrentDungeon.range.y; y++)
                 {
-                    if (dungeonController.ContainsReachedPoint(new Vector2Int(x, y)))
+                    for (var x = 0; x < dungeonController.CurrentDungeon.range.x; x++)
                     {
-                        continue;
+                        if (dungeonController.ContainsReachedPoint(new Vector2Int(x, y)))
+                        {
+                            continue;
+                        }
+                        var position = new Vector2Int(x, y);
+                        var shadowObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Shadow"), shadowParent);
+                        shadowObject.anchoredPosition = new Vector2(x * tipSize.x, y * tipSize.y);
+                        shadowObject.sizeDelta = tipSize;
+                        maptipShadowObjects.Add(position, shadowObject.gameObject);
                     }
-                    var position = new Vector2Int(x, y);
-                    var shadowObject = Object.Instantiate(areaDocument.Q<RectTransform>("UIElement.MapTip.Shadow"), shadowParent);
-                    shadowObject.anchoredPosition = new Vector2(x * tipSize.x, y * tipSize.y);
-                    shadowObject.sizeDelta = tipSize;
-                    maptipShadowObjects.Add(position, shadowObject.gameObject);
                 }
             }
 

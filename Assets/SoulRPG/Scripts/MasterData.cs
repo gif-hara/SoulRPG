@@ -797,6 +797,8 @@ namespace SoulRPG
 
             public int EnemyPlaceItemNumberMax;
 
+            public bool RequireShadow;
+
             public List<FloorItem> FloorItemNoCosts;
 
             public List<FloorItemEnemyPlace> FloorItemEnemyPlaces;
