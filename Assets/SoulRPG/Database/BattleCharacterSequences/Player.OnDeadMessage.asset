@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 9047573712770170969
+  - rid: 9047573958681428056
   references:
     version: 2
     RefIds:
@@ -23,3 +24,7 @@ MonoBehaviour:
         format: "{Actor}\u306F\u5012\u308C\u3066\u3057\u307E\u3063\u305F\u3002"
         sfxName: Sfx.Defeat.0
         ignoreIfCharacterDead: 0
+    - rid: 9047573958681428056
+      type: {class: PlayScreenEffectAnimation, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        animationName: Animation.OnDead
