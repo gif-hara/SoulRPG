@@ -183,6 +183,21 @@ namespace SoulRPG
                                 }
                             );
                         },
+                        element =>
+                        {
+                            GameListView.ApplyAsSimpleElement
+                            (
+                                element,
+                                "チェックポイント呼び出し",
+                                _ =>
+                                {
+                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    var view = new GameSavePointMenuView(documentBundlePrefab, player);
+                                    view.OpenAsync().Forget();
+                                    source.TrySetResult();
+                                }
+                            );
+                        },
                     },
                     0
                 );
