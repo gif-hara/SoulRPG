@@ -853,6 +853,8 @@ MonoBehaviour:
           b: {x: 18, y: 12}
         - a: {x: 17, y: 12}
           b: {x: 17, y: 11}
+        - a: {x: 18, y: 12}
+          b: {x: 19, y: 12}
         - a: {x: 19, y: 12}
           b: {x: 20, y: 12}
         - a: {x: 20, y: 12}
@@ -939,6 +941,8 @@ MonoBehaviour:
           b: {x: 20, y: 9}
         - a: {x: 20, y: 9}
           b: {x: 21, y: 9}
+        - a: {x: 21, y: 9}
+          b: {x: 22, y: 9}
         - a: {x: 22, y: 9}
           b: {x: 23, y: 9}
         - a: {x: 23, y: 10}
@@ -1948,20 +1952,12 @@ MonoBehaviour:
       FloorEvents:
       - Id: 0
         DungeonName: Dungeon.10101
-        X: 4
-        Y: 3
-        ViewName: Message
-        SequenceId: 101001
-        PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
-      - Id: 0
-        DungeonName: Dungeon.10101
         X: 12
         Y: 6
-        ViewName: Message
-        SequenceId: 101002
-        PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: ac9cc6ffdd07dc846bd602035afc47d4, type: 2}
+        ViewName: Npc.0
+        SequenceId: 102002
+        PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
+        Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
       - Id: 0
         DungeonName: Dungeon.10101
         X: 12
