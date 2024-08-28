@@ -46,5 +46,13 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
         }
+
+        public UniTask PlayAsync(string animationName, CancellationToken scope)
+        {
+            return document
+                .Q<HKUIDocument>("Sequences")
+                .Q<SequenceMonobehaviour>(animationName)
+                .PlayAsync(scope);
+        }
     }
 }
