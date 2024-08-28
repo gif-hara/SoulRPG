@@ -198,6 +198,19 @@ namespace SoulRPG
                                 }
                             );
                         },
+                        element =>
+                        {
+                            GameListView.ApplyAsSimpleElement
+                            (
+                                element,
+                                "ダンジョン変更",
+                                _ =>
+                                {
+                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    stateMachine.Change(StateSelectDungeonAsync);
+                                }
+                            );
+                        },
                     },
                     0
                 );
@@ -227,6 +240,39 @@ namespace SoulRPG
                                     {
                                         AudioManager.PlaySFX("Sfx.Message.0");
                                         dungeonController.BeginBattleAsync(player, x).Forget();
+                                        source.TrySetResult();
+                                    }
+                                );
+                            }
+                        )
+                    );
+                var listDocument = CreateList(documentBundlePrefab, listElements, 0);
+                await UniTask.WaitUntilCanceled(scope);
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
+
+            async UniTask StateSelectDungeonAsync(CancellationToken scope)
+            {
+                inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        AudioManager.PlaySFX("Sfx.Cancel.0");
+                        stateMachine.Change(StateRootAsync);
+                    })
+                    .RegisterTo(scope);
+                var listElements = TinyServiceLocator.Resolve<MasterData>().DungeonSpecs.List
+                    .Select(x => new Action<HKUIDocument>
+                        (
+                            element =>
+                            {
+                                GameListView.ApplyAsSimpleElement
+                                (
+                                    element,
+                                    $"{x.Id}",
+                                    _ =>
+                                    {
+                                        AudioManager.PlaySFX("Sfx.Message.0");
+                                        dungeonController.Setup(x.Id, player);
                                         source.TrySetResult();
                                     }
                                 );
