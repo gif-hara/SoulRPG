@@ -16,15 +16,12 @@ MonoBehaviour:
   - rid: 9047573942057041923
   - rid: 9047573942057041924
   - rid: 9047573942057041920
-  - rid: 9047573935336718874
+  - rid: 9047573962963025920
   - rid: 9047573942057041922
   - rid: 9047573942057041921
   references:
     version: 2
     RefIds:
-    - rid: 9047573935336718874
-      type: {class: NextFloor, ns: SoulRPG, asm: Assembly-CSharp}
-      data: 
     - rid: 9047573942057041920
       type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -50,3 +47,12 @@ MonoBehaviour:
         from: {r: 1, g: 1, b: 1, a: 0.5019608}
         to: {r: 1, g: 1, b: 1, a: 0}
         duration: 0.3
+    - rid: 9047573962963025920
+      type: {class: NextFloorById, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        floorIdResolver:
+          rid: 9047573962963025997
+    - rid: 9047573962963025997
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
