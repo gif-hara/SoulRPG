@@ -13,6 +13,10 @@ namespace SoulRPG
     public sealed class GameRule : ScriptableObject
     {
         [SerializeField]
+        private CharacterGrowthParameter playerGrowthParameter;
+        public CharacterGrowthParameter PlayerGrowthParameter => playerGrowthParameter;
+
+        [SerializeField]
         private int hitPointAmountRate;
         public int HitPointAmountRate => hitPointAmountRate;
 

@@ -2,7 +2,6 @@ using System;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
-using SoulRPG.BattleSystems;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -51,9 +50,6 @@ namespace SoulRPG.SceneControllers
         private string debugPlayerName;
 
         [SerializeField]
-        private CharacterGrowthParameter debugPlayerGrowthParameter;
-
-        [SerializeField]
         private Define.CharacterAttribute debugPlayerAttribute;
 
         [SerializeField]
@@ -73,7 +69,7 @@ namespace SoulRPG.SceneControllers
             GameDebugPanelView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.DebugPanel"), destroyCancellationToken).Forget();
 #endif
             TinyServiceLocator.Register(new GameFadeView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Fade"), destroyCancellationToken));
-            var player = new Character(debugPlayerName, debugPlayerGrowthParameter, gameRule.InitialEquipment, debugPlayerAttribute);
+            var player = new Character(debugPlayerName, gameRule.PlayerGrowthParameter, gameRule.InitialEquipment, debugPlayerAttribute);
             TinyServiceLocator.Register("Player", player);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
             gameCameraController.Setup(player);

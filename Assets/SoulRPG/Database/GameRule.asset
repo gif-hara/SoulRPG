@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b7d6805734249bcb59852018c57458, type: 3}
   m_Name: GameRule
   m_EditorClassIdentifier: 
+  playerGrowthParameter:
+    level: 5
+    vitality: 9
+    stamina: 5
+    physicalStrength: 10
+    magicalStrength: 10
+    speed: 6
+    behaviourPoint: 3
   hitPointAmountRate: 8
   staminaAmountRate: 5
   hitPointMax: 1600
