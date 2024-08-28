@@ -1959,6 +1959,8 @@ MonoBehaviour:
     overrideName: 
   - document: {fileID: 8101275882166660962, guid: 032c065cb0d7f634d8e5881b7f44876b, type: 3}
     overrideName: 
+  - document: {fileID: 8101275882166660962, guid: 7e4057af1a6fc9a40b658f8a202aa6c0, type: 3}
+    overrideName: 
 --- !u!1 &8855925960892168799
 GameObject:
   m_ObjectHideFlags: 0
