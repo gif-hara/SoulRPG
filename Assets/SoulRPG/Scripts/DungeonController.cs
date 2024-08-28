@@ -483,7 +483,7 @@ namespace SoulRPG
                 case "None":
                     if (!wallEvent.IsOpen)
                     {
-                        gameEvents.OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.OpenDoor.0"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("扉が開いた。", "Sfx.OpenDoor.0"));
                         wallEvent.Open();
                         AddReachedPoint(character);
                         gameEvents.OnOpenDoor.OnNext(Unit.Default);
@@ -494,7 +494,7 @@ namespace SoulRPG
                 case "Lock":
                     if (!wallEvent.IsOpen)
                     {
-                        gameEvents.OnRequestShowMessage.OnNext(new("こちらからは開かないようだ", "Sfx.Message.0"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("こちらからは開かないようだ。", "Sfx.Message.0"));
                     }
 
                     break;
@@ -505,12 +505,12 @@ namespace SoulRPG
                         {
                             if (!character.Inventory.HasItem(i))
                             {
-                                gameEvents.OnRequestShowMessage.OnNext(new("鍵が必要のようだ", "Sfx.Message.0"));
+                                gameEvents.OnRequestShowMessage.OnNext(new("鍵が必要のようだ。", "Sfx.Message.0"));
                                 return;
                             }
                         }
 
-                        gameEvents.OnRequestShowMessage.OnNext(new("扉が開いた", "Sfx.OpenDoor.0"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("扉が開いた。", "Sfx.OpenDoor.0"));
                         wallEvent.Open();
                         AddReachedPoint(character);
                         await view.OnOpenDoorAsync(wallEvent);
