@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Player.OnDeadMessage
   m_EditorClassIdentifier: 
   sequences:
+  - rid: 9047573958681428061
   - rid: 9047573712770170969
+  - rid: 9047573958681428064
   - rid: 9047573958681428056
+  - rid: 9047573958681428059
+  - rid: 9047573958681428058
   references:
     version: 2
     RefIds:
@@ -28,3 +32,18 @@ MonoBehaviour:
       type: {class: PlayScreenEffectAnimation, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         animationName: Animation.OnDead
+    - rid: 9047573958681428058
+      type: {class: PlayScreenEffectAnimation, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        animationName: Animation.OnDead.Reset
+    - rid: 9047573958681428059
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1
+    - rid: 9047573958681428061
+      type: {class: StopBgm, ns: SoulRPG, asm: Assembly-CSharp}
+      data: 
+    - rid: 9047573958681428064
+      type: {class: PlaySfx, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        sfxName: Sfx.Message.23
