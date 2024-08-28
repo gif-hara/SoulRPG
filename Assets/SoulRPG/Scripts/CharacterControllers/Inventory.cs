@@ -51,5 +51,14 @@ namespace SoulRPG
         {
             return GetNumber(needItem.ItemId) >= needItem.Count;
         }
+
+        public void Sync(Inventory other)
+        {
+            Items.Clear();
+            foreach (var pair in other.Items)
+            {
+                Items[pair.Key] = pair.Value;
+            }
+        }
     }
 }
