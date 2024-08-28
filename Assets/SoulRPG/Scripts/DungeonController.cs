@@ -24,8 +24,6 @@ namespace SoulRPG
 
         private readonly HKUIDocument gameMenuBundlePrefab;
 
-        private Vector2Int checkPoint;
-
         private readonly IExplorationView view;
 
         public readonly Dictionary<Vector2Int, DungeonInstanceFloorData> FloorDatabase = new();
@@ -94,7 +92,6 @@ namespace SoulRPG
             CurrentDungeonSpec = masterData.DungeonSpecs.Get(CurrentDungeon.name);
             var initialPosition = new Vector2Int(CurrentDungeonSpec.InitialX, CurrentDungeonSpec.InitialY);
             player.Warp(initialPosition);
-            checkPoint = initialPosition;
             FloorDatabase.Clear();
             var itemTableDatabase = new Dictionary<int, List<MasterData.ItemTable>>();
             var createdItemIds = new HashSet<int>();
@@ -608,7 +605,6 @@ namespace SoulRPG
         public void RestCheckPoint(Vector2Int position)
         {
             restedCheckPoints.Add(position);
-            checkPoint = position;
         }
 
         public bool CanRestCheckPoint(Vector2Int position)
