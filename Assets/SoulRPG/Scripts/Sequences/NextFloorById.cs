@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
@@ -15,7 +14,7 @@ namespace SoulRPG
     [Serializable]
     public sealed class NextFloorById : ISequence
     {
-        [SerializeField]
+        [SerializeReference, SubclassSelector]
         private IntResolver floorIdResolver;
 
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
