@@ -31,18 +31,23 @@ namespace SoulRPG
 
         private readonly HKUIDocument informationStatusDocumentPrefab;
 
+        private readonly HKUIDocument informationItemDocumentPrefab;
+
         private UniTaskCompletionSource<ICommandInvoker> source;
 
         private int selectedWeaponId;
 
         private CancellationTokenSource informationWeaponScope;
 
+        private int selectedChangeWeaponEquipmentIndex;
+
         public Input(
             HKUIDocument commandDocumentPrefab,
             HKUIDocument listDocumentPrefab,
             HKUIDocument ailmentInformationDocumentPrefab,
             HKUIDocument informationWeaponDocumentPrefab,
-            HKUIDocument informationStatusDocumentPrefab
+            HKUIDocument informationStatusDocumentPrefab,
+            HKUIDocument informationItemDocumentPrefab
             )
         {
             this.listDocumentPrefab = listDocumentPrefab;
@@ -50,6 +55,7 @@ namespace SoulRPG
             this.ailmentInformationDocumentPrefab = ailmentInformationDocumentPrefab;
             this.informationWeaponDocumentPrefab = informationWeaponDocumentPrefab;
             this.informationStatusDocumentPrefab = informationStatusDocumentPrefab;
+            this.informationItemDocumentPrefab = informationItemDocumentPrefab;
         }
 
         public void Dispose()
@@ -105,6 +111,21 @@ namespace SoulRPG
                         _ =>
                         {
                             GameTipsView.SetTip("状態異常・ステータスなどの情報を確認する。");
+                        });
+                }),
+                new(x =>
+                {
+                    GameListView.ApplyAsSimpleElement(
+                        x,
+                        "武器変更",
+                        _ =>
+                        {
+                            AudioManager.PlaySFX("Sfx.Message.0");
+                            stateMachine.Change(StateSelectChangeWeaponEquipmentAsync);
+                        },
+                        _ =>
+                        {
+                            GameTipsView.SetTip("装備している武器を変更する。");
                         });
                 })
             };
@@ -383,6 +404,96 @@ namespace SoulRPG
                     });
                 });
             var listDocument = GameListView.CreateWithPages(listDocumentPrefab, listElements, 0);
+            await scope.WaitUntilCanceled();
+            if (listDocument != null)
+            {
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
+        }
+
+        private async UniTask StateSelectChangeWeaponEquipmentAsync(CancellationToken scope)
+        {
+            informationWeaponScope?.Cancel();
+            informationWeaponScope?.Dispose();
+            informationWeaponScope = new CancellationTokenSource();
+            var informationWeaponView = new BattleInformationWeaponView(informationWeaponDocumentPrefab, informationWeaponScope.Token);
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var commands = character.Equipment.GetWeaponIds()
+                .Select((weaponId, index) =>
+                {
+                    return new Action<HKUIDocument>(element =>
+                    {
+                        var fixedWeaponId = weaponId.TryGetMasterDataWeapon(out var weapon)
+                            ? weapon.ItemId
+                            : Define.HandWeaponId;
+                        GameListView.ApplyAsSimpleElement(
+                            element,
+                            fixedWeaponId.GetMasterDataItem().Name,
+                            _ =>
+                            {
+                                selectedChangeWeaponEquipmentIndex = index;
+                                AudioManager.PlaySFX("Sfx.Message.0");
+                                stateMachine.Change(StateSelectChangeWeaponInventoryAsync);
+                            },
+                            _ =>
+                            {
+                                GameTipsView.SetTip(fixedWeaponId.GetMasterDataItem().Description);
+                                informationWeaponView.Setup(fixedWeaponId);
+                            });
+                    });
+                });
+            var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            listDocument.Q<TMP_Text>("Header").text = "変更する武器を選べ";
+            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
+                    stateMachine.Change(StateSelectMainCommandAsync);
+                })
+                .RegisterTo(scope);
+            await scope.WaitUntilCanceled();
+            informationWeaponScope?.Cancel();
+            informationWeaponScope?.Dispose();
+            informationWeaponScope = null;
+            if (listDocument != null)
+            {
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
+        }
+
+        private async UniTask StateSelectChangeWeaponInventoryAsync(CancellationToken scope)
+        {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var informationItemView = new GameItemInformationView(informationItemDocumentPrefab, scope);
+            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
+                .Subscribe(_ =>
+                {
+                    AudioManager.PlaySFX("Sfx.Cancel.0");
+                    stateMachine.Change(StateSelectChangeWeaponEquipmentAsync);
+                })
+                .RegisterTo(scope);
+            var listElements = character.Character.Inventory.Items
+                .Where(x => !character.Equipment.GetWeaponIds().Any(y => y == x.Key) && x.Key.TryGetMasterDataWeapon(out _))
+                .Select(x =>
+                {
+                    return new Action<HKUIDocument>(element =>
+                    {
+                        GameListView.ApplyAsSimpleElement(
+                            element,
+                            x.Key.GetMasterDataItem().Name,
+                            _ =>
+                            {
+                                source.TrySetResult(new ChangeWeapon(selectedChangeWeaponEquipmentIndex, x.Key));
+                                stateMachine.Change(StateNothingAsync);
+                            },
+                            _ =>
+                            {
+                                informationItemView.Setup(x.Key.GetMasterDataItem());
+                            });
+                    });
+                });
+            var listDocument = GameListView.CreateWithPages(listDocumentPrefab, listElements, 0);
+            var isEmpty = !listElements.Any();
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {
