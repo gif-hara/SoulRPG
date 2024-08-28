@@ -11,6 +11,10 @@ namespace SoulRPG
     {
         public Vector2Int? FindPath(DungeonController dungeonController, Vector2Int start, Vector2Int goal)
         {
+            if (start == goal)
+            {
+                return null;
+            }
             var range = dungeonController.CurrentDungeon.range;
             var width = range.x;
             var height = range.y;
