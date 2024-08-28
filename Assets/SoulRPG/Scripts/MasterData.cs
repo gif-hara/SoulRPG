@@ -789,6 +789,8 @@ namespace SoulRPG
 
             public int InitialY;
 
+            public Define.Direction Direction;
+
             public int NoCostItemNumberMin;
 
             public int NoCostItemNumberMax;

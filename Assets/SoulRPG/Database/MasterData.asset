@@ -1337,6 +1337,7 @@ MonoBehaviour:
     - Id: Dungeon.Test
       InitialX: 0
       InitialY: 0
+      Direction: 0
       NoCostItemNumberMin: 0
       NoCostItemNumberMax: 0
       EnemyPlaceItemNumberMin: 1
@@ -1388,6 +1389,7 @@ MonoBehaviour:
     - Id: Dungeon.Home
       InitialX: 2
       InitialY: 0
+      Direction: 0
       NoCostItemNumberMin: 0
       NoCostItemNumberMax: 0
       EnemyPlaceItemNumberMin: 0
@@ -1428,6 +1430,7 @@ MonoBehaviour:
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
+      Direction: 0
       NoCostItemNumberMin: 10
       NoCostItemNumberMax: 10
       EnemyPlaceItemNumberMin: 10
