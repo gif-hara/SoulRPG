@@ -2882,15 +2882,249 @@ MonoBehaviour:
       InitialX: 11
       InitialY: 21
       Direction: 2
-      NoCostItemNumberMin: 0
-      NoCostItemNumberMax: 0
-      EnemyPlaceItemNumberMin: 0
-      EnemyPlaceItemNumberMax: 0
-      NoCostEnemyNumberMin: 20
-      NoCostEnemyNumberMax: 20
+      NoCostItemNumberMin: 7
+      NoCostItemNumberMax: 7
+      EnemyPlaceItemNumberMin: 8
+      EnemyPlaceItemNumberMax: 8
+      NoCostEnemyNumberMin: 12
+      NoCostEnemyNumberMax: 12
       RequireShadow: 1
-      FloorItemNoCosts: []
-      FloorItemEnemyPlaces: []
+      FloorItemNoCosts:
+      - Id: 24
+        DungeonName: Dungeon.10201
+        X: 0
+        Y: 25
+        ItemTableId: 2
+      - Id: 25
+        DungeonName: Dungeon.10201
+        X: 13
+        Y: 24
+        ItemTableId: 2
+      - Id: 26
+        DungeonName: Dungeon.10201
+        X: 2
+        Y: 23
+        ItemTableId: 2
+      - Id: 27
+        DungeonName: Dungeon.10201
+        X: 6
+        Y: 23
+        ItemTableId: 2
+      - Id: 28
+        DungeonName: Dungeon.10201
+        X: 0
+        Y: 19
+        ItemTableId: 2
+      - Id: 29
+        DungeonName: Dungeon.10201
+        X: 14
+        Y: 18
+        ItemTableId: 2
+      - Id: 30
+        DungeonName: Dungeon.10201
+        X: 11
+        Y: 17
+        ItemTableId: 2
+      - Id: 31
+        DungeonName: Dungeon.10201
+        X: 5
+        Y: 15
+        ItemTableId: 2
+      - Id: 32
+        DungeonName: Dungeon.10201
+        X: 2
+        Y: 14
+        ItemTableId: 2
+      - Id: 33
+        DungeonName: Dungeon.10201
+        X: 4
+        Y: 14
+        ItemTableId: 2
+      - Id: 34
+        DungeonName: Dungeon.10201
+        X: 14
+        Y: 13
+        ItemTableId: 2
+      - Id: 35
+        DungeonName: Dungeon.10201
+        X: 2
+        Y: 9
+        ItemTableId: 2
+      - Id: 36
+        DungeonName: Dungeon.10201
+        X: 4
+        Y: 9
+        ItemTableId: 2
+      - Id: 37
+        DungeonName: Dungeon.10201
+        X: 4
+        Y: 8
+        ItemTableId: 2
+      - Id: 38
+        DungeonName: Dungeon.10201
+        X: 17
+        Y: 7
+        ItemTableId: 2
+      - Id: 39
+        DungeonName: Dungeon.10201
+        X: 10
+        Y: 5
+        ItemTableId: 2
+      - Id: 40
+        DungeonName: Dungeon.10201
+        X: 12
+        Y: 5
+        ItemTableId: 2
+      - Id: 41
+        DungeonName: Dungeon.10201
+        X: 24
+        Y: 5
+        ItemTableId: 2
+      - Id: 42
+        DungeonName: Dungeon.10201
+        X: 0
+        Y: 3
+        ItemTableId: 2
+      - Id: 43
+        DungeonName: Dungeon.10201
+        X: 14
+        Y: 3
+        ItemTableId: 2
+      - Id: 44
+        DungeonName: Dungeon.10201
+        X: 5
+        Y: 2
+        ItemTableId: 2
+      - Id: 45
+        DungeonName: Dungeon.10201
+        X: 23
+        Y: 2
+        ItemTableId: 2
+      - Id: 46
+        DungeonName: Dungeon.10201
+        X: 1
+        Y: 0
+        ItemTableId: 2
+      - Id: 47
+        DungeonName: Dungeon.10201
+        X: 2
+        Y: 0
+        ItemTableId: 2
+      - Id: 48
+        DungeonName: Dungeon.10201
+        X: 10
+        Y: 0
+        ItemTableId: 2
+      - Id: 49
+        DungeonName: Dungeon.10201
+        X: 20
+        Y: 0
+        ItemTableId: 2
+      FloorItemEnemyPlaces:
+      - Id: 24
+        DungeonName: Dungeon.10201
+        X: 3
+        Y: 19
+        ItemTableId: 2
+        EnemyPositionX: 4
+        EnemyPositionY: 19
+        EnemyTableId: 10201
+      - Id: 25
+        DungeonName: Dungeon.10201
+        X: 20
+        Y: 17
+        ItemTableId: 2
+        EnemyPositionX: 22
+        EnemyPositionY: 17
+        EnemyTableId: 10201
+      - Id: 26
+        DungeonName: Dungeon.10201
+        X: 13
+        Y: 16
+        ItemTableId: 2
+        EnemyPositionX: 12
+        EnemyPositionY: 16
+        EnemyTableId: 10201
+      - Id: 27
+        DungeonName: Dungeon.10201
+        X: 16
+        Y: 16
+        ItemTableId: 2
+        EnemyPositionX: 16
+        EnemyPositionY: 15
+        EnemyTableId: 10201
+      - Id: 28
+        DungeonName: Dungeon.10201
+        X: 22
+        Y: 16
+        ItemTableId: 2
+        EnemyPositionX: 20
+        EnemyPositionY: 16
+        EnemyTableId: 10201
+      - Id: 29
+        DungeonName: Dungeon.10201
+        X: 10
+        Y: 15
+        ItemTableId: 2
+        EnemyPositionX: 12
+        EnemyPositionY: 14
+        EnemyTableId: 10201
+      - Id: 30
+        DungeonName: Dungeon.10201
+        X: 2
+        Y: 11
+        ItemTableId: 2
+        EnemyPositionX: 3
+        EnemyPositionY: 11
+        EnemyTableId: 10201
+      - Id: 31
+        DungeonName: Dungeon.10201
+        X: 4
+        Y: 10
+        ItemTableId: 2
+        EnemyPositionX: 5
+        EnemyPositionY: 11
+        EnemyTableId: 10201
+      - Id: 32
+        DungeonName: Dungeon.10201
+        X: 8
+        Y: 6
+        ItemTableId: 2
+        EnemyPositionX: 7
+        EnemyPositionY: 5
+        EnemyTableId: 10201
+      - Id: 33
+        DungeonName: Dungeon.10201
+        X: 11
+        Y: 5
+        ItemTableId: 2
+        EnemyPositionX: 11
+        EnemyPositionY: 3
+        EnemyTableId: 10201
+      - Id: 34
+        DungeonName: Dungeon.10201
+        X: 4
+        Y: 4
+        ItemTableId: 2
+        EnemyPositionX: 2
+        EnemyPositionY: 5
+        EnemyTableId: 10201
+      - Id: 35
+        DungeonName: Dungeon.10201
+        X: 3
+        Y: 2
+        ItemTableId: 2
+        EnemyPositionX: 3
+        EnemyPositionY: 1
+        EnemyTableId: 10201
+      - Id: 36
+        DungeonName: Dungeon.10201
+        X: 15
+        Y: 2
+        ItemTableId: 2
+        EnemyPositionX: 14
+        EnemyPositionY: 1
+        EnemyTableId: 10201
       FloorEnemyNoCosts:
       - DungeonName: Dungeon.10201
         X: 6
@@ -2996,7 +3230,307 @@ MonoBehaviour:
         X: 21
         Y: 21
         EnemyTableId: 10201
-      WallEvents: []
+      WallEvents:
+      - Id: 10201.(03,25).(03,24).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 3
+        LeftY: 25
+        RightX: 3
+        RightY: 24
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(04,19).(04,18).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 4
+        LeftY: 19
+        RightX: 4
+        RightY: 18
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(06,16).(06,15).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 6
+        LeftY: 16
+        RightX: 6
+        RightY: 15
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(03,13).(04,13).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 3
+        LeftY: 13
+        RightX: 4
+        RightY: 13
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(03,11).(04,11).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 3
+        LeftY: 11
+        RightX: 4
+        RightY: 11
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(06,12).(07,12).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 6
+        LeftY: 12
+        RightX: 7
+        RightY: 12
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(06,11).(07,11).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 6
+        LeftY: 11
+        RightX: 7
+        RightY: 11
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(02,08).(03,08).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 2
+        LeftY: 8
+        RightX: 3
+        RightY: 8
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(06,09).(06,08).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 6
+        LeftY: 9
+        RightX: 6
+        RightY: 8
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(05,07).(06,07).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 5
+        LeftY: 7
+        RightX: 6
+        RightY: 7
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(04,07).(05,07).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 4
+        LeftY: 7
+        RightX: 5
+        RightY: 7
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(02,06).(03,06).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 2
+        LeftY: 6
+        RightX: 3
+        RightY: 6
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(01,03).(02,03).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 1
+        LeftY: 3
+        RightX: 2
+        RightY: 3
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(00,01).(01,01).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 0
+        LeftY: 1
+        RightX: 1
+        RightY: 1
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(03,00).(04,00).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 3
+        LeftY: 0
+        RightX: 4
+        RightY: 0
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(07,00).(08,00).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 7
+        LeftY: 0
+        RightX: 8
+        RightY: 0
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(07,04).(08,04).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 7
+        LeftY: 4
+        RightX: 8
+        RightY: 4
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(09,05).(10,05).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 9
+        LeftY: 5
+        RightX: 10
+        RightY: 5
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(11,00).(11,-01).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 11
+        LeftY: 0
+        RightX: 11
+        RightY: -1
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(14,01).(14,00).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 14
+        LeftY: 1
+        RightX: 14
+        RightY: 0
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(13,05).(13,04).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 13
+        LeftY: 5
+        RightX: 13
+        RightY: 4
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(16,03).(16,02).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 16
+        LeftY: 3
+        RightX: 16
+        RightY: 2
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(20,01).(21,01).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 20
+        LeftY: 1
+        RightX: 21
+        RightY: 1
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(19,08).(20,08).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 19
+        LeftY: 8
+        RightX: 20
+        RightY: 8
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(16,14).(17,14).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 16
+        LeftY: 14
+        RightX: 17
+        RightY: 14
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(21,15).(22,15).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 21
+        LeftY: 15
+        RightX: 22
+        RightY: 15
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(24,17).(24,16).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 24
+        LeftY: 17
+        RightX: 24
+        RightY: 16
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(23,24).(23,23).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 23
+        LeftY: 24
+        RightX: 23
+        RightY: 23
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(17,09).(18,09).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 17
+        LeftY: 9
+        RightX: 18
+        RightY: 9
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10201.(17,09).(17,08).0.Door
+        DungeonName: Dungeon.10201
+        LeftX: 17
+        LeftY: 9
+        RightX: 17
+        RightY: 8
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
       FloorItemGuaranteeds: []
       FloorEnemyGuaranteeds: []
       FloorEvents: []
@@ -3948,17 +4482,307 @@ MonoBehaviour:
         Weight: 100
       - Id: 0
         TableId: 2
+        ItemId: 101018
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
         ItemId: 101020
         Count: 1
         Weight: 100
       - Id: 0
         TableId: 2
-        ItemId: 101022
+        ItemId: 101023
         Count: 1
         Weight: 100
       - Id: 0
         TableId: 2
-        ItemId: 101023
+        ItemId: 101026
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101027
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101029
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101030
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101031
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101032
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101034
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101035
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101036
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101037
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101038
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101039
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101040
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101041
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101042
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101043
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101044
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101045
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101046
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101047
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101048
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101049
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101051
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101052
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101053
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101054
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101055
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 101073
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 102004
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 103004
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 104004
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 105004
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 102005
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 103005
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 104005
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 105005
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 102006
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 103006
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 104006
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 105006
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106006
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106007
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106008
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106009
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106010
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106016
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106017
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106018
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106019
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106020
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106026
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106027
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106028
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106029
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106030
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106031
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106032
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106033
         Count: 1
         Weight: 100
     - Key: 99
@@ -6363,7 +7187,7 @@ MonoBehaviour:
       BattleBgmId: 0
       SequencesId: 0
       FieldOfVision: 5
-      MoveIntervalSeconds: 0.6
+      MoveIntervalSeconds: 0.4
       Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
       AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
