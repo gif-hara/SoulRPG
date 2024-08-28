@@ -365,7 +365,7 @@ namespace SoulRPG
                 await DialogView.ConfirmAsync
                 (
                     documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                    "もう休憩できません。",
+                    "ここではもう休憩できません。",
                     new[] { "OK" },
                     0,
                     scope
@@ -376,7 +376,7 @@ namespace SoulRPG
             var result = await DialogView.ConfirmAsync
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                "HPとSTを回復します。よろしいですか？休憩は一度しか使用できません。",
+                "HPとSTを回復しますが一度しか使用できません。\nよろしいですか？",
                 new[] { "はい", "いいえ" },
                 0,
                 scope
