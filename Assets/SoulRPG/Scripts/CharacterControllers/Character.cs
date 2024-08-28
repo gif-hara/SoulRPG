@@ -87,6 +87,16 @@ namespace SoulRPG.CharacterControllers
             Position = position;
         }
 
+        public void ResetAll()
+        {
+            var gameRule = TinyServiceLocator.Resolve<GameRule>();
+            Inventory.Sync(gameRule.InitialItemDatabase);
+            Equipment.Sync(gameRule.InitialEquipment);
+            GrowthParameter.Sync(gameRule.PlayerGrowthParameter, this);
+            InstanceStatus.ResetExperience();
+            InstanceStatus.FullRecovery();
+        }
+
         public void Dispose()
         {
             lifeScopeSource.Cancel();

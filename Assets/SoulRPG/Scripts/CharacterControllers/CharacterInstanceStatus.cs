@@ -113,5 +113,10 @@ namespace SoulRPG
         {
             experienceReactiveProperty.Value += value;
         }
+
+        public void ResetExperience()
+        {
+            experienceReactiveProperty.Value = 0;
+        }
     }
 }

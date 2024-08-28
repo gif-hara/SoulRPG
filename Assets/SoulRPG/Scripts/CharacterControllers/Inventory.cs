@@ -52,12 +52,12 @@ namespace SoulRPG
             return GetNumber(needItem.ItemId) >= needItem.Count;
         }
 
-        public void Sync(Inventory other)
+        public void Sync(List<GameRule.InitialItemData> initialItemDatabase)
         {
             Items.Clear();
-            foreach (var pair in other.Items)
+            foreach (var initialItem in initialItemDatabase)
             {
-                Items[pair.Key] = pair.Value;
+                Add(initialItem.ItemId, initialItem.Count);
             }
         }
     }

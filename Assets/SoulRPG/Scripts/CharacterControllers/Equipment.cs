@@ -477,21 +477,21 @@ namespace SoulRPG
             }
         }
 
-        public void Sync(Equipment other)
+        public void Sync(EquipmentBlueprint other)
         {
             for (var i = 0; i < 4; i++)
             {
-                weaponIds[i].Value = other.weaponIds[i].Value;
+                weaponIds[i].Value = other.WeaponIds[i];
             }
 
-            headId.Value = other.headId.Value;
-            bodyId.Value = other.bodyId.Value;
-            armId.Value = other.armId.Value;
-            legId.Value = other.legId.Value;
+            headId.Value = other.HeadId;
+            bodyId.Value = other.BodyId;
+            armId.Value = other.ArmId;
+            legId.Value = other.LegId;
 
             for (var i = 0; i < 4; i++)
             {
-                accessoryIds[i].Value = other.accessoryIds[i].Value;
+                accessoryIds[i].Value = other.AccessoryIds[i];
             }
         }
     }

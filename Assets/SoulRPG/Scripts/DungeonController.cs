@@ -564,7 +564,7 @@ namespace SoulRPG
             }
             else
             {
-                character.InstanceStatus.FullRecovery();
+                character.ResetAll();
                 Setup(homeDungeonName, character);
                 DisposeScope();
                 var recoveryScope = new CancellationTokenSource();
