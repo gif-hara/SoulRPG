@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace SoulRPG
 {
@@ -13,8 +14,8 @@ namespace SoulRPG
             var range = dungeonController.CurrentDungeon.range;
             var width = range.x;
             var height = range.y;
-            var distances = new int[width,height];
-            var previous = new Vector2Int[width,height];
+            var distances = new int[width, height];
+            var previous = new Vector2Int[width, height];
             var visited = new bool[width, height];
             var neighbors = new List<Vector2Int>();
             var directions = new Vector2Int[]
@@ -38,6 +39,10 @@ namespace SoulRPG
             while (true)
             {
                 var current = GetMinDistanceNode(visited, width, height, distances);
+                if (current.x == -1 || current.y == -1)
+                {
+                    break;
+                }
 
                 if (current == goal || distances[current.x, current.y] == int.MaxValue)
                 {
@@ -49,7 +54,7 @@ namespace SoulRPG
 
                 foreach (var direction in directions)
                 {
-                    if (!dungeonController.CanMove(current, direction.ToDirection()))
+                    if (!dungeonController.CanMove(current, direction.ToDirection()) || dungeonController.IsExistEnemy(current + direction))
                     {
                         continue;
                     }

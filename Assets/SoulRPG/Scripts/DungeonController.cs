@@ -361,6 +361,11 @@ namespace SoulRPG
             return true;
         }
 
+        public bool IsExistEnemy(Vector2Int position)
+        {
+            return Enemies.Any(x => x.Position == position);
+        }
+
         private void AddReachedPoint(Character character)
         {
             Add(character.Position);

@@ -2886,8 +2886,8 @@ MonoBehaviour:
       NoCostItemNumberMax: 0
       EnemyPlaceItemNumberMin: 0
       EnemyPlaceItemNumberMax: 0
-      NoCostEnemyNumberMin: 10
-      NoCostEnemyNumberMax: 10
+      NoCostEnemyNumberMin: 20
+      NoCostEnemyNumberMax: 20
       RequireShadow: 1
       FloorItemNoCosts: []
       FloorItemEnemyPlaces: []
