@@ -45,15 +45,11 @@ namespace SoulRPG
             staminaReactiveProperty = new ReactiveProperty<int>(GetStaminaMax());
             experienceReactiveProperty = new ReactiveProperty<int>(0);
 
-            character.Events.OnLevelUp
-                .Subscribe(_ =>
-                {
-                    SetHitPointMax(GetHitPointMax());
-                    SetStaminaMax(GetStaminaMax());
-                })
-                .RegisterTo(character.LifeScope);
-
-            character.Events.OnChangedEquipment
+            Observable.Merge(
+                character.Events.OnLevelUp.AsUnitObservable(),
+                character.Events.OnChangedEquipment.AsUnitObservable(),
+                character.Events.OnSyncGrowthParameter.AsUnitObservable()
+            )
                 .Subscribe(_ =>
                 {
                     SetHitPointMax(GetHitPointMax());

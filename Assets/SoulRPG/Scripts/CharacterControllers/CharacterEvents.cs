@@ -12,5 +12,7 @@ namespace SoulRPG
         public readonly Subject<CharacterGrowthParameter> OnLevelUp = new();
 
         public readonly Subject<Unit> OnChangedEquipment = new();
+
+        public readonly Subject<CharacterGrowthParameter> OnSyncGrowthParameter = new();
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using HK;
+using SoulRPG.CharacterControllers;
 using UnityEngine;
 
 namespace SoulRPG
@@ -53,7 +54,7 @@ namespace SoulRPG
             behaviourPoint = parameter.behaviourPoint;
         }
 
-        public void Sync(CharacterGrowthParameter parameter)
+        public void Sync(CharacterGrowthParameter parameter, Character character)
         {
             level = parameter.level;
             vitality = parameter.vitality;
@@ -62,6 +63,7 @@ namespace SoulRPG
             magicalStrength = parameter.magicalStrength;
             speed = parameter.speed;
             behaviourPoint = parameter.behaviourPoint;
+            character.Events.OnSyncGrowthParameter.OnNext(this);
         }
     }
 }

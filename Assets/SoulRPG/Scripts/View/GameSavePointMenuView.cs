@@ -297,7 +297,7 @@ namespace SoulRPG
                         isConfirming = false;
                         if (result == 0)
                         {
-                            character.GrowthParameter.Sync(growthParameter);
+                            character.GrowthParameter.Sync(growthParameter, character);
                             character.InstanceStatus.AddExperience(-useExperience.Value);
                             character.Events.OnLevelUp.OnNext(growthParameter);
                             stateMachine.Change(StateRootMenuAsync);
