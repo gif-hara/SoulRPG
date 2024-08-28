@@ -1391,10 +1391,36 @@ MonoBehaviour:
       RequireShadow: 0
       FloorItemNoCosts: []
       FloorItemEnemyPlaces: []
-      WallEvents: []
+      WallEvents:
+      - Id: Home.(02,02).(03,02).0.Door
+        DungeonName: Dungeon.Home
+        LeftX: 2
+        LeftY: 2
+        RightX: 3
+        RightY: 2
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
       FloorItemGuaranteeds: []
       FloorEnemyGuaranteeds: []
-      FloorEvents: []
+      FloorEvents:
+      - Id: 0
+        DungeonName: Dungeon.Home
+        X: 2
+        Y: 4
+        ViewName: NextFloor
+        SequenceId: 101004
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: dc13576ad584fdd42ac671f298449ff8, type: 2}
+      - Id: 0
+        DungeonName: Dungeon.Home
+        X: 1
+        Y: 2
+        ViewName: Npc.0
+        SequenceId: 102001
+        PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
+        Sequences: {fileID: 11400000, guid: e80c5822defe0ec458d585143ae432d9, type: 2}
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
