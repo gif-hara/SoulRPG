@@ -31,6 +31,11 @@ namespace SoulRPG
 
         public UniTask BeginFadeAsyncInternal(Color from, Color to, float duration, CancellationToken scope)
         {
+            if (duration <= 0)
+            {
+                Image.color = to;
+                return UniTask.CompletedTask;
+            }
             return LMotion.Create(from, to, duration)
                 .BindToColor(Image)
                 .AddTo(document)
