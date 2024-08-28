@@ -518,7 +518,7 @@ namespace SoulRPG
             }
         }
 
-        private async UniTask<Define.BattleResult> BeginBattleAsync(Character character,
+        public async UniTask<Define.BattleResult> BeginBattleAsync(Character character,
             MasterData.Enemy masterDataEnemy)
         {
             var scope = new CancellationTokenSource();
@@ -611,6 +611,13 @@ namespace SoulRPG
         public bool CanRestCheckPoint(Vector2Int position)
         {
             return !restedCheckPoints.Contains(position);
+        }
+
+        public UniTask<Define.BattleResult> BeginBattleAsync(Character player, int masterDataEnemyId)
+        {
+            var masterData = TinyServiceLocator.Resolve<MasterData>();
+            var enemy = masterData.Enemies.Get(masterDataEnemyId);
+            return BeginBattleAsync(player, enemy);
         }
 
 #if DEBUG

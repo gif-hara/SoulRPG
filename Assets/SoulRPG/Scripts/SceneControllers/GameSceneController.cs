@@ -202,6 +202,10 @@ namespace SoulRPG.SceneControllers
                             dungeonController.Setup(debugDungeonName, player);
                             explorationView.CreateDungeonViews();
                         }
+                        if (Keyboard.current.f2Key.wasPressedThisFrame)
+                        {
+                            GameDebugWindowView.OpenAsync(gameMenuBundlePrefab, destroyCancellationToken).Forget();
+                        }
                     }
                     catch (OperationCanceledException)
                     {
