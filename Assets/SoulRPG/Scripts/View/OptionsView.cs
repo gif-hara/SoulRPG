@@ -122,9 +122,9 @@ namespace SoulRPG
                 };
                 var tips = new List<string>
                 {
-                    "ゲーム全体の音量を設定します。",
-                    "BGMの音量を設定します。",
-                    "効果音の音量を設定します。",
+                    "ゲーム全体の音量を設定する。",
+                    "BGMの音量を設定する。",
+                    "効果音の音量を設定する。",
                 };
                 var currentVolumeIndex = 0;
                 for (var i = 0; i < volumeNames.Count; i++)

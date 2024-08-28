@@ -65,7 +65,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip("装備を変更します。");
+                                GameTipsView.SetTip("戦闘で使う装備を変更する。");
                             }
                         );
                     },
@@ -82,7 +82,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip("ステータスを確認します。");
+                                GameTipsView.SetTip("現在の状況やステータスを確認する。");
                             }
                         );
                     },
@@ -99,7 +99,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip("システム設定を行います。");
+                                GameTipsView.SetTip("システム設定を行う。");
                             }
                         );
                     },
@@ -273,7 +273,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             CreateHeader("装備変更", scope);
-            GameTipsView.SetTip("変更したい部位を選択してください。");
+            GameTipsView.SetTip("変更したい部位を選択せよ。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -318,7 +318,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             CreateHeader("武器変更", scope);
-            GameTipsView.SetTip("装備したい武器を選択してください。");
+            GameTipsView.SetTip("装備したい武器を選択せよ。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -360,7 +360,7 @@ namespace SoulRPG
                 .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
             CreateHeader("頭防具変更", scope);
-            GameTipsView.SetTip("装備したい頭防具を選択してください。");
+            GameTipsView.SetTip("装備したい頭防具を選択せよ。");
             Object.Destroy(listDocument.gameObject);
         }
 
@@ -400,7 +400,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             CreateHeader("胴防具変更", scope);
-            GameTipsView.SetTip("装備したい胴防具を選択してください。");
+            GameTipsView.SetTip("装備したい胴防具を選択せよ。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -441,7 +441,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             CreateHeader("腕防具変更", scope);
-            GameTipsView.SetTip("装備したい腕防具を選択してください。");
+            GameTipsView.SetTip("装備したい腕防具を選択せよ。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -482,7 +482,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             CreateHeader("脚防具変更", scope);
-            GameTipsView.SetTip("装備したい脚防具を選択してください。");
+            GameTipsView.SetTip("装備したい脚防具を選択せよ。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -523,7 +523,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             CreateHeader("アクセサリー変更", scope);
-            GameTipsView.SetTip("装備したいアクセサリーを選択してください。");
+            GameTipsView.SetTip("装備したいアクセサリーを選択せよ。");
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
