@@ -49,14 +49,18 @@ namespace SoulRPG
 
         private int currentFloorId = 0;
 
+        private readonly string homeDungeonName;
+
         public DungeonController(
             HKUIDocument gameMenuBundlePrefab,
             IExplorationView view,
+            string homeDungeonName,
             CancellationToken scope
         )
         {
             this.gameMenuBundlePrefab = gameMenuBundlePrefab;
             this.view = view;
+            this.homeDungeonName = homeDungeonName;
             this.scope = CancellationTokenSource.CreateLinkedTokenSource(scope);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnRequestChangeDungeon
@@ -563,8 +567,8 @@ namespace SoulRPG
             }
             else
             {
-                character.Warp(checkPoint);
                 character.InstanceStatus.FullRecovery();
+                Setup(homeDungeonName, character);
                 TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage
                     .OnNext(new("どうやら安全な場所に移動されたようだ", "Sfx.Message.0"));
             }
