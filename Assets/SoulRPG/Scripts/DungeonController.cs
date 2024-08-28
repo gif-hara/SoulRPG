@@ -92,6 +92,7 @@ namespace SoulRPG
             CurrentDungeonSpec = masterData.DungeonSpecs.Get(CurrentDungeon.name);
             var initialPosition = new Vector2Int(CurrentDungeonSpec.InitialX, CurrentDungeonSpec.InitialY);
             player.Warp(initialPosition);
+            player.Direction = CurrentDungeonSpec.Direction;
             FloorDatabase.Clear();
             var itemTableDatabase = new Dictionary<int, List<MasterData.ItemTable>>();
             var createdItemIds = new HashSet<int>();
