@@ -211,6 +211,20 @@ namespace SoulRPG
                                 }
                             );
                         },
+                        element =>
+                        {
+                            GameListView.ApplyAsSimpleElement
+                            (
+                                element,
+                                "エンカウント無し",
+                                _ =>
+                                {
+                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    battleDebugData.NoEncount = !battleDebugData.NoEncount;
+                                    ConfirmOkOnlyAsync(documentBundlePrefab, $"エンカウント無しを{battleDebugData.NoEncount}に設定しました", scope).Forget();
+                                }
+                            );
+                        },
                     },
                     0
                 );

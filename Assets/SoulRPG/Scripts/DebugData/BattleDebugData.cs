@@ -14,5 +14,7 @@ namespace SoulRPG
         public bool NoCost { get; set; }
 
         public bool IsBigDamage { get; set; }
+
+        public bool NoEncount { get; set; }
     }
 }

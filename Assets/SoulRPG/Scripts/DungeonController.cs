@@ -444,6 +444,12 @@ namespace SoulRPG
 
         private async UniTask OnEnterEnemyAsync(Character player, Character enemy)
         {
+#if DEBUG
+            if (TinyServiceLocator.Resolve<BattleDebugData>().NoEncount)
+            {
+                return;
+            }
+#endif
             var result = await BeginBattleAsync(player, enemy.MasterDataEnemy);
             if (result == Define.BattleResult.PlayerWin)
             {
