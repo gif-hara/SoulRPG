@@ -103,6 +103,7 @@ namespace SoulRPG
                 "Dungeon.Test",
                 "Dungeon.Home",
                 "Dungeon.10101",
+                "Dungeon.10201",
             };
             var masterDataNames = new[]
             {
@@ -129,6 +130,7 @@ namespace SoulRPG
                 "MasterData.FloorEvent",
                 "MasterData.Skill.AdditionalDescription",
                 "MasterData.DungeonTable",
+                "MasterData.FloorEnemy.NoCost",
             };
             var dungeonDownloader = UniTask.WhenAll(
                 dungeonNames.Select(GoogleSpreadSheetDownloader.DownloadAsync)
@@ -169,6 +171,8 @@ namespace SoulRPG
             var skillAdditionalDescriptions = new SkillAdditionalDescription.Group();
             skillAdditionalDescriptions.Set(JsonHelper.FromJson<SkillAdditionalDescription>(database.Item2[21]));
             dungeonTables.Set(JsonHelper.FromJson<DungeonTable>(database.Item2[22]));
+            var floorEnemyNoCosts = new FloorEnemy.Group();
+            floorEnemyNoCosts.Set(JsonHelper.FromJson<FloorEnemy>(database.Item2[23]));
             foreach (var i in skills.List)
             {
                 i.ActionSequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/SkillActions/{i.Id}.asset");
@@ -228,6 +232,12 @@ namespace SoulRPG
                 var dungeonSpec = dungeonSpecs.Get(i.Key);
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.FloorEnemyGuaranteeds = i.Value;
+            }
+            foreach (var i in floorEnemyNoCosts.List)
+            {
+                var dungeonSpec = dungeonSpecs.Get(i.Key);
+                Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
+                dungeonSpec.FloorEnemyNoCosts = i.Value;
             }
             foreach (var i in enemies.List)
             {
@@ -799,11 +809,17 @@ namespace SoulRPG
 
             public int EnemyPlaceItemNumberMax;
 
+            public int NoCostEnemyNumberMin;
+
+            public int NoCostEnemyNumberMax;
+
             public bool RequireShadow;
 
             public List<FloorItem> FloorItemNoCosts;
 
             public List<FloorItemEnemyPlace> FloorItemEnemyPlaces;
+
+            public List<FloorEnemy> FloorEnemyNoCosts;
 
             public List<WallEvent> WallEvents;
 
