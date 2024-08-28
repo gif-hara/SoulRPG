@@ -19,6 +19,7 @@ MonoBehaviour:
   - rid: 9047573958681428056
   - rid: 9047573958681428059
   - rid: 9047573958681428058
+  - rid: 9047573958681428074
   references:
     version: 2
     RefIds:
@@ -47,3 +48,8 @@ MonoBehaviour:
       type: {class: PlaySfx, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         sfxName: Sfx.Message.23
+    - rid: 9047573958681428074
+      type: {class: BeginFadeTo, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        to: {r: 0, g: 0, b: 0, a: 1}
+        duration: 0
