@@ -101,6 +101,7 @@ namespace SoulRPG
             var dungeonNames = new[]
             {
                 "Dungeon.Test",
+                "Dungeon.Home",
                 "Dungeon.10101",
             };
             var masterDataNames = new[]
