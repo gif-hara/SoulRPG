@@ -569,13 +569,26 @@ namespace SoulRPG
             {
                 character.InstanceStatus.FullRecovery();
                 Setup(homeDungeonName, character);
-                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage
-                    .OnNext(new("どうやら安全な場所に移動されたようだ", "Sfx.Message.0"));
+                DisposeScope();
+                var recoveryScope = new CancellationTokenSource();
+                await new Sequencer(new Container(), gameRule.SequenceDatabase.Get("Player.Recovery").Sequences).PlayAsync(recoveryScope.Token);
+                recoveryScope.Cancel();
+                recoveryScope.Dispose();
             }
 
-            scope.Cancel();
-            scope.Dispose();
+            DisposeScope();
             return battleResult;
+
+            void DisposeScope()
+            {
+                if (scope == null)
+                {
+                    return;
+                }
+                scope.Cancel();
+                scope.Dispose();
+                scope = null;
+            }
         }
 
         private void RemoveFloorData(Vector2Int position)
