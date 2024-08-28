@@ -13,7 +13,7 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    public sealed class GameDebugPanelView
+    public sealed class GameDebugInformationView
     {
         public static async UniTask OpenAsync(HKUIDocument documentPrefab, CancellationToken scope)
         {
