@@ -600,6 +600,9 @@ namespace SoulRPG
 
             void DisposeScope()
             {
+                playerCharacter.Dispose();
+                enemyCharacter.Dispose();
+
                 if (scope == null)
                 {
                     return;

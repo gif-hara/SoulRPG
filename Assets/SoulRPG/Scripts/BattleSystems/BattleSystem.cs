@@ -42,8 +42,6 @@ namespace SoulRPG.BattleSystems
             var deadActor = result == Define.BattleResult.PlayerWin ? Enemy : Player;
             var aliveActor = result == Define.BattleResult.PlayerWin ? Player : Enemy;
             await deadActor.OnDeadMessageAsync(aliveActor);
-            Player.Dispose();
-            Enemy.Dispose();
             cts.Cancel();
             cts.Dispose();
             gameEvents.OnEndBattle.OnNext(Unit.Default);

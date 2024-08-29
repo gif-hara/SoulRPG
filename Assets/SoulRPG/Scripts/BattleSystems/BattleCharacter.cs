@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using NUnit.Framework;
 using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
@@ -37,6 +38,8 @@ namespace SoulRPG
 
         public Character Character { get; }
 
+        public bool IsDisposed { get; private set; }
+
         public BattleCharacter(Character character, Define.AllyType allyType, IBattleAI battleAI, BattleCharacterSequences sequences)
         {
             Character = character;
@@ -58,7 +61,7 @@ namespace SoulRPG
         public async UniTask<ICommandInvoker> ThinkAsync(BattleCharacter target)
         {
             var result = await battleAI.ThinkAsync(this);
-            Assert.IsNotNull(result);
+            UnityEngine.Assertions.Assert.IsNotNull(result);
             if (!result.CanRegisterUsedIdentifier())
             {
                 return result;
@@ -66,7 +69,7 @@ namespace SoulRPG
             else
             {
                 var identifier = result.GetIdentifier();
-                Assert.IsFalse(UsedSkills.Contains(identifier), $"{identifier} is already used");
+                UnityEngine.Assertions.Assert.IsFalse(UsedSkills.Contains(identifier), $"{identifier} is already used");
                 UsedSkills.Add(identifier);
                 return result;
             }
@@ -103,6 +106,11 @@ namespace SoulRPG
 
         public void Dispose()
         {
+            if (IsDisposed)
+            {
+                return;
+            }
+            IsDisposed = true;
             BattleStatus.Dispose();
             AilmentController.Dispose();
             battleAI.Dispose();
