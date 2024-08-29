@@ -583,6 +583,7 @@ namespace SoulRPG
             {
                 var addExperience = await playerCharacter.AilmentController.OnCalculateAddExperienceAsync(enemyCharacter.BattleStatus.Experience);
                 character.InstanceStatus.AddExperience(addExperience);
+                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"<color=#88FF88>{addExperience}</color>の経験値を獲得した。", "Sfx.AcquireExperience.0"));
             }
             else
             {
