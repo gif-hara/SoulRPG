@@ -27,7 +27,6 @@ namespace SoulRPG
             var key = targetType == Define.TargetType.Self ? "Actor" : "Target";
             container.TryResolve<BattleCharacter>(key, out var actor);
             var invokeTurnCountThisTurn = actor.AilmentController.GetInvokeCountThisTurn(masterDataAilmentIdResolver.Resolve(container));
-            Debug.Log($"RegisterContainerAilmentInvokeCountThisTurn: {key} {invokeTurnCountThisTurn}");
             container.Register(keyResolver.Resolve(container), invokeTurnCountThisTurn);
             return UniTask.CompletedTask;
         }
