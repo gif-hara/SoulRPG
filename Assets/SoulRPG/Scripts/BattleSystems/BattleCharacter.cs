@@ -162,6 +162,12 @@ namespace SoulRPG
             return Mathf.Max(0, result);
         }
 
+        public async UniTask<int> GetFixedNeedStaminaAsync(int cost)
+        {
+            var result = await AilmentController.OnCalculateNeedStaminaAsync(cost);
+            return Mathf.Max(0, result);
+        }
+
         public UniTask OnBehaviourEndAsync(BattleCharacter target, CancellationToken scope)
         {
             return AilmentController.OnBehaviourEndAsync(this, target, scope);

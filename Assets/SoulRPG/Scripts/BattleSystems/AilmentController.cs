@@ -185,6 +185,15 @@ namespace SoulRPG
             return cost;
         }
 
+        public async UniTask<int> OnCalculateNeedStaminaAsync(int cost)
+        {
+            foreach (var element in elements)
+            {
+                cost = await element.OnCalculateNeedStaminaAsync(battleCharacter, cost, cancellationTokenSource.Token);
+            }
+            return cost;
+        }
+
         public async UniTask OnBehaviourEndAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
             scope = CancellationTokenSource.CreateLinkedTokenSource(cancellationTokenSource.Token, scope).Token;
