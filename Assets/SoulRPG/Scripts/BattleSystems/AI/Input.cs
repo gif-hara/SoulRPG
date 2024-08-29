@@ -244,7 +244,8 @@ namespace SoulRPG
                                 gameEvents.OnRequestShowMessage.OnNext(new("BPが足りない。", "Sfx.Message.0"));
                                 return;
                             }
-                            if (!character.BattleStatus.HasStamina(x.NeedStamina))
+                            var stamina = await character.GetFixedNeedStaminaAsync(x.NeedStamina);
+                            if (!character.BattleStatus.HasStamina(stamina))
                             {
                                 gameEvents.OnRequestShowMessage.OnNext(new("スタミナが足りない。", "Sfx.Message.0"));
                                 return;
