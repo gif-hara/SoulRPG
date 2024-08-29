@@ -50,6 +50,8 @@ namespace SoulRPG
 
         int GetInvokeCountThisTurn();
 
+        void AddInvokeCountThisTurn(int value);
+
         MasterData.Ailment GetMasterDataAilment();
     }
 }

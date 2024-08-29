@@ -282,6 +282,12 @@ namespace SoulRPG
             return invokeCountThisTurn;
         }
 
+        public void AddInvokeCountThisTurn(int value)
+        {
+            invokeCountThisTurn += value;
+            Debug.Log($"masterDataAilmentId: {masterDataAilmentId}, AddInvokeCountThisTurn: {invokeCountThisTurn}");
+        }
+
         public MasterData.Ailment GetMasterDataAilment()
         {
             return masterDataAilment;
