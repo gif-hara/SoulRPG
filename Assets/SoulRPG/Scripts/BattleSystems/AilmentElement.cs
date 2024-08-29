@@ -27,6 +27,11 @@ namespace SoulRPG
         /// </summary>
         private int invokeCountThisTurn;
 
+        /// <summary>
+        /// 呼び出し回数
+        /// </summary>
+        private int invokeCount;
+
         public AilmentElement(int masterDataAilmentId, int turnCount)
         {
             masterDataAilment = masterDataAilmentId.GetMasterDataAilment();
@@ -302,6 +307,16 @@ namespace SoulRPG
         public void AddInvokeCountThisTurn(int value)
         {
             invokeCountThisTurn += value;
+        }
+
+        public int GetInvokeCount()
+        {
+            return invokeCount;
+        }
+
+        public void AddInvokeCount(int value)
+        {
+            invokeCount += value;
         }
 
         public MasterData.Ailment GetMasterDataAilment()

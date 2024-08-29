@@ -67,6 +67,22 @@ namespace SoulRPG
             element.AddInvokeCountThisTurn(value);
         }
 
+        public int GetInvokeCount(int masterDataAilmentId)
+        {
+            var element = elements.Find(x => x.GetMasterDataId() == masterDataAilmentId);
+            return element?.GetInvokeCount() ?? 0;
+        }
+
+        public void AddAilmentInvokeCount(int masterDataAilmentId, int value)
+        {
+            var element = elements.Find(x => x.GetMasterDataId() == masterDataAilmentId);
+            if (element == null)
+            {
+                return;
+            }
+            element.AddInvokeCount(value);
+        }
+
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
         {
             turnCount = await OnCalculateAilmentTurnCountAsync(turnCount);
