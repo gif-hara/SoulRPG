@@ -208,6 +208,15 @@ namespace SoulRPG
             }
             return turnCount;
         }
+        
+        public async UniTask<int> OnCalculateAddExperienceAsync(int experience)
+        {
+            foreach (var element in elements)
+            {
+                experience = await element.OnCalculateAddExperienceAsync(battleCharacter, experience, cancellationTokenSource.Token);
+            }
+            return experience;
+        }
 
 #if DEBUG
         private void AddDebugPanel()

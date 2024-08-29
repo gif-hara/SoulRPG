@@ -214,6 +214,19 @@ namespace SoulRPG
             ).ContinueWith(x => x?.Resolve<int>("TurnCount") ?? turnCount);
         }
 
+        public UniTask<int> OnCalculateAddExperienceAsync(BattleCharacter battleCharacter, int experience, CancellationToken scope)
+        {
+            return PlaySequencesAsync(
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnCalculateAddExperience),
+                battleCharacter,
+                x =>
+                {
+                    x.Register("AddExperience", experience);
+                },
+                scope
+            ).ContinueWith(x => x?.Resolve<int>("AddExperience") ?? experience);
+        }
+
         public bool IsEnd()
         {
             if (turnCount == -1)
