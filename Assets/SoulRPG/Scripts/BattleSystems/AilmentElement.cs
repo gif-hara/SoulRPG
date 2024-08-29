@@ -22,6 +22,11 @@ namespace SoulRPG
 
         private int behaviourCount;
 
+        /// <summary>
+        /// 今回のターンでの呼び出し回数
+        /// </summary>
+        private int invokeCountThisTurn;
+
         public AilmentElement(int masterDataAilmentId, int turnCount)
         {
             masterDataAilment = masterDataAilmentId.GetMasterDataAilment();
@@ -178,6 +183,7 @@ namespace SoulRPG
 
         public UniTask OnTurnStartAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
         {
+            invokeCountThisTurn = 0;
             return PlaySequencesAsync(
                 masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnTurnStart),
                 actor,
@@ -269,6 +275,11 @@ namespace SoulRPG
         public int GetBehaviourCount()
         {
             return behaviourCount;
+        }
+
+        public int GetInvokeCountThisTurn()
+        {
+            return invokeCountThisTurn;
         }
 
         public MasterData.Ailment GetMasterDataAilment()

@@ -35,9 +35,9 @@ namespace SoulRPG
         UniTask OnTurnStartAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
 
         UniTask<bool> CanExecutableTurnOpponentAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
-        
+
         UniTask<int> OnCalculateAilmentTurnCountAsync(BattleCharacter battleCharacter, int turnCount, CancellationToken scope);
-        
+
         UniTask<int> OnCalculateAddExperienceAsync(BattleCharacter battleCharacter, float experience, CancellationToken scope);
 
         bool IsEnd();
@@ -47,6 +47,8 @@ namespace SoulRPG
         int GetRemainingTurnCount();
 
         int GetBehaviourCount();
+
+        int GetInvokeCountThisTurn();
 
         MasterData.Ailment GetMasterDataAilment();
     }

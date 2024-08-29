@@ -51,6 +51,12 @@ namespace SoulRPG
             return elements.Exists(x => x.GetMasterDataAilment().IsDebuff);
         }
 
+        public int GetInvokeCountThisTurn(int masterDataAilmentId)
+        {
+            var element = elements.Find(x => x.GetMasterDataId() == masterDataAilmentId);
+            return element?.GetInvokeCountThisTurn() ?? 0;
+        }
+
         public async UniTask AddAsync(int masterDataAilmentId, int turnCount)
         {
             turnCount = await OnCalculateAilmentTurnCountAsync(turnCount);
@@ -208,7 +214,7 @@ namespace SoulRPG
             }
             return turnCount;
         }
-        
+
         public async UniTask<int> OnCalculateAddExperienceAsync(int experience)
         {
             foreach (var element in elements)
