@@ -15,8 +15,8 @@ MonoBehaviour:
   elements:
     list:
     - type: 0
-      sequences: {fileID: 11400000, guid: 49a15989d67ef455689c321ef6594c60, type: 2}
+      sequences: {fileID: 11400000, guid: 667752e7bf5854e9dbd70f8c800a56b5, type: 2}
     - type: 1
-      sequences: {fileID: 11400000, guid: 9da7f47c6511749e989ff3dc39499720, type: 2}
+      sequences: {fileID: 11400000, guid: 3bafa61fc05f84bd684d648b77b7c0b2, type: 2}
     - type: 16
       sequences: {fileID: 11400000, guid: 50d5282800228439fb737732bf94fc8e, type: 2}
