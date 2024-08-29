@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.Assertions;
 using UnitySequencerSystem;
 
@@ -214,17 +215,21 @@ namespace SoulRPG
             ).ContinueWith(x => x?.Resolve<int>("TurnCount") ?? turnCount);
         }
 
-        public UniTask<int> OnCalculateAddExperienceAsync(BattleCharacter battleCharacter, int experience, CancellationToken scope)
+        public UniTask<int> OnCalculateAddExperienceAsync(BattleCharacter battleCharacter, float experience, CancellationToken scope)
         {
             return PlaySequencesAsync(
                 masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnCalculateAddExperience),
                 battleCharacter,
                 x =>
                 {
-                    x.Register("AddExperience", experience);
+                    x.Register("AddExperience", (float)experience);
                 },
                 scope
-            ).ContinueWith(x => x?.Resolve<int>("AddExperience") ?? experience);
+            ).ContinueWith(x =>
+            {
+                var result = x?.Resolve<float>("AddExperience") ?? experience;
+                return Mathf.FloorToInt(result);
+            });
         }
 
         public bool IsEnd()

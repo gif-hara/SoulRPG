@@ -38,7 +38,7 @@ namespace SoulRPG
         
         UniTask<int> OnCalculateAilmentTurnCountAsync(BattleCharacter battleCharacter, int turnCount, CancellationToken scope);
         
-        UniTask<int> OnCalculateAddExperienceAsync(BattleCharacter battleCharacter, int experience, CancellationToken scope);
+        UniTask<int> OnCalculateAddExperienceAsync(BattleCharacter battleCharacter, float experience, CancellationToken scope);
 
         bool IsEnd();
 
