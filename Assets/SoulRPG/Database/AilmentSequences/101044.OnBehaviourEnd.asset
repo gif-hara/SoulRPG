@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101044.OnBehaviourEnd
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 9047573990526681162
+  - rid: 9047573990526681169
+  - rid: 9047573990526681160
+  references:
+    version: 2
+    RefIds:
+    - rid: 9047573990526681160
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 9047573990526681161
+          sequences: {fileID: 11400000, guid: 55015144b2d54c94eb0648f0544adad3, type: 2}
+        - evaluator:
+            rid: 9047573990526681175
+          sequences: {fileID: 11400000, guid: 55015144b2d54c94eb0648f0544adad3, type: 2}
+        - evaluator:
+            rid: 9047573990526681171
+          sequences: {fileID: 11400000, guid: e6577b5520b6adc488e2949d229649fa, type: 2}
+    - rid: 9047573990526681161
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 9047573990526681174
+        valueResolver:
+          rid: 9047573990526681166
+        compareType: 2
+    - rid: 9047573990526681162
+      type: {class: RegisterContainerAilmentInvokeCountThisTurn, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentIdResolver:
+          rid: 9047573990526681163
+        keyResolver:
+          rid: 9047573990526681164
+    - rid: 9047573990526681163
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 101044
+    - rid: 9047573990526681164
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: Ailment.101044.InvokeCountThisTurn
+    - rid: 9047573990526681166
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 9047573990526681169
+      type: {class: RegisterContainerBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        keyResolver:
+          rid: 9047573990526681170
+    - rid: 9047573990526681170
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: BehaviourPoint
+    - rid: 9047573990526681171
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
+    - rid: 9047573990526681174
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: Ailment.101044.InvokeCountThisTurn
+    - rid: 9047573990526681175
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 9047573990526681176
+        valueResolver:
+          rid: 9047573990526681177
+        compareType: 2
+    - rid: 9047573990526681176
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: BehaviourPoint
+    - rid: 9047573990526681177
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0

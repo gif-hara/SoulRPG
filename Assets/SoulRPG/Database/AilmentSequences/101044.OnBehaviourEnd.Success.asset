@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101044.OnBehaviourEnd.Success
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 9047573990526681167
+  - rid: 9047573990526681168
+  - rid: 9047573990526681172
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 9047573990526681167
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u6700\u5F8C\u306E\u8DB3\u63BB\u304D\u3092\u898B\u305B\u305F\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573990526681168
+      type: {class: AddBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        battleCharacterEvaluator:
+          rid: -2
+        behaviourPriority: 1
+    - rid: 9047573990526681172
+      type: {class: AddAilmentInvokeCountThisTurn, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101044
+        value: 1
