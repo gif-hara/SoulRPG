@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnitySequencerSystem;
 
 namespace SoulRPG.BattleSystems.DamageCalculators
 {
@@ -18,13 +19,13 @@ namespace SoulRPG.BattleSystems.DamageCalculators
         [SerializeField]
         private Define.WeaponAttackAttribute attackAttribute;
 
-        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType)
+        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType, Container container)
         {
             var fixedAttackAttribute = attackAttribute.ToAttackAttribute(attackerWeapon);
             var attackPower = attacker.BattleStatus.GetAttackPower(attackType);
             var weaponPower = attackerWeapon.Strength * weaponRate / 100.0f;
-            var cutRate = defender.GetTotalCutRate(fixedAttackAttribute, attacker);
-            var damage = (int)(attackPower * weaponPower * attacker.StatusBuffController.GetStrengthRate(attackType, attacker, defender) * (1.0f - cutRate));
+            var cutRate = defender.GetTotalCutRate(fixedAttackAttribute, attacker, container);
+            var damage = (int)(attackPower * weaponPower * attacker.StatusBuffController.GetStrengthRate(attackType, attacker, defender, container) * (1.0f - cutRate));
             damage = Mathf.Max(1, damage);
             return damage;
         }

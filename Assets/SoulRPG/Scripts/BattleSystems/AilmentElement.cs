@@ -170,14 +170,18 @@ namespace SoulRPG
         public UniTask<int> OnCalculateNeedStaminaAsync(BattleCharacter battleCharacter, int cost, CancellationToken scope)
         {
             return PlaySequencesAsync(
-                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnCalculateNeedBehaviourPoint),
+                masterDataAilment.Sequences.GetSequences(Define.AilmentBehaviourType.OnCalculateNeedStamina),
                 battleCharacter,
                 x =>
                 {
-                    x.Register("NeedStamina", cost);
+                    x.Register("NeedStamina", (float)cost);
                 },
                 scope
-            ).ContinueWith(x => x?.Resolve<int>("NeedStamina") ?? cost);
+            ).ContinueWith(x =>
+            {
+                var result = x?.Resolve<float>("NeedStamina") ?? cost;
+                return Mathf.FloorToInt(result);
+            });
         }
 
         public UniTask OnBehaviourEndAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
@@ -298,7 +302,6 @@ namespace SoulRPG
         public void AddInvokeCountThisTurn(int value)
         {
             invokeCountThisTurn += value;
-            Debug.Log($"masterDataAilmentId: {masterDataAilmentId}, AddInvokeCountThisTurn: {invokeCountThisTurn}");
         }
 
         public MasterData.Ailment GetMasterDataAilment()

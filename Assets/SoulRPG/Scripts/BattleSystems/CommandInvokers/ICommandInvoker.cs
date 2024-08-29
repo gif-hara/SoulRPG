@@ -1,5 +1,6 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using UnitySequencerSystem;
 
 namespace SoulRPG.BattleSystems.CommandInvokers
 {
@@ -8,7 +9,7 @@ namespace SoulRPG.BattleSystems.CommandInvokers
     /// </summary>
     public interface ICommandInvoker
     {
-        UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope);
+        UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, Container container, CancellationToken scope);
 
         int GetNeedBehaviourPoint();
 

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnitySequencerSystem;
 
 namespace SoulRPG.BattleSystems.DamageCalculators
 {
@@ -12,7 +13,7 @@ namespace SoulRPG.BattleSystems.DamageCalculators
         [SerializeField]
         private int damage;
 
-        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType)
+        public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType, Container container)
         {
             return damage;
         }

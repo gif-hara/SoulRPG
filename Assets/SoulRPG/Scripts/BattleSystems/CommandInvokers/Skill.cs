@@ -22,11 +22,10 @@ namespace SoulRPG.BattleSystems.CommandInvokers
             this.canRegisterUsedIdentifier = canRegisterUsedIdentifier;
         }
 
-        public UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
+        public UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, Container container, CancellationToken scope)
         {
             var masterDataSkill = skillId.GetMasterDataSkill();
             var sequences = masterDataSkill.ActionSequences.Sequences;
-            var container = new Container();
             container.Register("Actor", actor);
             container.Register("Target", target);
             container.Register(weaponId.GetMasterDataWeapon());

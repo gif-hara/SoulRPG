@@ -1,6 +1,8 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using UnitySequencerSystem;
+using UnitySequencerSystem.Resolvers;
 
 namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
 {
@@ -8,15 +10,14 @@ namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
     /// 
     /// </summary>
     [Serializable]
-    public sealed class ContainsDebuff : IBattleCharacterEvaluatorBoolean
+    public sealed class UseStamina : IBattleCharacterEvaluatorBoolean
     {
-        [SerializeField]
-        private Define.TargetType targetType;
+        [SerializeReference, SubclassSelector]
+        private StringResolver keyResolver;
 
         public bool Evaluate(BattleCharacter actor, BattleCharacter target, Container container)
         {
-            var t = targetType == Define.TargetType.Self ? actor : target;
-            return t.AilmentController.ContainsDebuff();
+            return container.Resolve<float>(keyResolver.Resolve(container)) > 0;
         }
     }
 }

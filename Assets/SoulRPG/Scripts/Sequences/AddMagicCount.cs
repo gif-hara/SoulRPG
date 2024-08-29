@@ -22,7 +22,7 @@ namespace SoulRPG
 
         [SerializeField]
         private int value;
-        
+
         [SerializeField]
         private bool isSilent;
 
@@ -36,7 +36,7 @@ namespace SoulRPG
             }
 
             if (battleCharacterEvaluator == null ||
-                battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
+                battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target, container))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
                 t.BattleStatus.AddMagicCount(value);

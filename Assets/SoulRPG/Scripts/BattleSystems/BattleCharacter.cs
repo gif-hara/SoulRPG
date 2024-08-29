@@ -8,6 +8,7 @@ using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnitySequencerSystem;
 
 namespace SoulRPG
 {
@@ -118,9 +119,9 @@ namespace SoulRPG
             scope.Dispose();
         }
 
-        public float GetTotalCutRate(Define.AttackAttribute attackAttribute, BattleCharacter target)
+        public float GetTotalCutRate(Define.AttackAttribute attackAttribute, BattleCharacter target, Container container)
         {
-            return BattleStatus.GetCutRate(attackAttribute) + StatusBuffController.GetCutRate(attackAttribute, this, target);
+            return BattleStatus.GetCutRate(attackAttribute) + StatusBuffController.GetCutRate(attackAttribute, this, target, container);
         }
 
         public bool ContainsAfterCommandInvoker(string key)
@@ -147,7 +148,7 @@ namespace SoulRPG
             AfterCommandInvokers.Clear();
             foreach (var (_, invoker) in invokers)
             {
-                await invoker.InvokeAsync(this, target, scope);
+                await invoker.InvokeAsync(this, target, new Container(), scope);
             }
         }
 

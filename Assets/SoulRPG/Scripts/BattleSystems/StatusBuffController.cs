@@ -3,6 +3,7 @@ using System.Linq;
 using SoulRPG.BattleSystems.BattleCharacterEvaluators;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnitySequencerSystem;
 
 namespace SoulRPG
 {
@@ -68,7 +69,7 @@ namespace SoulRPG
             thunderCutRateBuffList.RemoveAll(x => x.id == name);
         }
 
-        public float GetStrengthRate(Define.AttackType attackType, BattleCharacter actor, BattleCharacter target)
+        public float GetStrengthRate(Define.AttackType attackType, BattleCharacter actor, BattleCharacter target, Container container)
         {
             var buffList = attackType switch
             {
@@ -79,7 +80,7 @@ namespace SoulRPG
             var result = 1.0f;
             foreach (var (_, rate, condition) in buffList)
             {
-                if (condition != null && !condition.Evaluate(actor, target))
+                if (condition != null && !condition.Evaluate(actor, target, container))
                 {
                     continue;
                 }
@@ -88,7 +89,7 @@ namespace SoulRPG
             return result;
         }
 
-        public float GetCutRate(Define.AttackAttribute attackAttribute, BattleCharacter actor, BattleCharacter target)
+        public float GetCutRate(Define.AttackAttribute attackAttribute, BattleCharacter actor, BattleCharacter target, Container container)
         {
             var list = attackAttribute switch
             {
@@ -101,7 +102,7 @@ namespace SoulRPG
                 _ => throw new System.ArgumentOutOfRangeException(attackAttribute.ToString())
             };
             return list
-                .Where(x => x.condition == null || x.condition.Evaluate(actor, target))
+                .Where(x => x.condition == null || x.condition.Evaluate(actor, target, container))
                 .Select(x => x.rate).Sum();
         }
     }

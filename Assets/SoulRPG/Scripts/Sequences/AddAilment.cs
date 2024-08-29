@@ -33,7 +33,7 @@ namespace SoulRPG
             {
                 return;
             }
-            if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
+            if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target, container))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
                 await t.AilmentController.AddAsync(masterDataAilmentId, turnCount);

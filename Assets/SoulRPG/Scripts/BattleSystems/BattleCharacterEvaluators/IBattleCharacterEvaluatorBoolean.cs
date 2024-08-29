@@ -1,3 +1,5 @@
+using UnitySequencerSystem;
+
 namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
 {
     /// <summary>
@@ -5,6 +7,6 @@ namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
     /// </summary>
     public interface IBattleCharacterEvaluatorBoolean
     {
-        bool Evaluate(BattleCharacter actor, BattleCharacter target);
+        bool Evaluate(BattleCharacter actor, BattleCharacter target, Container container);
     }
 }

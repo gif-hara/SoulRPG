@@ -18,7 +18,7 @@ namespace SoulRPG
 
         [SerializeReference, SubclassSelector]
         private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
-        
+
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var actor = container.Resolve<BattleCharacter>("Actor");
@@ -27,12 +27,12 @@ namespace SoulRPG
             {
                 return UniTask.CompletedTask;
             }
-            if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
+            if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target, container))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
                 t.BattleStatus.AddBehaviourPoint(-t.BattleStatus.BehaviourPointReactiveProperty.CurrentValue);
             }
-            
+
             return UniTask.CompletedTask;
         }
     }

@@ -37,7 +37,7 @@ namespace SoulRPG
             container.TryResolve<BattleCharacter>("Actor", out var actor);
             container.TryResolve<BattleCharacter>("Target", out var target);
             if (battleCharacterEvaluator == null ||
-                battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target))
+                battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target, container))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
                 t.StatusBuffController.Add(statusTypes, buffName, rateSelector.Evaluate(actor, target), buffCondition);

@@ -2,6 +2,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
+using UnitySequencerSystem;
 
 namespace SoulRPG.BattleSystems
 {
@@ -72,7 +73,9 @@ namespace SoulRPG.BattleSystems
 #endif
                     actor.BattleStatus.AddBehaviourPoint(-needBehaviourPoint);
                     actor.BattleStatus.AddStamina(-needStamina);
-                    await commandInvoker.InvokeAsync(actor, target, scope);
+                    var container = new Container();
+                    container.Register("UseStamina", (float)needStamina);
+                    await commandInvoker.InvokeAsync(actor, target, container, scope);
                     await actor.OnBehaviourEndAsync(target, scope);
                 }
                 await actor.InvokeAfterCommandAsync(target, scope);
