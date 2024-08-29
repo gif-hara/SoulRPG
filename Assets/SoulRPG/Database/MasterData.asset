@@ -6916,7 +6916,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106018
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: 96a46a9e7f10e4b41851653dc4a0ca00, type: 2}
     - ItemId: 106019
       Vitality: 0
       Stamina: 0
@@ -6924,7 +6924,7 @@ MonoBehaviour:
       MagicalAttack: 8
       Speed: 0
       BeginBattleSequencesId: 106019
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: ed545df249d4b4ae9bb7abbeed9ae846, type: 2}
     - ItemId: 106020
       Vitality: 0
       Stamina: 0
@@ -6932,7 +6932,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106020
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: 9e909d360dbfd4682ae358b2cafcbc72, type: 2}
     - ItemId: 106021
       Vitality: 0
       Stamina: 0
@@ -7473,19 +7473,19 @@ MonoBehaviour:
       Name: "\u9632\u4EBA\u7CBE\u970A\u306E\u652F\u63F4"
       Description: "\u9632\u4EBA\u3068\u3057\u3066\u6D3B\u8E8D\u3057\u305F\u7CBE\u970A\u304C\u652F\u63F4\u3057\u3066\u304F\u308C\u308B\u3002\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5C11\u3057\u6E1B\u5C11\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: c2d0c1207478c489f80ffef83c3afde0, type: 2}
       IsDebuff: 0
     - Id: 101048
       Name: "\u62B1\u304B\u308C\u305F\u546A\u3044"
       Description: "\u546A\u3044\u306E\u8155\u8F2A\u306B\u3088\u308A\u3001\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u5C11\u3057\u5897\u52A0\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: aec158dfd147744cb9b02441b3afd4f3, type: 2}
       IsDebuff: 1
     - Id: 101049
       Name: "\u8C4A\u4F5C\u7948\u9858"
       Description: "\u8C4A\u4F5C\u306E\u7948\u308A\u306B\u3088\u308A\u3001\u6575\u3092\u5012\u3057\u305F\u6642\u306E\u7D4C\u9A13\u5024\u304C\u5897\u52A0\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: 1adfdfe8bf6e846b4817ac3d735e6e80, type: 2}
       IsDebuff: 0
     - Id: 101050
       Name: "\u65AC\u6483\u5F37\u5316"
