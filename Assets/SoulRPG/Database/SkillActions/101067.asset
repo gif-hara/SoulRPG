@@ -62,7 +62,7 @@ MonoBehaviour:
       type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         targetType: 0
-        statusTypes: 01000000
+        statusTypes: 00000000
         buffName: Skill.101067
         rateSelector:
           rid: 3561510143004770391
