@@ -32,4 +32,9 @@ MonoBehaviour:
         targetType: 0
         battleCharacterEvaluator:
           rid: -2
-        behaviourPriority: 2
+        valueResolver:
+          rid: 3561510143004770421
+    - rid: 3561510143004770421
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 2

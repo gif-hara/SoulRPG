@@ -25,12 +25,17 @@ MonoBehaviour:
         targetType: 0
         battleCharacterEvaluator:
           rid: 3561509643546263721
-        behaviourPriority: 1
+        valueResolver:
+          rid: 3561510143004770426
     - rid: 3561509643546263721
       type: {class: IncludeCharacterAttribute, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
         targetType: 1
         whiteList: 16
+    - rid: 3561510143004770426
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:

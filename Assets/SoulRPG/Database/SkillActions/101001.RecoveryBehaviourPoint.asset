@@ -23,8 +23,13 @@ MonoBehaviour:
         targetType: 0
         battleCharacterEvaluator:
           rid: 3561509643546263719
-        behaviourPriority: 1
+        valueResolver:
+          rid: 3561510143004770414
     - rid: 3561509643546263719
       type: {class: Random, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
         probability: 0.6
+    - rid: 3561510143004770414
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1

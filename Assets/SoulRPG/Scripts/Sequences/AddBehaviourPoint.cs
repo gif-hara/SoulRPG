@@ -4,7 +4,9 @@ using Cysharp.Threading.Tasks;
 using HK;
 using SoulRPG.BattleSystems.BattleCharacterEvaluators;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnitySequencerSystem;
+using UnitySequencerSystem.Resolvers;
 
 namespace SoulRPG
 {
@@ -20,8 +22,8 @@ namespace SoulRPG
         [SerializeReference, SubclassSelector]
         private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
 
-        [SerializeField]
-        private int behaviourPriority;
+        [SerializeReference, SubclassSelector]
+        private IntResolver valueResolver;
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
@@ -34,10 +36,11 @@ namespace SoulRPG
             if (battleCharacterEvaluator == null || battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target, container))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
-                t.BattleStatus.AddBehaviourPoint(behaviourPriority);
-                var message = behaviourPriority > 0
-                    ? $"{t.BattleStatus.NameWithTag}のBPが<color=#99FF99>{behaviourPriority}</color>回復した。"
-                    : $"{t.BattleStatus.NameWithTag}のBPが<color=#FF9999>{-behaviourPriority}</color>減少した。";
+                var value = valueResolver.Resolve(container);
+                t.BattleStatus.AddBehaviourPoint(value);
+                var message = value > 0
+                    ? $"{t.BattleStatus.NameWithTag}のBPが<color=#99FF99>{value}</color>回復した。"
+                    : $"{t.BattleStatus.NameWithTag}のBPが<color=#FF9999>{-value}</color>減少した。";
                 await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new(message, "Sfx.Message.0"));
             }
         }
