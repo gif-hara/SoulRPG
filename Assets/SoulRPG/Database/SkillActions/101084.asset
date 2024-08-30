@@ -14,43 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 7288459789387432183
-  - rid: 3561510143004770409
-  - rid: 3561510143004770411
-  - rid: 3561510143004770429
+  - rid: 3022426215674019917
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 3561510143004770409
-      type: {class: RegisterContainerMagicCount, ns: SoulRPG, asm: Assembly-CSharp}
+    - rid: 3022426215674019917
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 3022426215674019918
+          sequences: {fileID: 11400000, guid: 915d12f1fdc014a8f9ac32bf69da494c, type: 2}
+        - evaluator:
+            rid: 3022426215674019920
+          sequences: {fileID: 11400000, guid: e098300f688374bc0bdf54540331e9f0, type: 2}
+    - rid: 3022426215674019918
+      type: {class: CompareMagicCount, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
         targetType: 0
-        keyResolver:
-          rid: 3561510143004770410
-    - rid: 3561510143004770410
-      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
-      data:
-        value: MagicCount
-    - rid: 3561510143004770411
-      type: {class: ResetMagicCount, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        battleCharacterEvaluator:
-          rid: -2
-        isSilent: 1
-    - rid: 3561510143004770429
-      type: {class: AddBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        battleCharacterEvaluator:
-          rid: -2
         valueResolver:
-          rid: 3561510143004770431
-    - rid: 3561510143004770431
-      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+          rid: 3022426215674019919
+        compareType: 5
+    - rid: 3022426215674019919
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        name: MagicCount
+        value: 0
+    - rid: 3022426215674019920
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
