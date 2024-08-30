@@ -6996,7 +6996,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106028
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: 47060f0fdd25e44ca85f3cf43b77d2d3, type: 2}
     - ItemId: 106029
       Vitality: 0
       Stamina: 0
@@ -7491,7 +7491,7 @@ MonoBehaviour:
       Name: "\u65AC\u6483\u5F37\u5316"
       Description: "\u92ED\u3055\u304C\u5897\u3057\u305F\u653B\u6483\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u306A\u308A\u3001\u65AC\u6483\u5C5E\u6027\u306E\u5A01\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: fe75920e63b7e48368cd5476aac80b35, type: 2}
       IsDebuff: 0
     - Id: 101051
       Name: "\u6253\u6483\u5F37\u5316"
