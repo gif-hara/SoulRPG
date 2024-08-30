@@ -6980,7 +6980,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106026
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: a4641922e012b0147bf0f644f7838617, type: 2}
     - ItemId: 106027
       Vitality: 0
       Stamina: 0
@@ -6988,7 +6988,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106027
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: 193d4428a6758bd4fbc1fabedcb0f521, type: 2}
     - ItemId: 106028
       Vitality: 0
       Stamina: 0
