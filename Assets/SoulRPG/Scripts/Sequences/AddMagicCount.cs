@@ -27,10 +27,10 @@ namespace SoulRPG
 
         [SerializeField]
         private bool isSilent;
-        
+
         [SerializeField]
         private bool subtract;
-        
+
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var actor = container.Resolve<BattleCharacter>("Actor");
@@ -52,7 +52,7 @@ namespace SoulRPG
                 t.BattleStatus.AddMagicCount(value);
                 if (!isSilent)
                 {
-                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}の魔カウントが<color=#99FF99>{valueResolver}</color>蓄積した", "Sfx.Message.0"));
+                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}の魔カウントが<color=#99FF99>{value}</color>蓄積した", "Sfx.Message.0"));
                 }
             }
         }
