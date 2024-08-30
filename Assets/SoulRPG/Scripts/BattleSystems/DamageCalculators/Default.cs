@@ -22,6 +22,7 @@ namespace SoulRPG.BattleSystems.DamageCalculators
         public int Calculate(BattleCharacter attacker, BattleCharacter defender, MasterData.Weapon attackerWeapon, Define.TargetType targetType, Container container)
         {
             var fixedAttackAttribute = attackAttribute.ToAttackAttribute(attackerWeapon);
+            container.Register("AttackAttribute", fixedAttackAttribute);
             var attackPower = attacker.BattleStatus.GetAttackPower(attackType);
             var weaponPower = attackerWeapon.Strength * weaponRate / 100.0f;
             var cutRate = defender.GetTotalCutRate(fixedAttackAttribute, attacker, container);
