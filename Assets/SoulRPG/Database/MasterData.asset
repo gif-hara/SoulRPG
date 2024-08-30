@@ -7004,7 +7004,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106029
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: d58c684a08c00416694a74fead230fae, type: 2}
     - ItemId: 106030
       Vitality: 0
       Stamina: 0
@@ -7012,7 +7012,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106030
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: 55681b8c9609f4486a08bcefc2f0f45e, type: 2}
     - ItemId: 106031
       Vitality: 0
       Stamina: 0
@@ -7020,7 +7020,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106031
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: 54d47338be3da44e097838a3f06c3b23, type: 2}
     - ItemId: 106032
       Vitality: 0
       Stamina: 0
@@ -7028,7 +7028,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106032
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: 7e2763c5b9ead469194fd2c91daa6bcc, type: 2}
     - ItemId: 106033
       Vitality: 0
       Stamina: 0
@@ -7036,7 +7036,7 @@ MonoBehaviour:
       MagicalAttack: 0
       Speed: 0
       BeginBattleSequencesId: 106033
-      BeginBattleSequences: {fileID: 0}
+      BeginBattleSequences: {fileID: 11400000, guid: f409825677ec84b87aa435963976ebb2, type: 2}
     - ItemId: 106034
       Vitality: 0
       Stamina: 0
@@ -7497,31 +7497,31 @@ MonoBehaviour:
       Name: "\u6253\u6483\u5F37\u5316"
       Description: "\u91CD\u6483\u304C\u5897\u3057\u305F\u653B\u6483\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u306A\u308A\u3001\u6253\u6483\u5C5E\u6027\u306E\u5A01\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: 54d99d451c3784aaa97eab8c1c723324, type: 2}
       IsDebuff: 0
     - Id: 101052
       Name: "\u523A\u7A81\u5F37\u5316"
       Description: "\u7A81\u523A\u304C\u5897\u3057\u305F\u653B\u6483\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u306A\u308A\u3001\u523A\u7A81\u5C5E\u6027\u306E\u5A01\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: dbc165d92ac2f4fbaac05cf18c966606, type: 2}
       IsDebuff: 0
     - Id: 101053
       Name: "\u9B54\u6CD5\u5F37\u5316"
       Description: "\u9B54\u529B\u304C\u5897\u3057\u305F\u653B\u6483\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u306A\u308A\u3001\u9B54\u6CD5\u5C5E\u6027\u306E\u5A01\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: 32cefa6e7375f41e696eebd9e27d013e, type: 2}
       IsDebuff: 0
     - Id: 101054
       Name: "\u96F7\u6483\u5F37\u5316"
       Description: "\u96F7\u306E\u529B\u304C\u5897\u3057\u305F\u653B\u6483\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u306A\u308A\u3001\u96F7\u6483\u5C5E\u6027\u306E\u5A01\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: c99d6f44b2a28419398b0f5ec76795d5, type: 2}
       IsDebuff: 0
     - Id: 101055
       Name: "\u706B\u708E\u5F37\u5316"
       Description: "\u708E\u306E\u529B\u304C\u5897\u3057\u305F\u653B\u6483\u3092\u884C\u3048\u308B\u3088\u3046\u306B\u306A\u308A\u3001\u706B\u708E\u5C5E\u6027\u306E\u5A01\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: 1e1f35b5921cc4621a3f4a5edf654574, type: 2}
       IsDebuff: 0
   enemyTables:
     list:
