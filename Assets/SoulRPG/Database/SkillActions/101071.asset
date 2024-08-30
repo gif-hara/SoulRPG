@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 101071
   m_EditorClassIdentifier: 
   sequences:
+  - rid: 7288459789387432183
   - rid: 3561510143004770402
   - rid: 3561510143004770406
-  - rid: 7288459789387432183
   references:
     version: 2
     RefIds:
@@ -39,7 +39,7 @@ MonoBehaviour:
           rid: -2
         valueResolver:
           rid: 3561510143004770407
-        isSilent: 1
+        isSilent: 0
         subtract: 1
     - rid: 3561510143004770407
       type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
