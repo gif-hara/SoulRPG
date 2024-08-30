@@ -16,6 +16,7 @@ MonoBehaviour:
   - rid: 7288459789387432183
   - rid: 3561510143004770409
   - rid: 3561510143004770411
+  - rid: 3561510143004770429
   references:
     version: 2
     RefIds:
@@ -37,6 +38,19 @@ MonoBehaviour:
         targetType: 0
         battleCharacterEvaluator:
           rid: -2
+        isSilent: 1
+    - rid: 3561510143004770429
+      type: {class: AddBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        battleCharacterEvaluator:
+          rid: -2
+        valueResolver:
+          rid: 3561510143004770431
+    - rid: 3561510143004770431
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: MagicCount
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
