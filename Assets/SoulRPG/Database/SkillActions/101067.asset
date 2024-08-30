@@ -18,6 +18,8 @@ MonoBehaviour:
   - rid: 3561510143004770392
   - rid: 9047573724747792466
   - rid: 9047573724747792468
+  - rid: 3561510143004770394
+  - rid: 3561510143004770395
   references:
     version: 2
     RefIds:
@@ -32,6 +34,22 @@ MonoBehaviour:
       type: {class: ZeroBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         targetType: 0
+        battleCharacterEvaluator:
+          rid: -2
+    - rid: 3561510143004770394
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101008
+        turnCount: 3
+        battleCharacterEvaluator:
+          rid: -2
+    - rid: 3561510143004770395
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101012
+        turnCount: 3
         battleCharacterEvaluator:
           rid: -2
     - rid: 7288459789387432183
