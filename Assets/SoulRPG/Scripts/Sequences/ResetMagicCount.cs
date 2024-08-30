@@ -19,6 +19,9 @@ namespace SoulRPG
 
         [SerializeReference, SubclassSelector]
         private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
+        
+        [SerializeField]
+        private bool isSilent;
 
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
@@ -32,7 +35,10 @@ namespace SoulRPG
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
                 t.BattleStatus.ResetMagicCount();
-                await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}の魔カウントがリセットされた。", "Sfx.Message.0"));
+                if (!isSilent)
+                {
+                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}の魔カウントがリセットされた。", "Sfx.Message.0"));
+                }
             }
         }
     }
