@@ -15,12 +15,19 @@ MonoBehaviour:
   sequences:
   - rid: 7288459789387432183
   - rid: 3561510143004770402
+  - rid: 3022426215674019916
   - rid: 3561510143004770406
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 3022426215674019916
+      type: {class: ZeroBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        battleCharacterEvaluator:
+          rid: -2
     - rid: 3561510143004770402
       type: {class: RegisterContainerBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -40,7 +47,7 @@ MonoBehaviour:
         valueResolver:
           rid: 3561510143004770407
         isSilent: 0
-        subtract: 1
+        subtract: 0
     - rid: 3561510143004770407
       type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
