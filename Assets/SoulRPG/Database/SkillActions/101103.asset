@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: 101098
+  m_Name: 101103
   m_EditorClassIdentifier: 
   sequences:
   - rid: 7288459789387432183
@@ -32,20 +32,20 @@ MonoBehaviour:
     - rid: 3561509643546263741
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        weaponRate: 3.2
+        weaponRate: 3.25
         attackType: 0
         attackAttribute: 2
     - rid: 3561509643546263784
       type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        targetType: 1
-        masterDataAilmentId: 101002
-        turnCount: 1
+        targetType: 0
+        masterDataAilmentId: 101017
+        turnCount: 3
         battleCharacterEvaluator:
           rid: -2
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F\u5927\u304D\u306A\u76FE\u3067\u76F8\u624B\u3092\u6253\u3061\u4ED8\u3051\u305F\u3002"
-        sfxName: Sfx.Message.7
+        format: "{Actor}\u306F\u546A\u3044\u306E\u4EBA\u5F62\u3092\u76F8\u624B\u306B\u6253\u3061\u4ED8\u3051\u305F\u3002"
+        sfxName: Sfx.Message.5
         ignoreIfCharacterDead: 0
