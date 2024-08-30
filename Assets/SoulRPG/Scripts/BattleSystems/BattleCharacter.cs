@@ -123,7 +123,6 @@ namespace SoulRPG
         {
             var battleStatusCutRate = BattleStatus.GetCutRate(attackAttribute);
             var statusBuffCutRate = StatusBuffController.GetCutRate(attackAttribute, this, target, container);
-            Debug.Log($"attackAttribute: {attackAttribute}, battleStatusCutRate: {battleStatusCutRate}, statusBuffCutRate: {statusBuffCutRate}");
             return battleStatusCutRate + statusBuffCutRate;
         }
 
