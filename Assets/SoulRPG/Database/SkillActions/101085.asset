@@ -15,57 +15,32 @@ MonoBehaviour:
   sequences:
   - rid: 7288459789387432183
   - rid: 9047573724747792464
-  - rid: 3561510143004770392
   - rid: 9047573724747792466
   - rid: 9047573724747792468
-  - rid: 3561510143004770394
-  - rid: 3561510143004770395
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 3561510143004770391
-      type: {class: PowFromBehaviourPoint, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
+    - rid: 3561510143004770435
+      type: {class: PowFromAilmentCount, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
         targetType: 0
-        rate: 1.4
-    - rid: 3561510143004770392
-      type: {class: ZeroBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        battleCharacterEvaluator:
-          rid: -2
-    - rid: 3561510143004770394
-      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        masterDataAilmentId: 101008
-        turnCount: 3
-        battleCharacterEvaluator:
-          rid: -2
-    - rid: 3561510143004770395
-      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        masterDataAilmentId: 101012
-        turnCount: 3
-        battleCharacterEvaluator:
-          rid: -2
+        rate: 1.5
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F\u5168\u3066\u306E\u529B\u3092\u632F\u308A\u7D5E\u3063\u305F\u4E00\u6483\u3092\u653E\u3063\u305F\u3002"
+        format: "{Actor}\u306E\u82E6\u3057\u307F\u306E\u7121\u3044\u9006\u5883\u306E\u4E00\u6483\u3002"
         sfxName: Sfx.Message.21
         ignoreIfCharacterDead: 0
     - rid: 9047573724747792464
       type: {class: AddStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         targetType: 0
-        statusTypes: 01000000
-        buffName: Skill.101067
+        statusTypes: 00000000
+        buffName: Skill.101085
         rateSelector:
-          rid: 3561510143004770391
+          rid: 3561510143004770435
         battleCharacterEvaluator:
           rid: -2
         buffCondition:
@@ -88,4 +63,4 @@ MonoBehaviour:
       type: {class: RemoveStatusBuff, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         targetType: 0
-        buffName: Skill.101067
+        buffName: Skill.101085
