@@ -111,7 +111,11 @@ namespace SoulRPG
             }
 
             var contains = container.TryResolve<bool>("CanAddAilment", out var canAddAilment);
-            return contains && canAddAilment;
+            if (!contains)
+            {
+                return true;
+            }
+            return canAddAilment;
         }
 
         public async UniTask<bool> EvaluateEvadeAsync(BattleCharacter actor, CancellationToken scope)
