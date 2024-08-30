@@ -21,6 +21,10 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 3561510143004770400
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -33,7 +37,9 @@ MonoBehaviour:
         targetType: 0
         battleCharacterEvaluator:
           rid: -2
-        value: 1
+        valueResolver:
+          rid: 3561510143004770400
+        isSilent: 0
     - rid: 9047573724747792470
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:

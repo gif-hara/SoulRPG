@@ -4,7 +4,9 @@ using Cysharp.Threading.Tasks;
 using HK;
 using SoulRPG.BattleSystems.BattleCharacterEvaluators;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnitySequencerSystem;
+using UnitySequencerSystem.Resolvers;
 
 namespace SoulRPG
 {
@@ -20,8 +22,8 @@ namespace SoulRPG
         [SerializeReference, SubclassSelector]
         private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
 
-        [SerializeField]
-        private int value;
+        [SerializeReference, SubclassSelector]
+        private IntResolver valueResolver;
 
         [SerializeField]
         private bool isSilent;
@@ -39,10 +41,10 @@ namespace SoulRPG
                 battleCharacterEvaluator != null && battleCharacterEvaluator.Evaluate(actor, target, container))
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
-                t.BattleStatus.AddMagicCount(value);
+                t.BattleStatus.AddMagicCount(valueResolver.Resolve(container));
                 if (!isSilent)
                 {
-                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}の魔カウントが<color=#99FF99>{value}</color>蓄積した", "Sfx.Message.0"));
+                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}の魔カウントが<color=#99FF99>{valueResolver}</color>蓄積した", "Sfx.Message.0"));
                 }
             }
         }
