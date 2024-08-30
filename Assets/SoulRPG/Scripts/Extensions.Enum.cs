@@ -172,7 +172,7 @@ namespace SoulRPG
                 Define.AttackAttribute.Slash => "斬撃",
                 Define.AttackAttribute.Blow => "打撃",
                 Define.AttackAttribute.Thrust => "刺突",
-                Define.AttackAttribute.Magic => "魔力",
+                Define.AttackAttribute.Magic => "魔法",
                 Define.AttackAttribute.Fire => "火炎",
                 Define.AttackAttribute.Thunder => "雷撃",
                 _ => throw new System.ArgumentOutOfRangeException()
