@@ -6328,7 +6328,7 @@ MonoBehaviour:
       AdditionalDescriptions: []
     - Name: "\u9006\u5883\u306E\u6975\u697D\u6D44\u571F"
       Id: 101085
-      NeedBehaviourPoint: 2
+      NeedBehaviourPoint: 3
       NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u5C0B\u5E38\u306A\u3089\u3056\u308B\u529B\u3092\u3082\u3068\u306B\u6B66\u5668\u3092\u632F\u308B\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u4ED8\u4E0E\u3055\u308C\u305F\u72B6\u614B\u7570\u5E38\u306E\u6570\u3060\u3051\u5A01\u529B\u304C\u4E0A\u6607\u3059\u308B\u4E00\u6483\u3092\u653E\u3064\u3002"
@@ -6465,7 +6465,7 @@ MonoBehaviour:
       NeedStamina: 6
       CanRegisterUsedSkills: 1
       Description: "\u8056\u9A0E\u58EB\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u8056\u306A\u308B\u8B77\u308A\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u534A\u6E1B\u300D\u3068\u300C\u9B54\u529B\u306E\u76FE\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 238fcfc4b5788408389677b16e593ada, type: 2}
       AdditionalDescriptions:
       - SkillId: 101099
         Type: 0
@@ -6479,7 +6479,7 @@ MonoBehaviour:
       NeedStamina: 6
       CanRegisterUsedSkills: 1
       Description: "\u9699\u3092\u898B\u305B\u305F\u76F8\u624B\u306B\u5BFE\u3057\u3066\u81F4\u547D\u7684\u306A\u4E00\u6483\u3092\u4E0E\u3048\u308B\u3002\u3082\u3057\u76F8\u624B\u304C\u300C\u602F\u307F\u300D\u306A\u3089\u3070\u5F37\u529B\u306A\u4E00\u6483\u3068\u306A\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 66d70e8fac273467baf05851b66fc419, type: 2}
       AdditionalDescriptions:
       - SkillId: 101100
         Type: 0
@@ -6490,7 +6490,7 @@ MonoBehaviour:
       NeedStamina: 6
       CanRegisterUsedSkills: 1
       Description: "\u5927\u91CF\u306E\u5869\u9178\u3092\u6D74\u3073\u305B\u308B\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u76F8\u624B\u306B\u300C\u6BD2\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 61e077449ddc2452e99580a8bfa7c29d, type: 2}
       AdditionalDescriptions:
       - SkillId: 101101
         Type: 0
@@ -6501,7 +6501,7 @@ MonoBehaviour:
       NeedStamina: 6
       CanRegisterUsedSkills: 1
       Description: "\u8F1D\u304F\u9280\u8272\u306E\u6CE2\u52D5\u3092\u653E\u3064\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u76F8\u624B\u306B\u300C\u767D\u306E\u6CE2\u52D5\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: af0732538cb7d45bcbf5b48222e3b8f9, type: 2}
       AdditionalDescriptions:
       - SkillId: 101102
         Type: 0
@@ -6512,7 +6512,7 @@ MonoBehaviour:
       NeedStamina: 6
       CanRegisterUsedSkills: 1
       Description: "\u7570\u56FD\u306E\u546A\u3044\u4EBA\u5F62\u3092\u6253\u3061\u4ED8\u3051\u308B\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6028\u6068\u306E\u529B\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 40f513fd7aeb94a89b971e3f4d268a13, type: 2}
       AdditionalDescriptions:
       - SkillId: 101103
         Type: 0
@@ -6523,7 +6523,7 @@ MonoBehaviour:
       NeedStamina: 20
       CanRegisterUsedSkills: 1
       Description: "\u305D\u306E\u6614\u3001\u9B3C\u65CF\u304C\u4F7F\u3063\u3066\u3044\u305F\u5947\u8DE1\u306E\u6280\u3002\u5927\u91CF\u306ESP\u3092\u8981\u3059\u308B\u304C\u3001\u5927\u91CF\u306E\u661F\u304C\u652F\u63F4\u3057\u3066\u304F\u308C\u30014\u56DE\u653B\u6483\u3092\u884C\u3046\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: a4543a969727846dba3efca70eb33cc1, type: 2}
       AdditionalDescriptions: []
     - Name: "\u52C7\u6C17\u306E\u9E7F\u89D2"
       Id: 101105
@@ -6531,7 +6531,7 @@ MonoBehaviour:
       NeedStamina: 20
       CanRegisterUsedSkills: 1
       Description: "\u305D\u306E\u6614\u3001\u5F37\u5927\u306A\u9B3C\u3092\u5012\u3059\u305F\u3081\u306B\u7DE8\u307F\u51FA\u3055\u308C\u305F\u6280\u3002\u5927\u91CF\u306ESP\u3092\u8981\u3059\u308B\u304C\u3001\u5F37\u529B\u306A\u4E00\u6483\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 04ad808fd3de1409ebffb0e28281bb96, type: 2}
       AdditionalDescriptions: []
     - Name: "\u5E0C\u671B\u306E\u515C\u5272\u308A"
       Id: 101106
@@ -6539,7 +6539,7 @@ MonoBehaviour:
       NeedStamina: 20
       CanRegisterUsedSkills: 1
       Description: "\u305D\u306E\u6614\u3001\u718A\u3068\u6E21\u308A\u5408\u3046\u305F\u3081\u306B\u4FEE\u884C\u3057\u305F\u8005\u304C\u4F7F\u3063\u3066\u3044\u305F\u6280\u3002\u5927\u91CF\u306ESP\u3092\u8981\u3059\u308B\u304C\u3001\u653B\u6483\u3092\u884C\u3044\u3001\u76F8\u624B\u306B\u300C\u93A7\u7815\u304D\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 633bfb7bcec1b4b218bcb58e4891c603, type: 2}
       AdditionalDescriptions:
       - SkillId: 101106
         Type: 0
@@ -6550,7 +6550,7 @@ MonoBehaviour:
       NeedStamina: 20
       CanRegisterUsedSkills: 1
       Description: "\u305D\u306E\u6614\u3001\u6148\u60B2\u6DF1\u304D\u8005\u306E\u5F97\u610F\u3068\u3059\u308B\u65BD\u8853\u3002\u5927\u91CF\u306ESP\u3092\u8981\u3059\u308B\u304C\u3001\u81EA\u5206\u81EA\u8EAB\u306EHP\u304C\u304B\u306A\u308A\u56DE\u5FA9\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 5156dadda2f8f414f8c5f61271f2cdbb, type: 2}
       AdditionalDescriptions: []
     - Name: "\u9B42\u306E\u6B63\u62F3\u7A81\u304D"
       Id: 101108
@@ -6558,7 +6558,7 @@ MonoBehaviour:
       NeedStamina: 8
       CanRegisterUsedSkills: 1
       Description: "\u7570\u56FD\u306E\u6B66\u95D8\u5BB6\u306E\u9B42\u306E\u6B63\u62F3\u7A81\u304D\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6C17\u5408\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 6e5e89f7b87bf441eb8cf30a870e095d, type: 2}
       AdditionalDescriptions:
       - SkillId: 101108
         Type: 0
@@ -6569,7 +6569,7 @@ MonoBehaviour:
       NeedStamina: 7
       CanRegisterUsedSkills: 1
       Description: "\u7570\u56FD\u306E\u6B66\u95D8\u5BB6\u306E\u83EF\u9E97\u306A\u4E09\u65E5\u6708\u8E74\u308A\u3002\u5F37\u529B\u306A\u4E00\u6483\u3060\u304C\u3001\u5916\u308C\u308B\u3053\u3068\u304C\u3042\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      ActionSequences: {fileID: 11400000, guid: 4616af7a08dcb40cc9dac5c33f91db2a, type: 2}
       AdditionalDescriptions: []
   armorHeads:
     list:

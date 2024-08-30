@@ -121,7 +121,10 @@ namespace SoulRPG
 
         public float GetTotalCutRate(Define.AttackAttribute attackAttribute, BattleCharacter target, Container container)
         {
-            return BattleStatus.GetCutRate(attackAttribute) + StatusBuffController.GetCutRate(attackAttribute, this, target, container);
+            var battleStatusCutRate = BattleStatus.GetCutRate(attackAttribute);
+            var statusBuffCutRate = StatusBuffController.GetCutRate(attackAttribute, this, target, container);
+            Debug.Log($"attackAttribute: {attackAttribute}, battleStatusCutRate: {battleStatusCutRate}, statusBuffCutRate: {statusBuffCutRate}");
+            return battleStatusCutRate + statusBuffCutRate;
         }
 
         public bool ContainsAfterCommandInvoker(string key)
