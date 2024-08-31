@@ -60,5 +60,10 @@ namespace SoulRPG
                 Add(initialItem.ItemId, initialItem.Count);
             }
         }
+
+        public void Clear()
+        {
+            Items.Clear();
+        }
     }
 }

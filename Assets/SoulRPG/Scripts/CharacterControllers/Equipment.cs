@@ -494,5 +494,23 @@ namespace SoulRPG
                 accessoryIds[i].Value = other.AccessoryIds[i];
             }
         }
+
+        public void Clear()
+        {
+            for (var i = 0; i < 4; i++)
+            {
+                weaponIds[i].Value = 0;
+            }
+
+            headId.Value = 0;
+            bodyId.Value = 0;
+            armId.Value = 0;
+            legId.Value = 0;
+
+            for (var i = 0; i < 4; i++)
+            {
+                accessoryIds[i].Value = 0;
+            }
+        }
     }
 }

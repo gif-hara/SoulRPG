@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using SoulRPG.CharacterControllers;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace SoulRPG
@@ -225,6 +226,19 @@ namespace SoulRPG
                                 }
                             );
                         },
+                        element =>
+                        {
+                            GameListView.ApplyAsSimpleElement
+                            (
+                                element,
+                                "スターターパック",
+                                _ =>
+                                {
+                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    stateMachine.Change(StateSelectStarterPackAsync);
+                                }
+                            );
+                        },
                     },
                     0
                 );
@@ -288,6 +302,49 @@ namespace SoulRPG
                                         AudioManager.PlaySFX("Sfx.Message.0");
                                         dungeonController.Setup(x.Id, player);
                                         source.TrySetResult();
+                                    }
+                                );
+                            }
+                        )
+                    );
+                var listDocument = CreateList(documentBundlePrefab, listElements, 0);
+                await UniTask.WaitUntilCanceled(scope);
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
+
+            async UniTask StateSelectStarterPackAsync(CancellationToken scope)
+            {
+                inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        AudioManager.PlaySFX("Sfx.Cancel.0");
+                        stateMachine.Change(StateRootAsync);
+                    })
+                    .RegisterTo(scope);
+                var dungeonLevels = new[] { 1, 2, 3 };
+                var listElements = dungeonLevels
+                    .Select(x => new Action<HKUIDocument>
+                        (
+                            element =>
+                            {
+                                GameListView.ApplyAsSimpleElement
+                                (
+                                    element,
+                                    $"ダンジョンレベル: {x}",
+                                    _ =>
+                                    {
+                                        AudioManager.PlaySFX("Sfx.Message.0");
+                                        player.Inventory.Clear();
+                                        player.Equipment.Clear();
+                                        var itemTables = TinyServiceLocator.Resolve<MasterData>().ItemTables.Get(x)
+                                            .OrderBy(y => UnityEngine.Random.value)
+                                            .Take(15);
+                                        foreach (var i in itemTables)
+                                        {
+                                            player.Inventory.Add(i.ItemId, 1);
+                                            player.Events.OnAcquiredItem.OnNext((i.ItemId, 1));
+                                        }
+                                        ConfirmOkOnlyAsync(documentBundlePrefab, $"スターターパック{x}を追加しました", scope).Forget();
                                     }
                                 );
                             }
