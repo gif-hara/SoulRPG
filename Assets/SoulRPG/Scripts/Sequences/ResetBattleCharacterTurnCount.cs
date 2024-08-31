@@ -15,16 +15,17 @@ namespace SoulRPG
         [SerializeField]
         private Define.TargetType targetType;
 
-        public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
+        public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var actor = container.Resolve<BattleCharacter>("Actor");
             var target = container.Resolve<BattleCharacter>("Target");
             if (actor.BattleStatus.IsDead || target.BattleStatus.IsDead)
             {
-                return;
+                return UniTask.CompletedTask;
             }
             var t = targetType == Define.TargetType.Self ? actor : target;
             t.ResetTurnCount();
+            return UniTask.CompletedTask;
         }
     }
 }
