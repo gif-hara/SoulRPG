@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e2b68498c7de0e4798a044cf0337265, type: 3}
-  m_Name: Enemy.10105
+  m_Name: Enemy.19901
   m_EditorClassIdentifier: 
   onTakeDamage: {fileID: 11400000, guid: cac4da8cfac73d943b04d4171ba35bb7, type: 2}
   onDeadMessage: {fileID: 11400000, guid: f2ae22de91b366d4d99ffa1731dc9af7, type: 2}
