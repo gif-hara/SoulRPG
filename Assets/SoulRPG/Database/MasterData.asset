@@ -4836,7 +4836,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101002
-      Strength: 91
+      Strength: 95
       Speed: 2
       AttackAttribute: 0
       Skill1: 101001
@@ -4844,7 +4844,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101003
-      Strength: 110
+      Strength: 104
       Speed: -2
       AttackAttribute: 0
       Skill1: 101001
@@ -4860,7 +4860,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101005
-      Strength: 111
+      Strength: 105
       Speed: -2
       AttackAttribute: 1
       Skill1: 101001
@@ -4868,7 +4868,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101006
-      Strength: 90
+      Strength: 94
       Speed: 2
       AttackAttribute: 0
       Skill1: 101001
@@ -4884,7 +4884,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101008
-      Strength: 111
+      Strength: 105
       Speed: -2
       AttackAttribute: 1
       Skill1: 101001
@@ -4892,7 +4892,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101009
-      Strength: 92
+      Strength: 96
       Speed: 1
       AttackAttribute: 3
       Skill1: 101012
@@ -4908,7 +4908,7 @@ MonoBehaviour:
       Skill3: 101075
       Skill4: 0
     - ItemId: 101011
-      Strength: 91
+      Strength: 95
       Speed: 1
       AttackAttribute: 3
       Skill1: 101012
@@ -4924,7 +4924,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101013
-      Strength: 112
+      Strength: 106
       Speed: -2
       AttackAttribute: 0
       Skill1: 101001
@@ -4932,7 +4932,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101014
-      Strength: 88
+      Strength: 92
       Speed: 2
       AttackAttribute: 0
       Skill1: 101001
@@ -4940,7 +4940,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101015
-      Strength: 89
+      Strength: 93
       Speed: 1
       AttackAttribute: 5
       Skill1: 101012
@@ -4948,7 +4948,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101016
-      Strength: 111
+      Strength: 105
       Speed: -2
       AttackAttribute: 1
       Skill1: 101001
@@ -4956,7 +4956,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101017
-      Strength: 93
+      Strength: 97
       Speed: 1
       AttackAttribute: 2
       Skill1: 101026
@@ -4980,7 +4980,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101020
-      Strength: 161
+      Strength: 152
       Speed: -4
       AttackAttribute: 2
       Skill1: 101001
@@ -4988,7 +4988,7 @@ MonoBehaviour:
       Skill3: 101013
       Skill4: 0
     - ItemId: 101021
-      Strength: 89
+      Strength: 95
       Speed: 0
       AttackAttribute: 1
       Skill1: 101045
@@ -5004,7 +5004,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101023
-      Strength: 160
+      Strength: 151
       Speed: -4
       AttackAttribute: 0
       Skill1: 101001
@@ -5012,7 +5012,7 @@ MonoBehaviour:
       Skill3: 101074
       Skill4: 0
     - ItemId: 101024
-      Strength: 91
+      Strength: 95
       Speed: 2
       AttackAttribute: 0
       Skill1: 101001
@@ -5028,7 +5028,7 @@ MonoBehaviour:
       Skill3: 0
       Skill4: 0
     - ItemId: 101026
-      Strength: 135
+      Strength: 141
       Speed: 2
       AttackAttribute: 3
       Skill1: 101012
@@ -5036,7 +5036,7 @@ MonoBehaviour:
       Skill3: 101034
       Skill4: 0
     - ItemId: 101027
-      Strength: 138
+      Strength: 148
       Speed: 0
       AttackAttribute: 1
       Skill1: 101045
@@ -5044,7 +5044,7 @@ MonoBehaviour:
       Skill3: 101037
       Skill4: 0
     - ItemId: 101028
-      Strength: 95
+      Strength: 99
       Speed: 1
       AttackAttribute: 3
       Skill1: 101012
@@ -5060,7 +5060,7 @@ MonoBehaviour:
       Skill3: 101039
       Skill4: 0
     - ItemId: 101030
-      Strength: 136
+      Strength: 145
       Speed: 0
       AttackAttribute: 1
       Skill1: 101045
@@ -5076,7 +5076,7 @@ MonoBehaviour:
       Skill3: 101006
       Skill4: 0
     - ItemId: 101032
-      Strength: 143
+      Strength: 149
       Speed: 2
       AttackAttribute: 3
       Skill1: 101012
@@ -5084,7 +5084,7 @@ MonoBehaviour:
       Skill3: 101043
       Skill4: 0
     - ItemId: 101033
-      Strength: 95
+      Strength: 99
       Speed: 1
       AttackAttribute: 3
       Skill1: 101012
@@ -5100,7 +5100,7 @@ MonoBehaviour:
       Skill3: 101048
       Skill4: 101049
     - ItemId: 101035
-      Strength: 174
+      Strength: 165
       Speed: -4
       AttackAttribute: 1
       Skill1: 101001
@@ -5116,7 +5116,7 @@ MonoBehaviour:
       Skill3: 101023
       Skill4: 0
     - ItemId: 101037
-      Strength: 142
+      Strength: 148
       Speed: 2
       AttackAttribute: 2
       Skill1: 101026
@@ -5124,7 +5124,7 @@ MonoBehaviour:
       Skill3: 101028
       Skill4: 0
     - ItemId: 101038
-      Strength: 136
+      Strength: 142
       Speed: 2
       AttackAttribute: 3
       Skill1: 101012
@@ -5132,7 +5132,7 @@ MonoBehaviour:
       Skill3: 101089
       Skill4: 0
     - ItemId: 101039
-      Strength: 153
+      Strength: 160
       Speed: 2
       AttackAttribute: 2
       Skill1: 101026
@@ -5148,7 +5148,7 @@ MonoBehaviour:
       Skill3: 101073
       Skill4: 0
     - ItemId: 101041
-      Strength: 132
+      Strength: 138
       Speed: 4
       AttackAttribute: 0
       Skill1: 101001
@@ -5156,7 +5156,7 @@ MonoBehaviour:
       Skill3: 101009
       Skill4: 0
     - ItemId: 101042
-      Strength: 173
+      Strength: 163
       Speed: -4
       AttackAttribute: 1
       Skill1: 101001
@@ -5164,7 +5164,7 @@ MonoBehaviour:
       Skill3: 101010
       Skill4: 0
     - ItemId: 101043
-      Strength: 137
+      Strength: 143
       Speed: 4
       AttackAttribute: 0
       Skill1: 101001
@@ -5172,7 +5172,7 @@ MonoBehaviour:
       Skill3: 101030
       Skill4: 0
     - ItemId: 101044
-      Strength: 133
+      Strength: 139
       Speed: 4
       AttackAttribute: 0
       Skill1: 101001
@@ -5180,7 +5180,7 @@ MonoBehaviour:
       Skill3: 101087
       Skill4: 0
     - ItemId: 101045
-      Strength: 138
+      Strength: 144
       Speed: 2
       AttackAttribute: 3
       Skill1: 101012
@@ -5188,7 +5188,7 @@ MonoBehaviour:
       Skill3: 101069
       Skill4: 0
     - ItemId: 101046
-      Strength: 165
+      Strength: 156
       Speed: -4
       AttackAttribute: 0
       Skill1: 101001
@@ -5196,7 +5196,7 @@ MonoBehaviour:
       Skill3: 101076
       Skill4: 0
     - ItemId: 101047
-      Strength: 131
+      Strength: 136
       Speed: 2
       AttackAttribute: 3
       Skill1: 101012
@@ -5204,7 +5204,7 @@ MonoBehaviour:
       Skill3: 101062
       Skill4: 0
     - ItemId: 101048
-      Strength: 139
+      Strength: 145
       Speed: 2
       AttackAttribute: 3
       Skill1: 101012
@@ -5212,7 +5212,7 @@ MonoBehaviour:
       Skill3: 101091
       Skill4: 0
     - ItemId: 101049
-      Strength: 136
+      Strength: 142
       Speed: 2
       AttackAttribute: 3
       Skill1: 101012
@@ -5228,7 +5228,7 @@ MonoBehaviour:
       Skill3: 101094
       Skill4: 101095
     - ItemId: 101051
-      Strength: 140
+      Strength: 146
       Speed: 2
       AttackAttribute: 2
       Skill1: 101026
@@ -5244,7 +5244,7 @@ MonoBehaviour:
       Skill3: 101006
       Skill4: 0
     - ItemId: 101053
-      Strength: 181
+      Strength: 171
       Speed: -4
       AttackAttribute: 0
       Skill1: 101001
@@ -5252,7 +5252,7 @@ MonoBehaviour:
       Skill3: 101017
       Skill4: 0
     - ItemId: 101054
-      Strength: 163
+      Strength: 154
       Speed: -4
       AttackAttribute: 0
       Skill1: 101001
@@ -5260,7 +5260,7 @@ MonoBehaviour:
       Skill3: 101070
       Skill4: 0
     - ItemId: 101055
-      Strength: 136
+      Strength: 142
       Speed: 2
       AttackAttribute: 3
       Skill1: 101012
@@ -5276,7 +5276,7 @@ MonoBehaviour:
       Skill3: 101020
       Skill4: 101090
     - ItemId: 101057
-      Strength: 264
+      Strength: 250
       Speed: -6
       AttackAttribute: 2
       Skill1: 101001
@@ -5284,7 +5284,7 @@ MonoBehaviour:
       Skill3: 101024
       Skill4: 101051
     - ItemId: 101058
-      Strength: 211
+      Strength: 220
       Speed: 3
       AttackAttribute: 3
       Skill1: 101001
@@ -5292,7 +5292,7 @@ MonoBehaviour:
       Skill3: 101062
       Skill4: 101053
     - ItemId: 101059
-      Strength: 225
+      Strength: 235
       Speed: 3
       AttackAttribute: 5
       Skill1: 101012
@@ -5300,7 +5300,7 @@ MonoBehaviour:
       Skill3: 101035
       Skill4: 101034
     - ItemId: 101060
-      Strength: 219
+      Strength: 228
       Speed: 6
       AttackAttribute: 0
       Skill1: 101001
@@ -5308,7 +5308,7 @@ MonoBehaviour:
       Skill3: 101080
       Skill4: 101005
     - ItemId: 101061
-      Strength: 262
+      Strength: 248
       Speed: -6
       AttackAttribute: 1
       Skill1: 101001
@@ -5324,7 +5324,7 @@ MonoBehaviour:
       Skill3: 101002
       Skill4: 101059
     - ItemId: 101063
-      Strength: 215
+      Strength: 224
       Speed: 3
       AttackAttribute: 3
       Skill1: 101012
@@ -5332,7 +5332,7 @@ MonoBehaviour:
       Skill3: 101043
       Skill4: 101042
     - ItemId: 101064
-      Strength: 269
+      Strength: 255
       Speed: -6
       AttackAttribute: 0
       Skill1: 101001
@@ -5340,7 +5340,7 @@ MonoBehaviour:
       Skill3: 101025
       Skill4: 101022
     - ItemId: 101065
-      Strength: 267
+      Strength: 252
       Speed: -6
       AttackAttribute: 2
       Skill1: 101026
@@ -5348,7 +5348,7 @@ MonoBehaviour:
       Skill3: 101055
       Skill4: 101028
     - ItemId: 101066
-      Strength: 221
+      Strength: 230
       Speed: 6
       AttackAttribute: 0
       Skill1: 101001
@@ -5356,7 +5356,7 @@ MonoBehaviour:
       Skill3: 101086
       Skill4: 101087
     - ItemId: 101067
-      Strength: 245
+      Strength: 231
       Speed: -6
       AttackAttribute: 0
       Skill1: 101001
@@ -5364,7 +5364,7 @@ MonoBehaviour:
       Skill3: 101070
       Skill4: 101036
     - ItemId: 101068
-      Strength: 210
+      Strength: 224
       Speed: 0
       AttackAttribute: 1
       Skill1: 101045
@@ -5372,7 +5372,7 @@ MonoBehaviour:
       Skill3: 101098
       Skill4: 101065
     - ItemId: 101069
-      Strength: 217
+      Strength: 226
       Speed: 3
       AttackAttribute: 3
       Skill1: 101012
@@ -5380,7 +5380,7 @@ MonoBehaviour:
       Skill3: 101035
       Skill4: 101054
     - ItemId: 101070
-      Strength: 244
+      Strength: 231
       Speed: -6
       AttackAttribute: 1
       Skill1: 101001
@@ -5388,7 +5388,7 @@ MonoBehaviour:
       Skill3: 101081
       Skill4: 101059
     - ItemId: 101071
-      Strength: 244
+      Strength: 231
       Speed: -6
       AttackAttribute: 1
       Skill1: 101001
@@ -5404,7 +5404,7 @@ MonoBehaviour:
       Skill3: 101048
       Skill4: 101050
     - ItemId: 101073
-      Strength: 179
+      Strength: 170
       Speed: -4
       AttackAttribute: 1
       Skill1: 101001
@@ -5420,7 +5420,7 @@ MonoBehaviour:
       Skill3: 101046
       Skill4: 101046
     - ItemId: 101075
-      Strength: 266
+      Strength: 251
       Speed: -6
       AttackAttribute: 0
       Skill1: 101001
@@ -5436,7 +5436,7 @@ MonoBehaviour:
       Skill3: 101006
       Skill4: 101039
     - ItemId: 101077
-      Strength: 254
+      Strength: 240
       Speed: -6
       AttackAttribute: 1
       Skill1: 101001
@@ -5444,7 +5444,7 @@ MonoBehaviour:
       Skill3: 101063
       Skill4: 101074
     - ItemId: 101078
-      Strength: 208
+      Strength: 218
       Speed: 6
       AttackAttribute: 0
       Skill1: 101001
@@ -5452,7 +5452,7 @@ MonoBehaviour:
       Skill3: 101005
       Skill4: 101032
     - ItemId: 101079
-      Strength: 204
+      Strength: 213
       Speed: 6
       AttackAttribute: 1
       Skill1: 101001
@@ -5468,7 +5468,7 @@ MonoBehaviour:
       Skill3: 101073
       Skill4: 101002
     - ItemId: 101081
-      Strength: 289
+      Strength: 274
       Speed: -6
       AttackAttribute: 1
       Skill1: 101001
@@ -5476,7 +5476,7 @@ MonoBehaviour:
       Skill3: 101074
       Skill4: 101010
     - ItemId: 101082
-      Strength: 243
+      Strength: 254
       Speed: 6
       AttackAttribute: 2
       Skill1: 101001
@@ -5484,7 +5484,7 @@ MonoBehaviour:
       Skill3: 101006
       Skill4: 101042
     - ItemId: 101083
-      Strength: 246
+      Strength: 257
       Speed: 3
       AttackAttribute: 3
       Skill1: 101012
@@ -5492,7 +5492,7 @@ MonoBehaviour:
       Skill3: 101075
       Skill4: 101077
     - ItemId: 101084
-      Strength: 223
+      Strength: 233
       Speed: 3
       AttackAttribute: 4
       Skill1: 101001
@@ -5508,7 +5508,7 @@ MonoBehaviour:
       Skill3: 101040
       Skill4: 101073
     - ItemId: 101086
-      Strength: 207
+      Strength: 216
       Speed: 3
       AttackAttribute: 3
       Skill1: 101012
@@ -5552,7 +5552,7 @@ MonoBehaviour:
     - Name: "\u69CB\u3048"
       Id: 101002
       NeedBehaviourPoint: 1
-      NeedStamina: 3
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u6B66\u5668\u3092\u69CB\u3048\u3066\u7269\u7406\u653B\u6483\u3092\u9AD8\u3081\u3001\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306B\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 4d49a36e15e6afe45b8bdc95c0fc3494, type: 2}
@@ -5560,7 +5560,7 @@ MonoBehaviour:
     - Name: "\u7A81\u304D"
       Id: 101003
       NeedBehaviourPoint: 1
-      NeedStamina: 3
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u6B66\u5668\u3067\u76F8\u624B\u3092\u7A81\u304D\u523A\u3057\u3001\u523A\u7A81\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 13b7771f428f09b4781c298a3306effb, type: 2}
@@ -5568,7 +5568,7 @@ MonoBehaviour:
     - Name: "\u8DB3\u7815\u304D"
       Id: 101004
       NeedBehaviourPoint: 2
-      NeedStamina: 3
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u8DB3\u3092\u72D9\u3063\u3066\u6B66\u5668\u3092\u632F\u308B\u3002\u4EBA\u578B\u304C\u76F8\u624B\u306E\u5834\u5408\u306F\u300C\u602F\u307F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 7a5b52c92a3c20d43b7f9df9cfb1207b, type: 2}
@@ -5579,7 +5579,7 @@ MonoBehaviour:
     - Name: "\u4E8C\u9023\u6483"
       Id: 101005
       NeedBehaviourPoint: 1
-      NeedStamina: 2
+      NeedStamina: 1
       CanRegisterUsedSkills: 1
       Description: "\u6B66\u5668\u3092\u5DE6\u53F3\u306B\u632F\u308A\u30012\u56DE\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 336a7141c06340841a5bcb9010c2f2c4, type: 2}
@@ -5587,7 +5587,7 @@ MonoBehaviour:
     - Name: "\u523A\u3057\u7A81\u304D"
       Id: 101006
       NeedBehaviourPoint: 1
-      NeedStamina: 3
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u523A\u7A81\u6B66\u5668\u7279\u6709\u306E\u6280\u3002\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002\u76F8\u624B\u304C\u4E0D\u5B9A\u5F62\u5C5E\u6027\u3092\u6301\u3063\u3066\u3044\u308B\u5834\u5408\u306FBP\u304C1\u56DE\u5FA9\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 7236c15d41f37e24caa6053e16d9e846, type: 2}
@@ -5595,7 +5595,7 @@ MonoBehaviour:
     - Name: "\u30D6\u30F3\u56DE\u3057"
       Id: 101007
       NeedBehaviourPoint: 1
-      NeedStamina: 3
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u6253\u6483\u6B66\u5668\u306B\u591A\u304F\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u6280\u3002\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 5c43b07efc110204da4458495658131e, type: 2}
@@ -5603,7 +5603,7 @@ MonoBehaviour:
     - Name: "\u6BD2\u306E\u5203"
       Id: 101008
       NeedBehaviourPoint: 1
-      NeedStamina: 4
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u6BD2\u3092\u7E8F\u3063\u305F\u6B66\u5668\u3092\u632F\u308A\u56DE\u3057\u3001\u653B\u6483\u3092\u884C\u3046\u3002\u76F8\u624B\u306B\u300C\u6BD2\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: a4194a1b8597741caa713ae0373472a5, type: 2}
@@ -5614,7 +5614,7 @@ MonoBehaviour:
     - Name: "\u96FB\u5149\u77F3\u706B"
       Id: 101009
       NeedBehaviourPoint: 1
-      NeedStamina: 4
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u9AD8\u901F\u3067\u79FB\u52D5\u3057\u3001\u6B66\u5668\u3067\u653B\u6483\u3092\u884C\u3046\u3002\u5A01\u529B\u306F\u843D\u3061\u308B\u304C\u3001BP\u304C1\u56DE\u5FA9\u3059\u308B\u3053\u3068\u304C\u3042\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 1b63f9ec84ab907419bc92146e35a17b, type: 2}
@@ -5622,7 +5622,7 @@ MonoBehaviour:
     - Name: "\u6C17\u5408"
       Id: 101010
       NeedBehaviourPoint: 1
-      NeedStamina: 4
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u9F13\u821E\u3092\u3057\u3001\u6C17\u5408\u3092\u5165\u308C\u3066\u6226\u3044\u306B\u81E8\u3080\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6C17\u5408\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 60c54c7daf92c304d9716d82bd44a75c, type: 2}
@@ -5633,7 +5633,7 @@ MonoBehaviour:
     - Name: "\u708E\u821E"
       Id: 101011
       NeedBehaviourPoint: 2
-      NeedStamina: 5
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u7279\u6B8A\u306A\u706B\u85AC\u3092\u7528\u3044\u3001\u821E\u3044\u3092\u884C\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u708E\u8FFD\u6483\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 2e57ba717ee3c914e8b014853f3e0ab3, type: 2}
@@ -5652,7 +5652,7 @@ MonoBehaviour:
     - Name: "\u708E\u306E\u3064\u3076\u3066"
       Id: 101013
       NeedBehaviourPoint: 1
-      NeedStamina: 2
+      NeedStamina: 1
       CanRegisterUsedSkills: 1
       Description: "\u708E\u306E\u584A\u3092\u76F8\u624B\u306B\u5411\u3051\u3066\u653E\u3064\u3002\u708E\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 32e7d1f07e7d94576a54570d7f026709, type: 2}
@@ -5671,7 +5671,7 @@ MonoBehaviour:
     - Name: "\u721B\u308C\u713C\u93DD"
       Id: 101015
       NeedBehaviourPoint: 3
-      NeedStamina: 12
+      NeedStamina: 10
       CanRegisterUsedSkills: 1
       Description: "\u8D64\u71B1\u3057\u305F\u713C\u93DD\u3092\u62BC\u3057\u4ED8\u3051\u308B\u3002\u76F8\u624B\u306B\u300C\u721B\u308C\u706B\u50B7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: e7e7d94c8759a439cb70206d4750af00, type: 2}
@@ -5701,7 +5701,7 @@ MonoBehaviour:
     - Name: "\u96F7\u8FC5"
       Id: 101018
       NeedBehaviourPoint: 1
-      NeedStamina: 4
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u9AD8\u901F\u3067\u96F7\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002\u5A01\u529B\u306F\u843D\u3061\u308B\u304C\u3001BP\u304C1\u56DE\u5FA9\u3059\u308B\u3053\u3068\u304C\u3042\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: e2df414488c3a403ba800c92d42c6af4, type: 2}
@@ -5720,7 +5720,7 @@ MonoBehaviour:
     - Name: "\u30A8\u30DC\u30CB\u30A2\u306E\u96F7\u8853\u5263"
       Id: 101020
       NeedBehaviourPoint: 1
-      NeedStamina: 3
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u30A8\u30DC\u30CB\u30A2\u5BB6\u306B\u4F1D\u308F\u308B\u8853\u3002\u96F7\u3092\u5263\u306B\u7E8F\u308F\u305B\u3066\u653B\u6483\u3092\u884C\u3046\u3002\u65AC\u6483\u306E\u5F8C\u3001\u96F7\u3092\u653E\u3064\u3002"
       ActionSequences: {fileID: 11400000, guid: 4747ea5608c3e4dcda47e0205e7cd1e4, type: 2}
@@ -5728,7 +5728,7 @@ MonoBehaviour:
     - Name: "\u96F7\u9CF4\u306E\u4E00\u6483"
       Id: 101021
       NeedBehaviourPoint: 1
-      NeedStamina: 2
+      NeedStamina: 1
       CanRegisterUsedSkills: 1
       Description: "\u7A7A\u304B\u3089\u96F7\u3092\u653E\u3064\u3002\u96F7\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 90ac62abe900b43e498965b8e169516b, type: 2}
@@ -5766,7 +5766,7 @@ MonoBehaviour:
     - Name: "\u8056\u9A0E\u58EB\u306E\u610F\u5FD7"
       Id: 101025
       NeedBehaviourPoint: 2
-      NeedStamina: 7
+      NeedStamina: 6
       CanRegisterUsedSkills: 1
       Description: "\u8056\u9A0E\u58EB\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u6280\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u8056\u9A0E\u58EB\u306E\u610F\u5FD7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: c018875c520ed7f40bb65e730ffa8503, type: 2}
@@ -5785,7 +5785,7 @@ MonoBehaviour:
     - Name: "\u30D0\u30C3\u30AF\u30B9\u30C6\u30C3\u30D7\u5C04\u6483"
       Id: 101027
       NeedBehaviourPoint: 2
-      NeedStamina: 4
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u30D0\u30C3\u30AF\u30B9\u30C6\u30C3\u30D7\u3057\u3064\u3064\u76F8\u624B\u306B\u5C04\u6483\u3057\u3066\u653B\u6483\u3057\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u56DE\u907F\u53EF\u80FD\u6027\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 09065a65f2231a0409313bf9e8176cf6, type: 2}
@@ -5869,7 +5869,7 @@ MonoBehaviour:
     - Name: "\u9244\u58C1"
       Id: 101036
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u81EA\u8EAB\u306E\u9632\u5177\u3092\u5F37\u5316\u3059\u308B\u6280\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9244\u58C1\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: dd04cc594f85f7841ba6de45a026e529, type: 2}
@@ -5880,7 +5880,7 @@ MonoBehaviour:
     - Name: "\u9B54\u529B\u306E\u76FE"
       Id: 101037
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u81EA\u8EAB\u306E\u524D\u65B9\u306B\u9B54\u529B\u3067\u51FA\u6765\u305F\u76FE\u3092\u5C55\u958B\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u529B\u306E\u76FE\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 0ccdf71a7cf40a344adbfe8662abbacc, type: 2}
@@ -5891,7 +5891,7 @@ MonoBehaviour:
     - Name: "\u30A8\u30F4\u30A1\u30FC\u30B8"
       Id: 101038
       NeedBehaviourPoint: 2
-      NeedStamina: 2
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u6642\u7A7A\u3092\u6B6A\u307E\u305B\u3066\u76F8\u624B\u3088\u308A\u65E9\u304F\u52D5\u3051\u308B\u7981\u5FCC\u306E\u6280\u306E1\u3064\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300CBP\u52A0\u901F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 05e37ca6365414244b7b86eab7203a4f, type: 2}
@@ -5902,7 +5902,7 @@ MonoBehaviour:
     - Name: "\u6068\u307F\u306E\u529B"
       Id: 101039
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u6028\u6068\u306E\u5FF5\u3092\u529B\u306B\u5909\u3048\u3001\u6B66\u5668\u306B\u529B\u3092\u4E0E\u3048\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6028\u6068\u306E\u529B\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: b0cfdb85821cc974d9ff18539adb3146, type: 2}
@@ -5913,7 +5913,7 @@ MonoBehaviour:
     - Name: "\u5996\u5200\u65AC\u6483"
       Id: 101040
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u5E7E\u4EBA\u3082\u306E\u8840\u3092\u5438\u3044\u4E0A\u3052\u305F\u5200\u8EAB\u3067\u653B\u6483\u3059\u308B\u3002\u5A01\u529B\u306F\u843D\u3061\u308B\u304C\u4E0E\u3048\u305F\u30C0\u30E1\u30FC\u30B8\u304B\u3089\u81EA\u5206\u81EA\u8EAB\u306EHP\u306B\u5909\u63DB\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 28524a8e04a00cc4294f85b56182ad90, type: 2}
@@ -5921,7 +5921,7 @@ MonoBehaviour:
     - Name: "\u53CD\u6483\u306E\u68D8"
       Id: 101041
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u9632\u5177\u306B\u9B54\u6CD5\u3067\u4F5C\u3089\u308C\u305F\u68D8\u3092\u4ED8\u4E0E\u3057\u3001\u653B\u6483\u3057\u3066\u304D\u305F\u76F8\u624B\u306B\u5BFE\u3057\u3066\u53CD\u6483\u3092\u884C\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u53CD\u6483\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 282a5c1c67774694f891915a8673f5e6, type: 2}
@@ -5951,7 +5951,7 @@ MonoBehaviour:
     - Name: "\u6C17\u914D\u5BDF\u77E5"
       Id: 101044
       NeedBehaviourPoint: 5
-      NeedStamina: 5
+      NeedStamina: 9
       CanRegisterUsedSkills: 1
       Description: "\u76F8\u624B\u306E\u52D5\u304D\u3092\u8AAD\u307F\u53D6\u308A\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u653B\u6483\u7D76\u5BFE\u56DE\u907F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: abb6c5809d9a840f8844829f72c010b8, type: 2}
@@ -5981,7 +5981,7 @@ MonoBehaviour:
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u58F1"
       Id: 101047
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u58F1\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: df9973175532748948e47531ae5a2806, type: 2}
@@ -5992,7 +5992,7 @@ MonoBehaviour:
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u5F10"
       Id: 101048
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u58F1\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: a3290a53f721e41f6af74137e7f12628, type: 2}
@@ -6003,7 +6003,7 @@ MonoBehaviour:
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u9023\u6483\u30FB\u53C2"
       Id: 101049
       NeedBehaviourPoint: 2
-      NeedStamina: 2
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: ccab6d921856347e98ea14a6bf634519, type: 2}
@@ -6011,7 +6011,7 @@ MonoBehaviour:
     - Name: "\u30A2\u30EB\u30CE\u30A4\u30C9\u306E\u79D8\u9023\u6483"
       Id: 101050
       NeedBehaviourPoint: 2
-      NeedStamina: 2
+      NeedStamina: 5
       CanRegisterUsedSkills: 1
       Description: "\u30A2\u30EB\u30CE\u30A4\u30C9\u5BB6\u306B\u4F1D\u308F\u308B\u79D8\u4F1D\u306E\u9023\u6483\u6280\u3002\u300C\u30A2\u30EB\u30CE\u30A4\u30C9\u9023\u6483\u30FB\u5F10\u300D\u304C\u4ED8\u4E0E\u3055\u308C\u3066\u3044\u308B\u5834\u5408\u306F\u30C0\u30E1\u30FC\u30B8\u304C\u4E0A\u6607\u3057\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300CBP\u52A0\u901F\u300D\u3068\u300C\u52B9\u7387\u5316\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: b29d5a6b6ca2549d496c35860f9db540, type: 2}
@@ -6025,7 +6025,7 @@ MonoBehaviour:
     - Name: "\u7A7A\u5143\u6C17"
       Id: 101051
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u865A\u52E2\u3092\u5F35\u3063\u305F\u95D8\u5FD7\u3092\u6F32\u3089\u305B\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7A7A\u5143\u6C17\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 496db8b4cd0c34d0090b05ba749d1a1d, type: 2}
@@ -6047,7 +6047,7 @@ MonoBehaviour:
     - Name: "\u30B5\u30EB\u30C7\u30A8\u30F4\u30A1\u30FC\u30B8"
       Id: 101053
       NeedBehaviourPoint: 3
-      NeedStamina: 24
+      NeedStamina: 16
       CanRegisterUsedSkills: 1
       Description: "\u6642\u3092\u6B62\u3081\u308B\u7981\u5FCC\u306E\u6280\u306E1\u3064\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6642\u505C\u6B62\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: bcfafb5fcf6614ad88cf7fd0877aacb0, type: 2}
@@ -6058,7 +6058,7 @@ MonoBehaviour:
     - Name: "\u9B54\u529B\u306E\u6D77"
       Id: 101054
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u9B54\u529B\u3092\u8CAF\u84C4\u3055\u308C\u305F\u7A7A\u9593\u3092\u81EA\u5206\u81EA\u8EAB\u306B\u5C55\u958B\u3057\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u529B\u56DE\u5FA9\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 2fc7f85548bf247f48c79323bfba57de, type: 2}
@@ -6069,7 +6069,7 @@ MonoBehaviour:
     - Name: "\u5F29\u9023\u5C04\u6483"
       Id: 101055
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u592A\u3044\u77E2\u3092\u653E\u3061\u3001\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 78dc0321c438b4120943a20d8625ac40, type: 2}
@@ -6077,7 +6077,7 @@ MonoBehaviour:
     - Name: "\u6012\u5F29\u9023\u5C04\u6483"
       Id: 101056
       NeedBehaviourPoint: 2
-      NeedStamina: 2
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u6975\u592A\u3044\u77E2\u3092\u653E\u3061\u3001\u5F37\u529B\u306A\u653B\u6483\u3092\u884C\u3046\u3002\u77E2\u304C\u91CD\u3044\u305F\u3081\u3001\u76F8\u624B\u306B\u300C\u602F\u307F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 3e729f1f984604536bfa87a34577e033, type: 2}
@@ -6088,7 +6088,7 @@ MonoBehaviour:
     - Name: "\u7A76\u6975\u306E\u901A\u5E38\u653B\u6483"
       Id: 101057
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 5
       CanRegisterUsedSkills: 1
       Description: "\u901A\u5E38\u653B\u6483\u3092\u7A81\u304D\u8A70\u3081\u305F\u3001\u30B7\u30F3\u30D7\u30EB\u3060\u304C\u3001\u30B7\u30F3\u30D7\u30EB\u3086\u3048\u306B\u5F37\u3044\u4E00\u6483\u3068\u306A\u308B\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u901A\u5E38\u653B\u6483BP\u56DE\u5FA9\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 29aca1521f23f46a98b8ea6a92cdd948, type: 2}
@@ -6131,7 +6131,7 @@ MonoBehaviour:
     - Name: "\u30C7\u30A3\u30EB\u30D0\u30A8\u30F4\u30A1\u30FC\u30B8"
       Id: 101062
       NeedBehaviourPoint: 3
-      NeedStamina: 3
+      NeedStamina: 5
       CanRegisterUsedSkills: 1
       Description: "\u6642\u3092\u5DFB\u304D\u623B\u3059\u7981\u5FCC\u306E\u6280\u306E1\u3064\u3002BP\u3092\u6700\u5927\u307E\u3067\u56DE\u5FA9\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 2472eb0a3d3464a8e8e2d322735c8028, type: 2}
@@ -6139,7 +6139,7 @@ MonoBehaviour:
     - Name: "\u61A4\u6012\u306E\u53CD\u6483"
       Id: 101063
       NeedBehaviourPoint: 2
-      NeedStamina: 2
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u6012\u308A\u3092\u529B\u306B\u5909\u3048\u3066\u53CD\u6483\u4F53\u52E2\u3092\u7BC9\u304F\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u61A4\u6012\u306E\u53CD\u6483\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 1a7970267f7cc4cd5bd1c7225d588673, type: 2}
@@ -6150,7 +6150,7 @@ MonoBehaviour:
     - Name: "\u9006\u5883\u306E\u8FFD\u3044\u98A8"
       Id: 101064
       NeedBehaviourPoint: 2
-      NeedStamina: 2
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u9006\u5883\u306E\u8FFD\u3044\u98A8\u304C\u81EA\u5206\u81EA\u8EAB\u3092\u99C6\u308A\u7ACB\u3066\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9006\u5883\u306E\u8FFD\u3044\u98A8\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 3a6303e2cd26d46cabebef1428891abd, type: 2}
@@ -6161,7 +6161,7 @@ MonoBehaviour:
     - Name: "\u30AC\u30FC\u30C9"
       Id: 101065
       NeedBehaviourPoint: 1
-      NeedStamina: 3
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u9632\u5FA1\u306E\u4F53\u52E2\u3092\u53D6\u308A\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30AC\u30FC\u30C9\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 092de6a712bb21c499c81881b1162163, type: 2}
@@ -6172,7 +6172,7 @@ MonoBehaviour:
     - Name: "\u7981\u5FCC\u306E\u9EBB\u85AC"
       Id: 101066
       NeedBehaviourPoint: 1
-      NeedStamina: 2
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u4F7F\u7528\u8005\u306E\u8EAB\u4F53\u80FD\u529B\u3092\u9650\u754C\u307E\u3067\u9AD8\u3081\u308B\u85AC\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6BD2\u300D\u3068\u300CBP\u52A0\u901F\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: e3ba8a9f1005a475bb2af89cdf575d03, type: 2}
@@ -6186,7 +6186,7 @@ MonoBehaviour:
     - Name: "\u5F8C\u5148\u8003\u3048\u306C\u4E00\u6483"
       Id: 101067
       NeedBehaviourPoint: 0
-      NeedStamina: 0
+      NeedStamina: 5
       CanRegisterUsedSkills: 1
       Description: "\u3053\u306E\u4E00\u6483\u306B\u5168\u3066\u3092\u304B\u3051\u308B\u601D\u3044\u3092\u8FBC\u3081\u3066\u6B66\u5668\u3092\u632F\u308A\u56DE\u3059\u3002\u5168\u3066\u306EBP\u3092\u6D88\u8CBB\u3057\u3001\u6D88\u8CBB\u3057\u305F\u6570\u3060\u3051\u653B\u6483\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u75B2\u52B4\u300D\u3068\u300C\u9EBB\u75FA\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 8ebcfda92a9e1405b8a514494a1c0613, type: 2}
@@ -6200,7 +6200,7 @@ MonoBehaviour:
     - Name: "\u30AC\u30FC\u30C9\u30AB\u30A6\u30F3\u30BF\u30FC"
       Id: 101068
       NeedBehaviourPoint: 2
-      NeedStamina: 2
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u9632\u5FA1\u3057\u3064\u3064\u3001\u53CD\u6483\u3082\u884C\u3048\u308B\u653B\u9632\u4E00\u4F53\u306E\u4F53\u52E2\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30AC\u30FC\u30C9\u300D\u3068\u300C\u7269\u7406\u53CD\u6483\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 01c8b088a6b7149ce9c218410b1a4a5c, type: 2}
@@ -6214,7 +6214,7 @@ MonoBehaviour:
     - Name: "\u9B54\u529B\u306E\u89E6\u624B"
       Id: 101069
       NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedStamina: 2
       CanRegisterUsedSkills: 1
       Description: "\u8822\u304F\u9B54\u529B\u3092\u5E2F\u3073\u305F\u89E6\u624B\u3092\u51FA\u73FE\u3055\u305B\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u9B54\u529B\u306E\u89E6\u624B\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: c69157fb34e334b399f20c3da1c1fff3, type: 2}
@@ -6244,7 +6244,7 @@ MonoBehaviour:
     - Name: "\u30CA\u30A4\u30D5\u30A1\u30F3\u30C1"
       Id: 101072
       NeedBehaviourPoint: 3
-      NeedStamina: 3
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u5168\u3066\u306E\u52D5\u4F5C\u306F\u30CA\u30A4\u30D5\u30A1\u30F3\u30C1\u306B\u59CB\u307E\u308A\u3001\u30CA\u30A4\u30D5\u30A1\u30F3\u30C1\u306B\u7D42\u308F\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u52B9\u7387\u5316\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: e0bec1d66085b43a7929060ed98fa7d2, type: 2}
@@ -6287,7 +6287,7 @@ MonoBehaviour:
     - Name: "\u661F\u3064\u3076\u3066"
       Id: 101077
       NeedBehaviourPoint: 2
-      NeedStamina: 4
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u9752\u767D\u304F\u8F1D\u304F\u661F\u3092\u9B54\u529B\u3067\u4F5C\u308A\u3001\u76F8\u624B\u306B\u653E\u3064\u30022\u56DE\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: 40dbc0f9224614bd38a8a905771ef9eb, type: 2}
@@ -6295,7 +6295,7 @@ MonoBehaviour:
     - Name: "\u8FFD\u6483\u306E\u77E2"
       Id: 101078
       NeedBehaviourPoint: 2
-      NeedStamina: 2
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u6642\u3092\u8D85\u3048\u308B\u77E2\u3092\u653E\u3061\u3001\u653B\u6483\u3092\u884C\u3044\u3064\u3064\u3001\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306B\u3082\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: cdd805c03040442028665f9e78502510, type: 2}
@@ -6314,7 +6314,7 @@ MonoBehaviour:
     - Name: "\u6B8B\u50CF\u65AC\u308A"
       Id: 101080
       NeedBehaviourPoint: 2
-      NeedStamina: 2
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u81EA\u5206\u81EA\u8EAB\u306E\u6B8B\u50CF\u3092\u305D\u306E\u5834\u306B\u6B8B\u3059\u3002\u305D\u306E\u6B8B\u50CF\u306F\u6B21\u306E\u884C\u52D5\u3092\u5F85\u3064\u3002\u653B\u6483\u3092\u884C\u3044\u3064\u3064\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u5148\u99C6\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 2004627b3460340c3bebc2cab18d008e, type: 2}
@@ -6357,7 +6357,7 @@ MonoBehaviour:
     - Name: "\u9006\u5883\u306E\u6975\u697D\u6D44\u571F"
       Id: 101085
       NeedBehaviourPoint: 3
-      NeedStamina: 4
+      NeedStamina: 7
       CanRegisterUsedSkills: 1
       Description: "\u5C0B\u5E38\u306A\u3089\u3056\u308B\u529B\u3092\u3082\u3068\u306B\u6B66\u5668\u3092\u632F\u308B\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u4ED8\u4E0E\u3055\u308C\u305F\u72B6\u614B\u7570\u5E38\u306E\u6570\u3060\u3051\u5A01\u529B\u304C\u4E0A\u6607\u3059\u308B\u4E00\u6483\u3092\u653E\u3064\u3002"
       ActionSequences: {fileID: 11400000, guid: 395cf01a84f864024b0cad3da8996619, type: 2}
@@ -6365,7 +6365,7 @@ MonoBehaviour:
     - Name: "\u30CA\u30A4\u30D5\u4ED5\u8FBC\u307F"
       Id: 101086
       NeedBehaviourPoint: 1
-      NeedStamina: 2
+      NeedStamina: 1
       CanRegisterUsedSkills: 0
       Description: "\u61D0\u306B\u4ED5\u8FBC\u3081\u308B\u30CA\u30A4\u30D5\u3092\u30B9\u30C8\u30C3\u30AF\u3059\u308B\u3002\u300C\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u300D\u30922\u84C4\u7A4D\u3059\u308B\u3002\u3053\u306E\u30B9\u30AD\u30EB\u306F\u30BF\u30FC\u30F3\u306B\u4F55\u5EA6\u3082\u4F7F\u7528\u3067\u304D\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: b40be042ba0a245a488fc0f931051193, type: 2}
@@ -6373,7 +6373,7 @@ MonoBehaviour:
     - Name: "\u30CA\u30A4\u30D5\u6295\u3052"
       Id: 101087
       NeedBehaviourPoint: 1
-      NeedStamina: 5
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u61D0\u306B\u4ED5\u8FBC\u3093\u3060\u30CA\u30A4\u30D5\u3092\u4E00\u6589\u306B\u6295\u3052\u308B\u3002\u3053\u306E\u653B\u6483\u306F\u300C\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u300D\u306E\u6570\u3060\u3051\u653B\u6483\u3059\u308B\u3002\u305D\u306E\u5F8C\u300C\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u300D\u306F0\u306B\u306A\u308B\u3002\u300C\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u300D\u304C0\u306E\u5834\u5408\u306F\u5931\u6557\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 53632fcb557b6f443bc4b81ae5bb45e2, type: 2}
@@ -6381,7 +6381,7 @@ MonoBehaviour:
     - Name: "\u30B7\u30A7\u30F3\u306E\u30CA\u30A4\u30D5\u6295\u3052"
       Id: 101088
       NeedBehaviourPoint: 1
-      NeedStamina: 5
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u61D0\u306B\u4ED5\u8FBC\u3093\u3060\u30CA\u30A4\u30D5\u30921\u672C\u6295\u3052\u308B\u3002\u300C\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u300D\u30921\u6D88\u8CBB\u3057\u3066\u653B\u6483\u3057\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u56DE\u907F\u53EF\u80FD\u6027\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002\u300C\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u300D\u304C0\u306E\u5834\u5408\u306F\u5931\u6557\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: ce1fd5618bd924a1a949821454817671, type: 2}
@@ -6392,7 +6392,7 @@ MonoBehaviour:
     - Name: "\u30A4\u30EA\u30B7\u30A2\u306E\u9B54\u9695\u77F3"
       Id: 101089
       NeedBehaviourPoint: 2
-      NeedStamina: 5
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u30A4\u30EA\u30B7\u30A2\u5BB6\u306B\u4F1D\u308F\u308B\u9B54\u529B\u3067\u4F5C\u3089\u308C\u305F\u9695\u77F3\u3092\u6295\u3052\u3064\u3051\u308B\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u9B54\u30AB\u30A6\u30F3\u30C8\u304C1\u4EE5\u4E0A\u5B58\u5728\u3059\u308B\u5834\u5408\u306F\u6D88\u8CBB\u3057\u3001BP\u30923\u56DE\u5FA9\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: cfb8b461985504f33b9bf12825ba26b5, type: 2}
@@ -6400,7 +6400,7 @@ MonoBehaviour:
     - Name: "\u72D9\u3044\u6F84\u307E\u3057"
       Id: 101090
       NeedBehaviourPoint: 2
-      NeedStamina: 4
+      NeedStamina: 3
       CanRegisterUsedSkills: 1
       Description: "\u7CBE\u795E\u3092\u96C6\u4E2D\u3055\u305B\u3066\u6B21\u306E\u4E00\u6483\u306B\u547D\u3092\u304B\u3051\u308B\u52E2\u3044\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u72D9\u3044\u6F84\u307E\u3057\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 95846215decfd4d53aa088cb694281b3, type: 2}
@@ -6419,7 +6419,7 @@ MonoBehaviour:
     - Name: "\u30A8\u30DC\u30CB\u30A2\u306E\u79D8\u96F7\u8853\u5263"
       Id: 101092
       NeedBehaviourPoint: 3
-      NeedStamina: 9
+      NeedStamina: 4
       CanRegisterUsedSkills: 1
       Description: "\u30A8\u30DC\u30CB\u30A2\u5BB6\u306B\u4F1D\u308F\u308B\u8853\u3002\u96F7\u3092\u5263\u306B\u7E8F\u308F\u305B\u3066\u653B\u6483\u3092\u884C\u3046\u3002\u65AC\u6483\u306E\u5F8C\u3001\u96F7\u3092\u4E09\u56DE\u653E\u3064\u3002"
       ActionSequences: {fileID: 11400000, guid: 569e27fe4c2304f90b88582252ed2453, type: 2}
@@ -6427,7 +6427,7 @@ MonoBehaviour:
     - Name: "\u30D6\u30FC\u30E1\u30E9\u30F3"
       Id: 101093
       NeedBehaviourPoint: 1
-      NeedStamina: 6
+      NeedStamina: 5
       CanRegisterUsedSkills: 1
       Description: "\u6295\u3052\u308B\u3068\u5E30\u3063\u3066\u304F\u308B\u7570\u56FD\u306E\u6B66\u5668\u3002\u653B\u6483\u3092\u884C\u3044\u3001BP\u304C1\u56DE\u5FA9\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: dd7445fc5f2d64b4ba0ecaf8cf7e0502, type: 2}
@@ -6435,7 +6435,7 @@ MonoBehaviour:
     - Name: "\u30B0\u30EC\u30CD\u30FC\u30C9"
       Id: 101094
       NeedBehaviourPoint: 2
-      NeedStamina: 6
+      NeedStamina: 5
       CanRegisterUsedSkills: 1
       Description: "\u6295\u3052\u308B\u3068\u7206\u767A\u3059\u308B\u7570\u56FD\u306E\u6B66\u5668\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u76F8\u624B\u306B\u300C\u706B\u50B7\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: fb5e89579602445d79e703c529243dbb, type: 2}
@@ -6490,7 +6490,7 @@ MonoBehaviour:
     - Name: "\u30EB\u30AF\u30B9\u30AA\u30E9\u30B7\u30FC\u30EB\u30C9"
       Id: 101099
       NeedBehaviourPoint: 2
-      NeedStamina: 6
+      NeedStamina: 9
       CanRegisterUsedSkills: 1
       Description: "\u8056\u9A0E\u58EB\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u8056\u306A\u308B\u8B77\u308A\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u534A\u6E1B\u300D\u3068\u300C\u9B54\u529B\u306E\u76FE\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 238fcfc4b5788408389677b16e593ada, type: 2}
@@ -6548,7 +6548,7 @@ MonoBehaviour:
     - Name: "\u611B\u306E\u6D41\u661F\u7FA4"
       Id: 101104
       NeedBehaviourPoint: 0
-      NeedStamina: 20
+      NeedStamina: 18
       CanRegisterUsedSkills: 1
       Description: "\u305D\u306E\u6614\u3001\u9B3C\u65CF\u304C\u4F7F\u3063\u3066\u3044\u305F\u5947\u8DE1\u306E\u6280\u3002\u5927\u91CF\u306ESP\u3092\u8981\u3059\u308B\u304C\u3001\u5927\u91CF\u306E\u661F\u304C\u652F\u63F4\u3057\u3066\u304F\u308C\u30014\u56DE\u653B\u6483\u3092\u884C\u3046\u3002"
       ActionSequences: {fileID: 11400000, guid: a4543a969727846dba3efca70eb33cc1, type: 2}
@@ -6556,7 +6556,7 @@ MonoBehaviour:
     - Name: "\u52C7\u6C17\u306E\u9E7F\u89D2"
       Id: 101105
       NeedBehaviourPoint: 0
-      NeedStamina: 20
+      NeedStamina: 18
       CanRegisterUsedSkills: 1
       Description: "\u305D\u306E\u6614\u3001\u5F37\u5927\u306A\u9B3C\u3092\u5012\u3059\u305F\u3081\u306B\u7DE8\u307F\u51FA\u3055\u308C\u305F\u6280\u3002\u5927\u91CF\u306ESP\u3092\u8981\u3059\u308B\u304C\u3001\u5F37\u529B\u306A\u4E00\u6483\u3002"
       ActionSequences: {fileID: 11400000, guid: 04ad808fd3de1409ebffb0e28281bb96, type: 2}
@@ -6564,7 +6564,7 @@ MonoBehaviour:
     - Name: "\u5E0C\u671B\u306E\u515C\u5272\u308A"
       Id: 101106
       NeedBehaviourPoint: 0
-      NeedStamina: 20
+      NeedStamina: 18
       CanRegisterUsedSkills: 1
       Description: "\u305D\u306E\u6614\u3001\u718A\u3068\u6E21\u308A\u5408\u3046\u305F\u3081\u306B\u4FEE\u884C\u3057\u305F\u8005\u304C\u4F7F\u3063\u3066\u3044\u305F\u6280\u3002\u5927\u91CF\u306ESP\u3092\u8981\u3059\u308B\u304C\u3001\u653B\u6483\u3092\u884C\u3044\u3001\u76F8\u624B\u306B\u300C\u93A7\u7815\u304D\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 633bfb7bcec1b4b218bcb58e4891c603, type: 2}
@@ -6575,7 +6575,7 @@ MonoBehaviour:
     - Name: "\u6B63\u7FA9\u306E\u6CBB\u7642\u8853"
       Id: 101107
       NeedBehaviourPoint: 0
-      NeedStamina: 20
+      NeedStamina: 18
       CanRegisterUsedSkills: 1
       Description: "\u305D\u306E\u6614\u3001\u6148\u60B2\u6DF1\u304D\u8005\u306E\u5F97\u610F\u3068\u3059\u308B\u65BD\u8853\u3002\u5927\u91CF\u306ESP\u3092\u8981\u3059\u308B\u304C\u3001\u81EA\u5206\u81EA\u8EAB\u306EHP\u304C\u304B\u306A\u308A\u56DE\u5FA9\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 5156dadda2f8f414f8c5f61271f2cdbb, type: 2}
@@ -6583,7 +6583,7 @@ MonoBehaviour:
     - Name: "\u9B42\u306E\u6B63\u62F3\u7A81\u304D"
       Id: 101108
       NeedBehaviourPoint: 2
-      NeedStamina: 8
+      NeedStamina: 7
       CanRegisterUsedSkills: 1
       Description: "\u7570\u56FD\u306E\u6B66\u95D8\u5BB6\u306E\u9B42\u306E\u6B63\u62F3\u7A81\u304D\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6C17\u5408\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 6e5e89f7b87bf441eb8cf30a870e095d, type: 2}
@@ -6594,7 +6594,7 @@ MonoBehaviour:
     - Name: "\u4E09\u65E5\u6708\u8E74\u308A"
       Id: 101109
       NeedBehaviourPoint: 2
-      NeedStamina: 7
+      NeedStamina: 6
       CanRegisterUsedSkills: 1
       Description: "\u7570\u56FD\u306E\u6B66\u95D8\u5BB6\u306E\u83EF\u9E97\u306A\u4E09\u65E5\u6708\u8E74\u308A\u3002\u5F37\u529B\u306A\u4E00\u6483\u3060\u304C\u3001\u5916\u308C\u308B\u3053\u3068\u304C\u3042\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 4616af7a08dcb40cc9dac5c33f91db2a, type: 2}
@@ -7077,17 +7077,17 @@ MonoBehaviour:
     list:
     - Id: 10101
       Name: "\u30C6\u30B9\u30C8\u30A8\u30CD\u30DF\u30FC"
-      HitPoint: 48
+      HitPoint: 32
       Stamina: 0
-      PhysicalAttack: 17
-      MagicalAttack: 17
+      PhysicalAttack: 13
+      MagicalAttack: 13
       SlashCutRate: 0
       BlowCutRate: 0
       ThrustCutRate: 0
       MagicCutRate: 0
       FireCutRate: 0
       ThunderCutRate: 0
-      Speed: 11
+      Speed: 6
       Experience: 122
       BehaviourPoint: 1
       Attribute: 1
@@ -7101,18 +7101,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10102
       Name: "\u30B4\u30D6\u30EA\u30F3"
-      HitPoint: 43
+      HitPoint: 29
       Stamina: 0
-      PhysicalAttack: 15
-      MagicalAttack: 15
+      PhysicalAttack: 12
+      MagicalAttack: 12
       SlashCutRate: 0.03
       BlowCutRate: 0.01
       ThrustCutRate: 0.02
       MagicCutRate: 0.01
       FireCutRate: 0.02
       ThunderCutRate: 0.06
-      Speed: 8
-      Experience: 158
+      Speed: 6
+      Experience: 549
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 0
@@ -7125,18 +7125,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10103
       Name: "\u30D8\u30C9\u30ED\u30B9\u30E9\u30A4\u30E0"
-      HitPoint: 34
+      HitPoint: 22
       Stamina: 0
-      PhysicalAttack: 12
-      MagicalAttack: 12
+      PhysicalAttack: 10
+      MagicalAttack: 10
       SlashCutRate: 0.24
       BlowCutRate: 0.54
       ThrustCutRate: 0.1
       MagicCutRate: 0.08
       FireCutRate: 0.6
       ThunderCutRate: 0.08
-      Speed: 8
-      Experience: 146
+      Speed: 4
+      Experience: 585
       BehaviourPoint: 1
       Attribute: 2
       ThumbnailId: 17
@@ -7149,18 +7149,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10104
       Name: "\u546A\u3044\u306E\u4EBA\u5F62"
-      HitPoint: 43
+      HitPoint: 28
       Stamina: 0
-      PhysicalAttack: 15
-      MagicalAttack: 15
+      PhysicalAttack: 12
+      MagicalAttack: 12
       SlashCutRate: 0.04
       BlowCutRate: 0.05
       ThrustCutRate: 0
       MagicCutRate: 0.09
       FireCutRate: -0.2
       ThunderCutRate: 0.06
-      Speed: 11
-      Experience: 170
+      Speed: 5
+      Experience: 683
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 18
@@ -7173,10 +7173,10 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10105
       Name: "\u30D2\u30E3\u30AF\u30E1\u306E\u8349\u7389"
-      HitPoint: 41
+      HitPoint: 27
       Stamina: 0
-      PhysicalAttack: 14
-      MagicalAttack: 14
+      PhysicalAttack: 10
+      MagicalAttack: 10
       SlashCutRate: 0.08
       BlowCutRate: 0.12
       ThrustCutRate: 0.04
@@ -7184,7 +7184,7 @@ MonoBehaviour:
       FireCutRate: -0.3
       ThunderCutRate: 0.2
       Speed: 8
-      Experience: 164
+      Experience: 658
       BehaviourPoint: 1
       Attribute: 32
       ThumbnailId: 16
@@ -7197,18 +7197,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10201
       Name: "\u5730\u5E95\u306E\u9B5A\u4EBA"
-      HitPoint: 204
+      HitPoint: 129
       Stamina: 0
-      PhysicalAttack: 20
-      MagicalAttack: 20
+      PhysicalAttack: 17
+      MagicalAttack: 17
       SlashCutRate: 0.09
       BlowCutRate: 0.03
       ThrustCutRate: 0
       MagicCutRate: 0.2
       FireCutRate: 0
       ThunderCutRate: -0.22
-      Speed: 16
-      Experience: 1131
+      Speed: 9
+      Experience: 8962
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 7
@@ -7221,18 +7221,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10202
       Name: "\u8150\u6557\u306E\u6728\u970A"
-      HitPoint: 209
+      HitPoint: 132
       Stamina: 0
-      PhysicalAttack: 18
-      MagicalAttack: 18
+      PhysicalAttack: 16
+      MagicalAttack: 16
       SlashCutRate: 0.07
       BlowCutRate: 0.21
       ThrustCutRate: 0.06
       MagicCutRate: 0.12
       FireCutRate: -0.28
       ThunderCutRate: 0.02
-      Speed: 27
-      Experience: 1087
+      Speed: 12
+      Experience: 8732
       BehaviourPoint: 1
       Attribute: 32
       ThumbnailId: 3
@@ -7245,18 +7245,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10203
       Name: "\u5893\u5730\u6B7B\u8005"
-      HitPoint: 225
+      HitPoint: 142
       Stamina: 0
-      PhysicalAttack: 22
-      MagicalAttack: 22
+      PhysicalAttack: 19
+      MagicalAttack: 19
       SlashCutRate: 0
       BlowCutRate: -0.12
       ThrustCutRate: 0.24
       MagicCutRate: 0.31
       FireCutRate: 0
       ThunderCutRate: 0.31
-      Speed: 18
-      Experience: 1139
+      Speed: 9
+      Experience: 9192
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 1
@@ -7269,18 +7269,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10204
       Name: "\u7B11\u307F\u5F71"
-      HitPoint: 124
+      HitPoint: 78
       Stamina: 0
-      PhysicalAttack: 20
-      MagicalAttack: 20
+      PhysicalAttack: 17
+      MagicalAttack: 17
       SlashCutRate: 0.08
       BlowCutRate: 0.23
       ThrustCutRate: 0.05
       MagicCutRate: 0.12
       FireCutRate: 0.09
       ThunderCutRate: 0.15
-      Speed: 25
-      Experience: 1113
+      Speed: 12
+      Experience: 8893
       BehaviourPoint: 1
       Attribute: 64
       ThumbnailId: 10
@@ -7293,18 +7293,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10205
       Name: "\u865A\u7121\u306E\u9A0E\u58EB"
-      HitPoint: 184
+      HitPoint: 116
       Stamina: 0
-      PhysicalAttack: 22
-      MagicalAttack: 22
+      PhysicalAttack: 19
+      MagicalAttack: 19
       SlashCutRate: 0.18
       BlowCutRate: 0.16
       ThrustCutRate: 0.17
       MagicCutRate: 0.11
       FireCutRate: 0.09
       ThunderCutRate: 0.1
-      Speed: 21
-      Experience: 1235
+      Speed: 7
+      Experience: 9054
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 6
@@ -7317,18 +7317,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
-      HitPoint: 422
+      HitPoint: 249
       Stamina: 0
-      PhysicalAttack: 45
-      MagicalAttack: 45
+      PhysicalAttack: 25
+      MagicalAttack: 25
       SlashCutRate: 0.04
       BlowCutRate: 0.05
       ThrustCutRate: 0
       MagicCutRate: 0.09
       FireCutRate: 0.12
       ThunderCutRate: 0.06
-      Speed: 16
-      Experience: 2055
+      Speed: 6
+      Experience: 13320
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 20
@@ -7341,18 +7341,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 4f081eff7afdef04da4b3efa8e407c0e, type: 2}
     - Id: 19902
       Name: "\u96F7\u8853\u306E\u821E\u8E0F\u8005\u3001\u30A8\u30DC\u30CB\u30A2"
-      HitPoint: 1676
+      HitPoint: 1091
       Stamina: 0
-      PhysicalAttack: 48
-      MagicalAttack: 48
+      PhysicalAttack: 37
+      MagicalAttack: 37
       SlashCutRate: 0.03
       BlowCutRate: 0.04
       ThrustCutRate: 0.08
       MagicCutRate: 0.13
       FireCutRate: 0.09
       ThunderCutRate: 0.63
-      Speed: 33
-      Experience: 10788
+      Speed: 12
+      Experience: 94320
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 24
@@ -7365,18 +7365,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: d8e875add8519464a91b38cb342a7c1e, type: 2}
     - Id: 19903
       Name: "\u6012\u308A\u306E\u708E\u3001\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8"
-      HitPoint: 1535
+      HitPoint: 999
       Stamina: 0
-      PhysicalAttack: 50
-      MagicalAttack: 50
+      PhysicalAttack: 38
+      MagicalAttack: 38
       SlashCutRate: 0.14
       BlowCutRate: 0.21
       ThrustCutRate: 0.15
       MagicCutRate: -0.02
       FireCutRate: 0.53
       ThunderCutRate: -0.11
-      Speed: 19
-      Experience: 10788
+      Speed: 10
+      Experience: 94320
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 23

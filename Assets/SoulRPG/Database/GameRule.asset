@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerGrowthParameter:
     level: 5
-    vitality: 9
-    stamina: 5
+    vitality: 11
+    stamina: 8
     physicalStrength: 10
     magicalStrength: 10
     speed: 6
