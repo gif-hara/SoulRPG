@@ -317,8 +317,7 @@ namespace SoulRPG
                 return floorData switch
                 {
                     DungeonInstanceFloorData.Item itemData => OnInteractItemAsync(character, itemData),
-                    DungeonInstanceFloorData.SequenceEvent messageData => OnInteractSequenceEventAsync(character,
-                        messageData),
+                    DungeonInstanceFloorData.SequenceEvent sequenceEventData => OnInteractSequenceEventAsync(character, sequenceEventData),
                     _ => UniTask.CompletedTask,
                 };
             }
@@ -437,6 +436,7 @@ namespace SoulRPG
             var inputController = TinyServiceLocator.Resolve<InputController>();
             inputController.PushInputType(InputController.InputType.UI);
             var container = new Container();
+            container.Register<DungeonInstanceFloorData>("CurrentEvent", sequenceData);
             await new Sequencer(container, sequenceData.Sequences.Sequences).PlayAsync(scope.Token);
             inputController.PopInputType();
             EnterAsync(character).Forget();
@@ -614,7 +614,7 @@ namespace SoulRPG
             }
         }
 
-        private void RemoveFloorData(Vector2Int position)
+        public void RemoveFloorData(Vector2Int position)
         {
             if (FloorDatabase.TryGetValue(position, out var floorData))
             {
