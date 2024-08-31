@@ -106,6 +106,7 @@ namespace SoulRPG.SceneControllers
             if (isUseDebugGrowthParameter)
             {
                 player.GrowthParameter.Sync(debugPlayerGrowthParameter, player);
+                player.InstanceStatus.FullRecovery();
             }
 #endif
             foreach (var i in gameRule.InitialItemDatabase)
