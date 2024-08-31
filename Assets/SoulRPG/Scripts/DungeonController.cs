@@ -261,6 +261,7 @@ namespace SoulRPG
 
         public void NextFloor(int floorId)
         {
+            currentFloorId = floorId;
             var masterData = TinyServiceLocator.Resolve<MasterData>();
             var dungeonTables = masterData.DungeonTables.Get(floorId);
             Assert.IsNotNull(dungeonTables, $"ダンジョンが存在しません id:{floorId}");
@@ -433,6 +434,8 @@ namespace SoulRPG
         private async UniTask OnInteractSequenceEventAsync(Character character,
             DungeonInstanceFloorData.SequenceEvent sequenceData)
         {
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            gameEvents.OnRequestChangeMiniMapType.OnNext(Define.MiniMapType.Default);
             var inputController = TinyServiceLocator.Resolve<InputController>();
             inputController.PushInputType(InputController.InputType.UI);
             var container = new Container();
