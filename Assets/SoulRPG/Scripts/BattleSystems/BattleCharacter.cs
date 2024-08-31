@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
-using NUnit.Framework;
 using SoulRPG.BattleSystems.CommandInvokers;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnitySequencerSystem;
 
 namespace SoulRPG
@@ -120,6 +118,11 @@ namespace SoulRPG
             battleAI.Dispose();
             scope.Cancel();
             scope.Dispose();
+        }
+
+        public void ResetTurnCount()
+        {
+            TurnCount = 0;
         }
 
         public float GetTotalCutRate(Define.AttackAttribute attackAttribute, BattleCharacter target, Container container)
