@@ -3533,7 +3533,23 @@ MonoBehaviour:
         CreateRate: 0
       FloorItemGuaranteeds: []
       FloorEnemyGuaranteeds: []
-      FloorEvents: []
+      FloorEvents:
+      - Id: 0
+        DungeonName: Dungeon.10201
+        X: 8
+        Y: 3
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+      - Id: 0
+        DungeonName: Dungeon.10201
+        X: 21
+        Y: 24
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
