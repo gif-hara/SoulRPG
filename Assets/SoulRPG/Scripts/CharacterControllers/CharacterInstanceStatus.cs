@@ -58,10 +58,10 @@ namespace SoulRPG
                 .RegisterTo(character.LifeScope);
 
             int GetHitPointMax() =>
-                (growthParameter.Vitality + growthParameter.Level + character.Equipment.TotalVitality)
+                (growthParameter.Vitality + character.Equipment.TotalVitality)
                 * TinyServiceLocator.Resolve<GameRule>().HitPointAmountRate;
             int GetStaminaMax() =>
-                (growthParameter.Stamina + growthParameter.Level + character.Equipment.TotalStamina)
+                (growthParameter.Stamina + character.Equipment.TotalStamina)
                 * TinyServiceLocator.Resolve<GameRule>().StaminaAmountRate;
         }
 
