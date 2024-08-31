@@ -39,6 +39,8 @@ namespace SoulRPG
 
         public Character Character { get; }
 
+        public int TurnCount { get; private set; }
+
         public bool IsDisposed { get; private set; }
 
         public BattleCharacter(Character character, Define.AllyType allyType, IBattleAI battleAI, BattleCharacterSequences sequences)
@@ -78,6 +80,7 @@ namespace SoulRPG
 
         public async UniTask<bool> TurnStartAsync(BattleCharacter target)
         {
+            TurnCount++;
             UsedSkills.Clear();
             if (!await AilmentController.CanExecutableTurnAsync())
             {
