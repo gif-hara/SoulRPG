@@ -15,11 +15,20 @@ MonoBehaviour:
   sequences:
   - rid: 3561509643546263691
   - rid: 3561509643546263694
+  - rid: 3022426233263357952
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 3022426233263357952
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101038
+        turnCount: 3
+        battleCharacterEvaluator:
+          rid: -2
     - rid: 3561509643546263691
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
