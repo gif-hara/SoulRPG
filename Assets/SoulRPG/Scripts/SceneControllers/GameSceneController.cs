@@ -47,6 +47,12 @@ namespace SoulRPG.SceneControllers
         private bool isUseDebugPosition;
 
         [SerializeField]
+        private CharacterGrowthParameter debugPlayerGrowthParameter;
+
+        [SerializeField]
+        private bool isUseDebugGrowthParameter;
+
+        [SerializeField]
         private string debugPlayerName;
 
         [SerializeField]
@@ -95,6 +101,10 @@ namespace SoulRPG.SceneControllers
             if (isUseDebugPosition)
             {
                 player.Warp(debugPosition);
+            }
+            if (isUseDebugGrowthParameter)
+            {
+                player.GrowthParameter.Sync(debugPlayerGrowthParameter, player);
             }
             foreach (var i in gameRule.InitialItemDatabase)
             {

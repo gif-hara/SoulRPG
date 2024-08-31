@@ -174,6 +174,15 @@ MonoBehaviour:
   debugDungeonName: Dungeon.Home
   debugPosition: {x: 0, y: 0}
   isUseDebugPosition: 0
+  debugPlayerGrowthParameter:
+    level: 11
+    vitality: 9
+    stamina: 5
+    physicalStrength: 16
+    magicalStrength: 10
+    speed: 6
+    behaviourPoint: 3
+  isUseDebugGrowthParameter: 1
   debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
   debugPlayerAttribute: 1
   debugEnemyMasterDataId: 10102
