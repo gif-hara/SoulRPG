@@ -7169,7 +7169,7 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10201
       Name: "\u5730\u5E95\u306E\u9B5A\u4EBA"
-      HitPoint: 188
+      HitPoint: 204
       Stamina: 0
       PhysicalAttack: 20
       MagicalAttack: 20
@@ -7180,7 +7180,7 @@ MonoBehaviour:
       FireCutRate: 0
       ThunderCutRate: -0.22
       Speed: 16
-      Experience: 1044
+      Experience: 1131
       BehaviourPoint: 1
       Attribute: 0
       ThumbnailId: 7
@@ -7193,7 +7193,7 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10202
       Name: "\u8150\u6557\u306E\u6728\u970A"
-      HitPoint: 192
+      HitPoint: 209
       Stamina: 0
       PhysicalAttack: 18
       MagicalAttack: 18
@@ -7204,7 +7204,7 @@ MonoBehaviour:
       FireCutRate: -0.28
       ThunderCutRate: 0.02
       Speed: 27
-      Experience: 1000
+      Experience: 1087
       BehaviourPoint: 1
       Attribute: 0
       ThumbnailId: 3
@@ -7217,7 +7217,7 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10203
       Name: "\u5893\u5730\u6B7B\u8005"
-      HitPoint: 207
+      HitPoint: 225
       Stamina: 0
       PhysicalAttack: 22
       MagicalAttack: 22
@@ -7228,7 +7228,7 @@ MonoBehaviour:
       FireCutRate: 0
       ThunderCutRate: 0.31
       Speed: 18
-      Experience: 1052
+      Experience: 1139
       BehaviourPoint: 1
       Attribute: 0
       ThumbnailId: 1
@@ -7241,18 +7241,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10204
       Name: "\u7B11\u307F\u5F71"
-      HitPoint: 165
+      HitPoint: 124
       Stamina: 0
       PhysicalAttack: 20
       MagicalAttack: 20
-      SlashCutRate: 0
-      BlowCutRate: -0.12
-      ThrustCutRate: 0.24
-      MagicCutRate: 0.31
-      FireCutRate: 0
-      ThunderCutRate: 0.31
+      SlashCutRate: 0.08
+      BlowCutRate: 0.23
+      ThrustCutRate: 0.05
+      MagicCutRate: 0.12
+      FireCutRate: 0.09
+      ThunderCutRate: 0.15
       Speed: 25
-      Experience: 1026
+      Experience: 1113
       BehaviourPoint: 1
       Attribute: 0
       ThumbnailId: 10
@@ -7262,6 +7262,30 @@ MonoBehaviour:
       MoveIntervalSeconds: 0.3
       Thumbnail: {fileID: 21300000, guid: b5aff086f542d1e40acc0b64458195f7, type: 3}
       AISequences: {fileID: 11400000, guid: 6368866bfa8344adcb5249ff9f6ba8e9, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10205
+      Name: "\u865A\u7121\u306E\u9A0E\u58EB"
+      HitPoint: 184
+      Stamina: 0
+      PhysicalAttack: 22
+      MagicalAttack: 22
+      SlashCutRate: 0.18
+      BlowCutRate: 0.16
+      ThrustCutRate: 0.17
+      MagicCutRate: 0.11
+      FireCutRate: 0.09
+      ThunderCutRate: 0.1
+      Speed: 21
+      Experience: 1235
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 6
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.4
+      Thumbnail: {fileID: 21300000, guid: 3c46793dd02f5674bb72660210fdf244, type: 3}
+      AISequences: {fileID: 11400000, guid: b2927497ce51f40fc8e4fa5bc498f3f9, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
@@ -7644,6 +7668,28 @@ MonoBehaviour:
       - Id: 0
         TableId: 10101
         EnemyId: 10105
+        Weight: 100
+    - Key: 10201
+      Value:
+      - Id: 0
+        TableId: 10201
+        EnemyId: 10201
+        Weight: 100
+      - Id: 0
+        TableId: 10201
+        EnemyId: 10202
+        Weight: 100
+      - Id: 0
+        TableId: 10201
+        EnemyId: 10203
+        Weight: 100
+      - Id: 0
+        TableId: 10201
+        EnemyId: 10204
+        Weight: 100
+      - Id: 0
+        TableId: 10201
+        EnemyId: 10205
         Weight: 100
     - Key: 11101
       Value:
