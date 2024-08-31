@@ -2262,7 +2262,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 5
         EnemyPositionY: 5
-        EnemyTableId: 2
+        EnemyTableId: 10101
       FloorEnemyNoCosts: []
       WallEvents: []
       FloorItemGuaranteeds:
@@ -2476,7 +2476,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 5
         EnemyPositionY: 10
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 3
         DungeonName: Dungeon.10101
         X: 3
@@ -2484,7 +2484,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 0
         EnemyPositionY: 10
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 4
         DungeonName: Dungeon.10101
         X: 2
@@ -2492,7 +2492,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 1
         EnemyPositionY: 14
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 5
         DungeonName: Dungeon.10101
         X: 6
@@ -2500,7 +2500,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 7
         EnemyPositionY: 14
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 6
         DungeonName: Dungeon.10101
         X: 10
@@ -2508,7 +2508,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 9
         EnemyPositionY: 15
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 7
         DungeonName: Dungeon.10101
         X: 11
@@ -2516,7 +2516,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 13
         EnemyPositionY: 15
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 8
         DungeonName: Dungeon.10101
         X: 11
@@ -2524,7 +2524,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 12
         EnemyPositionY: 15
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 9
         DungeonName: Dungeon.10101
         X: 9
@@ -2532,7 +2532,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 9
         EnemyPositionY: 19
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 10
         DungeonName: Dungeon.10101
         X: 7
@@ -2540,7 +2540,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 5
         EnemyPositionY: 18
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 11
         DungeonName: Dungeon.10101
         X: 12
@@ -2548,7 +2548,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 11
         EnemyPositionY: 19
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 12
         DungeonName: Dungeon.10101
         X: 2
@@ -2556,7 +2556,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 2
         EnemyPositionY: 24
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 13
         DungeonName: Dungeon.10101
         X: 7
@@ -2564,7 +2564,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 5
         EnemyPositionY: 23
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 14
         DungeonName: Dungeon.10101
         X: 16
@@ -2572,7 +2572,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 18
         EnemyPositionY: 24
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 15
         DungeonName: Dungeon.10101
         X: 16
@@ -2580,7 +2580,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 20
         EnemyPositionY: 22
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 16
         DungeonName: Dungeon.10101
         X: 22
@@ -2588,7 +2588,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 24
         EnemyPositionY: 23
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 17
         DungeonName: Dungeon.10101
         X: 17
@@ -2596,7 +2596,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 18
         EnemyPositionY: 15
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 18
         DungeonName: Dungeon.10101
         X: 21
@@ -2604,7 +2604,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 21
         EnemyPositionY: 12
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 19
         DungeonName: Dungeon.10101
         X: 24
@@ -2612,7 +2612,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 24
         EnemyPositionY: 12
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 20
         DungeonName: Dungeon.10101
         X: 17
@@ -2620,7 +2620,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 15
         EnemyPositionY: 7
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 21
         DungeonName: Dungeon.10101
         X: 18
@@ -2628,7 +2628,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 18
         EnemyPositionY: 8
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 22
         DungeonName: Dungeon.10101
         X: 21
@@ -2636,7 +2636,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 21
         EnemyPositionY: 8
-        EnemyTableId: 2
+        EnemyTableId: 10101
       - Id: 23
         DungeonName: Dungeon.10101
         X: 14
@@ -2644,7 +2644,7 @@ MonoBehaviour:
         ItemTableId: 1
         EnemyPositionX: 14
         EnemyPositionY: 3
-        EnemyTableId: 2
+        EnemyTableId: 10101
       FloorEnemyNoCosts: []
       WallEvents:
       - Id: 10101.(10,09).(11,09).0.Door
@@ -2852,7 +2852,7 @@ MonoBehaviour:
       - DungeonName: Dungeon.10101
         X: 11
         Y: 4
-        EnemyTableId: 3
+        EnemyTableId: 11101
       FloorEvents:
       - Id: 0
         DungeonName: Dungeon.10101
@@ -7059,7 +7059,7 @@ MonoBehaviour:
       MagicCutRate: 0
       FireCutRate: 0
       ThunderCutRate: 0
-      Speed: 6
+      Speed: 11
       Experience: 122
       BehaviourPoint: 1
       Attribute: 1
@@ -7073,7 +7073,7 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10102
       Name: "\u30B4\u30D6\u30EA\u30F3"
-      HitPoint: 58
+      HitPoint: 43
       Stamina: 0
       PhysicalAttack: 15
       MagicalAttack: 15
@@ -7083,7 +7083,7 @@ MonoBehaviour:
       MagicCutRate: 0.01
       FireCutRate: 0.02
       ThunderCutRate: 0.06
-      Speed: 6
+      Speed: 8
       Experience: 158
       BehaviourPoint: 1
       Attribute: 1
@@ -7097,7 +7097,7 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10103
       Name: "\u30D8\u30C9\u30ED\u30B9\u30E9\u30A4\u30E0"
-      HitPoint: 45
+      HitPoint: 34
       Stamina: 0
       PhysicalAttack: 12
       MagicalAttack: 12
@@ -7107,7 +7107,7 @@ MonoBehaviour:
       MagicCutRate: 0.08
       FireCutRate: 0.6
       ThunderCutRate: 0.08
-      Speed: 5
+      Speed: 8
       Experience: 146
       BehaviourPoint: 1
       Attribute: 2
@@ -7121,7 +7121,7 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10104
       Name: "\u546A\u3044\u306E\u4EBA\u5F62"
-      HitPoint: 57
+      HitPoint: 43
       Stamina: 0
       PhysicalAttack: 15
       MagicalAttack: 15
@@ -7131,7 +7131,7 @@ MonoBehaviour:
       MagicCutRate: 0.09
       FireCutRate: -0.2
       ThunderCutRate: 0.06
-      Speed: 7
+      Speed: 11
       Experience: 170
       BehaviourPoint: 1
       Attribute: 1
@@ -7144,6 +7144,30 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 9bf75c17ce2c1407ebb81d07c8e59355, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10105
+      Name: "\u30D2\u30E3\u30AF\u30E1\u306E\u8349\u7389"
+      HitPoint: 41
+      Stamina: 0
+      PhysicalAttack: 14
+      MagicalAttack: 14
+      SlashCutRate: 0.08
+      BlowCutRate: 0.12
+      ThrustCutRate: 0.04
+      MagicCutRate: 0.23
+      FireCutRate: -0.3
+      ThunderCutRate: 0.2
+      Speed: 8
+      Experience: 164
+      BehaviourPoint: 1
+      Attribute: 5
+      ThumbnailId: 16
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.4
+      Thumbnail: {fileID: 21300000, guid: c08e9fb6f962087459995806729d19af, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
       HitPoint: 422
       Stamina: 0
@@ -7155,10 +7179,10 @@ MonoBehaviour:
       MagicCutRate: 0.09
       FireCutRate: 0.12
       ThunderCutRate: 0.06
-      Speed: 7
+      Speed: 16
       Experience: 2055
       BehaviourPoint: 1
-      Attribute: 5
+      Attribute: 0
       ThumbnailId: 20
       BattleBgmId: 1
       SequencesId: 10105
@@ -7167,30 +7191,6 @@ MonoBehaviour:
       Thumbnail: {fileID: 21300000, guid: b734fc263697e48049f437555386150e, type: 3}
       AISequences: {fileID: 11400000, guid: 081d14a8dd78045c9a95ca9c1f7ff551, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 4f081eff7afdef04da4b3efa8e407c0e, type: 2}
-    - Id: 10201
-      Name: 10201
-      HitPoint: 165
-      Stamina: 0
-      PhysicalAttack: 29
-      MagicalAttack: 29
-      SlashCutRate: 0.08
-      BlowCutRate: 0.12
-      ThrustCutRate: 0.04
-      MagicCutRate: 0.23
-      FireCutRate: 0.21
-      ThunderCutRate: 0.2
-      Speed: 12
-      Experience: 1218
-      BehaviourPoint: 1
-      Attribute: 0
-      ThumbnailId: 0
-      BattleBgmId: 0
-      SequencesId: 0
-      FieldOfVision: 5
-      MoveIntervalSeconds: 0.4
-      Thumbnail: {fileID: 21300000, guid: 451c84df08f3dbc498cc5a0e6900dd43, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
-      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
   ailments:
     list:
     - Id: 101001
@@ -7531,31 +7531,29 @@ MonoBehaviour:
         TableId: 1
         EnemyId: 10101
         Weight: 100
-    - Key: 2
+    - Key: 10101
       Value:
       - Id: 0
-        TableId: 2
+        TableId: 10101
         EnemyId: 10102
         Weight: 100
       - Id: 0
-        TableId: 2
+        TableId: 10101
         EnemyId: 10103
         Weight: 100
       - Id: 0
-        TableId: 2
+        TableId: 10101
         EnemyId: 10104
         Weight: 100
-    - Key: 3
-      Value:
       - Id: 0
-        TableId: 3
+        TableId: 10101
         EnemyId: 10105
         Weight: 100
-    - Key: 10201
+    - Key: 11101
       Value:
       - Id: 0
-        TableId: 10201
-        EnemyId: 10201
+        TableId: 11101
+        EnemyId: 19901
         Weight: 100
   dungeonTables:
     list:
