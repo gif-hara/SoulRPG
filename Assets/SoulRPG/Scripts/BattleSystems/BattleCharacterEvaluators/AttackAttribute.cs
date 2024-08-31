@@ -19,6 +19,10 @@ namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
 
         public bool Evaluate(BattleCharacter actor, BattleCharacter target, Container container)
         {
+            if (!container.Contains<Define.AttackAttribute>(key))
+            {
+                return false;
+            }
             var targetAttackAttribute = container.Resolve<Define.AttackAttribute>(key);
             return attackAttributes.Contains(targetAttackAttribute);
         }
