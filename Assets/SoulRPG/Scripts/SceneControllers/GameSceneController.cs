@@ -98,6 +98,7 @@ namespace SoulRPG.SceneControllers
                 );
             TinyServiceLocator.Register(dungeonController);
             explorationView.Open(destroyCancellationToken);
+#if DEBUG
             if (isUseDebugPosition)
             {
                 player.Warp(debugPosition);
@@ -106,6 +107,7 @@ namespace SoulRPG.SceneControllers
             {
                 player.GrowthParameter.Sync(debugPlayerGrowthParameter, player);
             }
+#endif
             foreach (var i in gameRule.InitialItemDatabase)
             {
                 player.Inventory.Add(i.ItemId, i.Count);
