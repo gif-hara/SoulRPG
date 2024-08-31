@@ -3127,22 +3127,6 @@ MonoBehaviour:
         EnemyTableId: 10201
       FloorEnemyNoCosts:
       - DungeonName: Dungeon.10201
-        X: 6
-        Y: 25
-        EnemyTableId: 10201
-      - DungeonName: Dungeon.10201
-        X: 4
-        Y: 23
-        EnemyTableId: 10201
-      - DungeonName: Dungeon.10201
-        X: 8
-        Y: 23
-        EnemyTableId: 10201
-      - DungeonName: Dungeon.10201
-        X: 6
-        Y: 21
-        EnemyTableId: 10201
-      - DungeonName: Dungeon.10201
         X: 1
         Y: 21
         EnemyTableId: 10201
@@ -7321,12 +7305,36 @@ MonoBehaviour:
       Attribute: 0
       ThumbnailId: 20
       BattleBgmId: 1
-      SequencesId: 10105
+      SequencesId: 19901
       FieldOfVision: 0
       MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: b734fc263697e48049f437555386150e, type: 3}
       AISequences: {fileID: 11400000, guid: 081d14a8dd78045c9a95ca9c1f7ff551, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 4f081eff7afdef04da4b3efa8e407c0e, type: 2}
+    - Id: 19902
+      Name: "\u96F7\u8853\u306E\u821E\u8E0F\u8005\u3001\u30A8\u30DC\u30CB\u30A2"
+      HitPoint: 1676
+      Stamina: 0
+      PhysicalAttack: 48
+      MagicalAttack: 48
+      SlashCutRate: 0.03
+      BlowCutRate: 0.04
+      ThrustCutRate: 0.08
+      MagicCutRate: 0.13
+      FireCutRate: 0.09
+      ThunderCutRate: 0.63
+      Speed: 33
+      Experience: 10788
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 24
+      BattleBgmId: 1
+      SequencesId: 19902
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 52839ede9c03d495ea99893dd22d6e4d, type: 3}
+      AISequences: {fileID: 11400000, guid: 292cb2e96f0184bfc90e3cb84372977b, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: d8e875add8519464a91b38cb342a7c1e, type: 2}
   ailments:
     list:
     - Id: 101001
