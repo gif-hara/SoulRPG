@@ -34,6 +34,6 @@ MonoBehaviour:
     - rid: 9047573786005602377
       type: {class: AttackPowerOnly, ns: SoulRPG.BattleSystems.RecoveryCalculators, asm: Assembly-CSharp}
       data:
-        rate: 1
+        rate: 0.5
         attackType: 1
         targetType: 0
