@@ -18,6 +18,10 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 3022426235333247054
+      type: {class: Percentage, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        rate: 0.02
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -28,11 +32,7 @@ MonoBehaviour:
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         damageCalculator:
-          rid: 7538228103530414691
+          rid: 3022426235333247054
         targetType: 0
         giveDamageType: 1
         sfxName: Sfx.Message.2
-    - rid: 7538228103530414691
-      type: {class: Constant, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
-      data:
-        damage: 50
