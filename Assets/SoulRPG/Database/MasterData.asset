@@ -2858,10 +2858,10 @@ MonoBehaviour:
         DungeonName: Dungeon.10101
         X: 12
         Y: 6
-        ViewName: Npc.0
-        SequenceId: 102002
-        PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
-        Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
+        ViewName: NextFloor
+        SequenceId: 101005
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: af3d26f33bc514602b161cc6d308484a, type: 2}
       - Id: 0
         DungeonName: Dungeon.10101
         X: 12
@@ -2874,6 +2874,14 @@ MonoBehaviour:
         DungeonName: Dungeon.10101
         X: 14
         Y: 1
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+      - Id: 0
+        DungeonName: Dungeon.10101
+        X: 10
+        Y: 6
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
@@ -3516,7 +3524,11 @@ MonoBehaviour:
         NegativeSideCondition: None
         CreateRate: 0
       FloorItemGuaranteeds: []
-      FloorEnemyGuaranteeds: []
+      FloorEnemyGuaranteeds:
+      - DungeonName: Dungeon.10201
+        X: 17
+        Y: 21
+        EnemyTableId: 11201
       FloorEvents:
       - Id: 0
         DungeonName: Dungeon.10201
@@ -3534,6 +3546,22 @@ MonoBehaviour:
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
         Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+      - Id: 0
+        DungeonName: Dungeon.10201
+        X: 18
+        Y: 19
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+      - Id: 0
+        DungeonName: Dungeon.10201
+        X: 16
+        Y: 19
+        ViewName: Npc.0
+        SequenceId: 102002
+        PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
+        Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
@@ -7745,9 +7773,23 @@ MonoBehaviour:
         TableId: 11101
         EnemyId: 19901
         Weight: 100
+    - Key: 11201
+      Value:
+      - Id: 0
+        TableId: 11201
+        EnemyId: 19902
+        Weight: 100
+      - Id: 0
+        TableId: 11201
+        EnemyId: 19903
+        Weight: 100
   dungeonTables:
     list:
     - Key: 1
       Value:
       - FloorId: 1
         DungeonName: Dungeon.10101
+    - Key: 2
+      Value:
+      - FloorId: 2
+        DungeonName: Dungeon.10201

@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 101005.0
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 9047573942057041923
+  - rid: 9047573942057041924
+  - rid: 9047573942057041920
+  - rid: 3022426235333247061
+  - rid: 9047573942057041922
+  - rid: 9047573942057041921
+  references:
+    version: 2
+    RefIds:
+    - rid: 3022426235333247061
+      type: {class: NextFloor, ns: SoulRPG, asm: Assembly-CSharp}
+      data: 
+    - rid: 9047573942057041920
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 0, g: 0, b: 0, a: 0}
+        to: {r: 0, g: 0, b: 0, a: 1}
+        duration: 0.5
+    - rid: 9047573942057041921
+      type: {class: BeginFadeTo, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        to: {r: 0, g: 0, b: 0, a: 0}
+        duration: 1
+    - rid: 9047573942057041922
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1
+    - rid: 9047573942057041923
+      type: {class: PlaySfx, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        sfxName: Sfx.Message.23
+    - rid: 9047573942057041924
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 1, g: 1, b: 1, a: 0.5019608}
+        to: {r: 1, g: 1, b: 1, a: 0}
+        duration: 0.3
