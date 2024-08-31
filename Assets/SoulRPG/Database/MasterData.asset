@@ -7158,7 +7158,7 @@ MonoBehaviour:
       Speed: 8
       Experience: 164
       BehaviourPoint: 1
-      Attribute: 5
+      Attribute: 32
       ThumbnailId: 16
       BattleBgmId: 0
       SequencesId: 0
@@ -7182,7 +7182,7 @@ MonoBehaviour:
       Speed: 16
       Experience: 1131
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 7
       BattleBgmId: 0
       SequencesId: 0
@@ -7206,7 +7206,7 @@ MonoBehaviour:
       Speed: 27
       Experience: 1087
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 32
       ThumbnailId: 3
       BattleBgmId: 0
       SequencesId: 0
@@ -7230,7 +7230,7 @@ MonoBehaviour:
       Speed: 18
       Experience: 1139
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 1
       BattleBgmId: 0
       SequencesId: 0
@@ -7254,7 +7254,7 @@ MonoBehaviour:
       Speed: 25
       Experience: 1113
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 64
       ThumbnailId: 10
       BattleBgmId: 0
       SequencesId: 0
@@ -7278,7 +7278,7 @@ MonoBehaviour:
       Speed: 21
       Experience: 1235
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 5
       ThumbnailId: 6
       BattleBgmId: 0
       SequencesId: 0
@@ -7302,7 +7302,7 @@ MonoBehaviour:
       Speed: 16
       Experience: 2055
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 5
       ThumbnailId: 20
       BattleBgmId: 1
       SequencesId: 19901
@@ -7326,7 +7326,7 @@ MonoBehaviour:
       Speed: 33
       Experience: 10788
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 5
       ThumbnailId: 24
       BattleBgmId: 1
       SequencesId: 19902
