@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 19903.1.1
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 3022426233263358037
+  - rid: 3022425832378073189
+  - rid: 3022425832378073187
+  - rid: 3022425832378073188
+  - rid: 3022425832378073198
+  - rid: 3022426233263357955
+  - rid: 9047573634008219745
+  - rid: 3022426233263357953
+  - rid: 3022426235333247055
+  - rid: 3022426235333247056
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 3022425832378073187
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u6211\u306F\u307E\u3060\u71C3\u3048\u5C3D\u304D\u3066\u304A\u3089\u306C\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 3022425832378073188
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u3053\u3053\u304B\u3089\u304C\u4FFA\u306E\u672C\u6C17\u3060\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 3022425832378073189
+      type: {class: ChangeEnemyAI, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        scriptableSequences: {fileID: 11400000, guid: f7850400d1d4b4afc919438ed4078b19, type: 2}
+    - rid: 3022425832378073198
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u3053\u306E\u7344\u708E\u3067\u8CB4\u69D8\u3092\u713C\u304D\u5C3D\u304F\u3059\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 3022426233263357953
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u8D64\u9ED2\u3044\u708E\u3092\u7E8F\u3063\u305F\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 3022426233263357955
+      type: {class: PlaySfx, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        sfxName: Sfx.Message.9
+    - rid: 3022426233263358037
+      type: {class: ResetBattleCharacterTurnCount, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+    - rid: 3022426235333247055
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101003
+        turnCount: -1
+        battleCharacterEvaluator:
+          rid: -2
+    - rid: 3022426235333247056
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101004
+        turnCount: -1
+        battleCharacterEvaluator:
+          rid: -2
+    - rid: 9047573634008219745
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 0.8792453, g: 0.8792453, b: 0.8792453, a: 1}
+        to: {r: 0.88235295, g: 0.88235295, b: 0.88235295, a: 0}
+        duration: 0.5
