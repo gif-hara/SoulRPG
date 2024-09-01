@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
+using HK.Framework;
 using R3;
 using SoulRPG.CharacterControllers;
 using Unity.Mathematics;
@@ -239,6 +240,19 @@ namespace SoulRPG
                                 }
                             );
                         },
+                        element =>
+                        {
+                            GameListView.ApplyAsSimpleElement
+                            (
+                                element,
+                                "想定経験値獲得",
+                                _ =>
+                                {
+                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    stateMachine.Change(StateSelectDungeonExperienceAsync);
+                                }
+                            );
+                        },
                     },
                     0
                 );
@@ -355,6 +369,65 @@ namespace SoulRPG
                 UnityEngine.Object.Destroy(listDocument.gameObject);
             }
 
+            async UniTask StateSelectDungeonExperienceAsync(CancellationToken scope)
+            {
+                inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        AudioManager.PlaySFX("Sfx.Cancel.0");
+                        stateMachine.Change(StateRootAsync);
+                    })
+                    .RegisterTo(scope);
+                var masterData = TinyServiceLocator.Resolve<MasterData>();
+                var dungeonLevels = new[] { 1, 2, 3 };
+                var listElements = masterData.DungeonSpecs.List
+                    .Select(x => new Action<HKUIDocument>
+                        (
+                            element =>
+                            {
+                                GameListView.ApplyAsSimpleElement
+                                (
+                                    element,
+                                    $"{x.Id}",
+                                    async _ =>
+                                    {
+                                        var isAcquireBossExperience = await ConfirmAsync(documentBundlePrefab, "ボスの経験値も獲得しますか？", new[] { "はい", "いいえ" }, scope);
+                                        AudioManager.PlaySFX("Sfx.Message.0");
+                                        var result = 0;
+                                        var max = UnityEngine.Random.Range(x.EnemyPlaceItemNumberMin, x.EnemyPlaceItemNumberMax);
+                                        for (var i = 0; i < max; i++)
+                                        {
+                                            var enemyTableId = x.FloorItemEnemyPlaces[UnityEngine.Random.Range(0, x.FloorItemEnemyPlaces.Count)].EnemyTableId;
+                                            var enemy = masterData.EnemyTables.Get(enemyTableId).Lottery().EnemyId.GetMasterDataEnemy();
+                                            result += enemy.Experience;
+                                        }
+                                        if (isAcquireBossExperience == 0)
+                                        {
+                                            foreach (var i in x.FloorEnemyGuaranteeds)
+                                            {
+                                                var enemy = masterData.EnemyTables.Get(i.EnemyTableId).Lottery().EnemyId.GetMasterDataEnemy();
+                                                result += enemy.Experience;
+                                            }
+                                        }
+                                        max = UnityEngine.Random.Range(x.NoCostEnemyNumberMin, x.NoCostEnemyNumberMax);
+                                        for (var i = 0; i < max; i++)
+                                        {
+                                            var enemyTableId = x.FloorEnemyNoCosts[UnityEngine.Random.Range(0, x.FloorEnemyNoCosts.Count)].EnemyTableId;
+                                            var enemy = masterData.EnemyTables.Get(enemyTableId).Lottery().EnemyId.GetMasterDataEnemy();
+                                            result += enemy.Experience;
+                                        }
+                                        player.InstanceStatus.AddExperience(result);
+                                        ConfirmOkOnlyAsync(documentBundlePrefab, $"想定経験値\"{result}\"を獲得しました。", scope).Forget();
+                                    }
+                                );
+                            }
+                        )
+                    );
+                var listDocument = CreateList(documentBundlePrefab, listElements, 0);
+                await UniTask.WaitUntilCanceled(scope);
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+            }
+
             static HKUIDocument CreateList
             (
                 HKUIDocument documentBundlePrefab,
@@ -378,6 +451,17 @@ namespace SoulRPG
             )
             {
                 return DialogView.ConfirmAsync(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"), message, new[] { "OK" }, 0, scope);
+            }
+
+            static UniTask<int> ConfirmAsync
+            (
+                HKUIDocument documentBundlePrefab,
+                string message,
+                string[] buttons,
+                CancellationToken scope
+            )
+            {
+                return DialogView.ConfirmAsync(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"), message, buttons, 0, scope);
             }
         }
 
