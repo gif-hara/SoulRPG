@@ -7208,7 +7208,7 @@ MonoBehaviour:
       FireCutRate: 0
       ThunderCutRate: -0.22
       Speed: 9
-      Experience: 8962
+      Experience: 2153
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 7
@@ -7232,7 +7232,7 @@ MonoBehaviour:
       FireCutRate: -0.28
       ThunderCutRate: 0.02
       Speed: 12
-      Experience: 8732
+      Experience: 1958
       BehaviourPoint: 1
       Attribute: 32
       ThumbnailId: 3
@@ -7256,7 +7256,7 @@ MonoBehaviour:
       FireCutRate: 0
       ThunderCutRate: 0.31
       Speed: 9
-      Experience: 9192
+      Experience: 2192
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 1
@@ -7280,7 +7280,7 @@ MonoBehaviour:
       FireCutRate: 0.09
       ThunderCutRate: 0.15
       Speed: 12
-      Experience: 8893
+      Experience: 2134
       BehaviourPoint: 1
       Attribute: 64
       ThumbnailId: 10
@@ -7304,7 +7304,7 @@ MonoBehaviour:
       FireCutRate: 0.09
       ThunderCutRate: 0.1
       Speed: 7
-      Experience: 9054
+      Experience: 2114
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 6
@@ -7317,18 +7317,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
-      HitPoint: 249
+      HitPoint: 268
       Stamina: 0
-      PhysicalAttack: 25
-      MagicalAttack: 25
+      PhysicalAttack: 29
+      MagicalAttack: 29
       SlashCutRate: 0.04
       BlowCutRate: 0.05
       ThrustCutRate: 0
       MagicCutRate: 0.09
       FireCutRate: 0.12
       ThunderCutRate: 0.06
-      Speed: 6
-      Experience: 13320
+      Speed: 7
+      Experience: 11010
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 20
@@ -7352,7 +7352,7 @@ MonoBehaviour:
       FireCutRate: 0.09
       ThunderCutRate: 0.63
       Speed: 12
-      Experience: 94320
+      Experience: 39300
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 24
@@ -7376,7 +7376,7 @@ MonoBehaviour:
       FireCutRate: 0.53
       ThunderCutRate: -0.11
       Speed: 10
-      Experience: 94320
+      Experience: 39300
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 23
