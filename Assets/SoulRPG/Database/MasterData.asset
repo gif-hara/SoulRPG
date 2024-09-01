@@ -7208,7 +7208,7 @@ MonoBehaviour:
       FireCutRate: 0
       ThunderCutRate: -0.22
       Speed: 9
-      Experience: 2153
+      Experience: 2068
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 7
@@ -7232,7 +7232,7 @@ MonoBehaviour:
       FireCutRate: -0.28
       ThunderCutRate: 0.02
       Speed: 12
-      Experience: 1958
+      Experience: 1953
       BehaviourPoint: 1
       Attribute: 32
       ThumbnailId: 3
@@ -7256,7 +7256,7 @@ MonoBehaviour:
       FireCutRate: 0
       ThunderCutRate: 0.31
       Speed: 9
-      Experience: 2192
+      Experience: 2137
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 1
@@ -7280,7 +7280,7 @@ MonoBehaviour:
       FireCutRate: 0.09
       ThunderCutRate: 0.15
       Speed: 12
-      Experience: 2134
+      Experience: 2114
       BehaviourPoint: 1
       Attribute: 64
       ThumbnailId: 10
@@ -7304,7 +7304,7 @@ MonoBehaviour:
       FireCutRate: 0.09
       ThunderCutRate: 0.1
       Speed: 7
-      Experience: 2114
+      Experience: 2091
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 6
@@ -7341,10 +7341,10 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 4f081eff7afdef04da4b3efa8e407c0e, type: 2}
     - Id: 19902
       Name: "\u96F7\u8853\u306E\u821E\u8E0F\u8005\u3001\u30A8\u30DC\u30CB\u30A2"
-      HitPoint: 1091
+      HitPoint: 1273
       Stamina: 0
-      PhysicalAttack: 37
-      MagicalAttack: 37
+      PhysicalAttack: 44
+      MagicalAttack: 44
       SlashCutRate: 0.03
       BlowCutRate: 0.04
       ThrustCutRate: 0.08
@@ -7365,10 +7365,10 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: d8e875add8519464a91b38cb342a7c1e, type: 2}
     - Id: 19903
       Name: "\u6012\u308A\u306E\u708E\u3001\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8"
-      HitPoint: 999
+      HitPoint: 1161
       Stamina: 0
-      PhysicalAttack: 38
-      MagicalAttack: 38
+      PhysicalAttack: 46
+      MagicalAttack: 46
       SlashCutRate: 0.14
       BlowCutRate: 0.21
       ThrustCutRate: 0.15
