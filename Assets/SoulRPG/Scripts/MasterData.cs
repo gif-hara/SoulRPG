@@ -104,6 +104,7 @@ namespace SoulRPG
                 "Dungeon.Home",
                 "Dungeon.10101",
                 "Dungeon.10201",
+                "Dungeon.10301",
             };
             var masterDataNames = new[]
             {
