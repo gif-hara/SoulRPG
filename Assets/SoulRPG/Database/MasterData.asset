@@ -7982,16 +7982,16 @@ MonoBehaviour:
       FireCutRate: 0.77
       ThunderCutRate: 0.11
       Speed: 8
-      Experience: 4172
+      Experience: 5594
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 17
       ThumbnailId: 8
       BattleBgmId: 0
       SequencesId: 0
       FieldOfVision: 5
       MoveIntervalSeconds: 0.4
       Thumbnail: {fileID: 21300000, guid: 3f08162a8df4f2e44984a883e21d51ce, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      AISequences: {fileID: 11400000, guid: c7bd361a7cb935940b904544ee39fae0, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10207
       Name: "\u5869\u9178\u30A8\u30B9\u30AB\u30EB\u30B4"
@@ -8006,9 +8006,9 @@ MonoBehaviour:
       FireCutRate: 0.1
       ThunderCutRate: 0.02
       Speed: 7
-      Experience: 3976
+      Experience: 5331
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 8
       ThumbnailId: 15
       BattleBgmId: 0
       SequencesId: 0
@@ -8030,9 +8030,9 @@ MonoBehaviour:
       FireCutRate: 0.09
       ThunderCutRate: 0.05
       Speed: 14
-      Experience: 4025
+      Experience: 5397
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 64
       ThumbnailId: 9
       BattleBgmId: 0
       SequencesId: 0
@@ -8054,9 +8054,9 @@ MonoBehaviour:
       FireCutRate: 0.18
       ThunderCutRate: 0.13
       Speed: 10
-      Experience: 4221
+      Experience: 5660
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 2
       ThumbnailId: 5
       BattleBgmId: 0
       SequencesId: 0
@@ -8078,9 +8078,9 @@ MonoBehaviour:
       FireCutRate: 0.02
       ThunderCutRate: 0.01
       Speed: 11
-      Experience: 4221
+      Experience: 5660
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 13
       BattleBgmId: 0
       SequencesId: 0
@@ -8117,8 +8117,8 @@ MonoBehaviour:
       Name: "\u96F7\u8853\u306E\u821E\u8E0F\u8005\u3001\u30A8\u30DC\u30CB\u30A2"
       HitPoint: 1273
       Stamina: 0
-      PhysicalAttack: 44
-      MagicalAttack: 44
+      PhysicalAttack: 51
+      MagicalAttack: 51
       SlashCutRate: 0.03
       BlowCutRate: 0.04
       ThrustCutRate: 0.08
@@ -8126,7 +8126,7 @@ MonoBehaviour:
       FireCutRate: 0.09
       ThunderCutRate: 0.63
       Speed: 12
-      Experience: 39300
+      Experience: 23270
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 24
@@ -8141,8 +8141,8 @@ MonoBehaviour:
       Name: "\u6012\u308A\u306E\u708E\u3001\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8"
       HitPoint: 1161
       Stamina: 0
-      PhysicalAttack: 46
-      MagicalAttack: 46
+      PhysicalAttack: 54
+      MagicalAttack: 54
       SlashCutRate: 0.14
       BlowCutRate: 0.21
       ThrustCutRate: 0.15
@@ -8150,7 +8150,7 @@ MonoBehaviour:
       FireCutRate: 0.53
       ThunderCutRate: -0.11
       Speed: 10
-      Experience: 39300
+      Experience: 23270
       BehaviourPoint: 1
       Attribute: 5
       ThumbnailId: 23
