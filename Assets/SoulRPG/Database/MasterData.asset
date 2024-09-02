@@ -8021,8 +8021,8 @@ MonoBehaviour:
       Name: "\u9ED2\u72FC"
       HitPoint: 249
       Stamina: 0
-      PhysicalAttack: 22
-      MagicalAttack: 22
+      PhysicalAttack: 24
+      MagicalAttack: 24
       SlashCutRate: 0.05
       BlowCutRate: 0.05
       ThrustCutRate: 0.04
@@ -8039,21 +8039,21 @@ MonoBehaviour:
       FieldOfVision: 5
       MoveIntervalSeconds: 0.25
       Thumbnail: {fileID: 21300000, guid: cb65593048730a34996a98172ff03359, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      AISequences: {fileID: 11400000, guid: 7f823724a8424f54cb2915765b470469, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10209
       Name: "\u5236\u88C1\u306E\u76EE\u7389"
       HitPoint: 150
       Stamina: 0
-      PhysicalAttack: 24
-      MagicalAttack: 24
+      PhysicalAttack: 19
+      MagicalAttack: 19
       SlashCutRate: 0.2
       BlowCutRate: 0.18
       ThrustCutRate: 0.05
       MagicCutRate: 0.22
       FireCutRate: 0.18
       ThunderCutRate: 0.13
-      Speed: 10
+      Speed: 15
       Experience: 5660
       BehaviourPoint: 1
       Attribute: 2
@@ -8063,7 +8063,7 @@ MonoBehaviour:
       FieldOfVision: 5
       MoveIntervalSeconds: 0.4
       Thumbnail: {fileID: 21300000, guid: 81c4367eaa5f3a0408c029ffb12df87c, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      AISequences: {fileID: 11400000, guid: 3eae48f5137300043845515eefcf7b01, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10210
       Name: "\u5948\u843D\u306E\u767D\u970A"
@@ -8087,7 +8087,7 @@ MonoBehaviour:
       FieldOfVision: 5
       MoveIntervalSeconds: 0.4
       Thumbnail: {fileID: 21300000, guid: b9fb1e83250fbbb4e996b7d76b895f17, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      AISequences: {fileID: 11400000, guid: 8632ee97240a2d5418be611caa1e950c, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
