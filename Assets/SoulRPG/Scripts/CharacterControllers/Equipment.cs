@@ -341,6 +341,7 @@ namespace SoulRPG
                             {
                                 i.Value = x.itemId;
                                 gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。空いてる武器枠に装備した。"));
+                                character.Events.OnChangedEquipment.OnNext(Unit.Default);
                                 break;
                             }
                         }
@@ -349,21 +350,25 @@ namespace SoulRPG
                     {
                         headId.Value = x.itemId;
                         gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。頭に装備した。"));
+                        character.Events.OnChangedEquipment.OnNext(Unit.Default);
                     }
                     else if (x.itemId.TryGetMasterDataArmorBody(out var masterDataArmorBody) && bodyId.Value == 0)
                     {
                         bodyId.Value = x.itemId;
                         gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。胴に装備した。"));
+                        character.Events.OnChangedEquipment.OnNext(Unit.Default);
                     }
                     else if (x.itemId.TryGetMasterDataArmorArms(out var masterDataArmorArms) && armId.Value == 0)
                     {
                         armId.Value = x.itemId;
                         gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。腕に装備した。"));
+                        character.Events.OnChangedEquipment.OnNext(Unit.Default);
                     }
                     else if (x.itemId.TryGetMasterDataArmorLegs(out var masterDataArmorLegs) && legId.Value == 0)
                     {
                         legId.Value = x.itemId;
                         gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。脚に装備した。"));
+                        character.Events.OnChangedEquipment.OnNext(Unit.Default);
                     }
                     else if (x.itemId.TryGetMasterDataAccessory(out var masterDataAccessory))
                     {
@@ -373,6 +378,7 @@ namespace SoulRPG
                             {
                                 i.Value = x.itemId;
                                 gameEvents.OnRequestShowMessage.OnNext(new("使えそうだ。空いてるアクセサリー枠に装備した。"));
+                                character.Events.OnChangedEquipment.OnNext(Unit.Default);
                                 break;
                             }
                         }
