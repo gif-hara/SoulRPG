@@ -8015,7 +8015,7 @@ MonoBehaviour:
       FieldOfVision: 5
       MoveIntervalSeconds: 0.4
       Thumbnail: {fileID: 21300000, guid: e1fe2b12d51fa5e4f9b6b880ce231276, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      AISequences: {fileID: 11400000, guid: b8baf931c7936254c9377d887b87006a, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 10208
       Name: "\u9ED2\u72FC"
