@@ -31,12 +31,12 @@ namespace SoulRPG
             SetValue("MagicalAttack", character.GrowthParameter.MagicalStrength.ToString());
             SetValue("Speed", (character.GrowthParameter.Speed + character.Equipment.TotalSpeed).ToString());
             SetValue("BehaviourPoint", string.Concat(Enumerable.Repeat("<sprite name=\"BehaviourPoint\">", character.GrowthParameter.BehaviourPoint)));
-            SetValue("CutRate.Slash", $"{character.Equipment.TotalSlashCutRate.ToPercentage()}%");
-            SetValue("CutRate.Blow", $"{character.Equipment.TotalBlowCutRate.ToPercentage()}%");
-            SetValue("CutRate.Thrust", $"{character.Equipment.TotalThrustCutRate.ToPercentage()}%");
-            SetValue("CutRate.Fire", $"{character.Equipment.TotalFireCutRate.ToPercentage()}%");
-            SetValue("CutRate.Magic", $"{character.Equipment.TotalMagicCutRate.ToPercentage()}%");
-            SetValue("CutRate.Thunder", $"{character.Equipment.TotalThunderCutRate.ToPercentage()}%");
+            SetValue("CutRate.Slash", $"{character.Equipment.TotalSlashCutRate.ToPercentage():0.00}%");
+            SetValue("CutRate.Blow", $"{character.Equipment.TotalBlowCutRate.ToPercentage():0.00}%");
+            SetValue("CutRate.Thrust", $"{character.Equipment.TotalThrustCutRate.ToPercentage():0.00}%");
+            SetValue("CutRate.Fire", $"{character.Equipment.TotalFireCutRate.ToPercentage():0.00}%");
+            SetValue("CutRate.Magic", $"{character.Equipment.TotalMagicCutRate.ToPercentage():0.00}%");
+            SetValue("CutRate.Thunder", $"{character.Equipment.TotalThunderCutRate.ToPercentage():0.00}%");
 
             void SetValue(string key, string value)
             {
