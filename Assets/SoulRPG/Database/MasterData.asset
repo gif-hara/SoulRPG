@@ -5423,62 +5423,62 @@ MonoBehaviour:
       Id: 102007
       ThumbnailId: Armor.24
       Thumbnail: {fileID: 21300000, guid: bd49376c64d257d4a8a16ebcfb30a778, type: 3}
-      Description: 
+      Description: "\u53E4\u306E\u935B\u51B6\u5E2B\u304C\u4F5C\u308A\u4E0A\u3052\u305F\u9EC4\u91D1\u306E\u515C\u306F\u3001\u6226\u58EB\u306E\u982D\u3092\u5B88\u308B\u3060\u3051\u3067\u306A\u304F\u3001\u6575\u3092\u5A01\u5727\u3059\u308B\u8F1D\u304D\u3092\u653E\u3064\u3002\u4F1D\u8AAC\u306B\u3088\u308B\u3068\u3001\u3053\u306E\u515C\u3092\u304B\u3076\u3063\u305F\u8005\u306F\u3001\u6C7A\u3057\u3066\u9000\u304B\u306A\u3044\u52C7\u6C17\u3092\u6388\u304B\u308B\u3068\u3044\u3046\u3002"
     - Name: "\u9EC4\u91D1\u306E\u93A7"
       Id: 103007
       ThumbnailId: Armor.25
       Thumbnail: {fileID: 21300000, guid: 1f9e0adefc290e340a009077b8f24e8e, type: 3}
-      Description: 
+      Description: "\u5168\u8EAB\u3092\u8986\u3046\u9EC4\u91D1\u306E\u93A7\u306F\u3001\u305F\u3060\u306E\u9632\u5177\u3067\u306F\u306A\u3044\u3002\u305D\u308C\u306F\u738B\u8005\u306E\u8A3C\u3067\u3042\u308A\u3001\u6226\u5834\u306B\u7ACB\u3064\u8005\u306E\u5A01\u53B3\u3092\u793A\u3059\u3002\u5F37\u976D\u306A\u9632\u5FA1\u529B\u3092\u8A87\u308B\u3053\u306E\u93A7\u306F\u3001\u653B\u6483\u3092\u8DF3\u306D\u8FD4\u3057\u3001\u5149\u308A\u8F1D\u304F\u76FE\u306E\u3088\u3046\u306B\u6301\u3061\u4E3B\u3092\u5B88\u308B\u3002"
     - Name: "\u9EC4\u91D1\u306E\u624B\u7532"
       Id: 104007
       ThumbnailId: Armor.26
       Thumbnail: {fileID: 21300000, guid: 23d0fbaa7bf9ea7499b74cacda8edc15, type: 3}
-      Description: 
+      Description: "\u7CBE\u5DE7\u306B\u4F5C\u3089\u308C\u305F\u9EC4\u91D1\u306E\u624B\u7532\u306F\u3001\u6226\u58EB\u306E\u8155\u529B\u3092\u5F37\u5316\u3057\u3001\u305D\u306E\u62F3\u3092\u3088\u308A\u5F37\u976D\u306A\u3082\u306E\u306B\u5909\u3048\u308B\u3002\u6575\u306E\u653B\u6483\u3092\u53D7\u3051\u6B62\u3081\u3064\u3064\u3001\u529B\u5F37\u3044\u53CD\u6483\u3092\u53EF\u80FD\u306B\u3059\u308B\u3053\u306E\u624B\u7532\u306F\u3001\u6226\u5834\u3067\u306E\u4FE1\u983C\u306E\u4E00\u54C1\u3002"
     - Name: "\u9EC4\u91D1\u306E\u8DB3\u7532"
       Id: 105007
       ThumbnailId: Armor.27
       Thumbnail: {fileID: 21300000, guid: 35a9661011556fe4292f69e8b8c23383, type: 3}
-      Description: 
-    - Name: "\u30B9\u30BF\u30C3\u30C9\u30EC\u30B6\u30FC\u30D8\u30EB\u30E0"
+      Description: "\u9EC4\u91D1\u306E\u8DB3\u7532\u306F\u3001\u6226\u58EB\u306E\u8DB3\u5143\u3092\u5B88\u308B\u3060\u3051\u3067\u306A\u304F\u3001\u5730\u9762\u3092\u8E0F\u307F\u3057\u3081\u308B\u305F\u3073\u306B\u529B\u5F37\u3044\u4E00\u6B69\u3092\u523B\u3080\u3002\u8F1D\u304F\u9EC4\u91D1\u306F\u6226\u5834\u3067\u4E00\u969B\u76EE\u7ACB\u3061\u3001\u6226\u58EB\u306E\u5B58\u5728\u611F\u3092\u969B\u7ACB\u305F\u305B\u308B\u3002\u6301\u3061\u4E3B\u306E\u9032\u3080\u9053\u3092\u7167\u3089\u3059\u4E00\u54C1\u3002"
+    - Name: "\u84BC\u5FCD\u8005\u306E\u982D\u5DFE"
       Id: 102008
       ThumbnailId: Armor.28
       Thumbnail: {fileID: 21300000, guid: 11a0fd00cc16fc64e87a14419b5004bf, type: 3}
-      Description: 
-    - Name: "\u30B9\u30BF\u30C3\u30C9\u30EC\u30B6\u30FC\u30E1\u30A4\u30EB"
+      Description: "\u84BC\u306E\u95C7\u306B\u6EB6\u3051\u8FBC\u3080\u3088\u3046\u306B\u7DE8\u307E\u308C\u305F\u982D\u5DFE\u3002\u98A8\u306E\u3088\u3046\u306B\u8EFD\u3084\u304B\u3067\u3001\u5FCD\u8005\u306E\u59FF\u3092\u96A0\u3059\u306E\u306B\u6700\u9069\u306A\u9632\u5177\u3002\u982D\u5DFE\u3092\u88AB\u3063\u305F\u8005\u306F\u3001\u95C7\u591C\u306E\u4E2D\u3067\u97F3\u3082\u306A\u304F\u6575\u306B\u8FD1\u3065\u304D\u3001\u4E00\u77AC\u306E\u9699\u3092\u7A81\u304F\u3002"
+    - Name: "\u84BC\u5FCD\u8005\u306E\u88C5\u675F"
       Id: 103008
       ThumbnailId: Armor.29
       Thumbnail: {fileID: 21300000, guid: fbe4a5944f7d3d444ba5b3b1ee3705ae, type: 3}
-      Description: 
-    - Name: "\u30B9\u30BF\u30C3\u30C9\u30EC\u30B6\u30FC\u30A2\u30FC\u30E0"
+      Description: "\u6226\u3046\u8005\u306B\u67D4\u8EDF\u306A\u52D5\u304D\u3092\u3082\u305F\u3089\u3059\u84BC\u306E\u88C5\u675F\u3002\u98A8\u306E\u5982\u304F\u901F\u304F\u3001\u5F71\u306E\u5982\u304F\u9759\u304B\u306B\u3002\u5FCD\u8005\u306E\u4F53\u3092\u5305\u307F\u3001\u653B\u6483\u3082\u9632\u5FA1\u3082\u8EFD\u3084\u304B\u306B\u3053\u306A\u3059\u305D\u306E\u88C5\u675F\u306F\u3001\u898B\u305F\u8005\u3092\u6050\u6016\u306B\u9665\u308C\u308B\u3002"
+    - Name: "\u84BC\u5FCD\u8005\u306E\u624B\u888B"
       Id: 104008
       ThumbnailId: Armor.30
       Thumbnail: {fileID: 21300000, guid: ecf5dc71a4d13b64782b0e45c93697ea, type: 3}
-      Description: 
-    - Name: "\u30B9\u30BF\u30C3\u30C9\u30EC\u30B6\u30FC\u30B0\u30EA\u30FC\u30F4"
+      Description: "\u92ED\u3044\u611F\u899A\u3092\u7814\u304E\u6F84\u307E\u3059\u305F\u3081\u306E\u624B\u888B\u3002\u84BC\u3044\u5E03\u3067\u3057\u3063\u304B\u308A\u3068\u4F5C\u3089\u308C\u3066\u304A\u308A\u3001\u624B\u306E\u3072\u3089\u306B\u306F\u6ED1\u308A\u6B62\u3081\u304C\u65BD\u3055\u308C\u3066\u3044\u308B\u3002\u5FCD\u8005\u306E\u624B\u306B\u99B4\u67D3\u3080\u3053\u306E\u624B\u888B\u306F\u3001\u7D20\u65E9\u3044\u52D5\u304D\u3068\u6B63\u78BA\u306A\u624B\u6280\u3092\u652F\u3048\u308B\u3002"
+    - Name: "\u84BC\u5FCD\u8005\u306E\u8DB3\u888B"
       Id: 105008
       ThumbnailId: Armor.31
       Thumbnail: {fileID: 21300000, guid: c659a253a691ead4fbfe2a8a67be226f, type: 3}
-      Description: 
+      Description: "\u5FCD\u3073\u306E\u6280\u3092\u6975\u3081\u308B\u305F\u3081\u306E\u84BC\u3044\u8DB3\u888B\u3002\u9759\u304B\u306A\u8DB3\u53D6\u308A\u3067\u6575\u306B\u6C17\u4ED8\u304B\u308C\u305A\u306B\u63A5\u8FD1\u3057\u3001\u7D20\u65E9\u3044\u8EAB\u306E\u3053\u306A\u3057\u3067\u6575\u3092\u7FFB\u5F04\u3059\u308B\u3002\u8EFD\u5FEB\u306A\u52D5\u304D\u3068\u78BA\u304B\u306A\u8DB3\u5143\u3092\u4FDD\u8A3C\u3059\u308B\u3053\u306E\u8DB3\u888B\u306F\u3001\u5FCD\u8005\u306E\u8DB3\u306B\u6B20\u304B\u305B\u306A\u3044\u9632\u5177\u3002"
     - Name: "\u9ED2\u7D79\u306E\u30D5\u30FC\u30C9"
       Id: 102009
       ThumbnailId: Armor.32
       Thumbnail: {fileID: 21300000, guid: 1694e0767594c5a4d8237eec09f482e0, type: 3}
-      Description: 
+      Description: "\u6F06\u9ED2\u306E\u7D79\u3067\u4ED5\u7ACB\u3066\u3089\u308C\u305F\u30D5\u30FC\u30C9\u306F\u3001\u4E0A\u7D1A\u9B54\u6CD5\u4F7F\u3044\u306E\u8C61\u5FB4\u3002\u6DF1\u3044\u95C7\u306B\u6F5C\u3080\u529B\u3092\u79D8\u3081\u3001\u305D\u306E\u5E03\u5730\u306F\u95C7\u591C\u306E\u3054\u3068\u304F\u5149\u3092\u5438\u3044\u8FBC\u307F\u3001\u9B54\u6CD5\u4F7F\u3044\u306E\u59FF\u3092\u96A0\u3059\u3002\u30D5\u30FC\u30C9\u3092\u304B\u3076\u308C\u3070\u3001\u5916\u754C\u3068\u306E\u63A5\u89E6\u3092\u65AD\u3061\u3001\u9B54\u529B\u3092\u96C6\u4E2D\u3055\u305B\u308B\u3053\u3068\u304C\u3067\u304D\u308B\u3002"
     - Name: "\u9ED2\u7D79\u306E\u30ED\u30FC\u30D6"
       Id: 103009
       ThumbnailId: Armor.33
       Thumbnail: {fileID: 21300000, guid: aae2db476d1a4244eb868fd6bac8883c, type: 3}
-      Description: 
+      Description: "\u9B54\u529B\u3092\u5897\u5E45\u3059\u308B\u305F\u3081\u306B\u7279\u5225\u306B\u7E54\u3089\u308C\u305F\u9ED2\u7D79\u306E\u30ED\u30FC\u30D6\u3002\u8EFD\u3084\u304B\u3067\u3042\u308A\u306A\u304C\u3089\u3082\u9B54\u6CD5\u306E\u529B\u3092\u4FDD\u8B77\u3057\u3001\u305D\u306E\u5B58\u5728\u611F\u306F\u9759\u5BC2\u3068\u5A01\u53B3\u3092\u6F02\u308F\u305B\u308B\u3002\u305D\u306E\u5E03\u5730\u306B\u306F\u53E4\u4EE3\u306E\u546A\u6587\u304C\u7E54\u308A\u8FBC\u307E\u308C\u3066\u3044\u308B\u3068\u8A00\u308F\u308C\u3066\u3044\u308B\u3002"
     - Name: "\u9ED2\u7D79\u306E\u624B\u888B"
       Id: 104009
       ThumbnailId: Armor.34
       Thumbnail: {fileID: 21300000, guid: 0211bc4bb5d5f0e41a93c9780b034102, type: 3}
-      Description: 
+      Description: "\u9ED2\u7D79\u3067\u4F5C\u3089\u308C\u305F\u624B\u888B\u306F\u3001\u9B54\u6CD5\u4F7F\u3044\u306E\u7E4A\u7D30\u306A\u52D5\u304D\u3092\u5B88\u308B\u3002\u546A\u6587\u3092\u5531\u3048\u308B\u969B\u306B\u5FC5\u8981\u306A\u7CBE\u7DFB\u306A\u6307\u306E\u52D5\u304D\u3092\u59A8\u3052\u306A\u3044\u3002\u9B54\u6CD5\u4F7F\u3044\u306E\u624B\u304B\u3089\u653E\u305F\u308C\u308B\u529B\u3092\u5897\u5E45\u3057\u3001\u305D\u306E\u5A01\u529B\u3092\u500D\u52A0\u3055\u305B\u308B\u3002"
     - Name: "\u9ED2\u7D79\u306E\u30BA\u30DC\u30F3"
       Id: 105009
       ThumbnailId: Armor.35
       Thumbnail: {fileID: 21300000, guid: 34ef95af83d53bb4da1b39829e4f80fe, type: 3}
-      Description: 
+      Description: "\u9ED2\u7D79\u306E\u30BA\u30DC\u30F3\u306F\u3001\u4E0A\u7D1A\u9B54\u6CD5\u4F7F\u3044\u306B\u3075\u3055\u308F\u3057\u3044\u54C1\u683C\u3092\u6301\u3064\u3002\u305D\u306E\u5E03\u5730\u306F\u6697\u9ED2\u306E\u9B54\u529B\u306B\u5171\u9CF4\u3059\u308B\u3002\u9B54\u6CD5\u306E\u6226\u3044\u306B\u304A\u3044\u3066\u3001\u3057\u306A\u3084\u304B\u3067\u81EA\u7531\u306A\u52D5\u304D\u3092\u53EF\u80FD\u306B\u3059\u308B\u4E00\u54C1\u3002"
     - Name: "\u4F53\u529B\u306E\u6307\u8F2A"
       Id: 106001
       ThumbnailId: Accessory.0
@@ -7998,7 +7998,7 @@ MonoBehaviour:
       MagicCutRate: 0.133
       FireCutRate: 0.148
       ThunderCutRate: 0.101
-      Speed: -1
+      Speed: -2
     - ItemId: 102008
       SlashCutRate: 0.108
       BlowCutRate: 0.129
@@ -8006,7 +8006,7 @@ MonoBehaviour:
       MagicCutRate: 0.123
       FireCutRate: 0.105
       ThunderCutRate: 0.142
-      Speed: 1
+      Speed: 2
     - ItemId: 102009
       SlashCutRate: 0.098
       BlowCutRate: 0.096
@@ -8014,7 +8014,7 @@ MonoBehaviour:
       MagicCutRate: 0.172
       FireCutRate: 0.165
       ThunderCutRate: 0.287
-      Speed: 0
+      Speed: 1
   armorBodies:
     list:
     - ItemId: 103001
@@ -8072,7 +8072,7 @@ MonoBehaviour:
       MagicCutRate: 0.178
       FireCutRate: 0.198
       ThunderCutRate: 0.135
-      Speed: -2
+      Speed: -3
     - ItemId: 103008
       SlashCutRate: 0.145
       BlowCutRate: 0.172
@@ -8080,7 +8080,7 @@ MonoBehaviour:
       MagicCutRate: 0.165
       FireCutRate: 0.14
       ThunderCutRate: 0.19
-      Speed: 1
+      Speed: 2
     - ItemId: 103009
       SlashCutRate: 0.131
       BlowCutRate: 0.129
@@ -8088,7 +8088,7 @@ MonoBehaviour:
       MagicCutRate: 0.23
       FireCutRate: 0.22
       ThunderCutRate: 0.383
-      Speed: 0
+      Speed: 1
   armorArms:
     list:
     - ItemId: 104001
@@ -8146,7 +8146,7 @@ MonoBehaviour:
       MagicCutRate: 0.106
       FireCutRate: 0.118
       ThunderCutRate: 0.081
-      Speed: -1
+      Speed: -2
     - ItemId: 104008
       SlashCutRate: 0.087
       BlowCutRate: 0.103
@@ -8154,7 +8154,7 @@ MonoBehaviour:
       MagicCutRate: 0.099
       FireCutRate: 0.084
       ThunderCutRate: 0.114
-      Speed: 1
+      Speed: 2
     - ItemId: 104009
       SlashCutRate: 0.078
       BlowCutRate: 0.077
@@ -8162,7 +8162,7 @@ MonoBehaviour:
       MagicCutRate: 0.138
       FireCutRate: 0.132
       ThunderCutRate: 0.229
-      Speed: 0
+      Speed: 1
   armorLegs:
     list:
     - ItemId: 105001
@@ -8220,7 +8220,7 @@ MonoBehaviour:
       MagicCutRate: 0.115
       FireCutRate: 0.128
       ThunderCutRate: 0.087
-      Speed: -1
+      Speed: -2
     - ItemId: 105008
       SlashCutRate: 0.094
       BlowCutRate: 0.111
@@ -8228,7 +8228,7 @@ MonoBehaviour:
       MagicCutRate: 0.107
       FireCutRate: 0.091
       ThunderCutRate: 0.123
-      Speed: 1
+      Speed: 2
     - ItemId: 105009
       SlashCutRate: 0.085
       BlowCutRate: 0.083
@@ -8236,7 +8236,7 @@ MonoBehaviour:
       MagicCutRate: 0.149
       FireCutRate: 0.143
       ThunderCutRate: 0.248
-      Speed: 0
+      Speed: 1
   accessories:
     list:
     - ItemId: 106001
