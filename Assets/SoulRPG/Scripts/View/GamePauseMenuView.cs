@@ -342,9 +342,9 @@ namespace SoulRPG
                     AudioManager.PlaySFX("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
-            await UniTask.WaitUntilCanceled(scope);
             CreateHeader("頭防具変更", scope);
             GameTipsView.SetTip("装備したい頭防具を選択せよ。");
+            await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
 
