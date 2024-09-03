@@ -74,23 +74,6 @@ namespace SoulRPG
                         GameListView.ApplyAsSimpleElement
                         (
                             element,
-                            "ステータス",
-                            _ =>
-                            {
-                                stateMachine.Change(StateStatusAsync);
-                                AudioManager.PlaySFX("Sfx.Message.0");
-                            },
-                            _ =>
-                            {
-                                GameTipsView.SetTip("現在の状況やステータスを確認する。");
-                            }
-                        );
-                    },
-                    element =>
-                    {
-                        GameListView.ApplyAsSimpleElement
-                        (
-                            element,
                             "システム",
                             _ =>
                             {
@@ -115,6 +98,7 @@ namespace SoulRPG
                     })
                     .RegisterTo(scope);
             CreateHeader("メニュー", scope);
+            GameStatusInformationView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Status"), character, scope);
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -532,20 +516,6 @@ namespace SoulRPG
         {
             await OptionsView.OpenAsync(documentBundlePrefab, scope);
             stateMachine.Change(StateRootMenuAsync);
-        }
-
-        private UniTask StateStatusAsync(CancellationToken scope)
-        {
-            GameStatusInformationView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Status"), character, scope);
-            CreateHeader("ステータス", scope);
-            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
-                .Subscribe(_ =>
-                {
-                    stateMachine.Change(StateRootMenuAsync);
-                    AudioManager.PlaySFX("Sfx.Cancel.0");
-                })
-                .RegisterTo(scope);
-            return UniTask.CompletedTask;
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)
