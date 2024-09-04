@@ -5164,7 +5164,7 @@ MonoBehaviour:
       ThumbnailId: Weapon.49
       Thumbnail: {fileID: 21300000, guid: 81250bc524deafe45849d042e6fb3b99, type: 3}
       Description: "\u305D\u306E\u30B7\u30F3\u30D7\u30EB\u306A\u5916\u898B\u306B\u53CD\u3057\u3066\u5727\u5012\u7684\u306A\u529B\u3092\u79D8\u3081\u3066\u3044\u308B\u3002\u7D14\u767D\u306E\u30AA\u30FC\u30E9\u304C\u305D\u306E\u5203\u3092\u5305\u307F\u3001\u6575\u306E\u95C7\u3092\u5207\u308A\u88C2\u304F\u3002"
-    - Name: "\u30A8\u30A2\u30EA\u30FC\u306E\u6756\uFF0B"
+    - Name: "\u30A8\u30A2\u30EA\u30FC\u306E\u6EC5\u6756"
       Id: 101063
       ThumbnailId: Weapon.31
       Thumbnail: {fileID: 21300000, guid: 61440f61f49daf24b8b724c90c1f31a4, type: 3}
@@ -8766,7 +8766,7 @@ MonoBehaviour:
       FireCutRate: 0.77
       ThunderCutRate: 0.11
       Speed: 8
-      Experience: 5133
+      Experience: 3291
       BehaviourPoint: 1
       Attribute: 17
       ThumbnailId: 8
@@ -8790,7 +8790,7 @@ MonoBehaviour:
       FireCutRate: 0.1
       ThunderCutRate: 0.02
       Speed: 7
-      Experience: 5002
+      Experience: 3159
       BehaviourPoint: 1
       Attribute: 8
       ThumbnailId: 15
@@ -8814,7 +8814,7 @@ MonoBehaviour:
       FireCutRate: 0.09
       ThunderCutRate: 0.05
       Speed: 14
-      Experience: 4870
+      Experience: 3356
       BehaviourPoint: 1
       Attribute: 64
       ThumbnailId: 9
@@ -8838,7 +8838,7 @@ MonoBehaviour:
       FireCutRate: 0.18
       ThunderCutRate: 0.13
       Speed: 15
-      Experience: 5199
+      Experience: 3488
       BehaviourPoint: 1
       Attribute: 2
       ThumbnailId: 5
@@ -8862,7 +8862,7 @@ MonoBehaviour:
       FireCutRate: 0.02
       ThunderCutRate: 0.01
       Speed: 11
-      Experience: 5265
+      Experience: 3554
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 13
@@ -8947,52 +8947,172 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 079071d98c1ef43da889c4a0f0c9dd3b, type: 2}
     - Id: 19904
       Name: "\u7D2B\u708E\u306E\u4E5D\u5C3E"
-      HitPoint: 1161
+      HitPoint: 1710
       Stamina: 0
-      PhysicalAttack: 54
-      MagicalAttack: 54
-      SlashCutRate: 0.14
-      BlowCutRate: 0.21
-      ThrustCutRate: 0.15
-      MagicCutRate: -0.02
-      FireCutRate: 0.53
-      ThunderCutRate: -0.11
-      Speed: 10
-      Experience: 23270
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0.05
+      BlowCutRate: 0.075
+      ThrustCutRate: 0.6
+      MagicCutRate: 0.12
+      FireCutRate: 0.34
+      ThunderCutRate: 0.09
+      Speed: 15
+      Experience: 26529
       BehaviourPoint: 1
       Attribute: 0
-      ThumbnailId: 23
+      ThumbnailId: 19
       BattleBgmId: 1
-      SequencesId: 19903
+      SequencesId: 19904
       FieldOfVision: 0
       MoveIntervalSeconds: 1
-      Thumbnail: {fileID: 21300000, guid: 20e7db75f7e9d45c1888c60555aabb4a, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
-      BattleCharacterSequences: {fileID: 11400000, guid: 079071d98c1ef43da889c4a0f0c9dd3b, type: 2}
+      Thumbnail: {fileID: 21300000, guid: 11214362595ac05438d351b502418c2c, type: 3}
+      AISequences: {fileID: 11400000, guid: f48c8b5c3fafc47ef9795d6062e3a9f4, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: 6d7d8e7381597af4b93ced8bd3c508f1, type: 2}
     - Id: 19905
       Name: "\u661F\u932C\u5B66\u9577\u3001\u30A4\u30EA\u30B7\u30A2"
-      HitPoint: 1161
+      HitPoint: 1638
       Stamina: 0
-      PhysicalAttack: 54
-      MagicalAttack: 54
-      SlashCutRate: 0.14
-      BlowCutRate: 0.21
-      ThrustCutRate: 0.15
-      MagicCutRate: -0.02
-      FireCutRate: 0.53
-      ThunderCutRate: -0.11
-      Speed: 10
-      Experience: 23270
+      PhysicalAttack: 78
+      MagicalAttack: 78
+      SlashCutRate: 0.09
+      BlowCutRate: 0.83
+      ThrustCutRate: 0.86
+      MagicCutRate: 0.23
+      FireCutRate: 0.13
+      ThunderCutRate: 0.12
+      Speed: 14
+      Experience: 26529
       BehaviourPoint: 1
       Attribute: 0
-      ThumbnailId: 23
+      ThumbnailId: 28
       BattleBgmId: 1
-      SequencesId: 19903
+      SequencesId: 19905
       FieldOfVision: 0
       MoveIntervalSeconds: 1
-      Thumbnail: {fileID: 21300000, guid: 20e7db75f7e9d45c1888c60555aabb4a, type: 3}
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: 758d15476014d438ebaa09a50fbbc1a2, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: 2298d088d70558e4f8dc92d80e929ae5, type: 2}
+    - Id: 19906
+      Name: "\u9023\u9583\u306E\u30A2\u30EB\u30CE\u30A4\u30C9"
+      HitPoint: 1474
+      Stamina: 0
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0.09
+      BlowCutRate: 0.83
+      ThrustCutRate: 0.86
+      MagicCutRate: 0.23
+      FireCutRate: 0.13
+      ThunderCutRate: 0.12
+      Speed: 14
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19906
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
       AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
-      BattleCharacterSequences: {fileID: 11400000, guid: 079071d98c1ef43da889c4a0f0c9dd3b, type: 2}
+      BattleCharacterSequences: {fileID: 0}
+    - Id: 19907
+      Name: "\u5F71\u306E\u5203\u3001\u30D5\u30A7\u30A4"
+      HitPoint: 1474
+      Stamina: 0
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0.09
+      BlowCutRate: 0.83
+      ThrustCutRate: 0.86
+      MagicCutRate: 0.23
+      FireCutRate: 0.13
+      ThunderCutRate: 0.12
+      Speed: 14
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19907
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 0}
+    - Id: 19908
+      Name: "\u899A\u9192\u306E\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
+      HitPoint: 1474
+      Stamina: 0
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0.09
+      BlowCutRate: 0.83
+      ThrustCutRate: 0.86
+      MagicCutRate: 0.23
+      FireCutRate: 0.13
+      ThunderCutRate: 0.12
+      Speed: 14
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19908
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 0}
+    - Id: 19909
+      Name: "\u8EE2\u751F\u306E\u30EB\u30AF\u30B9\u30AA\u30E9"
+      HitPoint: 1474
+      Stamina: 0
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0.09
+      BlowCutRate: 0.83
+      ThrustCutRate: 0.86
+      MagicCutRate: 0.23
+      FireCutRate: 0.13
+      ThunderCutRate: 0.12
+      Speed: 14
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19909
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 0}
+    - Id: 19910
+      Name: "\u518D\u751F\u3068\u7834\u58CA\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
+      HitPoint: 1474
+      Stamina: 0
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0.09
+      BlowCutRate: 0.83
+      ThrustCutRate: 0.86
+      MagicCutRate: 0.23
+      FireCutRate: 0.13
+      ThunderCutRate: 0.12
+      Speed: 14
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19910
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 0}
   ailments:
     list:
     - Id: 101001
