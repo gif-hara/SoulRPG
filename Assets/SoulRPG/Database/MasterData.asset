@@ -8921,6 +8921,78 @@ MonoBehaviour:
       Thumbnail: {fileID: 21300000, guid: 3246f0b51351b224dbfd4dec9a6d4513, type: 3}
       AISequences: {fileID: 11400000, guid: 1efd32200de816449b4a3b468d461e92, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10303
+      Name: "\u53E4\u4EE3\u81EA\u7136\u738B\u306E\u50CF"
+      HitPoint: 396
+      Stamina: 0
+      PhysicalAttack: 30
+      MagicalAttack: 30
+      SlashCutRate: 0.16
+      BlowCutRate: 0.02
+      ThrustCutRate: 0.16
+      MagicCutRate: 0.12
+      FireCutRate: 0.21
+      ThunderCutRate: 0.42
+      Speed: 10
+      Experience: 5224
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 12
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0f75e0bbd67e2cb40bf95bcc930d201e, type: 3}
+      AISequences: {fileID: 11400000, guid: bc12c042675873f499fb50dc169925ff, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10304
+      Name: "\u5287\u6BD2\u5927\u86C7"
+      HitPoint: 516
+      Stamina: 0
+      PhysicalAttack: 30
+      MagicalAttack: 30
+      SlashCutRate: 0.15
+      BlowCutRate: 0.13
+      ThrustCutRate: 0.09
+      MagicCutRate: 0.14
+      FireCutRate: 0.15
+      ThunderCutRate: 0.11
+      Speed: 16
+      Experience: 5117
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 33
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.3
+      Thumbnail: {fileID: 21300000, guid: 4717f02e90cf1a848b6cb3529f49fa45, type: 3}
+      AISequences: {fileID: 11400000, guid: c1b7a48cad316c34491fbe5c481aca1f, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10305
+      Name: "\u30E1\u30BF\u30E2\u30EB\u30B9\u30E9\u30A4\u30E0"
+      HitPoint: 666
+      Stamina: 0
+      PhysicalAttack: 30
+      MagicalAttack: 30
+      SlashCutRate: 0.24
+      BlowCutRate: 0.54
+      ThrustCutRate: 0.1
+      MagicCutRate: 0.08
+      FireCutRate: 0.07
+      ThunderCutRate: 0.05
+      Speed: 17
+      Experience: 5544
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 35
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.3
+      Thumbnail: {fileID: 21300000, guid: 03fcdb65767fd5d498370695aeceb83d, type: 3}
+      AISequences: {fileID: 11400000, guid: 9c19bfa944b40af448951528049fee52, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
       HitPoint: 268
