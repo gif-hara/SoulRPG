@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 19905.5
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 3022425832378073187
+  - rid: 1651571015951581190
+  - rid: 1651571015951581210
+  - rid: 1651571015951581212
+  references:
+    version: 2
+    RefIds:
+    - rid: 1651571015951581190
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 1651571015951581191
+        targetType: 1
+        giveDamageType: 0
+        sfxName: Sfx.Message.2
+    - rid: 1651571015951581191
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 0.4
+        attackType: 1
+        attackAttribute: 4
+    - rid: 1651571015951581210
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 1651571015951581211
+        targetType: 1
+        giveDamageType: 0
+        sfxName: Sfx.Message.2
+    - rid: 1651571015951581211
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 0.3
+        attackType: 1
+        attackAttribute: 4
+    - rid: 1651571015951581212
+      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        damageCalculator:
+          rid: 1651571015951581213
+        targetType: 1
+        giveDamageType: 0
+        sfxName: Sfx.Message.2
+    - rid: 1651571015951581213
+      type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+      data:
+        weaponRate: 0.3
+        attackType: 1
+        attackAttribute: 4
+    - rid: 3022425832378073187
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306B\u96C6\u3046\u661F\u304C\u8972\u3044\u304B\u304B\u308B\u3002"
+        sfxName: Sfx.Message.10
+        ignoreIfCharacterDead: 0

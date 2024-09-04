@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 19905
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 1651571015951581192
+  - rid: 3022425832378073185
+  references:
+    version: 2
+    RefIds:
+    - rid: 1651571015951581192
+      type: {class: RegisterContainerBattleCharacterTurnCount, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        keyResolver:
+          rid: 1651571015951581193
+    - rid: 1651571015951581193
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: TurnCount
+    - rid: 1651571015951581194
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 1651571015951581195
+        valueResolver:
+          rid: 1651571015951581196
+        compareType: 0
+    - rid: 1651571015951581195
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: TurnCount
+    - rid: 1651571015951581196
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 1651571015951581197
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 1651571015951581198
+        valueResolver:
+          rid: 1651571015951581199
+        compareType: 0
+    - rid: 1651571015951581198
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: TurnCount
+    - rid: 1651571015951581199
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 2
+    - rid: 1651571015951581200
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 1651571015951581201
+        valueResolver:
+          rid: 1651571015951581202
+        compareType: 0
+    - rid: 1651571015951581201
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: TurnCount
+    - rid: 1651571015951581202
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 3
+    - rid: 1651571015951581203
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 1651571015951581204
+        valueResolver:
+          rid: 1651571015951581205
+        compareType: 0
+    - rid: 1651571015951581204
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: TurnCount
+    - rid: 1651571015951581205
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 4
+    - rid: 1651571015951581209
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
+    - rid: 3022425832378073185
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 1651571015951581194
+          sequences: {fileID: 11400000, guid: 0fe971a3f31984f358b2ae77524aef9b, type: 2}
+        - evaluator:
+            rid: 1651571015951581197
+          sequences: {fileID: 11400000, guid: b8e3f07d132d9479fa5f1643d82de2c5, type: 2}
+        - evaluator:
+            rid: 1651571015951581200
+          sequences: {fileID: 11400000, guid: 230761da75bd140ac806951c5cce4cd1, type: 2}
+        - evaluator:
+            rid: 1651571015951581203
+          sequences: {fileID: 11400000, guid: 58f8d4cb67fd64992a0b6dcd15010916, type: 2}
+        - evaluator:
+            rid: 1651571015951581209
+          sequences: {fileID: 11400000, guid: f9ec3840b00dc4ebdac40e52882607a9, type: 2}
