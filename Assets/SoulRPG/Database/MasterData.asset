@@ -8873,6 +8873,54 @@ MonoBehaviour:
       Thumbnail: {fileID: 21300000, guid: b9fb1e83250fbbb4e996b7d76b895f17, type: 3}
       AISequences: {fileID: 11400000, guid: 8632ee97240a2d5418be611caa1e950c, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10301
+      Name: "\u9AA8\u306E\u738B"
+      HitPoint: 479
+      Stamina: 0
+      PhysicalAttack: 32
+      MagicalAttack: 32
+      SlashCutRate: 0.21
+      BlowCutRate: 0.09
+      ThrustCutRate: 0.2
+      MagicCutRate: 0.18
+      FireCutRate: 0.23
+      ThunderCutRate: 0.18
+      Speed: 15
+      Experience: 5331
+      BehaviourPoint: 1
+      Attribute: 1
+      ThumbnailId: 4
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.3
+      Thumbnail: {fileID: 21300000, guid: af410b1fd10a46c4598e6102fa9b547b, type: 3}
+      AISequences: {fileID: 11400000, guid: dfea27145fddfc4449bd840e601662d1, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10302
+      Name: "\u7956\u970A\u6A39"
+      HitPoint: 513
+      Stamina: 0
+      PhysicalAttack: 31
+      MagicalAttack: 31
+      SlashCutRate: 0.24
+      BlowCutRate: 0.2
+      ThrustCutRate: 0.18
+      MagicCutRate: 0.16
+      FireCutRate: 0.03
+      ThunderCutRate: 0.21
+      Speed: 15
+      Experience: 5437
+      BehaviourPoint: 1
+      Attribute: 32
+      ThumbnailId: 2
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.3
+      Thumbnail: {fileID: 21300000, guid: 3246f0b51351b224dbfd4dec9a6d4513, type: 3}
+      AISequences: {fileID: 11400000, guid: 1efd32200de816449b4a3b468d461e92, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
       HitPoint: 268
@@ -8960,7 +9008,7 @@ MonoBehaviour:
       Speed: 15
       Experience: 26529
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 64
       ThumbnailId: 19
       BattleBgmId: 1
       SequencesId: 19904
@@ -8984,7 +9032,7 @@ MonoBehaviour:
       Speed: 14
       Experience: 26529
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 28
       BattleBgmId: 1
       SequencesId: 19905
@@ -9008,7 +9056,7 @@ MonoBehaviour:
       Speed: 14
       Experience: 136000
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 28
       BattleBgmId: 1
       SequencesId: 19906
@@ -9032,7 +9080,7 @@ MonoBehaviour:
       Speed: 14
       Experience: 136000
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 28
       BattleBgmId: 1
       SequencesId: 19907
@@ -9056,7 +9104,7 @@ MonoBehaviour:
       Speed: 14
       Experience: 136000
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 28
       BattleBgmId: 1
       SequencesId: 19908
@@ -9080,7 +9128,7 @@ MonoBehaviour:
       Speed: 14
       Experience: 136000
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 28
       BattleBgmId: 1
       SequencesId: 19909
@@ -9104,7 +9152,7 @@ MonoBehaviour:
       Speed: 14
       Experience: 136000
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 28
       BattleBgmId: 1
       SequencesId: 19910
