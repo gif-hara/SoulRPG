@@ -41,6 +41,10 @@ namespace SoulRPG
 
         private int selectedChangeWeaponEquipmentIndex;
 
+        private int cachedSelectWeaponIndex;
+
+        private int cachedSelectSkillIndex;
+
         public Input(
             HKUIDocument commandDocumentPrefab,
             HKUIDocument listDocumentPrefab,
@@ -177,6 +181,11 @@ namespace SoulRPG
                             _ =>
                             {
                                 selectedWeaponId = index;
+                                if (cachedSelectWeaponIndex != index)
+                                {
+                                    cachedSelectSkillIndex = 0;
+                                }
+                                cachedSelectWeaponIndex = index;
                                 AudioManager.PlaySFX("Sfx.Message.0");
                                 stateMachine.Change(StateSelectSkillAsync);
                             },
@@ -187,7 +196,7 @@ namespace SoulRPG
                             });
                     });
                 });
-            var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, cachedSelectWeaponIndex);
             listDocument.Q<TMP_Text>("Header").text = "武器を選べ";
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
@@ -250,6 +259,7 @@ namespace SoulRPG
                                 gameEvents.OnRequestShowMessage.OnNext(new("スタミナが足りない。", "Sfx.Message.0"));
                                 return;
                             }
+                            cachedSelectSkillIndex = skills.IndexOf(x);
                             source.TrySetResult(new Skill(weapon.ItemId, x.Id, x.CanRegisterUsedSkills));
                             stateMachine.Change(StateNothingAsync);
                         },
@@ -259,7 +269,7 @@ namespace SoulRPG
                         });
                 });
             });
-            var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
+            var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, cachedSelectSkillIndex);
             listDocument.Q<TMP_Text>("Header").text = "スキルを選べ";
             await scope.WaitUntilCanceled();
             GameTipsView.SetTip(string.Empty);
