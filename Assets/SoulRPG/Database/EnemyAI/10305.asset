@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 10305
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 6455563821605453903
+  - rid: 6455563821605453902
+  references:
+    version: 2
+    RefIds:
+    - rid: 6455563821605453902
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 6455563821605453905
+          sequences: {fileID: 11400000, guid: 9359fe98e05a2584f8839841d4d13d25, type: 2}
+        - evaluator:
+            rid: 6455563821605453920
+          sequences: {fileID: 11400000, guid: 2f9ced6bdf4f34f46a45c427e04ec174, type: 2}
+        - evaluator:
+            rid: 6455563821605453922
+          sequences: {fileID: 11400000, guid: c8970ee9ecd2b1a49a49028712e02ebc, type: 2}
+    - rid: 6455563821605453903
+      type: {class: RegisterContainerBattleCharacterTurnCount, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        keyResolver:
+          rid: 6455563821605453904
+    - rid: 6455563821605453904
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: TurnCount
+    - rid: 6455563821605453905
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 6455563821605453906
+        valueResolver:
+          rid: 6455563821605453907
+        compareType: 0
+    - rid: 6455563821605453906
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: TurnCount
+    - rid: 6455563821605453907
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 6455563821605453920
+      type: {class: Random, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        probabilityResolver:
+          rid: 6455563821605453921
+    - rid: 6455563821605453921
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0.5
+    - rid: 6455563821605453922
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
