@@ -28,6 +28,8 @@ namespace SoulRPG
 
         private IContext context;
 
+        private int cachedStateSelectEquipmentPartIndex;
+
         public GamePauseMenuView(HKUIDocument documentBundlePrefab, Character character)
         {
             this.documentBundlePrefab = documentBundlePrefab;
@@ -74,23 +76,6 @@ namespace SoulRPG
                         GameListView.ApplyAsSimpleElement
                         (
                             element,
-                            "ステータス",
-                            _ =>
-                            {
-                                stateMachine.Change(StateStatusAsync);
-                                AudioManager.PlaySFX("Sfx.Message.0");
-                            },
-                            _ =>
-                            {
-                                GameTipsView.SetTip("現在の状況やステータスを確認する。");
-                            }
-                        );
-                    },
-                    element =>
-                    {
-                        GameListView.ApplyAsSimpleElement
-                        (
-                            element,
                             "システム",
                             _ =>
                             {
@@ -115,6 +100,8 @@ namespace SoulRPG
                     })
                     .RegisterTo(scope);
             CreateHeader("メニュー", scope);
+            GameStatusInformationView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Status"), character, scope);
+            cachedStateSelectEquipmentPartIndex = 0;
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -132,6 +119,7 @@ namespace SoulRPG
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Weapon1);
                         stateMachine.Change(StateSelectWeaponAsync);
+                        cachedStateSelectEquipmentPartIndex = i;
                         AudioManager.PlaySFX("Sfx.Message.0");
                     },
                     _ =>
@@ -153,6 +141,7 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Head);
                     stateMachine.Change(StateSelectArmorHeadAsync);
+                    cachedStateSelectEquipmentPartIndex = 4;
                     AudioManager.PlaySFX("Sfx.Message.0");
                 },
                 _ =>
@@ -173,6 +162,7 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
                     stateMachine.Change(StateSelectArmorBodyAsync);
+                    cachedStateSelectEquipmentPartIndex = 5;
                     AudioManager.PlaySFX("Sfx.Message.0");
                 },
                 _ =>
@@ -193,6 +183,7 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Arm);
                     stateMachine.Change(StateSelectArmorArmsAsync);
+                    cachedStateSelectEquipmentPartIndex = 6;
                     AudioManager.PlaySFX("Sfx.Message.0");
                 },
                 _ =>
@@ -213,6 +204,7 @@ namespace SoulRPG
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Leg);
                     stateMachine.Change(StateSelectArmorLegsAsync);
+                    cachedStateSelectEquipmentPartIndex = 7;
                     AudioManager.PlaySFX("Sfx.Message.0");
                 },
                 _ =>
@@ -236,6 +228,7 @@ namespace SoulRPG
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Accessory1);
                         stateMachine.Change(StateSelectAccessoryAsync);
+                        cachedStateSelectEquipmentPartIndex = i + 8;
                         AudioManager.PlaySFX("Sfx.Message.0");
                     },
                     _ =>
@@ -263,7 +256,7 @@ namespace SoulRPG
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.List"),
                 listElements,
-                0
+                cachedStateSelectEquipmentPartIndex
             );
             inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
@@ -358,9 +351,9 @@ namespace SoulRPG
                     AudioManager.PlaySFX("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
-            await UniTask.WaitUntilCanceled(scope);
             CreateHeader("頭防具変更", scope);
             GameTipsView.SetTip("装備したい頭防具を選択せよ。");
+            await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
 
@@ -532,20 +525,6 @@ namespace SoulRPG
         {
             await OptionsView.OpenAsync(documentBundlePrefab, scope);
             stateMachine.Change(StateRootMenuAsync);
-        }
-
-        private UniTask StateStatusAsync(CancellationToken scope)
-        {
-            GameStatusInformationView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Status"), character, scope);
-            CreateHeader("ステータス", scope);
-            TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
-                .Subscribe(_ =>
-                {
-                    stateMachine.Change(StateRootMenuAsync);
-                    AudioManager.PlaySFX("Sfx.Cancel.0");
-                })
-                .RegisterTo(scope);
-            return UniTask.CompletedTask;
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)
