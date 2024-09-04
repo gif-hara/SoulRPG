@@ -30,7 +30,7 @@ MonoBehaviour:
       data:
         damageCalculator:
           rid: 1651571011658711054
-        targetType: 0
+        targetType: 1
         giveDamageType: 0
         sfxName: Sfx.Message.2
     - rid: 1651571011658711054
@@ -44,7 +44,7 @@ MonoBehaviour:
       data:
         damageCalculator:
           rid: 1651571011658711056
-        targetType: 0
+        targetType: 1
         giveDamageType: 0
         sfxName: Sfx.Message.2
     - rid: 1651571011658711056
