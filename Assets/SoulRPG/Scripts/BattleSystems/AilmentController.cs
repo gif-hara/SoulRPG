@@ -120,6 +120,7 @@ namespace SoulRPG
                 return;
             }
 
+            battleCharacter.Events.OnRemoveAilment.OnNext(masterDataAilmentId.GetMasterDataAilment());
             await element.OnRemovedAsync(battleCharacter, cancellationTokenSource.Token);
             elements.Remove(element);
         }
