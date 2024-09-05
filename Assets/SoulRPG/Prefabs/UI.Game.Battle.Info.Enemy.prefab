@@ -132,7 +132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5F31\u70B9"
+  m_text: "\u30AB\u30C3\u30C8\u7387"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c264efebd36074641a2ade60187127e4, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e76d65064303bf849a01609fd3140b4a, type: 2}
@@ -1581,7 +1581,7 @@ MonoBehaviour:
   - document: {fileID: 5063288719018227763}
     overrideName: CutRate.Slash
   - document: {fileID: 5728459913072966616}
-    overrideName: CutRate.Brow
+    overrideName: CutRate.Blow
   - document: {fileID: 4148179899456320353}
     overrideName: CutRate.Thrust
   - document: {fileID: 5449280346263941121}
@@ -1798,7 +1798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4118097688217169900, guid: d61a7567bf450fc418985746856f285f, type: 3}
       propertyPath: m_Name
-      value: UIElement.Parameter.Brow
+      value: UIElement.Parameter.Blow
       objectReference: {fileID: 0}
     - target: {fileID: 4737592820576414532, guid: d61a7567bf450fc418985746856f285f, type: 3}
       propertyPath: m_AnchorMax.y
