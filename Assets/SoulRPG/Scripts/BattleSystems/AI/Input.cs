@@ -308,6 +308,10 @@ namespace SoulRPG
                         {
                             AudioManager.PlaySFX("Sfx.Message.0");
                             stateMachine.Change(StateStatusAsync);
+                        },
+                        _ =>
+                        {
+                            GameTipsView.SetTip("各種ステータスやカット率の確認を行う。");
                         });
                 }),
                 new(x =>
@@ -320,6 +324,10 @@ namespace SoulRPG
                             AudioManager.PlaySFX("Sfx.Message.0");
                             ailmentViewTarget = actor;
                             stateMachine.Change(StateAilmentAsync);
+                        },
+                        _ =>
+                        {
+                            GameTipsView.SetTip("自分自身に付与されている状態異常を確認する。");
                         });
                 }),
             };
@@ -336,6 +344,10 @@ namespace SoulRPG
                                 AudioManager.PlaySFX("Sfx.Message.0");
                                 ailmentViewTarget = target;
                                 stateMachine.Change(StateAilmentAsync);
+                            },
+                            _ =>
+                            {
+                                GameTipsView.SetTip("敵に付与されている状態異常を確認する。");
                             });
                     }
                 );
