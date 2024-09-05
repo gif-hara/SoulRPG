@@ -25,7 +25,7 @@ namespace SoulRPG
             var cutRateFire = document.Q<HKUIDocument>("CutRate.Fire");
             var cutRateThunder = document.Q<HKUIDocument>("CutRate.Thunder");
             document.gameObject.SetActive(false);
-            document.Q<HKUIDocument>("Name").Q<TMP_Text>("Value").text = enemy.BattleStatus.Name;
+            document.Q<TMP_Text>("Name").text = enemy.BattleStatus.Name;
             Observable.Merge(
                 enemy.BattleStatus.HitPointReactiveProperty,
                 enemy.BattleStatus.HitPointMaxReactiveProperty
@@ -45,12 +45,12 @@ namespace SoulRPG
             )
             .Subscribe(_ =>
             {
-                cutRateSlash.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.SlashCutRate}";
-                cutRateBlow.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.BlowCutRate}";
-                cutRateThrust.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.ThrustCutRate}";
-                cutRateMagic.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.MagicCutRate}";
-                cutRateFire.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.FireCutRate}";
-                cutRateThunder.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.ThunderCutRate}";
+                cutRateSlash.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.SlashCutRate.ToPercentage():0.00}%";
+                cutRateBlow.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.BlowCutRate.ToPercentage():0.00}%";
+                cutRateThrust.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.ThrustCutRate.ToPercentage():0.00}%";
+                cutRateMagic.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.MagicCutRate.ToPercentage():0.00}%";
+                cutRateFire.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.FireCutRate.ToPercentage():0.00}%";
+                cutRateThunder.Q<TMP_Text>("Value").text = $"{enemy.BattleStatus.ThunderCutRate.ToPercentage():0.00}%";
             })
             .RegisterTo(scope);
             await UniTask.WaitUntilCanceled(scope);
