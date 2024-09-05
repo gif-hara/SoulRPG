@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: 101027.OnRemoved
   m_EditorClassIdentifier: 
   sequences:
+  - rid: 6455563845614698570
   - rid: 7538228103530414196
   references:
     version: 2
     RefIds:
+    - rid: 6455563845614698570
+      type: {class: SetActiveBattleInformationEnemyView, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        activeResolver:
+          rid: 6455563845614698571
+    - rid: 6455563845614698571
+      type: {class: BooleanResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
