@@ -392,7 +392,7 @@ namespace SoulRPG
                     {
                         GameListView.ApplyAsSimpleElement(
                             element,
-                            x.GetMasterDataAilment().Name,
+                            $"{x.GetMasterDataAilment().Name}(残り{x.GetRemainingTurnCount()}ターン)",
                             _ =>
                             {
                             },
