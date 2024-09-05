@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 6455563845614698570
+  - rid: 6455563846029672522
   - rid: 7538228103530414196
   references:
     version: 2
@@ -24,6 +25,16 @@ MonoBehaviour:
         activeResolver:
           rid: 6455563845614698571
     - rid: 6455563845614698571
+      type: {class: BooleanResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 6455563846029672522
+      type: {class: SetCanViewTargetAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        flagResolver:
+          rid: 6455563846029672523
+    - rid: 6455563846029672523
       type: {class: BooleanResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
         value: 0
