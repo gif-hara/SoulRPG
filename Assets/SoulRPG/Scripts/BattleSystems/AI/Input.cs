@@ -21,6 +21,8 @@ namespace SoulRPG
 
         private BattleCharacter target;
 
+        private BattleCharacter ailmentViewTarget;
+
         private readonly TinyStateMachine stateMachine = new();
 
         private readonly HKUIDocument commandDocumentPrefab;
@@ -316,10 +318,28 @@ namespace SoulRPG
                         _ =>
                         {
                             AudioManager.PlaySFX("Sfx.Message.0");
+                            ailmentViewTarget = actor;
                             stateMachine.Change(StateAilmentAsync);
                         });
                 }),
             };
+            if (actor.BattleStatus.CanViewTargetAilment)
+            {
+                commands.Add(
+                    x =>
+                    {
+                        GameListView.ApplyAsSimpleElement(
+                            x,
+                            "状態異常（敵）",
+                            _ =>
+                            {
+                                AudioManager.PlaySFX("Sfx.Message.0");
+                                ailmentViewTarget = target;
+                                stateMachine.Change(StateAilmentAsync);
+                            });
+                    }
+                );
+            }
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
             listDocument.Q<TMP_Text>("Header").text = "情報を選べ";
             await scope.WaitUntilCanceled();
@@ -353,7 +373,7 @@ namespace SoulRPG
                     stateMachine.Change(StateSelectMainCommandAsync);
                 })
                 .RegisterTo(scope);
-            var listElements = actor.AilmentController.Elements
+            var listElements = ailmentViewTarget.AilmentController.Elements
                 .Select(x =>
                 {
                     return new Action<HKUIDocument>(element =>
