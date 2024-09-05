@@ -217,6 +217,7 @@ namespace SoulRPG
         public UniTask RecoveryHitPointAsync(int recovery)
         {
             BattleStatus.RecoveryHitPoint(recovery);
+            Events.OnRecoveryHitPoint.OnNext(recovery);
             return UniTask.CompletedTask;
         }
 
