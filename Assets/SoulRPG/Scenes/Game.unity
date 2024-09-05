@@ -175,12 +175,12 @@ MonoBehaviour:
   debugPosition: {x: 0, y: 0}
   isUseDebugPosition: 0
   debugPlayerGrowthParameter:
-    level: 42
-    vitality: 21
-    stamina: 12
-    physicalStrength: 26
+    level: 52
+    vitality: 23
+    stamina: 14
+    physicalStrength: 30
     magicalStrength: 10
-    speed: 13
+    speed: 15
     behaviourPoint: 5
   isUseDebugGrowthParameter: 1
   debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
