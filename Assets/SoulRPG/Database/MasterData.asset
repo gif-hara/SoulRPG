@@ -4844,6 +4844,24 @@ MonoBehaviour:
         SequenceId: 102002
         PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
         Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
+    - Id: Dungeon.10401
+      InitialX: 12
+      InitialY: 12
+      Direction: 0
+      NoCostItemNumberMin: 8
+      NoCostItemNumberMax: 8
+      EnemyPlaceItemNumberMin: 8
+      EnemyPlaceItemNumberMax: 8
+      NoCostEnemyNumberMin: 12
+      NoCostEnemyNumberMax: 12
+      RequireShadow: 1
+      FloorItemNoCosts: []
+      FloorItemEnemyPlaces: []
+      FloorEnemyNoCosts: []
+      WallEvents: []
+      FloorItemGuaranteeds: []
+      FloorEnemyGuaranteeds: []
+      FloorEvents: []
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
@@ -10057,6 +10075,28 @@ MonoBehaviour:
         TableId: 10202
         EnemyId: 10210
         Weight: 100
+    - Key: 10301
+      Value:
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10301
+        Weight: 100
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10302
+        Weight: 100
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10303
+        Weight: 100
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10304
+        Weight: 100
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10305
+        Weight: 100
     - Key: 11101
       Value:
       - Id: 0
@@ -10082,6 +10122,16 @@ MonoBehaviour:
       - Id: 0
         TableId: 11301
         EnemyId: 19905
+        Weight: 100
+    - Key: 11401
+      Value:
+      - Id: 0
+        TableId: 11401
+        EnemyId: 19906
+        Weight: 100
+      - Id: 0
+        TableId: 11401
+        EnemyId: 19907
         Weight: 100
   dungeonTables:
     list:
