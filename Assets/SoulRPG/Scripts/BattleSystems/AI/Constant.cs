@@ -31,7 +31,7 @@ namespace SoulRPG
         {
         }
 
-        public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
+        public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter actor, BattleCharacter target)
         {
             return UniTask.FromResult(new Skill(weaponItemId, skillId, canRegisterUsedIdentifier) as ICommandInvoker);
         }

@@ -61,7 +61,7 @@ namespace SoulRPG
 
         public async UniTask<ICommandInvoker> ThinkAsync(BattleCharacter target)
         {
-            var result = await battleAI.ThinkAsync(this);
+            var result = await battleAI.ThinkAsync(this, target);
             UnityEngine.Assertions.Assert.IsNotNull(result);
             if (!result.CanRegisterUsedIdentifier())
             {

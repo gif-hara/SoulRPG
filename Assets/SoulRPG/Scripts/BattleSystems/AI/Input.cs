@@ -17,7 +17,9 @@ namespace SoulRPG
     [Serializable]
     public sealed class Input : IBattleAI
     {
-        private BattleCharacter character;
+        private BattleCharacter actor;
+
+        private BattleCharacter target;
 
         private readonly TinyStateMachine stateMachine = new();
 
@@ -67,9 +69,10 @@ namespace SoulRPG
             stateMachine.Dispose();
         }
 
-        public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
+        public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter actor, BattleCharacter target)
         {
-            this.character = character;
+            this.actor = actor;
+            this.target = target;
             stateMachine.Change(StateSelectMainCommandAsync);
             source = new UniTaskCompletionSource<ICommandInvoker>();
             return source.Task;
@@ -167,7 +170,7 @@ namespace SoulRPG
             informationWeaponScope = new CancellationTokenSource();
             var informationWeaponView = new BattleInformationWeaponView(informationWeaponDocumentPrefab, informationWeaponScope.Token);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            var commands = character.Equipment.GetWeaponIds()
+            var commands = actor.Equipment.GetWeaponIds()
                 .Select((weaponId, index) =>
                 {
                     return new Action<HKUIDocument>(element =>
@@ -223,7 +226,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             MasterData.Weapon weapon;
-            if (!character.Equipment.GetWeaponId(selectedWeaponId).TryGetMasterDataWeapon(out weapon))
+            if (!actor.Equipment.GetWeaponId(selectedWeaponId).TryGetMasterDataWeapon(out weapon))
             {
                 weapon = Define.HandWeaponId.GetMasterDataWeapon();
             }
@@ -242,19 +245,19 @@ namespace SoulRPG
                         {
                             AudioManager.PlaySFX("Sfx.Message.0");
                             var identifier = Skill.CreateIdentifier(weapon.ItemId, x.Id);
-                            if (character.UsedSkills.Contains(identifier))
+                            if (actor.UsedSkills.Contains(identifier))
                             {
                                 gameEvents.OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。", "Sfx.Message.0"));
                                 return;
                             }
-                            var behaviourPoint = await character.GetFixedNeedBehaviourPointAsync(x.NeedBehaviourPoint);
-                            if (!character.BattleStatus.HasBehaviourPoint(behaviourPoint))
+                            var behaviourPoint = await actor.GetFixedNeedBehaviourPointAsync(x.NeedBehaviourPoint);
+                            if (!actor.BattleStatus.HasBehaviourPoint(behaviourPoint))
                             {
                                 gameEvents.OnRequestShowMessage.OnNext(new("BPが足りない。", "Sfx.Message.0"));
                                 return;
                             }
-                            var stamina = await character.GetFixedNeedStaminaAsync(x.NeedStamina);
-                            if (!character.BattleStatus.HasStamina(stamina))
+                            var stamina = await actor.GetFixedNeedStaminaAsync(x.NeedStamina);
+                            if (!actor.BattleStatus.HasStamina(stamina))
                             {
                                 gameEvents.OnRequestShowMessage.OnNext(new("スタミナが足りない。", "Sfx.Message.0"));
                                 return;
@@ -328,7 +331,7 @@ namespace SoulRPG
 
         private UniTask StateStatusAsync(CancellationToken scope)
         {
-            GameStatusInformationView.Open(informationStatusDocumentPrefab, character.Character, scope);
+            GameStatusInformationView.Open(informationStatusDocumentPrefab, actor.Character, scope);
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -350,7 +353,7 @@ namespace SoulRPG
                     stateMachine.Change(StateSelectMainCommandAsync);
                 })
                 .RegisterTo(scope);
-            var listElements = character.AilmentController.Elements
+            var listElements = actor.AilmentController.Elements
                 .Select(x =>
                 {
                     return new Action<HKUIDocument>(element =>
@@ -429,7 +432,7 @@ namespace SoulRPG
             informationWeaponScope = new CancellationTokenSource();
             var informationWeaponView = new BattleInformationWeaponView(informationWeaponDocumentPrefab, informationWeaponScope.Token);
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            var commands = character.Equipment.GetWeaponIds()
+            var commands = actor.Equipment.GetWeaponIds()
                 .Select((weaponId, index) =>
                 {
                     return new Action<HKUIDocument>(element =>
@@ -483,8 +486,8 @@ namespace SoulRPG
                     stateMachine.Change(StateSelectChangeWeaponEquipmentAsync);
                 })
                 .RegisterTo(scope);
-            var listElements = character.Character.Inventory.Items
-                .Where(x => !character.Equipment.GetWeaponIds().Any(y => y == x.Key) && x.Key.TryGetMasterDataWeapon(out _))
+            var listElements = actor.Character.Inventory.Items
+                .Where(x => !actor.Equipment.GetWeaponIds().Any(y => y == x.Key) && x.Key.TryGetMasterDataWeapon(out _))
                 .Select(x =>
                 {
                     return new Action<HKUIDocument>(element =>
