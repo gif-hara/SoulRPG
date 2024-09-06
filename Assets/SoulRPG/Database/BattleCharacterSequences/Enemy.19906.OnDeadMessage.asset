@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: Enemy.19906.OnDeadMessage
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 9047573762785673730
+  - rid: 9047573762785673731
+  - rid: 9047573762785673732
+  - rid: 9047573712770170971
+  - rid: 9047573712770170969
+  - rid: 9047573875847332061
+  - rid: 9047573875847332063
+  references:
+    version: 2
+    RefIds:
+    - rid: 9047573712770170969
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u3092\u5012\u3057\u305F\u3002"
+        sfxName: Sfx.Defeat.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573712770170971
+      type: {class: BeginAnimationGameEnemyView, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        animationName: Animation.OnDeadMessage.Boss
+    - rid: 9047573762785673730
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u4F55\u6545\u3060\uFF01\uFF1F\u4F55\u6545\u708E\u304C\u52B9\u304B\u306A\u3044\uFF01\uFF1F\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573762785673731
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u3046\u304A\u304A\u304A\u304A\u304A\u304A\u3002\u30EB\u30AF\u30B9\u30AA\u30E9\u69D8\u3041\uFF01\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573762785673732
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u5F8C\u306F\u983C\u307F\u307E\u3057\u305F\u305E\u304A\u304A\u304A\uFF01\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 9047573875847332061
+      type: {class: AddPlayerBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        valueResolver:
+          rid: 9047573875847332062
+    - rid: 9047573875847332062
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 9047573875847332063
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u3092\u5012\u3057\u305F\u3053\u3068\u3067{Target}\u306E\u6700\u5927BP\u304C<color=#88FF88>1</color>\u5897\u3048\u305F\u3002"
+        sfxName: Sfx.Message.22
+        ignoreIfCharacterDead: 0

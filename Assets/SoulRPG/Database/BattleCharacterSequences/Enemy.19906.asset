@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2b68498c7de0e4798a044cf0337265, type: 3}
+  m_Name: Enemy.19906
+  m_EditorClassIdentifier: 
+  onTakeDamage: {fileID: 11400000, guid: cac4da8cfac73d943b04d4171ba35bb7, type: 2}
+  onDeadMessage: {fileID: 11400000, guid: 2b65538931a734abfbd5f3f9515b799b, type: 2}
+  onBeginTurn: {fileID: 11400000, guid: 3053e488aad46574db2b25208b1b7036, type: 2}
