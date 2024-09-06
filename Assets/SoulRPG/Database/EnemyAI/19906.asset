@@ -69,7 +69,7 @@ MonoBehaviour:
     - rid: 1651571015951581323
       type: {class: HitPoint, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
-        rate: 0.6
+        rate: 0.5
         compareType: 5
         targetType: 0
     - rid: 1651571015951581324
