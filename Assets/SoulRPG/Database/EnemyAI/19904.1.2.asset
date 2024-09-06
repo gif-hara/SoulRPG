@@ -37,7 +37,7 @@ MonoBehaviour:
         rightIntResolver:
           rid: 1651571011658711045
         intNameResolver:
-          rid: 1651571011658711046
+          rid: 6455563821605453824
     - rid: 1651571011658711044
       type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
@@ -46,10 +46,6 @@ MonoBehaviour:
       type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
         value: 2
-    - rid: 1651571011658711046
-      type: {class: StringResolver/NameString, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
-      data:
-        name: TurnCount
     - rid: 1651571011658711047
       type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -75,8 +71,12 @@ MonoBehaviour:
     - rid: 1651571011658711050
       type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        value: 0
+        value: 1
     - rid: 1651571011658711051
       type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
         value: 1
+    - rid: 6455563821605453824
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: TurnCount

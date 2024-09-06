@@ -9,6 +9,6 @@ namespace SoulRPG
     /// </summary>
     public interface IBattleAI : IDisposable
     {
-        UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character);
+        UniTask<ICommandInvoker> ThinkAsync(BattleCharacter actor, BattleCharacter target);
     }
 }

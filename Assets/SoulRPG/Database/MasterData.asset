@@ -4844,6 +4844,24 @@ MonoBehaviour:
         SequenceId: 102002
         PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
         Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
+    - Id: Dungeon.10401
+      InitialX: 12
+      InitialY: 12
+      Direction: 0
+      NoCostItemNumberMin: 8
+      NoCostItemNumberMax: 8
+      EnemyPlaceItemNumberMin: 8
+      EnemyPlaceItemNumberMax: 8
+      NoCostEnemyNumberMin: 12
+      NoCostEnemyNumberMax: 12
+      RequireShadow: 1
+      FloorItemNoCosts: []
+      FloorItemEnemyPlaces: []
+      FloorEnemyNoCosts: []
+      WallEvents: []
+      FloorItemGuaranteeds: []
+      FloorEnemyGuaranteeds: []
+      FloorEvents: []
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
@@ -5043,7 +5061,7 @@ MonoBehaviour:
       Id: 101038
       ThumbnailId: Weapon.37
       Thumbnail: {fileID: 21300000, guid: 07daf7029a443164a9c1cceb9858780f, type: 3}
-      Description: "\u53E4\u4EE3\u306E\u8CE2\u8005\u30A4\u30EA\u30B7\u30A2\u304C\u6301\u3064\u3068\u4F1D\u3048\u3089\u308C\u308B\u8056\u306A\u308B\u6756\u3002\u305D\u306E\u6756\u306B\u306F\u7D14\u767D\u306E\u9B54\u529B\u304C\u5BBF\u308A\u3001\u6D44\u5316\u3068\u518D\u751F\u306E\u529B\u3092\u6301\u3064\u3002\u5473\u65B9\u3092\u7652\u3059\u305D\u306E\u529B\u306F\u3001\u307E\u308B\u3067\u795E\u306E\u624B\u304C\u89E6\u308C\u308B\u304B\u306E\u3088\u3046\u306B\u7A4F\u3084\u304B\u3067\u3042\u308A\u306A\u304C\u3089\u3082\u5F37\u5927\u3002"
+      Description: "\u661F\u932C\u5B66\u9577\u30A4\u30EA\u30B7\u30A2\u304C\u6301\u3064\u3068\u4F1D\u3048\u3089\u308C\u308B\u8056\u306A\u308B\u6756\u3002\u305D\u306E\u6756\u306B\u306F\u7D14\u767D\u306E\u9B54\u529B\u304C\u5BBF\u308A\u3001\u6D44\u5316\u3068\u518D\u751F\u306E\u529B\u3092\u6301\u3064\u3002\u5473\u65B9\u3092\u7652\u3059\u305D\u306E\u529B\u306F\u3001\u307E\u308B\u3067\u795E\u306E\u624B\u304C\u89E6\u308C\u308B\u304B\u306E\u3088\u3046\u306B\u7A4F\u3084\u304B\u3067\u3042\u308A\u306A\u304C\u3089\u3082\u5F37\u5927\u3002"
     - Name: "\u30D8\u30D3\u30FC\u30AF\u30ED\u30B9\u30DC\u30A6"
       Id: 101039
       ThumbnailId: Weapon.38
@@ -5164,7 +5182,7 @@ MonoBehaviour:
       ThumbnailId: Weapon.49
       Thumbnail: {fileID: 21300000, guid: 81250bc524deafe45849d042e6fb3b99, type: 3}
       Description: "\u305D\u306E\u30B7\u30F3\u30D7\u30EB\u306A\u5916\u898B\u306B\u53CD\u3057\u3066\u5727\u5012\u7684\u306A\u529B\u3092\u79D8\u3081\u3066\u3044\u308B\u3002\u7D14\u767D\u306E\u30AA\u30FC\u30E9\u304C\u305D\u306E\u5203\u3092\u5305\u307F\u3001\u6575\u306E\u95C7\u3092\u5207\u308A\u88C2\u304F\u3002"
-    - Name: "\u30A8\u30A2\u30EA\u30FC\u306E\u6756\uFF0B"
+    - Name: "\u30A8\u30A2\u30EA\u30FC\u306E\u6EC5\u6756"
       Id: 101063
       ThumbnailId: Weapon.31
       Thumbnail: {fileID: 21300000, guid: 61440f61f49daf24b8b724c90c1f31a4, type: 3}
@@ -5284,6 +5302,26 @@ MonoBehaviour:
       ThumbnailId: Weapon.52
       Thumbnail: {fileID: 21300000, guid: c89f9fdd1ea011444a2dc9c66f3000ad, type: 3}
       Description: "\u6697\u9ED2\u306E\u9B54\u529B\u3092\u5BBF\u3057\u3001\u305D\u306E\u6301\u3061\u4E3B\u306B\u5F37\u5927\u306A\u529B\u3092\u4E0E\u3048\u308B\u304C\u3001\u540C\u6642\u306B\u5FC3\u306B\u8511\u307F\u306E\u611F\u60C5\u3092\u690D\u3048\u4ED8\u3051\u308B\u6756\u306E\u6700\u7D42\u5F37\u5316\u7248\u3002\u5148\u7AEF\u306B\u9ED2\u3044\u9B54\u529B\u304C\u6E26\u5DFB\u304D\u3001\u89E6\u308C\u305F\u8005\u306E\u9B42\u3092\u8755\u3080\u6050\u308C\u3092\u79D8\u3081\u3066\u3044\u308B\u3002"
+    - Name: "\u30D5\u30EC\u30A4\u30E0\u30ED\u30C3\u30C9\uFF0B\uFF0B"
+      Id: 101087
+      ThumbnailId: Weapon.8
+      Thumbnail: {fileID: 21300000, guid: 6078252b54fde467ba498d0f612872f2, type: 3}
+      Description: "\u708E\u306E\u529B\u3092\u64CD\u308B\u9B54\u6CD5\u306E\u6756\u306E\u6700\u7D42\u5F37\u5316\u7248\u3002\u305D\u306E\u5148\u7AEF\u306B\u306F\u5E38\u306B\u5C0F\u3055\u306A\u708E\u304C\u71C3\u3048\u3001\u6575\u3092\u713C\u304D\u5C3D\u304F\u3059\u529B\u3092\u79D8\u3081\u308B\u3002"
+    - Name: "\u30B5\u30F3\u30C0\u30FC\u30ED\u30C3\u30C9\uFF0B\uFF0B"
+      Id: 101088
+      ThumbnailId: Weapon.9
+      Thumbnail: {fileID: 21300000, guid: cad37d0304ef44d8db7046fbf9044bef, type: 3}
+      Description: "\u96F7\u306E\u9B54\u529B\u3092\u5BBF\u3057\u305F\u6756\u306E\u6700\u7D42\u5F37\u5316\u7248\u3002\u7A32\u59BB\u306E\u4E00\u6483\u3067\u6575\u3092\u611F\u96FB\u3055\u305B\u3001\u7ACB\u3061\u3059\u304F\u307E\u305B\u308B\u3002"
+    - Name: "\u30A4\u30EA\u30B7\u30A2\u306E\u6756\uFF0B"
+      Id: 101089
+      ThumbnailId: Weapon.37
+      Thumbnail: {fileID: 21300000, guid: 07daf7029a443164a9c1cceb9858780f, type: 3}
+      Description: "\u661F\u932C\u5B66\u9577\u30A4\u30EA\u30B7\u30A2\u304C\u6301\u3064\u3068\u4F1D\u3048\u3089\u308C\u308B\u8056\u306A\u308B\u6756\u306E\u6700\u7D42\u5F37\u5316\u7248\u3002\u305D\u306E\u6756\u306B\u306F\u7D14\u767D\u306E\u9B54\u529B\u304C\u5BBF\u308A\u3001\u6D44\u5316\u3068\u518D\u751F\u306E\u529B\u3092\u6301\u3064\u3002\u5473\u65B9\u3092\u7652\u3059\u305D\u306E\u529B\u306F\u3001\u307E\u308B\u3067\u795E\u306E\u624B\u304C\u89E6\u308C\u308B\u304B\u306E\u3088\u3046\u306B\u7A4F\u3084\u304B\u3067\u3042\u308A\u306A\u304C\u3089\u3082\u5F37\u5927\u3002"
+    - Name: "\u30A2\u30CA\u30E9\u30A4\u30BA\u30ED\u30C3\u30C9"
+      Id: 101090
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
+      Description: 
     - Name: "\u30C6\u30B9\u30C8\u6B66\u5668"
       Id: 101997
       ThumbnailId: 
@@ -5649,6 +5687,11 @@ MonoBehaviour:
       ThumbnailId: Accessory.23
       Thumbnail: {fileID: 21300000, guid: 921676181dbe591498213e00967cb467, type: 3}
       Description: "\u8EAB\u306B\u3064\u3051\u305F\u8005\u306F\u9A5A\u7570\u7684\u306A\u529B\u3092\u624B\u306B\u3059\u308B\u304C\u3001\u305D\u306E\u4EE3\u308F\u308A\u306B\u3001\u7D20\u65E9\u3055\u304C\u8755\u307E\u308C\u3066\u3044\u304F\u3068\u3044\u3046\u3002\u529B\u3092\u6C42\u3081\u308B\u8005\u306F\u3001\u3053\u306E\u6307\u8F2A\u306B\u5BBF\u308B\u5371\u967A\u306A\u8A98\u60D1\u306B\u6297\u3046\u3053\u3068\u304C\u3067\u304D\u308B\u306E\u3060\u308D\u3046\u304B\u3002"
+    - Name: "\u7570\u56FD\u306E\u63A2\u77E5\u6A5F"
+      Id: 106035
+      ThumbnailId: 
+      Thumbnail: {fileID: 0}
+      Description: "\u5E38\u6642\u30A2\u30CA\u30E9\u30A4\u30BA"
     - Name: "\u9244\u306E\u9375"
       Id: 107001
       ThumbnailId: 
@@ -5756,6 +5799,16 @@ MonoBehaviour:
       - Id: 0
         TableId: 1
         ItemId: 101028
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 1
+        ItemId: 101033
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 1
+        ItemId: 101022
         Count: 1
         Weight: 100
       - Id: 0
@@ -6155,6 +6208,358 @@ MonoBehaviour:
         ItemId: 106033
         Count: 1
         Weight: 100
+    - Key: 3
+      Value:
+      - Id: 0
+        TableId: 3
+        ItemId: 101050
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101056
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101057
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101058
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101059
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101060
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101061
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101062
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101063
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101064
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101065
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101066
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101067
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101068
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101069
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101070
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101071
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101072
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101074
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101075
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101076
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101077
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101078
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101079
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101080
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101081
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101082
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101083
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101084
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101085
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101086
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101087
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101088
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 101089
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 102007
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 103007
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 104007
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 105007
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 102008
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 103008
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 104008
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 105008
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 102009
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 103009
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 104009
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 105009
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106011
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106012
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106013
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106014
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106015
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106016
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106017
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106018
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106019
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106020
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106026
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106027
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106028
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106029
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106030
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106031
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106032
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106033
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106021
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106022
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106023
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106024
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106025
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106034
+        Count: 1
+        Weight: 100
     - Key: 99
       Value:
       - Id: 0
@@ -6236,7 +6641,7 @@ MonoBehaviour:
     - ItemId: 101009
       Strength: 97
       Speed: 1
-      AttackAttribute: 3
+      AttackAttribute: 4
       Skill1: 101012
       Skill2: 101013
       Skill3: 0
@@ -6244,7 +6649,7 @@ MonoBehaviour:
     - ItemId: 101010
       Strength: 147
       Speed: 0
-      AttackAttribute: 1
+      AttackAttribute: 4
       Skill1: 101001
       Skill2: 101014
       Skill3: 101075
@@ -6252,7 +6657,7 @@ MonoBehaviour:
     - ItemId: 101011
       Strength: 96
       Speed: 1
-      AttackAttribute: 3
+      AttackAttribute: 5
       Skill1: 101012
       Skill2: 101021
       Skill3: 0
@@ -6548,7 +6953,7 @@ MonoBehaviour:
     - ItemId: 101048
       Strength: 146
       Speed: 2
-      AttackAttribute: 3
+      AttackAttribute: 4
       Skill1: 101012
       Skill2: 101013
       Skill3: 101091
@@ -6556,7 +6961,7 @@ MonoBehaviour:
     - ItemId: 101049
       Strength: 144
       Speed: 2
-      AttackAttribute: 3
+      AttackAttribute: 5
       Skill1: 101012
       Skill2: 101021
       Skill3: 101081
@@ -6760,7 +7165,7 @@ MonoBehaviour:
       Skill1: 101001
       Skill2: 101068
       Skill3: 101046
-      Skill4: 101046
+      Skill4: 101003
     - ItemId: 101075
       Strength: 249
       Speed: -6
@@ -6857,6 +7262,38 @@ MonoBehaviour:
       Skill2: 101102
       Skill3: 101077
       Skill4: 101035
+    - ItemId: 101087
+      Strength: 222
+      Speed: 3
+      AttackAttribute: 4
+      Skill1: 101012
+      Skill2: 101013
+      Skill3: 101091
+      Skill4: 101011
+    - ItemId: 101088
+      Strength: 220
+      Speed: 3
+      AttackAttribute: 5
+      Skill1: 101012
+      Skill2: 101021
+      Skill3: 101081
+      Skill4: 101009
+    - ItemId: 101089
+      Strength: 216
+      Speed: 3
+      AttackAttribute: 3
+      Skill1: 101012
+      Skill2: 101061
+      Skill3: 101054
+      Skill4: 101089
+    - ItemId: 101090
+      Strength: 116
+      Speed: 1
+      AttackAttribute: 3
+      Skill1: 101012
+      Skill2: 101060
+      Skill3: 0
+      Skill4: 0
     - ItemId: 101997
       Strength: 100
       Speed: 0
@@ -7454,21 +7891,24 @@ MonoBehaviour:
       Description: "\u7363\u306E\u6050\u6016\u5FC3\u3092\u717D\u308B\u4E00\u6483\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u76F8\u624B\u304C\u7363\u5C5E\u6027\u3092\u6301\u3063\u3066\u3044\u308B\u5834\u5408\u306FBP\u304C1\u56DE\u5FA9\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 16926f1a040924ab8b88658b25973834, type: 2}
       AdditionalDescriptions: []
-    - Name: "\u6E80\u6708\u306E\u9060\u5420\u3048"
+    - Name: "\u30A2\u30CA\u30E9\u30A4\u30BA"
       Id: 101060
       NeedBehaviourPoint: 1
       NeedStamina: 1
       CanRegisterUsedSkills: 1
-      Description: "\u529B\u5F37\u3044\u9060\u5420\u3048\u306B\u3088\u308A\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6E80\u6708\u306E\u9060\u5420\u3048\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
-      ActionSequences: {fileID: 0}
-      AdditionalDescriptions: []
-    - Name: "\u8840\u67D3\u3081\u306E\u722A"
+      Description: "\u76F8\u624B\u306E\u72B6\u614B\u3092\u8AAD\u307F\u53D6\u308B\u80FD\u529B\u3092\u5F97\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30CA\u30E9\u30A4\u30BA\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      ActionSequences: {fileID: 11400000, guid: b63c784dfc7de4e8cb5ec003b0500736, type: 2}
+      AdditionalDescriptions:
+      - SkillId: 101060
+        Type: 0
+        Id: 101027
+    - Name: "\u30A4\u30EA\u30B7\u30A2\u306E\u5DE8\u5927\u9B54\u9695\u77F3"
       Id: 101061
-      NeedBehaviourPoint: 1
-      NeedStamina: 1
+      NeedBehaviourPoint: 3
+      NeedStamina: 7
       CanRegisterUsedSkills: 1
-      Description: "\u7363\u306E\u529B\u3092\u501F\u308A\u305F\u5E7E\u4E07\u3082\u306E\u91CE\u7363\u3092\u846C\u3063\u305F\u722A\u3067\u653B\u6483\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u7363\u5C5E\u6027\u304C\u3042\u308B\u5834\u5408\u306F\u5F37\u529B\u306A\u4E00\u6483\u3068\u306A\u308B\u3002"
-      ActionSequences: {fileID: 0}
+      Description: "\u30A4\u30EA\u30B7\u30A2\u5BB6\u306B\u4F1D\u308F\u308B\u9B54\u529B\u3067\u4F5C\u3089\u308C\u305F\u5DE8\u5927\u9695\u77F3\u3092\u6295\u3052\u3064\u3051\u308B\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u9B54\u30AB\u30A6\u30F3\u30C8\u304C3\u4EE5\u4E0A\u5B58\u5728\u3059\u308B\u5834\u5408\u306F\u6D88\u8CBB\u3057\u3001BP\u30924\u56DE\u5FA9\u3059\u308B\u3002"
+      ActionSequences: {fileID: 11400000, guid: 21753edb48cec40f28f714c512490c07, type: 2}
       AdditionalDescriptions: []
     - Name: "\u30C7\u30A3\u30EB\u30D0\u30A8\u30F4\u30A1\u30FC\u30B8"
       Id: 101062
@@ -8766,7 +9206,7 @@ MonoBehaviour:
       FireCutRate: 0.77
       ThunderCutRate: 0.11
       Speed: 8
-      Experience: 5133
+      Experience: 3291
       BehaviourPoint: 1
       Attribute: 17
       ThumbnailId: 8
@@ -8790,7 +9230,7 @@ MonoBehaviour:
       FireCutRate: 0.1
       ThunderCutRate: 0.02
       Speed: 7
-      Experience: 5002
+      Experience: 3159
       BehaviourPoint: 1
       Attribute: 8
       ThumbnailId: 15
@@ -8814,7 +9254,7 @@ MonoBehaviour:
       FireCutRate: 0.09
       ThunderCutRate: 0.05
       Speed: 14
-      Experience: 4870
+      Experience: 3356
       BehaviourPoint: 1
       Attribute: 64
       ThumbnailId: 9
@@ -8838,7 +9278,7 @@ MonoBehaviour:
       FireCutRate: 0.18
       ThunderCutRate: 0.13
       Speed: 15
-      Experience: 5199
+      Experience: 3488
       BehaviourPoint: 1
       Attribute: 2
       ThumbnailId: 5
@@ -8862,7 +9302,7 @@ MonoBehaviour:
       FireCutRate: 0.02
       ThunderCutRate: 0.01
       Speed: 11
-      Experience: 5265
+      Experience: 3554
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 13
@@ -8872,6 +9312,126 @@ MonoBehaviour:
       MoveIntervalSeconds: 0.4
       Thumbnail: {fileID: 21300000, guid: b9fb1e83250fbbb4e996b7d76b895f17, type: 3}
       AISequences: {fileID: 11400000, guid: 8632ee97240a2d5418be611caa1e950c, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10301
+      Name: "\u9AA8\u306E\u738B"
+      HitPoint: 479
+      Stamina: 0
+      PhysicalAttack: 32
+      MagicalAttack: 32
+      SlashCutRate: 0.21
+      BlowCutRate: 0.09
+      ThrustCutRate: 0.2
+      MagicCutRate: 0.18
+      FireCutRate: 0.23
+      ThunderCutRate: 0.18
+      Speed: 15
+      Experience: 5331
+      BehaviourPoint: 1
+      Attribute: 1
+      ThumbnailId: 4
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.3
+      Thumbnail: {fileID: 21300000, guid: af410b1fd10a46c4598e6102fa9b547b, type: 3}
+      AISequences: {fileID: 11400000, guid: dfea27145fddfc4449bd840e601662d1, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10302
+      Name: "\u7956\u970A\u6A39"
+      HitPoint: 513
+      Stamina: 0
+      PhysicalAttack: 31
+      MagicalAttack: 31
+      SlashCutRate: 0.24
+      BlowCutRate: 0.2
+      ThrustCutRate: 0.18
+      MagicCutRate: 0.16
+      FireCutRate: 0.03
+      ThunderCutRate: 0.21
+      Speed: 15
+      Experience: 5437
+      BehaviourPoint: 1
+      Attribute: 32
+      ThumbnailId: 2
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.3
+      Thumbnail: {fileID: 21300000, guid: 3246f0b51351b224dbfd4dec9a6d4513, type: 3}
+      AISequences: {fileID: 11400000, guid: 1efd32200de816449b4a3b468d461e92, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10303
+      Name: "\u53E4\u4EE3\u81EA\u7136\u738B\u306E\u50CF"
+      HitPoint: 396
+      Stamina: 0
+      PhysicalAttack: 30
+      MagicalAttack: 30
+      SlashCutRate: 0.16
+      BlowCutRate: 0.02
+      ThrustCutRate: 0.16
+      MagicCutRate: 0.12
+      FireCutRate: 0.21
+      ThunderCutRate: 0.42
+      Speed: 10
+      Experience: 5224
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 12
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0f75e0bbd67e2cb40bf95bcc930d201e, type: 3}
+      AISequences: {fileID: 11400000, guid: bc12c042675873f499fb50dc169925ff, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10304
+      Name: "\u5287\u6BD2\u5927\u86C7"
+      HitPoint: 516
+      Stamina: 0
+      PhysicalAttack: 30
+      MagicalAttack: 30
+      SlashCutRate: 0.15
+      BlowCutRate: 0.13
+      ThrustCutRate: 0.09
+      MagicCutRate: 0.14
+      FireCutRate: 0.15
+      ThunderCutRate: 0.11
+      Speed: 16
+      Experience: 5117
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 33
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.3
+      Thumbnail: {fileID: 21300000, guid: 4717f02e90cf1a848b6cb3529f49fa45, type: 3}
+      AISequences: {fileID: 11400000, guid: c1b7a48cad316c34491fbe5c481aca1f, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10305
+      Name: "\u30E1\u30BF\u30E2\u30EB\u30B9\u30E9\u30A4\u30E0"
+      HitPoint: 666
+      Stamina: 0
+      PhysicalAttack: 30
+      MagicalAttack: 30
+      SlashCutRate: 0.24
+      BlowCutRate: 0.54
+      ThrustCutRate: 0.1
+      MagicCutRate: 0.08
+      FireCutRate: 0.07
+      ThunderCutRate: 0.05
+      Speed: 17
+      Experience: 5544
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 35
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.3
+      Thumbnail: {fileID: 21300000, guid: 03fcdb65767fd5d498370695aeceb83d, type: 3}
+      AISequences: {fileID: 11400000, guid: 9c19bfa944b40af448951528049fee52, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
@@ -8947,52 +9507,172 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 079071d98c1ef43da889c4a0f0c9dd3b, type: 2}
     - Id: 19904
       Name: "\u7D2B\u708E\u306E\u4E5D\u5C3E"
-      HitPoint: 1161
+      HitPoint: 1496
       Stamina: 0
-      PhysicalAttack: 54
-      MagicalAttack: 54
-      SlashCutRate: 0.14
-      BlowCutRate: 0.21
-      ThrustCutRate: 0.15
-      MagicCutRate: -0.02
-      FireCutRate: 0.53
-      ThunderCutRate: -0.11
-      Speed: 10
-      Experience: 23270
+      PhysicalAttack: 66
+      MagicalAttack: 33
+      SlashCutRate: 0.05
+      BlowCutRate: 0.075
+      ThrustCutRate: 0.06
+      MagicCutRate: 0.12
+      FireCutRate: 0.34
+      ThunderCutRate: 0.09
+      Speed: 15
+      Experience: 26529
       BehaviourPoint: 1
-      Attribute: 0
-      ThumbnailId: 23
+      Attribute: 64
+      ThumbnailId: 19
       BattleBgmId: 1
-      SequencesId: 19903
+      SequencesId: 19904
       FieldOfVision: 0
       MoveIntervalSeconds: 1
-      Thumbnail: {fileID: 21300000, guid: 20e7db75f7e9d45c1888c60555aabb4a, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
-      BattleCharacterSequences: {fileID: 11400000, guid: 079071d98c1ef43da889c4a0f0c9dd3b, type: 2}
+      Thumbnail: {fileID: 21300000, guid: 11214362595ac05438d351b502418c2c, type: 3}
+      AISequences: {fileID: 11400000, guid: f48c8b5c3fafc47ef9795d6062e3a9f4, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: 6d7d8e7381597af4b93ced8bd3c508f1, type: 2}
     - Id: 19905
       Name: "\u661F\u932C\u5B66\u9577\u3001\u30A4\u30EA\u30B7\u30A2"
-      HitPoint: 1161
+      HitPoint: 1023
       Stamina: 0
-      PhysicalAttack: 54
-      MagicalAttack: 54
-      SlashCutRate: 0.14
-      BlowCutRate: 0.21
-      ThrustCutRate: 0.15
-      MagicCutRate: -0.02
-      FireCutRate: 0.53
-      ThunderCutRate: -0.11
-      Speed: 10
-      Experience: 23270
+      PhysicalAttack: 59
+      MagicalAttack: 59
+      SlashCutRate: 0.09
+      BlowCutRate: 0.083
+      ThrustCutRate: 0.086
+      MagicCutRate: 0.23
+      FireCutRate: 0.13
+      ThunderCutRate: 0.12
+      Speed: 14
+      Experience: 26529
       BehaviourPoint: 1
-      Attribute: 0
-      ThumbnailId: 23
+      Attribute: 1
+      ThumbnailId: 28
       BattleBgmId: 1
-      SequencesId: 19903
+      SequencesId: 19905
       FieldOfVision: 0
       MoveIntervalSeconds: 1
-      Thumbnail: {fileID: 21300000, guid: 20e7db75f7e9d45c1888c60555aabb4a, type: 3}
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: 758d15476014d438ebaa09a50fbbc1a2, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: 2298d088d70558e4f8dc92d80e929ae5, type: 2}
+    - Id: 19906
+      Name: "\u9023\u9583\u306E\u30A2\u30EB\u30CE\u30A4\u30C9"
+      HitPoint: 2490
+      Stamina: 0
+      PhysicalAttack: 62
+      MagicalAttack: 62
+      SlashCutRate: 0.1
+      BlowCutRate: 0.17
+      ThrustCutRate: 0.07
+      MagicCutRate: 0.12
+      FireCutRate: 0.19
+      ThunderCutRate: 0.07
+      Speed: 19
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 1
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19906
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
       AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
-      BattleCharacterSequences: {fileID: 11400000, guid: 079071d98c1ef43da889c4a0f0c9dd3b, type: 2}
+      BattleCharacterSequences: {fileID: 0}
+    - Id: 19907
+      Name: "\u5F71\u306E\u5203\u3001\u30D5\u30A7\u30A4"
+      HitPoint: 2484
+      Stamina: 0
+      PhysicalAttack: 60
+      MagicalAttack: 60
+      SlashCutRate: 0.08
+      BlowCutRate: 0.07
+      ThrustCutRate: 0.06
+      MagicCutRate: 0.07
+      FireCutRate: 0.04
+      ThunderCutRate: 0.05
+      Speed: 19
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 1
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19907
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 0}
+    - Id: 19908
+      Name: "\u899A\u9192\u306E\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
+      HitPoint: 2430
+      Stamina: 0
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0
+      BlowCutRate: 0
+      ThrustCutRate: 0
+      MagicCutRate: 0
+      FireCutRate: 0
+      ThunderCutRate: 0
+      Speed: 14
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 1
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19908
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 0}
+    - Id: 19909
+      Name: "\u8EE2\u751F\u306E\u30EB\u30AF\u30B9\u30AA\u30E9"
+      HitPoint: 2430
+      Stamina: 0
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0
+      BlowCutRate: 0
+      ThrustCutRate: 0
+      MagicCutRate: 0
+      FireCutRate: 0
+      ThunderCutRate: 0
+      Speed: 14
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 1
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19909
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 0}
+    - Id: 19910
+      Name: "\u518D\u751F\u3068\u7834\u58CA\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
+      HitPoint: 2430
+      Stamina: 0
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0
+      BlowCutRate: 0
+      ThrustCutRate: 0
+      MagicCutRate: 0
+      FireCutRate: 0
+      ThunderCutRate: 0
+      Speed: 14
+      Experience: 136000
+      BehaviourPoint: 1
+      Attribute: 1
+      ThumbnailId: 28
+      BattleBgmId: 1
+      SequencesId: 19910
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 0}
   ailments:
     list:
     - Id: 101001
@@ -9152,10 +9832,10 @@ MonoBehaviour:
       Sequences: {fileID: 11400000, guid: c3a23721d616344339d1bee7c98ab06e, type: 2}
       IsDebuff: 0
     - Id: 101027
-      Name: "\u6E80\u6708\u306E\u9060\u5420\u3048"
-      Description: "\u6E80\u6708\u306B\u9CF4\u304F\u72FC\u306E\u529B\u3092\u5F97\u308B\u3002\u7363\u5C5E\u6027\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Name: "\u30A2\u30CA\u30E9\u30A4\u30BA"
+      Description: "\u76F8\u624B\u306E\u72B6\u614B\u3092\u8AAD\u307F\u53D6\u308C\u308B\u3088\u3046\u306B\u306A\u308A\u3001HP\u3084\u5F31\u70B9\u304C\u5206\u304B\u308B\u3088\u3046\u306B\u306A\u308B\u3002\u3055\u3089\u306B\u300C\u78BA\u8A8D\u300D\u30B3\u30DE\u30F3\u30C9\u304B\u3089\u76F8\u624B\u306E\u72B6\u614B\u7570\u5E38\u3082\u5206\u304B\u308B\u3088\u3046\u306B\u306A\u308B\u3002"
       CanReset: 0
-      Sequences: {fileID: 0}
+      Sequences: {fileID: 11400000, guid: d8d978cb887aa487ea5f53dbfa930131, type: 2}
       IsDebuff: 0
     - Id: 101028
       Name: "\u7A32\u59BB\u306E\u93A7"
@@ -9395,6 +10075,28 @@ MonoBehaviour:
         TableId: 10202
         EnemyId: 10210
         Weight: 100
+    - Key: 10301
+      Value:
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10301
+        Weight: 100
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10302
+        Weight: 100
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10303
+        Weight: 100
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10304
+        Weight: 100
+      - Id: 0
+        TableId: 10301
+        EnemyId: 10305
+        Weight: 100
     - Key: 11101
       Value:
       - Id: 0
@@ -9420,6 +10122,16 @@ MonoBehaviour:
       - Id: 0
         TableId: 11301
         EnemyId: 19905
+        Weight: 100
+    - Key: 11401
+      Value:
+      - Id: 0
+        TableId: 11401
+        EnemyId: 19906
+        Weight: 100
+      - Id: 0
+        TableId: 11401
+        EnemyId: 19907
         Weight: 100
   dungeonTables:
     list:

@@ -22,7 +22,7 @@ namespace SoulRPG.BattleSystems.AI
         {
         }
 
-        public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter character)
+        public UniTask<ICommandInvoker> ThinkAsync(BattleCharacter actor, BattleCharacter target)
         {
             var result = new Sequences(scriptableSequences, 101999, 0, 1, 0);
             return UniTask.FromResult(result as ICommandInvoker);

@@ -61,7 +61,7 @@ namespace SoulRPG
 
         public async UniTask<ICommandInvoker> ThinkAsync(BattleCharacter target)
         {
-            var result = await battleAI.ThinkAsync(this);
+            var result = await battleAI.ThinkAsync(this, target);
             UnityEngine.Assertions.Assert.IsNotNull(result);
             if (!result.CanRegisterUsedIdentifier())
             {
@@ -217,6 +217,7 @@ namespace SoulRPG
         public UniTask RecoveryHitPointAsync(int recovery)
         {
             BattleStatus.RecoveryHitPoint(recovery);
+            Events.OnRecoveryHitPoint.OnNext(recovery);
             return UniTask.CompletedTask;
         }
 

@@ -102,6 +102,8 @@ namespace SoulRPG
 
         private readonly CancellationTokenSource scope = new();
 
+        public bool CanViewTargetAilment { get; set; } = false;
+
         public CharacterBattleStatus
         (
             string name,

@@ -10,31 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: 19904.1.2.2
+  m_Name: 10303.2
   m_EditorClassIdentifier: 
   sequences:
-  - rid: 1651571015951581184
-  - rid: 1651571015951581185
+  - rid: 3022426230457106523
+  - rid: 6455563821605453900
   references:
     version: 2
     RefIds:
-    - rid: 1651571015951581184
+    - rid: 3022426230457106523
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u306F\u7D2B\u708E\u5F3E\u3092\u5410\u304D\u51FA\u3057\u3066\u304D\u305F\u3002"
-        sfxName: Sfx.Message.9
+        format: "{Actor}\u306F\u5927\u304D\u306A\u62F3\u3067\u6BB4\u308A\u304B\u304B\u3063\u3066\u304D\u305F\u3002"
+        sfxName: Sfx.Message.4
         ignoreIfCharacterDead: 0
-    - rid: 1651571015951581185
+    - rid: 6455563821605453900
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         damageCalculator:
-          rid: 1651571015951581186
+          rid: 6455563821605453901
         targetType: 1
         giveDamageType: 0
         sfxName: Sfx.Message.2
-    - rid: 1651571015951581186
+    - rid: 6455563821605453901
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        weaponRate: 1.05
+        weaponRate: 1
         attackType: 0
-        attackAttribute: 5
+        attackAttribute: 2
