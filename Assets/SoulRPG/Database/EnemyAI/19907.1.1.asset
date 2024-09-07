@@ -15,11 +15,15 @@ MonoBehaviour:
   sequences:
   - rid: 3022425832378073187
   - rid: 1651571015951581343
+  - rid: 6455563878321356872
+  - rid: 6455563878321356873
   - rid: 1651571015951581359
   - rid: 1651571015951581360
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 1651571015951581343
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -40,3 +44,17 @@ MonoBehaviour:
         format: "{Actor}\u300C\u30FB\u30FB\u30FB\uFF01\u300D"
         sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0
+    - rid: 6455563878321356872
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u3055\u3089\u306B\u53CD\u6483\u306E\u4F53\u52E2\u3092\u53D6\u3063\u305F\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 6455563878321356873
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101018
+        turnCount: -1
+        battleCharacterEvaluator:
+          rid: -2
