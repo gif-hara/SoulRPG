@@ -49,6 +49,38 @@ namespace SoulRPG
         public class SuspendData
         {
             public CharacterGrowthParameter growthParameter;
+
+            public Vector2Int playerPosition;
+
+            public Define.Direction playerDirection;
+
+            public EquipmentData playerEquipmentData;
+
+            public ItemData[] playerItemData;
+        }
+
+        [Serializable]
+        public class EquipmentData
+        {
+            public int[] weaponIds;
+
+            public int headId;
+
+            public int bodyId;
+
+            public int armId;
+
+            public int legId;
+
+            public int[] accessoryIds;
+        }
+
+        [Serializable]
+        public class ItemData
+        {
+            public int itemId;
+
+            public int count;
         }
     }
 }

@@ -518,5 +518,36 @@ namespace SoulRPG
                 accessoryIds[i].Value = 0;
             }
         }
+
+        public SaveData.EquipmentData CreateSaveData()
+        {
+            return new()
+            {
+                weaponIds = weaponIds.Select(x => x.Value).ToArray(),
+                headId = headId.Value,
+                bodyId = bodyId.Value,
+                armId = armId.Value,
+                legId = legId.Value,
+                accessoryIds = accessoryIds.Select(x => x.Value).ToArray(),
+            };
+        }
+
+        public void SyncFromSaveData(SaveData.EquipmentData equipmentData)
+        {
+            for (var i = 0; i < 4; i++)
+            {
+                weaponIds[i].Value = equipmentData.weaponIds[i];
+            }
+
+            headId.Value = equipmentData.headId;
+            bodyId.Value = equipmentData.bodyId;
+            armId.Value = equipmentData.armId;
+            legId.Value = equipmentData.legId;
+
+            for (var i = 0; i < 4; i++)
+            {
+                accessoryIds[i].Value = equipmentData.accessoryIds[i];
+            }
+        }
     }
 }

@@ -154,7 +154,10 @@ namespace SoulRPG.SceneControllers
             var gameTipsView = new GameTipsView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Tips"), destroyCancellationToken);
             TinyServiceLocator.Register(gameTipsView);
             gameEvents.OnRequestChangeDungeon.OnNext(debugDungeonName);
-
+            if (saveData != null && saveData.suspendData != null)
+            {
+                player.SyncFromSaveData(saveData);
+            }
 #if DEBUG
             var battleDebugData = new BattleDebugData();
             TinyServiceLocator.Register(battleDebugData);

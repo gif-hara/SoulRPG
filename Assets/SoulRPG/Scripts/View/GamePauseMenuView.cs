@@ -556,7 +556,18 @@ namespace SoulRPG
             if (index == 0)
             {
                 var saveData = SaveData.Load();
-                saveData.suspendData.growthParameter = character.GrowthParameter;
+                if (saveData == null)
+                {
+                    saveData = new SaveData();
+                }
+                saveData.suspendData = new SaveData.SuspendData
+                {
+                    growthParameter = character.GrowthParameter,
+                    playerPosition = character.Position,
+                    playerDirection = character.Direction,
+                    playerEquipmentData = character.Equipment.CreateSaveData(),
+                    playerItemData = character.Inventory.CreateSaveData()
+                };
                 SaveData.Save(saveData);
                 stateMachine.Change(StateCreatedSuspendData);
             }

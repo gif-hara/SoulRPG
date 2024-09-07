@@ -102,5 +102,14 @@ namespace SoulRPG.CharacterControllers
             lifeScopeSource.Cancel();
             lifeScopeSource.Dispose();
         }
+
+        public void SyncFromSaveData(SaveData saveData)
+        {
+            Position = saveData.suspendData.playerPosition;
+            Direction = saveData.suspendData.playerDirection;
+            Inventory.SyncFromSaveData(saveData.suspendData.playerItemData);
+            Equipment.SyncFromSaveData(saveData.suspendData.playerEquipmentData);
+            GrowthParameter.Sync(saveData.suspendData.growthParameter, this);
+        }
     }
 }

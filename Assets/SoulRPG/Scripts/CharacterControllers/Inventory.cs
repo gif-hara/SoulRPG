@@ -65,5 +65,30 @@ namespace SoulRPG
         {
             Items.Clear();
         }
+
+        public SaveData.ItemData[] CreateSaveData()
+        {
+            var result = new SaveData.ItemData[Items.Count];
+            var i = 0;
+            foreach (var item in Items)
+            {
+                result[i] = new SaveData.ItemData
+                {
+                    itemId = item.Key,
+                    count = item.Value
+                };
+                i++;
+            }
+            return result;
+        }
+
+        public void SyncFromSaveData(SaveData.ItemData[] itemData)
+        {
+            Items.Clear();
+            foreach (var data in itemData)
+            {
+                Items[data.itemId] = data.count;
+            }
+        }
     }
 }
