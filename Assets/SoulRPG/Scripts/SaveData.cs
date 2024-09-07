@@ -12,6 +12,8 @@ namespace SoulRPG
     {
         public PlayerData playerData;
 
+        public SuspendData suspendData;
+
         public static void Save(SaveData saveData)
         {
 #if ENABLE_SAVE
@@ -41,7 +43,11 @@ namespace SoulRPG
         public class PlayerData
         {
             public string name;
+        }
 
+        [Serializable]
+        public class SuspendData
+        {
             public CharacterGrowthParameter growthParameter;
         }
     }
