@@ -609,7 +609,11 @@ namespace SoulRPG
             {
                 playerCharacter.Dispose();
                 enemyCharacter.Dispose();
-                TinyServiceLocator.Remove<BattleInformationEnemyView>();
+
+                if (TinyServiceLocator.Contains<BattleInformationEnemyView>())
+                {
+                    TinyServiceLocator.Remove<BattleInformationEnemyView>();
+                }
 
                 if (scope == null)
                 {
