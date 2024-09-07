@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using UnityEngine;
 using UnitySequencerSystem;
 using UnitySequencerSystem.Resolvers;
@@ -17,7 +16,11 @@ namespace SoulRPG.BattleSystems.BattleCharacterEvaluators
 
         public bool Evaluate(BattleCharacter actor, BattleCharacter target, Container container)
         {
-            return container.Resolve<float>(keyResolver.Resolve(container)) > 0;
+            if (container.TryResolve<float>(keyResolver.Resolve(container), out var stamina))
+            {
+                return stamina > 0;
+            }
+            return false;
         }
     }
 }
