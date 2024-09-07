@@ -31,7 +31,7 @@ MonoBehaviour:
     - rid: 1651571015951581345
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        weaponRate: 0.4
+        weaponRate: 1
         attackType: 0
         attackAttribute: 3
     - rid: 1651571015951581346
@@ -45,7 +45,7 @@ MonoBehaviour:
     - rid: 1651571015951581347
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        weaponRate: 0.4
+        weaponRate: 1
         attackType: 0
         attackAttribute: 3
     - rid: 1651571015951581348
@@ -59,7 +59,7 @@ MonoBehaviour:
     - rid: 1651571015951581349
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        weaponRate: 0.3
+        weaponRate: 1
         attackType: 0
         attackAttribute: 3
     - rid: 3022425832378073187
