@@ -77,7 +77,7 @@ namespace SoulRPG.SceneControllers
             TinyServiceLocator.Register(new GameFadeView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Fade"), destroyCancellationToken));
             var saveData = SaveData.Load();
             var playerName = saveData?.playerData?.name ?? debugPlayerName;
-            var playerGrowthParameter = saveData?.playerData?.growthParameter ?? new(gameRule.PlayerGrowthParameter);
+            var playerGrowthParameter = saveData?.suspendData?.growthParameter ?? new(gameRule.PlayerGrowthParameter);
             var player = new Character(playerName, playerGrowthParameter, gameRule.InitialEquipment, debugPlayerAttribute);
             TinyServiceLocator.Register("Player", player);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
@@ -155,24 +155,6 @@ namespace SoulRPG.SceneControllers
             TinyServiceLocator.Register(gameTipsView);
             gameEvents.OnRequestChangeDungeon.OnNext(debugDungeonName);
 
-            if (saveData == null)
-            {
-                saveData = new SaveData
-                {
-                    playerData = new SaveData.PlayerData
-                    {
-                        name = playerName,
-                        growthParameter = player.GrowthParameter
-                    }
-                };
-            }
-            player.Events.OnSyncGrowthParameter
-                .Subscribe(_ =>
-                {
-                    saveData.playerData.growthParameter = player.GrowthParameter;
-                    SaveData.Save(saveData);
-                })
-                .RegisterTo(destroyCancellationToken);
 #if DEBUG
             var battleDebugData = new BattleDebugData();
             TinyServiceLocator.Register(battleDebugData);
