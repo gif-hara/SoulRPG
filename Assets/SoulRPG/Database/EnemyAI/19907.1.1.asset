@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 19907.1.1
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 3022425832378073187
+  - rid: 1651571015951581343
+  - rid: 1651571015951581359
+  - rid: 1651571015951581360
+  references:
+    version: 2
+    RefIds:
+    - rid: 1651571015951581343
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u30CA\u30A4\u30D5\u306B\u4F55\u304B\u5857\u5E03\u3057\u305F\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 1651571015951581359
+      type: {class: ChangeEnemyAI, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        scriptableSequences: {fileID: 11400000, guid: 6fd5780fb403246a482d1c085f8903fa, type: 2}
+    - rid: 1651571015951581360
+      type: {class: ResetBattleCharacterTurnCount, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+    - rid: 3022425832378073187
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u300C\u30FB\u30FB\u30FB\uFF01\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0

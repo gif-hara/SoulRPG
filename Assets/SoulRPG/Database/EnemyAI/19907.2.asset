@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 19907.2
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 1651571015951581361
+  - rid: 1651571015951581321
+  references:
+    version: 2
+    RefIds:
+    - rid: 1651571015951581321
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 1651571015951581363
+          sequences: {fileID: 11400000, guid: 6d7190ac2d2474e8e9d540231a26031d, type: 2}
+        - evaluator:
+            rid: 1651571015951581350
+          sequences: {fileID: 11400000, guid: d63fc6f9914e04861a8c96f15f9eeefe, type: 2}
+    - rid: 1651571015951581350
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
+    - rid: 1651571015951581361
+      type: {class: RegisterContainerBattleCharacterTurnCount, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        keyResolver:
+          rid: 1651571015951581362
+    - rid: 1651571015951581362
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: TurnCount
+    - rid: 1651571015951581363
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 1651571015951581364
+        valueResolver:
+          rid: 1651571015951581365
+        compareType: 0
+    - rid: 1651571015951581364
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: TurnCount
+    - rid: 1651571015951581365
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1

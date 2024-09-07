@@ -298,7 +298,7 @@ namespace SoulRPG
 
         public void AddGuardPoint(int value)
         {
-            guardPointReactiveProperty.Value = Mathf.Clamp(guardPointReactiveProperty.Value + value, 0, HitPointMax / 2);
+            guardPointReactiveProperty.Value = Mathf.Clamp(guardPointReactiveProperty.Value + value, 0, HitPointMax);
         }
 
         public void ResetGuardPoint()
