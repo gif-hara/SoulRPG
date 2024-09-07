@@ -11175,7 +11175,7 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 2298d088d70558e4f8dc92d80e929ae5, type: 2}
     - Id: 19906
       Name: "\u9023\u9583\u306E\u30A2\u30EB\u30CE\u30A4\u30C9"
-      HitPoint: 2539
+      HitPoint: 3408
       Stamina: 0
       PhysicalAttack: 70
       MagicalAttack: 70
@@ -11199,7 +11199,7 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: bdd67bcf60084438989242ae095483e1, type: 2}
     - Id: 19907
       Name: "\u5F71\u306E\u5203\u3001\u30B7\u30A7\u30F3"
-      HitPoint: 2595
+      HitPoint: 3483
       Stamina: 0
       PhysicalAttack: 71
       MagicalAttack: 71
@@ -11332,8 +11332,8 @@ MonoBehaviour:
       Sequences: {fileID: 11400000, guid: 2df05f64a322247a4a58fd2d1413686e, type: 2}
       IsDebuff: 1
     - Id: 101007
-      Name: "\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u534A\u6E1B"
-      Description: "\u93A7\u306A\u3069\u3092\u3088\u308A\u786C\u5316\u3055\u305B\u3001\u7269\u7406\u7CFB\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u534A\u6E1B\u3059\u308B\u3002"
+      Name: "\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u8EFD\u6E1B"
+      Description: "\u93A7\u306A\u3069\u3092\u3088\u308A\u786C\u5316\u3055\u305B\u3001\u7269\u7406\u7CFB\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u8EFD\u6E1B\u3059\u308B\u3002"
       CanReset: 0
       Sequences: {fileID: 11400000, guid: 129dbad0ac5174d4795f00a8e7a22f47, type: 2}
       IsDebuff: 0
@@ -11381,7 +11381,7 @@ MonoBehaviour:
       IsDebuff: 0
     - Id: 101015
       Name: "\u9B54\u529B\u306E\u76FE"
-      Description: "\u9B54\u529B\u3067\u4F5C\u3089\u308C\u305F\u76FE\u3092\u524D\u65B9\u306B\u5C55\u958B\u3057\u3001\u9B54\u6CD5\u7CFB\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u534A\u6E1B\u3059\u308B\u3002"
+      Description: "\u9B54\u529B\u3067\u4F5C\u3089\u308C\u305F\u76FE\u3092\u524D\u65B9\u306B\u5C55\u958B\u3057\u3001\u9B54\u6CD5\u7CFB\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u8EFD\u6E1B\u3059\u308B\u3002"
       CanReset: 0
       Sequences: {fileID: 11400000, guid: 656333d33b92844408eec58b2c7e3ac9, type: 2}
       IsDebuff: 0
@@ -11459,7 +11459,7 @@ MonoBehaviour:
       IsDebuff: 0
     - Id: 101028
       Name: "\u7A32\u59BB\u306E\u93A7"
-      Description: "\u7A32\u59BB\u306E\u529B\u3092\u8EAB\u4F53\u306B\u5BBF\u3059\u3002\u96F7\u6483\u5C5E\u6027\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u3092\u5927\u5E45\u306B\u6E1B\u5C11\u3055\u305B\u308B\u3002"
+      Description: "\u7A32\u59BB\u306E\u529B\u3092\u8EAB\u4F53\u306B\u5BBF\u3059\u3002\u96F7\u6483\u5C5E\u6027\u306E\u53D7\u3051\u308B\u30C0\u30E1\u30FC\u30B8\u304C\u8EFD\u6E1B\u3059\u308B\u3002"
       CanReset: 0
       Sequences: {fileID: 11400000, guid: 500afd09ad4069e4b8a20859795d4261, type: 2}
       IsDebuff: 0
