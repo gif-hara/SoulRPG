@@ -59,6 +59,8 @@ namespace SoulRPG
             public ItemData[] playerItemData;
 
             public PlayerInstanceData playerInstanceData;
+
+            public DungeonData dungeonData;
         }
 
         [Serializable]
@@ -93,6 +95,14 @@ namespace SoulRPG
             public int stamina;
 
             public int experience;
+        }
+
+        [Serializable]
+        public class DungeonData
+        {
+            public string dungeonName;
+
+            public int floorId;
         }
     }
 }

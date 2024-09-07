@@ -567,7 +567,8 @@ namespace SoulRPG
                     playerDirection = character.Direction,
                     playerEquipmentData = character.Equipment.CreateSaveData(),
                     playerItemData = character.Inventory.CreateSaveData(),
-                    playerInstanceData = character.InstanceStatus.CreateSaveData()
+                    playerInstanceData = character.InstanceStatus.CreateSaveData(),
+                    dungeonData = TinyServiceLocator.Resolve<DungeonController>().CreateSaveData()
                 };
                 SaveData.Save(saveData);
                 stateMachine.Change(StateCreatedSuspendData);

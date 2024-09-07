@@ -656,6 +656,36 @@ namespace SoulRPG
             return BeginBattleAsync(player, enemy);
         }
 
+        public SaveData.DungeonData CreateSaveData()
+        {
+            return new SaveData.DungeonData
+            {
+                dungeonName = CurrentDungeon.name,
+                floorId = currentFloorId,
+            };
+        }
+
+        public void SyncFromSaveData(SaveData.DungeonData saveData)
+        {
+            dungeonScope?.Cancel();
+            dungeonScope?.Dispose();
+            dungeonScope = new CancellationTokenSource();
+            reachedPoints.Clear();
+            foreach (var enemy in Enemies)
+            {
+                enemy.Dispose();
+            }
+            Enemies.Clear();
+            restedCheckPoints.Clear();
+            var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+            var masterData = TinyServiceLocator.Resolve<MasterData>();
+            CurrentDungeon = masterData.Dungeons.Get(saveData.dungeonName);
+            CurrentDungeonSpec = masterData.DungeonSpecs.Get(CurrentDungeon.name);
+            currentFloorId = saveData.floorId;
+
+            gameEvents.OnSetupDungeon.OnNext(this);
+        }
+
 #if DEBUG
         public void DebugAddAllReachedPoint()
         {
