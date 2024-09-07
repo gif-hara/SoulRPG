@@ -88,6 +88,23 @@ namespace SoulRPG
                             }
                         );
                     },
+                    element =>
+                    {
+                        GameListView.ApplyAsSimpleElement
+                        (
+                            element,
+                            "中断データ作成",
+                            _ =>
+                            {
+                                stateMachine.Change(StateCreateSuspendData);
+                                AudioManager.PlaySFX("Sfx.Message.0");
+                            },
+                            _ =>
+                            {
+                                GameTipsView.SetTip("中断データを作成してゲームを終了します。");
+                            }
+                        );
+                    }
                 },
                 0
             );
@@ -525,6 +542,40 @@ namespace SoulRPG
         {
             await OptionsView.OpenAsync(documentBundlePrefab, scope);
             stateMachine.Change(StateRootMenuAsync);
+        }
+
+        private async UniTask StateCreateSuspendData(CancellationToken scope)
+        {
+            var index = await DialogView.ConfirmAsync(
+                documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                "中断データを作成してゲームを終了しますか？",
+                new[] { "はい", "いいえ" },
+                0,
+                scope
+                );
+            if (index == 0)
+            {
+                var saveData = SaveData.Load();
+                saveData.suspendData.growthParameter = character.GrowthParameter;
+                SaveData.Save(saveData);
+                stateMachine.Change(StateCreatedSuspendData);
+            }
+            else
+            {
+                stateMachine.Change(StateRootMenuAsync);
+            }
+        }
+
+        private async UniTask StateCreatedSuspendData(CancellationToken scope)
+        {
+            await DialogView.ConfirmAsync
+            (
+                documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                "中断データを作成しました。このままゲームを終了できます。お疲れ様でした。",
+                new string[] { },
+                0,
+                scope
+            );
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)
