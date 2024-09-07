@@ -11175,10 +11175,10 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 2298d088d70558e4f8dc92d80e929ae5, type: 2}
     - Id: 19906
       Name: "\u9023\u9583\u306E\u30A2\u30EB\u30CE\u30A4\u30C9"
-      HitPoint: 2490
+      HitPoint: 2539
       Stamina: 0
-      PhysicalAttack: 62
-      MagicalAttack: 62
+      PhysicalAttack: 70
+      MagicalAttack: 70
       SlashCutRate: 0.1
       BlowCutRate: 0.17
       ThrustCutRate: 0.07
@@ -11186,23 +11186,23 @@ MonoBehaviour:
       FireCutRate: 0.19
       ThunderCutRate: 0.07
       Speed: 19
-      Experience: 136000
+      Experience: 39207
       BehaviourPoint: 1
       Attribute: 1
-      ThumbnailId: 28
+      ThumbnailId: 36
       BattleBgmId: 1
       SequencesId: 19906
       FieldOfVision: 0
       MoveIntervalSeconds: 1
-      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      Thumbnail: {fileID: 21300000, guid: ac9067da53fae7c4289ec85914ce6086, type: 3}
       AISequences: {fileID: 11400000, guid: 9185323e6fabf4b4187661cbbaf041fb, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: bdd67bcf60084438989242ae095483e1, type: 2}
     - Id: 19907
       Name: "\u5F71\u306E\u5203\u3001\u30B7\u30A7\u30F3"
-      HitPoint: 2484
+      HitPoint: 2595
       Stamina: 0
-      PhysicalAttack: 60
-      MagicalAttack: 60
+      PhysicalAttack: 71
+      MagicalAttack: 71
       SlashCutRate: 0.08
       BlowCutRate: 0.07
       ThrustCutRate: 0.06
@@ -11210,15 +11210,15 @@ MonoBehaviour:
       FireCutRate: 0.04
       ThunderCutRate: 0.05
       Speed: 19
-      Experience: 136000
+      Experience: 39207
       BehaviourPoint: 1
       Attribute: 1
-      ThumbnailId: 28
+      ThumbnailId: 37
       BattleBgmId: 1
       SequencesId: 19907
       FieldOfVision: 0
       MoveIntervalSeconds: 1
-      Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
+      Thumbnail: {fileID: 21300000, guid: 77fc8c594fc39c94daf15942477a3938, type: 3}
       AISequences: {fileID: 11400000, guid: 979d9a43264014cacad6481499027c79, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 4593628952f1f434ab9a5d4a42b24814, type: 2}
     - Id: 19908
