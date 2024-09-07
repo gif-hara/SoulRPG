@@ -28,7 +28,7 @@ MonoBehaviour:
     - rid: 3561509643546263719
       type: {class: Random, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
-        probability: 0.6
+        probability: 0.5
     - rid: 3561510143004770414
       type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
