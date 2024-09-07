@@ -26,7 +26,7 @@ MonoBehaviour:
       type: {class: PowFromAilmentCount, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
         targetType: 0
-        rate: 1.4
+        rate: 1.3
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
