@@ -38,7 +38,7 @@ MonoBehaviour:
     - rid: 3561509643546263784
       type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        targetType: 1
+        targetType: 0
         masterDataAilmentId: 101003
         turnCount: 4
         battleCharacterEvaluator:
