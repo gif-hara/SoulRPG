@@ -1,3 +1,4 @@
+#define ENABLE_SAVE
 using System;
 using UnityEngine;
 
@@ -13,9 +14,11 @@ namespace SoulRPG
 
         public static void Save(SaveData saveData)
         {
+#if ENABLE_SAVE
             var json = JsonUtility.ToJson(saveData);
             var encryptedJson = EncryptionUtility.Encrypt(json);
             PlayerPrefs.SetString("SaveData", encryptedJson);
+#endif
         }
 
         public static SaveData Load()
