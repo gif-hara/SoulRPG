@@ -263,7 +263,7 @@ namespace SoulRPG
             foreach (var i in items.List)
             {
                 i.Thumbnail = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/SoulRPG/Textures/{i.ThumbnailId}.png");
-                if (i.Thumbnail == null)
+                if (!string.IsNullOrEmpty(i.ThumbnailId) && i.Thumbnail == null)
                 {
                     Debug.LogWarning($"Not found ItemThumbnail ItemId:{i.Id} ThumbnailId:{i.ThumbnailId}");
                 }
