@@ -30,6 +30,8 @@ MonoBehaviour:
           rid: 9047573724747792461
         battleCharacterEvaluator:
           rid: -2
+        buffCondition:
+          rid: -2
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -39,4 +41,4 @@ MonoBehaviour:
     - rid: 9047573724747792461
       type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
-        value: 0.6
+        value: 0.25
