@@ -2890,6 +2890,952 @@ MonoBehaviour:
         - a: {x: 26, y: 0}
           b: {x: 26, y: -1}
       range: {x: 26, y: 26}
+    - name: Dungeon.10401
+      wall:
+        list:
+        - a: {x: 0, y: 25}
+          b: {x: 1, y: 25}
+        - a: {x: 0, y: 25}
+          b: {x: 0, y: 24}
+        - a: {x: 1, y: 25}
+          b: {x: 2, y: 25}
+        - a: {x: 2, y: 25}
+          b: {x: 3, y: 25}
+        - a: {x: 3, y: 25}
+          b: {x: 4, y: 25}
+        - a: {x: 4, y: 25}
+          b: {x: 5, y: 25}
+        - a: {x: 4, y: 25}
+          b: {x: 4, y: 24}
+        - a: {x: 5, y: 25}
+          b: {x: 6, y: 25}
+        - a: {x: 6, y: 25}
+          b: {x: 7, y: 25}
+        - a: {x: 7, y: 25}
+          b: {x: 8, y: 25}
+        - a: {x: 7, y: 25}
+          b: {x: 7, y: 24}
+        - a: {x: 8, y: 25}
+          b: {x: 9, y: 25}
+        - a: {x: 9, y: 25}
+          b: {x: 10, y: 25}
+        - a: {x: 10, y: 25}
+          b: {x: 10, y: 24}
+        - a: {x: 10, y: 25}
+          b: {x: 11, y: 25}
+        - a: {x: 11, y: 25}
+          b: {x: 12, y: 25}
+        - a: {x: 12, y: 25}
+          b: {x: 13, y: 25}
+        - a: {x: 13, y: 25}
+          b: {x: 14, y: 25}
+        - a: {x: 14, y: 25}
+          b: {x: 15, y: 25}
+        - a: {x: 15, y: 25}
+          b: {x: 16, y: 25}
+        - a: {x: 16, y: 25}
+          b: {x: 17, y: 25}
+        - a: {x: 17, y: 25}
+          b: {x: 18, y: 25}
+        - a: {x: 18, y: 25}
+          b: {x: 19, y: 25}
+        - a: {x: 19, y: 25}
+          b: {x: 20, y: 25}
+        - a: {x: 20, y: 25}
+          b: {x: 21, y: 25}
+        - a: {x: 21, y: 25}
+          b: {x: 22, y: 25}
+        - a: {x: 21, y: 25}
+          b: {x: 21, y: 24}
+        - a: {x: 22, y: 25}
+          b: {x: 23, y: 25}
+        - a: {x: 23, y: 25}
+          b: {x: 24, y: 25}
+        - a: {x: 24, y: 25}
+          b: {x: 25, y: 25}
+        - a: {x: 25, y: 25}
+          b: {x: 26, y: 25}
+        - a: {x: 26, y: 25}
+          b: {x: 26, y: 24}
+        - a: {x: 0, y: 24}
+          b: {x: 0, y: 23}
+        - a: {x: 7, y: 24}
+          b: {x: 7, y: 23}
+        - a: {x: 26, y: 24}
+          b: {x: 26, y: 23}
+        - a: {x: 0, y: 23}
+          b: {x: 0, y: 22}
+        - a: {x: 4, y: 23}
+          b: {x: 4, y: 22}
+        - a: {x: 7, y: 22}
+          b: {x: 8, y: 22}
+        - a: {x: 7, y: 23}
+          b: {x: 7, y: 22}
+        - a: {x: 9, y: 22}
+          b: {x: 10, y: 22}
+        - a: {x: 10, y: 23}
+          b: {x: 10, y: 22}
+        - a: {x: 12, y: 23}
+          b: {x: 13, y: 23}
+        - a: {x: 12, y: 23}
+          b: {x: 12, y: 22}
+        - a: {x: 13, y: 23}
+          b: {x: 14, y: 23}
+        - a: {x: 14, y: 23}
+          b: {x: 15, y: 23}
+        - a: {x: 15, y: 23}
+          b: {x: 16, y: 23}
+        - a: {x: 17, y: 23}
+          b: {x: 18, y: 23}
+        - a: {x: 18, y: 23}
+          b: {x: 18, y: 22}
+        - a: {x: 21, y: 22}
+          b: {x: 22, y: 22}
+        - a: {x: 21, y: 23}
+          b: {x: 21, y: 22}
+        - a: {x: 22, y: 22}
+          b: {x: 23, y: 22}
+        - a: {x: 23, y: 22}
+          b: {x: 24, y: 22}
+        - a: {x: 25, y: 22}
+          b: {x: 26, y: 22}
+        - a: {x: 26, y: 23}
+          b: {x: 26, y: 22}
+        - a: {x: 0, y: 22}
+          b: {x: 0, y: 21}
+        - a: {x: 2, y: 22}
+          b: {x: 3, y: 22}
+        - a: {x: 3, y: 22}
+          b: {x: 4, y: 22}
+        - a: {x: 4, y: 22}
+          b: {x: 4, y: 21}
+        - a: {x: 10, y: 22}
+          b: {x: 10, y: 21}
+        - a: {x: 12, y: 22}
+          b: {x: 12, y: 21}
+        - a: {x: 13, y: 22}
+          b: {x: 14, y: 22}
+        - a: {x: 13, y: 22}
+          b: {x: 13, y: 21}
+        - a: {x: 14, y: 22}
+          b: {x: 15, y: 22}
+        - a: {x: 15, y: 22}
+          b: {x: 16, y: 22}
+        - a: {x: 16, y: 22}
+          b: {x: 17, y: 22}
+        - a: {x: 17, y: 22}
+          b: {x: 17, y: 21}
+        - a: {x: 18, y: 22}
+          b: {x: 18, y: 21}
+        - a: {x: 21, y: 22}
+          b: {x: 21, y: 21}
+        - a: {x: 23, y: 22}
+          b: {x: 23, y: 21}
+        - a: {x: 26, y: 22}
+          b: {x: 26, y: 21}
+        - a: {x: 0, y: 20}
+          b: {x: 1, y: 20}
+        - a: {x: 0, y: 21}
+          b: {x: 0, y: 20}
+        - a: {x: 1, y: 20}
+          b: {x: 2, y: 20}
+        - a: {x: 2, y: 21}
+          b: {x: 2, y: 20}
+        - a: {x: 4, y: 21}
+          b: {x: 4, y: 20}
+        - a: {x: 10, y: 21}
+          b: {x: 10, y: 20}
+        - a: {x: 12, y: 21}
+          b: {x: 12, y: 20}
+        - a: {x: 13, y: 21}
+          b: {x: 13, y: 20}
+        - a: {x: 14, y: 21}
+          b: {x: 15, y: 21}
+        - a: {x: 14, y: 21}
+          b: {x: 14, y: 20}
+        - a: {x: 16, y: 21}
+          b: {x: 16, y: 20}
+        - a: {x: 17, y: 21}
+          b: {x: 17, y: 20}
+        - a: {x: 18, y: 21}
+          b: {x: 18, y: 20}
+        - a: {x: 21, y: 21}
+          b: {x: 21, y: 20}
+        - a: {x: 23, y: 21}
+          b: {x: 23, y: 20}
+        - a: {x: 26, y: 21}
+          b: {x: 26, y: 20}
+        - a: {x: 0, y: 20}
+          b: {x: 0, y: 19}
+        - a: {x: 4, y: 19}
+          b: {x: 5, y: 19}
+        - a: {x: 4, y: 20}
+          b: {x: 4, y: 19}
+        - a: {x: 5, y: 19}
+          b: {x: 6, y: 19}
+        - a: {x: 6, y: 19}
+          b: {x: 7, y: 19}
+        - a: {x: 7, y: 19}
+          b: {x: 8, y: 19}
+        - a: {x: 8, y: 19}
+          b: {x: 9, y: 19}
+        - a: {x: 9, y: 19}
+          b: {x: 10, y: 19}
+        - a: {x: 10, y: 20}
+          b: {x: 10, y: 19}
+        - a: {x: 12, y: 20}
+          b: {x: 12, y: 19}
+        - a: {x: 13, y: 20}
+          b: {x: 13, y: 19}
+        - a: {x: 14, y: 19}
+          b: {x: 15, y: 19}
+        - a: {x: 14, y: 20}
+          b: {x: 14, y: 19}
+        - a: {x: 15, y: 19}
+          b: {x: 16, y: 19}
+        - a: {x: 16, y: 20}
+          b: {x: 16, y: 19}
+        - a: {x: 17, y: 20}
+          b: {x: 17, y: 19}
+        - a: {x: 18, y: 20}
+          b: {x: 18, y: 19}
+        - a: {x: 21, y: 20}
+          b: {x: 21, y: 19}
+        - a: {x: 23, y: 19}
+          b: {x: 24, y: 19}
+        - a: {x: 24, y: 19}
+          b: {x: 25, y: 19}
+        - a: {x: 25, y: 19}
+          b: {x: 26, y: 19}
+        - a: {x: 26, y: 20}
+          b: {x: 26, y: 19}
+        - a: {x: 0, y: 18}
+          b: {x: 1, y: 18}
+        - a: {x: 0, y: 19}
+          b: {x: 0, y: 18}
+        - a: {x: 2, y: 18}
+          b: {x: 3, y: 18}
+        - a: {x: 3, y: 18}
+          b: {x: 4, y: 18}
+        - a: {x: 4, y: 19}
+          b: {x: 4, y: 18}
+        - a: {x: 12, y: 19}
+          b: {x: 12, y: 18}
+        - a: {x: 13, y: 18}
+          b: {x: 14, y: 18}
+        - a: {x: 13, y: 19}
+          b: {x: 13, y: 18}
+        - a: {x: 15, y: 18}
+          b: {x: 16, y: 18}
+        - a: {x: 16, y: 18}
+          b: {x: 17, y: 18}
+        - a: {x: 17, y: 19}
+          b: {x: 17, y: 18}
+        - a: {x: 18, y: 19}
+          b: {x: 18, y: 18}
+        - a: {x: 21, y: 19}
+          b: {x: 21, y: 18}
+        - a: {x: 26, y: 19}
+          b: {x: 26, y: 18}
+        - a: {x: 0, y: 18}
+          b: {x: 0, y: 17}
+        - a: {x: 4, y: 18}
+          b: {x: 4, y: 17}
+        - a: {x: 5, y: 18}
+          b: {x: 6, y: 18}
+        - a: {x: 5, y: 18}
+          b: {x: 5, y: 17}
+        - a: {x: 6, y: 18}
+          b: {x: 7, y: 18}
+        - a: {x: 7, y: 18}
+          b: {x: 8, y: 18}
+        - a: {x: 8, y: 18}
+          b: {x: 9, y: 18}
+        - a: {x: 9, y: 18}
+          b: {x: 10, y: 18}
+        - a: {x: 10, y: 18}
+          b: {x: 10, y: 17}
+        - a: {x: 12, y: 17}
+          b: {x: 13, y: 17}
+        - a: {x: 12, y: 18}
+          b: {x: 12, y: 17}
+        - a: {x: 13, y: 17}
+          b: {x: 14, y: 17}
+        - a: {x: 14, y: 17}
+          b: {x: 15, y: 17}
+        - a: {x: 15, y: 17}
+          b: {x: 16, y: 17}
+        - a: {x: 16, y: 17}
+          b: {x: 17, y: 17}
+        - a: {x: 17, y: 17}
+          b: {x: 18, y: 17}
+        - a: {x: 18, y: 18}
+          b: {x: 18, y: 17}
+        - a: {x: 21, y: 18}
+          b: {x: 21, y: 17}
+        - a: {x: 26, y: 18}
+          b: {x: 26, y: 17}
+        - a: {x: 0, y: 17}
+          b: {x: 0, y: 16}
+        - a: {x: 4, y: 17}
+          b: {x: 4, y: 16}
+        - a: {x: 5, y: 17}
+          b: {x: 5, y: 16}
+        - a: {x: 21, y: 17}
+          b: {x: 21, y: 16}
+        - a: {x: 26, y: 17}
+          b: {x: 26, y: 16}
+        - a: {x: 0, y: 16}
+          b: {x: 0, y: 15}
+        - a: {x: 4, y: 16}
+          b: {x: 4, y: 15}
+        - a: {x: 5, y: 15}
+          b: {x: 6, y: 15}
+        - a: {x: 5, y: 16}
+          b: {x: 5, y: 15}
+        - a: {x: 7, y: 15}
+          b: {x: 8, y: 15}
+        - a: {x: 8, y: 15}
+          b: {x: 9, y: 15}
+        - a: {x: 9, y: 15}
+          b: {x: 10, y: 15}
+        - a: {x: 10, y: 16}
+          b: {x: 10, y: 15}
+        - a: {x: 21, y: 16}
+          b: {x: 21, y: 15}
+        - a: {x: 26, y: 16}
+          b: {x: 26, y: 15}
+        - a: {x: 0, y: 14}
+          b: {x: 1, y: 14}
+        - a: {x: 0, y: 15}
+          b: {x: 0, y: 14}
+        - a: {x: 1, y: 14}
+          b: {x: 2, y: 14}
+        - a: {x: 2, y: 14}
+          b: {x: 3, y: 14}
+        - a: {x: 3, y: 14}
+          b: {x: 4, y: 14}
+        - a: {x: 4, y: 15}
+          b: {x: 4, y: 14}
+        - a: {x: 5, y: 15}
+          b: {x: 5, y: 14}
+        - a: {x: 10, y: 15}
+          b: {x: 10, y: 14}
+        - a: {x: 10, y: 15}
+          b: {x: 11, y: 15}
+        - a: {x: 11, y: 15}
+          b: {x: 12, y: 15}
+        - a: {x: 12, y: 15}
+          b: {x: 13, y: 15}
+        - a: {x: 13, y: 15}
+          b: {x: 14, y: 15}
+        - a: {x: 14, y: 15}
+          b: {x: 15, y: 15}
+        - a: {x: 15, y: 15}
+          b: {x: 15, y: 14}
+        - a: {x: 16, y: 15}
+          b: {x: 17, y: 15}
+        - a: {x: 16, y: 15}
+          b: {x: 16, y: 14}
+        - a: {x: 17, y: 15}
+          b: {x: 18, y: 15}
+        - a: {x: 18, y: 15}
+          b: {x: 19, y: 15}
+        - a: {x: 19, y: 15}
+          b: {x: 20, y: 15}
+        - a: {x: 20, y: 15}
+          b: {x: 21, y: 15}
+        - a: {x: 21, y: 15}
+          b: {x: 22, y: 15}
+        - a: {x: 21, y: 15}
+          b: {x: 21, y: 14}
+        - a: {x: 22, y: 15}
+          b: {x: 23, y: 15}
+        - a: {x: 24, y: 15}
+          b: {x: 25, y: 15}
+        - a: {x: 25, y: 15}
+          b: {x: 26, y: 15}
+        - a: {x: 26, y: 15}
+          b: {x: 26, y: 14}
+        - a: {x: 0, y: 14}
+          b: {x: 0, y: 13}
+        - a: {x: 5, y: 14}
+          b: {x: 5, y: 13}
+        - a: {x: 15, y: 14}
+          b: {x: 15, y: 13}
+        - a: {x: 16, y: 14}
+          b: {x: 16, y: 13}
+        - a: {x: 21, y: 14}
+          b: {x: 21, y: 13}
+        - a: {x: 26, y: 14}
+          b: {x: 26, y: 13}
+        - a: {x: 0, y: 13}
+          b: {x: 1, y: 13}
+        - a: {x: 0, y: 13}
+          b: {x: 0, y: 12}
+        - a: {x: 1, y: 13}
+          b: {x: 2, y: 13}
+        - a: {x: 5, y: 13}
+          b: {x: 5, y: 12}
+        - a: {x: 10, y: 13}
+          b: {x: 10, y: 12}
+        - a: {x: 15, y: 13}
+          b: {x: 15, y: 12}
+        - a: {x: 16, y: 13}
+          b: {x: 16, y: 12}
+        - a: {x: 26, y: 13}
+          b: {x: 26, y: 12}
+        - a: {x: 0, y: 11}
+          b: {x: 1, y: 11}
+        - a: {x: 0, y: 12}
+          b: {x: 0, y: 11}
+        - a: {x: 1, y: 11}
+          b: {x: 2, y: 11}
+        - a: {x: 2, y: 12}
+          b: {x: 3, y: 12}
+        - a: {x: 3, y: 12}
+          b: {x: 4, y: 12}
+        - a: {x: 4, y: 12}
+          b: {x: 4, y: 11}
+        - a: {x: 5, y: 12}
+          b: {x: 5, y: 11}
+        - a: {x: 10, y: 12}
+          b: {x: 10, y: 11}
+        - a: {x: 15, y: 12}
+          b: {x: 15, y: 11}
+        - a: {x: 16, y: 12}
+          b: {x: 16, y: 11}
+        - a: {x: 21, y: 12}
+          b: {x: 21, y: 11}
+        - a: {x: 26, y: 12}
+          b: {x: 26, y: 11}
+        - a: {x: 0, y: 11}
+          b: {x: 0, y: 10}
+        - a: {x: 4, y: 11}
+          b: {x: 4, y: 10}
+        - a: {x: 5, y: 10}
+          b: {x: 6, y: 10}
+        - a: {x: 5, y: 11}
+          b: {x: 5, y: 10}
+        - a: {x: 6, y: 10}
+          b: {x: 7, y: 10}
+        - a: {x: 7, y: 10}
+          b: {x: 8, y: 10}
+        - a: {x: 8, y: 10}
+          b: {x: 9, y: 10}
+        - a: {x: 9, y: 10}
+          b: {x: 10, y: 10}
+        - a: {x: 10, y: 11}
+          b: {x: 10, y: 10}
+        - a: {x: 10, y: 10}
+          b: {x: 11, y: 10}
+        - a: {x: 11, y: 10}
+          b: {x: 12, y: 10}
+        - a: {x: 12, y: 10}
+          b: {x: 13, y: 10}
+        - a: {x: 13, y: 10}
+          b: {x: 14, y: 10}
+        - a: {x: 14, y: 10}
+          b: {x: 15, y: 10}
+        - a: {x: 15, y: 11}
+          b: {x: 15, y: 10}
+        - a: {x: 16, y: 10}
+          b: {x: 17, y: 10}
+        - a: {x: 16, y: 11}
+          b: {x: 16, y: 10}
+        - a: {x: 17, y: 10}
+          b: {x: 18, y: 10}
+        - a: {x: 18, y: 10}
+          b: {x: 19, y: 10}
+        - a: {x: 19, y: 10}
+          b: {x: 20, y: 10}
+        - a: {x: 20, y: 10}
+          b: {x: 21, y: 10}
+        - a: {x: 21, y: 10}
+          b: {x: 22, y: 10}
+        - a: {x: 21, y: 11}
+          b: {x: 21, y: 10}
+        - a: {x: 22, y: 10}
+          b: {x: 23, y: 10}
+        - a: {x: 23, y: 10}
+          b: {x: 24, y: 10}
+        - a: {x: 24, y: 10}
+          b: {x: 25, y: 10}
+        - a: {x: 25, y: 10}
+          b: {x: 26, y: 10}
+        - a: {x: 26, y: 11}
+          b: {x: 26, y: 10}
+        - a: {x: 0, y: 10}
+          b: {x: 0, y: 9}
+        - a: {x: 1, y: 10}
+          b: {x: 1, y: 9}
+        - a: {x: 4, y: 10}
+          b: {x: 4, y: 9}
+        - a: {x: 26, y: 10}
+          b: {x: 26, y: 9}
+        - a: {x: 0, y: 9}
+          b: {x: 0, y: 8}
+        - a: {x: 1, y: 9}
+          b: {x: 1, y: 8}
+        - a: {x: 2, y: 8}
+          b: {x: 3, y: 8}
+        - a: {x: 3, y: 8}
+          b: {x: 4, y: 8}
+        - a: {x: 4, y: 9}
+          b: {x: 4, y: 8}
+        - a: {x: 13, y: 9}
+          b: {x: 14, y: 9}
+        - a: {x: 13, y: 9}
+          b: {x: 13, y: 8}
+        - a: {x: 14, y: 9}
+          b: {x: 15, y: 9}
+        - a: {x: 15, y: 9}
+          b: {x: 16, y: 9}
+        - a: {x: 15, y: 9}
+          b: {x: 15, y: 8}
+        - a: {x: 16, y: 9}
+          b: {x: 17, y: 9}
+        - a: {x: 17, y: 9}
+          b: {x: 18, y: 9}
+        - a: {x: 18, y: 9}
+          b: {x: 18, y: 8}
+        - a: {x: 18, y: 9}
+          b: {x: 19, y: 9}
+        - a: {x: 19, y: 9}
+          b: {x: 20, y: 9}
+        - a: {x: 20, y: 9}
+          b: {x: 21, y: 9}
+        - a: {x: 21, y: 9}
+          b: {x: 22, y: 9}
+        - a: {x: 22, y: 9}
+          b: {x: 23, y: 9}
+        - a: {x: 23, y: 9}
+          b: {x: 24, y: 9}
+        - a: {x: 24, y: 9}
+          b: {x: 25, y: 9}
+        - a: {x: 25, y: 9}
+          b: {x: 26, y: 9}
+        - a: {x: 26, y: 9}
+          b: {x: 26, y: 8}
+        - a: {x: 0, y: 8}
+          b: {x: 0, y: 7}
+        - a: {x: 1, y: 7}
+          b: {x: 2, y: 7}
+        - a: {x: 1, y: 8}
+          b: {x: 1, y: 7}
+        - a: {x: 2, y: 7}
+          b: {x: 3, y: 7}
+        - a: {x: 8, y: 8}
+          b: {x: 9, y: 8}
+        - a: {x: 9, y: 8}
+          b: {x: 10, y: 8}
+        - a: {x: 10, y: 8}
+          b: {x: 11, y: 8}
+        - a: {x: 11, y: 8}
+          b: {x: 12, y: 8}
+        - a: {x: 12, y: 8}
+          b: {x: 13, y: 8}
+        - a: {x: 13, y: 8}
+          b: {x: 14, y: 8}
+        - a: {x: 15, y: 8}
+          b: {x: 15, y: 7}
+        - a: {x: 19, y: 8}
+          b: {x: 20, y: 8}
+        - a: {x: 19, y: 8}
+          b: {x: 19, y: 7}
+        - a: {x: 20, y: 8}
+          b: {x: 21, y: 8}
+        - a: {x: 21, y: 8}
+          b: {x: 21, y: 7}
+        - a: {x: 23, y: 8}
+          b: {x: 24, y: 8}
+        - a: {x: 23, y: 8}
+          b: {x: 23, y: 7}
+        - a: {x: 24, y: 8}
+          b: {x: 25, y: 8}
+        - a: {x: 25, y: 8}
+          b: {x: 26, y: 8}
+        - a: {x: 26, y: 8}
+          b: {x: 26, y: 7}
+        - a: {x: 0, y: 7}
+          b: {x: 0, y: 6}
+        - a: {x: 8, y: 7}
+          b: {x: 9, y: 7}
+        - a: {x: 8, y: 7}
+          b: {x: 8, y: 6}
+        - a: {x: 9, y: 7}
+          b: {x: 10, y: 7}
+        - a: {x: 11, y: 7}
+          b: {x: 12, y: 7}
+        - a: {x: 12, y: 7}
+          b: {x: 12, y: 6}
+        - a: {x: 12, y: 7}
+          b: {x: 13, y: 7}
+        - a: {x: 13, y: 7}
+          b: {x: 14, y: 7}
+        - a: {x: 14, y: 7}
+          b: {x: 15, y: 7}
+        - a: {x: 15, y: 6}
+          b: {x: 16, y: 6}
+        - a: {x: 15, y: 7}
+          b: {x: 15, y: 6}
+        - a: {x: 16, y: 6}
+          b: {x: 17, y: 6}
+        - a: {x: 17, y: 6}
+          b: {x: 18, y: 6}
+        - a: {x: 18, y: 7}
+          b: {x: 18, y: 6}
+        - a: {x: 19, y: 7}
+          b: {x: 19, y: 6}
+        - a: {x: 21, y: 7}
+          b: {x: 21, y: 6}
+        - a: {x: 23, y: 7}
+          b: {x: 23, y: 6}
+        - a: {x: 25, y: 7}
+          b: {x: 25, y: 6}
+        - a: {x: 26, y: 7}
+          b: {x: 26, y: 6}
+        - a: {x: 0, y: 6}
+          b: {x: 1, y: 6}
+        - a: {x: 0, y: 6}
+          b: {x: 0, y: 5}
+        - a: {x: 1, y: 6}
+          b: {x: 2, y: 6}
+        - a: {x: 2, y: 6}
+          b: {x: 3, y: 6}
+        - a: {x: 3, y: 6}
+          b: {x: 3, y: 5}
+        - a: {x: 4, y: 6}
+          b: {x: 5, y: 6}
+        - a: {x: 4, y: 6}
+          b: {x: 4, y: 5}
+        - a: {x: 5, y: 6}
+          b: {x: 6, y: 6}
+        - a: {x: 6, y: 6}
+          b: {x: 7, y: 6}
+        - a: {x: 7, y: 6}
+          b: {x: 7, y: 5}
+        - a: {x: 8, y: 6}
+          b: {x: 9, y: 6}
+        - a: {x: 8, y: 6}
+          b: {x: 8, y: 5}
+        - a: {x: 9, y: 6}
+          b: {x: 10, y: 6}
+        - a: {x: 10, y: 6}
+          b: {x: 11, y: 6}
+        - a: {x: 11, y: 6}
+          b: {x: 11, y: 5}
+        - a: {x: 12, y: 6}
+          b: {x: 12, y: 5}
+        - a: {x: 15, y: 6}
+          b: {x: 15, y: 5}
+        - a: {x: 16, y: 5}
+          b: {x: 17, y: 5}
+        - a: {x: 17, y: 5}
+          b: {x: 18, y: 5}
+        - a: {x: 18, y: 5}
+          b: {x: 19, y: 5}
+        - a: {x: 19, y: 6}
+          b: {x: 19, y: 5}
+        - a: {x: 20, y: 6}
+          b: {x: 21, y: 6}
+        - a: {x: 20, y: 6}
+          b: {x: 20, y: 5}
+        - a: {x: 21, y: 6}
+          b: {x: 22, y: 6}
+        - a: {x: 22, y: 6}
+          b: {x: 23, y: 6}
+        - a: {x: 23, y: 6}
+          b: {x: 24, y: 6}
+        - a: {x: 25, y: 6}
+          b: {x: 25, y: 5}
+        - a: {x: 26, y: 6}
+          b: {x: 26, y: 5}
+        - a: {x: 0, y: 5}
+          b: {x: 0, y: 4}
+        - a: {x: 3, y: 5}
+          b: {x: 3, y: 4}
+        - a: {x: 4, y: 5}
+          b: {x: 4, y: 4}
+        - a: {x: 11, y: 5}
+          b: {x: 11, y: 4}
+        - a: {x: 12, y: 5}
+          b: {x: 13, y: 5}
+        - a: {x: 12, y: 4}
+          b: {x: 13, y: 4}
+        - a: {x: 13, y: 5}
+          b: {x: 14, y: 5}
+        - a: {x: 13, y: 4}
+          b: {x: 14, y: 4}
+        - a: {x: 15, y: 5}
+          b: {x: 15, y: 4}
+        - a: {x: 16, y: 4}
+          b: {x: 17, y: 4}
+        - a: {x: 17, y: 4}
+          b: {x: 18, y: 4}
+        - a: {x: 18, y: 4}
+          b: {x: 19, y: 4}
+        - a: {x: 20, y: 5}
+          b: {x: 20, y: 4}
+        - a: {x: 21, y: 5}
+          b: {x: 22, y: 5}
+        - a: {x: 21, y: 5}
+          b: {x: 21, y: 4}
+        - a: {x: 22, y: 5}
+          b: {x: 22, y: 4}
+        - a: {x: 23, y: 5}
+          b: {x: 24, y: 5}
+        - a: {x: 23, y: 5}
+          b: {x: 23, y: 4}
+        - a: {x: 24, y: 5}
+          b: {x: 25, y: 5}
+        - a: {x: 25, y: 5}
+          b: {x: 26, y: 5}
+        - a: {x: 26, y: 5}
+          b: {x: 26, y: 4}
+        - a: {x: 0, y: 3}
+          b: {x: 1, y: 3}
+        - a: {x: 0, y: 4}
+          b: {x: 0, y: 3}
+        - a: {x: 2, y: 3}
+          b: {x: 3, y: 3}
+        - a: {x: 3, y: 4}
+          b: {x: 3, y: 3}
+        - a: {x: 4, y: 3}
+          b: {x: 5, y: 3}
+        - a: {x: 4, y: 4}
+          b: {x: 4, y: 3}
+        - a: {x: 5, y: 3}
+          b: {x: 6, y: 3}
+        - a: {x: 6, y: 3}
+          b: {x: 7, y: 3}
+        - a: {x: 7, y: 4}
+          b: {x: 7, y: 3}
+        - a: {x: 8, y: 3}
+          b: {x: 9, y: 3}
+        - a: {x: 8, y: 4}
+          b: {x: 8, y: 3}
+        - a: {x: 9, y: 3}
+          b: {x: 10, y: 3}
+        - a: {x: 10, y: 3}
+          b: {x: 11, y: 3}
+        - a: {x: 11, y: 4}
+          b: {x: 11, y: 3}
+        - a: {x: 12, y: 4}
+          b: {x: 12, y: 3}
+        - a: {x: 15, y: 4}
+          b: {x: 15, y: 3}
+        - a: {x: 19, y: 4}
+          b: {x: 19, y: 3}
+        - a: {x: 20, y: 3}
+          b: {x: 21, y: 3}
+        - a: {x: 20, y: 4}
+          b: {x: 20, y: 3}
+        - a: {x: 21, y: 3}
+          b: {x: 22, y: 3}
+        - a: {x: 22, y: 4}
+          b: {x: 22, y: 3}
+        - a: {x: 23, y: 4}
+          b: {x: 23, y: 3}
+        - a: {x: 24, y: 4}
+          b: {x: 24, y: 3}
+        - a: {x: 25, y: 4}
+          b: {x: 25, y: 3}
+        - a: {x: 26, y: 4}
+          b: {x: 26, y: 3}
+        - a: {x: 0, y: 3}
+          b: {x: 0, y: 2}
+        - a: {x: 11, y: 3}
+          b: {x: 11, y: 2}
+        - a: {x: 12, y: 3}
+          b: {x: 12, y: 2}
+        - a: {x: 15, y: 3}
+          b: {x: 15, y: 2}
+        - a: {x: 16, y: 3}
+          b: {x: 16, y: 2}
+        - a: {x: 16, y: 3}
+          b: {x: 17, y: 3}
+        - a: {x: 17, y: 3}
+          b: {x: 18, y: 3}
+        - a: {x: 18, y: 3}
+          b: {x: 18, y: 2}
+        - a: {x: 19, y: 3}
+          b: {x: 19, y: 2}
+        - a: {x: 22, y: 3}
+          b: {x: 22, y: 2}
+        - a: {x: 23, y: 3}
+          b: {x: 23, y: 2}
+        - a: {x: 24, y: 3}
+          b: {x: 24, y: 2}
+        - a: {x: 25, y: 3}
+          b: {x: 25, y: 2}
+        - a: {x: 26, y: 3}
+          b: {x: 26, y: 2}
+        - a: {x: 0, y: 2}
+          b: {x: 1, y: 2}
+        - a: {x: 0, y: 2}
+          b: {x: 0, y: 1}
+        - a: {x: 2, y: 2}
+          b: {x: 3, y: 2}
+        - a: {x: 3, y: 2}
+          b: {x: 4, y: 2}
+        - a: {x: 3, y: 2}
+          b: {x: 3, y: 1}
+        - a: {x: 4, y: 2}
+          b: {x: 5, y: 2}
+        - a: {x: 5, y: 2}
+          b: {x: 6, y: 2}
+        - a: {x: 6, y: 2}
+          b: {x: 6, y: 1}
+        - a: {x: 7, y: 2}
+          b: {x: 8, y: 2}
+        - a: {x: 7, y: 2}
+          b: {x: 7, y: 1}
+        - a: {x: 8, y: 2}
+          b: {x: 9, y: 2}
+        - a: {x: 9, y: 2}
+          b: {x: 10, y: 2}
+        - a: {x: 10, y: 2}
+          b: {x: 11, y: 2}
+        - a: {x: 10, y: 2}
+          b: {x: 10, y: 1}
+        - a: {x: 12, y: 2}
+          b: {x: 13, y: 2}
+        - a: {x: 13, y: 2}
+          b: {x: 14, y: 2}
+        - a: {x: 14, y: 2}
+          b: {x: 15, y: 2}
+        - a: {x: 15, y: 1}
+          b: {x: 16, y: 1}
+        - a: {x: 15, y: 2}
+          b: {x: 15, y: 1}
+        - a: {x: 16, y: 2}
+          b: {x: 16, y: 1}
+        - a: {x: 16, y: 1}
+          b: {x: 17, y: 1}
+        - a: {x: 17, y: 1}
+          b: {x: 18, y: 1}
+        - a: {x: 19, y: 2}
+          b: {x: 19, y: 1}
+        - a: {x: 20, y: 2}
+          b: {x: 21, y: 2}
+        - a: {x: 20, y: 1}
+          b: {x: 21, y: 1}
+        - a: {x: 21, y: 2}
+          b: {x: 22, y: 2}
+        - a: {x: 21, y: 1}
+          b: {x: 22, y: 1}
+        - a: {x: 22, y: 1}
+          b: {x: 23, y: 1}
+        - a: {x: 23, y: 1}
+          b: {x: 24, y: 1}
+        - a: {x: 24, y: 2}
+          b: {x: 24, y: 1}
+        - a: {x: 25, y: 2}
+          b: {x: 25, y: 1}
+        - a: {x: 26, y: 2}
+          b: {x: 26, y: 1}
+        - a: {x: 0, y: 1}
+          b: {x: 0, y: 0}
+        - a: {x: 3, y: 1}
+          b: {x: 3, y: 0}
+        - a: {x: 10, y: 1}
+          b: {x: 11, y: 1}
+        - a: {x: 10, y: 1}
+          b: {x: 10, y: 0}
+        - a: {x: 11, y: 1}
+          b: {x: 12, y: 1}
+        - a: {x: 11, y: 0}
+          b: {x: 12, y: 0}
+        - a: {x: 12, y: 1}
+          b: {x: 13, y: 1}
+        - a: {x: 12, y: 0}
+          b: {x: 13, y: 0}
+        - a: {x: 13, y: 1}
+          b: {x: 13, y: 0}
+        - a: {x: 14, y: 1}
+          b: {x: 15, y: 1}
+        - a: {x: 14, y: 0}
+          b: {x: 15, y: 0}
+        - a: {x: 19, y: 1}
+          b: {x: 19, y: 0}
+        - a: {x: 24, y: 1}
+          b: {x: 24, y: 0}
+        - a: {x: 25, y: 1}
+          b: {x: 26, y: 1}
+        - a: {x: 26, y: 1}
+          b: {x: 26, y: 0}
+        - a: {x: 0, y: -1}
+          b: {x: 1, y: -1}
+        - a: {x: 0, y: 0}
+          b: {x: 0, y: -1}
+        - a: {x: 1, y: -1}
+          b: {x: 2, y: -1}
+        - a: {x: 2, y: -1}
+          b: {x: 3, y: -1}
+        - a: {x: 3, y: -1}
+          b: {x: 4, y: -1}
+        - a: {x: 3, y: 0}
+          b: {x: 3, y: -1}
+        - a: {x: 4, y: -1}
+          b: {x: 5, y: -1}
+        - a: {x: 5, y: -1}
+          b: {x: 6, y: -1}
+        - a: {x: 6, y: 0}
+          b: {x: 6, y: -1}
+        - a: {x: 6, y: -1}
+          b: {x: 7, y: -1}
+        - a: {x: 7, y: -1}
+          b: {x: 8, y: -1}
+        - a: {x: 7, y: 0}
+          b: {x: 7, y: -1}
+        - a: {x: 8, y: -1}
+          b: {x: 9, y: -1}
+        - a: {x: 9, y: -1}
+          b: {x: 10, y: -1}
+        - a: {x: 10, y: -1}
+          b: {x: 11, y: -1}
+        - a: {x: 10, y: 0}
+          b: {x: 10, y: -1}
+        - a: {x: 11, y: -1}
+          b: {x: 12, y: -1}
+        - a: {x: 12, y: -1}
+          b: {x: 13, y: -1}
+        - a: {x: 13, y: -1}
+          b: {x: 14, y: -1}
+        - a: {x: 14, y: -1}
+          b: {x: 15, y: -1}
+        - a: {x: 15, y: -1}
+          b: {x: 16, y: -1}
+        - a: {x: 15, y: 0}
+          b: {x: 15, y: -1}
+        - a: {x: 16, y: -1}
+          b: {x: 17, y: -1}
+        - a: {x: 17, y: -1}
+          b: {x: 18, y: -1}
+        - a: {x: 18, y: -1}
+          b: {x: 19, y: -1}
+        - a: {x: 19, y: -1}
+          b: {x: 20, y: -1}
+        - a: {x: 19, y: 0}
+          b: {x: 19, y: -1}
+        - a: {x: 20, y: -1}
+          b: {x: 21, y: -1}
+        - a: {x: 21, y: -1}
+          b: {x: 22, y: -1}
+        - a: {x: 22, y: -1}
+          b: {x: 23, y: -1}
+        - a: {x: 23, y: -1}
+          b: {x: 24, y: -1}
+        - a: {x: 24, y: -1}
+          b: {x: 25, y: -1}
+        - a: {x: 24, y: 0}
+          b: {x: 24, y: -1}
+        - a: {x: 25, y: -1}
+          b: {x: 26, y: -1}
+        - a: {x: 26, y: 0}
+          b: {x: 26, y: -1}
+      range: {x: 26, y: 26}
   dungeonSpecs:
     list:
     - Id: Dungeon.Test
@@ -4845,23 +5791,674 @@ MonoBehaviour:
         PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
         Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
     - Id: Dungeon.10401
-      InitialX: 12
-      InitialY: 12
+      InitialX: 25
+      InitialY: 0
       Direction: 0
-      NoCostItemNumberMin: 8
-      NoCostItemNumberMax: 8
-      EnemyPlaceItemNumberMin: 8
-      EnemyPlaceItemNumberMax: 8
+      NoCostItemNumberMin: 7
+      NoCostItemNumberMax: 7
+      EnemyPlaceItemNumberMin: 9
+      EnemyPlaceItemNumberMax: 9
       NoCostEnemyNumberMin: 12
       NoCostEnemyNumberMax: 12
       RequireShadow: 1
-      FloorItemNoCosts: []
-      FloorItemEnemyPlaces: []
-      FloorEnemyNoCosts: []
-      WallEvents: []
+      FloorItemNoCosts:
+      - Id: 72
+        DungeonName: Dungeon.10401
+        X: 8
+        Y: 24
+        ItemTableId: 3
+      - Id: 73
+        DungeonName: Dungeon.10401
+        X: 5
+        Y: 21
+        ItemTableId: 3
+      - Id: 74
+        DungeonName: Dungeon.10401
+        X: 19
+        Y: 21
+        ItemTableId: 3
+      - Id: 75
+        DungeonName: Dungeon.10401
+        X: 5
+        Y: 18
+        ItemTableId: 3
+      - Id: 76
+        DungeonName: Dungeon.10401
+        X: 2
+        Y: 16
+        ItemTableId: 3
+      - Id: 77
+        DungeonName: Dungeon.10401
+        X: 0
+        Y: 13
+        ItemTableId: 3
+      - Id: 78
+        DungeonName: Dungeon.10401
+        X: 6
+        Y: 12
+        ItemTableId: 3
+      - Id: 79
+        DungeonName: Dungeon.10401
+        X: 25
+        Y: 9
+        ItemTableId: 3
+      - Id: 80
+        DungeonName: Dungeon.10401
+        X: 16
+        Y: 8
+        ItemTableId: 3
+      - Id: 81
+        DungeonName: Dungeon.10401
+        X: 20
+        Y: 8
+        ItemTableId: 3
+      - Id: 82
+        DungeonName: Dungeon.10401
+        X: 21
+        Y: 7
+        ItemTableId: 3
+      - Id: 83
+        DungeonName: Dungeon.10401
+        X: 23
+        Y: 7
+        ItemTableId: 3
+      - Id: 84
+        DungeonName: Dungeon.10401
+        X: 25
+        Y: 6
+        ItemTableId: 3
+      - Id: 85
+        DungeonName: Dungeon.10401
+        X: 21
+        Y: 5
+        ItemTableId: 3
+      - Id: 86
+        DungeonName: Dungeon.10401
+        X: 16
+        Y: 3
+        ItemTableId: 3
+      - Id: 87
+        DungeonName: Dungeon.10401
+        X: 21
+        Y: 3
+        ItemTableId: 3
+      - Id: 88
+        DungeonName: Dungeon.10401
+        X: 23
+        Y: 3
+        ItemTableId: 3
+      - Id: 89
+        DungeonName: Dungeon.10401
+        X: 14
+        Y: 2
+        ItemTableId: 3
+      - Id: 90
+        DungeonName: Dungeon.10401
+        X: 15
+        Y: 2
+        ItemTableId: 3
+      - Id: 91
+        DungeonName: Dungeon.10401
+        X: 25
+        Y: 2
+        ItemTableId: 3
+      - Id: 92
+        DungeonName: Dungeon.10401
+        X: 12
+        Y: 1
+        ItemTableId: 3
+      - Id: 93
+        DungeonName: Dungeon.10401
+        X: 22
+        Y: 1
+        ItemTableId: 3
+      - Id: 94
+        DungeonName: Dungeon.10401
+        X: 6
+        Y: 0
+        ItemTableId: 3
+      - Id: 95
+        DungeonName: Dungeon.10401
+        X: 14
+        Y: 0
+        ItemTableId: 3
+      - Id: 96
+        DungeonName: Dungeon.10401
+        X: 16
+        Y: 0
+        ItemTableId: 3
+      FloorItemEnemyPlaces:
+      - Id: 55
+        DungeonName: Dungeon.10401
+        X: 0
+        Y: 25
+        ItemTableId: 3
+        EnemyPositionX: 3
+        EnemyPositionY: 24
+        EnemyTableId: 10301
+      - Id: 56
+        DungeonName: Dungeon.10401
+        X: 16
+        Y: 22
+        ItemTableId: 3
+        EnemyPositionX: 14
+        EnemyPositionY: 19
+        EnemyTableId: 10301
+      - Id: 57
+        DungeonName: Dungeon.10401
+        X: 24
+        Y: 21
+        ItemTableId: 3
+        EnemyPositionX: 24
+        EnemyPositionY: 22
+        EnemyTableId: 10301
+      - Id: 58
+        DungeonName: Dungeon.10401
+        X: 14
+        Y: 20
+        ItemTableId: 3
+        EnemyPositionX: 15
+        EnemyPositionY: 21
+        EnemyTableId: 10301
+      - Id: 59
+        DungeonName: Dungeon.10401
+        X: 3
+        Y: 19
+        ItemTableId: 3
+        EnemyPositionX: 2
+        EnemyPositionY: 22
+        EnemyTableId: 10301
+      - Id: 60
+        DungeonName: Dungeon.10401
+        X: 12
+        Y: 13
+        ItemTableId: 3
+        EnemyPositionX: 10
+        EnemyPositionY: 14
+        EnemyTableId: 10301
+      - Id: 61
+        DungeonName: Dungeon.10401
+        X: 2
+        Y: 10
+        ItemTableId: 3
+        EnemyPositionX: 3
+        EnemyPositionY: 8
+        EnemyTableId: 10301
+      - Id: 62
+        DungeonName: Dungeon.10401
+        X: 25
+        Y: 10
+        ItemTableId: 3
+        EnemyPositionX: 21
+        EnemyPositionY: 10
+        EnemyTableId: 10301
+      - Id: 63
+        DungeonName: Dungeon.10401
+        X: 13
+        Y: 9
+        ItemTableId: 3
+        EnemyPositionX: 14
+        EnemyPositionY: 9
+        EnemyTableId: 10301
+      - Id: 64
+        DungeonName: Dungeon.10401
+        X: 8
+        Y: 7
+        ItemTableId: 3
+        EnemyPositionX: 9
+        EnemyPositionY: 7
+        EnemyTableId: 10301
+      - Id: 65
+        DungeonName: Dungeon.10401
+        X: 12
+        Y: 7
+        ItemTableId: 3
+        EnemyPositionX: 14
+        EnemyPositionY: 6
+        EnemyTableId: 10301
+      - Id: 66
+        DungeonName: Dungeon.10401
+        X: 1
+        Y: 5
+        ItemTableId: 3
+        EnemyPositionX: 1
+        EnemyPositionY: 4
+        EnemyTableId: 10301
+      - Id: 67
+        DungeonName: Dungeon.10401
+        X: 5
+        Y: 5
+        ItemTableId: 3
+        EnemyPositionX: 6
+        EnemyPositionY: 5
+        EnemyTableId: 10301
+      - Id: 68
+        DungeonName: Dungeon.10401
+        X: 9
+        Y: 5
+        ItemTableId: 3
+        EnemyPositionX: 8
+        EnemyPositionY: 5
+        EnemyTableId: 10301
+      - Id: 69
+        DungeonName: Dungeon.10401
+        X: 10
+        Y: 3
+        ItemTableId: 3
+        EnemyPositionX: 8
+        EnemyPositionY: 3
+        EnemyTableId: 10301
+      - Id: 70
+        DungeonName: Dungeon.10401
+        X: 12
+        Y: 3
+        ItemTableId: 3
+        EnemyPositionX: 14
+        EnemyPositionY: 4
+        EnemyTableId: 10301
+      - Id: 71
+        DungeonName: Dungeon.10401
+        X: 10
+        Y: 2
+        ItemTableId: 3
+        EnemyPositionX: 11
+        EnemyPositionY: 2
+        EnemyTableId: 10301
+      - Id: 72
+        DungeonName: Dungeon.10401
+        X: 1
+        Y: 1
+        ItemTableId: 3
+        EnemyPositionX: 1
+        EnemyPositionY: 2
+        EnemyTableId: 10301
+      - Id: 73
+        DungeonName: Dungeon.10401
+        X: 4
+        Y: 1
+        ItemTableId: 3
+        EnemyPositionX: 5
+        EnemyPositionY: 1
+        EnemyTableId: 10301
+      - Id: 74
+        DungeonName: Dungeon.10401
+        X: 8
+        Y: 1
+        ItemTableId: 3
+        EnemyPositionX: 7
+        EnemyPositionY: 1
+        EnemyTableId: 10301
+      FloorEnemyNoCosts:
+      - DungeonName: Dungeon.10401
+        X: 19
+        Y: 24
+        EnemyTableId: 10301
+      - DungeonName: Dungeon.10401
+        X: 8
+        Y: 21
+        EnemyTableId: 10301
+      - DungeonName: Dungeon.10401
+        X: 19
+        Y: 17
+        EnemyTableId: 10301
+      - DungeonName: Dungeon.10401
+        X: 11
+        Y: 16
+        EnemyTableId: 10301
+      - DungeonName: Dungeon.10401
+        X: 8
+        Y: 14
+        EnemyTableId: 10301
+      - DungeonName: Dungeon.10401
+        X: 15
+        Y: 14
+        EnemyTableId: 10301
+      - DungeonName: Dungeon.10401
+        X: 6
+        Y: 9
+        EnemyTableId: 10301
+      - DungeonName: Dungeon.10401
+        X: 15
+        Y: 5
+        EnemyTableId: 10301
+      - DungeonName: Dungeon.10401
+        X: 19
+        Y: 2
+        EnemyTableId: 10301
+      - DungeonName: Dungeon.10401
+        X: 13
+        Y: 1
+        EnemyTableId: 10301
+      WallEvents:
+      - Id: 10401.(04,24).(04,23).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 4
+        LeftY: 24
+        RightX: 4
+        RightY: 23
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(10,24).(10,23).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 10
+        LeftY: 24
+        RightX: 10
+        RightY: 23
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(21,24).(21,23).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 21
+        LeftY: 24
+        RightX: 21
+        RightY: 23
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(16,23).(17,23).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 16
+        LeftY: 23
+        RightX: 17
+        RightY: 23
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(08,22).(09,22).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 8
+        LeftY: 22
+        RightX: 9
+        RightY: 22
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(24,22).(25,22).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 24
+        LeftY: 22
+        RightX: 25
+        RightY: 22
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(02,22).(02,21).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 2
+        LeftY: 22
+        RightX: 2
+        RightY: 21
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(15,21).(16,21).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 15
+        LeftY: 21
+        RightX: 16
+        RightY: 21
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(23,20).(23,19).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 23
+        LeftY: 20
+        RightX: 23
+        RightY: 19
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(01,18).(02,18).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 1
+        LeftY: 18
+        RightX: 2
+        RightY: 18
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(14,18).(15,18).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 14
+        LeftY: 18
+        RightX: 15
+        RightY: 18
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(10,17).(10,16).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 10
+        LeftY: 17
+        RightX: 10
+        RightY: 16
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(06,15).(07,15).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 6
+        LeftY: 15
+        RightX: 7
+        RightY: 15
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(23,15).(24,15).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 23
+        LeftY: 15
+        RightX: 24
+        RightY: 15
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(10,14).(10,13).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 10
+        LeftY: 14
+        RightX: 10
+        RightY: 13
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(02,13).(02,12).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 2
+        LeftY: 13
+        RightX: 2
+        RightY: 12
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(21,13).(21,12).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 21
+        LeftY: 13
+        RightX: 21
+        RightY: 12
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(02,12).(02,11).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 2
+        LeftY: 12
+        RightX: 2
+        RightY: 11
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(14,08).(15,08).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 14
+        LeftY: 8
+        RightX: 15
+        RightY: 8
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(18,08).(18,07).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 18
+        LeftY: 8
+        RightX: 18
+        RightY: 7
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(10,07).(10,06).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 10
+        LeftY: 7
+        RightX: 10
+        RightY: 6
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(14,06).(15,06).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 14
+        LeftY: 6
+        RightX: 15
+        RightY: 6
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(07,05).(07,04).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 7
+        LeftY: 5
+        RightX: 7
+        RightY: 4
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(08,05).(08,04).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 8
+        LeftY: 5
+        RightX: 8
+        RightY: 4
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(14,04).(15,04).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 14
+        LeftY: 4
+        RightX: 15
+        RightY: 4
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(01,03).(02,03).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 1
+        LeftY: 3
+        RightX: 2
+        RightY: 3
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(01,02).(02,02).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 1
+        LeftY: 2
+        RightX: 2
+        RightY: 2
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(06,01).(06,00).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 6
+        LeftY: 1
+        RightX: 6
+        RightY: 0
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
+      - Id: 10401.(07,01).(07,00).0.Door
+        DungeonName: Dungeon.10401
+        LeftX: 7
+        LeftY: 1
+        RightX: 7
+        RightY: 0
+        EventType: Door
+        PositiveSideCondition: None
+        NegativeSideCondition: None
+        CreateRate: 0
       FloorItemGuaranteeds: []
-      FloorEnemyGuaranteeds: []
-      FloorEvents: []
+      FloorEnemyGuaranteeds:
+      - DungeonName: Dungeon.10401
+        X: 21
+        Y: 13
+        EnemyTableId: 11401
+      FloorEvents:
+      - Id: 0
+        DungeonName: Dungeon.10401
+        X: 23
+        Y: 17
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+      - Id: 0
+        DungeonName: Dungeon.10401
+        X: 0
+        Y: 12
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+      - Id: 0
+        DungeonName: Dungeon.10401
+        X: 18
+        Y: 12
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
+        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+      - Id: 0
+        DungeonName: Dungeon.10401
+        X: 18
+        Y: 14
+        ViewName: Npc.0
+        SequenceId: 102002
+        PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
+        Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
@@ -5319,9 +6916,9 @@ MonoBehaviour:
       Description: "\u661F\u932C\u5B66\u9577\u30A4\u30EA\u30B7\u30A2\u304C\u6301\u3064\u3068\u4F1D\u3048\u3089\u308C\u308B\u8056\u306A\u308B\u6756\u306E\u6700\u7D42\u5F37\u5316\u7248\u3002\u305D\u306E\u6756\u306B\u306F\u7D14\u767D\u306E\u9B54\u529B\u304C\u5BBF\u308A\u3001\u6D44\u5316\u3068\u518D\u751F\u306E\u529B\u3092\u6301\u3064\u3002\u5473\u65B9\u3092\u7652\u3059\u305D\u306E\u529B\u306F\u3001\u307E\u308B\u3067\u795E\u306E\u624B\u304C\u89E6\u308C\u308B\u304B\u306E\u3088\u3046\u306B\u7A4F\u3084\u304B\u3067\u3042\u308A\u306A\u304C\u3089\u3082\u5F37\u5927\u3002"
     - Name: "\u30A2\u30CA\u30E9\u30A4\u30BA\u30ED\u30C3\u30C9"
       Id: 101090
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
-      Description: 
+      ThumbnailId: Weapon.69
+      Thumbnail: {fileID: 21300000, guid: 5d03e33c57521f24c97a0c5b1af7e541, type: 3}
+      Description: "\u6301\u3061\u4E3B\u306E\u5468\u56F2\u306B\u6F5C\u3080\u3042\u3089\u3086\u308B\u8B0E\u3084\u7F60\u3092\u66B4\u304F\u305F\u3081\u306B\u4F5C\u3089\u308C\u305F\u3002\u7DD1\u8272\u306E\u5149\u304C\u706F\u308B\u3068\u304D\u3001\u305D\u306E\u76EE\u306F\u771F\u5B9F\u3092\u898B\u901A\u3057\u3001\u96A0\u3055\u308C\u305F\u3082\u306E\u3055\u3048\u898B\u9003\u3055\u306A\u3044\u3002"
     - Name: "\u30C6\u30B9\u30C8\u6B66\u5668"
       Id: 101997
       ThumbnailId: 
@@ -5689,9 +7286,9 @@ MonoBehaviour:
       Description: "\u8EAB\u306B\u3064\u3051\u305F\u8005\u306F\u9A5A\u7570\u7684\u306A\u529B\u3092\u624B\u306B\u3059\u308B\u304C\u3001\u305D\u306E\u4EE3\u308F\u308A\u306B\u3001\u7D20\u65E9\u3055\u304C\u8755\u307E\u308C\u3066\u3044\u304F\u3068\u3044\u3046\u3002\u529B\u3092\u6C42\u3081\u308B\u8005\u306F\u3001\u3053\u306E\u6307\u8F2A\u306B\u5BBF\u308B\u5371\u967A\u306A\u8A98\u60D1\u306B\u6297\u3046\u3053\u3068\u304C\u3067\u304D\u308B\u306E\u3060\u308D\u3046\u304B\u3002"
     - Name: "\u7570\u56FD\u306E\u63A2\u77E5\u6A5F"
       Id: 106035
-      ThumbnailId: 
-      Thumbnail: {fileID: 0}
-      Description: "\u5E38\u6642\u30A2\u30CA\u30E9\u30A4\u30BA"
+      ThumbnailId: Accessory.24
+      Thumbnail: {fileID: 21300000, guid: 5c8d6d56237387a4181fe8752bf1c59f, type: 3}
+      Description: "\u7570\u56FD\u304B\u3089\u3082\u305F\u3089\u3055\u308C\u305F\u6280\u8853\u306E\u7C8B\u3092\u96C6\u3081\u305F\u88C5\u7F6E\u3002\u6575\u306B\u5411\u3051\u308B\u3053\u3068\u3067\u3001\u77AC\u6642\u306B\u305D\u306E\u30B9\u30C6\u30FC\u30BF\u30B9\u3092\u89E3\u6790\u3057\u3001\u5F31\u70B9\u3084\u96A0\u3055\u308C\u305F\u529B\u3092\u66B4\u304D\u51FA\u3059\u3002\u6301\u3061\u4E3B\u306E\u6226\u8853\u3092\u98DB\u8E8D\u7684\u306B\u9AD8\u3081\u308B\u3060\u308D\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30CA\u30E9\u30A4\u30BA\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
     - Name: "\u9244\u306E\u9375"
       Id: 107001
       ThumbnailId: 
@@ -5809,6 +7406,11 @@ MonoBehaviour:
       - Id: 0
         TableId: 1
         ItemId: 101022
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 1
+        ItemId: 101090
         Count: 1
         Weight: 100
       - Id: 0
@@ -6208,6 +7810,11 @@ MonoBehaviour:
         ItemId: 106033
         Count: 1
         Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106035
+        Count: 1
+        Weight: 100
     - Key: 3
       Value:
       - Id: 0
@@ -6558,6 +8165,11 @@ MonoBehaviour:
       - Id: 0
         TableId: 3
         ItemId: 106034
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106035
         Count: 1
         Weight: 100
     - Key: 99
@@ -8951,6 +10563,14 @@ MonoBehaviour:
       Speed: -20
       BeginBattleSequencesId: 0
       BeginBattleSequences: {fileID: 11400000, guid: 4a8975dffc938c04391f247b6f396d71, type: 2}
+    - ItemId: 106035
+      Vitality: 0
+      Stamina: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
+      Speed: 0
+      BeginBattleSequencesId: 106035
+      BeginBattleSequences: {fileID: 11400000, guid: c0208ec1e81db774dad1409749202d90, type: 2}
   enemies:
     list:
     - Id: 10101
@@ -9578,7 +11198,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
       BattleCharacterSequences: {fileID: 0}
     - Id: 19907
-      Name: "\u5F71\u306E\u5203\u3001\u30D5\u30A7\u30A4"
+      Name: "\u5F71\u306E\u5203\u3001\u30B7\u30A7\u30F3"
       HitPoint: 2484
       Stamina: 0
       PhysicalAttack: 60
@@ -10143,3 +11763,11 @@ MonoBehaviour:
       Value:
       - FloorId: 2
         DungeonName: Dungeon.10201
+    - Key: 3
+      Value:
+      - FloorId: 3
+        DungeonName: Dungeon.10301
+    - Key: 4
+      Value:
+      - FloorId: 4
+        DungeonName: Dungeon.10401
