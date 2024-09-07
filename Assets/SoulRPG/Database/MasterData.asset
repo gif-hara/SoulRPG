@@ -11175,10 +11175,10 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 2298d088d70558e4f8dc92d80e929ae5, type: 2}
     - Id: 19906
       Name: "\u9023\u9583\u306E\u30A2\u30EB\u30CE\u30A4\u30C9"
-      HitPoint: 3408
+      HitPoint: 5346
       Stamina: 0
-      PhysicalAttack: 70
-      MagicalAttack: 70
+      PhysicalAttack: 68
+      MagicalAttack: 68
       SlashCutRate: 0.1
       BlowCutRate: 0.17
       ThrustCutRate: 0.07
@@ -11199,10 +11199,10 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: bdd67bcf60084438989242ae095483e1, type: 2}
     - Id: 19907
       Name: "\u5F71\u306E\u5203\u3001\u30B7\u30A7\u30F3"
-      HitPoint: 3483
+      HitPoint: 5464
       Stamina: 0
-      PhysicalAttack: 71
-      MagicalAttack: 71
+      PhysicalAttack: 16
+      MagicalAttack: 16
       SlashCutRate: 0.08
       BlowCutRate: 0.07
       ThrustCutRate: 0.06
