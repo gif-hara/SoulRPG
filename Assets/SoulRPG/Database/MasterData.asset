@@ -11195,8 +11195,8 @@ MonoBehaviour:
       FieldOfVision: 0
       MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
-      BattleCharacterSequences: {fileID: 0}
+      AISequences: {fileID: 11400000, guid: 9185323e6fabf4b4187661cbbaf041fb, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: bdd67bcf60084438989242ae095483e1, type: 2}
     - Id: 19907
       Name: "\u5F71\u306E\u5203\u3001\u30B7\u30A7\u30F3"
       HitPoint: 2484
@@ -11219,8 +11219,8 @@ MonoBehaviour:
       FieldOfVision: 0
       MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: 0b09e3e388d15a04b82760224afe3bb2, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
-      BattleCharacterSequences: {fileID: 0}
+      AISequences: {fileID: 11400000, guid: 979d9a43264014cacad6481499027c79, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: 4593628952f1f434ab9a5d4a42b24814, type: 2}
     - Id: 19908
       Name: "\u899A\u9192\u306E\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
       HitPoint: 2430
