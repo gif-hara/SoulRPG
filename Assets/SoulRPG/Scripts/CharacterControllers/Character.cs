@@ -109,6 +109,7 @@ namespace SoulRPG.CharacterControllers
             Direction = saveData.suspendData.playerDirection;
             Inventory.SyncFromSaveData(saveData.suspendData.playerItemData);
             Equipment.SyncFromSaveData(saveData.suspendData.playerEquipmentData);
+            InstanceStatus.SyncFromSaveData(saveData.suspendData.playerInstanceData);
             GrowthParameter.Sync(saveData.suspendData.growthParameter, this);
         }
     }

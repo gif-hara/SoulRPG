@@ -57,6 +57,8 @@ namespace SoulRPG
             public EquipmentData playerEquipmentData;
 
             public ItemData[] playerItemData;
+
+            public PlayerInstanceData playerInstanceData;
         }
 
         [Serializable]
@@ -81,6 +83,16 @@ namespace SoulRPG
             public int itemId;
 
             public int count;
+        }
+
+        [Serializable]
+        public class PlayerInstanceData
+        {
+            public int hitPoint;
+
+            public int stamina;
+
+            public int experience;
         }
     }
 }

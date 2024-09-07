@@ -118,5 +118,22 @@ namespace SoulRPG
         {
             experienceReactiveProperty.Value = 0;
         }
+
+        public SaveData.PlayerInstanceData CreateSaveData()
+        {
+            return new SaveData.PlayerInstanceData
+            {
+                hitPoint = HitPoint,
+                stamina = Stamina,
+                experience = Experience
+            };
+        }
+
+        public void SyncFromSaveData(SaveData.PlayerInstanceData playerInstanceData)
+        {
+            hitPointReactiveProperty.Value = playerInstanceData.hitPoint;
+            staminaReactiveProperty.Value = playerInstanceData.stamina;
+            experienceReactiveProperty.Value = playerInstanceData.experience;
+        }
     }
 }

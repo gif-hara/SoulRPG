@@ -566,7 +566,8 @@ namespace SoulRPG
                     playerPosition = character.Position,
                     playerDirection = character.Direction,
                     playerEquipmentData = character.Equipment.CreateSaveData(),
-                    playerItemData = character.Inventory.CreateSaveData()
+                    playerItemData = character.Inventory.CreateSaveData(),
+                    playerInstanceData = character.InstanceStatus.CreateSaveData()
                 };
                 SaveData.Save(saveData);
                 stateMachine.Change(StateCreatedSuspendData);
