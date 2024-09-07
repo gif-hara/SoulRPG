@@ -20,6 +20,10 @@ namespace SoulRPG
 
         public static SaveData Load()
         {
+            if (!Contains())
+            {
+                return null;
+            }
             var encryptedJson = PlayerPrefs.GetString("SaveData");
             var json = EncryptionUtility.Decrypt(encryptedJson);
             return JsonUtility.FromJson<SaveData>(json);
