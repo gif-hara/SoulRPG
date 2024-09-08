@@ -103,6 +103,18 @@ namespace SoulRPG
             public string dungeonName;
 
             public int floorId;
+
+            public DungeonInstanceItemData[] itemData;
+        }
+
+        [Serializable]
+        public class DungeonInstanceItemData
+        {
+            public Vector2Int position;
+
+            public int itemId;
+
+            public int count;
         }
     }
 }

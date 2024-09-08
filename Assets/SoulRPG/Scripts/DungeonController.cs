@@ -658,6 +658,16 @@ namespace SoulRPG
             {
                 dungeonName = CurrentDungeon.name,
                 floorId = currentFloorId,
+                itemData = FloorDatabase.Values
+                    .Where(x => x is DungeonInstanceFloorData.Item)
+                    .Select(x => x as DungeonInstanceFloorData.Item)
+                    .Select(x => new SaveData.DungeonInstanceItemData
+                    {
+                        position = x.Position,
+                        itemId = x.MasterDataItem.Id,
+                        count = x.Count
+                    })
+                    .ToArray(),
             };
         }
 
@@ -678,6 +688,17 @@ namespace SoulRPG
             CurrentDungeon = masterData.Dungeons.Get(saveData.dungeonName);
             CurrentDungeonSpec = masterData.DungeonSpecs.Get(CurrentDungeon.name);
             currentFloorId = saveData.floorId;
+
+            foreach (var i in saveData.itemData)
+            {
+                var itemData = new DungeonInstanceFloorData.Item
+                (
+                    i.position,
+                    masterData.Items.Get(i.itemId),
+                    i.count
+                );
+                FloorDatabase.Add(i.position, itemData);
+            }
 
             gameEvents.OnSetupDungeon.OnNext(this);
         }
