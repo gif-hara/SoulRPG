@@ -234,7 +234,7 @@ namespace SoulRPG
                 {
                     ""name"": """",
                     ""id"": ""64655203-68cf-4de9-b086-3fc4f3ad8ad5"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/t"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
@@ -398,7 +398,7 @@ namespace SoulRPG
                 {
                     ""name"": """",
                     ""id"": ""34479df8-7f21-4c2a-8de1-b8fdec47e212"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/backspace"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
@@ -800,7 +800,7 @@ namespace SoulRPG
                 {
                     ""name"": """",
                     ""id"": ""d5a54fa9-9ece-4dda-8c10-8d088e7d4a9d"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/backspace"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",

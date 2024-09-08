@@ -902,6 +902,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Keyboard-t
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc09b5395279da46878edf773e2f949
+      internalID: 110181661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard-backspace
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf7a6e96a5478a41a3803a05668165d
+      internalID: 1855201776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -923,6 +965,7 @@ TextureImporter:
       DualShockGamepad-dpad-up: -1291347943
       DualShockGamepad-leftShoulder: -1249346701
       DualShockGamepad-rightShoulder: -1720497351
+      Keyboard-backspace: 1855201776
       Keyboard-downArrow: 1523266417
       Keyboard-e: 960335720
       Keyboard-enter: 1191674108
@@ -932,6 +975,7 @@ TextureImporter:
       Keyboard-q: -585007666
       Keyboard-rightArrow: -447656018
       Keyboard-shift: 955303962
+      Keyboard-t: 110181661
       Keyboard-upArrow: 871192529
       SwitchProController-buttonSouth: -2039786858
       TMP_Sprite_21: -208855279
