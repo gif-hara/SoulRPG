@@ -668,6 +668,17 @@ namespace SoulRPG
                         count = x.Count
                     })
                     .ToArray(),
+                sequenceEventData = FloorDatabase.Values
+                    .Where(x => x is DungeonInstanceFloorData.SequenceEvent)
+                    .Select(x => x as DungeonInstanceFloorData.SequenceEvent)
+                    .Select(x => new SaveData.DungeonInstanceSequenceEventData
+                    {
+                        position = x.Position,
+                        viewName = x.ViewName,
+                        promptMessage = x.PromptMessage,
+                        sequenceId = x.Sequences.name
+                    })
+                    .ToArray()
             };
         }
 
@@ -698,6 +709,18 @@ namespace SoulRPG
                     i.count
                 );
                 FloorDatabase.Add(i.position, itemData);
+            }
+
+            foreach (var i in saveData.sequenceEventData)
+            {
+                var sequenceData = new DungeonInstanceFloorData.SequenceEvent
+                (
+                    i.position,
+                    i.viewName,
+                    i.sequenceId.GetFloorEventSequenceData().Sequences,
+                    i.promptMessage
+                );
+                FloorDatabase.Add(i.position, sequenceData);
             }
 
             gameEvents.OnSetupDungeon.OnNext(this);

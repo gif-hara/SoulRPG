@@ -105,6 +105,8 @@ namespace SoulRPG
             public int floorId;
 
             public DungeonInstanceItemData[] itemData;
+
+            public DungeonInstanceSequenceEventData[] sequenceEventData;
         }
 
         [Serializable]
@@ -115,6 +117,18 @@ namespace SoulRPG
             public int itemId;
 
             public int count;
+        }
+
+        [Serializable]
+        public class DungeonInstanceSequenceEventData
+        {
+            public Vector2Int position;
+
+            public string viewName;
+
+            public string promptMessage;
+
+            public string sequenceId;
         }
     }
 }
