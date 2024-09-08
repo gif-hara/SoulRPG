@@ -111,6 +111,8 @@ namespace SoulRPG
             public DungeonEnemyData[] enemyData;
 
             public DungeonInstanceWallData[] wallData;
+
+            public ReachedPositionData[] reachedPositionData;
         }
 
         [Serializable]
@@ -159,6 +161,12 @@ namespace SoulRPG
             public string negativeSideCondition;
 
             public bool isOpen;
+        }
+
+        [Serializable]
+        public class ReachedPositionData
+        {
+            public Vector2Int position;
         }
     }
 }

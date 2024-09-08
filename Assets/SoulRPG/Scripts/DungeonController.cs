@@ -678,6 +678,12 @@ namespace SoulRPG
                         positiveSideCondition = x.PositiveSideCondition,
                         negativeSideCondition = x.NegativeSideCondition
                     })
+                    .ToArray(),
+                reachedPositionData = reachedPoints
+                    .Select(x => new SaveData.ReachedPositionData
+                    {
+                        position = x
+                    })
                     .ToArray()
             };
         }
@@ -736,6 +742,11 @@ namespace SoulRPG
                 var wallPosition = new WallPosition(i.from, i.to);
                 var data = new DungeonInstanceWallData(i.from, i.to, i.eventType, i.positiveSideCondition, i.negativeSideCondition, i.isOpen);
                 WallDatabase.Add(wallPosition, data);
+            }
+
+            foreach (var i in saveData.reachedPositionData)
+            {
+                reachedPoints.Add(i.position);
             }
 
             gameEvents.OnSetupDungeon.OnNext(this);
