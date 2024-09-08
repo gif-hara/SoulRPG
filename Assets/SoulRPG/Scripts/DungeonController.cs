@@ -515,25 +515,6 @@ namespace SoulRPG
                     }
 
                     break;
-                case "Item":
-                    if (!wallEvent.IsOpen)
-                    {
-                        foreach (var i in wallEvent.NeedItems)
-                        {
-                            if (!character.Inventory.HasItem(i))
-                            {
-                                gameEvents.OnRequestShowMessage.OnNext(new("鍵が必要のようだ。", "Sfx.Message.0"));
-                                return;
-                            }
-                        }
-
-                        gameEvents.OnRequestShowMessage.OnNext(new("扉が開いた。", "Sfx.OpenDoor.0"));
-                        wallEvent.Open();
-                        AddReachedPoint(character);
-                        await view.OnOpenDoorAsync(wallEvent);
-                    }
-
-                    break;
             }
         }
 
@@ -686,6 +667,17 @@ namespace SoulRPG
                         enemyId = x.MasterDataEnemy.Id,
                         findPlayer = x.FindPlayer
                     })
+                    .ToArray(),
+                wallData = WallDatabase.Values
+                    .Select(x => new SaveData.DungeonInstanceWallData
+                    {
+                        from = x.From,
+                        to = x.To,
+                        isOpen = x.IsOpen,
+                        eventType = x.EventType,
+                        positiveSideCondition = x.PositiveSideCondition,
+                        negativeSideCondition = x.NegativeSideCondition
+                    })
                     .ToArray()
             };
         }
@@ -737,6 +729,13 @@ namespace SoulRPG
                 Enemies.Add(enemy);
                 enemy.Warp(i.position);
                 EnemyController.Attach(enemy, TinyServiceLocator.Resolve<Character>("Player"), this, i.findPlayer);
+            }
+
+            foreach (var i in saveData.wallData)
+            {
+                var wallPosition = new WallPosition(i.from, i.to);
+                var data = new DungeonInstanceWallData(i.from, i.to, i.eventType, i.positiveSideCondition, i.negativeSideCondition, i.isOpen);
+                WallDatabase.Add(wallPosition, data);
             }
 
             gameEvents.OnSetupDungeon.OnNext(this);

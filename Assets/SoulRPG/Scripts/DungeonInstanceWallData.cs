@@ -11,20 +11,18 @@ namespace SoulRPG
     public sealed class DungeonInstanceWallData
     {
         public Vector2Int From { get; }
-        
+
         public Vector2Int To { get; }
-        
+
         public string EventType { get; }
-        
+
         public string PositiveSideCondition { get; }
-        
+
         public string NegativeSideCondition { get; }
-        
+
         private readonly ReactiveProperty<bool> isOpen = new();
         public ReadOnlyReactiveProperty<bool> IsOpenReactiveProperty => isOpen.ToReadOnlyReactiveProperty();
         public bool IsOpen => isOpen.Value;
-        
-        public List<INeedItem> NeedItems { get; } = new();
 
         public DungeonInstanceWallData(MasterData.WallEvent wallEvent)
         {
@@ -33,11 +31,24 @@ namespace SoulRPG
             EventType = wallEvent.EventType;
             PositiveSideCondition = wallEvent.PositiveSideCondition;
             NegativeSideCondition = wallEvent.NegativeSideCondition;
-            TinyServiceLocator.Resolve<MasterData>().WallEventConditionItems.TryGetValue(wallEvent.Id, out var items);
-            if (items != null)
-            {
-                NeedItems.AddRange(items);
-            }
+        }
+
+        public DungeonInstanceWallData
+        (
+            Vector2Int from,
+            Vector2Int to,
+            string eventType,
+            string positiveSideCondition,
+            string negativeSideCondition,
+            bool isOpen
+        )
+        {
+            From = from;
+            To = to;
+            EventType = eventType;
+            PositiveSideCondition = positiveSideCondition;
+            NegativeSideCondition = negativeSideCondition;
+            this.isOpen.Value = isOpen;
         }
 
         public bool IsPositiveAccess(Define.Direction accessDirection)

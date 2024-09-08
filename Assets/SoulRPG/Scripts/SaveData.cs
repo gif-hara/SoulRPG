@@ -109,6 +109,8 @@ namespace SoulRPG
             public DungeonInstanceSequenceEventData[] sequenceEventData;
 
             public DungeonEnemyData[] enemyData;
+
+            public DungeonInstanceWallData[] wallData;
         }
 
         [Serializable]
@@ -141,6 +143,22 @@ namespace SoulRPG
             public int enemyId;
 
             public bool findPlayer;
+        }
+
+        [Serializable]
+        public class DungeonInstanceWallData
+        {
+            public Vector2Int from;
+
+            public Vector2Int to;
+
+            public string eventType;
+
+            public string positiveSideCondition;
+
+            public string negativeSideCondition;
+
+            public bool isOpen;
         }
     }
 }
