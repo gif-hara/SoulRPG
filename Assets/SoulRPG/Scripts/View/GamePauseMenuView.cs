@@ -562,6 +562,7 @@ namespace SoulRPG
                 }
                 saveData.suspendData = new SaveData.SuspendData
                 {
+                    isValid = true,
                     growthParameter = character.GrowthParameter,
                     playerPosition = character.Position,
                     playerDirection = character.Direction,

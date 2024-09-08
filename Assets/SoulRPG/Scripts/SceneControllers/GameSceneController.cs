@@ -153,10 +153,20 @@ namespace SoulRPG.SceneControllers
             inputController.PushInputType(InputController.InputType.InGame);
             var gameTipsView = new GameTipsView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Tips"), destroyCancellationToken);
             TinyServiceLocator.Register(gameTipsView);
-            if (saveData != null && saveData.suspendData != null)
+            if (saveData != null && saveData.suspendData != null && saveData.suspendData.isValid)
             {
                 player.SyncFromSaveData(saveData);
                 dungeonController.SyncFromSaveData(saveData.suspendData.dungeonData);
+                saveData.suspendData.isValid = false;
+                SaveData.Save(saveData);
+                await DialogView.ConfirmAsync(
+                    gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                    "中断データから再開しました。中断データは削除されたのでご注意ください。",
+                    new[] { "確認" },
+                    0,
+                    destroyCancellationToken
+                    );
+                AudioManager.PlaySFX("Sfx.Message.0");
             }
             else
             {

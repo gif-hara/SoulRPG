@@ -48,6 +48,8 @@ namespace SoulRPG
         [Serializable]
         public class SuspendData
         {
+            public bool isValid;
+
             public CharacterGrowthParameter growthParameter;
 
             public Vector2Int playerPosition;
