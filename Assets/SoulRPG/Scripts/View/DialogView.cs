@@ -32,6 +32,20 @@ namespace SoulRPG
             document.Q<TMP_Text>("Message").text = message;
             var elementParent = document.Q<Transform>("ElementParent");
             var elementPrefab = document.Q<HKUIDocument>("ElementPrefab");
+            var inputController = TinyServiceLocator.Resolve<InputController>();
+            Selectable defaultSelectable = null;
+            inputController.InputActions.UI.Navigate
+                .OnPerformedAsObservable()
+                .Subscribe(x =>
+                {
+                    if (EventSystem.current.currentSelectedGameObject != null || defaultSelectable == null)
+                    {
+                        return;
+                    }
+                    EventSystem.current.SetSelectedGameObject(defaultSelectable.gameObject);
+                })
+                .RegisterTo(document.destroyCancellationToken);
+
             foreach (var e in options.Select((x, i) => (x, i)))
             {
                 var element = Object.Instantiate(elementPrefab, elementParent);
@@ -46,6 +60,7 @@ namespace SoulRPG
                 if (defaultIndex == e.i)
                 {
                     button.Select();
+                    defaultSelectable = button;
                 }
                 var navigation = button.navigation;
                 navigation.mode = Navigation.Mode.Horizontal;
