@@ -42,17 +42,6 @@ namespace SoulRPG
             }
         }
 
-        public sealed class Enemy : DungeonInstanceFloorData
-        {
-            public int EnemyId { get; }
-
-            public Enemy(Vector2Int position, int enemyId)
-                : base(position, "Enemy")
-            {
-                EnemyId = enemyId;
-            }
-        }
-
         public sealed class SequenceEvent : DungeonInstanceFloorData
         {
             public ScriptableSequences Sequences { get; }
