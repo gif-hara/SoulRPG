@@ -14,7 +14,7 @@ namespace SoulRPG
     /// </summary>
     public sealed class EnemyController
     {
-        public static void Attach(Character enemy, Character player, DungeonController dungeonController)
+        public static void Attach(Character enemy, Character player, DungeonController dungeonController, bool findPlayer)
         {
             var stateMachine = new TinyStateMachine();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
@@ -24,7 +24,14 @@ namespace SoulRPG
                 stateMachine.Dispose();
             });
 
-            stateMachine.Change(StateIdleAsync);
+            if (findPlayer)
+            {
+                stateMachine.Change(StateChaseAsync);
+            }
+            else
+            {
+                stateMachine.Change(StateIdleAsync);
+            }
 
             UniTask StateIdleAsync(CancellationToken cancellationToken)
             {
@@ -41,6 +48,7 @@ namespace SoulRPG
                             CanSeePlayer(Define.Direction.Right)
                             )
                         {
+                            AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get("Sfx.FindPlayer.0").Clip);
                             stateMachine.Change(StateChaseAsync);
                         }
                     })
@@ -108,7 +116,7 @@ namespace SoulRPG
 
             UniTask StateChaseAsync(CancellationToken cancellationToken)
             {
-                AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get("Sfx.FindPlayer.0").Clip);
+                enemy.FindPlayer = true;
                 var canMove = true;
                 Observable.Interval(TimeSpan.FromSeconds(enemy.MasterDataEnemy.MoveIntervalSeconds))
                     .Subscribe(_ =>

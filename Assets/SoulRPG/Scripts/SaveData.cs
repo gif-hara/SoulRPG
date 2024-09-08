@@ -107,6 +107,8 @@ namespace SoulRPG
             public DungeonInstanceItemData[] itemData;
 
             public DungeonInstanceSequenceEventData[] sequenceEventData;
+
+            public DungeonEnemyData[] enemyData;
         }
 
         [Serializable]
@@ -129,6 +131,16 @@ namespace SoulRPG
             public string promptMessage;
 
             public string sequenceId;
+        }
+
+        [Serializable]
+        public class DungeonEnemyData
+        {
+            public Vector2Int position;
+
+            public int enemyId;
+
+            public bool findPlayer;
         }
     }
 }

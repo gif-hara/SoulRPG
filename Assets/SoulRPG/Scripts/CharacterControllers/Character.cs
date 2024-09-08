@@ -49,6 +49,8 @@ namespace SoulRPG.CharacterControllers
 
         public MasterData.Enemy MasterDataEnemy { get; }
 
+        public bool FindPlayer { get; set; }
+
         private readonly CancellationTokenSource lifeScopeSource = new();
 
         public CancellationToken LifeScope => lifeScopeSource.Token;

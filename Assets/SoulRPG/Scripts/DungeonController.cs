@@ -254,7 +254,7 @@ namespace SoulRPG
                 var enemy = new Character(masterData.Enemies.Get(masterDataEnemyId));
                 Enemies.Add(enemy);
                 enemy.Warp(position);
-                EnemyController.Attach(enemy, player, this);
+                EnemyController.Attach(enemy, player, this, false);
             }
         }
 
@@ -678,6 +678,14 @@ namespace SoulRPG
                         promptMessage = x.PromptMessage,
                         sequenceId = x.Sequences.name
                     })
+                    .ToArray(),
+                enemyData = Enemies
+                    .Select(x => new SaveData.DungeonEnemyData
+                    {
+                        position = x.Position,
+                        enemyId = x.MasterDataEnemy.Id,
+                        findPlayer = x.FindPlayer
+                    })
                     .ToArray()
             };
         }
@@ -721,6 +729,14 @@ namespace SoulRPG
                     i.promptMessage
                 );
                 FloorDatabase.Add(i.position, sequenceData);
+            }
+
+            foreach (var i in saveData.enemyData)
+            {
+                var enemy = new Character(masterData.Enemies.Get(i.enemyId));
+                Enemies.Add(enemy);
+                enemy.Warp(i.position);
+                EnemyController.Attach(enemy, TinyServiceLocator.Resolve<Character>("Player"), this, i.findPlayer);
             }
 
             gameEvents.OnSetupDungeon.OnNext(this);
