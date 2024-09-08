@@ -106,15 +106,16 @@ namespace SoulRPG
             foreach (var i in floorItemNoCosts)
             {
                 var position = new Vector2Int(i.X, i.Y);
-                var items = CreateItemList(i.ItemTableId);
-                if (items == null)
+                var itemData = CreateItemList(i.ItemTableId);
+                if (itemData == default)
                 {
                     continue;
                 }
                 var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
-                    items
+                    itemData.item,
+                    itemData.count
                 );
                 FloorDatabase.Add(position, floorData);
             }
@@ -127,13 +128,14 @@ namespace SoulRPG
             foreach (var i in floorItemEnemyPlaces)
             {
                 var position = new Vector2Int(i.X, i.Y);
-                var items = CreateItemList(i.ItemTableId);
-                if (items != null)
+                var itemData = CreateItemList(i.ItemTableId);
+                if (itemData != default)
                 {
                     var floorData = new DungeonInstanceFloorData.Item
                     (
                         position,
-                        items
+                        itemData.item,
+                        itemData.count
                     );
                     FloorDatabase.Add(position, floorData);
                 }
@@ -164,15 +166,16 @@ namespace SoulRPG
             foreach (var i in CurrentDungeonSpec.FloorItemGuaranteeds)
             {
                 var position = new Vector2Int(i.X, i.Y);
-                var items = CreateItemList(i.ItemTableId);
-                if (items == null)
+                var itemData = CreateItemList(i.ItemTableId);
+                if (itemData == default)
                 {
                     continue;
                 }
                 var floorData = new DungeonInstanceFloorData.Item
                 (
                     position,
-                    items
+                    itemData.item,
+                    itemData.count
                 );
                 AddFloorData(position, floorData);
             }
@@ -212,7 +215,7 @@ namespace SoulRPG
                 FloorDatabase.Add(position, floorData);
             }
 
-            List<(MasterData.Item item, int count)> CreateItemList(int itemTableId)
+            (MasterData.Item item, int count) CreateItemList(int itemTableId)
             {
                 if (!itemTableDatabase.ContainsKey(itemTableId))
                 {
@@ -227,7 +230,7 @@ namespace SoulRPG
                 {
                     if (itemTables.Count == 0)
                     {
-                        return null;
+                        return default;
                     }
                     lotteryIndex = itemTables.LotteryIndex();
                     itemTable = itemTables[lotteryIndex];
@@ -241,13 +244,9 @@ namespace SoulRPG
                     }
                 }
 
-                var itemList = new List<(MasterData.Item item, int count)>
-                {
-                    (itemTable.ItemId.GetMasterDataItem(), itemTable.Count)
-                };
                 itemTables.RemoveAt(lotteryIndex);
                 createdItemIds.Add(itemTable.ItemId);
-                return itemList;
+                return (itemTable.ItemId.GetMasterDataItem(), itemTable.Count);
             }
 
             void CreateEnemy(int masterDataEnemyId, Vector2Int position)
@@ -407,28 +406,25 @@ namespace SoulRPG
             gameEvents.OnRequestChangeMiniMapType.OnNext(Define.MiniMapType.Default);
             gameEvents.OnAcquiredFloorData.OnNext(itemData);
             RemoveFloorData(character.Position);
-            foreach (var (item, count) in itemData.Items)
+            character.Inventory.Add(itemData.MasterDataItem.Id, itemData.Count);
+            if (itemData.Count == 1)
             {
-                character.Inventory.Add(item.Id, count);
-                if (count == 1)
-                {
-                    gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{item.Name}</color>を手に入れた。",
-                        "Sfx.Message.0"));
-                }
-                else
-                {
-                    gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{item.Name}</color>を{count}個手に入れた。",
-                        "Sfx.Message.0"));
-                }
-
-                character.Events.OnAcquiredItem.OnNext((item.Id, count));
-                var acquireItemViewScope = new CancellationTokenSource();
-                AcquireItemView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.AcquireItem"), item,
-                    acquireItemViewScope.Token).Forget();
-                await gameEvents.WaitForSubmitInputAsync();
-                acquireItemViewScope.Cancel();
-                acquireItemViewScope.Dispose();
+                gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{itemData.MasterDataItem.Name}</color>を手に入れた。",
+                    "Sfx.Message.0"));
             }
+            else
+            {
+                gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{itemData.MasterDataItem.Name}</color>を{itemData.Count}個手に入れた。",
+                    "Sfx.Message.0"));
+            }
+
+            character.Events.OnAcquiredItem.OnNext((itemData.MasterDataItem.Id, itemData.Count));
+            var acquireItemViewScope = new CancellationTokenSource();
+            AcquireItemView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.AcquireItem"), itemData.MasterDataItem,
+                acquireItemViewScope.Token).Forget();
+            await gameEvents.WaitForSubmitInputAsync();
+            acquireItemViewScope.Cancel();
+            acquireItemViewScope.Dispose();
         }
 
         private async UniTask OnInteractSequenceEventAsync(Character character,

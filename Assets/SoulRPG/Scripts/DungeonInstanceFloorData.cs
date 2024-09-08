@@ -30,12 +30,15 @@ namespace SoulRPG
 
         public sealed class Item : DungeonInstanceFloorData
         {
-            public List<(MasterData.Item item, int count)> Items { get; } = new();
+            public MasterData.Item MasterDataItem { get; }
 
-            public Item(Vector2Int position, List<(MasterData.Item item, int count)> items)
+            public int Count { get; }
+
+            public Item(Vector2Int position, MasterData.Item masterDataItem, int count)
                 : base(position, "Item")
             {
-                Items = items;
+                MasterDataItem = masterDataItem;
+                Count = count;
             }
         }
 
