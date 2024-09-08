@@ -82,6 +82,10 @@ namespace SoulRPG
         private DungeonTable.Group dungeonTables;
         public DungeonTable.Group DungeonTables => dungeonTables;
 
+        [SerializeField]
+        private FloorEventSequenceData.DictionaryList floorEventSequences;
+        public FloorEventSequenceData.DictionaryList FloorEventSequences => floorEventSequences;
+
 
 #if UNITY_EDITOR
         [ContextMenu("Update")]
@@ -270,17 +274,6 @@ namespace SoulRPG
             }
             foreach (var i in floorEvents.List)
             {
-                foreach (var j in i.Value)
-                {
-                    j.Sequences = AssetDatabase.LoadAssetAtPath<ScriptableSequences>($"Assets/SoulRPG/Database/FloorEvent/{j.SequenceId}.asset");
-                    if (j.Sequences == null)
-                    {
-                        Debug.LogWarning($"Not found FloorEventSequence {j.SequenceId}");
-                    }
-                }
-            }
-            foreach (var i in floorEvents.List)
-            {
                 var dungeonSpec = dungeonSpecs.Get(i.Key);
                 Assert.IsNotNull(dungeonSpec, $"Not found DungeonSpec {i.Key}");
                 dungeonSpec.FloorEvents = i.Value;
@@ -299,6 +292,12 @@ namespace SoulRPG
                 Assert.IsNotNull(skill, $"Not found Skill {i.Key}");
                 skill.AdditionalDescriptions = i.Value;
             }
+            floorEventSequences.Set(
+                AssetDatabase.FindAssets("t:ScriptableSequences", new[] { "Assets/SoulRPG/Database/FloorEvent" })
+                .Select(AssetDatabase.GUIDToAssetPath)
+                .Select(AssetDatabase.LoadAssetAtPath<ScriptableSequences>)
+                .Select(x => new FloorEventSequenceData { Sequences = x })
+                );
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
             Debug.Log("End MasterData Update");
@@ -893,11 +892,9 @@ namespace SoulRPG
 
             public string ViewName;
 
-            public int SequenceId;
+            public string SequenceId;
 
             public string PromptMessage;
-
-            public ScriptableSequences Sequences;
 
             [Serializable]
             public class Group : Group<string, FloorEvent>
@@ -917,6 +914,18 @@ namespace SoulRPG
             public class Group : Group<int, DungeonTable>
             {
                 public Group() : base(x => x.FloorId) { }
+            }
+        }
+
+        [Serializable]
+        public class FloorEventSequenceData
+        {
+            public ScriptableSequences Sequences;
+
+            [Serializable]
+            public class DictionaryList : DictionaryList<string, FloorEventSequenceData>
+            {
+                public DictionaryList() : base(x => x.Sequences.name) { }
             }
         }
     }

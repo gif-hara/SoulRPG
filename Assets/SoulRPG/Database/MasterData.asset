@@ -3876,7 +3876,6 @@ MonoBehaviour:
         ViewName: Message
         SequenceId: 101001
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
       - Id: 0
         DungeonName: Dungeon.Test
         X: 0
@@ -3884,7 +3883,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.Test
         X: 1
@@ -3892,7 +3890,6 @@ MonoBehaviour:
         ViewName: NextFloor
         SequenceId: 101004
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: dc13576ad584fdd42ac671f298449ff8, type: 2}
     - Id: Dungeon.Home
       InitialX: 2
       InitialY: 0
@@ -3928,7 +3925,6 @@ MonoBehaviour:
         ViewName: NextFloor
         SequenceId: 101004
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: dc13576ad584fdd42ac671f298449ff8, type: 2}
       - Id: 0
         DungeonName: Dungeon.Home
         X: 1
@@ -3936,7 +3932,6 @@ MonoBehaviour:
         ViewName: Npc.0
         SequenceId: 102001
         PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
-        Sequences: {fileID: 11400000, guid: e80c5822defe0ec458d585143ae432d9, type: 2}
     - Id: Dungeon.10101
       InitialX: 3
       InitialY: 1
@@ -4457,7 +4452,6 @@ MonoBehaviour:
         ViewName: NextFloor
         SequenceId: 101005
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: af3d26f33bc514602b161cc6d308484a, type: 2}
       - Id: 0
         DungeonName: Dungeon.10101
         X: 12
@@ -4465,7 +4459,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10101
         X: 14
@@ -4473,7 +4466,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10101
         X: 10
@@ -4481,7 +4473,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
     - Id: Dungeon.10201
       InitialX: 11
       InitialY: 21
@@ -5133,7 +5124,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10201
         X: 21
@@ -5141,7 +5131,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10201
         X: 18
@@ -5149,7 +5138,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10201
         X: 16
@@ -5157,7 +5145,6 @@ MonoBehaviour:
         ViewName: Npc.0
         SequenceId: 102002
         PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
-        Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
     - Id: Dungeon.10301
       InitialX: 12
       InitialY: 12
@@ -5765,7 +5752,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10301
         X: 24
@@ -5773,7 +5759,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10301
         X: 23
@@ -5781,7 +5766,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10301
         X: 20
@@ -5789,7 +5773,6 @@ MonoBehaviour:
         ViewName: Npc.0
         SequenceId: 102002
         PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
-        Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
     - Id: Dungeon.10401
       InitialX: 25
       InitialY: 0
@@ -6434,7 +6417,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10401
         X: 0
@@ -6442,7 +6424,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10401
         X: 18
@@ -6450,7 +6431,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-        Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
       - Id: 0
         DungeonName: Dungeon.10401
         X: 18
@@ -6458,7 +6438,6 @@ MonoBehaviour:
         ViewName: Npc.0
         SequenceId: 102002
         PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
-        Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
@@ -11771,3 +11750,16 @@ MonoBehaviour:
       Value:
       - FloorId: 4
         DungeonName: Dungeon.10401
+  floorEventSequences:
+    list:
+    - Sequences: {fileID: 11400000, guid: 9f24cbfddf9b5492091457a134fd28a5, type: 2}
+    - Sequences: {fileID: 11400000, guid: ac9cc6ffdd07dc846bd602035afc47d4, type: 2}
+    - Sequences: {fileID: 11400000, guid: 0854c67bcc5713d4488e224c8b963063, type: 2}
+    - Sequences: {fileID: 11400000, guid: 2782e4b52c4a5ae4fa4c7b513c327ddc, type: 2}
+    - Sequences: {fileID: 11400000, guid: a298ea466b1971c4ca0a3b56b9565e75, type: 2}
+    - Sequences: {fileID: 11400000, guid: dc13576ad584fdd42ac671f298449ff8, type: 2}
+    - Sequences: {fileID: 11400000, guid: 0836e8668807f44e580bcaacdc7dc52f, type: 2}
+    - Sequences: {fileID: 11400000, guid: 11c5b632f229846239c8e4a815c1e507, type: 2}
+    - Sequences: {fileID: 11400000, guid: af3d26f33bc514602b161cc6d308484a, type: 2}
+    - Sequences: {fileID: 11400000, guid: e80c5822defe0ec458d585143ae432d9, type: 2}
+    - Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}

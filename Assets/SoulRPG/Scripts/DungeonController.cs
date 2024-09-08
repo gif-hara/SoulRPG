@@ -192,7 +192,7 @@ namespace SoulRPG
                 (
                     position,
                     i.ViewName,
-                    i.Sequences,
+                    i.SequenceId.GetFloorEventSequenceData().Sequences,
                     i.PromptMessage
                 );
                 AddFloorData(position, floorData);

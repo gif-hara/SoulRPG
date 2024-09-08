@@ -126,5 +126,9 @@ namespace SoulRPG
             return sb.ToString();
         }
 
+        public static MasterData.FloorEventSequenceData GetFloorEventSequenceData(this string self)
+        {
+            return TinyServiceLocator.Resolve<MasterData>().FloorEventSequences.Get(self);
+        }
     }
 }
