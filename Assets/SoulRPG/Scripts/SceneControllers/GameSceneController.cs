@@ -159,6 +159,7 @@ namespace SoulRPG.SceneControllers
                 dungeonController.SyncFromSaveData(saveData.suspendData.dungeonData);
                 saveData.suspendData.isValid = false;
                 SaveData.Save(saveData);
+                inputController.PushInputType(InputController.InputType.UI);
                 await DialogView.ConfirmAsync(
                     gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
                     "中断データから再開しました。中断データは削除されたのでご注意ください。",
@@ -167,6 +168,7 @@ namespace SoulRPG.SceneControllers
                     destroyCancellationToken
                     );
                 AudioManager.PlaySFX("Sfx.Message.0");
+                inputController.PopInputType();
             }
             else
             {
