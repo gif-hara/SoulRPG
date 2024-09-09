@@ -4,6 +4,7 @@ using HK;
 using R3;
 using SoulRPG.CharacterControllers;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
 
 namespace SoulRPG.SceneControllers
@@ -76,6 +77,7 @@ namespace SoulRPG.SceneControllers
 #endif
             TinyServiceLocator.Register(new GameFadeView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Fade"), destroyCancellationToken));
             var saveData = SaveData.LoadSafe();
+            Assert.IsNotNull(saveData, "saveData != null");
             var suspendData = SuspendData.Load();
             var playerName = saveData?.playerData?.name ?? debugPlayerName;
             var playerGrowthParameter = suspendData?.growthParameter ?? new(gameRule.PlayerGrowthParameter);
@@ -173,6 +175,16 @@ namespace SoulRPG.SceneControllers
             else
             {
                 gameEvents.OnRequestChangeDungeon.OnNext(debugDungeonName);
+            }
+            
+            Assert.IsNotNull(saveData.playerData, "saveData.playerData != null");
+            if (string.IsNullOrEmpty(saveData.playerData.name))
+            {
+                inputController.PushInputType(InputController.InputType.UI);
+                var newPlayerName = await GameNameInputFieldView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("Game.NameInputField"), destroyCancellationToken);
+                inputController.PopInputType();
+                AudioManager.PlaySFX("Sfx.Message.0");
+                saveData.playerData.name = newPlayerName;
             }
 #if DEBUG
             var battleDebugData = new BattleDebugData();
