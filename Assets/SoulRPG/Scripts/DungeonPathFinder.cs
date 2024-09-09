@@ -58,7 +58,7 @@ namespace SoulRPG
 
                 foreach (var direction in directions)
                 {
-                    if (!dungeonController.CanMove(current, direction.ToDirection()) || dungeonController.IsExistEnemy(current + direction))
+                    if (!dungeonController.CanMove(current, direction.ToDirection()))
                     {
                         continue;
                     }

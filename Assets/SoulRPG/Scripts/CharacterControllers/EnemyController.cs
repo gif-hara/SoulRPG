@@ -126,16 +126,21 @@ namespace SoulRPG
                             return;
                         }
                         var next = dungeonController.FindNextPosition(enemy.Position, player.Position);
-                        if (next.HasValue)
+                        if (!next.HasValue)
                         {
-                            var walkId = UnityEngine.Random.Range(0, 2);
-                            AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get($"Sfx.Walk.{walkId}").Clip);
-                            var direction = next.Value - enemy.Position;
-                            enemy.Move(direction);
-                            if (enemy.Position == player.Position)
-                            {
-                                dungeonController.BeginForceBattle(player, enemy);
-                            }
+                            return;
+                        }
+                        var direction = next.Value - enemy.Position;
+                        if(dungeonController.IsExistEnemy(enemy.Position + direction))
+                        {
+                            return;
+                        }
+                        var walkId = UnityEngine.Random.Range(0, 2);
+                        AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get($"Sfx.Walk.{walkId}").Clip);
+                        enemy.Move(direction);
+                        if (enemy.Position == player.Position)
+                        {
+                            dungeonController.BeginForceBattle(player, enemy);
                         }
                     })
                     .RegisterTo(cancellationToken);
