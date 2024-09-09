@@ -10975,7 +10975,7 @@ MonoBehaviour:
       Speed: 10
       Experience: 5224
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 16
       ThumbnailId: 12
       BattleBgmId: 0
       SequencesId: 0
@@ -10999,7 +10999,7 @@ MonoBehaviour:
       Speed: 16
       Experience: 5117
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 32
       ThumbnailId: 33
       BattleBgmId: 0
       SequencesId: 0
@@ -11023,7 +11023,7 @@ MonoBehaviour:
       Speed: 17
       Experience: 5544
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 66
       ThumbnailId: 35
       BattleBgmId: 0
       SequencesId: 0
@@ -11036,8 +11036,8 @@ MonoBehaviour:
       Name: "\u8840\u306E\u9B54\u6CD5\u4F7F\u3044"
       HitPoint: 807
       Stamina: 0
-      PhysicalAttack: 28
-      MagicalAttack: 28
+      PhysicalAttack: 24
+      MagicalAttack: 24
       SlashCutRate: 0.08
       BlowCutRate: 0.06
       ThrustCutRate: 0.12
@@ -11055,6 +11055,30 @@ MonoBehaviour:
       MoveIntervalSeconds: 0.3
       Thumbnail: {fileID: 21300000, guid: 24c2324bd35da6a4d8b19584edeb4a1a, type: 3}
       AISequences: {fileID: 11400000, guid: 2e8bf2cfc9d8a7b4db72bf82b9a11e94, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
+    - Id: 10307
+      Name: "\u6C37\u306E\u9B54\u6CD5\u4F7F\u3044"
+      HitPoint: 745
+      Stamina: 0
+      PhysicalAttack: 21
+      MagicalAttack: 21
+      SlashCutRate: 0.08
+      BlowCutRate: 0.06
+      ThrustCutRate: 0.12
+      MagicCutRate: 0.23
+      FireCutRate: 0.14
+      ThunderCutRate: 0.31
+      Speed: 19
+      Experience: 8996
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 26
+      BattleBgmId: 0
+      SequencesId: 0
+      FieldOfVision: 5
+      MoveIntervalSeconds: 0.3
+      Thumbnail: {fileID: 21300000, guid: eecfb868d34e80a4e969ac395085bb0e, type: 3}
+      AISequences: {fileID: 11400000, guid: bec15185549f0d64e90782d110e5358a, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
     - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
