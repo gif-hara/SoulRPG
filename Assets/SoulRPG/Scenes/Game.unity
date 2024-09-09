@@ -184,6 +184,7 @@ MonoBehaviour:
     behaviourPoint: 5
   isUseDebugGrowthParameter: 1
   debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
+  isDebugIgnoreNameInput: 1
   debugPlayerAttribute: 1
   debugEnemyMasterDataId: 10102
   debugEnemyBattleStatus:

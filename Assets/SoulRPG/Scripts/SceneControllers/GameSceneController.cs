@@ -55,6 +55,9 @@ namespace SoulRPG.SceneControllers
 
         [SerializeField]
         private string debugPlayerName;
+        
+        [SerializeField]
+        private bool isDebugIgnoreNameInput;
 
         [SerializeField]
         private Define.CharacterAttribute debugPlayerAttribute;
@@ -78,6 +81,7 @@ namespace SoulRPG.SceneControllers
             TinyServiceLocator.Register(new GameFadeView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Fade"), destroyCancellationToken));
             var saveData = SaveData.LoadSafe();
             Assert.IsNotNull(saveData, "saveData != null");
+            Assert.IsNotNull(saveData.playerData, "saveData.playerData != null");
             var suspendData = SuspendData.Load();
             var playerName = saveData?.playerData?.name ?? debugPlayerName;
             var playerGrowthParameter = suspendData?.growthParameter ?? new(gameRule.PlayerGrowthParameter);
@@ -113,6 +117,11 @@ namespace SoulRPG.SceneControllers
             {
                 player.GrowthParameter.Sync(debugPlayerGrowthParameter, player);
                 player.InstanceStatus.FullRecovery();
+            }
+            if (string.IsNullOrEmpty(saveData.playerData.name) && isDebugIgnoreNameInput)
+            {
+                saveData.playerData.name = debugPlayerName;
+                saveData.Save();
             }
 #endif
             foreach (var i in gameRule.InitialItemDatabase)
@@ -177,7 +186,6 @@ namespace SoulRPG.SceneControllers
                 gameEvents.OnRequestChangeDungeon.OnNext(debugDungeonName);
             }
             
-            Assert.IsNotNull(saveData.playerData, "saveData.playerData != null");
             if (string.IsNullOrEmpty(saveData.playerData.name))
             {
                 inputController.PushInputType(InputController.InputType.UI);
