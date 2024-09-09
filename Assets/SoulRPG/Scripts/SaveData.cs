@@ -12,9 +12,9 @@ namespace SoulRPG
     public sealed class SaveData : ISaveData
     {
         public PlayerData playerData;
-        
+
         public AudioData audioData;
-        
+
         public static SaveData LoadSafe()
         {
             var result = SaveSystem.Load<SaveData>("SaveData");
@@ -29,31 +29,30 @@ namespace SoulRPG
             }
             return result;
         }
-        
+
         public static bool Contains()
         {
             return SaveSystem.Contains("SaveData");
         }
-        
+
         public static void Delete()
         {
             SaveSystem.Delete("SaveData");
         }
-        
+
         [Serializable]
         public class PlayerData
         {
             public string name;
         }
-        
+
         [Serializable]
         public class AudioData
         {
             public float masterVolume = 0.8f;
-            
+
             public float bgmVolume = 0.8f;
-            
-            [FormerlySerializedAs("seVolume")]
+
             public float sfxVolume = 0.8f;
         }
 
