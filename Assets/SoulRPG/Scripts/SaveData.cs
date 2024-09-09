@@ -8,39 +8,31 @@ namespace SoulRPG
     /// 
     /// </summary>
     [Serializable]
-    public sealed class SaveData
+    public sealed class SaveData : ISaveData
     {
         public PlayerData playerData;
-
-        public static void Save(SaveData saveData)
-        {
-#if ENABLE_SAVE
-            var json = JsonUtility.ToJson(saveData);
-            var encryptedJson = EncryptionUtility.Encrypt(json);
-            PlayerPrefs.SetString("SaveData", encryptedJson);
-#endif
-        }
-
+        
         public static SaveData Load()
         {
-            if (!Contains())
-            {
-                return null;
-            }
-            var encryptedJson = PlayerPrefs.GetString("SaveData");
-            var json = EncryptionUtility.Decrypt(encryptedJson);
-            return JsonUtility.FromJson<SaveData>(json);
+            return SaveSystem.Load<SaveData>("SaveData");
         }
-
+        
         public static bool Contains()
         {
-            return PlayerPrefs.HasKey("SaveData");
+            return SaveSystem.Contains("SaveData");
         }
-
+        
+        public static void Delete()
+        {
+            SaveSystem.Delete("SaveData");
+        }
+        
         [Serializable]
         public class PlayerData
         {
             public string name;
         }
+
+        public string DefaultPath => "SaveData";
     }
 }

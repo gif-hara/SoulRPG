@@ -565,7 +565,7 @@ namespace SoulRPG
                     playerInstanceData = character.InstanceStatus.CreateSuspendData(),
                     dungeonData = TinyServiceLocator.Resolve<DungeonController>().CreateSuspendData()
                 };
-                SuspendData.Save(suspendData);
+                suspendData.Save();
                 stateMachine.Change(StateCreatedSuspendData);
             }
             else

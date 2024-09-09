@@ -7,7 +7,7 @@ namespace SoulRPG
     /// 
     /// </summary>
     [Serializable]
-    public sealed class SuspendData
+    public sealed class SuspendData : ISaveData
     {
         public CharacterGrowthParameter growthParameter;
 
@@ -22,33 +22,20 @@ namespace SoulRPG
         public PlayerInstanceData playerInstanceData;
 
         public DungeonData dungeonData;
-
-        public static void Save(SuspendData data)
-        {
-            var json = JsonUtility.ToJson(data);
-            var encryptedJson = EncryptionUtility.Encrypt(json);
-            PlayerPrefs.SetString("SuspendData", encryptedJson);
-        }
         
         public static SuspendData Load()
         {
-            if (!Contains())
-            {
-                return null;
-            }
-            var encryptedJson = PlayerPrefs.GetString("SuspendData");
-            var json = EncryptionUtility.Decrypt(encryptedJson);
-            return JsonUtility.FromJson<SuspendData>(json);
+            return SaveSystem.Load<SuspendData>("SuspendData");
         }
         
         public static bool Contains()
         {
-            return PlayerPrefs.HasKey("SuspendData");
+            return SaveSystem.Contains("SuspendData");
         }
         
         public static void Delete()
         {
-            PlayerPrefs.DeleteKey("SuspendData");
+            SaveSystem.Delete("SuspendData");
         }
 
         [Serializable]
@@ -156,5 +143,7 @@ namespace SoulRPG
         {
             public Vector2Int position;
         }
+
+        public string DefaultPath => "SuspendData";
     }
 }
