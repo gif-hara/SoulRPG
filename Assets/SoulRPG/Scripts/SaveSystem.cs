@@ -5,7 +5,7 @@ namespace SoulRPG
     /// <summary>
     /// 
     /// </summary>
-    public sealed class SaveSystem
+    public static class SaveSystem
     {
         public static void Save<T>(T data, string path)
         {
