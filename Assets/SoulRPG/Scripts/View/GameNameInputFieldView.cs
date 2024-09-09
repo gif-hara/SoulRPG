@@ -24,7 +24,7 @@ namespace SoulRPG
                 {
                     source.TrySetResult(document.Q<TMP_InputField>("InputField").text);
                 })
-                .RegisterTo(scope);
+                .RegisterTo(document.destroyCancellationToken);
             
             var task = source.Task;
             var winIndex = await UniTask.WhenAny(UniTask.WaitUntilCanceled(scope), task);
