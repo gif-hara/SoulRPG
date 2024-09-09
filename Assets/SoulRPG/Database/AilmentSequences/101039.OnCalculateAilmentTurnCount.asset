@@ -13,35 +13,30 @@ MonoBehaviour:
   m_Name: 101039.OnCalculateAilmentTurnCount
   m_EditorClassIdentifier: 
   sequences:
-  - rid: 3561509643546263766
-  - rid: 3561509643546263770
+  - rid: 1651571015951581446
   references:
     version: 2
     RefIds:
-    - rid: 3561509643546263766
-      type: {class: IntAdd, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+    - rid: 1651571015951581446
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        leftIntResolver:
-          rid: 3561509643546263767
-        rightIntResolver:
-          rid: 3561509643546263768
-        intNameResolver:
-          rid: 3561509643546263769
-    - rid: 3561509643546263767
+        elements:
+        - evaluator:
+            rid: 1651571015951581447
+          sequences: {fileID: 11400000, guid: f88213a24f5cd4062b492877ff5d057d, type: 2}
+    - rid: 1651571015951581447
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 1651571015951581448
+        valueResolver:
+          rid: 1651571015951581449
+        compareType: 1
+    - rid: 1651571015951581448
       type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
         name: TurnCount
-    - rid: 3561509643546263768
+    - rid: 1651571015951581449
       type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        value: 1
-    - rid: 3561509643546263769
-      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
-      data:
-        value: TurnCount
-    - rid: 3561509643546263770
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "\u904E\u5270\u53CD\u5FDC\u306B\u3088\u308A\u4ED8\u4E0E\u3055\u308C\u308B\u30BF\u30FC\u30F3\u6570\u304C\u4F38\u3073\u305F\u3002"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
+        value: -1
