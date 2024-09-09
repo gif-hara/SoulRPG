@@ -126,6 +126,12 @@ namespace SoulRPG
                     "BGMの音量を設定する。",
                     "効果音の音量を設定する。",
                 };
+                var saveActions = new List<Action<SaveData, float>>
+                {
+                    (x, volume) => x.audioData.masterVolume = volume,
+                    (x, volume) => x.audioData.bgmVolume = volume,
+                    (x, volume) => x.audioData.sfxVolume = volume,
+                };
                 var currentVolumeIndex = 0;
                 for (var i = 0; i < volumeNames.Count; i++)
                 {
@@ -169,6 +175,9 @@ namespace SoulRPG
                             volume += 0.1f;
                             AudioManager.SetVolume(volumeExposeNames[currentVolumeIndex], volume);
                             SetSliderValue(contents.Q<HKUIDocument>(volumeNames[currentVolumeIndex]), volume);
+                            var saveData = SaveData.LoadSafe();
+                            saveActions[currentVolumeIndex](saveData, volume);
+                            saveData.Save();
                             AudioManager.PlaySFX("Sfx.Message.0");
                         }
                         else if (value.x < 0)
@@ -177,6 +186,9 @@ namespace SoulRPG
                             volume -= 0.1f;
                             AudioManager.SetVolume(volumeExposeNames[currentVolumeIndex], volume);
                             SetSliderValue(contents.Q<HKUIDocument>(volumeNames[currentVolumeIndex]), volume);
+                            var saveData = SaveData.LoadSafe();
+                            saveActions[currentVolumeIndex](saveData, volume);
+                            saveData.Save();
                             AudioManager.PlaySFX("Sfx.Message.0");
                         }
                     })

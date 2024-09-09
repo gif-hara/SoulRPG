@@ -1,6 +1,7 @@
 #define ENABLE_SAVE
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace SoulRPG
 {
@@ -12,9 +13,21 @@ namespace SoulRPG
     {
         public PlayerData playerData;
         
-        public static SaveData Load()
+        public AudioData audioData;
+        
+        public static SaveData LoadSafe()
         {
-            return SaveSystem.Load<SaveData>("SaveData");
+            var result = SaveSystem.Load<SaveData>("SaveData");
+            if (result == null)
+            {
+                result = new SaveData
+                {
+                    playerData = new PlayerData(),
+                    audioData = new AudioData()
+                };
+                result.Save();
+            }
+            return result;
         }
         
         public static bool Contains()
@@ -31,6 +44,17 @@ namespace SoulRPG
         public class PlayerData
         {
             public string name;
+        }
+        
+        [Serializable]
+        public class AudioData
+        {
+            public float masterVolume = 0.8f;
+            
+            public float bgmVolume = 0.8f;
+            
+            [FormerlySerializedAs("seVolume")]
+            public float sfxVolume = 0.8f;
         }
 
         public string DefaultPath => "SaveData";

@@ -75,7 +75,7 @@ namespace SoulRPG.SceneControllers
             GameDebugInformationView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.DebugPanel"), destroyCancellationToken).Forget();
 #endif
             TinyServiceLocator.Register(new GameFadeView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Fade"), destroyCancellationToken));
-            var saveData = SaveData.Load();
+            var saveData = SaveData.LoadSafe();
             var suspendData = SuspendData.Load();
             var playerName = saveData?.playerData?.name ?? debugPlayerName;
             var playerGrowthParameter = suspendData?.growthParameter ?? new(gameRule.PlayerGrowthParameter);

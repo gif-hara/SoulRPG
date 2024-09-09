@@ -20,9 +20,10 @@ namespace SoulRPG
 
         void Start()
         {
-            SetVolumeMaster(PlayerPrefs.GetFloat("MasterVolume", 0.8f));
-            SetVolumeBGM(PlayerPrefs.GetFloat("BgmVolume", 0.8f));
-            SetVolumeSFX(PlayerPrefs.GetFloat("SfxVolume", 0.8f));
+            var saveData = SaveData.LoadSafe();
+            SetVolumeMaster(saveData.audioData.masterVolume);
+            SetVolumeBGM(saveData.audioData.bgmVolume);
+            SetVolumeSFX(saveData.audioData.sfxVolume);
         }
 
         public static void PlayBGM(AudioClip clip)
@@ -85,7 +86,6 @@ namespace SoulRPG
         {
             var instance = TinyServiceLocator.Resolve<AudioManager>();
             volume = Mathf.Clamp01(volume);
-            PlayerPrefs.SetFloat(name, volume);
             if (volume > 0)
             {
                 volume = Mathf.Log10(volume) * 20;
