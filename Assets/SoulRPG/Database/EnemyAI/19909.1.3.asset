@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 19909.1.3
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 3022425832378073187
+  - rid: 1651571015951581416
+  - rid: 1651571015951581417
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1651571015951581416
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101007
+        turnCount: -1
+        battleCharacterEvaluator:
+          rid: -2
+    - rid: 1651571015951581417
+      type: {class: AddAilment, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        masterDataAilmentId: 101015
+        turnCount: -1
+        battleCharacterEvaluator:
+          rid: -2
+    - rid: 3022425832378073187
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "{Actor}\u306F\u8B77\u308A\u306E\u4F53\u52E2\u3092\u53D6\u3063\u305F\u3002"
+        sfxName: Sfx.Message.10
+        ignoreIfCharacterDead: 0
