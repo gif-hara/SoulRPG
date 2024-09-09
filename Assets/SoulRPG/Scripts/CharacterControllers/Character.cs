@@ -43,7 +43,7 @@ namespace SoulRPG.CharacterControllers
 
         public Define.CharacterAttribute Attribute { get; }
 
-        public string Name { get; }
+        public string Name { get; set; }
 
         public Define.AllyType AllyType { get; }
 

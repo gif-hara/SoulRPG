@@ -18,14 +18,14 @@ namespace SoulRPG
             var document = Object.Instantiate(documentPrefab);
             var source = new UniTaskCompletionSource<string>();
 
-            document.Q<Button>("SubmitButton")
+            document.Q<Button>("Button.Submit")
                 .OnClickAsObservable()
                 .Subscribe(_ =>
                 {
                     source.TrySetResult(document.Q<TMP_InputField>("InputField").text);
                 })
                 .RegisterTo(document.destroyCancellationToken);
-            
+
             var task = source.Task;
             var winIndex = await UniTask.WhenAny(UniTask.WaitUntilCanceled(scope), task);
             if (document != null)

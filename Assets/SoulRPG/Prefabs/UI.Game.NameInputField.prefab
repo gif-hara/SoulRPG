@@ -1122,7 +1122,7 @@ MonoBehaviour:
   elements:
   - document: {fileID: 1344920266520952644}
     overrideName: 
-  - document: {fileID: 3845816257997139383}
+  - document: {fileID: 2111953432082222334}
     overrideName: Button.Submit
 --- !u!114 &-15748072192623952
 MonoBehaviour:
@@ -1369,8 +1369,8 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9049142561485492221, guid: 8bcd5ed7fa0df4b428baae4500745e10, type: 3}
   m_PrefabInstance: {fileID: 7521748182671307833}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3845816257997139383 stripped
+--- !u!1 &2111953432082222334 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6718679723373189518, guid: 8bcd5ed7fa0df4b428baae4500745e10, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8443603244612958407, guid: 8bcd5ed7fa0df4b428baae4500745e10, type: 3}
   m_PrefabInstance: {fileID: 7521748182671307833}
   m_PrefabAsset: {fileID: 0}
