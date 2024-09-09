@@ -390,9 +390,12 @@ namespace SoulRPG
                 {
                     return new Action<HKUIDocument>(element =>
                     {
+                        var header = x.GetRemainingTurnCount() <= -1
+                            ? x.GetMasterDataAilment().Name
+                            : $"{x.GetMasterDataAilment().Name}(残り{x.GetRemainingTurnCount()}ターン)";
                         GameListView.ApplyAsSimpleElement(
                             element,
-                            $"{x.GetMasterDataAilment().Name}(残り{x.GetRemainingTurnCount()}ターン)",
+                            header,
                             _ =>
                             {
                             },
