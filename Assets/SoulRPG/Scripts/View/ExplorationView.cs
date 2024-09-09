@@ -304,6 +304,7 @@ namespace SoulRPG
                 {
                     var floorObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Floor"), dungeonDocument.transform);
                     floorObject.position = new Vector3(i, 0, j);
+                    floorObject.rotation = Quaternion.Euler(0.0f, (i + j) % 2 * 90.0f, 0.0f);
                     dungeonObjects.Add(floorObject.gameObject);
                 }
             }
