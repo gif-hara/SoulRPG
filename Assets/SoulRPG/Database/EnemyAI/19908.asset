@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 19908
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 1651571015951581392
+  - rid: 1651571015951581395
+  - rid: 1651571015951581321
+  references:
+    version: 2
+    RefIds:
+    - rid: 1651571015951581321
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 1651571015951581323
+          sequences: {fileID: 11400000, guid: 513d1f2ce2a374f28a3b2fb60c793b17, type: 2}
+        - evaluator:
+            rid: 1651571015951581399
+          sequences: {fileID: 11400000, guid: 835795db9e4a143c3a4862f7f770a095, type: 2}
+        - evaluator:
+            rid: 1651571015951581402
+          sequences: {fileID: 11400000, guid: f2994c1f24f664130833cf835b1f1831, type: 2}
+    - rid: 1651571015951581323
+      type: {class: HitPoint, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        rate: 0.6
+        compareType: 5
+        targetType: 0
+    - rid: 1651571015951581392
+      type: {class: RegisterContainerBattleCharacterTurnCount, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        keyResolver:
+          rid: 1651571015951581393
+    - rid: 1651571015951581393
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: TurnCount
+    - rid: 1651571015951581395
+      type: {class: IntModulo, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        leftIntResolver:
+          rid: 1651571015951581396
+        rightIntResolver:
+          rid: 1651571015951581397
+        intNameResolver:
+          rid: 1651571015951581398
+    - rid: 1651571015951581396
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: TurnCount
+    - rid: 1651571015951581397
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 2
+    - rid: 1651571015951581398
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: TurnCount
+    - rid: 1651571015951581399
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 1651571015951581400
+        valueResolver:
+          rid: 1651571015951581401
+        compareType: 0
+    - rid: 1651571015951581400
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: TurnCount
+    - rid: 1651571015951581401
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 1651571015951581402
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 1651571015951581403
+        valueResolver:
+          rid: 1651571015951581404
+        compareType: 0
+    - rid: 1651571015951581403
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: TurnCount
+    - rid: 1651571015951581404
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
