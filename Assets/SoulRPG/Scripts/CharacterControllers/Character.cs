@@ -105,14 +105,14 @@ namespace SoulRPG.CharacterControllers
             lifeScopeSource.Dispose();
         }
 
-        public void SyncFromSaveData(SaveData saveData)
+        public void SyncFromSuspendData(SuspendData data)
         {
-            Position = saveData.suspendData.playerPosition;
-            Direction = saveData.suspendData.playerDirection;
-            Inventory.SyncFromSaveData(saveData.suspendData.playerItemData);
-            Equipment.SyncFromSaveData(saveData.suspendData.playerEquipmentData);
-            InstanceStatus.SyncFromSaveData(saveData.suspendData.playerInstanceData);
-            GrowthParameter.Sync(saveData.suspendData.growthParameter, this);
+            Position = data.playerPosition;
+            Direction = data.playerDirection;
+            Inventory.SyncFromSuspendData(data.playerItemData);
+            Equipment.SyncFromSuspendData(data.playerEquipmentData);
+            InstanceStatus.SyncFromSaveData(data.playerInstanceData);
+            GrowthParameter.Sync(data.growthParameter, this);
         }
     }
 }

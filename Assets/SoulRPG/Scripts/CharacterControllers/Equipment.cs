@@ -519,7 +519,7 @@ namespace SoulRPG
             }
         }
 
-        public SaveData.EquipmentData CreateSaveData()
+        public SuspendData.EquipmentData CreateSuspendData()
         {
             return new()
             {
@@ -532,7 +532,7 @@ namespace SoulRPG
             };
         }
 
-        public void SyncFromSaveData(SaveData.EquipmentData equipmentData)
+        public void SyncFromSuspendData(SuspendData.EquipmentData equipmentData)
         {
             for (var i = 0; i < 4; i++)
             {

@@ -66,13 +66,13 @@ namespace SoulRPG
             Items.Clear();
         }
 
-        public SaveData.ItemData[] CreateSaveData()
+        public SuspendData.ItemData[] CreateSuspendData()
         {
-            var result = new SaveData.ItemData[Items.Count];
+            var result = new SuspendData.ItemData[Items.Count];
             var i = 0;
             foreach (var item in Items)
             {
-                result[i] = new SaveData.ItemData
+                result[i] = new SuspendData.ItemData
                 {
                     itemId = item.Key,
                     count = item.Value
@@ -82,7 +82,7 @@ namespace SoulRPG
             return result;
         }
 
-        public void SyncFromSaveData(SaveData.ItemData[] itemData)
+        public void SyncFromSuspendData(SuspendData.ItemData[] itemData)
         {
             Items.Clear();
             foreach (var data in itemData)

@@ -76,8 +76,9 @@ namespace SoulRPG.SceneControllers
 #endif
             TinyServiceLocator.Register(new GameFadeView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Fade"), destroyCancellationToken));
             var saveData = SaveData.Load();
+            var suspendData = SuspendData.Load();
             var playerName = saveData?.playerData?.name ?? debugPlayerName;
-            var playerGrowthParameter = saveData?.suspendData?.growthParameter ?? new(gameRule.PlayerGrowthParameter);
+            var playerGrowthParameter = suspendData?.growthParameter ?? new(gameRule.PlayerGrowthParameter);
             var player = new Character(playerName, playerGrowthParameter, gameRule.InitialEquipment, debugPlayerAttribute);
             TinyServiceLocator.Register("Player", player);
             var gameCameraController = Instantiate(gameCameraControllerPrefab);
@@ -153,12 +154,11 @@ namespace SoulRPG.SceneControllers
             inputController.PushInputType(InputController.InputType.InGame);
             var gameTipsView = new GameTipsView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Tips"), destroyCancellationToken);
             TinyServiceLocator.Register(gameTipsView);
-            if (saveData != null && saveData.suspendData != null && saveData.suspendData.isValid)
+            if (suspendData != null)
             {
-                player.SyncFromSaveData(saveData);
-                dungeonController.SyncFromSaveData(saveData.suspendData.dungeonData);
-                saveData.suspendData.isValid = false;
-                SaveData.Save(saveData);
+                player.SyncFromSuspendData(suspendData);
+                dungeonController.SyncFromSuspendData(suspendData.dungeonData);
+                SuspendData.Delete();
                 inputController.PushInputType(InputController.InputType.UI);
                 await DialogView.ConfirmAsync(
                     gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),

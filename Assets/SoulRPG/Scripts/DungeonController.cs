@@ -633,16 +633,15 @@ namespace SoulRPG
             return BeginBattleAsync(player, enemy);
         }
 
-        public SaveData.DungeonData CreateSaveData()
+        public SuspendData.DungeonData CreateSuspendData()
         {
-            return new SaveData.DungeonData
+            return new SuspendData.DungeonData
             {
                 dungeonName = CurrentDungeon.name,
                 floorId = currentFloorId,
                 itemData = FloorDatabase.Values
-                    .Where(x => x is DungeonInstanceFloorData.Item)
-                    .Select(x => x as DungeonInstanceFloorData.Item)
-                    .Select(x => new SaveData.DungeonInstanceItemData
+                    .OfType<DungeonInstanceFloorData.Item>()
+                    .Select(x => new SuspendData.DungeonInstanceItemData
                     {
                         position = x.Position,
                         itemId = x.MasterDataItem.Id,
@@ -650,9 +649,8 @@ namespace SoulRPG
                     })
                     .ToArray(),
                 sequenceEventData = FloorDatabase.Values
-                    .Where(x => x is DungeonInstanceFloorData.SequenceEvent)
-                    .Select(x => x as DungeonInstanceFloorData.SequenceEvent)
-                    .Select(x => new SaveData.DungeonInstanceSequenceEventData
+                    .OfType<DungeonInstanceFloorData.SequenceEvent>()
+                    .Select(x => new SuspendData.DungeonInstanceSequenceEventData
                     {
                         position = x.Position,
                         viewName = x.ViewName,
@@ -661,7 +659,7 @@ namespace SoulRPG
                     })
                     .ToArray(),
                 enemyData = Enemies
-                    .Select(x => new SaveData.DungeonEnemyData
+                    .Select(x => new SuspendData.DungeonEnemyData
                     {
                         position = x.Position,
                         enemyId = x.MasterDataEnemy.Id,
@@ -669,7 +667,7 @@ namespace SoulRPG
                     })
                     .ToArray(),
                 wallData = WallDatabase.Values
-                    .Select(x => new SaveData.DungeonInstanceWallData
+                    .Select(x => new SuspendData.DungeonInstanceWallData
                     {
                         from = x.From,
                         to = x.To,
@@ -680,7 +678,7 @@ namespace SoulRPG
                     })
                     .ToArray(),
                 reachedPositionData = reachedPoints
-                    .Select(x => new SaveData.ReachedPositionData
+                    .Select(x => new SuspendData.ReachedPositionData
                     {
                         position = x
                     })
@@ -688,7 +686,7 @@ namespace SoulRPG
             };
         }
 
-        public void SyncFromSaveData(SaveData.DungeonData saveData)
+        public void SyncFromSuspendData(SuspendData.DungeonData suspendData)
         {
             dungeonScope?.Cancel();
             dungeonScope?.Dispose();
@@ -702,11 +700,11 @@ namespace SoulRPG
             restedCheckPoints.Clear();
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var masterData = TinyServiceLocator.Resolve<MasterData>();
-            CurrentDungeon = masterData.Dungeons.Get(saveData.dungeonName);
+            CurrentDungeon = masterData.Dungeons.Get(suspendData.dungeonName);
             CurrentDungeonSpec = masterData.DungeonSpecs.Get(CurrentDungeon.name);
-            currentFloorId = saveData.floorId;
+            currentFloorId = suspendData.floorId;
 
-            foreach (var i in saveData.itemData)
+            foreach (var i in suspendData.itemData)
             {
                 var itemData = new DungeonInstanceFloorData.Item
                 (
@@ -717,7 +715,7 @@ namespace SoulRPG
                 FloorDatabase.Add(i.position, itemData);
             }
 
-            foreach (var i in saveData.sequenceEventData)
+            foreach (var i in suspendData.sequenceEventData)
             {
                 var sequenceData = new DungeonInstanceFloorData.SequenceEvent
                 (
@@ -729,7 +727,7 @@ namespace SoulRPG
                 FloorDatabase.Add(i.position, sequenceData);
             }
 
-            foreach (var i in saveData.enemyData)
+            foreach (var i in suspendData.enemyData)
             {
                 var enemy = new Character(masterData.Enemies.Get(i.enemyId));
                 Enemies.Add(enemy);
@@ -737,14 +735,14 @@ namespace SoulRPG
                 EnemyController.Attach(enemy, TinyServiceLocator.Resolve<Character>("Player"), this, i.findPlayer);
             }
 
-            foreach (var i in saveData.wallData)
+            foreach (var i in suspendData.wallData)
             {
                 var wallPosition = new WallPosition(i.from, i.to);
                 var data = new DungeonInstanceWallData(i.from, i.to, i.eventType, i.positiveSideCondition, i.negativeSideCondition, i.isOpen);
                 WallDatabase.Add(wallPosition, data);
             }
 
-            foreach (var i in saveData.reachedPositionData)
+            foreach (var i in suspendData.reachedPositionData)
             {
                 reachedPoints.Add(i.position);
             }

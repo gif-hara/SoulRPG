@@ -555,23 +555,17 @@ namespace SoulRPG
                 );
             if (index == 0)
             {
-                var saveData = SaveData.Load();
-                if (saveData == null)
+                var suspendData = new SuspendData
                 {
-                    saveData = new SaveData();
-                }
-                saveData.suspendData = new SaveData.SuspendData
-                {
-                    isValid = true,
                     growthParameter = character.GrowthParameter,
                     playerPosition = character.Position,
                     playerDirection = character.Direction,
-                    playerEquipmentData = character.Equipment.CreateSaveData(),
-                    playerItemData = character.Inventory.CreateSaveData(),
-                    playerInstanceData = character.InstanceStatus.CreateSaveData(),
-                    dungeonData = TinyServiceLocator.Resolve<DungeonController>().CreateSaveData()
+                    playerEquipmentData = character.Equipment.CreateSuspendData(),
+                    playerItemData = character.Inventory.CreateSuspendData(),
+                    playerInstanceData = character.InstanceStatus.CreateSuspendData(),
+                    dungeonData = TinyServiceLocator.Resolve<DungeonController>().CreateSuspendData()
                 };
-                SaveData.Save(saveData);
+                SuspendData.Save(suspendData);
                 stateMachine.Change(StateCreatedSuspendData);
             }
             else
