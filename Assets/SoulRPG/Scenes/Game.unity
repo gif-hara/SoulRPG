@@ -178,9 +178,9 @@ MonoBehaviour:
     level: 61
     vitality: 26
     stamina: 15
-    physicalStrength: 33
+    physicalStrength: 30
     magicalStrength: 10
-    speed: 17
+    speed: 21
     behaviourPoint: 5
   isUseDebugGrowthParameter: 1
   debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
