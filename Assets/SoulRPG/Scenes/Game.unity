@@ -204,6 +204,7 @@ MonoBehaviour:
     behaviourPoint: 0
     attribute: 0
     allyType: 0
+  isDebugIgnoreTitleScreen: 0
 --- !u!1 &897640241
 GameObject:
   m_ObjectHideFlags: 0

@@ -68,6 +68,9 @@ namespace SoulRPG.SceneControllers
         [SerializeField]
         private CharacterBattleStatusBlueprint debugEnemyBattleStatus;
 
+        [SerializeField]
+        private bool isDebugIgnoreTitleScreen;
+
         async void Start()
         {
             try
@@ -167,9 +170,19 @@ namespace SoulRPG.SceneControllers
                 var gameTipsView = new GameTipsView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Tips"), destroyCancellationToken);
                 TinyServiceLocator.Register(gameTipsView);
 
-                await GameTitleScreenView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.TitleScreen"), destroyCancellationToken);
-                gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
-                GameFadeView.BeginFadeAsync(new Color(0.0f, 0.0f, 0.0f, 0.0f), 1.0f, destroyCancellationToken).Forget();
+#if !DEBUG
+                isDebugIgnoreTitleScreen = false;
+#endif
+                if (!isDebugIgnoreTitleScreen)
+                {
+                    await GameTitleScreenView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.TitleScreen"), destroyCancellationToken);
+                    gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
+                    GameFadeView.BeginFadeAsync(new Color(0.0f, 0.0f, 0.0f, 0.0f), 1.0f, destroyCancellationToken).Forget();
+                }
+                else
+                {
+                    gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
+                }
 
                 if (suspendData != null)
                 {
