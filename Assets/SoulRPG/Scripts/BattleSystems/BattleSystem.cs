@@ -26,7 +26,8 @@ namespace SoulRPG.BattleSystems
             scope = cts.Token;
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             gameEvents.OnBeginBattle.OnNext(this);
-            await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{Enemy.BattleStatus.NameWithTag}が現れた。", "Sfx.EnemyAppearance.0"));
+            await Enemy.BeginBattleAsync(Player);
+            await Player.BeginBattleAsync(Enemy);
             var firstActor = Player.BattleStatus.Speed > Enemy.BattleStatus.Speed ? Player : Enemy;
             var secondActor = firstActor == Player ? Enemy : Player;
 

@@ -229,5 +229,10 @@ namespace SoulRPG
             }
             await sequences.PlayOnBeginBattleAsync(this, target, scope.Token);
         }
+        
+        public async UniTask AppearanceAsync(BattleCharacter target)
+        {
+            await sequences.PlayOnAppearanceAsync(this, target, scope.Token);
+        }
     }
 }
