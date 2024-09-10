@@ -221,13 +221,13 @@ namespace SoulRPG
             return UniTask.CompletedTask;
         }
 
-        public UniTask BeginBattleAsync(BattleCharacter target)
+        public async UniTask BeginBattleAsync(BattleCharacter target)
         {
-            if (Equipment == null)
+            if (Equipment != null)
             {
-                return UniTask.CompletedTask;
+                await Equipment.BeginBattleAsync(this, target, scope.Token);
             }
-            return Equipment.BeginBattleAsync(this, target, scope.Token);
+            await sequences.PlayOnBeginBattleAsync(this, target, scope.Token);
         }
     }
 }
