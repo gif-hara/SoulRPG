@@ -15,3 +15,4 @@ MonoBehaviour:
   onTakeDamage: {fileID: 11400000, guid: cac4da8cfac73d943b04d4171ba35bb7, type: 2}
   onDeadMessage: {fileID: 11400000, guid: 832befa48ca194aceb19587758788d6f, type: 2}
   onBeginTurn: {fileID: 11400000, guid: 3053e488aad46574db2b25208b1b7036, type: 2}
+  onBeginBattle: {fileID: 11400000, guid: c7fc65987cb0f4eff91d506e71a402d3, type: 2}
