@@ -6,6 +6,10 @@
 - 戦闘
     - https://dova-s.jp/bgm/play493.html
     - https://dova-s.jp/bgm/play13722.html
+    - 候補
+        - https://dova-s.jp/bgm/play10532.html
+        - https://dova-s.jp/bgm/play12944.html
+        - https://dova-s.jp/bgm/play12678.html
 ## UI
 - https://game-icons.net/
 
