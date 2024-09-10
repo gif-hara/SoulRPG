@@ -88,3 +88,4 @@ MonoBehaviour:
   magicCountMax: 9
   knifeCountMax: 9
   pinchThreshold: 0.3
+  debugAddExperience: 39207
