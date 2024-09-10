@@ -144,7 +144,7 @@ namespace SoulRPG.SceneControllers
                 gameEvents.OnRequestPlayBgm
                     .Subscribe(x =>
                     {
-                        AudioManager.PlayBGM(gameRule.AudioDatabase.Get(x).Clip);
+                        AudioManager.PlayBgm(gameRule.AudioDatabase.Get(x).Clip);
                     })
                     .RegisterTo(destroyCancellationToken);
                 var inputGuideCenter = new GameInputGuideView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.InputGuide.Center"), destroyCancellationToken);

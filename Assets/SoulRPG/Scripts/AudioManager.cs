@@ -26,11 +26,17 @@ namespace SoulRPG
             SetVolumeSFX(saveData.audioData.sfxVolume);
         }
 
-        public static void PlayBGM(AudioClip clip)
+        public static void PlayBgm(AudioClip clip)
         {
             var instance = TinyServiceLocator.Resolve<AudioManager>();
             instance.bgmSource.clip = clip;
             instance.bgmSource.Play();
+        }
+
+        public static void PlayBgm(string clipName)
+        {
+            var clip = TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get(clipName).Clip;
+            PlayBgm(clip);
         }
 
         public static void PlaySfx(AudioClip clip)
