@@ -17,7 +17,7 @@ namespace SoulRPG
             var document = Object.Instantiate(documentPrefab);
             var sequences = document.Q<HKUIDocument>("Sequences");
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            document.Q<CanvasGroup>("Title").alpha = 0;
+            document.Q<CanvasGroup>("Area.Title").alpha = 0;
             inputController.PushInputType(InputController.InputType.UI);
             sequences.Q<SequenceMonobehaviour>("Animation.AnyClick.Loop").PlayAsync(anyClickScope.Token).Forget();
             await inputController.InputActions.UI.Click.OnPerformedAsObservable().FirstAsync();
