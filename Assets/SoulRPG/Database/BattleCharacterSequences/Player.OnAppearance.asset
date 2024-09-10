@@ -10,16 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: Enemy.0.Appearance
+  m_Name: Player.OnAppearance
   m_EditorClassIdentifier: 
-  sequences:
-  - rid: 1651571015951581454
+  sequences: []
   references:
     version: 2
-    RefIds:
-    - rid: 1651571015951581454
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "{Actor}\u304C\u73FE\u308C\u305F\u3002"
-        sfxName: Sfx.EnemyAppearance.0
-        ignoreIfCharacterDead: 0
+    RefIds: []
