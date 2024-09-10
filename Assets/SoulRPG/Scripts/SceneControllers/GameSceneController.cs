@@ -161,12 +161,16 @@ namespace SoulRPG.SceneControllers
                         inputGuideBottom.Open(x.messageSelector, x.scope);
                     })
                     .RegisterTo(destroyCancellationToken);
-                gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
                 var screenEffectView = new ScreenEffectView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.ScreenEffect"), destroyCancellationToken);
                 TinyServiceLocator.Register(screenEffectView);
                 inputController.PushInputType(InputController.InputType.InGame);
                 var gameTipsView = new GameTipsView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Tips"), destroyCancellationToken);
                 TinyServiceLocator.Register(gameTipsView);
+
+                await GameTitleScreenView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.TitleScreen"), destroyCancellationToken);
+                gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
+                GameFadeView.BeginFadeAsync(new Color(0.0f, 0.0f, 0.0f, 0.0f), 1.0f, destroyCancellationToken).Forget();
+
                 if (suspendData != null)
                 {
                     player.SyncFromSuspendData(suspendData);
