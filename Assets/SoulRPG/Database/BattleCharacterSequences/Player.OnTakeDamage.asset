@@ -10,14 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: Enemy.0.TakeDamage
+  m_Name: Player.OnTakeDamage
   m_EditorClassIdentifier: 
-  sequences:
-  - rid: 9047573706011312207
+  sequences: []
   references:
     version: 2
-    RefIds:
-    - rid: 9047573706011312207
-      type: {class: BeginAnimationGameEnemyView, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        animationName: Animation.OnTakeDamage
+    RefIds: []
