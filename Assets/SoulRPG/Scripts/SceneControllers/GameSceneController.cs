@@ -191,9 +191,12 @@ namespace SoulRPG.SceneControllers
                 if (string.IsNullOrEmpty(saveData.playerData.name))
                 {
                     inputController.PushInputType(InputController.InputType.UI);
-                    var newPlayerName = await GameNameInputFieldView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.NameInputField"), destroyCancellationToken);
+                    var newPlayerName = await GameNameInputFieldView.OpenAsync(
+                        gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.NameInputField"),
+                        gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                        destroyCancellationToken
+                    );
                     inputController.PopInputType();
-                    AudioManager.PlaySfx("Sfx.Message.0");
                     saveData.playerData.name = newPlayerName;
                     saveData.Save();
                     player.Name = newPlayerName;
