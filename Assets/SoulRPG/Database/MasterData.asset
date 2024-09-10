@@ -8376,13 +8376,6 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
-      - Id: 0
-        DungeonName: Dungeon.10501
-        X: 12
-        Y: 16
-        ViewName: SavePoint
-        SequenceId: 101003
-        PromptMessage: "\u89E6\u308C\u308B"
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
@@ -12990,7 +12983,7 @@ MonoBehaviour:
       FireCutRate: 0.14
       ThunderCutRate: 0.31
       Speed: 19
-      Experience: 8330
+      Experience: 7860
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 11
@@ -13014,7 +13007,7 @@ MonoBehaviour:
       FireCutRate: 0.14
       ThunderCutRate: 0.31
       Speed: 19
-      Experience: 8996
+      Experience: 8489
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 26
@@ -13038,7 +13031,7 @@ MonoBehaviour:
       FireCutRate: 0.02
       ThunderCutRate: 0.02
       Speed: 25
-      Experience: 7830
+      Experience: 7388
       BehaviourPoint: 1
       Attribute: 64
       ThumbnailId: 34
@@ -13062,7 +13055,7 @@ MonoBehaviour:
       FireCutRate: 0.12
       ThunderCutRate: 0.25
       Speed: 22
-      Experience: 8663
+      Experience: 8174
       BehaviourPoint: 1
       Attribute: 2
       ThumbnailId: 27
@@ -13086,7 +13079,7 @@ MonoBehaviour:
       FireCutRate: 0.32
       ThunderCutRate: 0.3
       Speed: 18
-      Experience: 9496
+      Experience: 9432
       BehaviourPoint: 1
       Attribute: 0
       ThumbnailId: 14
@@ -13278,7 +13271,7 @@ MonoBehaviour:
       FireCutRate: 0.32
       ThunderCutRate: 0.26
       Speed: 21
-      Experience: 102000
+      Experience: 58914
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 38
