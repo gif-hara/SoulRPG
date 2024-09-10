@@ -52,8 +52,7 @@ namespace SoulRPG
                 damage = 99999;
             }
 #endif
-            container.Remove<int>("Damage");
-            container.Register("Damage", damage);
+            container.RegisterOrReplace("Damage", damage);
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             await UniTask.WhenAll(
                 t.TakeDamageAsync(damage),

@@ -37,11 +37,18 @@ namespace SoulRPG
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             var fixedSfxName = string.IsNullOrEmpty(sfxName) ? "Sfx.Message.19" : sfxName;
             var recovery = recoveryCalculator.Calculate(container);
-            Assert.IsNotNull(t, $"target is null targetType:{targetType}");
-            await UniTask.WhenAll(
-                t.RecoveryHitPointAsync(recovery),
-                gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}のHPが<color=#88FF88>{recovery}</color>回復した。", fixedSfxName))
-            );
+            if (recovery <= 0)
+            {
+                return;
+            }
+            else
+            {
+                Assert.IsNotNull(t, $"target is null targetType:{targetType}");
+                await UniTask.WhenAll(
+                    t.RecoveryHitPointAsync(recovery),
+                    gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}のHPが<color=#88FF88>{recovery}</color>回復した。", fixedSfxName))
+                );
+            }
         }
     }
 }
