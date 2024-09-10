@@ -37,7 +37,7 @@ namespace SoulRPG
                 inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                     .Subscribe(_ =>
                     {
-                        AudioManager.PlaySFX("Sfx.Cancel.0");
+                        AudioManager.PlaySfx("Sfx.Cancel.0");
                         source.TrySetResult();
                     })
                     .RegisterTo(scope);
@@ -51,7 +51,7 @@ namespace SoulRPG
                                 "全アイテム追加",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     foreach (var i in TinyServiceLocator.Resolve<MasterData>().Items.List)
                                     {
                                         player.Inventory.Add(i.Id, 1);
@@ -68,7 +68,7 @@ namespace SoulRPG
                                 "バトル",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     stateMachine.Change(StateSelectBattleAsync);
                                 }
                             );
@@ -81,7 +81,7 @@ namespace SoulRPG
                                 "経験値追加",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     player.InstanceStatus.AddExperience(100000);
                                     ConfirmOkOnlyAsync(documentBundlePrefab, "経験値を追加しました", scope).Forget();
                                 }
@@ -95,7 +95,7 @@ namespace SoulRPG
                                 "視界良好",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     dungeonController.DebugAddAllReachedPoint();
                                     ConfirmOkOnlyAsync(documentBundlePrefab, "視界を全て開放しました", scope).Forget();
                                 }
@@ -109,7 +109,7 @@ namespace SoulRPG
                                 "プレイヤーの無敵フラグ",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     battleDebugData.IsInvinciblePlayer = !battleDebugData.IsInvinciblePlayer;
                                     ConfirmOkOnlyAsync(documentBundlePrefab, $"プレイヤーの無敵フラグを{battleDebugData.IsInvinciblePlayer}に設定しました", scope).Forget();
                                 }
@@ -123,7 +123,7 @@ namespace SoulRPG
                                 "敵の無敵フラグ",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     battleDebugData.IsInvincibleEnemy = !battleDebugData.IsInvincibleEnemy;
                                     ConfirmOkOnlyAsync(documentBundlePrefab, $"敵の無敵フラグを{battleDebugData.IsInvincibleEnemy}に設定しました", scope).Forget();
                                 }
@@ -137,7 +137,7 @@ namespace SoulRPG
                                 "全てのスキルの使用フラグ",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     battleDebugData.IsAllSkillAvailable = !battleDebugData.IsAllSkillAvailable;
                                     ConfirmOkOnlyAsync(documentBundlePrefab, $"全てのスキルの使用フラグを{battleDebugData.IsAllSkillAvailable}に設定しました", scope).Forget();
                                 }
@@ -151,7 +151,7 @@ namespace SoulRPG
                                 "スキルコスト無し",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     battleDebugData.NoCost = !battleDebugData.NoCost;
                                     ConfirmOkOnlyAsync(documentBundlePrefab, $"スキルコスト無しを{battleDebugData.NoCost}に設定しました", scope).Forget();
                                 }
@@ -165,7 +165,7 @@ namespace SoulRPG
                                 "大ダメージ",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     battleDebugData.IsBigDamage = !battleDebugData.IsBigDamage;
                                     ConfirmOkOnlyAsync(documentBundlePrefab, $"大ダメージを{battleDebugData.IsBigDamage}に設定しました", scope).Forget();
                                 }
@@ -179,7 +179,7 @@ namespace SoulRPG
                                 "行動ポイント加算",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     player.GrowthParameter.BehaviourPoint += 1;
                                     ConfirmOkOnlyAsync(documentBundlePrefab, $"行動ポイントを{player.GrowthParameter.BehaviourPoint}に設定しました", scope).Forget();
                                 }
@@ -193,7 +193,7 @@ namespace SoulRPG
                                 "チェックポイント呼び出し",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     var view = new GameSavePointMenuView(documentBundlePrefab, player);
                                     view.OpenAsync().Forget();
                                     source.TrySetResult();
@@ -208,7 +208,7 @@ namespace SoulRPG
                                 "ダンジョン変更",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     stateMachine.Change(StateSelectDungeonAsync);
                                 }
                             );
@@ -221,7 +221,7 @@ namespace SoulRPG
                                 "エンカウント無し",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     battleDebugData.NoEncount = !battleDebugData.NoEncount;
                                     ConfirmOkOnlyAsync(documentBundlePrefab, $"エンカウント無しを{battleDebugData.NoEncount}に設定しました", scope).Forget();
                                 }
@@ -235,7 +235,7 @@ namespace SoulRPG
                                 "スターターパック",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     stateMachine.Change(StateSelectStarterPackAsync);
                                 }
                             );
@@ -248,7 +248,7 @@ namespace SoulRPG
                                 "想定経験値獲得",
                                 _ =>
                                 {
-                                    AudioManager.PlaySFX("Sfx.Message.0");
+                                    AudioManager.PlaySfx("Sfx.Message.0");
                                     stateMachine.Change(StateSelectDungeonExperienceAsync);
                                 }
                             );
@@ -265,7 +265,7 @@ namespace SoulRPG
                 inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                     .Subscribe(_ =>
                     {
-                        AudioManager.PlaySFX("Sfx.Cancel.0");
+                        AudioManager.PlaySfx("Sfx.Cancel.0");
                         stateMachine.Change(StateRootAsync);
                     })
                     .RegisterTo(scope);
@@ -280,7 +280,7 @@ namespace SoulRPG
                                     $"{x.Id}: {x.Name}",
                                     _ =>
                                     {
-                                        AudioManager.PlaySFX("Sfx.Message.0");
+                                        AudioManager.PlaySfx("Sfx.Message.0");
                                         dungeonController.BeginBattleAsync(player, x).Forget();
                                         source.TrySetResult();
                                     }
@@ -298,7 +298,7 @@ namespace SoulRPG
                 inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                     .Subscribe(_ =>
                     {
-                        AudioManager.PlaySFX("Sfx.Cancel.0");
+                        AudioManager.PlaySfx("Sfx.Cancel.0");
                         stateMachine.Change(StateRootAsync);
                     })
                     .RegisterTo(scope);
@@ -313,7 +313,7 @@ namespace SoulRPG
                                     $"{x.Id}",
                                     _ =>
                                     {
-                                        AudioManager.PlaySFX("Sfx.Message.0");
+                                        AudioManager.PlaySfx("Sfx.Message.0");
                                         dungeonController.Setup(x.Id, player);
                                         source.TrySetResult();
                                     }
@@ -331,7 +331,7 @@ namespace SoulRPG
                 inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                     .Subscribe(_ =>
                     {
-                        AudioManager.PlaySFX("Sfx.Cancel.0");
+                        AudioManager.PlaySfx("Sfx.Cancel.0");
                         stateMachine.Change(StateRootAsync);
                     })
                     .RegisterTo(scope);
@@ -347,7 +347,7 @@ namespace SoulRPG
                                     $"ダンジョンレベル: {x}",
                                     _ =>
                                     {
-                                        AudioManager.PlaySFX("Sfx.Message.0");
+                                        AudioManager.PlaySfx("Sfx.Message.0");
                                         player.Inventory.Clear();
                                         player.Equipment.Clear();
                                         var itemTables = TinyServiceLocator.Resolve<MasterData>().ItemTables.Get(x)
@@ -374,7 +374,7 @@ namespace SoulRPG
                 inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
                     .Subscribe(_ =>
                     {
-                        AudioManager.PlaySFX("Sfx.Cancel.0");
+                        AudioManager.PlaySfx("Sfx.Cancel.0");
                         stateMachine.Change(StateRootAsync);
                     })
                     .RegisterTo(scope);
@@ -392,7 +392,7 @@ namespace SoulRPG
                                     async _ =>
                                     {
                                         var isAcquireBossExperience = await ConfirmAsync(documentBundlePrefab, "ボスの経験値も獲得しますか？", new[] { "はい", "いいえ" }, scope);
-                                        AudioManager.PlaySFX("Sfx.Message.0");
+                                        AudioManager.PlaySfx("Sfx.Message.0");
                                         var result = 0;
                                         var max = UnityEngine.Random.Range(x.EnemyPlaceItemNumberMin, x.EnemyPlaceItemNumberMax);
                                         for (var i = 0; i < max; i++)

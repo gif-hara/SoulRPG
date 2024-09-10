@@ -13,7 +13,7 @@ namespace SoulRPG
     {
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
-            AudioManager.StopBGM();
+            AudioManager.StopBgm();
             return UniTask.CompletedTask;
         }
     }

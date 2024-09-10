@@ -48,7 +48,7 @@ namespace SoulRPG
                             CanSeePlayer(Define.Direction.Right)
                             )
                         {
-                            AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get("Sfx.FindPlayer.0").Clip);
+                            AudioManager.PlaySfx(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get("Sfx.FindPlayer.0").Clip);
                             stateMachine.Change(StateChaseAsync);
                         }
                     })
@@ -136,7 +136,7 @@ namespace SoulRPG
                             return;
                         }
                         var walkId = UnityEngine.Random.Range(0, 2);
-                        AudioManager.PlaySFX(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get($"Sfx.Walk.{walkId}").Clip);
+                        AudioManager.PlaySfx(TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get($"Sfx.Walk.{walkId}").Clip);
                         enemy.Move(direction);
                         if (enemy.Position == player.Position)
                         {

@@ -156,7 +156,7 @@ namespace SoulRPG
                             }
                             SetActiveVolume(contents.Q<HKUIDocument>(volumeNames[currentVolumeIndex]));
                             GameTipsView.SetTip(tips[currentVolumeIndex]);
-                            AudioManager.PlaySFX("Sfx.Select.0");
+                            AudioManager.PlaySfx("Sfx.Select.0");
                         }
                         else if (value.y < 0)
                         {
@@ -167,7 +167,7 @@ namespace SoulRPG
                             }
                             SetActiveVolume(contents.Q<HKUIDocument>(volumeNames[currentVolumeIndex]));
                             GameTipsView.SetTip(tips[currentVolumeIndex]);
-                            AudioManager.PlaySFX("Sfx.Select.0");
+                            AudioManager.PlaySfx("Sfx.Select.0");
                         }
                         if (value.x > 0)
                         {
@@ -178,7 +178,7 @@ namespace SoulRPG
                             var saveData = SaveData.LoadSafe();
                             saveActions[currentVolumeIndex](saveData, volume);
                             saveData.Save();
-                            AudioManager.PlaySFX("Sfx.Message.0");
+                            AudioManager.PlaySfx("Sfx.Message.0");
                         }
                         else if (value.x < 0)
                         {
@@ -189,7 +189,7 @@ namespace SoulRPG
                             var saveData = SaveData.LoadSafe();
                             saveActions[currentVolumeIndex](saveData, volume);
                             saveData.Save();
-                            AudioManager.PlaySFX("Sfx.Message.0");
+                            AudioManager.PlaySfx("Sfx.Message.0");
                         }
                     })
                     .RegisterTo(scope);

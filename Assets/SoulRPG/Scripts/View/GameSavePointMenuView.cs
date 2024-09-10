@@ -301,7 +301,7 @@ namespace SoulRPG
                             character.InstanceStatus.AddExperience(-useExperience.Value);
                             character.Events.OnLevelUp.OnNext(growthParameter);
                             stateMachine.Change(StateRootMenuAsync);
-                            AudioManager.PlaySFX("Sfx.Message.22");
+                            AudioManager.PlaySfx("Sfx.Message.22");
                         }
                     },
                     _ =>
@@ -383,7 +383,7 @@ namespace SoulRPG
             );
             if (result == 0)
             {
-                AudioManager.PlaySFX("Sfx.Message.19");
+                AudioManager.PlaySfx("Sfx.Message.19");
                 character.InstanceStatus.FullRecovery();
                 dungeonController.RestCheckPoint(character.Position);
             }

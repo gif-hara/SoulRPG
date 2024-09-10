@@ -19,7 +19,7 @@ namespace SoulRPG
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            AudioManager.PlaySFX(sfxName);
+            AudioManager.PlaySfx(sfxName);
             return UniTask.CompletedTask;
         }
     }

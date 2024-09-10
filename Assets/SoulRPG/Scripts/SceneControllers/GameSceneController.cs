@@ -138,7 +138,7 @@ namespace SoulRPG.SceneControllers
                         {
                             return;
                         }
-                        AudioManager.PlaySFX(gameRule.AudioDatabase.Get(x).Clip);
+                        AudioManager.PlaySfx(gameRule.AudioDatabase.Get(x).Clip);
                     })
                     .RegisterTo(destroyCancellationToken);
                 gameEvents.OnRequestPlayBgm
@@ -180,7 +180,7 @@ namespace SoulRPG.SceneControllers
                         0,
                         destroyCancellationToken
                         );
-                    AudioManager.PlaySFX("Sfx.Message.0");
+                    AudioManager.PlaySfx("Sfx.Message.0");
                     inputController.PopInputType();
                 }
                 else
@@ -193,7 +193,7 @@ namespace SoulRPG.SceneControllers
                     inputController.PushInputType(InputController.InputType.UI);
                     var newPlayerName = await GameNameInputFieldView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.NameInputField"), destroyCancellationToken);
                     inputController.PopInputType();
-                    AudioManager.PlaySFX("Sfx.Message.0");
+                    AudioManager.PlaySfx("Sfx.Message.0");
                     saveData.playerData.name = newPlayerName;
                     saveData.Save();
                     player.Name = newPlayerName;

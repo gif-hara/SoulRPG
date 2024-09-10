@@ -33,19 +33,19 @@ namespace SoulRPG
             instance.bgmSource.Play();
         }
 
-        public static void PlaySFX(AudioClip clip)
+        public static void PlaySfx(AudioClip clip)
         {
             var instance = TinyServiceLocator.Resolve<AudioManager>();
             instance.sfxSource.PlayOneShot(clip);
         }
 
-        public static void StopBGM()
+        public static void StopBgm()
         {
             var instance = TinyServiceLocator.Resolve<AudioManager>();
             instance.bgmSource.Stop();
         }
 
-        public static void PlaySFX(string clipName)
+        public static void PlaySfx(string clipName)
         {
             var instance = TinyServiceLocator.Resolve<AudioManager>();
             var clip = TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get(clipName).Clip;
