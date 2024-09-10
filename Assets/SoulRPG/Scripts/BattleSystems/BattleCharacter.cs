@@ -227,7 +227,6 @@ namespace SoulRPG
             {
                 await Equipment.BeginBattleAsync(this, target, scope.Token);
             }
-            await sequences.PlayOnBeginBattleAsync(this, target, scope.Token);
         }
         
         public async UniTask AppearanceAsync(BattleCharacter target)

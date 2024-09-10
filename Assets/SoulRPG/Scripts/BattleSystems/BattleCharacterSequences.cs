@@ -20,10 +20,7 @@ namespace SoulRPG
 
         [SerializeField]
         private ScriptableSequences onBeginTurn;
-
-        [SerializeField]
-        private ScriptableSequences onBeginBattle;
-
+        
         [SerializeField]
         private ScriptableSequences onAppearance;
 
@@ -45,14 +42,6 @@ namespace SoulRPG
             var container = new Container();
             container.Register("Actor", actor);
             return new Sequencer(container, onBeginTurn.Sequences).PlayAsync(scope);
-        }
-        
-        public UniTask PlayOnBeginBattleAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
-        {
-            var container = new Container();
-            container.Register("Actor", actor);
-            container.Register("Target", target);
-            return new Sequencer(container, onBeginBattle.Sequences).PlayAsync(scope);
         }
         
         public UniTask PlayOnAppearanceAsync(BattleCharacter actor, BattleCharacter target, CancellationToken scope)
