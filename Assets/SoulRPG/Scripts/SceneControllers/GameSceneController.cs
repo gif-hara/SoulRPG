@@ -240,8 +240,8 @@ namespace SoulRPG.SceneControllers
                             }
                             if (Keyboard.current.eKey.wasPressedThisFrame)
                             {
-                                player.InstanceStatus.AddExperience(100000);
-                                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("[DEBUG] Add Experience 100000", "Sfx.Message.0"));
+                                player.InstanceStatus.AddExperience(gameRule.DebugAddExperience);
+                                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new($"[DEBUG] Add Experience {gameRule.DebugAddExperience}", "Sfx.Message.0"));
                             }
                             if (Keyboard.current.rKey.wasPressedThisFrame)
                             {
