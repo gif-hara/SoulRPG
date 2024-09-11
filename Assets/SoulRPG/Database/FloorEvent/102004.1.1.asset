@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: 102004.0.0
+  m_Name: 102004.1.1
   m_EditorClassIdentifier: 
   sequences:
-  - rid: 6455563979381276759
-  - rid: 6455563979381276760
+  - rid: 6455563979381276762
+  - rid: 6455563979381276763
   references:
     version: 2
     RefIds:
-    - rid: 6455563979381276759
+    - rid: 6455563979381276762
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "\u300C\u305D\u3046\u3067\u3059\u3002\u3042\u306A\u305F\u306F\u3001<color=#AAAAFF>{SealedName}</color>\u306A\u306E\u3067\u3059\u300D"
+        format: "\u300C\u3044\u3044\u3048\u3002\u3042\u306A\u305F\u306F\u3001<color=#AAAAFF>{SealedName}</color>\u306A\u306E\u3067\u3059\u300D"
         sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0
-    - rid: 6455563979381276760
+    - rid: 6455563979381276763
       type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         elements:
         - evaluator:
-            rid: 6455563979381276761
+            rid: 6455563979381276764
           sequences: {fileID: 11400000, guid: bb01bcd351b6b174ba23b9411409d409, type: 2}
-    - rid: 6455563979381276761
+    - rid: 6455563979381276764
       type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
         value: 1

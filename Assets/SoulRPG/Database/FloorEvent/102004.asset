@@ -13,88 +13,46 @@ MonoBehaviour:
   m_Name: 102004
   m_EditorClassIdentifier: 
   sequences:
-  - rid: 3022425853439508561
-  - rid: 6455563979381276757
-  - rid: 6455563979381276746
-  - rid: 6455563979381276747
-  - rid: 6455563979381276748
-  - rid: 6455563979381276758
-  - rid: 6455563979381276776
-  - rid: 6455563979381276750
+  - rid: 6455563984491249764
+  - rid: 6455563984491249763
   references:
     version: 2
     RefIds:
-    - rid: 3022425853439508561
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+    - rid: 6455563984491249763
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "\u300C\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3002<color=#FFAAAA>{SealedName}</color>\u3082\u5831\u308F\u308C\u308B\u3067\u3057\u3087\u3046\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 6455563979381276746
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "\u300C\u3053\u308C\u3067\u3001\u3053\u306E\u4E16\u754C\u3067\u4E00\u756A\u5F37\u3044\u306E\u306F\u3001\u3042\u306A\u305F\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 6455563979381276747
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "\u300C<color=#AAAAFF>{PlayerName}</color>\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 6455563979381276748
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "\u300C\u3042\u306A\u305F\u306F\u3001<color=#AAAAFF>{SealedName}</color>\u306A\u306E\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 6455563979381276750
-      type: {class: OpenDialogView, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        documentPrefab: {fileID: 3672498495014125879, guid: 15a7b8749cb8a0e4fb05935f14023fb6, type: 3}
-        titleResolver:
-          rid: 6455563979381276751
         elements:
-        - messageResolver:
-            rid: 6455563979381276752
-          nextResolver:
-            rid: 6455563979381276753
-        - messageResolver:
-            rid: 6455563979381276754
-          nextResolver:
-            rid: 6455563979381276756
-    - rid: 6455563979381276751
+        - evaluator:
+            rid: 6455563984491249767
+          sequences: {fileID: 11400000, guid: bb8409b6700226d4dae545bcdad4dd27, type: 2}
+        - evaluator:
+            rid: 6455563984491249771
+          sequences: {fileID: 11400000, guid: 957459ecb7c0b6545b001e88d8385421, type: 2}
+    - rid: 6455563984491249764
+      type: {class: RegisterContainerIsTrueEndRoute, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        keyResolver:
+          rid: 6455563984491249765
+    - rid: 6455563984491249765
       type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        value: "\u3042\u306A\u305F\u306F<color=#AAAAFF>{SealedName}</color>\u3067\u3059\u304B\uFF1F"
-    - rid: 6455563979381276752
-      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+        value: IsTrueEndRoute
+    - rid: 6455563984491249767
+      type: {class: CompareBoolean, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
-        value: "\u306F\u3044"
-    - rid: 6455563979381276753
-      type: {class: SequencesResolver/ScriptableObject, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+        targetResolver:
+          rid: 6455563984491249769
+        valueResolver:
+          rid: 6455563984491249770
+    - rid: 6455563984491249769
+      type: {class: BooleanResolver/NameBoolean, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        value: {fileID: 11400000, guid: f04d6d12725748d4a8331bca87e93db4, type: 2}
-    - rid: 6455563979381276754
-      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+        name: IsTrueEndRoute
+    - rid: 6455563984491249770
+      type: {class: BooleanResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        value: "\u3044\u3044\u3048"
-    - rid: 6455563979381276756
-      type: {class: SequencesResolver/ScriptableObject, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+        value: 0
+    - rid: 6455563984491249771
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
-        value: {fileID: 11400000, guid: 3877a5af9ff81754485b0107f960d654, type: 2}
-    - rid: 6455563979381276757
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "\u300C\u3053\u308C\u3067\u30FB\u30FB\u30FB\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 6455563979381276758
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "\u300C<color=#AAAAFF>{SealedName}</color>\u305F\u308A\u5F97\u308B\u529B\u3092\u6301\u3063\u3066\u3044\u308B\u306E\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 6455563979381276776
-      type: {class: StopBgm, ns: SoulRPG, asm: Assembly-CSharp}
-      data: 
+        value: 1
