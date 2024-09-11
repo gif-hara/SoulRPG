@@ -19,11 +19,8 @@ MonoBehaviour:
   - rid: 1651571015951581475
   - rid: 1651571015951581476
   - rid: 1651571015951581477
-  - rid: 1651571015951581478
-  - rid: 1651571015951581481
-  - rid: 1651571015951581482
-  - rid: 1651571015951581479
-  - rid: 1651571015951581484
+  - rid: 6455563984491249668
+  - rid: 6455563984491249670
   references:
     version: 2
     RefIds:
@@ -57,64 +54,48 @@ MonoBehaviour:
         format: "\u300C\u305D\u306E\u529B\u3001\u8A66\u3055\u305B\u3066\u304F\u308C\u300D"
         sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0
-    - rid: 1651571015951581478
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "\u9EC4\u91D1\u8272\u306E\u9B42\u304C\u5F62\u3092\u8868\u3057\u3066\u304F\u308B\u3002"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 1651571015951581479
-      type: {class: BeginBattle, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        enemyIdResolver:
-          rid: 1651571015951581480
-    - rid: 1651571015951581480
-      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
-      data:
-        value: 19909
-    - rid: 1651571015951581481
-      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        from: {r: 1, g: 0.7610618, b: 0.10849059, a: 1}
-        to: {r: 1, g: 1, b: 1, a: 0}
-        duration: 1
-    - rid: 1651571015951581482
-      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
-      data:
-        seconds: 1
-    - rid: 1651571015951581484
-      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        elements:
-        - evaluator:
-            rid: 1651571015951581485
-          sequences: {fileID: 11400000, guid: daf92fcc851764f59a81b5e31213283a, type: 2}
-        - evaluator:
-            rid: 1651571015951581489
-          sequences: {fileID: 11400000, guid: 33807bd02503f4e95af54fe3d0207383, type: 2}
-    - rid: 1651571015951581485
-      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
-      data:
-        targetResolver:
-          rid: 1651571015951581487
-        valueResolver:
-          rid: 1651571015951581488
-        compareType: 0
-    - rid: 1651571015951581487
-      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
-      data:
-        name: BattleResult
-    - rid: 1651571015951581488
-      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
-      data:
-        value: 0
-    - rid: 1651571015951581489
-      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
-      data:
-        value: 1
     - rid: 3022425853439508561
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "\u9EC4\u91D1\u8272\u306B\u8F1D\u304F\u9B42\u304C\u4F47\u3093\u3067\u3044\u308B\u3002"
         sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0
+    - rid: 6455563984491249668
+      type: {class: RegisterContainerBadEndCount, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        keyResolver:
+          rid: 6455563984491249669
+    - rid: 6455563984491249669
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: BadEndCount
+    - rid: 6455563984491249670
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 6455563984491249671
+          sequences: {fileID: 11400000, guid: ad8738c6352ab8d449581712a9010f28, type: 2}
+        - evaluator:
+            rid: 6455563984491249674
+          sequences: {fileID: 11400000, guid: 6a2022dcd509579449d15b57532cf5b3, type: 2}
+    - rid: 6455563984491249671
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 6455563984491249672
+        valueResolver:
+          rid: 6455563984491249673
+        compareType: 3
+    - rid: 6455563984491249672
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: BadEndCount
+    - rid: 6455563984491249673
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 6455563984491249674
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
