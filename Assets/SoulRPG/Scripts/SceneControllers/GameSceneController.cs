@@ -173,6 +173,11 @@ namespace SoulRPG.SceneControllers
 #if !DEBUG
                 isDebugIgnoreTitleScreen = false;
 #endif
+                if (string.IsNullOrEmpty(saveData.playerData.sealedName))
+                {
+                    saveData.playerData.sealedName = gameRule.DefaultSealedName;
+                    saveData.Save();
+                }
                 if (!isDebugIgnoreTitleScreen)
                 {
                     await GameTitleScreenView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.TitleScreen"), destroyCancellationToken);
