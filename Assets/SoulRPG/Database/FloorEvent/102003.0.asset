@@ -21,7 +21,7 @@ MonoBehaviour:
   - rid: 1651571015951581505
   - rid: 1651571015951581504
   - rid: 1651571015951581506
-  - rid: 1651571015951581511
+  - rid: 6455563979381276744
   - rid: 1651571015951581512
   - rid: 1651571015951581513
   - rid: 1651571015951581514
@@ -89,9 +89,6 @@ MonoBehaviour:
       type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
       data:
         seconds: 5
-    - rid: 1651571015951581511
-      type: {class: NextFloor, ns: SoulRPG, asm: Assembly-CSharp}
-      data: 
     - rid: 1651571015951581512
       type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -110,3 +107,12 @@ MonoBehaviour:
         from: {r: 0, g: 0, b: 0, a: 1}
         to: {r: 0, g: 0, b: 0, a: 0}
         duration: 1
+    - rid: 6455563979381276744
+      type: {class: SetupDungeon, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        dungeonNameResolver:
+          rid: 6455563979381276745
+    - rid: 6455563979381276745
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: Dungeon.10701

@@ -4812,6 +4812,46 @@ MonoBehaviour:
         - a: {x: 3, y: 0}
           b: {x: 3, y: -1}
       range: {x: 3, y: 9}
+    - name: Dungeon.10701
+      wall:
+        list:
+        - a: {x: 0, y: 4}
+          b: {x: 1, y: 4}
+        - a: {x: 0, y: 4}
+          b: {x: 0, y: 3}
+        - a: {x: 1, y: 4}
+          b: {x: 2, y: 4}
+        - a: {x: 2, y: 4}
+          b: {x: 3, y: 4}
+        - a: {x: 3, y: 4}
+          b: {x: 3, y: 3}
+        - a: {x: 0, y: 3}
+          b: {x: 0, y: 2}
+        - a: {x: 3, y: 3}
+          b: {x: 3, y: 2}
+        - a: {x: 0, y: 2}
+          b: {x: 1, y: 2}
+        - a: {x: 0, y: 2}
+          b: {x: 0, y: 1}
+        - a: {x: 2, y: 2}
+          b: {x: 3, y: 2}
+        - a: {x: 3, y: 2}
+          b: {x: 3, y: 1}
+        - a: {x: 0, y: 1}
+          b: {x: 0, y: 0}
+        - a: {x: 3, y: 1}
+          b: {x: 3, y: 0}
+        - a: {x: 0, y: -1}
+          b: {x: 1, y: -1}
+        - a: {x: 0, y: 0}
+          b: {x: 0, y: -1}
+        - a: {x: 1, y: -1}
+          b: {x: 2, y: -1}
+        - a: {x: 2, y: -1}
+          b: {x: 3, y: -1}
+        - a: {x: 3, y: 0}
+          b: {x: 3, y: -1}
+      range: {x: 3, y: 5}
   dungeonSpecs:
     list:
     - Id: Dungeon.Test
@@ -8459,6 +8499,31 @@ MonoBehaviour:
         Y: 8
         ViewName: Npc.1
         SequenceId: 102003
+        PromptMessage: "\u89E6\u308C\u308B"
+    - Id: Dungeon.10701
+      InitialX: 1
+      InitialY: 0
+      Direction: 0
+      NoCostItemNumberMin: 0
+      NoCostItemNumberMax: 0
+      EnemyPlaceItemNumberMin: 0
+      EnemyPlaceItemNumberMax: 0
+      NoCostEnemyNumberMin: 0
+      NoCostEnemyNumberMax: 0
+      RequireShadow: 1
+      FloorItemNoCosts: []
+      FloorItemEnemyPlaces: []
+      FloorEnemyNoCosts: []
+      WallEvents: []
+      FloorItemGuaranteeds: []
+      FloorEnemyGuaranteeds: []
+      FloorEvents:
+      - Id: 0
+        DungeonName: Dungeon.10701
+        X: 1
+        Y: 4
+        ViewName: Npc.0
+        SequenceId: 102004
         PromptMessage: "\u89E6\u308C\u308B"
   wallEventConditionItems:
     list:
@@ -13941,4 +14006,9 @@ MonoBehaviour:
     - Sequences: {fileID: 11400000, guid: af3d26f33bc514602b161cc6d308484a, type: 2}
     - Sequences: {fileID: 11400000, guid: e80c5822defe0ec458d585143ae432d9, type: 2}
     - Sequences: {fileID: 11400000, guid: be5d1e0019af2a64ca1fc8f846514e26, type: 2}
+    - Sequences: {fileID: 11400000, guid: daf92fcc851764f59a81b5e31213283a, type: 2}
+    - Sequences: {fileID: 11400000, guid: 33807bd02503f4e95af54fe3d0207383, type: 2}
     - Sequences: {fileID: 11400000, guid: 40038634d42f24a22ab805410c57142a, type: 2}
+    - Sequences: {fileID: 11400000, guid: f04d6d12725748d4a8331bca87e93db4, type: 2}
+    - Sequences: {fileID: 11400000, guid: 3877a5af9ff81754485b0107f960d654, type: 2}
+    - Sequences: {fileID: 11400000, guid: 7682032c6f9487d42bd91aaa99185578, type: 2}
