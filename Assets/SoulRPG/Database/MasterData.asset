@@ -10457,7 +10457,7 @@ MonoBehaviour:
     - ItemId: 101044
       Strength: 141
       Speed: 4
-      AttackAttribute: 0
+      AttackAttribute: 2
       Skill1: 101001
       Skill2: 101086
       Skill3: 101087
@@ -10633,7 +10633,7 @@ MonoBehaviour:
     - ItemId: 101066
       Strength: 233
       Speed: 6
-      AttackAttribute: 0
+      AttackAttribute: 2
       Skill1: 101001
       Skill2: 101088
       Skill3: 101086
