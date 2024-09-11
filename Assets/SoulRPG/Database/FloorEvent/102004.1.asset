@@ -18,6 +18,15 @@ MonoBehaviour:
   - rid: 6455563979381276767
   - rid: 6455563979381276768
   - rid: 6455563979381276769
+  - rid: 6455563979381276770
+  - rid: 6455563979381276771
+  - rid: 6455563979381276777
+  - rid: 6455563979381276775
+  - rid: 6455563979381276778
+  - rid: 6455563979381276773
+  - rid: 6455563979381276780
+  - rid: 6455563979381276783
+  - rid: 6455563979381276779
   references:
     version: 2
     RefIds:
@@ -51,3 +60,55 @@ MonoBehaviour:
         from: {r: 0, g: 0, b: 0, a: 0}
         to: {r: 0, g: 0, b: 0, a: 1}
         duration: 3
+    - rid: 6455563979381276770
+      type: {class: ResetAllPlayer, ns: SoulRPG, asm: Assembly-CSharp}
+      data: 
+    - rid: 6455563979381276771
+      type: {class: SetupDungeon, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        dungeonNameResolver:
+          rid: 6455563979381276772
+    - rid: 6455563979381276772
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: Dungeon.Home
+    - rid: 6455563979381276773
+      type: {class: OpenTitleScreenView, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        documentPrefab: {fileID: 3672498495014125879, guid: 7589c1fa7791d43428c846d1ddfa993b, type: 3}
+    - rid: 6455563979381276775
+      type: {class: BeginFadeTo, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        to: {r: 0, g: 0, b: 0, a: 0}
+        duration: 0
+    - rid: 6455563979381276777
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 3
+    - rid: 6455563979381276778
+      type: {class: ReplaceSealedName, ns: SoulRPG, asm: Assembly-CSharp}
+      data: 
+    - rid: 6455563979381276779
+      type: {class: OpenNameInputFieldView, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        gameMenuBundlePrefab: {fileID: 6138824259176453115, guid: d58e9662b67901746a479003070fb56f, type: 3}
+    - rid: 6455563979381276780
+      type: {class: Forget, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        sequencesResolver:
+          rid: 6455563979381276781
+    - rid: 6455563979381276781
+      type: {class: SequencesResolver/List, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value:
+        - rid: 6455563979381276782
+    - rid: 6455563979381276782
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 0, g: 0, b: 0, a: 1}
+        to: {r: 0, g: 0, b: 0, a: 0}
+        duration: 2
+    - rid: 6455563979381276783
+      type: {class: PlayBgm, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        bgmName: Bgm.Exploration.0

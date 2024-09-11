@@ -19,6 +19,7 @@ MonoBehaviour:
   - rid: 6455563979381276747
   - rid: 6455563979381276748
   - rid: 6455563979381276758
+  - rid: 6455563979381276776
   - rid: 6455563979381276750
   references:
     version: 2
@@ -94,3 +95,6 @@ MonoBehaviour:
         format: "\u300C<color=#AAAAFF>{SealedName}</color>\u305F\u308A\u5F97\u308B\u529B\u3092\u6301\u3063\u3066\u3044\u308B\u306E\u300D"
         sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0
+    - rid: 6455563979381276776
+      type: {class: StopBgm, ns: SoulRPG, asm: Assembly-CSharp}
+      data: 
