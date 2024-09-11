@@ -88,10 +88,14 @@ namespace SoulRPG
         [SerializeField]
         private string defaultSealedName;
         public string DefaultSealedName => defaultSealedName;
-        
+
         [SerializeField]
         private ScriptableSequences sealedNameSubmitSequences;
         public List<ISequence> SealedNameSubmitSequences => sealedNameSubmitSequences.Sequences;
+
+        [SerializeField]
+        private string gameTitle;
+        public string GameTitle => gameTitle;
 
         [Serializable]
         public class ExperienceTableData
