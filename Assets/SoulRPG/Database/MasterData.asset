@@ -13472,13 +13472,37 @@ MonoBehaviour:
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 22
-      BattleBgmId: 1
+      BattleBgmId: 2
       SequencesId: 19910
       FieldOfVision: 0
       MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: eb5714632631d4abd8df02f148565292, type: 3}
       AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: fbdb00ac6f5e57e4fba0ea5429e9ee06, type: 2}
+    - Id: 19911
+      Name: "\u7834\u58CA\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
+      HitPoint: 8769
+      Stamina: 0
+      PhysicalAttack: 74
+      MagicalAttack: 74
+      SlashCutRate: 0.13
+      BlowCutRate: 0.16
+      ThrustCutRate: 0.15
+      MagicCutRate: 0.21
+      FireCutRate: 0.18
+      ThunderCutRate: 0.14
+      Speed: 22
+      Experience: 102000
+      BehaviourPoint: 1
+      Attribute: 0
+      ThumbnailId: 39
+      BattleBgmId: 3
+      SequencesId: 19911
+      FieldOfVision: 0
+      MoveIntervalSeconds: 1
+      Thumbnail: {fileID: 21300000, guid: 079e254c273fe114db76cd2855431577, type: 3}
+      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      BattleCharacterSequences: {fileID: 11400000, guid: baf8a5e1c1bd2a74dbc4f2dc22909074, type: 2}
   ailments:
     list:
     - Id: 101001
