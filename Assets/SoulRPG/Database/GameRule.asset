@@ -78,6 +78,7 @@ MonoBehaviour:
     - clip: {fileID: 8300000, guid: 38e2c75cb76ed474b86fdb2ab7009baf, type: 3}
     - clip: {fileID: 8300000, guid: 6518bfa788151484fa4c0008b3b870ce, type: 3}
     - clip: {fileID: 8300000, guid: d35980da74cdc4dd5a071e2c94d64a12, type: 3}
+    - clip: {fileID: 8300000, guid: 53b78a91c0478094ba035aa246479ef3, type: 3}
   sequenceDatabase:
     list:
     - sequences: {fileID: 11400000, guid: 2b4851b2e8d13ab429a10a6a6ede6f8b, type: 2}
@@ -87,3 +88,4 @@ MonoBehaviour:
   magicCountMax: 9
   knifeCountMax: 9
   pinchThreshold: 0.3
+  debugAddExperience: 39207

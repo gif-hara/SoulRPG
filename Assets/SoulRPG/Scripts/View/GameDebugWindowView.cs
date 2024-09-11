@@ -82,8 +82,8 @@ namespace SoulRPG
                                 _ =>
                                 {
                                     AudioManager.PlaySfx("Sfx.Message.0");
-                                    player.InstanceStatus.AddExperience(100000);
-                                    ConfirmOkOnlyAsync(documentBundlePrefab, "経験値を追加しました", scope).Forget();
+                                    player.InstanceStatus.AddExperience(TinyServiceLocator.Resolve<GameRule>().DebugAddExperience);
+                                    ConfirmOkOnlyAsync(documentBundlePrefab, $"経験値を{TinyServiceLocator.Resolve<GameRule>().DebugAddExperience}追加しました", scope).Forget();
                                 }
                             );
                         },

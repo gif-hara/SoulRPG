@@ -68,6 +68,9 @@ namespace SoulRPG.SceneControllers
         [SerializeField]
         private CharacterBattleStatusBlueprint debugEnemyBattleStatus;
 
+        [SerializeField]
+        private bool isDebugIgnoreTitleScreen;
+
         async void Start()
         {
             try
@@ -161,12 +164,26 @@ namespace SoulRPG.SceneControllers
                         inputGuideBottom.Open(x.messageSelector, x.scope);
                     })
                     .RegisterTo(destroyCancellationToken);
-                gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
                 var screenEffectView = new ScreenEffectView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.ScreenEffect"), destroyCancellationToken);
                 TinyServiceLocator.Register(screenEffectView);
                 inputController.PushInputType(InputController.InputType.InGame);
                 var gameTipsView = new GameTipsView(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Tips"), destroyCancellationToken);
                 TinyServiceLocator.Register(gameTipsView);
+
+#if !DEBUG
+                isDebugIgnoreTitleScreen = false;
+#endif
+                if (!isDebugIgnoreTitleScreen)
+                {
+                    await GameTitleScreenView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.TitleScreen"), destroyCancellationToken);
+                    gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
+                    GameFadeView.BeginFadeAsync(new Color(0.0f, 0.0f, 0.0f, 0.0f), 1.0f, destroyCancellationToken).Forget();
+                }
+                else
+                {
+                    gameEvents.OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
+                }
+
                 if (suspendData != null)
                 {
                     player.SyncFromSuspendData(suspendData);
@@ -191,9 +208,12 @@ namespace SoulRPG.SceneControllers
                 if (string.IsNullOrEmpty(saveData.playerData.name))
                 {
                     inputController.PushInputType(InputController.InputType.UI);
-                    var newPlayerName = await GameNameInputFieldView.OpenAsync(gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.NameInputField"), destroyCancellationToken);
+                    var newPlayerName = await GameNameInputFieldView.OpenAsync(
+                        gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.NameInputField"),
+                        gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                        destroyCancellationToken
+                    );
                     inputController.PopInputType();
-                    AudioManager.PlaySfx("Sfx.Message.0");
                     saveData.playerData.name = newPlayerName;
                     saveData.Save();
                     player.Name = newPlayerName;
@@ -220,8 +240,8 @@ namespace SoulRPG.SceneControllers
                             }
                             if (Keyboard.current.eKey.wasPressedThisFrame)
                             {
-                                player.InstanceStatus.AddExperience(100000);
-                                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new("[DEBUG] Add Experience 100000", "Sfx.Message.0"));
+                                player.InstanceStatus.AddExperience(gameRule.DebugAddExperience);
+                                TinyServiceLocator.Resolve<GameEvents>().OnRequestShowMessage.OnNext(new($"[DEBUG] Add Experience {gameRule.DebugAddExperience}", "Sfx.Message.0"));
                             }
                             if (Keyboard.current.rKey.wasPressedThisFrame)
                             {

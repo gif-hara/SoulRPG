@@ -81,6 +81,10 @@ namespace SoulRPG
         private float pinchThreshold;
         public float PinchThreshold => pinchThreshold;
 
+        [SerializeField]
+        private int debugAddExperience;
+        public int DebugAddExperience => debugAddExperience;
+
         [Serializable]
         public class ExperienceTableData
         {
