@@ -27,7 +27,11 @@ namespace SoulRPG
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             await UniTask.NextFrame(cancellationToken);
-            var result = await DialogView.ConfirmAsync(documentPrefab, titleResolver.Resolve(container), elements.ConvertAll(e => e.messageResolver.Resolve(container)), 0, cancellationToken);
+            var title = titleResolver.Resolve(container);
+            var saveData = SaveData.LoadSafe();
+            title = title.Replace("{SealedName}", saveData.playerData.sealedName);
+            title = title.Replace("{PlayerName}", saveData.playerData.name);
+            var result = await DialogView.ConfirmAsync(documentPrefab, title, elements.ConvertAll(e => e.messageResolver.Resolve(container)), 0, cancellationToken);
             var sequencer = new Sequencer(container, elements[result].nextResolver.Resolve(container));
             await sequencer.PlayAsync(cancellationToken);
         }
