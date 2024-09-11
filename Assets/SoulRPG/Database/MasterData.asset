@@ -8376,6 +8376,13 @@ MonoBehaviour:
         ViewName: SavePoint
         SequenceId: 101003
         PromptMessage: "\u89E6\u308C\u308B"
+      - Id: 0
+        DungeonName: Dungeon.10501
+        X: 12
+        Y: 16
+        ViewName: SavePoint
+        SequenceId: 101003
+        PromptMessage: "\u89E6\u308C\u308B"
   wallEventConditionItems:
     list:
     - Key: 10101.(10,09).(11,09).0.Door
@@ -13260,7 +13267,7 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 4593628952f1f434ab9a5d4a42b24814, type: 2}
     - Id: 19908
       Name: "\u899A\u9192\u306E\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
-      HitPoint: 5904
+      HitPoint: 5740
       Stamina: 0
       PhysicalAttack: 45
       MagicalAttack: 45
@@ -13271,7 +13278,7 @@ MonoBehaviour:
       FireCutRate: 0.32
       ThunderCutRate: 0.26
       Speed: 21
-      Experience: 58914
+      Experience: 55854
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 38
@@ -13281,7 +13288,7 @@ MonoBehaviour:
       MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: aa32c3d7f0219f248baf7b52c73af8e1, type: 3}
       AISequences: {fileID: 11400000, guid: c235d59e597fb4ae7bee5b8dff879ee5, type: 2}
-      BattleCharacterSequences: {fileID: 0}
+      BattleCharacterSequences: {fileID: 11400000, guid: 2ee7fe8726be04a58841a6ed77d8cf68, type: 2}
     - Id: 19909
       Name: "\u8EE2\u751F\u306E\u30EB\u30AF\u30B9\u30AA\u30E9"
       HitPoint: 6885
