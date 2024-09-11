@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 102004.4.0
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 6455563984491249798
+  - rid: 6455563984491249794
+  - rid: 6455563984491249799
+  - rid: 6455563984491249791
+  - rid: 6455563984491249806
+  - rid: 6455563984491249804
+  - rid: 6455563984491249792
+  - rid: 6455563984491249793
+  - rid: 6455563984491249809
+  - rid: 6455563984491249810
+  - rid: 6455563984491249811
+  - rid: 6455563984491249812
+  - rid: 6455563984491249813
+  - rid: 6455563984491249814
+  - rid: 6455563984491249815
+  references:
+    version: 2
+    RefIds:
+    - rid: 6455563984491249791
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u5F85\u3066\u30FB\u30FB\u30FB\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 6455563984491249792
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u30FB\u30FB\u30FB\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 6455563984491249793
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u307E\u3060\u7D42\u308F\u308A\u3067\u306F\u306A\u3044\u30FB\u30FB\u30FB\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 6455563984491249794
+      type: {class: SetLoopParticleFromHKUIDocument, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        documentNameResolver:
+          rid: 6455563984491249795
+        particleNameResolver:
+          rid: 6455563984491249796
+        loopResolver:
+          rid: 6455563984491249797
+    - rid: 6455563984491249795
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: CurrentViewDocument
+    - rid: 6455563984491249796
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: Particle.0
+    - rid: 6455563984491249797
+      type: {class: BooleanResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 6455563984491249798
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u84BC\u3044\u9B42\u304C\u6D88\u3048\u3066\u3086\u304F\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 6455563984491249799
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 5
+    - rid: 6455563984491249804
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 3
+    - rid: 6455563984491249806
+      type: {class: PlayParticleFromHKUIDocument, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        documentNameResolver:
+          rid: 6455563984491249807
+        particleNameResolver:
+          rid: 6455563984491249808
+    - rid: 6455563984491249807
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: CurrentViewDocument
+    - rid: 6455563984491249808
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: Particle.1
+    - rid: 6455563984491249809
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u6211\u306F\u7834\u58CA\u795E\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 6455563984491249810
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u30FB\u30FB\u30FB\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 6455563984491249811
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u8CB4\u69D8\u3092\u5E95\u77E5\u308C\u306C\u7D76\u671B\u3078\u3068\u7A81\u304D\u843D\u3068\u3059\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 6455563984491249812
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u5DF1\u306E\u7121\u529B\u3055\u3092\u77E5\u308C\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 6455563984491249813
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 1, g: 0, b: 0, a: 0.78431374}
+        to: {r: 1, g: 0, b: 0, a: 0}
+        duration: 3
+    - rid: 6455563984491249814
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1
+    - rid: 6455563984491249815
+      type: {class: BeginBattle, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        enemyIdResolver:
+          rid: 6455563984491249816
+    - rid: 6455563984491249816
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 19911

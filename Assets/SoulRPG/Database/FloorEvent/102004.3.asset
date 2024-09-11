@@ -22,6 +22,7 @@ MonoBehaviour:
   - rid: 6455563984491249782
   - rid: 6455563984491249783
   - rid: 6455563984491249784
+  - rid: 6455563984491249786
   references:
     version: 2
     RefIds:
@@ -80,3 +81,33 @@ MonoBehaviour:
       type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
         value: 19910
+    - rid: 6455563984491249786
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        elements:
+        - evaluator:
+            rid: 6455563984491249787
+          sequences: {fileID: 11400000, guid: 5e05ae51aa803a74cb6e21c311ca4773, type: 2}
+        - evaluator:
+            rid: 6455563984491249805
+          sequences: {fileID: 11400000, guid: 39a0fd6e62cadca459e7a9ccbd6490dc, type: 2}
+    - rid: 6455563984491249787
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetResolver:
+          rid: 6455563984491249788
+        valueResolver:
+          rid: 6455563984491249789
+        compareType: 0
+    - rid: 6455563984491249788
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: BattleResult
+    - rid: 6455563984491249789
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 6455563984491249805
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
