@@ -13389,7 +13389,7 @@ MonoBehaviour:
       MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: 8f1f9feff157040c7bd978ec0bc991fb, type: 3}
       AISequences: {fileID: 11400000, guid: 9ff4f8c3ead8a4b1590ebb5f10249663, type: 2}
-      BattleCharacterSequences: {fileID: 0}
+      BattleCharacterSequences: {fileID: 11400000, guid: 5cc432970e21a49339e62f55020746a4, type: 2}
     - Id: 19910
       Name: "\u518D\u751F\u3068\u7834\u58CA\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
       HitPoint: 8769

@@ -14,9 +14,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 3022425853439508561
+  - rid: 1651571015951581473
+  - rid: 1651571015951581474
+  - rid: 1651571015951581475
+  - rid: 1651571015951581476
+  - rid: 1651571015951581477
+  - rid: 1651571015951581478
+  - rid: 1651571015951581481
+  - rid: 1651571015951581482
+  - rid: 1651571015951581479
   references:
     version: 2
     RefIds:
+    - rid: 1651571015951581473
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u30FB\u30FB\u30FB\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 1651571015951581474
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u30FB\u30FB\u30FB\u304A\u524D\u306F\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 1651571015951581475
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u79C1\u3092\u89E3\u653E\u3057\u3066\u304F\u308C\u308B\u306E\u304B\uFF1F\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 1651571015951581476
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u3053\u306E\u8F2A\u5EFB\u3092\u3001\u65AD\u3061\u5207\u308C\u308B\u306E\u304B\uFF1F\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 1651571015951581477
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u300C\u305D\u306E\u529B\u3001\u8A66\u3055\u305B\u3066\u304F\u308C\u300D"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 1651571015951581478
+      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        format: "\u9EC4\u91D1\u8272\u306E\u9B42\u304C\u5F62\u3092\u8868\u3057\u3066\u304F\u308B\u3002"
+        sfxName: Sfx.Message.0
+        ignoreIfCharacterDead: 0
+    - rid: 1651571015951581479
+      type: {class: BeginBattle, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        enemyIdResolver:
+          rid: 1651571015951581480
+    - rid: 1651571015951581480
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 19909
+    - rid: 1651571015951581481
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 1, g: 0.7610618, b: 0.10849059, a: 1}
+        to: {r: 1, g: 1, b: 1, a: 0}
+        duration: 1
+    - rid: 1651571015951581482
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1
     - rid: 3022425853439508561
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
