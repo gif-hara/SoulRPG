@@ -79,4 +79,4 @@ MonoBehaviour:
     - rid: 6455563984491249785
       type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        value: 199010
+        value: 19910
