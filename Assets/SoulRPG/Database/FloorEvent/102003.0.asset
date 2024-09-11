@@ -21,6 +21,10 @@ MonoBehaviour:
   - rid: 1651571015951581505
   - rid: 1651571015951581504
   - rid: 1651571015951581506
+  - rid: 1651571015951581511
+  - rid: 1651571015951581512
+  - rid: 1651571015951581513
+  - rid: 1651571015951581514
   references:
     version: 2
     RefIds:
@@ -85,3 +89,24 @@ MonoBehaviour:
       type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
       data:
         seconds: 5
+    - rid: 1651571015951581511
+      type: {class: NextFloor, ns: SoulRPG, asm: Assembly-CSharp}
+      data: 
+    - rid: 1651571015951581512
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 1, g: 1, b: 1, a: 1}
+        to: {r: 0, g: 0, b: 0, a: 1}
+        duration: 0.2
+    - rid: 1651571015951581513
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 1, g: 1, b: 1, a: 1}
+        to: {r: 0, g: 0, b: 0, a: 1}
+        duration: 0.2
+    - rid: 1651571015951581514
+      type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        from: {r: 0, g: 0, b: 0, a: 1}
+        to: {r: 0, g: 0, b: 0, a: 0}
+        duration: 1
