@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8561540443494589379}
+  - component: {fileID: 2088831271606892607}
   m_Layer: 0
   m_Name: Dungeon.Floor.Event.SavePoint
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   - {fileID: 7857804283361172404}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2088831271606892607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158174451034942100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0bca0e48c915f4eae5e0e88e6c9227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elements: []
 --- !u!1001 &4285081959195467015
 PrefabInstance:
   m_ObjectHideFlags: 0
