@@ -46,6 +46,10 @@ namespace SoulRPG
             {
                 message = message.Replace("{Target}", target.BattleStatus.NameWithTag);
             }
+            var saveData = SaveData.LoadSafe();
+            message = message.Replace("{PlayerName}", saveData.playerData.name);
+            message = message.Replace("{SealedName}", saveData.playerData.sealedName);
+
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new(message, sfxName));
         }
