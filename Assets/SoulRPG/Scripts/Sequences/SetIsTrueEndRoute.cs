@@ -11,7 +11,7 @@ namespace SoulRPG
     /// 
     /// </summary>
     [Serializable]
-    public sealed class SetIsTrueEndRoot : ISequence
+    public sealed class SetIsTrueEndRoute : ISequence
     {
         [SerializeReference, SubclassSelector]
         private BooleanResolver valueResolver;
@@ -19,7 +19,7 @@ namespace SoulRPG
         public UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var saveData = SaveData.LoadSafe();
-            saveData.playerData.isTrueEndRoot = valueResolver.Resolve(container);
+            saveData.playerData.isTrueEndRoute = valueResolver.Resolve(container);
             saveData.Save();
             return UniTask.CompletedTask;
         }
