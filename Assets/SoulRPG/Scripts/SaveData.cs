@@ -49,7 +49,7 @@ namespace SoulRPG
 
             public int badEndCount;
 
-            public bool isTrueEndRoot;
+            public bool isTrueEndRoute;
         }
 
         [Serializable]
