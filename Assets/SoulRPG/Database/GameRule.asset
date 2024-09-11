@@ -89,3 +89,5 @@ MonoBehaviour:
   knifeCountMax: 9
   pinchThreshold: 0.3
   debugAddExperience: 39207
+  defaultSealedName: "\u30EB\u30AF\u30B9\u30AA\u30E9"
+  sealedNameSubmitSequences: {fileID: 11400000, guid: e26cb4fae1bbc4fba866ef1603dec31c, type: 2}

@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnitySequencerSystem;
 
 namespace SoulRPG
 {
@@ -37,14 +38,21 @@ namespace SoulRPG
                         await DialogView.ConfirmAsync(dialogDocumentPrefab, "名前を入力してください。", new[] { "確認" }, 0, scope);
                         AudioManager.PlaySfx("Sfx.Message.0");
                         EventSystem.current.SetSelectedGameObject(inputField.gameObject);
-                        return;
                     }
                     else if (inputField.text.Length > 10)
                     {
                         await DialogView.ConfirmAsync(dialogDocumentPrefab, "名前は10文字以内で入力してください。", new[] { "確認" }, 0, scope);
                         AudioManager.PlaySfx("Sfx.Message.0");
                         EventSystem.current.SetSelectedGameObject(inputField.gameObject);
-                        return;
+                    }
+                    else if (inputField.text == SaveData.LoadSafe().playerData.sealedName)
+                    {
+                        document.gameObject.SetActive(false);
+                        var container = new Container();
+                        var sequencer = new Sequencer(container, TinyServiceLocator.Resolve<GameRule>().SealedNameSubmitSequences);
+                        await sequencer.PlayAsync(scope);
+                        EventSystem.current.SetSelectedGameObject(inputField.gameObject);
+                        document.gameObject.SetActive(true);
                     }
                     else
                     {

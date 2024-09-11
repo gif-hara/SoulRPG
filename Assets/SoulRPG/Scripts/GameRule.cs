@@ -85,6 +85,14 @@ namespace SoulRPG
         private int debugAddExperience;
         public int DebugAddExperience => debugAddExperience;
 
+        [SerializeField]
+        private string defaultSealedName;
+        public string DefaultSealedName => defaultSealedName;
+        
+        [SerializeField]
+        private ScriptableSequences sealedNameSubmitSequences;
+        public List<ISequence> SealedNameSubmitSequences => sealedNameSubmitSequences.Sequences;
+
         [Serializable]
         public class ExperienceTableData
         {

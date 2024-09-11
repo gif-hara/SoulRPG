@@ -44,6 +44,8 @@ namespace SoulRPG
         public class PlayerData
         {
             public string name;
+
+            public string sealedName;
         }
 
         [Serializable]

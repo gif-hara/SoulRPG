@@ -205,6 +205,12 @@ namespace SoulRPG.SceneControllers
                     gameEvents.OnRequestChangeDungeon.OnNext(debugDungeonName);
                 }
 
+                if (string.IsNullOrEmpty(saveData.playerData.sealedName))
+                {
+                    saveData.playerData.sealedName = gameRule.DefaultSealedName;
+                    saveData.Save();
+                }
+
                 if (string.IsNullOrEmpty(saveData.playerData.name))
                 {
                     inputController.PushInputType(InputController.InputType.UI);
