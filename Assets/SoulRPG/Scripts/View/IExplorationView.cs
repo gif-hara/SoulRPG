@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using HK;
 using UnityEngine;
 
 namespace SoulRPG
@@ -9,5 +10,7 @@ namespace SoulRPG
     public interface IExplorationView
     {
         UniTask OnOpenDoorAsync(DungeonInstanceWallData wallData);
+        
+        HKUIDocument GetFloorEventDocument(DungeonInstanceFloorData data);
     }
 }

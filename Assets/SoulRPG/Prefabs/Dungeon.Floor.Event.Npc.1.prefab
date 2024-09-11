@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3700367649004095603}
   - component: {fileID: 2896019362783645941}
   m_Layer: 0
-  m_Name: Particle System.1
+  m_Name: Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3396300704266703543}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -4877,4 +4877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0bca0e48c915f4eae5e0e88e6c9227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elements: []
+  elements:
+  - document: {fileID: 3396300704266703543}
+    overrideName: 

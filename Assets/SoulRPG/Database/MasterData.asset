@@ -13383,7 +13383,7 @@ MonoBehaviour:
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 25
-      BattleBgmId: 1
+      BattleBgmId: 2
       SequencesId: 19909
       FieldOfVision: 0
       MoveIntervalSeconds: 1

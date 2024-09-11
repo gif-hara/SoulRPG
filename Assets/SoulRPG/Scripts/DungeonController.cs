@@ -436,6 +436,7 @@ namespace SoulRPG
             inputController.PushInputType(InputController.InputType.UI);
             var container = new Container();
             container.Register<DungeonInstanceFloorData>("CurrentEvent", sequenceData);
+            container.Register("CurrentViewDocument", view.GetFloorEventDocument(sequenceData));
             await new Sequencer(container, sequenceData.Sequences.Sequences).PlayAsync(scope.Token);
             inputController.PopInputType();
             EnterAsync(character).Forget();

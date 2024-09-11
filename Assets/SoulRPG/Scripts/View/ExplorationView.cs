@@ -23,7 +23,7 @@ namespace SoulRPG
 
         private readonly Character character;
 
-        private readonly Dictionary<DungeonInstanceFloorData, GameObject> dungeonFloorEventObjects = new();
+        private readonly Dictionary<DungeonInstanceFloorData, HKUIDocument> dungeonFloorEventObjects = new();
 
         private readonly Dictionary<DungeonInstanceFloorData, GameObject> maptipFloorEventObjects = new();
 
@@ -76,7 +76,7 @@ namespace SoulRPG
         {
             foreach (var i in dungeonFloorEventObjects)
             {
-                Object.Destroy(i.Value);
+                Object.Destroy(i.Value.gameObject);
             }
             dungeonFloorEventObjects.Clear();
             foreach (var i in maptipFloorEventObjects)
@@ -320,9 +320,9 @@ namespace SoulRPG
 
             foreach (var (position, floorData) in dungeonController.FloorDatabase)
             {
-                var eventObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Floor.Event.{floorData.ViewName}"), dungeonDocument.transform);
-                eventObject.position = new Vector3(position.x, 0, position.y);
-                dungeonFloorEventObjects.Add(floorData, eventObject.gameObject);
+                var eventObject = Object.Instantiate(dungeonDocument.Q<HKUIDocument>($"Dungeon.Floor.Event.{floorData.ViewName}"), dungeonDocument.transform);
+                eventObject.transform.position = new Vector3(position.x, 0, position.y);
+                dungeonFloorEventObjects.Add(floorData, eventObject);
             }
             foreach (var i in dungeonController.WallDatabase)
             {
@@ -490,6 +490,11 @@ namespace SoulRPG
                 dungeonElement.Q("Close").SetActive(false);
             }
             return UniTask.CompletedTask;
+        }
+
+        public HKUIDocument GetFloorEventDocument(DungeonInstanceFloorData data)
+        {
+            return dungeonFloorEventObjects[data];
         }
     }
 }
