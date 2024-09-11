@@ -93,3 +93,9 @@ MonoBehaviour:
   defaultSealedName: "\u30EB\u30AF\u30B9\u30AA\u30E9"
   sealedNameSubmitSequences: {fileID: 11400000, guid: e26cb4fae1bbc4fba866ef1603dec31c, type: 2}
   gameTitle: "\u8EE2\u751F<size=75%>\u306E</size><size=120%>{SealedName}</size>"
+  defaultPlayerNames:
+  - "\u30AB\u30A4\u30F3"
+  - "\u30BB\u30EA\u30A6\u30B9"
+  - "\u30EA\u30FC\u30D5"
+  - "\u30A2\u30C3\u30B7\u30E5"
+  - "\u30B6\u30A4\u30F3"

@@ -97,6 +97,10 @@ namespace SoulRPG
         private string gameTitle;
         public string GameTitle => gameTitle;
 
+        [SerializeField]
+        private List<string> defaultPlayerNames;
+        public List<string> DefaultPlayerNames => defaultPlayerNames;
+
         [Serializable]
         public class ExperienceTableData
         {
