@@ -23,6 +23,7 @@ MonoBehaviour:
   - rid: 6455563979381276777
   - rid: 6455563979381276775
   - rid: 6455563979381276778
+  - rid: 6455563979381276784
   - rid: 6455563979381276773
   - rid: 6455563979381276780
   - rid: 6455563979381276783
@@ -112,3 +113,12 @@ MonoBehaviour:
       type: {class: PlayBgm, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         bgmName: Bgm.Exploration.0
+    - rid: 6455563979381276784
+      type: {class: AddBadEndCount, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        addValueResolver:
+          rid: 6455563979381276785
+    - rid: 6455563979381276785
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
