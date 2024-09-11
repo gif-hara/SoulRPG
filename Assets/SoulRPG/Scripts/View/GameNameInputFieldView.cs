@@ -27,6 +27,12 @@ namespace SoulRPG
             var source = new UniTaskCompletionSource<string>();
             var inputField = document.Q<TMP_InputField>("InputField");
             var submitButton = document.Q<Button>("Button.Submit");
+            var gameRule = TinyServiceLocator.Resolve<GameRule>();
+            var saveData = SaveData.LoadSafe();
+            var defaultPlayerName = saveData.playerData.sealedName == gameRule.DefaultSealedName
+                ? gameRule.DefaultPlayerNames[Random.Range(0, gameRule.DefaultPlayerNames.Count)]
+                : saveData.playerData.sealedName;
+            inputField.text = defaultPlayerName;
 
             submitButton
                 .OnClickAsObservable()
