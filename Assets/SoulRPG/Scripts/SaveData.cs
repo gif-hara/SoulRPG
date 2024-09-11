@@ -46,6 +46,8 @@ namespace SoulRPG
             public string name;
 
             public string sealedName;
+            
+            public int badEndCount;
         }
 
         [Serializable]
