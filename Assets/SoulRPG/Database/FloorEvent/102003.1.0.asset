@@ -25,6 +25,7 @@ MonoBehaviour:
   - rid: 1651571015951581512
   - rid: 1651571015951581513
   - rid: 1651571015951581514
+  - rid: 6455563984491249775
   references:
     version: 2
     RefIds:
@@ -116,3 +117,12 @@ MonoBehaviour:
       type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
         value: Dungeon.10701
+    - rid: 6455563984491249775
+      type: {class: SetIsTrueEndRoute, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        valueResolver:
+          rid: 6455563984491249776
+    - rid: 6455563984491249776
+      type: {class: BooleanResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
