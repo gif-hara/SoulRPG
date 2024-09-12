@@ -175,7 +175,7 @@ namespace SoulRPG.SceneControllers
 #endif
                 if (string.IsNullOrEmpty(saveData.playerData.sealedName))
                 {
-                    saveData.playerData.sealedName = gameRule.DefaultSealedName;
+                    saveData.playerData.sealedName = gameRule.DefaultSealedName.Localized();
                     saveData.Save();
                 }
                 if (!isDebugIgnoreTitleScreen)
