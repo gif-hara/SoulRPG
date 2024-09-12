@@ -16,5 +16,7 @@ namespace SoulRPG
         public readonly Subject<MasterData.Ailment> OnRemoveAilment = new();
 
         public readonly Subject<int> OnRecoveryHitPoint = new();
+
+        public readonly Subject<int> OnRecoveryStamina = new();
     }
 }

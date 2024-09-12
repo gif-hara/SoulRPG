@@ -221,6 +221,13 @@ namespace SoulRPG
             return UniTask.CompletedTask;
         }
 
+        public UniTask RecoveryStaminaAsync(int recovery)
+        {
+            BattleStatus.AddStamina(recovery);
+            Events.OnRecoveryStamina.OnNext(recovery);
+            return UniTask.CompletedTask;
+        }
+
         public async UniTask BeginBattleAsync(BattleCharacter target)
         {
             if (Equipment != null)
