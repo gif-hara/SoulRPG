@@ -17,14 +17,14 @@ namespace SoulRPG
     {
         [SerializeReference, SubclassSelector]
         private IntResolver enemyIdResolver;
-        
+
         public async UniTask PlayAsync(Container container, CancellationToken cancellationToken)
         {
             var result = await TinyServiceLocator.Resolve<DungeonController>().BeginBattleAsync(
                 TinyServiceLocator.Resolve<Character>("Player"),
                 enemyIdResolver.Resolve(container)
             );
-            container.Register("BattleResult", result == Define.BattleResult.PlayerWin ? 0 : 1);
+            container.RegisterOrReplace("BattleResult", result == Define.BattleResult.PlayerWin ? 0 : 1);
         }
     }
 }
