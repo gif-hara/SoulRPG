@@ -19,6 +19,10 @@ MonoBehaviour:
   - rid: 6455564006432178184
   - rid: 6455564006432178188
   - rid: 6455564006432178189
+  - rid: 6455564006432178264
+  - rid: 6455564006432178262
+  - rid: 6455564006432178265
+  - rid: 6455564006432178263
   references:
     version: 2
     RefIds:
@@ -71,3 +75,20 @@ MonoBehaviour:
         from: {r: 0, g: 0, b: 0, a: 0}
         to: {r: 0, g: 0, b: 0, a: 1}
         duration: 3
+    - rid: 6455564006432178262
+      type: {class: BeginFadeTo, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        to: {r: 0, g: 0, b: 0, a: 0}
+        duration: 0
+    - rid: 6455564006432178263
+      type: {class: OpenEndCreditsView, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        documentPrefab: {fileID: 3672498495014125879, guid: fa1eadcddb6334d489d99c55d95f89a6, type: 3}
+    - rid: 6455564006432178264
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 3
+    - rid: 6455564006432178265
+      type: {class: PlayBgm, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        bgmName: Bgm.EndCredits.0
