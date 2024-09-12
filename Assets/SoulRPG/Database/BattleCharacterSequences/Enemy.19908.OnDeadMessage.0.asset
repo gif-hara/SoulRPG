@@ -10,42 +10,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: Enemy.19901.OnDeadMessage.2
+  m_Name: Enemy.19908.OnDeadMessage.0
   m_EditorClassIdentifier: 
   sequences:
   - rid: 9047573762785673730
   - rid: 9047573762785673731
   - rid: 9047573762785673732
-  - rid: 1651571015951581530
+  - rid: 1651571015951581539
   references:
     version: 2
     RefIds:
-    - rid: 1651571015951581530
+    - rid: 1651571015951581539
       type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         elements:
         - evaluator:
-            rid: 1651571015951581531
-          sequences: {fileID: 11400000, guid: 4c48ee41e3e1543938f4fe0ffc49c78d, type: 2}
-    - rid: 1651571015951581531
+            rid: 1651571015951581540
+          sequences: {fileID: 11400000, guid: 5771e8137861b4d238e4012ff9454754, type: 2}
+    - rid: 1651571015951581540
       type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
         value: 1
     - rid: 9047573762785673730
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u300C\u8CB4\u69D8\u30FB\u30FB\u30FB\u305D\u306E\u529B\u306F\u30FB\u30FB\u30FB\u300D"
+        format: "{Actor}\u300C\u304F\u305D\u30FB\u30FB\u30FB\u3053\u308C\u3067\u3082\u99C4\u76EE\u306A\u306E\u304B\u30FB\u30FB\u30FB\uFF01\u300D"
         sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0
     - rid: 9047573762785673731
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u300C\u307E\u3055\u304B\u30FB\u30FB\u30FB<color=#FFAAAA>{SealedName}</color>\u306A\u306E\u304B\u30FB\u30FB\u30FB\uFF1F\u300D"
+        format: "{Actor}\u300C\u884C\u304F\u306A\uFF01{Target}\uFF01\u300D"
         sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0
     - rid: 9047573762785673732
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u300C\u3050\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u300D"
+        format: "{Actor}\u300C\u304A\u524D\u306F\u30FB\u30FB\u30FB\u304A\u524D\u306F\u30FB\u30FB\u30FB\uFF01\u300D"
         sfxName: Sfx.Message.0
         ignoreIfCharacterDead: 0

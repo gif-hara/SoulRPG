@@ -13,49 +13,47 @@ MonoBehaviour:
   m_Name: Enemy.19908.OnDeadMessage
   m_EditorClassIdentifier: 
   sequences:
-  - rid: 9047573762785673730
-  - rid: 9047573762785673731
-  - rid: 9047573762785673732
-  - rid: 9047573712770170971
-  - rid: 9047573712770170969
-  - rid: 9047573875847332061
+  - rid: 1651571015951581532
+  - rid: 1651571015951581534
   references:
     version: 2
     RefIds:
-    - rid: 9047573712770170969
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+    - rid: 1651571015951581532
+      type: {class: RegisterContainerBadEndCount, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u3092\u5012\u3057\u305F\u3002"
-        sfxName: Sfx.Defeat.0
-        ignoreIfCharacterDead: 0
-    - rid: 9047573712770170971
-      type: {class: BeginAnimationGameEnemyView, ns: SoulRPG, asm: Assembly-CSharp}
+        keyResolver:
+          rid: 1651571015951581533
+    - rid: 1651571015951581533
+      type: {class: StringResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
       data:
-        animationName: Animation.OnDeadMessage.Boss
-    - rid: 9047573762785673730
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+        value: BadEndCount
+    - rid: 1651571015951581534
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u300C\u304F\u305D\u30FB\u30FB\u30FB\u3053\u308C\u3067\u3082\u99C4\u76EE\u306A\u306E\u304B\u30FB\u30FB\u30FB\uFF01\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 9047573762785673731
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
+        elements:
+        - evaluator:
+            rid: 1651571015951581535
+          sequences: {fileID: 11400000, guid: 27ed858fd45c8403fb169903980b71fd, type: 2}
+        - evaluator:
+            rid: 1651571015951581538
+          sequences: {fileID: 11400000, guid: f59eea9388afe450cb003e47397ea678, type: 2}
+    - rid: 1651571015951581535
+      type: {class: CompareInt, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
-        format: "{Actor}\u300C\u884C\u304F\u306A\uFF01{Target}\uFF01\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 9047573762785673732
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "{Actor}\u300C\u304A\u524D\u306F\u30FB\u30FB\u30FB\u304A\u524D\u306F\u30FB\u30FB\u30FB\uFF01\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 9047573875847332061
-      type: {class: AddPlayerBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
+        targetResolver:
+          rid: 1651571015951581536
         valueResolver:
-          rid: 9047573875847332062
-    - rid: 9047573875847332062
+          rid: 1651571015951581537
+        compareType: 0
+    - rid: 1651571015951581536
+      type: {class: IntResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: BadEndCount
+    - rid: 1651571015951581537
       type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 1651571015951581538
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
         value: 1
