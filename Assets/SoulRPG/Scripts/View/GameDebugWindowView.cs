@@ -352,7 +352,7 @@ namespace SoulRPG
                                         player.Equipment.Clear();
                                         var itemTables = TinyServiceLocator.Resolve<MasterData>().ItemTables.Get(x)
                                             .OrderBy(y => UnityEngine.Random.value)
-                                            .Take(15);
+                                            .Take(30);
                                         foreach (var i in itemTables)
                                         {
                                             player.Inventory.Add(i.ItemId, 1);
