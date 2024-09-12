@@ -14,25 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - rid: 7538228103530414196
-  - rid: 7538228103530414687
+  - rid: 6455564002389917773
   references:
     version: 2
     RefIds:
-    - rid: 3022426235333247054
-      type: {class: Percentage, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
+    - rid: 6455564002389917773
+      type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
-        rate: 0.015
+        elements:
+        - evaluator:
+            rid: 6455564002389917776
+          sequences: {fileID: 11400000, guid: 3a73aae3c04518e428af9b22ed95fe87, type: 2}
+        - evaluator:
+            rid: 6455564002389917774
+          sequences: {fileID: 11400000, guid: f7a29bfa398746e4b9cc3649bb87b3ae, type: 2}
+    - rid: 6455564002389917774
+      type: {class: BattleCharacterAllyType, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        allyType: 1
+    - rid: 6455564002389917776
+      type: {class: BattleCharacterAllyType, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        allyType: 0
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         format: "{Actor}\u306E\u721B\u308C\u706B\u50B7\u304C\u3055\u3089\u306B\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u308B\u3002"
         sfxName: Sfx.Message.8
         ignoreIfCharacterDead: 0
-    - rid: 7538228103530414687
-      type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        damageCalculator:
-          rid: 3022426235333247054
-        targetType: 0
-        giveDamageType: 1
-        sfxName: Sfx.Message.2
