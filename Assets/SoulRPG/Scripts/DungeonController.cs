@@ -562,15 +562,23 @@ namespace SoulRPG
             var battleSystem = new BattleSystem(playerCharacter, enemyCharacter);
             var battleResult = await battleSystem.BeginAsync(scope.Token);
             character.InstanceStatus.ResetGuardPoint();
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
             if (battleResult == Define.BattleResult.PlayerWin)
             {
+                if (masterDataEnemy.PlayBgmIfDefeated)
+                {
+                    TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
+                }
+                else
+                {
+                    AudioManager.StopBgm();
+                }
                 var addExperience = await playerCharacter.AilmentController.OnCalculateAddExperienceAsync(enemyCharacter.BattleStatus.Experience);
                 character.InstanceStatus.AddExperience(addExperience);
                 await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"<color=#88FF88>{addExperience}</color>の経験値を獲得した。", "Sfx.AcquireExperience.0"));
             }
             else
             {
+                TinyServiceLocator.Resolve<GameEvents>().OnRequestPlayBgm.OnNext("Bgm.Exploration.0");
                 character.ResetAll();
                 Setup(homeDungeonName, character);
                 DisposeScope();
