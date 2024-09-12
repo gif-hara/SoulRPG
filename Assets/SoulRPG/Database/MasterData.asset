@@ -13432,11 +13432,11 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: c235d59e597fb4ae7bee5b8dff879ee5, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 2ee7fe8726be04a58841a6ed77d8cf68, type: 2}
     - Id: 19909
-      Name: "\u8EE2\u751F\u306E\u30EB\u30AF\u30B9\u30AA\u30E9"
+      Name: "\u8EE2\u751F\u306E{SealedName}"
       HitPoint: 6885
       Stamina: 0
-      PhysicalAttack: 66
-      MagicalAttack: 66
+      PhysicalAttack: 59
+      MagicalAttack: 59
       SlashCutRate: 0.15
       BlowCutRate: 0.13
       ThrustCutRate: 0.19
@@ -13456,11 +13456,11 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 9ff4f8c3ead8a4b1590ebb5f10249663, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 5cc432970e21a49339e62f55020746a4, type: 2}
     - Id: 19910
-      Name: "\u518D\u751F\u3068\u7834\u58CA\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
-      HitPoint: 8769
+      Name: "\u9EC4\u6CC9\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
+      HitPoint: 7047
       Stamina: 0
-      PhysicalAttack: 74
-      MagicalAttack: 74
+      PhysicalAttack: 56
+      MagicalAttack: 56
       SlashCutRate: 0.13
       BlowCutRate: 0.16
       ThrustCutRate: 0.15
@@ -13477,14 +13477,14 @@ MonoBehaviour:
       FieldOfVision: 0
       MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: eb5714632631d4abd8df02f148565292, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      AISequences: {fileID: 11400000, guid: 0568950a7c5f74cca9b2701d7cbcb36a, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: fbdb00ac6f5e57e4fba0ea5429e9ee06, type: 2}
     - Id: 19911
-      Name: "\u7834\u58CA\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
+      Name: "\u7834\u58CA\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
       HitPoint: 8769
       Stamina: 0
-      PhysicalAttack: 74
-      MagicalAttack: 74
+      PhysicalAttack: 45
+      MagicalAttack: 45
       SlashCutRate: 0.13
       BlowCutRate: 0.16
       ThrustCutRate: 0.15
@@ -13494,14 +13494,14 @@ MonoBehaviour:
       Speed: 22
       Experience: 102000
       BehaviourPoint: 1
-      Attribute: 0
+      Attribute: 1
       ThumbnailId: 39
       BattleBgmId: 3
       SequencesId: 19911
       FieldOfVision: 0
       MoveIntervalSeconds: 1
       Thumbnail: {fileID: 21300000, guid: 079e254c273fe114db76cd2855431577, type: 3}
-      AISequences: {fileID: 11400000, guid: a5c4691a713914d348edd4b60db81686, type: 2}
+      AISequences: {fileID: 11400000, guid: 558bf9721e55440919c0d80038b9c8aa, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: baf8a5e1c1bd2a74dbc4f2dc22909074, type: 2}
   ailments:
     list:
@@ -13835,6 +13835,12 @@ MonoBehaviour:
       CanReset: 0
       Sequences: {fileID: 11400000, guid: 1e1f35b5921cc4621a3f4a5edf654574, type: 2}
       IsDebuff: 0
+    - Id: 101056
+      Name: "\u9EC4\u91D1\u8272\u306E\u9B42\u306E\u52A0\u8B77"
+      Description: "\u304B\u3064\u3066\u306E\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u529B\u3092\u6388\u304B\u3063\u305F\u72B6\u614B\u3002\u30BF\u30FC\u30F3\u958B\u59CB\u6642\u306BBP\u304C2\u56DE\u5FA9\u3059\u308B\u3002"
+      CanReset: 0
+      Sequences: {fileID: 11400000, guid: 1bc2d715127ed480e95b7abdb9ba9cec, type: 2}
+      IsDebuff: 0
   enemyTables:
     list:
     - Key: 1
@@ -14041,4 +14047,6 @@ MonoBehaviour:
     - Sequences: {fileID: 11400000, guid: 3877a5af9ff81754485b0107f960d654, type: 2}
     - Sequences: {fileID: 11400000, guid: bb01bcd351b6b174ba23b9411409d409, type: 2}
     - Sequences: {fileID: 11400000, guid: 957459ecb7c0b6545b001e88d8385421, type: 2}
+    - Sequences: {fileID: 11400000, guid: 5e05ae51aa803a74cb6e21c311ca4773, type: 2}
+    - Sequences: {fileID: 11400000, guid: 39a0fd6e62cadca459e7a9ccbd6490dc, type: 2}
     - Sequences: {fileID: 11400000, guid: 7682032c6f9487d42bd91aaa99185578, type: 2}
