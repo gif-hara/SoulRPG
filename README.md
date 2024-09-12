@@ -6,12 +6,14 @@
 - 戦闘
     - https://dova-s.jp/bgm/play493.html
     - https://dova-s.jp/bgm/play13722.html
-    - 候補
-        - https://dova-s.jp/bgm/play10532.html
-        - https://dova-s.jp/bgm/play12944.html
-        - https://dova-s.jp/bgm/play12678.html
+    - https://dova-s.jp/bgm/play12944.html
+    - https://dova-s.jp/bgm/play12678.html
+- エンドクレジット
+    - https://dova-s.jp/bgm/play13024.html
 ## UI
 - https://game-icons.net/
+
+エアリーは、強き魂を求め続け、無意識にルクスオラたちを鎖で縛り上げていた。破壊の神としての宿命を背負いながら、自らが倒されることなど想像すらしなかったのだろう。しかし、外の世界から訪れた存在――ユーザーだけがその鎖を断ち切る力を持っていた。全ての魂は解放され、世界はその役目を終えた。残されたのは、何もない静寂。そして、その静寂の中に、久しく忘れられた平穏が静かに広がっていた。
 
 【リリースノート】
 v0.23（2024/09/13）
