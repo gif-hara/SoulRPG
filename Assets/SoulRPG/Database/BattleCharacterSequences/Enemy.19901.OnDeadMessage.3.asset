@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
-  m_Name: Enemy.19901.OnDeadMessage
+  m_Name: Enemy.19901.OnDeadMessage.3
   m_EditorClassIdentifier: 
   sequences:
-  - rid: 9047573762785673730
-  - rid: 9047573762785673731
-  - rid: 9047573762785673732
   - rid: 9047573712770170971
   - rid: 9047573712770170969
   - rid: 9047573875847332061
@@ -33,24 +30,6 @@ MonoBehaviour:
       type: {class: BeginAnimationGameEnemyView, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         animationName: Animation.OnDeadMessage.Boss
-    - rid: 9047573762785673730
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "{Actor}\u300C\u8CB4\u69D8\u30FB\u30FB\u30FB\u305D\u306E\u529B\u306F\u30FB\u30FB\u30FB\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 9047573762785673731
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "{Actor}\u300C\u305D\u3046\u304B\u30FB\u30FB\u30FB\u79C1\u3067\u306F\u7121\u3044\u306E\u304B\u30FB\u30FB\u30FB\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
-    - rid: 9047573762785673732
-      type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
-      data:
-        format: "{Actor}\u300C\u3050\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u300D"
-        sfxName: Sfx.Message.0
-        ignoreIfCharacterDead: 0
     - rid: 9047573875847332061
       type: {class: AddPlayerBehaviourPoint, ns: SoulRPG, asm: Assembly-CSharp}
       data:
