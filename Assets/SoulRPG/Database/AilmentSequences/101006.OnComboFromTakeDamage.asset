@@ -21,7 +21,7 @@ MonoBehaviour:
     - rid: 3022426235333247054
       type: {class: Percentage, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        rate: 0.02
+        rate: 0.015
     - rid: 7538228103530414196
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
