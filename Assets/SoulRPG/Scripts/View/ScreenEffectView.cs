@@ -55,6 +55,16 @@ namespace SoulRPG
                         .Forget();
                 })
                 .RegisterTo(scope);
+            battleCharacter.Events.OnRecoveryStamina
+                .Subscribe(document, (_x, _document) =>
+                {
+                    _document
+                        .Q<HKUIDocument>("Sequences")
+                        .Q<SequenceMonobehaviour>("Animation.OnRecoveryHitPoint")
+                        .PlayAsync(scope)
+                        .Forget();
+                })
+                .RegisterTo(scope);
         }
 
         public UniTask PlayAsync(string animationName, CancellationToken scope)
