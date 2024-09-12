@@ -181,7 +181,7 @@ MonoBehaviour:
     physicalStrength: 34
     magicalStrength: 10
     speed: 21
-    behaviourPoint: 5
+    behaviourPoint: 6
   isUseDebugGrowthParameter: 1
   debugPlayerName: "\u30D7\u30EC\u30A4\u30E4\u30FC"
   isDebugIgnoreNameInput: 0
