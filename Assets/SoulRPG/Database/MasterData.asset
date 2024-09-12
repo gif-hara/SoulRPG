@@ -13433,18 +13433,18 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 2ee7fe8726be04a58841a6ed77d8cf68, type: 2}
     - Id: 19909
       Name: "\u8EE2\u751F\u306E{SealedName}"
-      HitPoint: 6885
+      HitPoint: 8208
       Stamina: 0
       PhysicalAttack: 59
       MagicalAttack: 59
-      SlashCutRate: 0.15
-      BlowCutRate: 0.13
-      ThrustCutRate: 0.19
-      MagicCutRate: 0.18
-      FireCutRate: 0.06
-      ThunderCutRate: 0.06
+      SlashCutRate: 0.24
+      BlowCutRate: 0.26
+      ThrustCutRate: 0.22
+      MagicCutRate: 0.2
+      FireCutRate: 0.18
+      ThunderCutRate: 0.18
       Speed: 20
-      Experience: 102000
+      Experience: 78552
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 25
@@ -13468,7 +13468,7 @@ MonoBehaviour:
       FireCutRate: 0.18
       ThunderCutRate: 0.14
       Speed: 22
-      Experience: 102000
+      Experience: 78552
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 22
@@ -13483,8 +13483,8 @@ MonoBehaviour:
       Name: "\u7834\u58CA\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
       HitPoint: 8769
       Stamina: 0
-      PhysicalAttack: 45
-      MagicalAttack: 45
+      PhysicalAttack: 56
+      MagicalAttack: 56
       SlashCutRate: 0.13
       BlowCutRate: 0.16
       ThrustCutRate: 0.15
@@ -13492,7 +13492,7 @@ MonoBehaviour:
       FireCutRate: 0.18
       ThunderCutRate: 0.14
       Speed: 22
-      Experience: 102000
+      Experience: 78552
       BehaviourPoint: 1
       Attribute: 1
       ThumbnailId: 39
