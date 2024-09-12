@@ -37,6 +37,7 @@ namespace SoulRPG
             SetValue("CutRate.Fire", $"{character.Equipment.TotalFireCutRate.ToPercentage():0.00}%");
             SetValue("CutRate.Magic", $"{character.Equipment.TotalMagicCutRate.ToPercentage():0.00}%");
             SetValue("CutRate.Thunder", $"{character.Equipment.TotalThunderCutRate.ToPercentage():0.00}%");
+            document.Q<TMP_Text>("Name").text = character.Name;
 
             void SetValue(string key, string value)
             {
