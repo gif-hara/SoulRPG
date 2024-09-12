@@ -368,7 +368,7 @@ namespace SoulRPG
                 {
                     if (dungeonFloorEventObjects.TryGetValue(x, out var obj))
                     {
-                        Object.Destroy(obj);
+                        Object.Destroy(obj.gameObject);
                         dungeonFloorEventObjects.Remove(x);
                     }
                 })
