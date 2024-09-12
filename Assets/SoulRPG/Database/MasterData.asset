@@ -9355,6 +9355,11 @@ MonoBehaviour:
       ThumbnailId: Accessory.24
       Thumbnail: {fileID: 21300000, guid: 5c8d6d56237387a4181fe8752bf1c59f, type: 3}
       Description: "\u7570\u56FD\u304B\u3089\u3082\u305F\u3089\u3055\u308C\u305F\u6280\u8853\u306E\u7C8B\u3092\u96C6\u3081\u305F\u88C5\u7F6E\u3002\u6575\u306B\u5411\u3051\u308B\u3053\u3068\u3067\u3001\u77AC\u6642\u306B\u305D\u306E\u30B9\u30C6\u30FC\u30BF\u30B9\u3092\u89E3\u6790\u3057\u3001\u5F31\u70B9\u3084\u96A0\u3055\u308C\u305F\u529B\u3092\u66B4\u304D\u51FA\u3059\u3002\u6301\u3061\u4E3B\u306E\u6226\u8853\u3092\u98DB\u8E8D\u7684\u306B\u9AD8\u3081\u308B\u3060\u308D\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u30A2\u30CA\u30E9\u30A4\u30BA\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+    - Name: "\u30A8\u30CA\u30B8\u30FC\u30C9\u30EA\u30F3\u30AF"
+      Id: 106036
+      ThumbnailId: Accessory.25
+      Thumbnail: {fileID: -2448025005941029638, guid: 9e314885edfc44e409c0b234cf16987f, type: 3}
+      Description: "\u98F2\u3080\u3060\u3051\u3067\u77AC\u6642\u306B\u30A8\u30CD\u30EB\u30AE\u30FC\u304C\u6E67\u304D\u4E0A\u304C\u308A\u3001\u75B2\u308C\u3092\u5439\u304D\u98DB\u3070\u3059\u9B54\u6CD5\u306E\u98F2\u6599\u3002\u6226\u95D8\u4E2D\u3067\u3082\u7D20\u65E9\u304F\u30B9\u30BF\u30DF\u30CA\u3092\u56DE\u5FA9\u3057\u3001\u6301\u4E45\u529B\u3092\u6700\u5927\u9650\u306B\u5F15\u304D\u51FA\u3059\u52B9\u679C\u3092\u6301\u3064\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6C17\u529B\u56DE\u5FA9\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
     - Name: "\u9244\u306E\u9375"
       Id: 107001
       ThumbnailId: 
@@ -9881,6 +9886,11 @@ MonoBehaviour:
         ItemId: 106035
         Count: 1
         Weight: 100
+      - Id: 0
+        TableId: 2
+        ItemId: 106036
+        Count: 1
+        Weight: 100
     - Key: 3
       Value:
       - Id: 0
@@ -10236,6 +10246,11 @@ MonoBehaviour:
       - Id: 0
         TableId: 3
         ItemId: 106035
+        Count: 1
+        Weight: 100
+      - Id: 0
+        TableId: 3
+        ItemId: 106036
         Count: 1
         Weight: 100
     - Key: 99
@@ -11149,7 +11164,7 @@ MonoBehaviour:
       NeedBehaviourPoint: 2
       NeedStamina: 3
       CanRegisterUsedSkills: 1
-      Description: "\u8E0F\u307F\u8FBC\u3093\u3067\u5F37\u976D\u306A\u4F53\u52E2\u3092\u53D6\u308B\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u534A\u6E1B\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Description: "\u8E0F\u307F\u8FBC\u3093\u3067\u5F37\u976D\u306A\u4F53\u52E2\u3092\u53D6\u308B\u3002\u653B\u6483\u3092\u884C\u3044\u3001\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u8EFD\u6E1B\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: e23c3e48877384503a73ee18f32bd170, type: 2}
       AdditionalDescriptions:
       - SkillId: 101017
@@ -11952,7 +11967,7 @@ MonoBehaviour:
       NeedBehaviourPoint: 2
       NeedStamina: 9
       CanRegisterUsedSkills: 1
-      Description: "\u8056\u9A0E\u58EB\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u8056\u306A\u308B\u8B77\u308A\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u534A\u6E1B\u300D\u3068\u300C\u9B54\u529B\u306E\u76FE\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Description: "\u8056\u9A0E\u58EB\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u8056\u306A\u308B\u8B77\u308A\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u7269\u7406\u30C0\u30E1\u30FC\u30B8\u8EFD\u6E1B\u300D\u3068\u300C\u9B54\u529B\u306E\u76FE\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 238fcfc4b5788408389677b16e593ada, type: 2}
       AdditionalDescriptions:
       - SkillId: 101099
@@ -12637,6 +12652,14 @@ MonoBehaviour:
       Speed: 0
       BeginBattleSequencesId: 106035
       BeginBattleSequences: {fileID: 11400000, guid: c0208ec1e81db774dad1409749202d90, type: 2}
+    - ItemId: 106036
+      Vitality: 0
+      Stamina: 0
+      PhysicalAttack: 0
+      MagicalAttack: 0
+      Speed: 0
+      BeginBattleSequencesId: 106036
+      BeginBattleSequences: {fileID: 11400000, guid: 77df5c931b19c7648920a758b92dad7b, type: 2}
   enemies:
     list:
     - Id: 10101
@@ -13457,16 +13480,16 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: 5cc432970e21a49339e62f55020746a4, type: 2}
     - Id: 19910
       Name: "\u9EC4\u6CC9\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
-      HitPoint: 7047
+      HitPoint: 8748
       Stamina: 0
-      PhysicalAttack: 56
-      MagicalAttack: 56
-      SlashCutRate: 0.13
-      BlowCutRate: 0.16
-      ThrustCutRate: 0.15
-      MagicCutRate: 0.21
-      FireCutRate: 0.18
-      ThunderCutRate: 0.14
+      PhysicalAttack: 69
+      MagicalAttack: 69
+      SlashCutRate: 0.19
+      BlowCutRate: 0.22
+      ThrustCutRate: 0.21
+      MagicCutRate: 0.27
+      FireCutRate: 0.24
+      ThunderCutRate: 0.2
       Speed: 22
       Experience: 78552
       BehaviourPoint: 1
@@ -13481,16 +13504,16 @@ MonoBehaviour:
       BattleCharacterSequences: {fileID: 11400000, guid: fbdb00ac6f5e57e4fba0ea5429e9ee06, type: 2}
     - Id: 19911
       Name: "\u7834\u58CA\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
-      HitPoint: 8769
+      HitPoint: 9477
       Stamina: 0
-      PhysicalAttack: 56
-      MagicalAttack: 56
-      SlashCutRate: 0.13
-      BlowCutRate: 0.16
-      ThrustCutRate: 0.15
-      MagicCutRate: 0.21
-      FireCutRate: 0.18
-      ThunderCutRate: 0.14
+      PhysicalAttack: 75
+      MagicalAttack: 75
+      SlashCutRate: 0.19
+      BlowCutRate: 0.22
+      ThrustCutRate: 0.21
+      MagicCutRate: 0.27
+      FireCutRate: 0.24
+      ThunderCutRate: 0.2
       Speed: 22
       Experience: 78552
       BehaviourPoint: 1
@@ -13840,6 +13863,12 @@ MonoBehaviour:
       Description: "\u304B\u3064\u3066\u306E\u30EB\u30AF\u30B9\u30AA\u30E9\u306E\u529B\u3092\u6388\u304B\u3063\u305F\u72B6\u614B\u3002\u30BF\u30FC\u30F3\u958B\u59CB\u6642\u306BBP\u304C2\u56DE\u5FA9\u3059\u308B\u3002"
       CanReset: 0
       Sequences: {fileID: 11400000, guid: 1bc2d715127ed480e95b7abdb9ba9cec, type: 2}
+      IsDebuff: 0
+    - Id: 101057
+      Name: "\u6C17\u529B\u56DE\u5FA9"
+      Description: "\u5143\u6C17\u304C\u6F32\u3063\u3066\u3044\u308B\u3002\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306B\u30B9\u30BF\u30DF\u30CA\u304C\u5C11\u91CF\u56DE\u5FA9\u3059\u308B\u3002"
+      CanReset: 0
+      Sequences: {fileID: 11400000, guid: 84b2958048342704b8840f1b085150c4, type: 2}
       IsDebuff: 0
   enemyTables:
     list:
