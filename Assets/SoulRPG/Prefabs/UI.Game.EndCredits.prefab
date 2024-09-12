@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u30A8\u30F3\u30C9\u30ED\u30FC\u30EB"
+  m_text: Test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 472a231e2e073b84d84e124837aca817, type: 2}
   m_sharedMaterial: {fileID: 8758364018723936526, guid: 472a231e2e073b84d84e124837aca817, type: 2}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 6017992076423360798}
   - component: {fileID: 1880085780028888236}
   m_Layer: 0
-  m_Name: Area.EndRoll
+  m_Name: Area.EndCredits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -480,7 +480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4922851713471216797, guid: e54d68a6d5884844e820d71b07d0449a, type: 3}
       propertyPath: m_Name
-      value: UI.Game.EndRoll
+      value: UI.Game.EndCredits
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
