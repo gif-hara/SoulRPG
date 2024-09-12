@@ -78,7 +78,6 @@ namespace SoulRPG
 
         public async UniTask<bool> TurnStartAsync(BattleCharacter target)
         {
-            TurnCount++;
             UsedSkills.Clear();
             if (!await AilmentController.CanExecutableTurnAsync())
             {
@@ -89,6 +88,7 @@ namespace SoulRPG
             {
                 return false;
             }
+            TurnCount++;
             BattleStatus.RecoveryBehaviourPoint();
             await AilmentController.OnTurnStartAsync(this, target, scope.Token);
             await sequences.PlayOnBeginTurnAsync(this, scope.Token);
@@ -228,7 +228,7 @@ namespace SoulRPG
                 await Equipment.BeginBattleAsync(this, target, scope.Token);
             }
         }
-        
+
         public async UniTask AppearanceAsync(BattleCharacter target)
         {
             await sequences.PlayOnAppearanceAsync(this, target, scope.Token);
