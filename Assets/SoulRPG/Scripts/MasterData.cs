@@ -684,6 +684,8 @@ namespace SoulRPG
 
             public BattleCharacterSequences BattleCharacterSequences;
 
+            public bool PlayBgmIfDefeated;
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Enemy>
             {
