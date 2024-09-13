@@ -543,6 +543,10 @@ namespace SoulRPG
                 });
             var listDocument = GameListView.CreateWithPages(listDocumentPrefab, listElements, 0);
             var isEmpty = !listElements.Any();
+            if (isEmpty)
+            {
+                informationItemView.SetupAsEmpty();
+            }
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {
