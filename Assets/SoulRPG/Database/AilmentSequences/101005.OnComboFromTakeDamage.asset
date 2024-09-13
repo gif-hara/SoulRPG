@@ -18,6 +18,10 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 1651571214194311244
+      type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data:
+        value: 1
     - rid: 6455564002389917773
       type: {class: Selector, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -26,13 +30,8 @@ MonoBehaviour:
             rid: 6455564002389917776
           sequences: {fileID: 11400000, guid: 07154d751a209144fb1e6429673b114c, type: 2}
         - evaluator:
-            rid: 6455564002389917774
+            rid: 1651571214194311244
           sequences: {fileID: 11400000, guid: f4e32e9583988b849bf626c912faa04c, type: 2}
-    - rid: 6455564002389917774
-      type: {class: BattleCharacterAllyType, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
-      data:
-        targetType: 0
-        allyType: 1
     - rid: 6455564002389917776
       type: {class: BattleCharacterAllyType, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
