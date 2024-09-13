@@ -37,7 +37,7 @@ MonoBehaviour:
     - rid: 3022426215674019924
       type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
-        value: 4
+        value: 5
     - rid: 3022426215674019925
       type: {class: ContainsAilment, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
