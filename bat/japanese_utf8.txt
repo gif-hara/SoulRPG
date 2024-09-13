@@ -1,238 +1,0 @@
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/EasyCustomVFXUI/公式Dicordリンク.txt, 行番号: 1, 内容: Easy Custom VFXã»UI å¬å¼Discordã¯ä»¥ä¸ã«ãªãã¾ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/EasyCustomVFXUI/公式Dicordリンク.txt, 行番号: 2, 内容: è³¼å¥èã®ã¿ãåå å¯è½ã§ãã®ã§ãä»¥ä¸ã®ãªã³ã¯ãä»èã«å±æããç­ã®è¡çºã¯ãã·ã§ãé¡ããã¾ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/EasyCustomVFXUI/公式Dicordリンク.txt, 行番号: 5, 内容: ãããã®ã¢ã»ãããæ°ã«å¥ã£ããããã²SNSç­ã§åºãã¦ããã ããã¨å¹¸ãã§ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/EasyCustomVFXUI/公式Dicordリンク.txt, 行番号: 7, 内容: Vol2ã§ã¯ãããé«åº¦ãªã«ãã³ã¤ã¤ã¨ãã§ã¯ãéãå¶ä½äºå®ã§ããä»¥ä¸ãããæ¯æ´ããã ãã¾ãã¨ã¨ãVol2ã®å¶ä½ãæ©ã¾ãã¾ãã®ã§ãããã°ãè¦§ãã ããã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/EasyCustomVFXUI/公式Dicordリンク.txt, 行番号: 10, 内容: ä½èTwitter
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/EasyCustomVFXUI/License.txt, 行番号: 1, 内容: ä»¥ä¸HLSLã§è¨è¿°ãããã¹ã¯ãªããã¯ãMITã©ã¤ã»ã³ã¹ã®ã³ã¼ããä½¿ç¨ãã¦ãã¾ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/EasyCustomVFXUI/License.txt, 行番号: 4, 内容: HexagonTile.hlslãå«ãã§ããShaderGraphã¯ä»¥ä¸ã®éãã§ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/EasyCustomVFXUI/HowToSetup.txt, 行番号: 2, 内容: SetUpæ¹æ³ã«ã¤ãã¦ã¯ãä»¥ä¸ã®ãµã¤ãããç¢ºèªãã ããã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/IWeight.cs, 行番号: 7, 内容: /// éã¿ãæã¤ã¤ã³ã¿ã¼ãã§ã¤ã¹
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/IWeight.cs, 行番号: 12, 内容: /// éã¿
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/GoogleSpreadSheetDownloader.cs, 行番号: 19, 内容: // ã¨ã©ã¼å¦ç
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 9, 内容: /// <see cref="IWeight"/>ã«é¢ããæ¡å¼µé¢æ°
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 14, 内容: /// æ½é¸ãè¡ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 22, 内容: /// æ½é¸ãè¡ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 30, 内容: /// æ½é¸ãè¡ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 33, 内容: /// ä¹±æ°ãç¬èªã§å®è£ãããå ´åã«å©ç¨ãã¾ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 40, 内容: /// æ½é¸ãè¡ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 43, 内容: /// ä¹±æ°ãç¬èªã§å®è£ãããå ´åã«å©ç¨ãã¾ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 47, 内容: Assert.IsTrue(self.Count > 0, "è¦ç´ ãå­å¨ãã¾ãã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 53, 内容: Assert.IsTrue(max > 0, "éã¿ã0ã§ã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.IWeight.cs, 行番号: 68, 内容: Assert.IsTrue(false, "æªå®ç¾©ã®åä½ã§ã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BootSystem.cs, 行番号: 8, 内容: /// ãã¼ãã·ã¹ãã 
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BootSystem.cs, 行番号: 13, 内容: /// ãã¼ãã·ã¹ãã ãåæåå®äºãããè¿ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BootSystem.cs, 行番号: 24, 内容: /// åæåã®ç¶æ
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 61, 内容: /// <summary>ãªã</summary>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 64, 内容: /// <summary>äººå</summary>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 67, 内容: /// <summary>ä¸å®å½¢</summary>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 70, 内容: /// <summary>é§</summary>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 73, 内容: /// <summary>ç²ç¾</summary>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 76, 内容: /// <summary>å²©ç³</summary>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 79, 内容: /// <summary>æ¤ç©</summary>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 82, 内容: /// <summary>ç£</summary>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 128, 内容: /// ç´æ¥æ»æ
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 129, 内容: /// éå¸¸ã®æ»æãã¹ã­ã«ãªã©ãããã«è©²å½
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 130, 内容: /// åé¿åºæ¥ãå¯è½æ§ããã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 131, 内容: /// ãã®æ»æããã³ã³ããçºçãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 136, 内容: /// éæ¥æ»æ
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 137, 内容: /// ç¶æç°å¸¸ã«ãããã¡ã¼ã¸ãã³ã³ããªã©ãããã«è©²å½
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Define.cs, 行番号: 138, 内容: /// åé¿åºæ¥ãªã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.Enum.cs, 行番号: 172, 内容: Define.AttackAttribute.Slash => "æ¬æ",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.Enum.cs, 行番号: 173, 内容: Define.AttackAttribute.Blow => "ææ",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.Enum.cs, 行番号: 174, 内容: Define.AttackAttribute.Thrust => "åºçª",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.Enum.cs, 行番号: 175, 内容: Define.AttackAttribute.Magic => "é­æ³",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.Enum.cs, 行番号: 176, 内容: Define.AttackAttribute.Fire => "ç«ç",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Extensions.Enum.cs, 行番号: 177, 内容: Define.AttackAttribute.Thunder => "é·æ",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DungeonController.cs, 行番号: 214, 内容: Assert.IsFalse(FloorDatabase.ContainsKey(position), $"ãã§ã«åºãã¼ã¿ãå­å¨ãã¦ãã¾ã position:{position}");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DungeonController.cs, 行番号: 266, 内容: Assert.IsNotNull(dungeonTables, $"ãã³ã¸ã§ã³ãå­å¨ãã¾ãã id:{floorId}");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DungeonController.cs, 行番号: 412, 内容: gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{itemData.MasterDataItem.Name}</color>ãæã«å¥ããã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DungeonController.cs, 行番号: 417, 内容: gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{itemData.MasterDataItem.Name}</color>ã{itemData.Count}åæã«å¥ããã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DungeonController.cs, 行番号: 466, 内容: (() => $"{inputController.InputActions.InGame.Interact.GetTag()}ã¢ã¤ãã ãæ¾ã", scope.Token));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DungeonController.cs, 行番号: 490, 内容: (() => $"{inputController.InputActions.InGame.Interact.GetTag()}éãã", scope.Token));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DungeonController.cs, 行番号: 504, 内容: gameEvents.OnRequestShowMessage.OnNext(new("æãéããã", "Sfx.OpenDoor.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DungeonController.cs, 行番号: 515, 内容: gameEvents.OnRequestShowMessage.OnNext(new("ãã¡ãããã¯éããªãããã ã", "Sfx.Message.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DungeonController.cs, 行番号: 577, 内容: await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"<color=#88FF88>{addExperience}</color>ã®çµé¨å¤ãç²å¾ããã", "Sfx.AcquireExperience.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DictionaryList.cs, 行番号: 133, 内容: // UnityEditorã®å ´åã¯æ¯ååæåãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/DictionaryList.cs, 行番号: 228, 内容: // UnityEditorã®å ´åã¯æ¯ååæåãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 12, 内容: /// æå®ãã string ã Root ãªãã¸ã§ã¯ããæããªã JSON éåã¨ä»®å®ãã¦ãã·ãªã¢ã©ã¤ãºãã¾ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 16, 内容: // ã«ã¼ãè¦ç´ ãããã°å¤æã§ããã®ã§
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 17, 内容: // å¥åãããJSONã«å¯¾ãã¦(â)ã®è¡ãè¿½å ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 29, 内容: // ããã¼ã®ã«ã¼ãã«ãã·ãªã¢ã©ã¤ãºãã¦ããä¸­èº«ã®éåãè¿ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 35, 内容: /// æå®ããéåããªã¹ããªã©ã®ã³ã¬ã¯ã·ã§ã³ã Root ãªãã¸ã§ã¯ããæããªã JSON éåã«å¤æãã¾ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 38, 内容: /// 'prettyPrint' ã«ã¯éå¯¾å¿ãæ´å½¢ãããã£ããå¥éå¤æãã¦ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 42, 内容: string json = JsonUtility.ToJson(new DummyNode<T>(collection)); // ããã¼ã«ã¼ããã¨ã·ãªã¢ã«åãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 45, 内容: return json.Substring(start, len); // è¿½å ã«ã¼ãã®æå­ãåãé¤ãã¦è¿ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 48, 内容: // åé¨ã§ä½¿ç¨ããããã¼ã®ã«ã¼ãè¦ç´ 
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 52, 内容: // è£è¶³:
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 53, 内容: // å¦çä¸­ã«ä¸æä½¿ç¨ããéå¬éã¯ã©ã¹ã®ããå¤å°è¨­è¨ãå¤ã§ãæ°ã«ããªã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 55, 内容: // JSONã«ä»ä¸ããããã¼ã«ã¼ãã®åç§°
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 57, 内容: // çä¼¼çãªå­è¦ç´ 
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/JsonHelper.cs, 行番号: 59, 内容: // ã³ã¬ã¯ã·ã§ã³è¦ç´ ãæå®ãã¦ãªãã¸ã§ã¯ããä½æãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/EncryptionUtility.cs, 行番号: 21, 内容: msEncrypt.Write(aesAlg.IV, 0, aesAlg.IV.Length); // IVãåé ­ã«æ¸ãè¾¼ã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 77, 内容: inputActions.InGame.Move.GetTag() + ":ç§»å" +
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 78, 内容: inputActions.InGame.Shift.GetTag() + ":æ°´å¹³ç§»å" +
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 79, 内容: inputActions.InGame.ToMenu.GetTag() + ":ã¡ãã¥ã¼" +
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 80, 内容: inputActions.InGame.ToggleMiniMapView.GetTag() + ":ãããåãæ¿ã";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 90, 内容: inputActions.UI.Navigate.GetTag() + ":é¸æ" +
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 91, 内容: inputActions.UI.Submit.GetTag() + ":æ±ºå®" +
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 92, 内容: inputActions.UI.Cancel.GetTag() + ":ã­ã£ã³ã»ã«";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 102, 内容: inputActions.Options.Navigate.GetTag() + ":é¸æ" +
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 103, 内容: inputActions.Options.Submit.GetTag() + ":æ±ºå®" +
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 104, 内容: inputActions.Options.Cancel.GetTag() + ":ã­ã£ã³ã»ã«" +
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/InputController.cs, 行番号: 105, 内容: inputActions.Options.PreviousTab.GetTag() + inputActions.Options.NextTab.GetTag() + ":ã«ãã´ãªç§»å";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Group.cs, 行番号: 111, 内容: // UnityEditorã®å ´åã¯æ¯ååæåãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/SceneControllers/GameSceneController.cs, 行番号: 200, 内容: "ä¸­æ­ãã¼ã¿ããåéãã¾ãããä¸­æ­ãã¼ã¿ã¯åé¤ãããã®ã§ãæ³¨æãã ããã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/SceneControllers/GameSceneController.cs, 行番号: 201, 内容: new[] { "ç¢ºèª" },
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/SceneControllers/GameSceneController.cs, 行番号: 264, 内容: gameEvents.OnRequestShowMessage.OnNext(new($"ãã¬ã¤ã¤ã¼ã®ç¡æµï¼{battleDebugData.IsInvinciblePlayer}"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/SceneControllers/GameSceneController.cs, 行番号: 269, 内容: gameEvents.OnRequestShowMessage.OnNext(new($"æµã®ç¡æµï¼{battleDebugData.IsInvincibleEnemy}"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/SceneControllers/GameSceneController.cs, 行番号: 274, 内容: gameEvents.OnRequestShowMessage.OnNext(new($"å¨ã¹ã­ã«ä½¿ç¨å¯è½ï¼{battleDebugData.IsAllSkillAvailable}"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/SceneControllers/GameSceneController.cs, 行番号: 279, 内容: gameEvents.OnRequestShowMessage.OnNext(new($"ã³ã¹ãç¡ãï¼{battleDebugData.NoCost}"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/SceneControllers/GameSceneController.cs, 行番号: 284, 内容: gameEvents.OnRequestShowMessage.OnNext(new($"å¤§ãã¡ã¼ã¸ï¼{battleDebugData.IsBigDamage}"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/SceneControllers/GameSceneController.cs, 行番号: 289, 内容: gameEvents.OnRequestShowMessage.OnNext(new($"è¡åãã¤ã³ãï¼{player.GrowthParameter.BehaviourPoint}"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AilmentElement.cs, 行番号: 26, 内容: /// ä»åã®ã¿ã¼ã³ã§ã®å¼ã³åºãåæ°
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AilmentElement.cs, 行番号: 31, 内容: /// å¼ã³åºãåæ°
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AilmentElement.cs, 行番号: 44, 内容: Assert.IsNotNull(battleCharacter, "battleCharacterãnullã§ã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AilmentElement.cs, 行番号: 45, 内容: Assert.IsNotNull(masterDataAilment, $"ãã¹ã¿ã¼ãã¼ã¿ãå­å¨ãã¾ãã masterDataAilmentId: {masterDataAilmentId}");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/CommandInvokers/ChangeWeapon.cs, 行番号: 26, 内容: await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new("è£åãã¦ããæ­¦å¨ãå¤æ´ããã", "Sfx.Message.24"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 99, 内容: "æ­¦å¨",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 107, 内容: GameTipsView.SetTip("æ­¦å¨ãå©ç¨ãã¦æ»æãªã©ãè¡ãã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 114, 内容: "ç¢ºèª",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 122, 内容: GameTipsView.SetTip("ç¶æç°å¸¸ã»ã¹ãã¼ã¿ã¹ãªã©ã®æå ±ãç¢ºèªããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 129, 内容: "æ­¦å¨å¤æ´",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 137, 内容: GameTipsView.SetTip("è£åãã¦ããæ­¦å¨ãå¤æ´ããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 149, 内容: "å¨ã¹ã­ã«",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 160, 内容: listDocument.Q<TMP_Text>("Header").text = "é¸ã¹";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 205, 内容: listDocument.Q<TMP_Text>("Header").text = "æ­¦å¨ãé¸ã¹";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 252, 内容: gameEvents.OnRequestShowMessage.OnNext(new("ãã®ã¿ã¼ã³ã§ã¯ããä½¿ç¨åºæ¥ãªãã", "Sfx.Message.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 258, 内容: gameEvents.OnRequestShowMessage.OnNext(new("BPãè¶³ããªãã", "Sfx.Message.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 264, 内容: gameEvents.OnRequestShowMessage.OnNext(new("ã¹ã¿ãããè¶³ããªãã", "Sfx.Message.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 278, 内容: listDocument.Q<TMP_Text>("Header").text = "ã¹ã­ã«ãé¸ã¹";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 306, 内容: "ã¹ãã¼ã¿ã¹",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 314, 内容: GameTipsView.SetTip("åç¨®ã¹ãã¼ã¿ã¹ãã«ããçã®ç¢ºèªãè¡ãã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 321, 内容: "ç¶æç°å¸¸",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 330, 内容: GameTipsView.SetTip("èªåèªèº«ã«ä»ä¸ããã¦ããç¶æç°å¸¸ãç¢ºèªããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 341, 内容: "ç¶æç°å¸¸ï¼æµï¼",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 350, 内容: GameTipsView.SetTip("æµã«ä»ä¸ããã¦ããç¶æç°å¸¸ãç¢ºèªããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 356, 内容: listDocument.Q<TMP_Text>("Header").text = "æå ±ãé¸ã¹";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 395, 内容: : $"{x.GetMasterDataAilment().Name}(æ®ã{x.GetRemainingTurnCount()}ã¿ã¼ã³)";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/AI/Input.cs, 行番号: 495, 内容: listDocument.Q<TMP_Text>("Header").text = "å¤æ´ããæ­¦å¨ãé¸ã¹";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/DamageCalculators/Constant.cs, 行番号: 8, 内容: /// åºå®ãã¡ã¼ã¸è¨ç®
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/DamageCalculators/Default.cs, 行番号: 8, 内容: /// éå¸¸ã®ãã¡ã¼ã¸è¨ç®
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/DamageCalculators/PercentageFromHitPoint.cs, 行番号: 8, 内容: /// ç¾å¨HPã®å²åã®ãã¡ã¼ã¸è¨ç®
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/BattleSystems/DamageCalculators/Percentage.cs, 行番号: 8, 内容: /// å²åãã¡ã¼ã¸è¨ç®
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/CharacterControllers/Equipment.cs, 行番号: 343, 内容: gameEvents.OnRequestShowMessage.OnNext(new("ä½¿ãããã ãç©ºãã¦ãæ­¦å¨æ ã«è£åããã"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/CharacterControllers/Equipment.cs, 行番号: 352, 内容: gameEvents.OnRequestShowMessage.OnNext(new("ä½¿ãããã ãé ­ã«è£åããã"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/CharacterControllers/Equipment.cs, 行番号: 358, 内容: gameEvents.OnRequestShowMessage.OnNext(new("ä½¿ãããã ãè´ã«è£åããã"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/CharacterControllers/Equipment.cs, 行番号: 364, 内容: gameEvents.OnRequestShowMessage.OnNext(new("ä½¿ãããã ãèã«è£åããã"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/CharacterControllers/Equipment.cs, 行番号: 370, 内容: gameEvents.OnRequestShowMessage.OnNext(new("ä½¿ãããã ãèã«è£åããã"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/CharacterControllers/Equipment.cs, 行番号: 380, 内容: gameEvents.OnRequestShowMessage.OnNext(new("ä½¿ãããã ãç©ºãã¦ãã¢ã¯ã»ãµãªã¼æ ã«è£åããã"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/CharacterControllers/Equipment.cs, 行番号: 394, 内容: // æ¢ã«è£åãã¦ããå ´åã¯å¥ãæ¿ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/CharacterControllers/Equipment.cs, 行番号: 461, 内容: // æ¢ã«è£åãã¦ããå ´åã¯å¥ãæ¿ãã
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/RecoveryHitPoint.cs, 行番号: 49, 内容: gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}ã®HPã<color=#88FF88>{recovery}</color>åå¾©ããã", fixedSfxName))
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/AddMagicCount.cs, 行番号: 55, 内容: await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}ã®é­ã«ã¦ã³ãã<color=#99FF99>{value}</color>èç©ãã", "Sfx.Message.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/RecoveryStamina.cs, 行番号: 49, 内容: gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}ã®ã¹ã¿ããã<color=#88FF88>{recovery}</color>åå¾©ããã", fixedSfxName))
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/ResetMagicCount.cs, 行番号: 40, 内容: await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}ã®é­ã«ã¦ã³ãããªã»ãããããã", "Sfx.Message.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/AddKnifeCount.cs, 行番号: 39, 内容: ? $"{t.BattleStatus.NameWithTag}ã®ãã¤ãã¹ããã¯ã<color=#99FF99>{value}</color>èç©ãã"
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/AddKnifeCount.cs, 行番号: 40, 内容: : $"{t.BattleStatus.NameWithTag}ã®ãã¤ãã¹ããã¯ã<color=#FF9999>{-value}</color>æ¸å°ãã";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/AddBehaviourPoint.cs, 行番号: 42, 内容: ? $"{t.BattleStatus.NameWithTag}ã®BPã<color=#99FF99>{value}</color>åå¾©ããã"
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/AddBehaviourPoint.cs, 行番号: 43, 内容: : $"{t.BattleStatus.NameWithTag}ã®BPã<color=#FF9999>{-value}</color>æ¸å°ããã";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/GiveDamage.cs, 行番号: 43, 内容: await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}ã¯æ»æãåé¿ããã", "Sfx.Message.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/GiveDamage.cs, 行番号: 59, 内容: gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}ã«<color=#FFFF88>{damage}</color>ã®ãã¡ã¼ã¸ãä¸ããã", fixedSfxName))
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/CalculateAilmentOptimizationLogic.cs, 行番号: 11, 内容: /// ç¶æç°å¸¸ãå¹çåãã«ããBPåæ¸ã­ã¸ãã¯
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/Sequences/ResetKnifeCount.cs, 行番号: 35, 内容: await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}ã®ãã¤ãã¹ããã¯ããªã»ãããããã", "Sfx.Message.0"));
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/OptionsView.cs, 行番号: 20, 内容: var header = HeaderView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"), "ã·ã¹ãã ", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/OptionsView.cs, 行番号: 125, 内容: "ã²ã¼ã å¨ä½ã®é³éãè¨­å®ããã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/OptionsView.cs, 行番号: 126, 内容: "BGMã®é³éãè¨­å®ããã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/OptionsView.cs, 行番号: 127, 内容: "å¹æé³ã®é³éãè¨­å®ããã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 51, 内容: "å¨ã¢ã¤ãã è¿½å ",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 59, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, "å¨ã¢ã¤ãã ãè¿½å ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 68, 内容: "ããã«",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 81, 内容: "çµé¨å¤è¿½å ",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 86, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"çµé¨å¤ã{TinyServiceLocator.Resolve<GameRule>().DebugAddExperience}è¿½å ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 95, 内容: "è¦çè¯å¥½",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 100, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, "è¦çãå¨ã¦éæ¾ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 109, 内容: "ãã¬ã¤ã¤ã¼ã®ç¡æµãã©ã°",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 114, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"ãã¬ã¤ã¤ã¼ã®ç¡æµãã©ã°ã{battleDebugData.IsInvinciblePlayer}ã«è¨­å®ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 123, 内容: "æµã®ç¡æµãã©ã°",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 128, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"æµã®ç¡æµãã©ã°ã{battleDebugData.IsInvincibleEnemy}ã«è¨­å®ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 137, 内容: "å¨ã¦ã®ã¹ã­ã«ã®ä½¿ç¨ãã©ã°",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 142, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"å¨ã¦ã®ã¹ã­ã«ã®ä½¿ç¨ãã©ã°ã{battleDebugData.IsAllSkillAvailable}ã«è¨­å®ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 151, 内容: "ã¹ã­ã«ã³ã¹ãç¡ã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 156, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"ã¹ã­ã«ã³ã¹ãç¡ãã{battleDebugData.NoCost}ã«è¨­å®ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 165, 内容: "å¤§ãã¡ã¼ã¸",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 170, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"å¤§ãã¡ã¼ã¸ã{battleDebugData.IsBigDamage}ã«è¨­å®ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 179, 内容: "è¡åãã¤ã³ãå ç®",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 184, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"è¡åãã¤ã³ãã{player.GrowthParameter.BehaviourPoint}ã«è¨­å®ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 193, 内容: "ãã§ãã¯ãã¤ã³ãå¼ã³åºã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 208, 内容: "ãã³ã¸ã§ã³å¤æ´",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 221, 内容: "ã¨ã³ã«ã¦ã³ãç¡ã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 226, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"ã¨ã³ã«ã¦ã³ãç¡ãã{battleDebugData.NoEncount}ã«è¨­å®ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 235, 内容: "ã¹ã¿ã¼ã¿ã¼ããã¯",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 248, 内容: "æ³å®çµé¨å¤ç²å¾",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 347, 内容: $"ãã³ã¸ã§ã³ã¬ãã«: {x}",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 361, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"ã¹ã¿ã¼ã¿ã¼ããã¯{x}ãè¿½å ãã¾ãã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 394, 内容: var isAcquireBossExperience = await ConfirmAsync(documentBundlePrefab, "ãã¹ã®çµé¨å¤ãç²å¾ãã¾ããï¼", new[] { "ã¯ã", "ããã" }, scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameDebugWindowView.cs, 行番号: 420, 内容: ConfirmOkOnlyAsync(documentBundlePrefab, $"æ³å®çµé¨å¤"{result}"ãç²å¾ãã¾ããã", scope).Forget();
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 62, 内容: "è£åå¤æ´",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 70, 内容: GameTipsView.SetTip("æ¦éã§ä½¿ãè£åãå¤æ´ããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 79, 内容: "ã·ã¹ãã ",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 87, 内容: GameTipsView.SetTip("ã·ã¹ãã è¨­å®ãè¡ãã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 96, 内容: "ä¸­æ­ãã¼ã¿ä½æ",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 104, 内容: GameTipsView.SetTip("ä¸­æ­ãã¼ã¿ãä½æãã¦ã²ã¼ã ãçµäºãã¾ãã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 119, 内容: CreateHeader("ã¡ãã¥ã¼", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 132, 内容: var weaponName = x == 0 ? "ãªã" : x.GetMasterDataItem().Name;
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 135, 内容: GameListView.ApplyAsSimpleElement(element, $"æ­¦å¨{i + 1}: {weaponName}", _ =>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 157, 内容: GameListView.ApplyAsSimpleElement(element, $"é ­: {(character.Equipment.HeadId == 0 ? "ãªã" : character.Equipment.HeadId.GetMasterDataItem().Name)}", _ =>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 178, 内容: GameListView.ApplyAsSimpleElement(element, $"è´: {(character.Equipment.BodyId == 0 ? "ãªã" : character.Equipment.BodyId.GetMasterDataItem().Name)}", _ =>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 199, 内容: GameListView.ApplyAsSimpleElement(element, $"è: {(character.Equipment.ArmId == 0 ? "ãªã" : character.Equipment.ArmId.GetMasterDataItem().Name)}", _ =>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 220, 内容: GameListView.ApplyAsSimpleElement(element, $"è: {(character.Equipment.LegId == 0 ? "ãªã" : character.Equipment.LegId.GetMasterDataItem().Name)}", _ =>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 241, 内容: var accessoryName = x == 0 ? "ãªã" : x.GetMasterDataItem().Name;
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 244, 内容: GameListView.ApplyAsSimpleElement(element, $"ã¢ã¯ã»ãµãª{i + 1}: {accessoryName}", _ =>
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 285, 内容: CreateHeader("è£åå¤æ´", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 286, 内容: GameTipsView.SetTip("å¤æ´ãããé¨ä½ãé¸æããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 330, 内容: CreateHeader("æ­¦å¨å¤æ´", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 331, 内容: GameTipsView.SetTip("è£åãããæ­¦å¨ãé¸æããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 371, 内容: CreateHeader("é ­é²å·å¤æ´", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 372, 内容: GameTipsView.SetTip("è£åãããé ­é²å·ãé¸æããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 412, 内容: CreateHeader("è´é²å·å¤æ´", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 413, 内容: GameTipsView.SetTip("è£åãããè´é²å·ãé¸æããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 453, 内容: CreateHeader("èé²å·å¤æ´", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 454, 内容: GameTipsView.SetTip("è£åãããèé²å·ãé¸æããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 494, 内容: CreateHeader("èé²å·å¤æ´", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 495, 内容: GameTipsView.SetTip("è£åãããèé²å·ãé¸æããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 535, 内容: CreateHeader("ã¢ã¯ã»ãµãªã¼å¤æ´", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 536, 内容: GameTipsView.SetTip("è£åãããã¢ã¯ã»ãµãªã¼ãé¸æããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 551, 内容: "ä¸­æ­ãã¼ã¿ãä½æãã¦ã²ã¼ã ãçµäºãã¾ããï¼",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 552, 内容: new[] { "ã¯ã", "ããã" },
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GamePauseMenuView.cs, 行番号: 582, 内容: "ä¸­æ­ãã¼ã¿ãä½æãã¾ããããã®ã¾ã¾ã²ã¼ã ãçµäºã§ãã¾ãããç²ãæ§ã§ããã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameNameInputFieldView.cs, 行番号: 44, 内容: await DialogView.ConfirmAsync(dialogDocumentPrefab, "ååãå¥åãã¦ãã ããã", new[] { "ç¢ºèª" }, 0, scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameNameInputFieldView.cs, 行番号: 50, 内容: await DialogView.ConfirmAsync(dialogDocumentPrefab, "ååã¯10æå­ä»¥åã§å¥åãã¦ãã ããã", new[] { "ç¢ºèª" }, 0, scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameNameInputFieldView.cs, 行番号: 66, 内容: var confirmIndex = await DialogView.ConfirmAsync(dialogDocumentPrefab, $"ã{inputField.text}ãã§ããããã§ããï¼å¤æ´ã¯åºæ¥ã¾ããã", new[] { "ã¯ã", "ããã" }, 0, scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 63, 内容: "ã¬ãã«ã¢ãã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 70, 内容: GameTipsView.SetTip("çµé¨å¤ãæ¶è²»ãã¦ã¬ãã«ã¢ãããè¡ãã¾ãã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 79, 内容: "ä¼æ©",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 86, 内容: GameTipsView.SetTip("HPã¨STãåå¾©ãã¾ããããã¯ä¸åº¦ããä½¿ç¨ã§ãã¾ããã");
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 100, 内容: CreateHeader("ãã§ãã¯ãã¤ã³ã", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 120, 内容: "çå½å",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 127, 内容: "çå½åãä¸ããã¨HPï¼ããããã¤ã³ãï¼ãå¢å ãã¾ãã"
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 135, 内容: "æä¹å",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 142, 内容: "æä¹åãä¸ããã¨STï¼ã¹ã¿ããï¼ãå¢å ãã¾ãã"
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 150, 内容: "ç­å",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 157, 内容: "ç­åãä¸ããã¨ç©çæ»æã®å¨åãå¢å ãã¾ãã"
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 165, 内容: "ç²¾ç¥å",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 172, 内容: "ç²¾ç¥åãä¸ããã¨é­æ³æ»æã®å¨åãå¢å ãã¾ãã"
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 180, 内容: "ç´ æ©ã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 187, 内容: "ç´ æ©ããä¸ããã¨åæãåãããããªãã¾ãã"
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 197, 内容: currentLevelInfo.Q<TMP_Text>("Header").text = "ã¬ãã«";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 205, 内容: currentExperienceInfo.Q<TMP_Text>("Header").text = "ææçµé¨å¤";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 213, 内容: needExperienceInfo.Q<TMP_Text>("Header").text = "å¿è¦çµé¨å¤";
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 233, 内容: "ã¬ãã«ã¢ããããã«æ»ãã¾ããããããã§ããï¼",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 234, 内容: new[] { "ã¯ã", "ããã" },
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 250, 内容: CreateHeader("ã¬ãã«ã¢ãã", scope);
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 280, 内容: "ãã©ã¡ã¼ã¿ã¼ãå²ãæ¯ã£ã¦ãã ãã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 292, 内容: "æ¬å½ã«ã¬ãã«ã¢ãããã¾ããï¼",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 293, 内容: new[] { "ã¯ã", "ããã" },
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 368, 内容: "ããã§ã¯ããä¼æ©ã§ãã¾ããã",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 379, 内容: "HPã¨STãåå¾©ãã¾ããä¸åº¦ããä½¿ç¨ã§ãã¾ããã
-ããããã§ããï¼",
-ファイル: /Users/hkitahara/Documents/UnityProjects/SoulRPG/Assets/SoulRPG/Scripts/View/GameSavePointMenuView.cs, 行番号: 380, 内容: new[] { "ã¯ã", "ããã" },
