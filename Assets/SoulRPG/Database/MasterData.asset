@@ -9358,7 +9358,7 @@ MonoBehaviour:
     - Name: "\u30A8\u30CA\u30B8\u30FC\u30C9\u30EA\u30F3\u30AF"
       Id: 106036
       ThumbnailId: Accessory.25
-      Thumbnail: {fileID: -2448025005941029638, guid: 9e314885edfc44e409c0b234cf16987f, type: 3}
+      Thumbnail: {fileID: 21300000, guid: 9e314885edfc44e409c0b234cf16987f, type: 3}
       Description: "\u98F2\u3080\u3060\u3051\u3067\u77AC\u6642\u306B\u30A8\u30CD\u30EB\u30AE\u30FC\u304C\u6E67\u304D\u4E0A\u304C\u308A\u3001\u75B2\u308C\u3092\u5439\u304D\u98DB\u3070\u3059\u9B54\u6CD5\u306E\u98F2\u6599\u3002\u6226\u95D8\u4E2D\u3067\u3082\u7D20\u65E9\u304F\u30B9\u30BF\u30DF\u30CA\u3092\u56DE\u5FA9\u3057\u3001\u6301\u4E45\u529B\u3092\u6700\u5927\u9650\u306B\u5F15\u304D\u51FA\u3059\u52B9\u679C\u3092\u6301\u3064\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u6C17\u529B\u56DE\u5FA9\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
     - Name: "\u9244\u306E\u9375"
       Id: 107001
@@ -14114,4 +14114,6 @@ MonoBehaviour:
     - Sequences: {fileID: 11400000, guid: 957459ecb7c0b6545b001e88d8385421, type: 2}
     - Sequences: {fileID: 11400000, guid: 5e05ae51aa803a74cb6e21c311ca4773, type: 2}
     - Sequences: {fileID: 11400000, guid: 39a0fd6e62cadca459e7a9ccbd6490dc, type: 2}
+    - Sequences: {fileID: 11400000, guid: 071e0ca20af4b3f4c8b3b4b8b4d7575e, type: 2}
+    - Sequences: {fileID: 11400000, guid: 714d7a4fa80893e4084ac9e056665f69, type: 2}
     - Sequences: {fileID: 11400000, guid: 7682032c6f9487d42bd91aaa99185578, type: 2}
