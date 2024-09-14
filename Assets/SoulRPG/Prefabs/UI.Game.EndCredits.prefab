@@ -7335,7 +7335,7 @@ MonoBehaviour:
   sequences:
   - rid: 6455564042646323481
   - rid: 6455564042646323493
-  - rid: 6455564042646323494
+  - rid: 6455564042646323496
   - rid: 6455564042646323495
   references:
     version: 2
@@ -7417,16 +7417,36 @@ MonoBehaviour:
       type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
       data:
         seconds: 3
-    - rid: 6455564042646323494
+    - rid: 6455564042646323495
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1
+    - rid: 6455564042646323496
+      type: {class: WhenAll, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        sequencesResolver:
+          rid: 6455564042646323497
+    - rid: 6455564042646323497
+      type: {class: SequencesResolver/List, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value:
+        - rid: 6455564042646323498
+        - rid: 6455564042646323500
+    - rid: 6455564042646323498
+      type: {class: FadeOutBgm, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        durationResolver:
+          rid: 6455564042646323499
+    - rid: 6455564042646323499
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 5
+    - rid: 6455564042646323500
       type: {class: BeginFade, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         from: {r: 0, g: 0, b: 0, a: 0}
         to: {r: 0, g: 0, b: 0, a: 1}
         duration: 5
-    - rid: 6455564042646323495
-      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
-      data:
-        seconds: 1
 --- !u!1 &6590171703974177949
 GameObject:
   m_ObjectHideFlags: 0
