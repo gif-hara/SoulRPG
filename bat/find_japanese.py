@@ -1,12 +1,17 @@
 import os
 import re
 import chardet
+import csv
 
 # 日本語を含む行を検出する正規表現パターン
 pattern = re.compile(r'^(?!/).*(?:[ぁ-んァ-ン一-龯]|\\u[3040-9FAF]{4}).*')
+# ダブルクオーテーション内の文字列を抽出するパターン
+quote_pattern = re.compile(r'"(.*?)"')
 
 # 対象とする拡張子のリスト
 target_extensions = ['.txt', '.asset', '.scene', '.prefab', '.cs']
+# デコード対象の拡張子リスト
+decode_extensions = ['.asset', '.scene', '.prefab']
 
 def detect_file_encoding(file_path):
     """ファイルのエンコーディングを検出する"""
@@ -22,7 +27,7 @@ def decode_unicode_escape_if_needed(line):
         return line
 
 def find_japanese_in_assets_folder():
-    """Assetsフォルダ内のファイルから日本語を含む行を列挙し、utf-8ならjapanese_utf8.txtに、それ以外はjapanese.txtに保存する"""
+    """Assetsフォルダ内のファイルから日本語を含む行を列挙し、CSV形式で保存する"""
     # このスクリプトが配置されているbatフォルダのパスを取得
     script_directory = os.path.dirname(os.path.abspath(__file__))
     parent_directory = os.path.dirname(script_directory)
@@ -30,12 +35,11 @@ def find_japanese_in_assets_folder():
     # batフォルダと同じディレクトリにあるAssetsフォルダのパスを取得
     assets_directory = os.path.join(parent_directory, 'Assets')
 
-    # 出力ファイルのパスを設定
-    output_file_utf8 = os.path.join(script_directory, 'japanese_utf8.txt')
-    output_file_non_utf8 = os.path.join(script_directory, 'japanese.txt')
+    # 出力ファイルのパスを設定（CSVファイルとして保存）
+    output_file = os.path.join(script_directory, 'japanese.csv')
 
-    utf8_results = []
-    non_utf8_results = []
+    results = []
+    seen_strings = set()  # 重複防止用のセット
     
     # Assetsフォルダ内のファイルを再帰的に探索
     for root, _, files in os.walk(assets_directory):
@@ -55,27 +59,32 @@ def find_japanese_in_assets_folder():
                         for line_number, line in enumerate(f, start=1):
                             # 日本語を含む行を検索
                             if pattern.search(line):
-                                # Unicodeエスケープ文字列を見やすくする処理
-                                decoded_line = decode_unicode_escape_if_needed(line.strip())
-                                if encoding == 'utf-8':
-                                    utf8_results.append(f"ファイル: {file_path}, 行番号: {line_number}, 内容: {decoded_line}")
-                                else:
-                                    non_utf8_results.append(f"ファイル: {file_path}, 行番号: {line_number}, 内容: {decoded_line}")
+                                # ダブルクオーテーション内の文字列を抽出
+                                matches = quote_pattern.findall(line)
+                                if matches:
+                                    # デコード対象の拡張子の場合はデコード処理を適用
+                                    if ext.lower() in decode_extensions:
+                                        matches = [decode_unicode_escape_if_needed(m) for m in matches]
+                                    # 重複を避けるため、文字列が既に出力されていないか確認
+                                    for match in matches:
+                                        if match not in seen_strings:
+                                            # 重複していない場合のみ追加
+                                            relative_path = os.path.relpath(file_path, assets_directory)
+                                            results.append([relative_path, match])
+                                            seen_strings.add(match)
                 except Exception as e:
-                    non_utf8_results.append(f"ファイルの読み込み中にエラーが発生しました: {file_path}, エラー: {e}")
+                    relative_path = os.path.relpath(file_path, assets_directory)
+                    results.append([relative_path, f"エラー: {e}"])
     
-    # UTF-8の結果をファイルに保存（batフォルダ内）
-    with open(output_file_utf8, 'w', encoding='utf-8') as output_utf8:
-        for result in utf8_results:
-            output_utf8.write(result + '\n')
-
-    # UTF-8以外の結果をファイルに保存（batフォルダ内）
-    with open(output_file_non_utf8, 'w', encoding='utf-8') as output_non_utf8:
-        for result in non_utf8_results:
-            output_non_utf8.write(result + '\n')
+    # CSVファイルに結果を保存（batフォルダ内）
+    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        # ヘッダー行を追加
+        csvwriter.writerow(['FileName', 'JapaneseString'])
+        # 結果をCSVに書き込み
+        csvwriter.writerows(results)
     
-    print(f"UTF-8のファイルの結果を {output_file_utf8} に保存しました。")
-    print(f"その他のファイルの結果を {output_file_non_utf8} に保存しました。")
+    print(f"検索結果を {output_file} に保存しました。")
 
 # 使用例
 find_japanese_in_assets_folder()
