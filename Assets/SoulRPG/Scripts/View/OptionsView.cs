@@ -30,16 +30,23 @@ namespace SoulRPG
                 "Sound",
                 "GameSettings",
             };
-            foreach (var categoryName in categoryNames)
-            {
-                SetActiveTab(tabAreaDocument.Q<HKUIDocument>(categoryName));
-                SetAcitveContents(contentsAreaDocument.Q<HKUIDocument>(categoryName));
-            }
             var categoryList = new List<Func<CancellationToken, UniTask>>
             {
                 StateSoundAsync,
                 StateGameSettingsAsync,
             };
+            foreach (var categoryName in categoryNames)
+            {
+                var tab = tabAreaDocument.Q<HKUIDocument>(categoryName);
+                SetActiveTab(tab);
+                SetAcitveContents(contentsAreaDocument.Q<HKUIDocument>(categoryName));
+                tab.Q<Button>("Button").OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    stateMachine.Change(categoryList[categoryNames.IndexOf(categoryName)]);
+                })
+                .RegisterTo(scope);
+            }
             var currentCategoryIndex = 0;
             inputController.PushInputType(InputController.InputType.Options, scope);
             inputController.InputActions.Options.Cancel.OnPerformedAsObservable()
@@ -106,6 +113,7 @@ namespace SoulRPG
 
             UniTask StateSoundAsync(CancellationToken scope)
             {
+                AudioManager.PlaySfx("Sfx.Message.0");
                 var contents = contentsAreaDocument.Q<HKUIDocument>("Sound");
                 HKUIDocument currentVolume = null;
                 var volumeNames = new List<string>
@@ -214,6 +222,7 @@ namespace SoulRPG
 
             UniTask StateGameSettingsAsync(CancellationToken scope)
             {
+                AudioManager.PlaySfx("Sfx.Message.0");
                 SetActiveTab(tabAreaDocument.Q<HKUIDocument>("GameSettings"));
                 SetAcitveContents(contentsAreaDocument.Q<HKUIDocument>("GameSettings"));
                 return UniTask.CompletedTask;
