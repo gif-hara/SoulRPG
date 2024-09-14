@@ -5,6 +5,7 @@ using Cysharp.Threading.Tasks;
 using HK;
 using R3;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace SoulRPG
@@ -213,6 +214,7 @@ namespace SoulRPG
                     currentVolume = volume;
                     currentVolume.Q<HKUIDocument>("Slider").Q<CanvasGroup>("LeftArrow").alpha = 1;
                     currentVolume.Q<HKUIDocument>("Slider").Q<CanvasGroup>("RightArrow").alpha = 1;
+                    EventSystem.current.SetSelectedGameObject(currentVolume.Q<Button>("Button").gameObject);
                 }
                 void SetSliderValue(HKUIDocument volume, float value)
                 {
