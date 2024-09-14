@@ -9,6 +9,7 @@ using R3;
 using SoulRPG.CharacterControllers;
 using Unity.Mathematics;
 using UnityEngine;
+using UnitySequencerSystem;
 
 namespace SoulRPG
 {
@@ -253,6 +254,21 @@ namespace SoulRPG
                                 }
                             );
                         },
+#if UNITY_EDITOR
+                        element =>
+                        {
+                            GameListView.ApplyAsSimpleElement
+                            (
+                                element,
+                                "イベント呼び出し",
+                                _ =>
+                                {
+                                    AudioManager.PlaySfx("Sfx.Message.0");
+                                    stateMachine.Change(StateSelectFloorEventAsync);
+                                }
+                            );
+                        },
+#endif
                     },
                     0
                 );
@@ -427,6 +443,56 @@ namespace SoulRPG
                 await UniTask.WaitUntilCanceled(scope);
                 UnityEngine.Object.Destroy(listDocument.gameObject);
             }
+
+#if UNITY_EDITOR
+            async UniTask StateSelectFloorEventAsync(CancellationToken scope)
+            {
+                inputController.InputActions.UI.Cancel.OnPerformedAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        AudioManager.PlaySfx("Sfx.Cancel.0");
+                        stateMachine.Change(StateRootAsync);
+                    })
+                    .RegisterTo(scope);
+                var listElements = UnityEditor.AssetDatabase
+                    .FindAssets("", new[] { "Assets/SoulRPG/Database/FloorEvent" })
+                    .Select(x => UnityEditor.AssetDatabase.LoadAssetAtPath<ScriptableSequences>(UnityEditor.AssetDatabase.GUIDToAssetPath(x)))
+                    .Select(x => new Action<HKUIDocument>
+                        (
+                            element =>
+                            {
+                                GameListView.ApplyAsSimpleElement
+                                (
+                                    element,
+                                    $"{x.name}",
+                                    _ =>
+                                    {
+                                        PlaySequenceAsync(x).Forget();
+                                        source.TrySetResult();
+                                    }
+                                );
+                            }
+                        )
+                    );
+                var listDocument = CreateList(documentBundlePrefab, listElements, 0);
+                await UniTask.WaitUntilCanceled(scope);
+                UnityEngine.Object.Destroy(listDocument.gameObject);
+                async UniTask PlaySequenceAsync(ScriptableSequences sequences)
+                {
+                    AudioManager.PlaySfx("Sfx.Message.0");
+                    var cts = new CancellationTokenSource();
+                    var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+                    gameEvents.OnRequestChangeMiniMapType.OnNext(Define.MiniMapType.Default);
+                    var inputController = TinyServiceLocator.Resolve<InputController>();
+                    inputController.PushInputType(InputController.InputType.UI);
+                    var container = new Container();
+                    await new Sequencer(container, sequences.Sequences).PlayAsync(cts.Token);
+                    inputController.PopInputType();
+                    cts.Cancel();
+                    cts.Dispose();
+                }
+            }
+#endif
 
             static HKUIDocument CreateList
             (
