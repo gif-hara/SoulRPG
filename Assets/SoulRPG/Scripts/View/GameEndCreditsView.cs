@@ -29,7 +29,7 @@ namespace SoulRPG
                 TinyServiceLocator.Resolve<InputScheme>().AnyChangedAsObservable()
                     .Subscribe(_ =>
                     {
-                        skipText.text = inputController.InputActions.UI.Submit.GetTag() + " スキップ";
+                        skipText.text = inputController.InputActions.UI.Submit.GetTag() + ":スキップ";
                     })
                     .RegisterTo(scope);
                 skipStateMachine.Change(StateAcceptSkipAsync);
@@ -46,6 +46,7 @@ namespace SoulRPG
             }
             finally
             {
+                skipStateMachine.Dispose();
                 UnityEngine.Object.Destroy(document.gameObject);
             }
 
