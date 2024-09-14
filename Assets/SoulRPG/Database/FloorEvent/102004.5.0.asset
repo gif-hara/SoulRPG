@@ -20,8 +20,9 @@ MonoBehaviour:
   - rid: 6455564006432178188
   - rid: 6455564006432178189
   - rid: 6455564006432178264
-  - rid: 6455564006432178262
   - rid: 6455564006432178265
+  - rid: 6455564028888219722
+  - rid: 6455564006432178262
   - rid: 6455564006432178263
   references:
     version: 2
@@ -92,3 +93,7 @@ MonoBehaviour:
       type: {class: PlayBgm, ns: SoulRPG, asm: Assembly-CSharp}
       data:
         bgmName: Bgm.EndCredits.0
+    - rid: 6455564028888219722
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1
