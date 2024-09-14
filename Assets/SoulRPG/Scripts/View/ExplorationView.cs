@@ -231,9 +231,29 @@ namespace SoulRPG
             var characterRotationObject = areaDocument.Q<RectTransform>("Character.RotationObject");
             var miniMapWallPrefab = areaDocument.Q<RectTransform>("UIElement.MapTip.Wall");
             var shadowParent = areaDocument.Q<RectTransform>("Area.Shadow.Viewport");
+            var rotationObject = areaDocument.Q<RectTransform>("RotationObject");
+            var characterFrame = areaDocument.Q<RectTransform>("Character.Frame");
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var miniMapType = Define.MiniMapType.Default;
+            var isRotation = SaveData.LoadSafe().gameSettingData.isRotationMiniMap;
             characterAreaTransform.sizeDelta = tipSize;
+            gameEvents.OnChangeIsRotationMiniMap
+                .Subscribe(x =>
+                {
+                    isRotation = x;
+                    if (isRotation)
+                    {
+                        var rotation = character.Direction.ToAngle();
+                        rotationObject.localRotation = Quaternion.Euler(0, 0, rotation);
+                        characterFrame.localRotation = Quaternion.Euler(0, 0, -rotation);
+                    }
+                    else
+                    {
+                        rotationObject.localRotation = Quaternion.identity;
+                        characterFrame.localRotation = Quaternion.identity;
+                    }
+                })
+                .RegisterTo(scope);
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
@@ -247,8 +267,13 @@ namespace SoulRPG
             character.DirectionAsObservable()
                 .Subscribe(x =>
                 {
-                    characterRotationObject.rotation = Quaternion.Euler(0, 0, -x.ToAngle());
+                    characterRotationObject.localRotation = Quaternion.Euler(0, 0, -x.ToAngle());
                     gameCameraController.transform.rotation = Quaternion.Euler(0, x.ToAngle(), 0);
+                    if (isRotation)
+                    {
+                        rotationObject.localRotation = Quaternion.Euler(0, 0, x.ToAngle());
+                        characterFrame.localRotation = Quaternion.Euler(0, 0, -x.ToAngle());
+                    }
                 })
                 .RegisterTo(scope);
             gameEvents.OnRequestChangeMiniMapType

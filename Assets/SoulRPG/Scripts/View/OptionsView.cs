@@ -4,6 +4,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using R3;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -225,9 +226,87 @@ namespace SoulRPG
             UniTask StateGameSettingsAsync(CancellationToken scope)
             {
                 AudioManager.PlaySfx("Sfx.Message.0");
+                var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
+                var areaDocument = contentsAreaDocument.Q<HKUIDocument>("GameSettings");
+                var elementIndex = 0;
+                var elements = new List<HKUIDocument>
+                {
+                    areaDocument.Q<HKUIDocument>("IsRotationMiniMap"),
+                };
+                var tips = new List<string>
+                {
+                    "ミニマップの回転をプレイヤーの向きと同期を取るか設定する。",
+                };
+                var onSubmitActions = new List<Action>
+                {
+                    () =>
+                    {
+                        AudioManager.PlaySfx("Sfx.Message.0");
+                        var saveData = SaveData.LoadSafe();
+                        saveData.gameSettingData.isRotationMiniMap = !saveData.gameSettingData.isRotationMiniMap;
+                        saveData.Save();
+                        gameEvents.OnChangeIsRotationMiniMap.OnNext(saveData.gameSettingData.isRotationMiniMap);
+                        var element = elements[elementIndex];
+                        element.Q<HKUIDocument>("Message")
+                            .Q<TMP_Text>("Message")
+                            .text = saveData.gameSettingData.isRotationMiniMap ? "オン" : "オフ";
+                    },
+                };
+                var onInitializeActions = new List<Action<HKUIDocument>>
+                {
+                    element =>
+                    {
+                        var saveData = SaveData.LoadSafe();
+                        element.Q<HKUIDocument>("Message")
+                            .Q<TMP_Text>("Message")
+                            .text = saveData.gameSettingData.isRotationMiniMap ? "オン" : "オフ";
+                    },
+                };
+                inputController.InputActions.Options.Navigate.OnPerformedAsObservable()
+                    .Subscribe(context =>
+                    {
+                        var value = context.ReadValue<Vector2>();
+                        if (value.y > 0)
+                        {
+                            elementIndex--;
+                            if (elementIndex < 0)
+                            {
+                                elementIndex = elements.Count - 1;
+                            }
+                            SetActive();
+                        }
+                        else if (value.y < 0)
+                        {
+                            elementIndex++;
+                            if (elementIndex >= elements.Count)
+                            {
+                                elementIndex = 0;
+                            }
+                            SetActive();
+                        }
+                    })
+                    .RegisterTo(scope);
+                inputController.InputActions.Options.Submit.OnPerformedAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        onSubmitActions[elementIndex]();
+                    })
+                    .RegisterTo(scope);
+
+                for (var i = 0; i < elements.Count; i++)
+                {
+                    onInitializeActions[i](elements[i]);
+                }
+                SetActive();
                 SetActiveTab(tabAreaDocument.Q<HKUIDocument>("GameSettings"));
-                SetAcitveContents(contentsAreaDocument.Q<HKUIDocument>("GameSettings"));
+                SetAcitveContents(areaDocument);
                 return UniTask.CompletedTask;
+                void SetActive()
+                {
+                    GameTipsView.SetTip(tips[elementIndex]);
+                    AudioManager.PlaySfx("Sfx.Select.0");
+                    EventSystem.current.SetSelectedGameObject(elements[elementIndex].Q<Button>("Button").gameObject);
+                }
             }
         }
     }
