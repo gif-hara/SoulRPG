@@ -1,4 +1,7 @@
+using Cysharp.Threading.Tasks;
 using HK;
+using LitMotion;
+using LitMotion.Extensions;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -29,6 +32,7 @@ namespace SoulRPG
         public static void PlayBgm(AudioClip clip)
         {
             var instance = TinyServiceLocator.Resolve<AudioManager>();
+            instance.bgmSource.volume = 1.0f;
             instance.bgmSource.clip = clip;
             instance.bgmSource.Play();
         }
@@ -56,6 +60,14 @@ namespace SoulRPG
             var instance = TinyServiceLocator.Resolve<AudioManager>();
             var clip = TinyServiceLocator.Resolve<GameRule>().AudioDatabase.Get(clipName).Clip;
             instance.sfxSource.PlayOneShot(clip);
+        }
+
+        public static UniTask FadeOutBgmAsync(float duration)
+        {
+            var instance = TinyServiceLocator.Resolve<AudioManager>();
+            return LMotion.Create(instance.bgmSource.volume, 0, duration)
+                .BindToVolume(instance.bgmSource)
+                .ToUniTask();
         }
 
         public static void SetVolumeMaster(float volume)
