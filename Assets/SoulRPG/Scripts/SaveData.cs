@@ -15,6 +15,8 @@ namespace SoulRPG
 
         public AudioData audioData;
 
+        public GameSettingData gameSettingData;
+
         public static SaveData LoadSafe()
         {
             var result = SaveSystem.Load<SaveData>("SaveData");
@@ -60,6 +62,12 @@ namespace SoulRPG
             public float bgmVolume = 0.8f;
 
             public float sfxVolume = 0.8f;
+        }
+
+        [Serializable]
+        public class GameSettingData
+        {
+            public bool isRotationMiniMap = true;
         }
 
         public string DefaultPath => "SaveData";
