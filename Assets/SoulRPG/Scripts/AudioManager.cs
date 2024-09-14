@@ -1,3 +1,4 @@
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
 using LitMotion;
@@ -62,12 +63,12 @@ namespace SoulRPG
             instance.sfxSource.PlayOneShot(clip);
         }
 
-        public static UniTask FadeOutBgmAsync(float duration)
+        public static UniTask FadeOutBgmAsync(float duration, CancellationToken cancellationToken)
         {
             var instance = TinyServiceLocator.Resolve<AudioManager>();
             return LMotion.Create(instance.bgmSource.volume, 0, duration)
                 .BindToVolume(instance.bgmSource)
-                .ToUniTask();
+                .ToUniTask(cancellationToken);
         }
 
         public static void SetVolumeMaster(float volume)
