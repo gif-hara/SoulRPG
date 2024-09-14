@@ -52,6 +52,8 @@ namespace SoulRPG
 
         public readonly Subject<DungeonController> OnSetupDungeon = new();
 
+        public readonly Subject<bool> OnChangeIsRotationMiniMap = new();
+
 #if DEBUG
         public readonly Subject<(string key, string message)> OnRequestAddDebugPanelInformation = new();
 
