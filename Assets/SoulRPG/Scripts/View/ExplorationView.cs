@@ -221,7 +221,6 @@ namespace SoulRPG
             CancellationToken scope
             )
         {
-            var positionText = uiDocument.Q<TMP_Text>("Text.Position");
             var areaDocument = uiDocument.Q<HKUIDocument>("Area.MiniMap");
             var areaTransform = uiDocument.Q<RectTransform>("Area.MiniMap");
             var size = areaDocument.Q<RectTransform>("Area.Tips").rect.size;
@@ -236,6 +235,10 @@ namespace SoulRPG
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
             var miniMapType = Define.MiniMapType.Default;
             var isRotation = SaveData.LoadSafe().gameSettingData.isRotationMiniMap;
+            var directionNorth = areaDocument.Q<RectTransform>("Direction.North");
+            var directionSouth = areaDocument.Q<RectTransform>("Direction.South");
+            var directionEast = areaDocument.Q<RectTransform>("Direction.East");
+            var directionWest = areaDocument.Q<RectTransform>("Direction.West");
             characterAreaTransform.sizeDelta = tipSize;
             gameEvents.OnChangeIsRotationMiniMap
                 .Subscribe(x =>
@@ -252,12 +255,15 @@ namespace SoulRPG
                         rotationObject.localRotation = Quaternion.identity;
                         characterFrame.localRotation = Quaternion.identity;
                     }
+                    directionNorth.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    directionSouth.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    directionEast.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    directionWest.transform.rotation = Quaternion.Euler(0, 0, 0);
                 })
                 .RegisterTo(scope);
             character.PositionAsObservable()
                 .Subscribe(x =>
                 {
-                    positionText.text = $"{x}";
                     var viewportPosition = new Vector2(-x.x * tipSize.x, -x.y * tipSize.y);
                     tipsParent.anchoredPosition = viewportPosition;
                     shadowParent.anchoredPosition = viewportPosition;
@@ -274,6 +280,10 @@ namespace SoulRPG
                         rotationObject.localRotation = Quaternion.Euler(0, 0, x.ToAngle());
                         characterFrame.localRotation = Quaternion.Euler(0, 0, -x.ToAngle());
                     }
+                    directionNorth.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    directionSouth.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    directionEast.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    directionWest.transform.rotation = Quaternion.Euler(0, 0, 0);
                 })
                 .RegisterTo(scope);
             gameEvents.OnRequestChangeMiniMapType
