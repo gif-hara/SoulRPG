@@ -240,14 +240,16 @@ namespace SoulRPG
             {
                 return new Action<HKUIDocument>(element =>
                 {
+                    var identifier = Skill.CreateIdentifier(weapon.ItemId, x.Id);
+                    var isUsed = actor.UsedSkills.Contains(identifier);
+                    element.Q<TMP_Text>("Header").color = isUsed ? new Color(0.5f, 0.2f, 0.2f) : Color.white;
                     GameListView.ApplyAsSimpleElement(
                         element,
                         x.Name,
                         async _ =>
                         {
                             AudioManager.PlaySfx("Sfx.Message.0");
-                            var identifier = Skill.CreateIdentifier(weapon.ItemId, x.Id);
-                            if (actor.UsedSkills.Contains(identifier))
+                            if (isUsed)
                             {
                                 gameEvents.OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。", "Sfx.Message.0"));
                                 return;
@@ -543,6 +545,10 @@ namespace SoulRPG
                 });
             var listDocument = GameListView.CreateWithPages(listDocumentPrefab, listElements, 0);
             var isEmpty = !listElements.Any();
+            if (isEmpty)
+            {
+                informationItemView.SetupAsEmpty();
+            }
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {

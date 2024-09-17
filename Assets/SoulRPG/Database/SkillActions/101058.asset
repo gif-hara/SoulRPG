@@ -20,6 +20,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 7288459789387432183
       type: {class: OnRequestShowMessage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -50,10 +52,12 @@ MonoBehaviour:
           rid: 9047573724747792494
         battleCharacterEvaluator:
           rid: 9047573724747792495
+        buffCondition:
+          rid: -2
     - rid: 9047573724747792494
       type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
-        value: 1.7
+        value: 1.75
     - rid: 9047573724747792495
       type: {class: IncludeCharacterAttribute, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:

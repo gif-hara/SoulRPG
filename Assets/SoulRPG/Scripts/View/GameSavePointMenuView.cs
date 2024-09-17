@@ -384,6 +384,7 @@ namespace SoulRPG
             if (result == 0)
             {
                 AudioManager.PlaySfx("Sfx.Message.19");
+                TinyServiceLocator.Resolve<ScreenEffectView>().Play("Animation.OnRecoveryHitPoint");
                 character.InstanceStatus.FullRecovery();
                 dungeonController.RestCheckPoint(character.Position);
             }

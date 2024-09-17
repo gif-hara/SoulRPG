@@ -47,6 +47,8 @@ MonoBehaviour:
           rid: 9047573724747792463
         battleCharacterEvaluator:
           rid: 3561509643546263643
+        buffCondition:
+          rid: -2
     - rid: 3561509643546263643
       type: {class: ContainsAilment, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
@@ -73,4 +75,4 @@ MonoBehaviour:
     - rid: 9047573724747792463
       type: {class: ConstantFloat, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
-        value: 1.7
+        value: 1.8

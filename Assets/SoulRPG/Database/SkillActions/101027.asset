@@ -38,7 +38,7 @@ MonoBehaviour:
     - rid: 7288459789387432198
       type: {class: Default, ns: SoulRPG.BattleSystems.DamageCalculators, asm: Assembly-CSharp}
       data:
-        weaponRate: 1.1
+        weaponRate: 1.25
         attackType: 0
         attackAttribute: 0
     - rid: 9047573468771254377

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: 199001
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 6455564006432178265
+  - rid: 6455564028888219722
+  - rid: 6455564006432178262
+  - rid: 6455564006432178263
+  references:
+    version: 2
+    RefIds:
+    - rid: 6455564006432178262
+      type: {class: BeginFadeTo, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        to: {r: 0, g: 0, b: 0, a: 0}
+        duration: 0
+    - rid: 6455564006432178263
+      type: {class: OpenEndCreditsView, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        documentPrefab: {fileID: 3672498495014125879, guid: fa1eadcddb6334d489d99c55d95f89a6, type: 3}
+    - rid: 6455564006432178265
+      type: {class: PlayBgm, ns: SoulRPG, asm: Assembly-CSharp}
+      data:
+        bgmName: Bgm.EndCredits.0
+    - rid: 6455564028888219722
+      type: {class: Delay, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        seconds: 1

@@ -1,0 +1,334 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43a09a9de426fd4abfc1245979d7dad, type: 3}
+  m_Name: EndCredits.CreditsAnimation.3
+  m_EditorClassIdentifier: 
+  sequences:
+  - rid: 6455564042646323377
+  - rid: 6455564042646323403
+  references:
+    version: 2
+    RefIds:
+    - rid: 6455564042646323377
+      type: {class: WhenAll, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        sequencesResolver:
+          rid: 6455564042646323378
+    - rid: 6455564042646323378
+      type: {class: SequencesResolver/List, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value:
+        - rid: 6455564042646323379
+        - rid: 6455564042646323380
+    - rid: 6455564042646323379
+      type: {class: MotionFloat, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        parameters:
+          rid: 6455564042646323381
+        bindTo:
+          rid: 6455564042646323382
+        addTo:
+          rid: 6455564042646323383
+    - rid: 6455564042646323380
+      type: {class: MotionFloat, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        parameters:
+          rid: 6455564042646323384
+        bindTo:
+          rid: 6455564042646323477
+        addTo:
+          rid: 6455564042646323386
+    - rid: 6455564042646323381
+      type: {class: FloatParameters, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        fromResolver:
+          rid: 6455564042646323387
+        toResolver:
+          rid: 6455564042646323388
+        durationResolver:
+          rid: 6455564042646323389
+        delayResolver:
+          rid: 6455564042646323390
+        loopCountResolver:
+          rid: 6455564042646323391
+        loopType: 0
+        motionSchedulerResolver:
+          rid: 6455564042646323392
+        ease: 2
+        customAnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+    - rid: 6455564042646323382
+      type: {class: BindToFloat/BindToCanvasGroupAlpha, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 6455564042646323472
+    - rid: 6455564042646323383
+      type: {class: AddToTransform, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 6455564042646323473
+    - rid: 6455564042646323384
+      type: {class: FloatParameters, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        fromResolver:
+          rid: 6455564042646323395
+        toResolver:
+          rid: 6455564042646323396
+        durationResolver:
+          rid: 6455564042646323397
+        delayResolver:
+          rid: 6455564042646323398
+        loopCountResolver:
+          rid: 6455564042646323399
+        loopType: 0
+        motionSchedulerResolver:
+          rid: 6455564042646323400
+        ease: 2
+        customAnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+    - rid: 6455564042646323386
+      type: {class: AddToTransform, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 6455564042646323445
+    - rid: 6455564042646323387
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 6455564042646323388
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 6455564042646323389
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 2
+    - rid: 6455564042646323390
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 6455564042646323391
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 6455564042646323392
+      type: {class: MotionSchedulerResolver/Update, ns: UnitySequencerSystem.Resolvers.LitMotion, asm: UnitySequencerSystem}
+      data: 
+    - rid: 6455564042646323395
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: -50
+    - rid: 6455564042646323396
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 6455564042646323397
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 2
+    - rid: 6455564042646323398
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 6455564042646323399
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 6455564042646323400
+      type: {class: MotionSchedulerResolver/Update, ns: UnitySequencerSystem.Resolvers.LitMotion, asm: UnitySequencerSystem}
+      data: 
+    - rid: 6455564042646323403
+      type: {class: WhenAll, ns: UnitySequencerSystem.StandardSequences, asm: UnitySequencerSystem}
+      data:
+        sequencesResolver:
+          rid: 6455564042646323404
+    - rid: 6455564042646323404
+      type: {class: SequencesResolver/List, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value:
+        - rid: 6455564042646323405
+        - rid: 6455564042646323406
+    - rid: 6455564042646323405
+      type: {class: MotionFloat, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        parameters:
+          rid: 6455564042646323407
+        bindTo:
+          rid: 6455564042646323408
+        addTo:
+          rid: 6455564042646323409
+    - rid: 6455564042646323406
+      type: {class: MotionFloat, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        parameters:
+          rid: 6455564042646323410
+        bindTo:
+          rid: 6455564042646323479
+        addTo:
+          rid: 6455564042646323412
+    - rid: 6455564042646323407
+      type: {class: FloatParameters, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        fromResolver:
+          rid: 6455564042646323413
+        toResolver:
+          rid: 6455564042646323414
+        durationResolver:
+          rid: 6455564042646323415
+        delayResolver:
+          rid: 6455564042646323416
+        loopCountResolver:
+          rid: 6455564042646323417
+        loopType: 0
+        motionSchedulerResolver:
+          rid: 6455564042646323418
+        ease: 1
+        customAnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+    - rid: 6455564042646323408
+      type: {class: BindToFloat/BindToCanvasGroupAlpha, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 6455564042646323474
+    - rid: 6455564042646323409
+      type: {class: AddToTransform, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 6455564042646323475
+    - rid: 6455564042646323410
+      type: {class: FloatParameters, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        fromResolver:
+          rid: 6455564042646323421
+        toResolver:
+          rid: 6455564042646323422
+        durationResolver:
+          rid: 6455564042646323423
+        delayResolver:
+          rid: 6455564042646323424
+        loopCountResolver:
+          rid: 6455564042646323425
+        loopType: 0
+        motionSchedulerResolver:
+          rid: 6455564042646323426
+        ease: 1
+        customAnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+    - rid: 6455564042646323412
+      type: {class: AddToTransform, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 6455564042646323443
+    - rid: 6455564042646323413
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 6455564042646323414
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 6455564042646323415
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 2
+    - rid: 6455564042646323416
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 12
+    - rid: 6455564042646323417
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 6455564042646323418
+      type: {class: MotionSchedulerResolver/Update, ns: UnitySequencerSystem.Resolvers.LitMotion, asm: UnitySequencerSystem}
+      data: 
+    - rid: 6455564042646323421
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 0
+    - rid: 6455564042646323422
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 50
+    - rid: 6455564042646323423
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 2
+    - rid: 6455564042646323424
+      type: {class: FloatResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 12
+    - rid: 6455564042646323425
+      type: {class: IntResolver/Constant, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        value: 1
+    - rid: 6455564042646323426
+      type: {class: MotionSchedulerResolver/Update, ns: UnitySequencerSystem.Resolvers.LitMotion, asm: UnitySequencerSystem}
+      data: 
+    - rid: 6455564042646323443
+      type: {class: TransformResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: Target
+    - rid: 6455564042646323445
+      type: {class: TransformResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: Target
+    - rid: 6455564042646323472
+      type: {class: CanvasGroupResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: Target
+    - rid: 6455564042646323473
+      type: {class: TransformResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: Target
+    - rid: 6455564042646323474
+      type: {class: CanvasGroupResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: Target
+    - rid: 6455564042646323475
+      type: {class: TransformResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: Target
+    - rid: 6455564042646323477
+      type: {class: BindToFloat/RectTransformAnchoredPositionY, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 6455564042646323478
+    - rid: 6455564042646323478
+      type: {class: RectTransformResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: Target
+    - rid: 6455564042646323479
+      type: {class: BindToFloat/RectTransformAnchoredPositionY, ns: UnitySequencerSystem.LitMotion, asm: UnitySequencerSystem}
+      data:
+        targetResolver:
+          rid: 6455564042646323480
+    - rid: 6455564042646323480
+      type: {class: RectTransformResolver/Name, ns: UnitySequencerSystem.Resolvers, asm: UnitySequencerSystem}
+      data:
+        name: Target

@@ -39,11 +39,13 @@ MonoBehaviour:
           rid: 9047573724747792465
         battleCharacterEvaluator:
           rid: -2
+        buffCondition:
+          rid: -2
     - rid: 9047573724747792465
       type: {class: PowFromMagicCount, ns: SoulRPG.BattleSystems.BattleCharacterEvaluators, asm: Assembly-CSharp}
       data:
         targetType: 0
-        rate: 1.4
+        rate: 1.35
     - rid: 9047573724747792466
       type: {class: GiveDamage, ns: SoulRPG, asm: Assembly-CSharp}
       data:
@@ -69,3 +71,4 @@ MonoBehaviour:
         targetType: 0
         battleCharacterEvaluator:
           rid: -2
+        isSilent: 0

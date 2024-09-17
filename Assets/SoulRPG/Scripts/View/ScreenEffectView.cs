@@ -74,5 +74,13 @@ namespace SoulRPG
                 .Q<SequenceMonobehaviour>(animationName)
                 .PlayAsync(scope);
         }
+
+        public void Play(string animationName)
+        {
+            document
+                .Q<HKUIDocument>("Sequences")
+                .Q<SequenceMonobehaviour>(animationName)
+                .PlayAsync(document.destroyCancellationToken);
+        }
     }
 }
