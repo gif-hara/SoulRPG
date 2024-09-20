@@ -462,8 +462,8 @@ namespace SoulRPG
         {
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, itemData.LifeScope.Token);
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(
-                (() => $"{inputController.InputActions.InGame.Interact.GetTag()}アイテムを拾う", scope.Token));
+            var message = "{0}アイテムを拾う".Localized().Format(inputController.InputActions.InGame.Interact.GetTag());
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((() => message, scope.Token));
             return UniTask.CompletedTask;
         }
 
