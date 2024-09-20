@@ -822,6 +822,4487 @@ MonoBehaviour:
       en sus manos, su poder crece con las fases de la luna."
     m_Metadata:
       m_Items: []
+  - m_Id: 1690465140890
+    m_Localized: "Botella de \xC1cido Clorh\xEDdrico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140891
+    m_Localized: "Una botella llena de \xE1cido poderoso. Con solo agitarla, el \xE1cido
+      se dispersa, corroyendo cualquier equipo o ser vivo que toque. Es un arma temible
+      utilizada por guerreros y magos experimentados para neutralizar las defensas
+      de sus enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140892
+    m_Localized: "Espada Demon\xEDaca Misericorde+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140893
+    m_Localized: "La versi\xF3n final mejorada de la espada demon\xEDaca que una
+      vez devor\xF3 innumerables almas, empu\xF1ada por un espadach\xEDn maldito.
+      La hoja gira con rencores, corrompiendo el coraz\xF3n de su portador mientras
+      le otorga un poder abrumador. El odio de aquellos cortados por la espada se
+      acumula, amplificando a\xFAn m\xE1s su poder destructivo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140894
+    m_Localized: "Bast\xF3n del Desprecio+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140895
+    m_Localized: "La versi\xF3n final mejorada del bast\xF3n infundido con magia
+      oscura, que otorga un inmenso poder a su portador mientras siembra sentimientos
+      de desprecio en su coraz\xF3n. La magia oscura en la punta gira de manera ominosa,
+      amenazando con corromper las almas de aquellos que la tocan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140896
+    m_Localized: "Bast\xF3n de Llamas++"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140897
+    m_Localized: "La versi\xF3n final mejorada del bast\xF3n m\xE1gico que controla
+      el poder del fuego. Siempre arde una peque\xF1a llama en su punta, capaz de
+      incinerar a los enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140898
+    m_Localized: "Bast\xF3n de Rayo++"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140899
+    m_Localized: "La versi\xF3n final mejorada del bast\xF3n infundido con el poder
+      del rayo. Un solo golpe de rayo deja a los enemigos paralizados."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140900
+    m_Localized: "Bast\xF3n de Ilicia+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140901
+    m_Localized: "La versi\xF3n final mejorada del bast\xF3n sagrado que se dice
+      que es utilizado por Ilicia, la directora de la alquimia estelar. Este bast\xF3n
+      contiene magia blanca pura, con el poder de purificaci\xF3n y regeneraci\xF3n.
+      Sus habilidades curativas son suaves, como el toque de un dios, pero inmensamente
+      poderosas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140902
+    m_Localized: "Bast\xF3n de An\xE1lisis"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140903
+    m_Localized: "Creado para revelar todos los misterios y trampas que acechan alrededor
+      de su portador. Cuando brilla en verde, su ojo ve la verdad y no pasa por alto
+      nada, ni siquiera lo que est\xE1 oculto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140904
+    m_Localized: Arma de Prueba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140905
+    m_Localized: "En estado desarmado, enfrentando valientemente al oponente solo
+      con tus pu\xF1os. Pero, por supuesto, tener un arma causar\xEDa mucho m\xE1s
+      da\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140906
+    m_Localized: Arma del Enemigo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140907
+    m_Localized: "Un casco plateado y resistente que brilla. Protege el rostro del
+      guerrero y soporta f\xE1cilmente los golpes del enemigo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140908
+    m_Localized: Armadura de Caballero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140909
+    m_Localized: "Una armadura de plata pesada. El guardi\xE1n del campo de batalla,
+      una defensa robusta que repele todos los ataques."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140910
+    m_Localized: Guanteletes de Caballero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140911
+    m_Localized: "Guanteletes hechos de acero. Protegen los brazos del guerrero y
+      mejoran la fuerza necesaria para empu\xF1ar una espada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140912
+    m_Localized: Grebas de Caballero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140913
+    m_Localized: "Grebas de metal resistente que protegen las piernas del caballero.
+      Proporcionan una defensa s\xF3lida mientras mantienen la movilidad en el campo
+      de batalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140914
+    m_Localized: Casco de Cuero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140915
+    m_Localized: "Un casco hecho de cuero flexible. Ligero pero que ofrece una protecci\xF3n
+      confiable, perfecto para aventureros."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140916
+    m_Localized: Armadura de Cuero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140917
+    m_Localized: "Una armadura pr\xE1ctica que combina tela y cuero. Equilibra la
+      movilidad y la defensa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140918
+    m_Localized: Guanteletes de Cuero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140919
+    m_Localized: "Guanteletes de cuero que protegen las manos hasta las puntas de
+      los dedos. Vers\xE1tiles para tareas delicadas y combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140920
+    m_Localized: Grebas de Cuero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140921
+    m_Localized: Grebas hechas de cuero flexible y tela. Ofrecen comodidad durante
+      largos desplazamientos y combates.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140922
+    m_Localized: Capucha Azul
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140923
+    m_Localized: "Una capucha de color azul profundo. Ideal para el sigilo y los
+      rituales m\xE1gicos, exudando un aire de misterio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140924
+    m_Localized: "T\xFAnica Azul"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140925
+    m_Localized: "Una t\xFAnica te\xF1ida de azul. Es un s\xEDmbolo de los magos,
+      que encierra conocimiento y poder."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140926
+    m_Localized: Guantes Azules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140927
+    m_Localized: "Guantes azules que amplifican el poder m\xE1gico. Apoyan movimientos
+      delicados y ayudan a controlar la magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140928
+    m_Localized: Pantalones Azules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140929
+    m_Localized: "Pantalones de tela azul dise\xF1ados para facilitar el movimiento.
+      C\xF3modos para viajar y aventurarse."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140930
+    m_Localized: "El s\xEDmbolo de un caballero envuelto en oscuridad. Su armadura
+      negra como el azabache rechaza la luz e infunde miedo en los enemigos en el
+      campo de batalla. Quien se pone el casco encarna el poder fr\xEDo y despiadado
+      del Caballero Negro, luchando sin piedad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140931
+    m_Localized: Armadura del Caballero Negro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140932
+    m_Localized: "Una armadura de oscuridad que presume de una defensa absoluta.
+      Su placa negra bloquea la luz y aterroriza a los enemigos en el campo de batalla.
+      Confiere a su portador un poder fr\xEDo, simbolizando la fuerza despiadada
+      de la oscuridad que aplasta a los enemigos sin vacilaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140933
+    m_Localized: Guanteletes del Caballero Negro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140934
+    m_Localized: "Armadura negra que simboliza el poder de la oscuridad. Su dise\xF1o
+      afilado indica una fuerza abrumadora. Aquellos que los usen desatar\xE1n una
+      fuerza destructiva en sus manos, ejerciendo un poder fr\xEDo en el campo de
+      batalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140935
+    m_Localized: Grebas del Caballero Negro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140936
+    m_Localized: "Armadura de color negro azabache que simboliza el poder de la oscuridad.
+      Su dise\xF1o afilado emite una sensaci\xF3n de intimidaci\xF3n que llena de
+      miedo a los enemigos, dejando una huella de terror a su paso. Aquellos que
+      las usen pisotear\xE1n el suelo y desplegar\xE1n un poder implacable en el
+      campo de batalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140937
+    m_Localized: Casco de Cuero Curtido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140938
+    m_Localized: "Una pieza de equipo simple pero resistente, apreciada por los aventureros
+      en largos viajes. La textura natural del cuero ofrece durabilidad y confiabilidad,
+      capaz de soportar a\xF1os de uso. Un compa\xF1ero de confianza que brinda seguridad,
+      incluso en la naturaleza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140939
+    m_Localized: Armadura de Cuero Curtido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140940
+    m_Localized: "Una armadura confiable para sobrevivir en la naturaleza. Combina
+      la resistencia y flexibilidad del cuero natural, protegiendo c\xF3modamente
+      al usuario en cualquier entorno. Su textura envejecida, pulida a lo largo de
+      largos viajes, refleja el esp\xEDritu aventurero de su portador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140941
+    m_Localized: Guanteletes de Cuero Curtido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140942
+    m_Localized: "Un equipo robusto dise\xF1ado para proteger las manos de los aventureros.
+      El cuero natural se amolda c\xF3modamente a la mano, manteniendo la comodidad
+      incluso durante un uso prolongado. Ya sea en terrenos accidentados o en combates
+      intensos, estos guanteletes ofrecen una protecci\xF3n confiable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140943
+    m_Localized: Grebas de Cuero Curtido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140944
+    m_Localized: "Armadura confiable para largos viajes. El cuero natural se ajusta
+      c\xF3modamente al pie, manteniendo el confort durante largas caminatas. En
+      cualquier terreno accidentado, estas grebas protegen firmemente los pies y
+      gu\xEDan al usuario hacia el siguiente paso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140945
+    m_Localized: "Una capucha que ha sido usada por magos desde tiempos antiguos.
+      Hecha de material ligero y suave, se dice que aumenta el poder m\xE1gico. Usar
+      esta capucha hace que la magia sea m\xE1s precisa y poderosa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140946
+    m_Localized: "Una prenda suave y elegante usada por los magos. La luz emitida
+      por la seda blanca brillante otorga al portador una energ\xEDa m\xE1gica calmante
+      y lo rodea con un aura misteriosa. Una pieza dise\xF1ada para sacar a relucir
+      el poder m\xE1gico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140947
+    m_Localized: "Guantes m\xEDsticos usados por los magos. La suave sensaci\xF3n
+      de la seda gu\xEDa el flujo de la magia, otorgando al portador un poder m\xE1gico
+      delicado en las manos. Aquellos que usan estos guantes pueden liberar el poder
+      de cambiar el mundo desde la punta de sus dedos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140948
+    m_Localized: Pantalones de Seda Blanca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140949
+    m_Localized: "Elegante prenda de pierna usada por los magos. La suave textura
+      de la seda amplifica el flujo de magia, otorgando al portador movimientos ligeros
+      y una fuerza tranquila. Como parte del atuendo m\xE1gico, brilla con un resplandor
+      radiante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140950
+    m_Localized: "El casco dorado forjado por antiguos herreros no solo protege la
+      cabeza del guerrero, sino que tambi\xE9n emite una luz deslumbrante que intimida
+      a los enemigos. Seg\xFAn la leyenda, aquellos que usan este casco reciben un
+      coraje inquebrantable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140951
+    m_Localized: Armadura Dorada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140952
+    m_Localized: "La armadura dorada que cubre todo el cuerpo no es solo una defensa.
+      Es un s\xEDmbolo de realeza y la dignidad de aquellos que se encuentran en
+      el campo de batalla. Esta armadura, con su formidable poder defensivo, desv\xEDa
+      los ataques y protege a su portador como un escudo resplandeciente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140953
+    m_Localized: Guanteletes Dorados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140954
+    m_Localized: "Estos guanteletes dorados, finamente elaborados, mejoran la fuerza
+      de los brazos del guerrero, convirtiendo sus pu\xF1os en una arma m\xE1s formidable.
+      Capaces de soportar los ataques enemigos mientras permiten poderosos contraataques,
+      estos guanteletes son un compa\xF1ero confiable en el campo de batalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140955
+    m_Localized: Grebas Doradas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140956
+    m_Localized: "Las grebas doradas no solo protegen los pies del guerrero, sino
+      que tambi\xE9n dejan una poderosa huella con cada paso. El oro brillante destaca
+      en el campo de batalla, resaltando la presencia del guerrero. Es un art\xEDculo
+      que ilumina el camino de su due\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140957
+    m_Localized: Capucha del Ninja Azur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140958
+    m_Localized: Una capucha tejida para mezclarse con las sombras azules. Ligera
+      como el viento, es la armadura perfecta para ocultar la forma del ninja. Quienes
+      usen esta capucha pueden acercarse silenciosamente a los enemigos bajo la cobertura
+      de la noche y atacar en un instante.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140959
+    m_Localized: Atuendo del Ninja Azur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140960
+    m_Localized: "Un atuendo azul que otorga flexibilidad a su portador. Tan r\xE1pido
+      como el viento, tan silencioso como la sombra. Este atuendo envuelve el cuerpo
+      del ninja, permitiendo una ofensiva y defensiva fluida, infundiendo miedo en
+      quienes lo ven."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140961
+    m_Localized: Guantes del Ninja Azur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140962
+    m_Localized: "Guantes dise\xF1ados para agudizar los sentidos. Fabricados con
+      resistente tela azul y con material antideslizante en las palmas. Estos guantes,
+      que encajan perfectamente en las manos de un ninja, apoyan movimientos r\xE1pidos
+      y t\xE9cnicas precisas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140963
+    m_Localized: Tabi de Ninja Azul
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140964
+    m_Localized: "Tabi azules dise\xF1ados para dominar las t\xE9cnicas ninja. Con
+      pasos silenciosos, permiten al portador acercarse sin ser detectado y superar
+      a los enemigos con movimientos r\xE1pidos y \xE1giles. Estos tabi garantizan
+      ligereza y firmeza, convirti\xE9ndolos en una pieza esencial del equipo ninja."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140965
+    m_Localized: "Una capucha hecha de seda negra, s\xEDmbolo de un mago de \xE9lite.
+      Contiene el poder de la profunda oscuridad, absorbiendo la luz como el cielo
+      nocturno y ocultando la presencia del mago. Al llevar esta capucha, se corta
+      el contacto con el mundo exterior y se concentra la energ\xEDa m\xE1gica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140966
+    m_Localized: "Una t\xFAnica de seda negra tejida especialmente para amplificar
+      el poder m\xE1gico. Ligera pero protectora, emana un aire de silencio y dignidad.
+      Se dice que el tejido est\xE1 imbuido de antiguos conjuros."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140967
+    m_Localized: Los guantes hechos de seda negra protegen los movimientos delicados
+      del mago. No interfieren con los movimientos precisos de los dedos necesarios
+      para lanzar conjuros. Estos guantes amplifican el poder liberado por las manos
+      del mago, duplicando su potencia.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140968
+    m_Localized: Pantalones de seda negra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140969
+    m_Localized: "Los pantalones de seda negra poseen la dignidad que corresponde
+      a un mago maestro. Su tela resuena con la magia oscura, permitiendo movimientos
+      fluidos y libres en las batallas m\xE1gicas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140970
+    m_Localized: Anillo de Vitalidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140971
+    m_Localized: "Un anillo poderoso incrustado con un rub\xED que simboliza la energ\xEDa
+      vital. Otorga un esp\xEDritu indomable y vitalidad, permitiendo al portador
+      soportar cualquier adversidad. La brillante gema roja es una fuente de energ\xEDa
+      vital que protege constantemente a su due\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140972
+    m_Localized: Anillo de Resistencia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140973
+    m_Localized: "Un anillo incrustado con una gema que brilla como una esmeralda.
+      Aquellos que llevan este anillo obtienen la fuerza para soportar incluso las
+      situaciones m\xE1s dif\xEDciles hasta el final. El vibrante resplandor verde
+      simboliza la fuerza duradera y un esp\xEDritu indomable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140974
+    m_Localized: Anillo de Fuerza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140975
+    m_Localized: "Un poderoso anillo incrustado con \xE1mbar. Al llevar este anillo,
+      el portador se llena de fuerza m\xE1s all\xE1 de los l\xEDmites f\xEDsicos,
+      suficiente para abrumar a los enemigos de un solo golpe. El \xE1mbar brillante
+      representa la determinaci\xF3n de lograr la victoria."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140976
+    m_Localized: Anillo de Magia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140977
+    m_Localized: "Un anillo m\xEDstico incrustado con espinela. Quienes llevan este
+      anillo experimentan una amplificaci\xF3n de su poder m\xE1gico interno, permiti\xE9ndoles
+      manejar magia poderosa a voluntad. La brillante piedra p\xFArpura es la clave
+      para liberar la fuerza m\xE1gica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140978
+    m_Localized: Anillo de Velocidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140979
+    m_Localized: "Un anillo ligero incrustado con tanzanita. Al llevar este anillo,
+      el portador se mueve r\xE1pidamente como el viento, esquivando los ataques
+      enemigos y atravesando el campo de batalla. La brillante piedra azul claro
+      simboliza la velocidad y la agilidad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140980
+    m_Localized: Anillo de Vitalidad+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140981
+    m_Localized: "Una versi\xF3n mejorada del poderoso anillo incrustado con un rub\xED
+      que simboliza la energ\xEDa vital. Otorga un esp\xEDritu indomable y vitalidad,
+      permitiendo al portador soportar cualquier adversidad. La brillante gema roja
+      es una fuente de energ\xEDa vital que protege constantemente a su due\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140982
+    m_Localized: Anillo de Resistencia+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140983
+    m_Localized: "Una versi\xF3n mejorada del anillo incrustado con una gema que
+      brilla como una esmeralda. Aquellos que llevan este anillo obtienen la fuerza
+      para soportar incluso las situaciones m\xE1s dif\xEDciles hasta el final. El
+      vibrante resplandor verde simboliza la fuerza duradera y un esp\xEDritu indomable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140984
+    m_Localized: Anillo de Fuerza+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140985
+    m_Localized: "Una versi\xF3n mejorada del poderoso anillo incrustado con \xE1mbar.
+      Al llevar este anillo, el portador se llena de fuerza m\xE1s all\xE1 de los
+      l\xEDmites f\xEDsicos, suficiente para abrumar a los enemigos de un solo golpe.
+      El \xE1mbar brillante representa la determinaci\xF3n de lograr la victoria."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140986
+    m_Localized: Anillo de Magia+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140987
+    m_Localized: "Una versi\xF3n mejorada del anillo m\xEDstico incrustado con espinela.
+      Quienes llevan este anillo experimentan una amplificaci\xF3n de su poder m\xE1gico
+      interno, permiti\xE9ndoles manejar magia poderosa a voluntad. La brillante
+      piedra p\xFArpura es la clave para liberar la fuerza m\xE1gica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140988
+    m_Localized: Anillo de Velocidad+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140989
+    m_Localized: "Una versi\xF3n mejorada del anillo ligero incrustado con tanzanita.
+      Al llevar este anillo, el portador se mueve r\xE1pidamente como el viento,
+      esquivando los ataques enemigos y atravesando el campo de batalla. La brillante
+      piedra azul claro simboliza la velocidad y la agilidad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140990
+    m_Localized: Anillo de Vitalidad++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140991
+    m_Localized: "La versi\xF3n final mejorada del poderoso anillo incrustado con
+      un rub\xED que simboliza la energ\xEDa vital. Otorga un esp\xEDritu indomable
+      y vitalidad, permitiendo al portador soportar cualquier adversidad. La brillante
+      gema roja es una fuente de energ\xEDa vital que protege constantemente a su
+      due\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140992
+    m_Localized: Anillo de Resistencia++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140993
+    m_Localized: "La versi\xF3n final mejorada del anillo incrustado con una gema
+      que brilla como una esmeralda. Aquellos que llevan este anillo obtienen la
+      fuerza para soportar incluso las situaciones m\xE1s dif\xEDciles hasta el final.
+      El vibrante resplandor verde simboliza la fuerza duradera y un esp\xEDritu
+      indomable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140994
+    m_Localized: Anillo de Fuerza++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140995
+    m_Localized: "La versi\xF3n final mejorada del poderoso anillo incrustado con
+      \xE1mbar. Al llevar este anillo, el portador se llena de fuerza m\xE1s all\xE1
+      de los l\xEDmites f\xEDsicos, suficiente para abrumar a los enemigos de un
+      solo golpe. El \xE1mbar brillante representa la determinaci\xF3n de lograr
+      la victoria."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140996
+    m_Localized: Anillo de Magia++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140997
+    m_Localized: "La versi\xF3n final mejorada del anillo m\xEDstico incrustado con
+      espinela. Quienes llevan este anillo experimentan una amplificaci\xF3n de su
+      poder m\xE1gico interno, permiti\xE9ndoles manejar magia poderosa a voluntad.
+      La brillante piedra p\xFArpura es la clave para liberar la fuerza m\xE1gica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140998
+    m_Localized: Anillo de Velocidad++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140999
+    m_Localized: "La versi\xF3n final mejorada del anillo ligero incrustado con tanzanita.
+      Al llevar este anillo, el portador se mueve r\xE1pidamente como el viento,
+      esquivando los ataques enemigos y atravesando el campo de batalla. La brillante
+      piedra azul claro simboliza la velocidad y la agilidad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141000
+    m_Localized: Collar del Diablillo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141001
+    m_Localized: "Un inquietante accesorio dise\xF1ado con un peque\xF1o diablillo
+      morado. El poder m\xE1gico escondido detr\xE1s de su belleza atrae a su portador
+      hacia las profundidades de la tentaci\xF3n. Otorga \xAB Apoyo del Diablillo
+      \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141002
+    m_Localized: "Collar del Hada de las Luci\xE9rnagas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141003
+    m_Localized: "Un accesorio m\xEDstico con una piedra preciosa que emite una luz
+      suave incrustada en el centro. Como las luci\xE9rnagas que iluminan un bosque
+      nocturno, otorga al portador un poder m\xE1gico c\xE1lido pero fugaz. Otorga
+      \xAB Apoyo del Hada de las Luci\xE9rnagas \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141004
+    m_Localized: "Amuleto del Esp\xEDritu Guardi\xE1n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141005
+    m_Localized: "Un accesorio sagrado que se asemeja a un talism\xE1n blanco. Quienes
+      lo portan est\xE1n protegidos por esp\xEDritus guardianes y resguardados de
+      cualquier desastre. Otorga \xAB Apoyo del Esp\xEDritu Guardi\xE1n \xBB al portador
+      al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141006
+    m_Localized: Brazalete Maldito
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141007
+    m_Localized: "Un siniestro accesorio que se dice trae una terrible maldici\xF3n
+      a su portador. Su oscura y retorcida apariencia cuenta la historia de la desesperaci\xF3n
+      y el sufrimiento de sus antiguos due\xF1os. Otorga \xAB Maldici\xF3n Atrapada
+      \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141008
+    m_Localized: Emblema de la Cosecha Abundante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141009
+    m_Localized: "Un talism\xE1n de color trigo que simboliza las bendiciones de
+      la cosecha. Contiene el poder de la tierra y trae abundantes cosechas y prosperidad.
+      Otorga \xAB Bendici\xF3n de la Cosecha Abundante \xBB al portador al inicio
+      del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141010
+    m_Localized: Frasco de Magia Desbordante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141011
+    m_Localized: "Un peque\xF1o frasco de vidrio que contiene magia pura y en espiral.
+      La magia dentro amplifica el poder de su portador y desbloquea un potencial
+      desconocido. Otorga \xAB Impulso M\xE1gico \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141012
+    m_Localized: "Anillo del Rat\xF3n Acorralado"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141013
+    m_Localized: "Un accesorio que simboliza los instintos de supervivencia de un
+      ser acorralado. Su dise\xF1o peque\xF1o pero resistente otorga al portador
+      la fuerza para enfrentarse a cualquier adversidad. Otorga \xAB Lucha \xBB al
+      portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141014
+    m_Localized: Las Siete Herramientas de Shen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141015
+    m_Localized: "Un conjunto legendario que contiene una mezcla de diferentes tecnolog\xEDas
+      y magia. Incluye herramientas secretas para abrir cerraduras, frascos de veneno
+      y cuchillas ocultas, brindando posibilidades ilimitadas a su usuario. Otorga
+      \xAB Preparaci\xF3n del Cuchillo de Shen \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141016
+    m_Localized: Bufanda del Tiempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141017
+    m_Localized: "Un accesorio m\xEDstico imbuido con el poder de manipular el flujo
+      del tiempo. Los colores de la bufanda cambian constantemente, y solo aquellos
+      que viajan entre el pasado y el futuro pueden entender sus patrones tejidos.
+      Otorga \xAB Ataque Preventivo \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141018
+    m_Localized: Botella de Nitroglicol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141019
+    m_Localized: "Un recipiente qu\xEDmico vol\xE1til que podr\xEDa explotar con
+      solo un leve movimiento. Quienes porten esta botella deben actuar con precauci\xF3n
+      y audacia. Otorga \xAB Reacci\xF3n Excesiva \xBB al portador al inicio del
+      combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141020
+    m_Localized: "Un testimonio de muchos a\xF1os de entrenamiento y disciplina.
+      Su dise\xF1o simple otorga una confianza y fuerza inquebrantables una vez puesto.
+      Otorga \xAB Inmunidad a los Temblores \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141021
+    m_Localized: "Ung\xFCento Paralizante"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141022
+    m_Localized: "Un ung\xFCento especial hecho al mezclar hierbas legendarias y
+      polvos m\xE1gicos. Anula incluso los ataques de par\xE1lisis m\xE1s poderosos,
+      asegurando que los guerreros mantengan su ventaja en el campo de batalla. Otorga
+      \xAB Inmunidad a la Par\xE1lisis \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141023
+    m_Localized: Emblema de Corte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141024
+    m_Localized: "Un accesorio que simboliza la agudeza y la fuerza. Aumenta la capacidad
+      de corte del portador y mejora significativamente la potencia de cada golpe.
+      Solo aquellos entrenados al m\xE1ximo pueden desbloquear su verdadero potencial.
+      Otorga \xAB Refuerzo de Corte \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141025
+    m_Localized: Emblema de Golpeo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141026
+    m_Localized: "Un accesorio que simboliza la fuerza y la destrucci\xF3n. Aumenta
+      la capacidad de golpeo del portador, amplificando el peso e impacto de cada
+      golpe. Contiene el poder de hacer temblar la tierra. Otorga \xAB Refuerzo de
+      Golpeo \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141027
+    m_Localized: "Emblema de Perforaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141028
+    m_Localized: "Un accesorio que simboliza la agudeza y el poder de perforaci\xF3n.
+      Aumenta la capacidad de perforaci\xF3n del portador, permitiendo golpes precisos
+      que atraviesan las defensas del enemigo. Se dice que contiene una mente aguda.
+      Otorga \xAB Refuerzo de Perforaci\xF3n \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141029
+    m_Localized: Emblema de Magia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141030
+    m_Localized: "Una reliquia preciosa que los magos antiguos atesoraban. Aumenta
+      el poder m\xE1gico del portador, incrementando dr\xE1sticamente el poder de
+      los hechizos. Otorga \xAB Refuerzo de Magia \xBB al portador al inicio del
+      combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141031
+    m_Localized: Emblema de Rayo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141032
+    m_Localized: "Bendecido por el Dios del Trueno, este emblema otorga a su portador
+      velocidad y poder como un rayo. Su destello atraviesa a los enemigos como un
+      rayo, maximizando el poder de los ataques el\xE9ctricos. Otorga \xAB Refuerzo
+      de Rayo \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141033
+    m_Localized: Emblema de Llama
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141034
+    m_Localized: "Se dice que otorga a su portador el poder de un fuego abrasador.
+      Un legendario hechicero us\xF3 este emblema para quemar la tierra y reducirlo
+      todo a cenizas. Otorga \xAB Refuerzo de Llama \xBB al portador al inicio del
+      combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141035
+    m_Localized: Precio del Poder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141036
+    m_Localized: "El portador obtiene una fuerza incre\xEDble, pero a costa de su
+      velocidad, que se va deteriorando. \xBFPodr\xE1n aquellos que buscan poder
+      resistir la peligrosa tentaci\xF3n de este anillo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141037
+    m_Localized: "Detector Ex\xF3tico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141038
+    m_Localized: "Un dispositivo que encarna la c\xFAspide de la tecnolog\xEDa extranjera.
+      Al apuntar al enemigo, analiza instant\xE1neamente su estado, revelando debilidades
+      y poderes ocultos. Mejora dram\xE1ticamente las t\xE1cticas del usuario. Otorga
+      \xAB An\xE1lisis \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141039
+    m_Localized: "Bebida Energ\xE9tica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141040
+    m_Localized: "Una bebida m\xE1gica que revitaliza instant\xE1neamente al bebedor,
+      eliminando la fatiga. Restaura r\xE1pidamente la resistencia incluso en medio
+      del combate, maximizando la resistencia. Otorga \xAB Recuperaci\xF3n de Energ\xEDa
+      \xBB al portador al inicio del combate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141041
+    m_Localized: Llave de Hierro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141042
+    m_Localized: Ataque Normal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141043
+    m_Localized: Balancea el arma para atacar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141044
+    m_Localized: "Posici\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141045
+    m_Localized: "Adopta una posici\xF3n para aumentar el poder de ataque f\xEDsico
+      y ataca al final del turno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141046
+    m_Localized: Estocada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141047
+    m_Localized: "Apu\xF1ala al oponente con un arma, infligiendo da\xF1o de perforaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141048
+    m_Localized: Rompe Piernas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141049
+    m_Localized: Ataca a las piernas del oponente. Aplica 'Tambaleo' si el objetivo
+      es humanoide.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141050
+    m_Localized: Golpe Doble
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141051
+    m_Localized: Balancea el arma de izquierda a derecha, atacando dos veces.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141052
+    m_Localized: Estocada Perforante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141053
+    m_Localized: "T\xE9cnica especial de armas de perforaci\xF3n. Realiza un ataque
+      poderoso. Recupera 1 BP si el objetivo tiene el atributo amorfo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141054
+    m_Localized: Golpe Giratorio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141055
+    m_Localized: "Una t\xE9cnica a menudo otorgada a las armas contundentes. Realiza
+      un ataque poderoso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141056
+    m_Localized: Hoja Venenosa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141057
+    m_Localized: Agita un arma recubierta de veneno y ataca. Inflige 'Veneno' al
+      objetivo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141058
+    m_Localized: "Golpe Rel\xE1mpago"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141059
+    m_Localized: Se mueve a alta velocidad para atacar con un arma. El poder del
+      ataque se reduce, pero puede recuperar 1 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141060
+    m_Localized: "Esp\xEDritu de Lucha"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141061
+    m_Localized: "Se inspira a s\xED mismo y se prepara para la batalla con vigor.
+      Otorga 'Esp\xEDritu de Lucha.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141062
+    m_Localized: "Usa p\xF3lvora especial para realizar una danza. Otorga 'Seguimiento
+      de Fuego.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141063
+    m_Localized: "Ataque M\xE1gico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141064
+    m_Localized: "Realiza un ataque utilizando poder m\xE1gico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141065
+    m_Localized: Bola de Fuego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141066
+    m_Localized: "Lanza una bola de fuego al enemigo. Inflige da\xF1o de fuego."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141067
+    m_Localized: Presiona un hierro caliente contra el objetivo. Inflige 'Quemadura.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141068
+    m_Localized: Presiona un hierro al rojo vivo contra el objetivo. Inflige 'Quemadura
+      Grave.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141069
+    m_Localized: "Espada M\xE1gica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141070
+    m_Localized: "Imbuye el arma con magia, realizando un ataque f\xEDsico con atributos
+      m\xE1gicos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141071
+    m_Localized: Corte Avanzado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141072
+    m_Localized: "Da un paso adelante y adopta una postura fuerte. Ataca y otorga
+      'Reducci\xF3n de Da\xF1o F\xEDsico.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141073
+    m_Localized: "Ataque Rel\xE1mpago"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141074
+    m_Localized: Realiza un ataque elemental de rayo a gran velocidad. El poder de
+      ataque se reduce, pero puede recuperar 1 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141075
+    m_Localized: Rencor del Trueno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141076
+    m_Localized: "Lanza un rayo imbuido con una maldici\xF3n. Inflige 'Par\xE1lisis'
+      al objetivo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141077
+    m_Localized: "Espada de Trueno de \xC9bano"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141078
+    m_Localized: "Una t\xE9cnica transmitida por la casa de Ebona. Imbuye la espada
+      con rel\xE1mpago y ataca. Despu\xE9s del corte, libera un rayo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141079
+    m_Localized: Golpe de Trueno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141080
+    m_Localized: "Lanza un rayo desde el cielo. Inflige da\xF1o de rayo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141081
+    m_Localized: Golpe Pesado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141082
+    m_Localized: Lanza un golpe fuerte. Inflige 'Rompimiento de Armadura' a los enemigos
+      con armaduras o caparazones.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141083
+    m_Localized: "Armadura de Rel\xE1mpago"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141084
+    m_Localized: "Envuelve el cuerpo en rel\xE1mpagos y otorga 'Armadura de Rel\xE1mpago'
+      al portador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141085
+    m_Localized: Lanza de Fuego de Lavaheart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141086
+    m_Localized: "Una t\xE9cnica transmitida por la casa de Lavaheart. Lanza una
+      lanza de fuego al enemigo, infligiendo da\xF1o f\xEDsico de fuego."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141087
+    m_Localized: "Voluntad del Palad\xEDn"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141088
+    m_Localized: "Una t\xE9cnica del palad\xEDn Luxola. Otorga 'Voluntad del Palad\xEDn'
+      al portador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141089
+    m_Localized: Disparo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141090
+    m_Localized: "Lanza una flecha, infligiendo da\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141091
+    m_Localized: Disparo en Retirada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141092
+    m_Localized: "Realiza una retirada hacia atr\xE1s mientras dispara al enemigo,
+      otorgando 'Posibilidad de Evasi\xF3n'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141093
+    m_Localized: Disparo de Salva
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141094
+    m_Localized: "Lanza tres flechas simult\xE1neamente, infligiendo da\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141095
+    m_Localized: 'Ataque de Danza de Armas: Realiza 4 ataques.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141096
+    m_Localized: Envenenamiento Cruel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141097
+    m_Localized: "Ataca con un arma envenenada con una toxina especial. Si el enemigo
+      ya est\xE1 envenenado, se realiza un golpe potente y se elimina el veneno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141098
+    m_Localized: Corte Eterno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141099
+    m_Localized: "Empu\xF1a una gran espada pesada con toda su fuerza, infligiendo
+      un ataque poderoso. Te otorga 'Fatiga'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141100
+    m_Localized: "Paso R\xE1pido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141101
+    m_Localized: "Se mueve r\xE1pidamente y te otorga 'Avance'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141102
+    m_Localized: Magia Amplificada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141103
+    m_Localized: Amplifica la magia y la envuelve en ti. Te otorga 1 'Contador de
+      Magia'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141104
+    m_Localized: "Liberaci\xF3n de Magia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141105
+    m_Localized: "Libera toda la magia amplificada en un solo golpe. La potencia
+      del ataque depende del 'Contador de Magia'. Despu\xE9s del ataque, el 'Contador
+      de Magia' se reinicia a 0."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141106
+    m_Localized: "Amplificaci\xF3n M\xE1gica R\xE1pida"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141107
+    m_Localized: "Lanza un hechizo r\xE1pidamente y te otorga 1 'Contador de Magia'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141108
+    m_Localized: Muro de Hierro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141109
+    m_Localized: "Una t\xE9cnica para reforzar la armadura de uno mismo. Otorga a
+      uno mismo 'Muro de Hierro'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141110
+    m_Localized: "Crea un escudo m\xE1gico frente a uno mismo. Otorga a uno mismo
+      'Escudo M\xE1gico'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141111
+    m_Localized: Evarge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141112
+    m_Localized: "Una de las t\xE9cnicas prohibidas que distorsiona el espacio-tiempo,
+      permitiendo al usuario moverse m\xE1s r\xE1pido que el oponente. Otorga a uno
+      mismo 'Aceleraci\xF3n de BP'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141113
+    m_Localized: Poder del Rencor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141114
+    m_Localized: Convierte los sentimientos de rencor en poder, imbuyendo el arma
+      con fuerza. Otorga a uno mismo 'Poder del Rencor'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141115
+    m_Localized: Corte de la Espada Maldita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141116
+    m_Localized: "Ataca con una espada que ha absorbido la sangre de muchos. Aunque
+      el da\xF1o se reduce, convierte parte del da\xF1o infligido en HP para el usuario."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141117
+    m_Localized: Espinas de Represalia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141118
+    m_Localized: "Imbuye la armadura con espinas m\xE1gicas, contraatacando cuando
+      el enemigo ataca. Otorga a uno mismo 'Contraataque F\xEDsico'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141119
+    m_Localized: "Curaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141120
+    m_Localized: Rodeado de una luz suave, sanas tus PV.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141121
+    m_Localized: "Bendici\xF3n de Airy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141122
+    m_Localized: "Recibe la bendici\xF3n de la deidad curativa, otorg\xE1ndote 'Bendici\xF3n
+      de Airy'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141123
+    m_Localized: "Lee los movimientos del oponente y ot\xF3rgate 'Evasi\xF3n Absoluta'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141124
+    m_Localized: Ataque de Escudo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141125
+    m_Localized: Levanta tu escudo y carga contra el enemigo para atacar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141126
+    m_Localized: Empuje de Guardia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141127
+    m_Localized: "Una t\xE9cnica especial que usa una lanza con escudo. Despu\xE9s
+      de atacar con el arma, te otorga 'Guardia'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141128
+    m_Localized: Combo de Arnold I
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141129
+    m_Localized: "Una t\xE9cnica de combo transmitida por la familia Arnold. Te otorga
+      'Combo de Arnold I'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141130
+    m_Localized: Combo de Arnold II
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141131
+    m_Localized: "Una t\xE9cnica de combo transmitida por la familia Arnold. Si tienes
+      'Combo de Arnold I', el da\xF1o aumenta. Te otorga 'Combo de Arnold II'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141132
+    m_Localized: Combo de Arnoid - Tres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141133
+    m_Localized: "Una t\xE9cnica de combo transmitida por la familia Arnoid. El da\xF1o
+      aumenta si se aplica 'Combo de Arnoid - Dos'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141134
+    m_Localized: Combo Secreto de Arnoid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141135
+    m_Localized: "Una t\xE9cnica secreta de combo de la familia Arnoid. El da\xF1o
+      aumenta si se aplica 'Combo de Arnoid - Dos', y otorga a uno mismo 'Aceleraci\xF3n
+      de BP' y 'Eficiencia'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141136
+    m_Localized: Valor Fingido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141137
+    m_Localized: "Finge valor y rebosa de esp\xEDritu de lucha. Otorga a uno mismo
+      'Valor Fingido'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141138
+    m_Localized: "La t\xE9cnica secreta de la familia Lavaheart. Lanza una lanza
+      envuelta en llamas infernales al oponente, infligiendo da\xF1o f\xEDsico de
+      atributo de fuego, pero al ser una t\xE9cnica incompleta, tambi\xE9n inflige
+      'Quemadura' a uno mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141139
+    m_Localized: Sarde Evage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141140
+    m_Localized: "Una de las t\xE9cnicas prohibidas que detiene el tiempo. Otorga
+      a uno mismo 'Detener Tiempo'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141141
+    m_Localized: "Expande un espacio donde se almacena poder m\xE1gico a su alrededor,
+      otorg\xE1ndose 'Recuperaci\xF3n de Magia'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141142
+    m_Localized: "Disparo R\xE1pido con Ballesta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141143
+    m_Localized: "Dispara flechas gruesas, infligiendo un fuerte da\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141144
+    m_Localized: "Disparo R\xE1pido con Ballesta Furioso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141145
+    m_Localized: "Dispara flechas extremadamente gruesas, infligiendo un fuerte da\xF1o.
+      Debido al peso de las flechas, tambi\xE9n inflige 'Retroceso' al enemigo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141146
+    m_Localized: Ataque Normal Definitivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141147
+    m_Localized: "Un ataque normal perfeccionado. Simple, pero debido a su simplicidad,
+      es extremadamente fuerte. Despu\xE9s de atacar, otorga a uno mismo 'Recuperaci\xF3n
+      de BP por Ataque Normal'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141148
+    m_Localized: Corte de Slime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141149
+    m_Localized: "Realiza un ataque que apunta al n\xFAcleo, el punto d\xE9bil de
+      los slimes. Inflige un golpe masivo si el enemigo tiene el atributo 'Amorfo'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141150
+    m_Localized: Caza de Bestias
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141151
+    m_Localized: Un golpe que infunde miedo en las bestias. Si el enemigo tiene el
+      atributo 'Bestia', recupera 1 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141152
+    m_Localized: Analizar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141153
+    m_Localized: Obtiene la habilidad de leer el estado del oponente. Otorga a uno
+      mismo 'Analizar'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141154
+    m_Localized: "Gran Meteoro M\xE1gico de Irisia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141155
+    m_Localized: "Lanza un gran meteoro m\xE1gico creado con la magia ancestral de
+      la familia Irisia. Si el contador de magia es 3 o m\xE1s, se consume y recupera
+      4 BP."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141156
+    m_Localized: Dirva Evage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141157
+    m_Localized: "Una de las t\xE9cnicas prohibidas que rebobina el tiempo. Recupera
+      completamente BP."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141158
+    m_Localized: Contraataque de Ira
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141159
+    m_Localized: Convierte la ira en poder y adopta una postura de contraataque.
+      Otorga a uno mismo 'Contraataque de Ira'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141160
+    m_Localized: Viento a Favor en la Adversidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141161
+    m_Localized: El viento a favor en la adversidad te impulsa hacia adelante. Otorga
+      a uno mismo 'Viento a Favor en la Adversidad'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141162
+    m_Localized: Adopta una postura defensiva y otorga a uno mismo 'Guardia'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141163
+    m_Localized: Droga Prohibida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141164
+    m_Localized: "Una droga que lleva las habilidades f\xEDsicas del usuario al l\xEDmite.
+      Otorga a uno mismo 'Veneno' y 'Aceleraci\xF3n de BP'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141165
+    m_Localized: Golpe Imprudente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141166
+    m_Localized: "Lanza un golpe temerario cargado de emoci\xF3n. Consume todo el
+      BP, y aumenta el poder de ataque seg\xFAn la cantidad consumida. Otorga a uno
+      mismo 'Fatiga' y 'Par\xE1lisis'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141167
+    m_Localized: Contraataque con Guardia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141168
+    m_Localized: "Una postura que combina defensa y contraataque. Otorga a uno mismo
+      'Guardia' y 'Contraataque F\xEDsico'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141169
+    m_Localized: "Invoca tent\xE1culos imbuidos con poder m\xE1gico retorcido y otorga
+      a uno mismo 'Tent\xE1culos M\xE1gicos'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141170
+    m_Localized: "Transformaci\xF3n en Acero"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141171
+    m_Localized: "El cuerpo se convierte en acero. Se otorga a s\xED mismo 'Transformaci\xF3n
+      en Acero'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141172
+    m_Localized: "Concentraci\xF3n M\xE1gica Total"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141173
+    m_Localized: "Una t\xE9cnica que convierte todo el poder en magia. Consume todos
+      los BP y convierte el n\xFAmero usado en 'Conteo M\xE1gico'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141174
+    m_Localized: Naifanchi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141175
+    m_Localized: "Todo movimiento comienza y termina con Naifanchi. Se otorga a s\xED
+      mismo 'Eficiencia'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141176
+    m_Localized: Corte Diagonal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141177
+    m_Localized: "Una de las t\xE9cnicas originarias del Este. Realiza un ataque,
+      y si el objetivo tiene el atributo humanoide, se recupera 1 BP."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141178
+    m_Localized: Triturador de Rocas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141179
+    m_Localized: Un golpe poderoso que destroza rocas. Si el objetivo tiene el atributo
+      de roca, se recupera 1 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141180
+    m_Localized: Fuego Devastador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141181
+    m_Localized: Desata un fuego que quema todo. Si el objetivo tiene atributo de
+      planta, causa un golpe poderoso.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141182
+    m_Localized: Terror Salvaje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141183
+    m_Localized: Un hechizo maldito que provoca el miedo primitivo. Si el objetivo
+      tiene atributo de bestia, causa un golpe poderoso.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141184
+    m_Localized: Proyectiles de Estrellas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141185
+    m_Localized: Crea dos estrellas azul-blancas brillantes con magia y las lanza
+      al objetivo. Ataca dos veces.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141186
+    m_Localized: Flecha de Seguimiento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141187
+    m_Localized: Dispara una flecha que atraviesa el tiempo. Ataca durante el turno
+      y nuevamente al final del turno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141188
+    m_Localized: "Lanza una bola de magia de onda blanca transl\xFAcida. Ataca y
+      aplica 'Onda Blanca' al objetivo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141189
+    m_Localized: Corte de Postimagen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141190
+    m_Localized: "Deja una postimagen de uno mismo. La postimagen espera el siguiente
+      movimiento. Ataca y otorga 'Iniciativa' a s\xED mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141191
+    m_Localized: Rayo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141192
+    m_Localized: "Un rayo que desgarra el cielo. Inflige un poderoso da\xF1o de rayo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141193
+    m_Localized: Mil Lanzas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141194
+    m_Localized: Lanza mil lanzas a la vez, atravesando al oponente. Realiza un ataque
+      perforante poderoso.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141195
+    m_Localized: "Jonr\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141196
+    m_Localized: "Un golpe aplicando una t\xE9cnica deportiva. Realiza un ataque
+      contundente poderoso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141197
+    m_Localized: "Retraso M\xE1gico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141198
+    m_Localized: "Una t\xE9cnica que convierte la magia en acci\xF3n. Convierte todos
+      los 'Cuentas de Magia' acumulados en BP."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141199
+    m_Localized: "Para\xEDso de la Adversidad"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141200
+    m_Localized: "Empu\xF1a tu arma con un poder extraordinario. Cuantas m\xE1s dolencias
+      tengas, m\xE1s fuerte ser\xE1 el ataque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141201
+    m_Localized: Reserva de Cuchillos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141202
+    m_Localized: Reserva cuchillos ocultos en tu bolsillo. Acumula 'Reserva de Cuchillos'
+      en 2. Esta habilidad se puede usar varias veces por turno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141203
+    m_Localized: Lanzamiento de Cuchillos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141204
+    m_Localized: "Lanza todos los cuchillos ocultos a la vez. El n\xFAmero de ataques
+      es igual al n\xFAmero de 'Reserva de Cuchillos'. Despu\xE9s, la 'Reserva de
+      Cuchillos' se convierte en 0. Falla si la 'Reserva de Cuchillos' es 0."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141205
+    m_Localized: Lanzamiento de cuchillo de Shen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141206
+    m_Localized: "Lanza un cuchillo guardado en tu pecho. Consume 1 reserva de cuchillo
+      para atacar, otorg\xE1ndote 'Potencial de evasi\xF3n'. Falla si la reserva
+      de cuchillos es 0."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141207
+    m_Localized: "Meteorito m\xE1gico de Ilysia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141208
+    m_Localized: "Lanza un meteorito m\xE1gico transmitido a trav\xE9s de la familia
+      Ilysia. Si el recuento de magia es 1 o m\xE1s, se consume y se restauran 3
+      BP."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141209
+    m_Localized: "Apuntar con precisi\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141210
+    m_Localized: "Conc\xE9ntrate y pon todo en el pr\xF3ximo golpe. Te otorga 'Apuntar
+      con precisi\xF3n'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141211
+    m_Localized: "Un v\xF3rtice de llamas quema al enemigo. Un poderoso ataque de
+      atributo de fuego."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141212
+    m_Localized: Espada secreta de trueno de Ebonia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141213
+    m_Localized: "Una t\xE9cnica secreta transmitida en la familia Ebonia. Envuelve
+      la espada con trueno para un ataque. Despu\xE9s del corte, se lanzan tres rayos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141214
+    m_Localized: "Bumer\xE1n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141215
+    m_Localized: Un arma extranjera que regresa cuando se lanza. Realiza un ataque,
+      restaurando 1 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141216
+    m_Localized: "Un arma extranjera que explota cuando se lanza. Inflige da\xF1o
+      y aplica 'Quemadura' al enemigo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141217
+    m_Localized: "\xBFUn arma extranjera usada para ganar puntos...? Inflige da\xF1o
+      y aplica 'Disparo Apuntado' al usuario."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141218
+    m_Localized: Trueno del Rompeballenas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141219
+    m_Localized: "Un ataque de trueno poderoso que puede paralizar incluso a una
+      ballena. Inflige da\xF1o y aplica 'Par\xE1lisis' al enemigo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141220
+    m_Localized: Infierno del Rompeelefantes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141221
+    m_Localized: "Un ataque poderoso que puede incinerar f\xE1cilmente a un elefante.
+      Inflige da\xF1o y aplica 'Quemadura' al enemigo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141222
+    m_Localized: "Golpea con fuerza el escudo. Inflige da\xF1o y aplica 'Titubeo'
+      al enemigo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141223
+    m_Localized: Escudo de Luxora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141224
+    m_Localized: "La protecci\xF3n sagrada del caballero Luxora. Aplica 'Reducci\xF3n
+      de Da\xF1o F\xEDsico' y 'Escudo M\xE1gico' al usuario."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141225
+    m_Localized: "Golpe Cr\xEDtico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141226
+    m_Localized: "Asesta un golpe fatal a un oponente que muestra una apertura. Si
+      el oponente est\xE1 \"aturdido\", se convierte en un golpe poderoso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141227
+    m_Localized: "\xC1cido Clorh\xEDdrico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141228
+    m_Localized: "Inunda con una gran cantidad de \xE1cido clorh\xEDdrico. Realiza
+      un ataque e inflige \"veneno\" al oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141229
+    m_Localized: Onda Plateada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141230
+    m_Localized: Emite una onda plateada brillante. Realiza un ataque e inflige "Onda
+      Blanca" al oponente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141231
+    m_Localized: "Maldici\xF3n de la Hora del Buey"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141232
+    m_Localized: "Golpea con una mu\xF1eca maldita extranjera. Realiza un ataque
+      y te inflige \"Poder del Rencor\" a ti mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141233
+    m_Localized: Lluvia de Meteoritos del Amor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141234
+    m_Localized: "Una t\xE9cnica milagrosa utilizada por los demonios en tiempos
+      antiguos. Requiere mucho SP, pero las estrellas te apoyan y permiten atacar
+      cuatro veces."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141235
+    m_Localized: "Una t\xE9cnica antigua creada para derrotar a un poderoso demonio.
+      Requiere mucho SP, pero asesta un golpe poderoso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141236
+    m_Localized: Rompedor de Cascos de la Esperanza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141237
+    m_Localized: "Una t\xE9cnica utilizada por aquellos que entrenaban para luchar
+      contra osos en tiempos antiguos. Requiere mucho SP, realiza un ataque e inflige
+      \"Rompedor de Armadura\" al oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141238
+    m_Localized: "Curaci\xF3n de la Justicia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141239
+    m_Localized: "Una antigua t\xE9cnica favorecida por los compasivos. Requiere
+      mucho SP, pero restaura una gran cantidad de tus PV."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141240
+    m_Localized: "Golpe de Pu\xF1o del Alma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141241
+    m_Localized: "Un golpe de pu\xF1o espiritual de un artista marcial extranjero.
+      Realiza un ataque y te inflige \"Concentraci\xF3n\" a ti mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141242
+    m_Localized: Patada Creciente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141243
+    m_Localized: Una elegante patada creciente de un artista marcial extranjero.
+      Es un golpe poderoso, pero puede fallar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141244
+    m_Localized: Enemigo de Prueba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335040
+    m_Localized: Goblin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335041
+    m_Localized: Slime de Fango
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335042
+    m_Localized: "Mu\xF1eca Maldita"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335043
+    m_Localized: Orbe de Hierba de Cien Ojos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335044
+    m_Localized: "Hombre-Pez Subterr\xE1neo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335045
+    m_Localized: "Kodama en Descomposici\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335046
+    m_Localized: Muerto del Cementerio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335047
+    m_Localized: Sombra Sonriente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335048
+    m_Localized: "Caballero del Vac\xEDo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335049
+    m_Localized: "Caracol Clorh\xEDdrico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335050
+    m_Localized: Ojo de Castigo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335051
+    m_Localized: "Esp\xEDritu Blanco del Abismo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335052
+    m_Localized: Rey de los Huesos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335053
+    m_Localized: "\xC1rbol de los Esp\xEDritus Ancestrales"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335054
+    m_Localized: Estatua del Rey de la Naturaleza Antigua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335055
+    m_Localized: Gran Serpiente Venenosa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335056
+    m_Localized: Slime Metamorfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335057
+    m_Localized: Mago de Sangre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335058
+    m_Localized: Mago de Hielo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335059
+    m_Localized: Dios del Viento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335060
+    m_Localized: "Drag\xF3n Eld"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335061
+    m_Localized: Sangre Celestial, Walobot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335062
+    m_Localized: "Bailar\xEDn de los Artes del Trueno, Ebonia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335063
+    m_Localized: "Llamas de la Ira, Coraz\xF3n de Lava"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335064
+    m_Localized: Decano Alquimista Estelar, Ilicia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335065
+    m_Localized: "Golpes R\xE1pidos, Arnoid"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335066
+    m_Localized: Hoja de Sombra, Shen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335067
+    m_Localized: Walobot Despertado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335068
+    m_Localized: Renacimiento de {SealedName}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335069
+    m_Localized: Dios del Inframundo, Airy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335070
+    m_Localized: "Dios de la Destrucci\xF3n, Airy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335071
+    m_Localized: "El veneno mortal drena la fuerza vital del cuerpo. Al final de
+      cada turno, se recibe una cierta cantidad de da\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335072
+    m_Localized: Tambaleo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335073
+    m_Localized: Incapaz de actuar debido al miedo tras ser atacado. Cuando se disipa
+      este estado, se otorga 'Inmunidad al Tambaleo'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335074
+    m_Localized: "Una t\xE9cnica que saca el esp\xEDritu de lucha interior y aumenta
+      el poder de ataque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335075
+    m_Localized: "Persecuci\xF3n de Llamas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335076
+    m_Localized: "Otorga el poder del fuego, infligiendo peque\xF1os da\xF1os de
+      atributo de fuego con cada ataque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335077
+    m_Localized: "Estado de estar herido por fuego o calor. Se recibe da\xF1o adicional
+      con cada golpe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335078
+    m_Localized: "Peor que las quemaduras, las heridas ulceradas causan un gran da\xF1o
+      adicional con cada golpe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335079
+    m_Localized: "Reducci\xF3n de Da\xF1o F\xEDsico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335080
+    m_Localized: "Endurece la armadura para reducir la cantidad de da\xF1o f\xEDsico
+      recibido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335081
+    m_Localized: "Par\xE1lisis"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335082
+    m_Localized: "El cuerpo se entumece y no se mueve como se desea, lo que reduce
+      el da\xF1o infligido. Cuando este estado anormal se disipa, se otorga 'Inmunidad
+      a la Par\xE1lisis'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335083
+    m_Localized: Rompearmaduras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335084
+    m_Localized: "La armadura que se lleva puesta se vuelve fr\xE1gil y se rompe.
+      El da\xF1o f\xEDsico recibido aumenta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335085
+    m_Localized: "Obtiene un poder milagroso a trav\xE9s de un esp\xEDritu indomable.
+      Aumenta el poder de ataque y defensa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335086
+    m_Localized: "Probabilidad de Evasi\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335087
+    m_Localized: "A trav\xE9s de movimientos \xE1giles y precognici\xF3n, se aumenta
+      la posibilidad de evadir el ataque del oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335088
+    m_Localized: Como consecuencia de un ataque poderoso, el turno comienza con 1
+      BP menos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335089
+    m_Localized: Vanguardia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335090
+    m_Localized: "Se mueve con la velocidad del viento, reduciendo el costo de BP
+      de la pr\xF3xima acci\xF3n en 2. El efecto se elimina despu\xE9s de cualquier
+      acci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335091
+    m_Localized: Obtiene la fuerza de una pared de acero. Otorga GP al comienzo del
+      turno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335092
+    m_Localized: "Despliega un escudo hecho de poder m\xE1gico al frente, reduciendo
+      el da\xF1o m\xE1gico recibido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335093
+    m_Localized: "Aceleraci\xF3n de BP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335094
+    m_Localized: Considerada una de las magias prohibidas, recupera 2 BP al comienzo
+      del turno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335095
+    m_Localized: Poder del Rencor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335096
+    m_Localized: "Atormentado por un profundo resentimiento y odio. Aumenta el poder
+      de ataque pero tambi\xE9n incrementa el da\xF1o recibido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335097
+    m_Localized: "Contraataque F\xEDsico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335098
+    m_Localized: "Veste el poder del contraataque, atacando a un oponente que lanza
+      un ataque f\xEDsico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335099
+    m_Localized: "Recupera una peque\xF1a cantidad de HP al final del turno gracias
+      a la bendici\xF3n del dios de la curaci\xF3n Airy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335100
+    m_Localized: "Evasi\xF3n Absoluta de Ataques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335101
+    m_Localized: "Lee la presencia del oponente y evade todos los ataques. Cuando
+      este estado anormal se disipa, se inflige 'Fatiga de Evasi\xF3n Absoluta de
+      Ataques' a uno mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335102
+    m_Localized: 'Combo Arnoid: Uno'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335103
+    m_Localized: "Realiza las artes marciales transmitidas en la familia Arnoid,
+      mejorando acciones espec\xEDficas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335104
+    m_Localized: 'Combo Arnoid: Dos'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335105
+    m_Localized: "A trav\xE9s de un audaz esp\xEDritu de lucha, aumenta el poder
+      de ataque cuando se inflige un estado anormal tipo desventaja a uno mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335106
+    m_Localized: "Fatiga de Evasi\xF3n Absoluta de Ataques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335107
+    m_Localized: "Sentir la presencia del oponente consume mucha concentraci\xF3n.
+      Como resultado, ya no se puede otorgar 'Evasi\xF3n Absoluta de Ataques'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335108
+    m_Localized: Detener el Tiempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335109
+    m_Localized: "Considerada una de las magias prohibidas, solo permite que el usuario
+      act\xFAe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335110
+    m_Localized: "Recuperaci\xF3n de BP con Ataque Normal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335111
+    m_Localized: "Una t\xE9cnica que pueden dominar aquellos que han perfeccionado
+      la simplicidad. Existe la posibilidad de recuperar 1 BP durante un ataque normal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335112
+    m_Localized: "Permite leer el estado del oponente, revelando los PV y las debilidades.
+      Adem\xE1s, el comando 'Verificar' permite conocer los estados anormales del
+      oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335113
+    m_Localized: "Inyecta el poder del rayo en el cuerpo. Reduce el da\xF1o recibido
+      de los ataques de atributo rayo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335114
+    m_Localized: "Una postura que convierte la ira en poder. Recupera 1 BP cuando
+      se recibe da\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335115
+    m_Localized: Una postura que prioriza la defensa sobre el ataque. Otorga GP al
+      aplicarse, pero los GP se reducen a 0 cuando este estado se disipa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335116
+    m_Localized: El viento de cola de la adversidad impulsa al yo. Otorga 2 BP adicionales
+      al comienzo del turno si se inflige un estado anormal de tipo desventaja a
+      uno mismo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335117
+    m_Localized: "Imbuye todos los ataques con poder m\xE1gico. Aumenta el poder
+      de ataque, pero tambi\xE9n aumenta el consumo de ST."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335118
+    m_Localized: Inmunidad a Tambaleo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335119
+    m_Localized: Supera el miedo y se vuelve inmune al 'Tambaleo'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335120
+    m_Localized: "Inmunidad a Par\xE1lisis"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335121
+    m_Localized: "El cuerpo se vuelve flexible e inmune a la 'Par\xE1lisis'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335122
+    m_Localized: "Recuperaci\xF3n de Magia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335123
+    m_Localized: "El poder m\xE1gico abundante envuelve al usuario. Al final del
+      turno, se acumula 1 'Contador de Magia'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335124
+    m_Localized: "Tent\xE1culos formados de magia infligen da\xF1o al oponente al
+      final del turno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335125
+    m_Localized: Gracias a un cuerpo de acero, se obtiene GP al final del turno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335126
+    m_Localized: Eficiencia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335127
+    m_Localized: Mejora la eficiencia de varios movimientos, reduciendo el consumo
+      de BP en 1. Si el consumo original de BP es 1, no cambia nada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335128
+    m_Localized: "Reacci\xF3n Excesiva"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335129
+    m_Localized: "Reacciona de forma exagerada a los cambios. Cuando se inflige un
+      estado anormal, dura 1 turno m\xE1s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335130
+    m_Localized: "La onda blanca transl\xFAcida acelera el poder m\xE1gico, aumentando
+      el da\xF1o m\xE1gico recibido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335131
+    m_Localized: "Preparaci\xF3n del Cuchillo de Shen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335132
+    m_Localized: "La t\xE9cnica del ladr\xF3n Shen. Despu\xE9s de actuar, se acumula
+      1 'Reserva de Cuchillos'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335133
+    m_Localized: Ataque Preventivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335134
+    m_Localized: Puede actuar antes que cualquier otro. Otorga 3 BP adicionales en
+      el primer turno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335135
+    m_Localized: "En estado de concentraci\xF3n profunda. Aumenta significativamente
+      el poder del pr\xF3ximo ataque. El efecto se elimina despu\xE9s de realizar
+      cualquier acci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335136
+    m_Localized: "Hace un esfuerzo desesperado con las \xFAltimas fuerzas. Si el
+      BP es 0 despu\xE9s de actuar, recupera 1 BP una vez."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335137
+    m_Localized: "Apoyo del Peque\xF1o Demonio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335138
+    m_Localized: "Un peque\xF1o demonio sin nombre ofrece su apoyo. Ataca al final
+      del turno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335139
+    m_Localized: Apoyo del Hada del Fuego Fatuo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335140
+    m_Localized: "Un hada que lleva fuegos fatuos ofrece su apoyo. Recupera una peque\xF1a
+      cantidad de HP al final del turno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335141
+    m_Localized: "Apoyo del Esp\xEDritu Centinela"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335142
+    m_Localized: "Un esp\xEDritu que sirvi\xF3 como centinela ofrece su apoyo. Reduce
+      ligeramente el da\xF1o recibido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335143
+    m_Localized: Abrazo Maldito
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335144
+    m_Localized: "Un brazalete maldito aumenta ligeramente el da\xF1o recibido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335145
+    m_Localized: "Oraci\xF3n por una Cosecha Abundante"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335146
+    m_Localized: "Una oraci\xF3n por una cosecha abundante aumenta la experiencia
+      ganada al derrotar enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335147
+    m_Localized: Mejora de Corte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335148
+    m_Localized: "Permite realizar ataques m\xE1s afilados, aumentando el poder de
+      los ataques de atributo de corte."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335149
+    m_Localized: Mejora de Golpe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335150
+    m_Localized: "Permite realizar ataques m\xE1s pesados, aumentando el poder de
+      los ataques de atributo de golpe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335151
+    m_Localized: "Mejora de Perforaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335152
+    m_Localized: "Permite realizar ataques m\xE1s punzantes, aumentando el poder
+      de los ataques de atributo de perforaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335153
+    m_Localized: "Mejora M\xE1gica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335154
+    m_Localized: "Permite realizar ataques m\xE1s poderosos con magia, aumentando
+      el poder de los ataques de atributo m\xE1gico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335155
+    m_Localized: "Mejora de Rel\xE1mpago"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335156
+    m_Localized: "Permite realizar ataques m\xE1s potentes con rel\xE1mpagos, aumentando
+      el poder de los ataques de atributo de rel\xE1mpago."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335157
+    m_Localized: Mejora de Fuego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335158
+    m_Localized: "Permite realizar ataques m\xE1s poderosos con fuego, aumentando
+      el poder de los ataques de atributo de fuego."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335159
+    m_Localized: "Bendici\xF3n del Alma Dorada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335160
+    m_Localized: Bendecido por el antiguo poder de Luxora. Recupera 2 BP al comienzo
+      del turno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335161
+    m_Localized: "Recuperaci\xF3n de Energ\xEDa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335162
+    m_Localized: "Lleno de energ\xEDa. Recupera una peque\xF1a cantidad de resistencia
+      al final del turno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335163
+    m_Localized: "Un c\xEDrculo m\xE1gico se despliega desde el Collar del Peque\xF1o
+      Demonio equipado por {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335164
+    m_Localized: "Un c\xEDrculo m\xE1gico se despliega desde el Collar del Hada del
+      Fuego Fatuo equipado por {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335165
+    m_Localized: "Un c\xEDrculo m\xE1gico se despliega desde el Emblema del Esp\xEDritu
+      Centinela equipado por {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335166
+    m_Localized: Humo negro brota del Brazalete Maldito equipado por {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335167
+    m_Localized: Humo amarillo brota del Emblema de la Cosecha equipado por {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335168
+    m_Localized: "El poder m\xE1gico se desborda de la Botella de Magia Desbordante
+      equipada por {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335169
+    m_Localized: "El Anillo del Rat\xF3n Acorralado equipado por {Actor} brill\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335170
+    m_Localized: "{Actor} us\xF3 las Siete Herramientas de Shen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335171
+    m_Localized: "La Bufanda del Tiempo equipada por {Actor} comenz\xF3 a brillar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335172
+    m_Localized: "La botella de Nitroglicol equipada por {Actor} reaccion\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335173
+    m_Localized: "El Cintur\xF3n Negro equipado por {Actor} dio valor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335174
+    m_Localized: "{Actor} aplic\xF3 Ung\xFCento de Par\xE1lisis en su cuerpo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335175
+    m_Localized: "El Emblema de Corte equipado por {Actor} brill\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335176
+    m_Localized: "El Emblema de Golpe equipado por {Actor} brill\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335177
+    m_Localized: "El Emblema de Perforaci\xF3n equipado por {Actor} brill\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335178
+    m_Localized: "El Emblema de Magia equipado por {Actor} brill\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335179
+    m_Localized: "El Emblema de Llamas equipado por {Actor} brill\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335180
+    m_Localized: "El Emblema de Rel\xE1mpagos equipado por {Actor} brill\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335181
+    m_Localized: "El Detector Ex\xF3tico equipado por {Actor} identific\xF3 al enemigo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335182
+    m_Localized: "{Actor} se bebi\xF3 una bebida energ\xE9tica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335183
+    m_Localized: '{Actor} fue envenenado.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335184
+    m_Localized: El veneno de {Actor} fue curado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335185
+    m_Localized: "{Actor} est\xE1 envenenado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335186
+    m_Localized: "{Actor} est\xE1 temblando y no puede actuar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335187
+    m_Localized: "{Actor} se estremeci\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335188
+    m_Localized: "{Actor} se recuper\xF3 del estremecimiento."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335189
+    m_Localized: "{Actor} est\xE1 lleno de determinaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335190
+    m_Localized: "La determinaci\xF3n de {Actor} ha desaparecido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335191
+    m_Localized: "{Actor} obtuvo el poder de la persecuci\xF3n de llamas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335192
+    m_Localized: "La persecuci\xF3n de llamas golpea a {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335193
+    m_Localized: "La persecuci\xF3n de llamas de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335194
+    m_Localized: '{Actor} ha sido quemado.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335195
+    m_Localized: "La quemadura de {Actor} causa da\xF1o adicional."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335196
+    m_Localized: La quemadura de {Actor} fue curada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335197
+    m_Localized: '{Actor} ha sufrido una quemadura grave.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335198
+    m_Localized: "La quemadura grave de {Actor} causa da\xF1o adicional."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335199
+    m_Localized: La quemadura grave de {Actor} fue curada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335200
+    m_Localized: "{Actor} endureci\xF3 su armadura, entrando en un estado de reducci\xF3n
+      de da\xF1o f\xEDsico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335201
+    m_Localized: "El estado de reducci\xF3n de da\xF1o f\xEDsico de {Actor} ha terminado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335202
+    m_Localized: '{Actor} ha sido paralizado.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335203
+    m_Localized: "La par\xE1lisis de {Actor} ha sido curada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335204
+    m_Localized: "{Actor} est\xE1 en estado de ruptura de armadura."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335205
+    m_Localized: La ruptura de armadura de {Actor} ha sido curada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335206
+    m_Localized: '{Actor} ha heredado el poder de la voluntad del Caballero Sagrado.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335207
+    m_Localized: La voluntad del Caballero Sagrado de {Actor} ha sido disipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335208
+    m_Localized: '{Actor} obtuvo la capacidad de esquivar los ataques enemigos con
+      agilidad.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335209
+    m_Localized: "El potencial de evasi\xF3n de {Actor} ha sido eliminado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335210
+    m_Localized: "{Actor} continu\xF3 movi\xE9ndose con agilidad. El potencial de
+      evasi\xF3n persiste."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335211
+    m_Localized: "{Actor} est\xE1 muy cansado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335212
+    m_Localized: La fatiga de {Actor} ha sido aliviada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335213
+    m_Localized: "{Actor} est\xE1 a\xFAn m\xE1s agotado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335214
+    m_Localized: "{Actor} est\xE1 demasiado cansado para rendir al m\xE1ximo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335215
+    m_Localized: '{Actor} ha adoptado la postura del precursor.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335216
+    m_Localized: La postura del precursor de {Actor} ha sido disipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335217
+    m_Localized: "{Actor} asumi\xF3 una postura de muralla de hierro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335218
+    m_Localized: La postura de muralla de hierro de {Actor} ha sido disipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335219
+    m_Localized: "Se gan\xF3 GP gracias a la postura de muralla de hierro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335220
+    m_Localized: "{Actor} despleg\xF3 un gran escudo m\xE1gico frente a \xE9l."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335221
+    m_Localized: "El escudo m\xE1gico de {Actor} ha desaparecido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335222
+    m_Localized: "La aceleraci\xF3n del BP de {Actor} ha comenzado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335223
+    m_Localized: "La aceleraci\xF3n del BP de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335224
+    m_Localized: "El BP de {Actor} se est\xE1 acelerando."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335225
+    m_Localized: '{Actor} ha sido consumido por el poder del rencor.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335226
+    m_Localized: El poder del rencor de {Actor} ha sido disuelto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335227
+    m_Localized: "{Actor} asumi\xF3 una postura para contraatacar si recibe un ataque
+      f\xEDsico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335228
+    m_Localized: "{Actor} ha liberado su postura de contraataque f\xEDsico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335229
+    m_Localized: "{Actor} contraatac\xF3 el ataque del enemigo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335230
+    m_Localized: "{Actor} recibi\xF3 la bendici\xF3n de Airy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335231
+    m_Localized: "La bendici\xF3n de Airy de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335232
+    m_Localized: "{Actor} est\xE1 envuelto en la bendici\xF3n de Airy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335233
+    m_Localized: "{Actor} est\xE1 completamente concentrado, asumiendo una postura
+      para esquivar todos los ataques."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335234
+    m_Localized: "{Actor} ha liberado su postura de evasi\xF3n perfecta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335235
+    m_Localized: "{Actor} est\xE1 realizando el primer arte de la danza de los ataques
+      encadenados de Arnoid."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335236
+    m_Localized: El primer arte de la danza de los ataques encadenados de Arnoid
+      de {Actor} ha sido disipado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335237
+    m_Localized: "{Actor} est\xE1 realizando el segundo arte de la danza de los ataques
+      encadenados de Arnoid."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335238
+    m_Localized: El segundo arte de la danza de los ataques encadenados de Arnoid
+      de {Actor} ha sido disipado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335239
+    m_Localized: "{Actor} est\xE1 mostrando coraje con una falsa bravata."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335240
+    m_Localized: La falsa bravata de {Actor} ha sido disipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335241
+    m_Localized: "{Actor} ha perdido la concentraci\xF3n y ya no puede esquivar perfectamente
+      los ataques."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335242
+    m_Localized: "La fatiga de la evasi\xF3n perfecta de {Actor} ha sido aliviada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335243
+    m_Localized: "{Target} est\xE1 inmovilizado por el paro temporal de {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335244
+    m_Localized: '{Actor} detuvo el tiempo.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335245
+    m_Localized: "La detenci\xF3n del tiempo de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335246
+    m_Localized: '{Actor} ha dominado los ataques normales.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335247
+    m_Localized: Los ataques normales de {Actor} han vuelto a la normalidad.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335248
+    m_Localized: '{Actor} ahora puede leer el estado del enemigo.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335249
+    m_Localized: "El an\xE1lisis de {Actor} ha sido disipado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335250
+    m_Localized: "{Actor} se puso una armadura de rel\xE1mpago."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335251
+    m_Localized: "La armadura de rel\xE1mpago de {Actor} se ha disipado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335252
+    m_Localized: '{Actor} ahora puede convertir la ira en BP.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335253
+    m_Localized: El contraataque furioso de {Actor} ha sido disipado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335254
+    m_Localized: '{Actor} recupera BP con ira.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335255
+    m_Localized: "{Actor} asumi\xF3 una postura de guardia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335256
+    m_Localized: '{Actor} ha liberado su postura de guardia.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335257
+    m_Localized: "{Actor} continu\xF3 manteniendo una postura de guardia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335258
+    m_Localized: "Un viento a favor sopl\xF3 para {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335259
+    m_Localized: El viento a favor de {Actor} se ha detenido.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335260
+    m_Localized: "Un viento a favor est\xE1 soplando para {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335261
+    m_Localized: "{Actor} ha entrado en un estado de impulso m\xE1gico. El consumo
+      de resistencia aumenta, pero el poder tambi\xE9n aumenta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335262
+    m_Localized: "El impulso m\xE1gico de {Actor} ha sido disipado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335263
+    m_Localized: "{Actor} ha superado el miedo y ya no se acobardar\xE1."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335264
+    m_Localized: La inmunidad al acobardamiento de {Actor} ha sido disipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335265
+    m_Localized: "{Actor} se ha vuelto flexible y ahora es inmune a la par\xE1lisis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335266
+    m_Localized: "La inmunidad a la par\xE1lisis de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335267
+    m_Localized: "{Actor} ha obtenido el efecto de recuperaci\xF3n m\xE1gica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335268
+    m_Localized: "La recuperaci\xF3n m\xE1gica de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335269
+    m_Localized: "La recuperaci\xF3n de magia de {Actor} contin\xFAa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335270
+    m_Localized: "Tent\xE1culos m\xE1gicos se han desplegado alrededor de {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335271
+    m_Localized: "Los tent\xE1culos m\xE1gicos de {Actor} han desaparecido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335272
+    m_Localized: "Los tent\xE1culos m\xE1gicos de {Actor} lanzan un ataque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335273
+    m_Localized: '{Actor} se ha convertido en acero.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335274
+    m_Localized: La forma de acero de {Actor} ha sido disipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335275
+    m_Localized: Se ha ganado GP gracias a la forma de acero.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335276
+    m_Localized: '{Actor} ha comenzado a optimizar todos los movimientos.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335277
+    m_Localized: "La optimizaci\xF3n de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335278
+    m_Localized: '{Actor} ha comenzado a reaccionar de manera exagerada a los estados
+      alterados que se le aplican.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335279
+    m_Localized: "El n\xFAmero de turnos de los efectos aplicados ha aumentado debido
+      a la sobre-reacci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335280
+    m_Localized: "La sobre-reacci\xF3n de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335281
+    m_Localized: "{Actor} fue golpeado por una onda blanca y se volvi\xF3 d\xE9bil
+      contra la magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335282
+    m_Localized: La onda blanca de {Actor} ha sido disipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335283
+    m_Localized: "{Actor} ahora almacena un cuchillo despu\xE9s de cada acci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335284
+    m_Localized: La reserva de cuchillos de Shen de {Actor} ha sido disipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335285
+    m_Localized: '{Actor} ahora recibe BP al comienzo del turno.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335286
+    m_Localized: El ataque preventivo de {Actor} ha sido disipado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335287
+    m_Localized: El ataque preventivo de {Actor} ha sido activado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335288
+    m_Localized: "{Actor} afin\xF3 su punter\xEDa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335289
+    m_Localized: "{Actor} dej\xF3 de apuntar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335290
+    m_Localized: '{Actor} ahora lucha al final del turno.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335291
+    m_Localized: "{Actor} mostr\xF3 un \xFAltimo esfuerzo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335292
+    m_Localized: "{Actor} dej\xF3 de luchar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335293
+    m_Localized: "Un peque\xF1o demonio sin nombre se acerc\xF3 a {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335294
+    m_Localized: "El peque\xF1o demonio que flotaba alrededor de {Actor} ha desaparecido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335295
+    m_Localized: "El peque\xF1o demonio de {Actor} vino a ayudar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335296
+    m_Localized: "Una Hada de Fuego Fatuo se acerc\xF3 a {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335297
+    m_Localized: El Hada de Fuego Fatuo que flotaba alrededor de {Actor} ha desaparecido.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335298
+    m_Localized: El Hada de Fuego Fatuo de {Actor} vino a ayudar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335299
+    m_Localized: "Un Esp\xEDritu Centinela ha habitado en {Actor}, aumentando su
+      defensa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335300
+    m_Localized: "El Esp\xEDritu Centinela de {Actor} ha desaparecido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335301
+    m_Localized: '{Actor} ha sido maldecido.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335302
+    m_Localized: "La maldici\xF3n de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335303
+    m_Localized: "{Actor} ahora recibir\xE1 m\xE1s puntos de experiencia gracias
+      a la bendici\xF3n de la cosecha."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335304
+    m_Localized: "La bendici\xF3n de la cosecha de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335305
+    m_Localized: El ataque cortante de {Actor} ha sido mejorado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335306
+    m_Localized: El refuerzo de corte de {Actor} ha sido disipado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335307
+    m_Localized: El ataque de golpe de {Actor} ha sido mejorado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335308
+    m_Localized: El refuerzo de golpe de {Actor} ha sido disipado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335309
+    m_Localized: "El ataque de perforaci\xF3n de {Actor} ha sido mejorado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335310
+    m_Localized: "El refuerzo de perforaci\xF3n de {Actor} ha sido disipado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335311
+    m_Localized: "El ataque m\xE1gico de {Actor} ha sido mejorado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335312
+    m_Localized: "El refuerzo m\xE1gico de {Actor} ha sido disipado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335313
+    m_Localized: El ataque de rayos de {Actor} ha sido mejorado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335314
+    m_Localized: El refuerzo de llamas de {Actor} ha sido disipado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335315
+    m_Localized: El ataque de llamas de {Actor} ha sido mejorado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335316
+    m_Localized: El refuerzo de rayos de {Actor} ha sido disipado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335317
+    m_Localized: "{Actor} ha recibido la bendici\xF3n del antiguo Luxora."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335318
+    m_Localized: "La bendici\xF3n de Luxora de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335319
+    m_Localized: El alma dorada de {Actor} brilla intensamente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335320
+    m_Localized: "{Actor} ha recuperado energ\xEDa y ha comenzado a recuperar resistencia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335321
+    m_Localized: "La recuperaci\xF3n de energ\xEDa de {Actor} ha sido disipada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335322
+    m_Localized: "{Actor} est\xE1 lleno de vitalidad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335323
+    m_Localized: '{Actor} ha aparecido.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335324
+    m_Localized: '{Actor} ha sido derrotado.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335325
+    m_Localized: "{Actor}: 'T\xFA... ese poder...'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335326
+    m_Localized: "{Actor}: 'Ya veo... no era yo, \xBFverdad...?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335327
+    m_Localized: "{Actor}: '\xA1Guaaaaaahhhhh!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335328
+    m_Localized: "{Actor}: '\xBFPodr\xEDa ser... <color=#FFAAAA>{SealedName}</color>...?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335329
+    m_Localized: "Al derrotar a {Actor}, el BP m\xE1ximo de {Target} ha aumentado
+      en <color=#88FF88>1</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335330
+    m_Localized: '{Actor}: ''Parece que... he perdido...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335331
+    m_Localized: '{Actor}: ''Tch... Te dejo el resto...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335332
+    m_Localized: "{Actor}: '\xBFPor qu\xE9!? \xBFPor qu\xE9 no funciona el fuego!?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335333
+    m_Localized: "{Actor}: '\xA1Uooooooh, Lord {SealedName}!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335334
+    m_Localized: '{Actor}: ''Te dejo el restoooo!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335335
+    m_Localized: '{Actor}: ''No puede ser...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335336
+    m_Localized: '{Actor}: ''Mis... ataques encadenados...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335337
+    m_Localized: "{Actor}: '\xBFEstoy... derrotado...?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335338
+    m_Localized: '{Actor}: ''Tch...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335339
+    m_Localized: '{Actor}: ''Padre... lo siento...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335340
+    m_Localized: '{Actor}: ''Yo... yo... soy...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335341
+    m_Localized: '{Actor}: ''He regresado...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335342
+    m_Localized: "{Actor}: 'No te dejar\xE9 avanzar m\xE1s...!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335343
+    m_Localized: "{Actor}: '\xA1Maldita sea... ni siquiera esto funciona...!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335344
+    m_Localized: "{Actor}: '\xA1No te vayas! {Target}!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335345
+    m_Localized: "{Actor}: 'T\xFA... t\xFA...!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335346
+    m_Localized: "{Actor}: 'Como pens\xE9... \xBFeres <color=#FFAAAA>{SealedName}</color>,
+      verdad...?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335347
+    m_Localized: "{Actor}: 'Si eres t\xFA, puedes cambiar este mundo...'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335348
+    m_Localized: '{Actor}: ''Elige... el camino correcto...!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335349
+    m_Localized: "{Actor} ha ca\xEDdo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335350
+    m_Localized: Parece que se han trasladado a un lugar seguro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335351
+    m_Localized: "\xBFMi nombre es...?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335352
+    m_Localized: Recordar ese nombre me da dolor de cabeza...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335353
+    m_Localized: "{Actor} a\xFAn no tiene un cerebro pensante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335354
+    m_Localized: "{Actor} est\xE1 observando cautelosamente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335355
+    m_Localized: '{Actor} se lanza contra {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335356
+    m_Localized: "{Actor} agit\xF3 su arma de manera imprudente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335357
+    m_Localized: "{Actor} se est\xE1 acercando lentamente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335358
+    m_Localized: "{Actor} de repente se abalanz\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335359
+    m_Localized: "{Actor} ataca con un cuchillo mientras grita de forma extra\xF1a."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335360
+    m_Localized: "{Actor} lanz\xF3 una bola de veneno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335361
+    m_Localized: "{Actor} atac\xF3 con un arp\xF3n en la mano."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335362
+    m_Localized: "{Actor} envolvi\xF3 enredaderas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335363
+    m_Localized: "{Actor} de repente comenz\xF3 a gritar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335364
+    m_Localized: "{Actor} ara\xF1\xF3 con sus garras."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335365
+    m_Localized: "{Actor} se movi\xF3 r\xE1pidamente, tratando de confundir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335366
+    m_Localized: "{Actor} agit\xF3 una espada gigante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335367
+    m_Localized: "{Actor} lanz\xF3 ambos pu\xF1os envueltos en lava."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335368
+    m_Localized: "{Actor} esparci\xF3 \xE1cido clorh\xEDdrico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335369
+    m_Localized: "{Actor} mordi\xF3 r\xE1pidamente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335370
+    m_Localized: El ojo de {Actor} brillaba en blanco.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335371
+    m_Localized: "{Actor} carg\xF3 con una espada espiritual."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335372
+    m_Localized: "{Actor} agit\xF3 una espada gigante en descomposici\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335373
+    m_Localized: "{Actor} extendi\xF3 ra\xEDces alrededor de {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335374
+    m_Localized: "{Actor} infundi\xF3 su cuerpo con el poder de la naturaleza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335375
+    m_Localized: "{Actor} golpe\xF3 con un enorme pu\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335376
+    m_Localized: "{Actor} mordi\xF3 con colmillos venenosos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335377
+    m_Localized: "{Actor} se enrosc\xF3 alrededor de {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335378
+    m_Localized: "{Actor} de repente se transform\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335379
+    m_Localized: "{Actor} se movi\xF3 a la velocidad del rayo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335380
+    m_Localized: "{Actor} ara\xF1\xF3 con garras el\xE9ctricas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335381
+    m_Localized: "{Actor} desat\xF3 una ola blanca."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335382
+    m_Localized: "{Actor} envolvi\xF3 tent\xE1culos de sangre alrededor de {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335383
+    m_Localized: "{Actor} atac\xF3 con un aliento helado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335384
+    m_Localized: "{Actor} lanz\xF3 un gran car\xE1mbano."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335385
+    m_Localized: "{Actor} convoc\xF3 un viento lacerante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335386
+    m_Localized: "{Actor} lanz\xF3 una r\xE1faga de viento."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335387
+    m_Localized: El trueno vuelve a golpear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335388
+    m_Localized: "{Actor} est\xE1 acumulando fuerza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335389
+    m_Localized: "{Actor} inciner\xF3 con fuego infernal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335390
+    m_Localized: '{Actor}: ''Que me acorrales hasta este punto...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335391
+    m_Localized: "{Actor}: 'Te arrastrar\xE9 al infierno.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335392
+    m_Localized: "{Actor}: '\xA1Uoooooh!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335393
+    m_Localized: "{Actor} se transform\xF3 en su verdadera forma."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335394
+    m_Localized: "{Actor}: 'Este Walorobot te convertir\xE1 en cenizas.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335395
+    m_Localized: "{Actor} lanz\xF3 una estocada con la lanza en la mano."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335396
+    m_Localized: "La lanza de llamas negras de {Actor} rugi\xF3, atacando a {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335397
+    m_Localized: "{Actor}: 'Te subestim\xE9.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335398
+    m_Localized: "{Actor}: 'Mis disculpas. A partir de ahora, ir\xE9 con todo.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335399
+    m_Localized: "{Actor}: 'Tu cuerpo ser\xE1 desgarrado junto al rayo.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335400
+    m_Localized: "{Actor} carg\xF3 envuelto en rel\xE1mpagos azules."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335401
+    m_Localized: "{Actor} atac\xF3 con una espada envuelta en rayos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335402
+    m_Localized: "{Actor} lanz\xF3 rel\xE1mpagos dorados."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335403
+    m_Localized: "{Actor} atac\xF3 con artes marciales imbuidas de rayos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335404
+    m_Localized: "{Actor}: 'A\xFAn no estoy agotado.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335405
+    m_Localized: "{Actor}: 'Ahora me pondr\xE9 serio.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335406
+    m_Localized: "{Actor}: 'Te incinerar\xE9 con este fuego infernal.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335407
+    m_Localized: "{Actor} se envolvi\xF3 en llamas rojo oscuro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335408
+    m_Localized: "{Actor} atac\xF3 con una lanza al rojo vivo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335409
+    m_Localized: "{Actor} lanz\xF3 una lanza de fuego infernal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335410
+    m_Localized: "{Actor} realiz\xF3 una danza extra\xF1a."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335411
+    m_Localized: "{Actor} atac\xF3 con una cola envuelta en grandes llamas violetas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335412
+    m_Localized: "{Actor} escupi\xF3 una bola de llamas violetas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335413
+    m_Localized: "{Actor} parece estar acumulando a\xFAn m\xE1s poder m\xE1gico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335414
+    m_Localized: "{Actor} despleg\xF3 un protector sobre s\xED mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335415
+    m_Localized: "{Actor} lanz\xF3 un peque\xF1o disparo estelar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335416
+    m_Localized: '{Actor} parece estar preparando algo con su magia acumulada.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335417
+    m_Localized: "{Actor}: '\xA1Estrellas! \xA1Convi\xE9rtanse en mis aliadas!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335418
+    m_Localized: "{Actor} invoc\xF3 un gran meteoro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335419
+    m_Localized: "Las estrellas que se re\xFAnen alrededor de {Actor} atacan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335420
+    m_Localized: "{Actor}: 'Muy bien. \xA1Presencien mis golpes encadenados!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335421
+    m_Localized: "{Actor}: '\xA1Haaaaah!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335422
+    m_Localized: "{Actor}: '\xA1Seiyah!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335423
+    m_Localized: "{Actor}: '\xA1\xDAltimo!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335424
+    m_Localized: "{Actor}: 'Pensar que llegar\xEDa a esto...'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335425
+    m_Localized: "{Actor}: '\xA1Uno!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335426
+    m_Localized: "{Actor}: '\xA1Dos!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335427
+    m_Localized: "{Actor}: '\xA1Tres!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335428
+    m_Localized: "{Actor}: '\xA1A\xFAn no!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335429
+    m_Localized: "{Actor}: '\xA1Qu\xE9 te parece esto!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335430
+    m_Localized: "{Actor} aplic\xF3 algo en el cuchillo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335431
+    m_Localized: '{Actor}: ''...!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335432
+    m_Localized: "{Actor} adopt\xF3 una postura de contraataque nuevamente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335433
+    m_Localized: "{Actor} lanz\xF3 una gran cantidad de cuchillos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335434
+    m_Localized: "\xA1Los cuchillos explotaron!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335435
+    m_Localized: "{Actor} lanz\xF3 cuchillos cubiertos con explosivos especiales."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335436
+    m_Localized: "{Actor} se envolvi\xF3 en rayos carmes\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335437
+    m_Localized: "{Actor}: '\xA1Uooooooooh!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335438
+    m_Localized: "{Actor}: '\xA1Absolutamente... absolutamente!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335439
+    m_Localized: "{Actor} blandi\xF3 una enorme lanza envuelta en llamas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335440
+    m_Localized: "{Actor} blandi\xF3 una enorme lanza envuelta en rayos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335441
+    m_Localized: "{Actor} blandi\xF3 una enorme lanza envuelta en rayos carmes\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335442
+    m_Localized: "{Actor} concentr\xF3 su mente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335443
+    m_Localized: "{Actor} recibi\xF3 una bendici\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335444
+    m_Localized: "{Actor} adopt\xF3 una postura defensiva."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335445
+    m_Localized: "{Actor} jur\xF3 la victoria."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335446
+    m_Localized: "{Actor} levant\xF3 su gran espada en silencio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335447
+    m_Localized: "{Actor} baj\xF3 su gran espada en silencio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335448
+    m_Localized: "{Actor} desat\xF3 un poder que trascend\xEDa todo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335449
+    m_Localized: "{Actor}: 'Es in\xFAtil.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335450
+    m_Localized: "Adem\xE1s, {Actor} lanz\xF3 un proyectil m\xE1gico blanco."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335451
+    m_Localized: "{Actor} baj\xF3 una espada hecha de magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335452
+    m_Localized: "{Actor} deton\xF3 una masa de magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335453
+    m_Localized: "{Actor} atac\xF3 con un arco y flechas hechos de magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335454
+    m_Localized: "{Actor}: 'Terminar\xE9 con esto.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335455
+    m_Localized: "{Actor} amplific\xF3 su magia blanca."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335456
+    m_Localized: "{Actor} lanz\xF3 la magia amplificada a {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335457
+    m_Localized: "{Actor} desat\xF3 magia negra infinita."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335458
+    m_Localized: '{Actor}: ''No hay piedad.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335459
+    m_Localized: "De repente, una luz dorada descendi\xF3 sobre {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335460
+    m_Localized: "{SealedName}: 'Te conf\xEDo este poder. Deber\xEDa aliviar tu carga
+      un poco.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335461
+    m_Localized: "{Actor}: 'Qu\xE9 farsa...'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335462
+    m_Localized: "{Actor} dispar\xF3 una bola de magia negra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335463
+    m_Localized: "{Actor}: '\xA1Tiempo, detente!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335464
+    m_Localized: '{Actor}: ''Fuera de mi camino, {SealedName}.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335465
+    m_Localized: "{Actor} destruy\xF3 el alma dorada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335466
+    m_Localized: "{Actor}: 'Ahora solo est\xE1s t\xFA.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335467
+    m_Localized: "{Actor}: 'Esto termina aqu\xED.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335468
+    m_Localized: "{Actor} dispar\xF3 una bola de magia negra interminable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335469
+    m_Localized: ...Una voz habla en tu mente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335470
+    m_Localized: Conquista este oscuro calabozo.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335471
+    m_Localized: "Y encuentra algo similar a m\xED.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335472
+    m_Localized: Bien hecho al encontrar mi otra mitad.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335473
+    m_Localized: "Sin embargo, m\xE1s all\xE1 de este punto, a\xFAn no est\xE1 implementado.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335474
+    m_Localized: "Estamos trabajando duro en ello, as\xED que esperamos que lo esperes
+      con ansias.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335475
+    m_Localized: "Si te gustar\xEDa, dejar un comentario de apoyo nos har\xEDa muy
+      felices.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335476
+    m_Localized: Hasta que nos volvamos a ver.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335477
+    m_Localized: "Una luz pac\xEDfica flota a tu alrededor. Parece un buen lugar
+      para descansar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335478
+    m_Localized: "Es un dispositivo de teletransportaci\xF3n. Parece llevar al siguiente
+      piso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335479
+    m_Localized: "\xBFDeseas proceder al siguiente piso?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335480
+    m_Localized: "S\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335481
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335482
+    m_Localized: "...\xBFAcaso puedes verme?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335483
+    m_Localized: Por favor, libera a las almas que descansan en el calabozo que tienes
+      delante.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335484
+    m_Localized: "Algunas almas pueden enfrentarse a ti, pero si\xE9ntete libre de
+      derrotarlas.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335485
+    m_Localized: "...\xBFQu\xE9!?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335486
+    m_Localized: "Eso es lo \xFAnico que puede liberarnos.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335487
+    m_Localized: "Liberar el alma dorada que est\xE1 en lo profundo, ese es mi deseo.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335488
+    m_Localized: Por favor, te lo ruego.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335489
+    m_Localized: Gracias. Has liberado muchas almas.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335490
+    m_Localized: "Pero... um... es un poco dif\xEDcil decir esto.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335493
+    m_Localized: "Espera un poco m\xE1s, por favor.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335494
+    m_Localized: "Si puedes, dejarnos un comentario nos har\xEDa muy felices.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335495
+    m_Localized: Bueno, por favor espera con ansias.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335496
+    m_Localized: Un alma dorada comienza a tomar forma.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335497
+    m_Localized: "\xBFQuieres luchar contra el alma dorada?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335498
+    m_Localized: "Ya veo... entonces, \xBFesto es el final...?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335499
+    m_Localized: Por fin... termina...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335500
+    m_Localized: "El alma dorada se desvaneci\xF3 lentamente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335501
+    m_Localized: De repente, un mareo te golpea y todo se vuelve oscuro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335502
+    m_Localized: "\xBF!?...'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335503
+    m_Localized: "\xBFNo has venido a liberarme?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335504
+    m_Localized: "Entonces, \xBFpara qu\xE9 es este poder?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335505
+    m_Localized: "...\xBFCortar la causa ra\xEDz?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335506
+    m_Localized: "...\xBFAiry...?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335507
+    m_Localized: De repente, un mareo te golpea.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335508
+    m_Localized: "...\xBFEres t\xFA...?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335509
+    m_Localized: "\xBFVas a liberarme?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335510
+    m_Localized: "\xBFPuedes romper este ciclo de reencarnaci\xF3n?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335511
+    m_Localized: "D\xE9jame probar ese poder.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335512
+    m_Localized: Un alma dorada permanece en pie, brillando intensamente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335513
+    m_Localized: "Gracias. <color=#FFAAAA>{SealedName}</color> tambi\xE9n ser\xE1
+      salvado.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335514
+    m_Localized: "Ahora, eres el m\xE1s fuerte en este mundo.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335515
+    m_Localized: "\xBFEres <color=#AAAAFF>{SealedName}</color>, verdad?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335516
+    m_Localized: "\xBFEres <color=#AAAAFF>{SealedName}</color>?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335517
+    m_Localized: Con esto...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335518
+    m_Localized: Posees el poder para convertirte en <color=#AAAAFF>{SealedName}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335519
+    m_Localized: "S\xED, t\xFA eres <color=#AAAAFF>{SealedName}</color>.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335520
+    m_Localized: "No. T\xFA eres <color=#AAAAFF>{SealedName}</color>.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335521
+    m_Localized: "Con esto, yo tambi\xE9n puedo aspirar a mayores alturas.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335522
+    m_Localized: Jejeje.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335523
+    m_Localized: Ahora, esperemos lo siguiente.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335524
+    m_Localized: "El pr\xF3ximo alma que te superar\xE1...'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335525
+    m_Localized: "\xBFPor qu\xE9 no derrotas al alma dorada?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335526
+    m_Localized: "\xBFTe atreves a desafiarme?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335527
+    m_Localized: "\xBFA m\xED, que cre\xE9 este mundo?'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335528
+    m_Localized: Muy bien.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335529
+    m_Localized: "Te ense\xF1ar\xE9 que todo esto es in\xFAtil.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335530
+    m_Localized: Un alma azul se forma lentamente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335531
+    m_Localized: Espera...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335532
+    m_Localized: "No ha terminado a\xFAn...'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335533
+    m_Localized: El alma azul se desvanece.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335534
+    m_Localized: "Soy el Dios de la Destrucci\xF3n.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335535
+    m_Localized: "Te arrojar\xE9 a una desesperaci\xF3n insondable.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335536
+    m_Localized: Conoce tu propia impotencia.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335537
+    m_Localized: Imposible... no puede ser...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335538
+    m_Localized: "Incre\xEDble...'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335539
+    m_Localized: "Incre\xEDble...!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335540
+    m_Localized: "Felicitaciones por completar el juego. Puedes volver a jugarlo
+      inmediatamente. \xA1Intenta encontrar combinaciones divertidas de equipo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335541
+    m_Localized: "{Actor} blandi\xF3 su arma."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335542
+    m_Localized: "{Actor} rompi\xF3 su postura y blandi\xF3 su arma con fuerza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335543
+    m_Localized: "{Actor} r\xE1pidamente tom\xF3 posici\xF3n para fortalecer su ataque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335544
+    m_Localized: El ataque de estocada afilada de {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335545
+    m_Localized: "{Actor} destroz\xF3 la pierna de {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335546
+    m_Localized: "{Actor} blandi\xF3 su arma r\xE1pidamente de lado a lado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335547
+    m_Localized: "{Actor} apunt\xF3 con precisi\xF3n al punto vital de {Target},
+      buscando una ruptura."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335548
+    m_Localized: "{Actor} blandi\xF3 un arma enorme."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335549
+    m_Localized: "{Actor} cubri\xF3 el arma con veneno y cort\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335550
+    m_Localized: "{Actor} se movi\xF3 r\xE1pidamente como un rayo para acercarse
+      al enemigo y atacar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335551
+    m_Localized: "{Actor} llen\xF3 todo su ser con el ardiente esp\xEDritu y la determinaci\xF3n
+      que surg\xEDan desde lo m\xE1s profundo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335552
+    m_Localized: '{Actor} estaba envuelto en llamas incesantes.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335553
+    m_Localized: "{Actor} dispar\xF3 un proyectil m\xE1gico generado por su voluntad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335554
+    m_Localized: "{Actor} cre\xF3 una bola de fuego con magia y la lanz\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335555
+    m_Localized: "{Actor} presion\xF3 un arma caliente contra {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335556
+    m_Localized: "{Actor} presion\xF3 un arma al rojo vivo y llena de ampollas contra
+      {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335557
+    m_Localized: "{Actor} impregn\xF3 su arma con magia y atac\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335558
+    m_Localized: "{Actor} cerr\xF3 la distancia con el enemigo en un instante y blandi\xF3
+      su arma."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335559
+    m_Localized: "{Actor} corri\xF3 r\xE1pidamente hacia {Target} como un vendaval."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335560
+    m_Localized: "{Actor} canaliz\xF3 la ira del esp\xEDritu del rayo y la liber\xF3
+      sobre el enemigo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335561
+    m_Localized: "{Actor} desat\xF3 una t\xE9cnica secreta de espada transmitida
+      en la familia Ebonia, imbuida con el poder del rayo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335562
+    m_Localized: "Otro rayo golpe\xF3 a {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335563
+    m_Localized: "{Actor} lanz\xF3 un golpe de rayo generado por magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335564
+    m_Localized: "{Actor} lanz\xF3 un poderoso golpe con todas sus fuerzas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335565
+    m_Localized: "{Actor} cre\xF3 una armadura a partir de rel\xE1mpagos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335566
+    m_Localized: "{Actor} lanz\xF3 la t\xE9cnica de lanza de fuego transmitida en
+      la familia Lavaheart."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335567
+    m_Localized: "{Actor} jur\xF3 victoria con la voluntad del caballero sagrado
+      Luxora."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335568
+    m_Localized: "{Actor} tens\xF3 el arco con toda su fuerza y dispar\xF3 una flecha."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335569
+    m_Localized: "{Actor} retrocedi\xF3 mientras disparaba una flecha."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335570
+    m_Localized: "{Actor} dispar\xF3 tres flechas al mismo tiempo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335571
+    m_Localized: "{Actor} realiz\xF3 un ataque elegante que combinaba danza y golpes
+      r\xE1pidos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335572
+    m_Localized: "{Actor} atac\xF3 con un veneno especial, considerado m\xE1s doloroso
+      que la muerte."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335573
+    m_Localized: "{Actor} lanz\xF3 un poderoso golpe que parti\xF3 la tierra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335574
+    m_Localized: "{Actor} se movi\xF3 con gran agilidad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335575
+    m_Localized: "{Actor} amplific\xF3 su propia magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335576
+    m_Localized: "{Actor} desat\xF3 toda la magia amplificada de una vez."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335577
+    m_Localized: "{Actor} atac\xF3 mientras amplificaba su propia magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335578
+    m_Localized: "{Actor} tom\xF3 una postura firme."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335579
+    m_Localized: "{Actor} cre\xF3 un escudo con magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335580
+    m_Localized: "{Actor} lanz\xF3 la t\xE9cnica prohibida: Everge."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335581
+    m_Localized: "{Actor} transform\xF3 el poder del rencor y lo absorbi\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335582
+    m_Localized: "{Actor} cort\xF3 con una hoja siniestra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335583
+    m_Localized: "{Actor} envolvi\xF3 su cuerpo con espinas que contraatacan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335584
+    m_Localized: "{Actor} lanz\xF3 un hechizo de curaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335585
+    m_Localized: "{Actor} jur\xF3 al dios de la curaci\xF3n, Airy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335586
+    m_Localized: "{Actor} tom\xF3 una postura de concentraci\xF3n total."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335587
+    m_Localized: "Pero fall\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335588
+    m_Localized: "{Actor} balance\xF3 su escudo con todas sus fuerzas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335589
+    m_Localized: "{Actor} atac\xF3 mientras sosten\xEDa su escudo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335590
+    m_Localized: "{Actor} realiz\xF3 un ataque combinado transmitido en la familia
+      Arnoid."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335591
+    m_Localized: "Pero no sali\xF3 bien. Parece que los pasos estaban mal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335592
+    m_Localized: "{Actor} realiz\xF3 un ataque combinado secreto transmitido en la
+      familia Arnoid."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335593
+    m_Localized: '{Actor} estaba lleno de bravura falsa.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335594
+    m_Localized: Las llamas infernales consumieron incluso a {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335595
+    m_Localized: "{Actor} lanz\xF3 una gran lanza envuelta en llamas infernales."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335596
+    m_Localized: "{Actor} lanz\xF3 la t\xE9cnica prohibida: Salde Everge."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335597
+    m_Localized: "{Actor} despleg\xF3 una abundante magia a sus pies."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335598
+    m_Localized: "{Actor} dispar\xF3 una flecha gruesa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335599
+    m_Localized: "{Actor} dispar\xF3 una flecha extra gruesa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335600
+    m_Localized: "{Actor} realiz\xF3 un ataque normal perfeccionado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335601
+    m_Localized: "{Actor} cort\xF3 el n\xFAcleo de la criatura amorfa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529344
+    m_Localized: "{Actor} lanz\xF3 un golpe que aterroriz\xF3 a las bestias."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529345
+    m_Localized: "{Actor} adopt\xF3 una postura para observar el estado del oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529346
+    m_Localized: "{Actor} lanz\xF3 un hechizo y convoc\xF3 un enorme meteorito."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529347
+    m_Localized: "Luego consumi\xF3 puntos de magia y los convirti\xF3 en BP."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529348
+    m_Localized: "El BP de {Actor} se recuper\xF3 completamente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529349
+    m_Localized: "{Actor} lanz\xF3 la t\xE9cnica prohibida: Dirba Everge."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529350
+    m_Localized: "{Actor} tom\xF3 una postura de contraataque alimentada por la ira."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529351
+    m_Localized: "El viento comenz\xF3 a soplar alrededor de {Actor}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529352
+    m_Localized: "{Actor} se prepar\xF3 y levant\xF3 su escudo con firmeza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529353
+    m_Localized: "{Actor} tom\xF3 una droga prohibida."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529354
+    m_Localized: "{Actor} desat\xF3 un golpe con todas sus fuerzas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529355
+    m_Localized: "{Actor} adopt\xF3 una postura de contraataque mientras se proteg\xEDa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529356
+    m_Localized: "{Actor} gener\xF3 tent\xE1culos compuestos de magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529357
+    m_Localized: "{Actor} adopt\xF3 una postura para resistir cualquier ataque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529358
+    m_Localized: "{Actor} convirti\xF3 toda su fuerza en magia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529359
+    m_Localized: "{Actor} adopt\xF3 una postura tradicional transmitida desde Oriente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529360
+    m_Localized: "{Actor} realiz\xF3 un corte diagonal feroz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529361
+    m_Localized: "{Actor} balance\xF3 su arma con suficiente fuerza para romper rocas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529362
+    m_Localized: "{Actor} desat\xF3 un fuego que inciner\xF3 todo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529363
+    m_Localized: "{Actor} realiz\xF3 un ataque que aterroriz\xF3 a las bestias."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529364
+    m_Localized: "{Actor} cre\xF3 dos peque\xF1os fragmentos de estrellas y atac\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529365
+    m_Localized: "La flecha que {Actor} dispar\xF3 a trav\xE9s del tiempo perfor\xF3
+      a\xFAn m\xE1s a {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529366
+    m_Localized: "{Actor} dispar\xF3 una flecha que trascendi\xF3 el tiempo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529367
+    m_Localized: "{Actor} desat\xF3 una ola de energ\xEDa blanca."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529368
+    m_Localized: "La imagen residual entr\xF3 en la siguiente postura de ataque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529369
+    m_Localized: "{Actor} cre\xF3 una imagen residual y atac\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529370
+    m_Localized: "{Actor} mir\xF3 hacia el cielo y convoc\xF3 un rayo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529371
+    m_Localized: '{Actor} hizo llover incontables lanzas sobre {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529372
+    m_Localized: "{Actor} atac\xF3 con un swing aprendido en un deporte extranjero."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529373
+    m_Localized: "{Actor} convirti\xF3 toda su magia en BP."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529374
+    m_Localized: "Pero no hab\xEDa conteo de magia, as\xED que fall\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529375
+    m_Localized: El golpe de {Actor} en la adversidad fue libre de sufrimiento.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529376
+    m_Localized: "{Actor} escondi\xF3 un cuchillo en su bolsillo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529377
+    m_Localized: "{Actor} lanz\xF3 todos los cuchillos escondidos a la vez."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529378
+    m_Localized: "Pero no hab\xEDa cuchillos escondidos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529379
+    m_Localized: "{Actor} lanz\xF3 un cuchillo caracter\xEDstico de Shen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529380
+    m_Localized: "{Actor} lanz\xF3 un hechizo y convoc\xF3 un meteorito."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529381
+    m_Localized: "{Actor} se concentr\xF3 en los puntos d\xE9biles del oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529382
+    m_Localized: "{Actor} desat\xF3 una carrera explosiva de fuego contra {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529383
+    m_Localized: "{Actor} desat\xF3 la t\xE9cnica legendaria de Ebonia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529384
+    m_Localized: "El arma arrojada regres\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529385
+    m_Localized: "{Actor} lanz\xF3 un arma extranjera de forma extra\xF1a a {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529386
+    m_Localized: "{Actor} lanz\xF3 un arma extranjera redonda a {Target}."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529387
+    m_Localized: "{Actor} lanz\xF3 un arma extranjera que apenas se puede considerar
+      un arma."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529388
+    m_Localized: "{Actor} desat\xF3 un trueno que podr\xEDa atravesar una ballena."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529389
+    m_Localized: "{Actor} desat\xF3 un trueno que podr\xEDa atravesar un elefante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529390
+    m_Localized: "{Actor} golpe\xF3 al oponente con un gran escudo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529391
+    m_Localized: "{Actor} levant\xF3 el gran escudo del caballero sagrado Luxora."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529392
+    m_Localized: "{Actor} lanz\xF3 un golpe mortal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529393
+    m_Localized: "{Actor} roci\xF3 \xE1cido clorh\xEDdrico sobre el oponente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529394
+    m_Localized: "{Actor} desat\xF3 una onda de energ\xEDa blanco plateado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529395
+    m_Localized: "{Actor} golpe\xF3 al oponente con una mu\xF1eca maldita."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529396
+    m_Localized: "{Actor} invoc\xF3 estrellas fugaces con el poder de la tribu demon\xEDaca."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529397
+    m_Localized: "Un ataque donde el arma de {Actor} se volvi\xF3 m\xE1s afilada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529398
+    m_Localized: "{Actor} balance\xF3 su arma como si pudiera destrozar cualquier
+      armadura."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529399
+    m_Localized: "{Actor} lanz\xF3 un pu\xF1etazo recto con toda su alma."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529400
+    m_Localized: "{Actor} lanz\xF3 una patada como una media luna."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529401
+    m_Localized: "Pero solo cort\xF3 el aire."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529402
+    m_Localized: Tasa de corte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529403
+    m_Localized: "Perforaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529404
+    m_Localized: Golpe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529405
+    m_Localized: Corte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529406
+    m_Localized: Poder de ataque
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529407
+    m_Localized: Atributo de ataque
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529408
+    m_Localized: "\u3053\u304A\u308D\u304E\u69D8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529409
+    m_Localized: "At\xF3 inconscientemente a Luxora y los dem\xE1s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529410
+    m_Localized: "M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529411
+    m_Localized: "Reencarnaci\xF3n<size=75%> de</size><size=120%> Luxora</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529412
+    m_Localized: "\u30C7\u30D6\u30A7\u30ED\u30C3\u30D1\u30FC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529413
+    m_Localized: "Sin embargo, solo {PlayerName}, que vino del mundo exterior, ten\xEDa
+      el poder para romper esas cadenas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529414
+    m_Localized: "\u52B9\u679C\u97F3\u30E9\u30DC\u69D8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529415
+    m_Localized: "\u7530\u4E2D\u82B3\u5178\u69D8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529416
+    m_Localized: "Airy continu\xF3 buscando almas fuertes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529417
+    m_Localized: "Lo que qued\xF3 fue un silencio absoluto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529418
+    m_Localized: Efectos de sonido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529419
+    m_Localized: "\"Aunque llevaba el destino de ser el dios de la destrucci\xF3n,\nprobablemente
+      nunca imagin\xF3 ser derrotado.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529420
+    m_Localized: Efectos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529421
+    m_Localized: "Todas las almas fueron liberadas y el mundo hab\xEDa cumplido su
+      papel."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529422
+    m_Localized: "Programaci\xF3n y Dise\xF1o de Juego"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529423
+    m_Localized: "\"Y dentro de ese silencio,\nuna paz largamente olvidada se extend\xEDa
+      en calma.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529424
+    m_Localized: "Ilustraci\xF3n y Texto Descriptivo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529425
+    m_Localized: "\u3042\u3044\u3046\u3048\u304A\n\u304B\u304D\u304F\u3051\u3053\n\u3055\u3057\u3059"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529426
+    m_Localized: Velocidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529427
+    m_Localized: Resistencia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529428
+    m_Localized: "Poder de ataque f\xEDsico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529429
+    m_Localized: Resistencia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529430
+    m_Localized: "Poder de ataque m\xE1gico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529431
+    m_Localized: "Estad\xEDsticas b\xE1sicas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529432
+    m_Localized: ST (Resistencia)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529433
+    m_Localized: "BP (Puntos de acci\xF3n)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529434
+    m_Localized: HP (Puntos de vida)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529435
+    m_Localized: Puntos de experiencia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529436
+    m_Localized: Nada que mostrar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529437
+    m_Localized: Por favor, ingrese su nombre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529438
+    m_Localized: "\uFF5EVersi\xF3n de prueba\uFF5E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529439
+    m_Localized: Sonido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529440
+    m_Localized: Volumen maestro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2154588523397120
+    m_Localized: Has obtenido <color=#8888FF>{0}</color>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2154588540174336
+    m_Localized: Has obtenido {1} <color=#8888FF>{0}</color>.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

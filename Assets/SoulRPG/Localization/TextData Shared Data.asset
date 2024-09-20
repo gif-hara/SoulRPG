@@ -4718,16 +4718,16 @@ MonoBehaviour:
       id:{floorId}"
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529444
-    m_Key: "<color=#8888FF>{itemData.MasterDataItem.Name}</color>\u3092\u624B\u306B\u5165\u308C\u305F\u3002"
+  - m_Id: 2154588523397120
+    m_Key: "<color=#8888FF>{0}</color>\u3092\u624B\u306B\u5165\u308C\u305F\u3002"
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529445
-    m_Key: "<color=#8888FF>{itemData.MasterDataItem.Name}</color>\u3092{itemData.Count}\u500B\u624B\u306B\u5165\u308C\u305F\u3002"
+  - m_Id: 2154588540174336
+    m_Key: "<color=#8888FF>{0}</color>\u3092{1}\u500B\u624B\u306B\u5165\u308C\u305F\u3002"
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529446
-    m_Key: "{inputController.InputActions.InGame.Interact.GetTag()}\u30A2\u30A4\u30C6\u30E0\u3092\u62FE\u3046"
+  - m_Id: 2154588540174337
+    m_Key: "{0}\u30A2\u30A4\u30C6\u30E0\u3092\u62FE\u3046"
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529447

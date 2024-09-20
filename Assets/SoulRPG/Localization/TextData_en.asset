@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 1690469335040
-    m_Localized: 
+    m_Localized: Goblin
     m_Metadata:
       m_Items: []
   - m_Id: 1690431586304
@@ -808,6 +808,4425 @@ MonoBehaviour:
       and oni. The staff glows with a pale blue light at its tip, instilling silent
       fear in enemies. When in her hands, its power grows with the waxing and waning
       of the moon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140890
+    m_Localized: Hydrochloric Acid Bottle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140891
+    m_Localized: A bottle filled with powerful acid. With just a shake, the acid
+      sprays around, corroding any equipment or living beings it touches. A fearsome
+      weapon used by skilled warriors and magicians to neutralize their enemies'
+      defenses.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140892
+    m_Localized: Misericorde Demon Sword+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140893
+    m_Localized: The ultimate enhanced version of the cursed sword that once devoured
+      countless souls and was wielded by a cursed swordsman. The blade swirls with
+      grudges, corrupting the heart of its wielder while granting overwhelming power.
+      The hatred of those cut by the sword accumulates, further amplifying its destructive
+      force.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140894
+    m_Localized: Staff of Contempt+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140895
+    m_Localized: The ultimate enhanced version of the staff infused with dark magic,
+      granting immense power to its wielder while planting feelings of contempt in
+      their heart. The black magic at the tip swirls ominously, threatening to corrupt
+      the souls of those it touches.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140896
+    m_Localized: Flame Rod++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140897
+    m_Localized: The ultimate enhanced version of the magic staff that controls the
+      power of fire. A small flame always burns at its tip, holding the power to
+      incinerate enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140898
+    m_Localized: Thunder Rod++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140899
+    m_Localized: The ultimate enhanced version of the staff infused with the power
+      of lightning. A single strike of lightning shocks enemies, leaving them paralyzed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140900
+    m_Localized: Ilicia's Staff+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140901
+    m_Localized: The ultimate enhanced version of the holy staff said to be wielded
+      by Ilicia, the head of star alchemy. This staff holds pure white magic, with
+      the power of purification and regeneration. Its healing abilities are gentle,
+      like the touch of a god, yet immensely powerful.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140902
+    m_Localized: Analyze Rod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140903
+    m_Localized: Created to expose all mysteries and traps lurking around its wielder.
+      When it glows green, its eye sees the truth, missing nothing, even what is
+      hidden.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140904
+    m_Localized: Test Weapon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140905
+    m_Localized: In an unarmed state, facing the opponent bravely with only your
+      fists. But surely, having a weapon would allow for much greater damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140906
+    m_Localized: Enemy Weapon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140907
+    m_Localized: A sturdy silver helmet that shines brightly. It protects the warrior's
+      face and withstands enemy strikes with ease.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140908
+    m_Localized: Knight's Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140909
+    m_Localized: A heavy silver armor. The guardian of the battlefield, a sturdy
+      defense that repels all attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140910
+    m_Localized: Knight's Gauntlets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140911
+    m_Localized: Gauntlets made of steel. They protect the warrior's arms and enhance
+      the strength needed to grip a sword.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140912
+    m_Localized: Knight's Greaves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140913
+    m_Localized: Sturdy metal greaves that protect the knight's legs. They provide
+      solid defense while maintaining mobility on the battlefield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140914
+    m_Localized: Leather Helmet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140915
+    m_Localized: A helmet made of flexible leather. Lightweight yet offering reliable
+      protection, making it perfect for adventurers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140916
+    m_Localized: Leather Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140917
+    m_Localized: A practical armor combining cloth and leather. It balances mobility
+      and defense.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140918
+    m_Localized: Leather Gauntlets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140919
+    m_Localized: Leather gauntlets that protect the hands up to the fingertips. Versatile
+      for delicate tasks and combat alike.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140920
+    m_Localized: Leather Greaves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140921
+    m_Localized: Greaves made of flexible leather and cloth. They offer comfort during
+      long-distance travel and combat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140922
+    m_Localized: Blue Hood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140923
+    m_Localized: A deep blue hood. Ideal for stealth and magical rituals, exuding
+      an air of mystery.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140924
+    m_Localized: Blue Robe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140925
+    m_Localized: A robe dyed blue. It is a symbol of wizards, holding knowledge and
+      power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140926
+    m_Localized: Blue Gloves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140927
+    m_Localized: Blue gloves that amplify magical power. They support delicate movements
+      and help in controlling magic.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140928
+    m_Localized: Blue Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140929
+    m_Localized: Blue cloth pants designed for ease of movement. Comfortable for
+      travel and adventure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140930
+    m_Localized: The symbol of a knight shrouded in darkness. Its jet-black armor
+      rejects light and instills fear in enemies on the battlefield. The one who
+      dons the helmet embodies the cold, ruthless power of the Black Knight, fighting
+      without mercy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140931
+    m_Localized: Black Knight's Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140932
+    m_Localized: Armor of darkness that boasts absolute defense. Its black plating
+      blocks out light and strikes fear into enemies on the battlefield. It bestows
+      a cold power upon its wearer, symbolizing the merciless force of darkness that
+      crushes enemies without hesitation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140933
+    m_Localized: Black Knight's Gauntlets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140934
+    m_Localized: Black armor that symbolizes the power of darkness. Its sharp design
+      indicates overwhelming strength. Those who wear it will wield destructive force
+      in their hands, unleashing cold power on the battlefield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140935
+    m_Localized: Black Knight's Greaves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140936
+    m_Localized: Jet-black armor that symbolizes the power of darkness. Its sharp
+      design exudes an aura of intimidation that strikes fear into enemies, leaving
+      a trail of terror in its wake. Those who wear it will stomp the ground and
+      wield merciless power on the battlefield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140937
+    m_Localized: Tanned Leather Helmet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140938
+    m_Localized: A simple yet sturdy piece of equipment favored by adventurers on
+      long journeys. The natural texture of the leather offers durability and reliability,
+      able to withstand years of use. A trusted companion that provides security,
+      even in the wilderness.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140939
+    m_Localized: Tanned Leather Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140940
+    m_Localized: A reliable piece of armor for surviving the wilderness. It combines
+      the toughness and flexibility of natural leather, protecting the wearer comfortably
+      in any environment. Its weathered texture, polished over long journeys, reflects
+      the adventurer's spirit.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140941
+    m_Localized: Tanned Leather Gauntlets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140942
+    m_Localized: Sturdy equipment designed to protect an adventurer's hands. The
+      natural leather molds comfortably to the hand, maintaining comfort even during
+      prolonged use. Whether in rugged terrain or intense combat, these gauntlets
+      offer reliable protection.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140943
+    m_Localized: Tanned Leather Greaves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140944
+    m_Localized: Dependable armor for long journeys. The natural leather fits snugly
+      on the foot, maintaining comfort during long walks. In any rough terrain, these
+      greaves offer solid protection and guide the wearer through the next step.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140945
+    m_Localized: A hood that has been worn by wizards since ancient times. Made of
+      light and soft material, it is said to enhance magical power. Wearing this
+      hood makes spellcasting more precise and powerful.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140946
+    m_Localized: A soft and elegant garment worn by wizards. The light emitted by
+      the shining white silk grants the wearer calm magical energy and surrounds
+      them with a mysterious aura. A piece designed to draw out magical power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140947
+    m_Localized: Mystical handwear donned by wizards. The soft feel of silk guides
+      the flow of magic, giving the wearer delicate magical power in their hands.
+      Those who wear these gloves can unleash the power to change the world from
+      their fingertips.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140948
+    m_Localized: White Silk Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140949
+    m_Localized: Elegant legwear worn by wizards. The smooth texture of the silk
+      amplifies the flow of magic, giving the wearer light movements and quiet strength.
+      As part of the magical attire, it shines with a radiant glow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140950
+    m_Localized: The golden helmet forged by ancient blacksmiths not only protects
+      the warrior's head but also emits a dazzling light that intimidates enemies.
+      According to legend, those who wear this helmet are granted unyielding courage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140951
+    m_Localized: Golden Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140952
+    m_Localized: The golden armor that covers the entire body is not just a defense.
+      It is a symbol of kingship and the dignity of those who stand on the battlefield.
+      This armor, with its formidable defensive power, deflects attacks and protects
+      its wearer like a shining shield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140953
+    m_Localized: Golden Gauntlets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140954
+    m_Localized: These finely crafted golden gauntlets enhance the strength of a
+      warrior's arms, turning their fists into a more formidable weapon. Capable
+      of withstanding enemy attacks while allowing for powerful counterattacks, these
+      gauntlets are a reliable companion on the battlefield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140955
+    m_Localized: Golden Greaves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140956
+    m_Localized: The golden greaves not only protect the warrior's feet but also
+      leave a powerful impression with each step taken. The shining gold stands out
+      on the battlefield, highlighting the warrior's presence. It is an item that
+      lights the way for its owner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140957
+    m_Localized: Azure Ninja Hood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140958
+    m_Localized: A hood woven to blend into the azure shadows. Light as the wind,
+      it is the perfect armor to conceal the ninja's form. Those who wear this hood
+      can silently approach enemies under the cover of night and strike in an instant.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140959
+    m_Localized: Azure Ninja Garb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140960
+    m_Localized: An azure outfit that grants flexibility to its wearer. As swift
+      as the wind and as silent as the shadow. This garb envelops the ninja's body,
+      allowing for fluid offense and defense, instilling fear in those who witness
+      it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140961
+    m_Localized: Azure Ninja Gloves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140962
+    m_Localized: Gloves designed to sharpen the wearer's senses. Made from sturdy
+      blue fabric with anti-slip material on the palms. These gloves, fitting perfectly
+      into a ninja's hands, support swift movements and precise techniques.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140963
+    m_Localized: Azure Ninja Tabi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140964
+    m_Localized: Blue tabi socks designed for mastering ninja techniques. With silent
+      footsteps, they allow the wearer to approach unnoticed and outmaneuver enemies
+      with quick, agile movements. These tabi guarantee both nimbleness and solid
+      footing, making them an essential piece of ninja gear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140965
+    m_Localized: A hood made from pitch-black silk, symbolizing an elite mage. It
+      harbors the power of deep darkness, absorbing light like the night sky and
+      concealing the mage's presence. Wearing this hood severs contact with the outside
+      world and focuses magical energy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140966
+    m_Localized: A black silk robe specially woven to amplify magical power. Light
+      yet protective, it exudes an air of silence and dignity. The fabric is said
+      to be woven with ancient spells.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140967
+    m_Localized: Gloves made from black silk protect the delicate movements of a
+      mage. They do not hinder the precise finger movements needed to cast spells.
+      These gloves amplify the power released from the mage's hands, doubling its
+      potency.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140968
+    m_Localized: Black Silk Pants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140969
+    m_Localized: The black silk pants carry the dignity befitting a master mage.
+      Their fabric resonates with dark magic, allowing fluid and unrestricted movement
+      in magical battles.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140970
+    m_Localized: Ring of Vitality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140971
+    m_Localized: A powerful ring embedded with a ruby symbolizing life energy. It
+      grants unyielding spirit and vitality, allowing the wearer to endure any hardship.
+      The shining red gem is a source of life force, continually protecting its owner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140972
+    m_Localized: Ring of Endurance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140973
+    m_Localized: A ring embedded with a gem that gleams like an emerald. Those who
+      wear this ring gain the strength to endure even the toughest situations until
+      the very end. The vibrant green glow symbolizes lasting strength and an indomitable
+      spirit.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140974
+    m_Localized: Ring of Strength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140975
+    m_Localized: A powerful ring embedded with amber. Wearing this ring fills the
+      wearer with strength beyond physical limits, enough to overwhelm enemies with
+      a single blow. The gleaming amber represents the determination to achieve victory.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140976
+    m_Localized: Ring of Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140977
+    m_Localized: A mystical ring embedded with spinel. Those who wear this ring experience
+      an amplification of their inner magical power, allowing them to wield powerful
+      magic at will. The shining purple stone is the key to unlocking magical force.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140978
+    m_Localized: Ring of Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140979
+    m_Localized: A lightweight ring embedded with tanzanite. Wearing this ring enables
+      swift, wind-like movement, allowing the wearer to dodge enemy attacks and race
+      across the battlefield. The glowing light blue stone symbolizes speed and agility.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140980
+    m_Localized: Ring of Vitality+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140981
+    m_Localized: An enhanced version of the powerful ring embedded with a ruby symbolizing
+      life energy. It grants unyielding spirit and vitality, allowing the wearer
+      to endure any hardship. The shining red gem is a source of life force, continually
+      protecting its owner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140982
+    m_Localized: Ring of Endurance+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140983
+    m_Localized: An enhanced version of the ring embedded with a gem that gleams
+      like an emerald. Those who wear this ring gain the strength to endure even
+      the toughest situations until the very end. The vibrant green glow symbolizes
+      lasting strength and an indomitable spirit.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140984
+    m_Localized: Ring of Strength+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140985
+    m_Localized: An enhanced version of the powerful ring embedded with amber. Wearing
+      this ring fills the wearer with strength beyond physical limits, enough to
+      overwhelm enemies with a single blow. The gleaming amber represents the determination
+      to achieve victory.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140986
+    m_Localized: Ring of Magic+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140987
+    m_Localized: An enhanced version of the mystical ring embedded with spinel. Those
+      who wear this ring experience an amplification of their inner magical power,
+      allowing them to wield powerful magic at will. The shining purple stone is
+      the key to unlocking magical force.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140988
+    m_Localized: Ring of Speed+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140989
+    m_Localized: An enhanced version of the lightweight ring embedded with tanzanite.
+      Wearing this ring enables swift, wind-like movement, allowing the wearer to
+      dodge enemy attacks and race across the battlefield. The glowing light blue
+      stone symbolizes speed and agility.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140990
+    m_Localized: Ring of Vitality++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140991
+    m_Localized: The final enhanced version of the powerful ring embedded with a
+      ruby symbolizing life energy. It grants unyielding spirit and vitality, allowing
+      the wearer to endure any hardship. The shining red gem is a source of life
+      force, continually protecting its owner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140992
+    m_Localized: Ring of Endurance++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140993
+    m_Localized: The final enhanced version of the ring embedded with a gem that
+      gleams like an emerald. Those who wear this ring gain the strength to endure
+      even the toughest situations until the very end. The vibrant green glow symbolizes
+      lasting strength and an indomitable spirit.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140994
+    m_Localized: Ring of Strength++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140995
+    m_Localized: The final enhanced version of the powerful ring embedded with amber.
+      Wearing this ring fills the wearer with strength beyond physical limits, enough
+      to overwhelm enemies with a single blow. The gleaming amber represents the
+      determination to achieve victory.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140996
+    m_Localized: Ring of Magic++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140997
+    m_Localized: The final enhanced version of the mystical ring embedded with spinel.
+      Those who wear this ring experience an amplification of their inner magical
+      power, allowing them to wield powerful magic at will. The shining purple stone
+      is the key to unlocking magical force.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140998
+    m_Localized: Ring of Speed++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140999
+    m_Localized: The final enhanced version of the lightweight ring embedded with
+      tanzanite. Wearing this ring enables swift, wind-like movement, allowing the
+      wearer to dodge enemy attacks and race across the battlefield. The glowing
+      light blue stone symbolizes speed and agility.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141000
+    m_Localized: Imp Necklace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141001
+    m_Localized: A creepy accessory designed with a purple imp. The magical power
+      hidden behind its beauty draws the wearer into the depths of temptation. Grants
+      'Imp's Support' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141002
+    m_Localized: Firefly Fairy Necklace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141003
+    m_Localized: A mystical accessory with a faintly glowing gemstone embedded in
+      the center. Like fireflies lighting up a nighttime forest, it grants the wearer
+      a warm yet fleeting magical power. Grants 'Firefly Fairy's Support' to the
+      wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141004
+    m_Localized: Guardian Spirit's Amulet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141005
+    m_Localized: A holy accessory resembling a white talisman. Those who carry it
+      are protected by the guardian spirits and shielded from any disaster. Grants
+      'Guardian Spirit's Support' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141006
+    m_Localized: Cursed Bracelet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141007
+    m_Localized: A sinister accessory said to bring a terrible curse to its wearer.
+      Its twisted, dark appearance tells the tale of the despair and suffering of
+      its previous owners. Grants 'Embraced Curse' to the wearer at the start of
+      battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141008
+    m_Localized: Emblem of Bountiful Harvest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141009
+    m_Localized: A wheat-colored talisman symbolizing the blessings of the harvest.
+      It holds the power of the earth and brings abundant crops and prosperity. Grants
+      'Blessing of Bountiful Harvest' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141010
+    m_Localized: Bottled Overflowing Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141011
+    m_Localized: A small glass bottle containing pure, swirling magic. The magic
+      inside enhances the power of its wielder and unlocks unknown potential. Grants
+      'Magic Boost' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141012
+    m_Localized: Ring of the Cornered Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141013
+    m_Localized: An accessory symbolizing the survival instincts of the cornered.
+      Its small but sturdy design gives the wearer the strength to face any hardship.
+      Grants 'Struggle' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141014
+    m_Localized: Shen's Seven Tools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141015
+    m_Localized: A legendary set containing a blend of different technologies and
+      magic. Included are secret lockpicking tools, bottles of poison, and concealed
+      blades, giving the wielder unlimited possibilities. Grants 'Shen's Knife Setup'
+      to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141016
+    m_Localized: Scarf of Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141017
+    m_Localized: A mystical accessory imbued with the power to manipulate the flow
+      of time. The scarf's colors shift constantly, and only those who travel through
+      past and future can understand its woven patterns. Grants 'Preemptive Strike'
+      to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141018
+    m_Localized: Nitroglycol Bottle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141019
+    m_Localized: A volatile chemical container that could explode with just a shake.
+      Those who carry this bottle must exercise both caution and boldness. Grants
+      'Overreaction' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141020
+    m_Localized: A testament to long years of training and discipline. Its simple
+      design instills unwavering confidence and strength once worn. Grants 'Flinch
+      Immunity' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141021
+    m_Localized: Paralysis Ointment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141022
+    m_Localized: A special ointment made by mixing legendary herbs and magical powders.
+      It nullifies even the most powerful paralysis attacks, ensuring warriors keep
+      their edge in battle. Grants 'Paralysis Immunity' to the wearer at the start
+      of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141023
+    m_Localized: Emblem of Slashing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141024
+    m_Localized: An accessory symbolizing sharpness and strength. It enhances the
+      wearer's slashing power and significantly boosts the force of each strike.
+      Only those who have been thoroughly trained can unlock its true potential.
+      Grants 'Slash Boost' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141025
+    m_Localized: Emblem of Striking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141026
+    m_Localized: An accessory symbolizing power and destruction. It amplifies the
+      wearer's striking ability, increasing the weight and impact of each blow. It
+      holds the power to shake the earth. Grants 'Strike Boost' to the wearer at
+      the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141027
+    m_Localized: Emblem of Piercing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141028
+    m_Localized: An accessory symbolizing sharpness and piercing power. It enhances
+      the wearer's ability to pierce through defenses, allowing for precise, penetrating
+      strikes. It is said to contain a sharp mind. Grants 'Pierce Boost' to the wearer
+      at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141029
+    m_Localized: Emblem of Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141030
+    m_Localized: An ancient relic said to have been treasured by wizards of old.
+      It amplifies the wearer's magical power, drastically increasing the potency
+      of spells. Grants 'Magic Boost' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141031
+    m_Localized: Emblem of Lightning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141032
+    m_Localized: Said to be blessed by the Thunder God, this emblem grants its wearer
+      lightning-like speed and power. Its flash strikes enemies like a bolt, maximizing
+      the power of lightning attacks. Grants 'Lightning Boost' to the wearer at the
+      start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141033
+    m_Localized: Emblem of Flame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141034
+    m_Localized: Said to grant its bearer the power of blazing fire. A legendary
+      sorcerer once used this emblem to burn the earth and reduce everything to ashes.
+      Grants 'Flame Boost' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141035
+    m_Localized: Price of Power
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141036
+    m_Localized: The wearer gains immense strength, but at the cost of their speed,
+      which slowly deteriorates. Can those who seek power resist the dangerous allure
+      of this ring?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141037
+    m_Localized: Exotic Detector
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141038
+    m_Localized: A device that embodies the pinnacle of foreign technology. By directing
+      it at the enemy, it instantly analyzes their status, exposing weaknesses and
+      hidden powers. It dramatically enhances the user's tactics. Grants 'Analyze'
+      to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141039
+    m_Localized: Energy Drink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141040
+    m_Localized: A magical beverage that instantly revitalizes the drinker, banishing
+      fatigue. It quickly restores stamina even in the midst of battle, maximizing
+      endurance. Grants 'Stamina Recovery' to the wearer at the start of battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141041
+    m_Localized: Iron Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141042
+    m_Localized: Normal Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141043
+    m_Localized: Swing the weapon to attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141044
+    m_Localized: Stance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141045
+    m_Localized: Take a stance to increase physical attack power, then attack at
+      the end of the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141046
+    m_Localized: Thrust
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141047
+    m_Localized: Stab the opponent with a weapon, dealing piercing damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141048
+    m_Localized: Foot Breaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141049
+    m_Localized: Swing at the opponent's legs. Inflicts 'Flinch' if the target is
+      humanoid.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141050
+    m_Localized: Double Strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141051
+    m_Localized: Swing the weapon left and right, attacking twice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141052
+    m_Localized: Piercing Stab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141053
+    m_Localized: A special technique for piercing weapons. Performs a powerful attack.
+      Restores 1 BP if the target has an amorphous attribute.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141054
+    m_Localized: Spinning Strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141055
+    m_Localized: A technique often granted to blunt weapons. Deals a powerful attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141056
+    m_Localized: Poison Blade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141057
+    m_Localized: Swings a poison-coated weapon, dealing damage. Inflicts 'Poison'
+      on the target.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141058
+    m_Localized: Swift Strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141059
+    m_Localized: Moves at high speed to attack with a weapon. The attack power is
+      reduced, but there is a chance to recover 1 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141060
+    m_Localized: Fighting Spirit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141061
+    m_Localized: Inspires oneself and prepares to fight with full vigor. Grants the
+      user 'Fighting Spirit.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141062
+    m_Localized: Uses special gunpowder to perform a dance. Grants the user 'Fire
+      Follow-up.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141063
+    m_Localized: Magic Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141064
+    m_Localized: Performs an attack using magical power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141065
+    m_Localized: Fireball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141066
+    m_Localized: Hurls a ball of flame at the enemy. Deals fire-elemental damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141067
+    m_Localized: Presses a heated brand onto the target. Inflicts 'Burn.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141068
+    m_Localized: Presses a red-hot brand onto the target. Inflicts 'Severe Burn.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141069
+    m_Localized: Magic Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141070
+    m_Localized: Imbues the weapon with magic, performing a physical attack with
+      magical attributes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141071
+    m_Localized: Step Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141072
+    m_Localized: Steps forward and assumes a sturdy stance. Attacks and grants the
+      user 'Physical Damage Reduction.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141073
+    m_Localized: Thunder Rush
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141074
+    m_Localized: Performs a high-speed lightning-elemental attack. The attack power
+      is reduced, but there is a chance to recover 1 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141075
+    m_Localized: Thunder's Grudge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141076
+    m_Localized: Casts a thunderbolt imbued with a curse. Inflicts 'Paralysis' on
+      the target.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141077
+    m_Localized: Ebony Thunder Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141078
+    m_Localized: A technique passed down by the house of Ebona. Imbues the sword
+      with lightning and attacks. After the slash, it releases a thunderbolt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141079
+    m_Localized: Thunder Strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141080
+    m_Localized: Casts thunder from the sky. Deals lightning damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141081
+    m_Localized: Heavy Crush
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141082
+    m_Localized: Unleashes a heavy blow, dealing damage. Inflicts 'Armor Break' on
+      enemies with armor or shells.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141083
+    m_Localized: Armor of Lightning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141084
+    m_Localized: Wraps the body in lightning and grants the user 'Lightning Armor.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141085
+    m_Localized: Lavaheart's Flame Spear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141086
+    m_Localized: A technique passed down by the house of Lavaheart. Throws a flame
+      spear at the enemy, dealing fire-elemental physical damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141087
+    m_Localized: Will of the Paladin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141088
+    m_Localized: A technique of the paladin Luxola. Grants the user 'Will of the
+      Paladin.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141089
+    m_Localized: Shoot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141090
+    m_Localized: Fires an arrow, dealing damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141091
+    m_Localized: Backstep Shot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141092
+    m_Localized: Performs a backstep while shooting at the enemy, granting the user
+      'Evasion Chance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141093
+    m_Localized: Volley Shot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141094
+    m_Localized: Fires three arrows simultaneously, dealing damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141095
+    m_Localized: 'Weapon Dance Attack: Performs 4 attacks.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141096
+    m_Localized: Cruel Poisoning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141097
+    m_Localized: Attacks with a weapon coated in a special poison. If the target
+      is already poisoned, it delivers a powerful strike and forcibly removes the
+      poison.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141098
+    m_Localized: Eternal Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141099
+    m_Localized: Swings a heavy, large sword with all its might, delivering a powerful
+      attack. Grants yourself 'Fatigue'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141100
+    m_Localized: Quick Step
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141101
+    m_Localized: Swiftly moves and grants yourself 'Advance'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141102
+    m_Localized: Amplifying Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141103
+    m_Localized: Amplifies magic and wraps yourself in it. Grants yourself 1 'Magic
+      Count'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141104
+    m_Localized: Releasing Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141105
+    m_Localized: Releases all amplified magic in a single strike. The power of the
+      attack depends on the 'Magic Count'. After the attack, the 'Magic Count' is
+      reset to 0.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141106
+    m_Localized: Quick Magic Amplification
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141107
+    m_Localized: Casts a quick spell, granting yourself 1 'Magic Count'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141108
+    m_Localized: Iron Wall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141109
+    m_Localized: A technique to enhance one's armor. Grants oneself 'Iron Wall'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141110
+    m_Localized: Creates a magical shield in front of oneself. Grants oneself 'Magic
+      Shield'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141111
+    m_Localized: Evarge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141112
+    m_Localized: One of the forbidden techniques that distorts space-time, allowing
+      the user to move faster than the opponent. Grants oneself 'BP Acceleration'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141113
+    m_Localized: Power of Hatred
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141114
+    m_Localized: Transforms feelings of hatred into power, imbuing the weapon with
+      strength. Grants oneself 'Power of Hatred'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141115
+    m_Localized: Cursed Blade Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141116
+    m_Localized: Attacks with a blade that has absorbed the blood of many. While
+      the damage is reduced, it converts a portion of the damage dealt into the user's
+      HP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141117
+    m_Localized: Retaliatory Thorns
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141118
+    m_Localized: Imbues the armor with magical thorns, counterattacking when struck
+      by an enemy. Grants oneself 'Physical Counter'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141119
+    m_Localized: Healing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141120
+    m_Localized: Surrounded by soft light, you heal your HP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141121
+    m_Localized: Airy's Blessing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141122
+    m_Localized: Receive the blessing of the healing deity, granting yourself 'Airy's
+      Blessing'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141123
+    m_Localized: Read the opponent's movements and grant yourself 'Absolute Evasion'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141124
+    m_Localized: Shield Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141125
+    m_Localized: Raise your shield and charge at the enemy to attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141126
+    m_Localized: Guard Thrust
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141127
+    m_Localized: A special technique using a lance with a shield. After attacking
+      with the weapon, grant yourself 'Guard'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141128
+    m_Localized: Arnold's Combo I
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141129
+    m_Localized: A combo technique passed down by the Arnold family. Grants yourself
+      'Arnold Combo I'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141130
+    m_Localized: Arnold's Combo II
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141131
+    m_Localized: A combo technique passed down by the Arnold family. If 'Arnold Combo
+      I' is applied, damage is increased. Grants yourself 'Arnold Combo II'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141132
+    m_Localized: Arnoid's Combo - Three
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141133
+    m_Localized: A combo technique passed down through the Arnoid family. Damage
+      increases if 'Arnoid Combo - Two' is applied.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141134
+    m_Localized: Arnoid's Secret Combo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141135
+    m_Localized: A secret combo technique of the Arnoid family. Damage increases
+      if 'Arnoid Combo - Two' is applied, and grants oneself 'BP Acceleration' and
+      'Efficiency'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141136
+    m_Localized: Faking Courage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141137
+    m_Localized: Fakes courage and surges with fighting spirit. Grants oneself 'Fake
+      Courage'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141138
+    m_Localized: The secret technique of the Lavaheart family. Throws a spear engulfed
+      in hellfire at the opponent, dealing fire attribute physical damage, but being
+      an incomplete technique, it also inflicts 'Burn' on oneself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141139
+    m_Localized: Sarde Evage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141140
+    m_Localized: One of the forbidden techniques that stops time. Grants oneself
+      'Time Stop'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141141
+    m_Localized: Expands a space where magic power is stored around oneself, granting
+      oneself 'Magic Recovery'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141142
+    m_Localized: Crossbow Rapid Fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141143
+    m_Localized: Fires thick arrows, dealing strong damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141144
+    m_Localized: Furious Crossbow Rapid Fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141145
+    m_Localized: Fires extremely thick arrows, dealing strong damage. Due to the
+      arrow's weight, it also inflicts 'Flinch' on the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141146
+    m_Localized: Ultimate Normal Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141147
+    m_Localized: A perfected normal attack. Simple, but due to its simplicity, it
+      is extremely powerful. After attacking, grants oneself 'Normal Attack BP Recovery'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141148
+    m_Localized: Slime Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141149
+    m_Localized: Performs an attack targeting the core, the weakness of slimes. Deals
+      massive damage if the enemy has the 'Amorphous' attribute.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141150
+    m_Localized: Beast Hunt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141151
+    m_Localized: A strike that instills fear in beasts. If the enemy has the 'Beast'
+      attribute, recovers 1 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141152
+    m_Localized: Analyze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141153
+    m_Localized: Gains the ability to read the opponent's status. Grants oneself
+      'Analyze'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141154
+    m_Localized: Irisia's Great Magic Meteor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141155
+    m_Localized: Throws a giant magic meteor created with Irisia's ancestral magic.
+      If Magic Count is 3 or more, it is consumed and recovers 4 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141156
+    m_Localized: Dirva Evage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141157
+    m_Localized: One of the forbidden techniques that rewinds time. Fully recovers
+      BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141158
+    m_Localized: Wrath Counter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141159
+    m_Localized: Turns anger into power and adopts a counter-stance. Grants oneself
+      'Wrath Counter'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141160
+    m_Localized: Tailwind of Adversity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141161
+    m_Localized: The tailwind of adversity spurs oneself forward. Grants oneself
+      'Tailwind of Adversity'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141162
+    m_Localized: Takes a defensive stance and grants oneself 'Guard'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141163
+    m_Localized: Forbidden Drug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141164
+    m_Localized: A drug that pushes the user's physical abilities to the limit. Grants
+      oneself 'Poison' and 'BP Acceleration'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141165
+    m_Localized: Reckless Strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141166
+    m_Localized: Swings the weapon with all emotions on the line. Consumes all BP,
+      increasing attack power proportionally to the amount consumed. Grants oneself
+      'Fatigue' and 'Paralysis'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141167
+    m_Localized: Guard Counter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141168
+    m_Localized: A stance that combines defense and counter-attack. Grants oneself
+      'Guard' and 'Physical Counter'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141169
+    m_Localized: Summon tentacles imbued with wriggling magical power and grant oneself
+      'Magical Tentacles'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141170
+    m_Localized: Steel Transformation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141171
+    m_Localized: The body turns into steel. Grants oneself 'Steel Transformation'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141172
+    m_Localized: Full Magic Focus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141173
+    m_Localized: A technique that converts all power into magic. Consumes all BP
+      and converts the number used into 'Magic Count'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141174
+    m_Localized: Naifanchi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141175
+    m_Localized: Every movement begins and ends with Naifanchi. Grants oneself 'Efficiency'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141176
+    m_Localized: Diagonal Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141177
+    m_Localized: One of the techniques originating from the East. Performs an attack,
+      and if the target has the humanoid attribute, BP is restored by 1.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141178
+    m_Localized: Rock Crusher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141179
+    m_Localized: A powerful strike that shatters rocks. If the target has the rock
+      attribute, BP is restored by 1.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141180
+    m_Localized: Consuming Fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141181
+    m_Localized: Unleashes a fire that burns everything. If the target is of plant
+      attribute, it deals a powerful blow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141182
+    m_Localized: Wild Terror
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141183
+    m_Localized: A curse that evokes primal fear. If the target is of beast attribute,
+      it deals a powerful blow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141184
+    m_Localized: Star Pebbles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141185
+    m_Localized: Creates two glowing blue-white stars with magic and throws them
+      at the target. Attacks twice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141186
+    m_Localized: Follow-up Arrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141187
+    m_Localized: Fires a time-piercing arrow. Attacks during the turn and again at
+      the end of the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141188
+    m_Localized: Fires a translucent white wave magic bullet. Attacks and applies
+      'White Wave' to the target.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141189
+    m_Localized: Afterimage Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141190
+    m_Localized: Leaves an afterimage of oneself. The afterimage waits for the next
+      move. Attacks and applies 'Preemptive Strike' to oneself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141191
+    m_Localized: Lightning Strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141192
+    m_Localized: A lightning strike that tears the sky. Deals powerful lightning
+      attribute damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141193
+    m_Localized: Thousand Spears
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141194
+    m_Localized: Throw a thousand spears at once, skewering the opponent. Performs
+      a powerful piercing attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141195
+    m_Localized: Home Run
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141196
+    m_Localized: A strike applying a certain sports technique. Performs a powerful
+      striking attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141197
+    m_Localized: Magic Time Stall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141198
+    m_Localized: A technique that converts magic into action. Converts all accumulated
+      'Magic Counts' into BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141199
+    m_Localized: Adversity's Paradise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141200
+    m_Localized: Swing your weapon with extraordinary power. The more status ailments
+      you have, the stronger the attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141201
+    m_Localized: Knife Stock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141202
+    m_Localized: Stock hidden knives in your pocket. Accumulates 'Knife Stock' by
+      2. This skill can be used multiple times per turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141203
+    m_Localized: Knife Throw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141204
+    m_Localized: Throw all hidden knives at once. The number of attacks equals the
+      number of 'Knife Stock'. Afterward, 'Knife Stock' becomes 0. Fails if 'Knife
+      Stock' is 0.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141205
+    m_Localized: Throw Shen's Knife
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141206
+    m_Localized: Throw a knife stored in your bosom. Consumes 1 Knife Stock to attack,
+      granting 'Evasion Potential' to yourself. Fails if Knife Stock is 0.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141207
+    m_Localized: Ilysia's Magic Meteorite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141208
+    m_Localized: Throw a magic meteorite passed down through the Ilysia family. If
+      Magic Count is 1 or more, it is consumed, and restores 3 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141209
+    m_Localized: Precise Aim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141210
+    m_Localized: Focus your spirit and put everything into the next blow. Grants
+      'Precise Aim' to yourself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141211
+    m_Localized: A vortex of flames scorches the enemy. A powerful fire attribute
+      attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141212
+    m_Localized: Ebonia's Secret Thunder Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141213
+    m_Localized: A secret technique passed down in the Ebonia family. Surrounds the
+      sword with thunder for an attack. After the slash, three bolts of lightning
+      are released.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141214
+    m_Localized: Boomerang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141215
+    m_Localized: A foreign weapon that returns when thrown. Performs an attack, restoring
+      1 BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141216
+    m_Localized: A foreign weapon that explodes when thrown. It deals damage and
+      applies 'Burn' to the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141217
+    m_Localized: A foreign weapon used to score points...? It deals damage and applies
+      'Aimed Shot' to the user.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141218
+    m_Localized: Thunderstrike of the Whalebreaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141219
+    m_Localized: A powerful thunder attack that can even paralyze a whale. Deals
+      damage and applies 'Paralyze' to the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141220
+    m_Localized: Inferno of the Elephantbreaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141221
+    m_Localized: A powerful attack that can easily incinerate an elephant. Deals
+      damage and applies 'Burn' to the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141222
+    m_Localized: Slam the shield with force. Deals damage and applies 'Flinch' to
+      the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141223
+    m_Localized: Luxora Shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141224
+    m_Localized: The holy protection of the knight Luxora. Applies 'Physical Damage
+      Reduction' and 'Magic Shield' to the user.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141225
+    m_Localized: Critical Hit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141226
+    m_Localized: Deliver a fatal blow to an opponent who shows an opening. If the
+      opponent is "staggered," it becomes a powerful strike.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141227
+    m_Localized: Hydrochloric Acid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141228
+    m_Localized: Douse with a large amount of hydrochloric acid. Perform an attack
+      and inflict "poison" on the opponent.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141229
+    m_Localized: Silver White Wave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141230
+    m_Localized: Emit a shining silver wave. Perform an attack and inflict "White
+      Wave" on the opponent.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141231
+    m_Localized: Ox-hour Cursing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141232
+    m_Localized: Strike with a foreign cursed doll. Perform an attack and inflict
+      "Grudge Power" on yourself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141233
+    m_Localized: Meteor Shower of Love
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141234
+    m_Localized: An ancient miraculous technique used by the demon race. It requires
+      a lot of SP, but the stars support you, allowing you to attack four times.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141235
+    m_Localized: An ancient technique created to defeat a mighty demon. It requires
+      a lot of SP but delivers a powerful blow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141236
+    m_Localized: Helm-Splitting of Hope
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141237
+    m_Localized: A technique used by those who trained to fight bears in ancient
+      times. It requires a lot of SP but performs an attack and inflicts "Armor Break"
+      on the opponent.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141238
+    m_Localized: Healing of Justice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141239
+    m_Localized: An ancient technique favored by the compassionate. It requires a
+      lot of SP, but restores a significant amount of your HP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141240
+    m_Localized: Soul Fist Strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141241
+    m_Localized: A soul-powered fist strike of a foreign martial artist. Perform
+      an attack and inflict "Focus" on yourself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141242
+    m_Localized: Crescent Kick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141243
+    m_Localized: A graceful crescent kick of a foreign martial artist. It's a powerful
+      strike, but it can miss.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465141244
+    m_Localized: Test Enemy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335041
+    m_Localized: Sludge Slime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335042
+    m_Localized: Cursed Doll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335043
+    m_Localized: Hundred-Eyed Grass Orb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335044
+    m_Localized: Deep Sea Fishman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335045
+    m_Localized: Rotting Kodama
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335046
+    m_Localized: Cemetery Dead
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335047
+    m_Localized: Smiling Shadow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335048
+    m_Localized: Void Knight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335049
+    m_Localized: Hydrochloric Snail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335050
+    m_Localized: Eye of Judgment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335051
+    m_Localized: White Spirit of the Abyss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335052
+    m_Localized: Bone King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335053
+    m_Localized: Ancestral Spirit Tree
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335054
+    m_Localized: Statue of the Ancient Nature King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335055
+    m_Localized: Venomous Great Serpent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335056
+    m_Localized: Metamorph Slime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335057
+    m_Localized: Blood Mage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335058
+    m_Localized: Ice Mage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335059
+    m_Localized: Wind God
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335060
+    m_Localized: Eld Dragon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335061
+    m_Localized: Soaring Blood, Walobot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335062
+    m_Localized: Dancer of Thunder Arts, Ebonia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335063
+    m_Localized: Flames of Wrath, Lavaheart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335064
+    m_Localized: Star Alchemist Dean, Ilicia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335065
+    m_Localized: Rapid Strikes, Arnoid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335066
+    m_Localized: Shadow Blade, Shen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335067
+    m_Localized: Awakened Walobot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335068
+    m_Localized: Rebirth of {SealedName}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335069
+    m_Localized: God of the Underworld, Airy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335070
+    m_Localized: God of Destruction, Airy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335071
+    m_Localized: The deadly poison drains the body's life force. At the end of each
+      turn, a certain amount of damage is taken.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335072
+    m_Localized: Stagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335073
+    m_Localized: Unable to act due to the fear from being attacked. When this status
+      ailment is lifted, 'Stagger Immunity' is granted.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335074
+    m_Localized: A technique that draws out inner fighting spirit and increases attack
+      power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335075
+    m_Localized: Flame Pursuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335076
+    m_Localized: Imbues the power of flame, dealing small fire attribute damage with
+      each attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335077
+    m_Localized: The state of being injured by fire or heat. Additional damage is
+      taken with each hit.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335078
+    m_Localized: Worse than burns, festering wounds cause significant additional
+      damage with each hit.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335079
+    m_Localized: Physical Damage Reduction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335080
+    m_Localized: Hardens armor to reduce the amount of physical damage received.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335081
+    m_Localized: Paralysis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335082
+    m_Localized: The body becomes numb and doesn't move as desired, reducing the
+      damage dealt. When this status ailment is lifted, 'Paralysis Immunity' is granted.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335083
+    m_Localized: Armor Break
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335084
+    m_Localized: The armor worn becomes brittle and shatters. Physical damage taken
+      is increased.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335085
+    m_Localized: Gains miraculous power through indomitable spirit. Increases attack
+      and defense power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335086
+    m_Localized: Evasion Probability
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335087
+    m_Localized: Through agile movements and precognition, the chance to evade the
+      opponent's attack is increased.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335088
+    m_Localized: As a consequence of powerful attacks, the turn begins with 1 less
+      BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335089
+    m_Localized: Vanguard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335090
+    m_Localized: Moves with the speed of wind, reducing the BP cost of the next action
+      by 2. The effect is removed after any action.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335091
+    m_Localized: Gains the strength of a steel wall. Grants GP at the start of the
+      turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335092
+    m_Localized: Deploys a shield made of magical power in front, reducing magic
+      damage taken.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335093
+    m_Localized: BP Acceleration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335094
+    m_Localized: Considered one of the forbidden magics, it restores 2 BP at the
+      start of the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335095
+    m_Localized: Power of Grudge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335096
+    m_Localized: Tormented by deep resentment and hatred. Increases attack power
+      but also increases damage received.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335097
+    m_Localized: Physical Counter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335098
+    m_Localized: Wears the power of counterattack, striking back at an opponent who
+      launches a physical attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335099
+    m_Localized: Heals a small amount of HP at the end of the turn thanks to the
+      blessing of the healing god Airy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335100
+    m_Localized: Absolute Attack Evasion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335101
+    m_Localized: Reads the opponent's presence and evades all attacks. When this
+      status ailment is lifted, 'Absolute Attack Evasion Fatigue' is inflicted on
+      oneself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335102
+    m_Localized: 'Arnoid Combo: One'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335103
+    m_Localized: Performs the martial arts passed down in the Arnoid family, enhancing
+      specific actions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335104
+    m_Localized: 'Arnoid Combo: Two'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335105
+    m_Localized: Through a bold fighting spirit, increases attack power when a debuff-type
+      status ailment is inflicted on oneself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335106
+    m_Localized: Absolute Attack Evasion Fatigue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335107
+    m_Localized: Sensing an opponent's presence consumes considerable concentration.
+      As a result, 'Absolute Attack Evasion' can no longer be granted.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335108
+    m_Localized: Time Stop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335109
+    m_Localized: Considered one of the forbidden magics, it allows only the user
+      to act.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335110
+    m_Localized: Normal Attack BP Recovery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335111
+    m_Localized: A technique that can be mastered by those who have perfected simplicity.
+      There is a chance to recover 1 BP during a normal attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335112
+    m_Localized: Enables reading the opponent's status, revealing HP and weaknesses.
+      Additionally, the 'Check' command allows understanding of the opponent's status
+      ailments.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335113
+    m_Localized: Imbues the body with the power of lightning. Reduces damage received
+      from lightning attribute attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335114
+    m_Localized: A stance that converts anger into power. Recovers 1 BP when taking
+      damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335115
+    m_Localized: A stance that prioritizes defense over offense. Grants GP when applied,
+      but GP is reduced to 0 when this status is lifted.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335116
+    m_Localized: The tailwind of adversity drives the self. Grants 2 extra BP at
+      the start of the turn if a debuff-type status ailment is inflicted on oneself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335117
+    m_Localized: Imbues all attacks with magical power. Increases attack power but
+      also increases ST consumption.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335118
+    m_Localized: Stagger Immunity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335119
+    m_Localized: Overcomes fear and becomes immune to 'Stagger'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335120
+    m_Localized: Paralysis Immunity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335121
+    m_Localized: The body becomes flexible and immune to 'Paralysis'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335122
+    m_Localized: Magic Recovery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335123
+    m_Localized: Abundant magical power envelops the user. At the end of the turn,
+      1 'Magic Count' accumulates.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335124
+    m_Localized: Tentacles formed of magic deal damage to the opponent at the end
+      of the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335125
+    m_Localized: Thanks to a body of steel, GP is gained at the end of the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335126
+    m_Localized: Efficiency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335127
+    m_Localized: Improves the efficiency of various movements, reducing BP consumption
+      by 1. If the original BP consumption is 1, nothing changes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335128
+    m_Localized: Overreaction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335129
+    m_Localized: Becomes overly responsive to changes. When a status ailment is inflicted,
+      it lasts for 1 extra turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335130
+    m_Localized: The translucent white wave accelerates magical power, increasing
+      the magic damage received.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335131
+    m_Localized: Shen's Knife Setup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335132
+    m_Localized: The technique of the thief Shen. After acting, 1 'Knife Stock' is
+      accumulated.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335133
+    m_Localized: Preemptive Strike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335134
+    m_Localized: Can act before anyone else. Grants 3 additional BP on the first
+      turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335135
+    m_Localized: In a state of deep concentration. Significantly increases the power
+      of the next attack. The effect is removed after taking any action.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335136
+    m_Localized: Makes a desperate struggle with the last of one's strength. If BP
+      is 0 after acting, recover 1 BP once.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335137
+    m_Localized: Lesser Demon Support
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335138
+    m_Localized: An unnamed small demon offers support. Attacks at the end of the
+      turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335139
+    m_Localized: Will-o'-the-Wisp Fairy Support
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335140
+    m_Localized: A fairy carrying will-o'-the-wisps offers support. Recovers a small
+      amount of HP at the end of the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335141
+    m_Localized: Sentinel Spirit Support
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335142
+    m_Localized: A spirit who served as a sentinel offers support. Reduces damage
+      received slightly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335143
+    m_Localized: Cursed Embrace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335144
+    m_Localized: A cursed bracelet slightly increases the damage taken.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335145
+    m_Localized: Prayer for a Bountiful Harvest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335146
+    m_Localized: A prayer for a bountiful harvest increases the experience gained
+      when defeating enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335147
+    m_Localized: Slash Enhancement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335148
+    m_Localized: Allows for sharper attacks, increasing the power of slash attribute
+      attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335149
+    m_Localized: Strike Enhancement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335150
+    m_Localized: Allows for heavier attacks, increasing the power of strike attribute
+      attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335151
+    m_Localized: Pierce Enhancement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335152
+    m_Localized: Allows for stronger thrusting attacks, increasing the power of pierce
+      attribute attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335153
+    m_Localized: Magic Enhancement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335154
+    m_Localized: Allows for stronger magical attacks, increasing the power of magic
+      attribute attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335155
+    m_Localized: Lightning Enhancement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335156
+    m_Localized: Allows for more powerful lightning attacks, increasing the power
+      of lightning attribute attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335157
+    m_Localized: Fire Enhancement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335158
+    m_Localized: Allows for more powerful fire attacks, increasing the power of fire
+      attribute attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335159
+    m_Localized: Golden Soul's Blessing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335160
+    m_Localized: In a state blessed by the former power of Luxora. Recovers 2 BP
+      at the start of the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335161
+    m_Localized: Stamina Recovery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335162
+    m_Localized: Brimming with energy. Recovers a small amount of stamina at the
+      end of the turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335163
+    m_Localized: A magic circle unfolds from the Lesser Demon's Necklace equipped
+      by {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335164
+    m_Localized: A magic circle unfolds from the Will-o'-the-Wisp Fairy's Necklace
+      equipped by {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335165
+    m_Localized: A magic circle unfolds from the Sentinel Spirit's Emblem equipped
+      by {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335166
+    m_Localized: Black smoke billows from the Cursed Bracelet equipped by {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335167
+    m_Localized: Yellow smoke billows from the Emblem of Harvest equipped by {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335168
+    m_Localized: Magical power overflows from the Bottle of Overflowing Magic equipped
+      by {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335169
+    m_Localized: The Ring of the Cornered Rat equipped by {Actor} glowed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335170
+    m_Localized: '{Actor} used Shen''s Seven Tools.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335171
+    m_Localized: The Scarf of Time equipped by {Actor} began to shine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335172
+    m_Localized: The bottle of Nitroglycol equipped by {Actor} reacted.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335173
+    m_Localized: The Black Belt equipped by {Actor} gave courage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335174
+    m_Localized: '{Actor} applied Paralysis Ointment to their body.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335175
+    m_Localized: The Emblem of Slashing equipped by {Actor} glowed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335176
+    m_Localized: The Emblem of Striking equipped by {Actor} glowed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335177
+    m_Localized: The Emblem of Piercing equipped by {Actor} glowed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335178
+    m_Localized: The Emblem of Magic equipped by {Actor} glowed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335179
+    m_Localized: The Emblem of Flames equipped by {Actor} glowed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335180
+    m_Localized: The Emblem of Thunder equipped by {Actor} glowed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335181
+    m_Localized: The Exotic Detector equipped by {Actor} identified the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335182
+    m_Localized: '{Actor} drank an energy drink.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335183
+    m_Localized: '{Actor} was poisoned.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335184
+    m_Localized: '{Actor}''s poison was cured.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335185
+    m_Localized: '{Actor} is poisoned.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335186
+    m_Localized: '{Actor} is flinching and unable to act.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335187
+    m_Localized: '{Actor} flinched.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335188
+    m_Localized: '{Actor} recovered from flinching.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335189
+    m_Localized: '{Actor} is filled with determination.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335190
+    m_Localized: '{Actor}''s determination has faded.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335191
+    m_Localized: '{Actor} gained the power of flame pursuit.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335192
+    m_Localized: The flame pursuit strikes {Target}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335193
+    m_Localized: '{Actor}''s flame pursuit has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335194
+    m_Localized: '{Actor} has been burned.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335195
+    m_Localized: '{Actor}''s burn causes additional damage.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335196
+    m_Localized: '{Actor}''s burn was healed.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335197
+    m_Localized: '{Actor} has been severely burned.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335198
+    m_Localized: '{Actor}''s severe burn causes additional damage.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335199
+    m_Localized: '{Actor}''s severe burn was healed.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335200
+    m_Localized: '{Actor} hardened their armor, entering a state of physical damage
+      reduction.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335201
+    m_Localized: '{Actor}''s physical damage reduction has ended.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335202
+    m_Localized: '{Actor} has been paralyzed.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335203
+    m_Localized: '{Actor}''s paralysis has been cured.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335204
+    m_Localized: '{Actor} is in a state of armor break.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335205
+    m_Localized: '{Actor}''s armor break has been cured.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335206
+    m_Localized: '{Actor} inherited the power of the Holy Knight''s will.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335207
+    m_Localized: '{Actor}''s Holy Knight''s will has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335208
+    m_Localized: '{Actor} gained the ability to evade enemy attacks with agility.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335209
+    m_Localized: '{Actor}''s evasion potential has been removed.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335210
+    m_Localized: '{Actor} continued moving nimbly. Evasion potential persists.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335211
+    m_Localized: '{Actor} is very tired.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335212
+    m_Localized: '{Actor}''s fatigue has been relieved.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335213
+    m_Localized: '{Actor} is even more exhausted.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335214
+    m_Localized: '{Actor} is too tired to perform at full strength.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335215
+    m_Localized: '{Actor} has assumed the stance of a forerunner.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335216
+    m_Localized: '{Actor}''s forerunner stance has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335217
+    m_Localized: '{Actor} assumed an ironclad stance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335218
+    m_Localized: '{Actor}''s ironclad stance has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335219
+    m_Localized: Gained GP due to the ironclad stance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335220
+    m_Localized: '{Actor} deployed a large magical shield in front.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335221
+    m_Localized: '{Actor}''s magical shield has vanished.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335222
+    m_Localized: '{Actor}''s BP acceleration has started.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335223
+    m_Localized: '{Actor}''s BP acceleration has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335224
+    m_Localized: '{Actor}''s BP is accelerating.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335225
+    m_Localized: '{Actor} has been consumed by the power of hatred.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335226
+    m_Localized: '{Actor}''s power of hatred has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335227
+    m_Localized: '{Actor} assumed a stance to counterattack if struck by a physical
+      attack.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335228
+    m_Localized: '{Actor} has released their physical counterattack stance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335229
+    m_Localized: '{Actor} counterattacked the enemy''s attack.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335230
+    m_Localized: '{Actor} received Airy''s blessing.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335231
+    m_Localized: '{Actor}''s blessing of Airy has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335232
+    m_Localized: '{Actor} is enveloped by Airy''s blessing.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335233
+    m_Localized: '{Actor} is fully concentrated, assuming a stance to perfectly evade
+      all attacks.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335234
+    m_Localized: '{Actor} has released their perfect evasion stance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335235
+    m_Localized: '{Actor} is performing the first dance art of Arnoid''s chain strikes.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335236
+    m_Localized: '{Actor}''s first dance art of Arnoid''s chain strikes has been
+      dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335237
+    m_Localized: '{Actor} is performing the second dance art of Arnoid''s chain strikes.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335238
+    m_Localized: '{Actor}''s second dance art of Arnoid''s chain strikes has been
+      dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335239
+    m_Localized: '{Actor} is putting on a brave front with false bravado.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335240
+    m_Localized: '{Actor}''s false bravado has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335241
+    m_Localized: '{Actor} has lost focus and can no longer perfectly evade attacks.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335242
+    m_Localized: '{Actor}''s perfect evasion fatigue has been relieved.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335243
+    m_Localized: '{Target} is frozen by {Actor}''s time stop.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335244
+    m_Localized: '{Actor} stopped time.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335245
+    m_Localized: '{Actor}''s time stop has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335246
+    m_Localized: '{Actor} has mastered normal attacks.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335247
+    m_Localized: '{Actor}''s normal attacks have returned to normal.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335248
+    m_Localized: '{Actor} can now read the enemy''s status.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335249
+    m_Localized: '{Actor}''s analyze has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335250
+    m_Localized: '{Actor} donned a lightning armor.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335251
+    m_Localized: '{Actor}''s lightning armor has dissipated.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335252
+    m_Localized: '{Actor} can now convert anger into BP.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335253
+    m_Localized: '{Actor}''s wrathful counter has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335254
+    m_Localized: '{Actor} recovers BP with anger.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335255
+    m_Localized: '{Actor} assumed a guard stance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335256
+    m_Localized: '{Actor} has released their guard stance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335257
+    m_Localized: '{Actor} continued to maintain a guard stance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335258
+    m_Localized: A tailwind of adversity blew for {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335259
+    m_Localized: The tailwind of adversity for {Actor} has stopped.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335260
+    m_Localized: A tailwind of adversity is blowing for {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335261
+    m_Localized: '{Actor} has entered a magic boost state. Stamina consumption increases,
+      but power also increases.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335262
+    m_Localized: '{Actor}''s magic boost has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335263
+    m_Localized: '{Actor} has overcome fear and will no longer flinch.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335264
+    m_Localized: '{Actor}''s flinch immunity has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335265
+    m_Localized: '{Actor} has become flexible and is now immune to paralysis.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335266
+    m_Localized: '{Actor}''s paralysis immunity has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335267
+    m_Localized: '{Actor} gained the effect of magic recovery.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335268
+    m_Localized: '{Actor}''s magic recovery has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335269
+    m_Localized: '{Actor}''s magic recovery continues.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335270
+    m_Localized: Magical tendrils have unfolded around {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335271
+    m_Localized: '{Actor}''s magical tendrils have vanished.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335272
+    m_Localized: '{Actor}''s magical tendrils launch an attack.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335273
+    m_Localized: '{Actor} has turned into steel.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335274
+    m_Localized: '{Actor}''s steel form has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335275
+    m_Localized: GP was gained due to the steel form.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335276
+    m_Localized: '{Actor} has started optimizing all movements.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335277
+    m_Localized: '{Actor}''s optimization has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335278
+    m_Localized: '{Actor} has become overly reactive to the status effects applied
+      to them.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335279
+    m_Localized: The number of turns of the applied effects has increased due to
+      the overreaction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335280
+    m_Localized: '{Actor}''s overreaction has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335281
+    m_Localized: '{Actor} was struck by a white wave and became weak to magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335282
+    m_Localized: '{Actor}''s white wave has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335283
+    m_Localized: '{Actor} now stocks a knife after each action.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335284
+    m_Localized: '{Actor}''s Shen''s Knife Stock has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335285
+    m_Localized: '{Actor} now gains BP at the start of the turn.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335286
+    m_Localized: '{Actor}''s preemptive attack has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335287
+    m_Localized: '{Actor}''s preemptive attack has been activated.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335288
+    m_Localized: '{Actor} focused their aim.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335289
+    m_Localized: '{Actor} stopped aiming carefully.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335290
+    m_Localized: '{Actor} now struggles at the end of the turn.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335291
+    m_Localized: '{Actor} showed one last struggle.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335292
+    m_Localized: '{Actor} stopped struggling.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335293
+    m_Localized: A nameless imp has come to {Actor}'s side.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335294
+    m_Localized: The little demon that was floating around {Actor} has disappeared
+      somewhere.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335295
+    m_Localized: '{Actor}''s little demon came to assist.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335296
+    m_Localized: A Will-o'-the-Wisp Fairy has come to {Actor}'s side.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335297
+    m_Localized: The Will-o'-the-Wisp Fairy that was floating around {Actor} has
+      disappeared somewhere.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335298
+    m_Localized: '{Actor}''s Will-o''-the-Wisp Fairy came to assist.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335299
+    m_Localized: A Sentinel Spirit has inhabited {Actor}, increasing their defense.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335300
+    m_Localized: '{Actor}''s Sentinel Spirit has disappeared somewhere.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335301
+    m_Localized: '{Actor} has been cursed.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335302
+    m_Localized: '{Actor}''s curse has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335303
+    m_Localized: '{Actor} will now receive more experience points thanks to a harvest
+      blessing.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335304
+    m_Localized: '{Actor}''s harvest blessing has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335305
+    m_Localized: '{Actor}''s slashing attack has been enhanced.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335306
+    m_Localized: '{Actor}''s slashing enhancement has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335307
+    m_Localized: '{Actor}''s striking attack has been enhanced.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335308
+    m_Localized: '{Actor}''s striking enhancement has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335309
+    m_Localized: '{Actor}''s piercing attack has been enhanced.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335310
+    m_Localized: '{Actor}''s piercing enhancement has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335311
+    m_Localized: '{Actor}''s magic attack has been enhanced.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335312
+    m_Localized: '{Actor}''s magic enhancement has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335313
+    m_Localized: '{Actor}''s lightning attack has been enhanced.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335314
+    m_Localized: '{Actor}''s flame enhancement has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335315
+    m_Localized: '{Actor}''s flame attack has been enhanced.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335316
+    m_Localized: '{Actor}''s lightning enhancement has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335317
+    m_Localized: '{Actor} has received the blessing of ancient Luxora.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335318
+    m_Localized: '{Actor}''s blessing of Luxora has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335319
+    m_Localized: '{Actor}''s golden soul shines brightly.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335320
+    m_Localized: '{Actor} has regained energy and started recovering stamina.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335321
+    m_Localized: '{Actor}''s energy recovery has been dispelled.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335322
+    m_Localized: '{Actor} is full of vitality.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335323
+    m_Localized: '{Actor} has appeared.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335324
+    m_Localized: '{Actor} has been defeated.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335325
+    m_Localized: '{Actor}: ''You... that power...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335326
+    m_Localized: '{Actor}: ''I see... it wasn''t me, was it...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335327
+    m_Localized: '{Actor}: ''Guaaaahhhhh!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335328
+    m_Localized: '{Actor}: ''Could it be... <color=#FFAAAA>{SealedName}</color>...?'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335329
+    m_Localized: By defeating {Actor}, {Target}'s maximum BP has increased by <color=#88FF88>1</color>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335330
+    m_Localized: '{Actor}: ''It seems... I have lost...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335331
+    m_Localized: '{Actor}: ''Tch... I leave the rest to you...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335332
+    m_Localized: '{Actor}: ''Why!? Why doesn''t the fire work!?'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335333
+    m_Localized: '{Actor}: ''Uooooooh, Lord {SealedName}!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335334
+    m_Localized: '{Actor}: ''I leave the rest to youuu!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335335
+    m_Localized: '{Actor}: ''No way...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335336
+    m_Localized: '{Actor}: ''My... chain strikes...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335337
+    m_Localized: '{Actor}: ''Am I... defeated...?'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335338
+    m_Localized: '{Actor}: ''Tch...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335339
+    m_Localized: '{Actor}: ''Father... I''m sorry...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335340
+    m_Localized: '{Actor}: ''I... I... am...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335341
+    m_Localized: '{Actor}: ''I have returned...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335342
+    m_Localized: '{Actor}: ''I won''t let you go any further...!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335343
+    m_Localized: '{Actor}: ''Damn... even this doesn''t work...!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335344
+    m_Localized: '{Actor}: ''Don''t go! {Target}!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335345
+    m_Localized: '{Actor}: ''You... you...!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335346
+    m_Localized: '{Actor}: ''As I thought... you are <color=#FFAAAA>{SealedName}</color>,
+      aren''t you...?'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335347
+    m_Localized: '{Actor}: ''If it''s you, you can change this world...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335348
+    m_Localized: '{Actor}: ''Choose... the right path...!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335349
+    m_Localized: '{Actor} has fallen.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335350
+    m_Localized: It seems that they have moved to a safe place.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335351
+    m_Localized: My name is...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335352
+    m_Localized: Recalling that name gives me a headache...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335353
+    m_Localized: '{Actor} has not yet been equipped with a thinking brain.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335354
+    m_Localized: '{Actor} is watching cautiously.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335355
+    m_Localized: '{Actor} lunges at {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335356
+    m_Localized: '{Actor} recklessly swung their weapon.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335357
+    m_Localized: '{Actor} is slowly approaching.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335358
+    m_Localized: '{Actor} suddenly pounced.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335359
+    m_Localized: '{Actor} charges with a knife while screaming wildly.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335360
+    m_Localized: '{Actor} threw a poison orb.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335361
+    m_Localized: '{Actor} lunged with a harpoon in hand.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335362
+    m_Localized: '{Actor} entangled vines.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335363
+    m_Localized: '{Actor} suddenly started screaming.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335364
+    m_Localized: '{Actor} scratched with claws.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335365
+    m_Localized: '{Actor} moved swiftly, trying to confuse.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335366
+    m_Localized: '{Actor} swung a greatsword.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335367
+    m_Localized: '{Actor} brought down both fists cloaked in lava.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335368
+    m_Localized: '{Actor} scattered hydrochloric acid.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335369
+    m_Localized: '{Actor} quickly bit down.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335370
+    m_Localized: '{Actor}''s eye glowed white.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335371
+    m_Localized: '{Actor} charged with a spirit sword.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335372
+    m_Localized: '{Actor} swung a decayed greatsword.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335373
+    m_Localized: '{Actor} spread roots around {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335374
+    m_Localized: '{Actor} infused themselves with the power of nature.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335375
+    m_Localized: '{Actor} struck with a massive fist.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335376
+    m_Localized: '{Actor} bit down with venomous fangs.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335377
+    m_Localized: '{Actor} coiled around {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335378
+    m_Localized: '{Actor} suddenly transformed.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335379
+    m_Localized: '{Actor} moved at lightning speed.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335380
+    m_Localized: '{Actor} scratched with lightning claws.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335381
+    m_Localized: '{Actor} unleashed a white wave.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335382
+    m_Localized: '{Actor} wrapped blood tendrils around {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335383
+    m_Localized: '{Actor} attacked with an icy breath.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335384
+    m_Localized: '{Actor} unleashed a large icicle.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335385
+    m_Localized: '{Actor} summoned a lacerating wind.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335386
+    m_Localized: '{Actor} launched a gust of wind.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335387
+    m_Localized: Thunder strikes again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335388
+    m_Localized: '{Actor} is gathering strength.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335389
+    m_Localized: '{Actor} incinerated with hellfire.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335390
+    m_Localized: '{Actor}: ''To think you would corner me like this...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335391
+    m_Localized: '{Actor}: ''I will definitely drag you to hell.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335392
+    m_Localized: '{Actor}: ''Uooooh!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335393
+    m_Localized: '{Actor} transformed into their true form.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335394
+    m_Localized: '{Actor}: ''This Walorobot will turn you to ash.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335395
+    m_Localized: '{Actor} sharply thrust with the spear in hand.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335396
+    m_Localized: '{Actor}''s black flame spear surged, attacking {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335397
+    m_Localized: '{Actor}: ''I underestimated you.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335398
+    m_Localized: '{Actor}: ''I apologize. From here on, I will go all out.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335399
+    m_Localized: '{Actor}: ''Your body shall be torn apart along with the lightning.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335400
+    m_Localized: '{Actor} charged with blue lightning cloaking their body.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335401
+    m_Localized: '{Actor} attacked with a sword cloaked in lightning.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335402
+    m_Localized: '{Actor} unleashed golden lightning.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335403
+    m_Localized: '{Actor} attacked with martial arts imbued with lightning.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335404
+    m_Localized: '{Actor}: ''I have not burned out yet.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335405
+    m_Localized: '{Actor}: ''Now, I will get serious.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335406
+    m_Localized: '{Actor}: ''I will incinerate you with this hellfire.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335407
+    m_Localized: '{Actor} cloaked themselves in dark red flames.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335408
+    m_Localized: '{Actor} attacked with a heated spear.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335409
+    m_Localized: '{Actor} hurled a hellfire spear.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335410
+    m_Localized: '{Actor} performed an eerie dance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335411
+    m_Localized: '{Actor} attacked with a tail cloaked in large violet flames.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335412
+    m_Localized: '{Actor} spat out a violet flame shot.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335413
+    m_Localized: '{Actor} seems to be gathering even more magic power.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335414
+    m_Localized: '{Actor} deployed a protector on themselves.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335415
+    m_Localized: '{Actor} fired a small starshot.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335416
+    m_Localized: '{Actor} seems to be preparing something with their gathered magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335417
+    m_Localized: '{Actor}: ''Stars! Become my ally!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335418
+    m_Localized: '{Actor} summoned a large meteor.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335419
+    m_Localized: The stars gathering around {Actor} attacked.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335420
+    m_Localized: '{Actor}: ''Very well. Witness my chain strikes!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335421
+    m_Localized: '{Actor}: ''Haaaaah!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335422
+    m_Localized: '{Actor}: ''Seiyah!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335423
+    m_Localized: '{Actor}: ''Last one!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335424
+    m_Localized: '{Actor}: ''To think it would come to this...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335425
+    m_Localized: '{Actor}: ''One!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335426
+    m_Localized: '{Actor}: ''Two!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335427
+    m_Localized: '{Actor}: ''Three!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335428
+    m_Localized: '{Actor}: ''Not yet!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335429
+    m_Localized: '{Actor}: ''How about this!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335430
+    m_Localized: '{Actor} coated something on the knife.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335431
+    m_Localized: '{Actor}: ''...!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335432
+    m_Localized: '{Actor} took a counter stance once again.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335433
+    m_Localized: '{Actor} threw a barrage of knives.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335434
+    m_Localized: The knives exploded!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335435
+    m_Localized: '{Actor} threw knives coated with special explosives.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335436
+    m_Localized: '{Actor} cloaked themselves in crimson lightning.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335437
+    m_Localized: '{Actor}: ''Uooooooooh!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335438
+    m_Localized: '{Actor}: ''Absolutely... absolutely!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335439
+    m_Localized: '{Actor} swung a massive spear cloaked in flames.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335440
+    m_Localized: '{Actor} swung a massive spear cloaked in lightning.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335441
+    m_Localized: '{Actor} swung a massive spear cloaked in crimson lightning.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335442
+    m_Localized: '{Actor} focused their mind.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335443
+    m_Localized: '{Actor} received a blessing.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335444
+    m_Localized: '{Actor} took a defensive stance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335445
+    m_Localized: '{Actor} vowed victory.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335446
+    m_Localized: '{Actor} quietly raised their greatsword.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335447
+    m_Localized: '{Actor} quietly swung the greatsword down.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335448
+    m_Localized: '{Actor} unleashed a power that transcended everything.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335449
+    m_Localized: '{Actor}: ''It''s useless.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335450
+    m_Localized: Furthermore, {Actor} fired a white magic shot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335451
+    m_Localized: '{Actor} swung down a sword made of magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335452
+    m_Localized: '{Actor} detonated a mass of magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335453
+    m_Localized: '{Actor} attacked with a bow and arrow made of magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335454
+    m_Localized: '{Actor}: ''I''ll finish this.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335455
+    m_Localized: '{Actor} amplified their white magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335456
+    m_Localized: '{Actor} unleashed the amplified magic at {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335457
+    m_Localized: '{Actor} unleashed boundless black magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335458
+    m_Localized: '{Actor}: ''There is no mercy.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335459
+    m_Localized: Suddenly, a golden light descended upon {Target}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335460
+    m_Localized: '{SealedName}: ''I entrust this power to you. It should ease your
+      burden a little.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335461
+    m_Localized: '{Actor}: ''What a farce...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335462
+    m_Localized: '{Actor} fired a black magic shot.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335463
+    m_Localized: '{Actor}: ''Time, stop!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335464
+    m_Localized: '{Actor}: ''Out of my way, {SealedName}.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335465
+    m_Localized: '{Actor} destroyed the golden soul.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335466
+    m_Localized: '{Actor}: ''Now it''s just you.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335467
+    m_Localized: '{Actor}: ''This ends now.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335468
+    m_Localized: '{Actor} fired an endless black magic shot.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335469
+    m_Localized: ...A voice speaks in your mind.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335470
+    m_Localized: Conquer this dim dungeon.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335471
+    m_Localized: And seek out something like me.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335472
+    m_Localized: Well done finding my other half.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335473
+    m_Localized: However, beyond this point, it is still under development.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335474
+    m_Localized: We are working hard on it, so please look forward to it.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335475
+    m_Localized: If you'd like, leaving a supportive comment would make us very happy.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335476
+    m_Localized: Until we meet again.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335477
+    m_Localized: A peaceful light drifts around. It looks like a good place to rest.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335478
+    m_Localized: It's a teleportation device. It seems to lead to the next floor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335479
+    m_Localized: Do you wish to proceed to the next floor?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335480
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335481
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335482
+    m_Localized: ...Can you see me?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335483
+    m_Localized: Please, release the souls resting in the dungeon ahead.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335484
+    m_Localized: Some souls may oppose you, but feel free to defeat them.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335485
+    m_Localized: ...!?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335486
+    m_Localized: That alone is the way to free us.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335487
+    m_Localized: Releasing the golden soul deep within, that is my wish.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335488
+    m_Localized: Please, I beg of you.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335489
+    m_Localized: Thank you. You've freed so many souls.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335490
+    m_Localized: But... um... this is a bit hard to say.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335493
+    m_Localized: Please wait just a little longer.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335494
+    m_Localized: If possible, leaving a comment would make us very happy.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335495
+    m_Localized: Well then, please look forward to it.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335496
+    m_Localized: A golden soul begins to take form.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335497
+    m_Localized: Will you fight the golden soul?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335498
+    m_Localized: I see... so it ends...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335499
+    m_Localized: Finally... it... ends...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335500
+    m_Localized: The golden soul slowly faded away.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335501
+    m_Localized: Suddenly, dizziness struck, and everything went dark.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335502
+    m_Localized: '!?...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335503
+    m_Localized: Did you not come to free me?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335504
+    m_Localized: Then what is the purpose of this power?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335505
+    m_Localized: ...To cut off the root cause?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335506
+    m_Localized: ...Airy...?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335507
+    m_Localized: Suddenly, dizziness struck.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335508
+    m_Localized: ...Are you...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335509
+    m_Localized: Will you free me?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335510
+    m_Localized: Can you break this cycle of reincarnation?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335511
+    m_Localized: Let me test that power.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335512
+    m_Localized: A golden soul stands still, shining brightly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335513
+    m_Localized: Thank you. <color=#FFAAAA>{SealedName}</color> will also be saved.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335514
+    m_Localized: Now, you are the strongest in this world.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335515
+    m_Localized: You are <color=#AAAAFF>{SealedName}</color>, aren't you?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335516
+    m_Localized: Are you <color=#AAAAFF>{SealedName}</color>?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335517
+    m_Localized: With this...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335518
+    m_Localized: You possess the power to become <color=#AAAAFF>{SealedName}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335519
+    m_Localized: Yes, you are <color=#AAAAFF>{SealedName}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335520
+    m_Localized: No. You are <color=#AAAAFF>{SealedName}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335521
+    m_Localized: With this, I too can aim for greater heights.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335522
+    m_Localized: Heh heh heh.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335523
+    m_Localized: Now, let us await the next.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335524
+    m_Localized: The next soul that will surpass you...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335525
+    m_Localized: Why don't you defeat the golden soul?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335526
+    m_Localized: Are you defying me?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335527
+    m_Localized: Me, the one who created this world?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335528
+    m_Localized: Very well.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335529
+    m_Localized: I will teach you that it is all meaningless.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335530
+    m_Localized: A blue soul slowly takes form.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335531
+    m_Localized: Wait...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335532
+    m_Localized: It is not over yet...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335533
+    m_Localized: The blue soul fades away.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335534
+    m_Localized: I am the God of Destruction.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335535
+    m_Localized: I will cast you into unfathomable despair.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335536
+    m_Localized: Know your own powerlessness.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335537
+    m_Localized: Impossible... it can't be...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335538
+    m_Localized: Unbelievable...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335539
+    m_Localized: Unbelievable...!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335540
+    m_Localized: Congratulations on clearing the game. You can replay it right away.
+      Try finding some fun combinations of equipment!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335541
+    m_Localized: '{Actor} swung their weapon around.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335542
+    m_Localized: '{Actor} broke their stance and swung their weapon forcefully.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335543
+    m_Localized: '{Actor} quickly took a stance to strengthen their attack.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335544
+    m_Localized: '{Actor}''s sharp thrust attack.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335545
+    m_Localized: '{Actor} crushed {Target}''s leg.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335546
+    m_Localized: '{Actor} swung their weapon swiftly from side to side.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335547
+    m_Localized: '{Actor} precisely targeted {Target}''s vital spot, aiming for a
+      breakthrough.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335548
+    m_Localized: '{Actor} swung a massive weapon around.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335549
+    m_Localized: '{Actor} coated the weapon with poison and slashed.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335550
+    m_Localized: '{Actor} moved swiftly like lightning to approach the enemy and
+      attacked.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335551
+    m_Localized: '{Actor} filled their entire being with the burning spirit and resolve
+      from deep within.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335552
+    m_Localized: '{Actor} was enveloped in ever-blazing flames.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335553
+    m_Localized: '{Actor} fired a magic bullet generated by sheer will.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335554
+    m_Localized: '{Actor} created a ball of fire from magic and unleashed it.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335555
+    m_Localized: '{Actor} pressed a heated weapon against {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335556
+    m_Localized: '{Actor} pressed a searing, blistered weapon against {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335557
+    m_Localized: '{Actor} imbued their weapon with magic and attacked.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335558
+    m_Localized: '{Actor} closed the distance to the enemy in an instant and swung
+      their weapon.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335559
+    m_Localized: '{Actor} rushed swiftly towards {Target} like a gale.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335560
+    m_Localized: '{Actor} harnessed the wrath of the thunder spirit and unleashed
+      it upon the enemy.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335561
+    m_Localized: '{Actor} unleashed a secret sword technique passed down in the Ebonia
+      family, infused with the power of lightning.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335562
+    m_Localized: Another bolt of lightning struck {Target}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335563
+    m_Localized: '{Actor} released a lightning strike generated from magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335564
+    m_Localized: '{Actor} delivered a powerful strike with all their might.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335565
+    m_Localized: '{Actor} crafted armor from lightning.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335566
+    m_Localized: '{Actor} unleashed the flame spear-throwing technique passed down
+      in the Lavaheart family.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335567
+    m_Localized: '{Actor} pledged victory with the will of the holy knight Luxora.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335568
+    m_Localized: '{Actor} drew the bow with full force and fired an arrow.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335569
+    m_Localized: '{Actor} backstepped while shooting an arrow.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335570
+    m_Localized: '{Actor} fired three arrows simultaneously.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335571
+    m_Localized: '{Actor} performed a graceful attack combining dance and rapid strikes.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335572
+    m_Localized: '{Actor} attacked with a special poison said to be more painful
+      than death.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335573
+    m_Localized: '{Actor} delivered a mighty swing that split the earth.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335574
+    m_Localized: '{Actor} moved with swift agility.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335575
+    m_Localized: '{Actor} amplified their own magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335576
+    m_Localized: '{Actor} unleashed the amplified magic all at once.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335577
+    m_Localized: '{Actor} attacked while amplifying their own magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335578
+    m_Localized: '{Actor} took a solid stance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335579
+    m_Localized: '{Actor} created a shield from magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335580
+    m_Localized: '{Actor} cast the forbidden technique: Everge.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335581
+    m_Localized: '{Actor} transformed the power of resentment and absorbed it.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335582
+    m_Localized: '{Actor} slashed with a sinister blade.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335583
+    m_Localized: '{Actor} wrapped their body with thorns that retaliate.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335584
+    m_Localized: '{Actor} cast a healing spell.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335585
+    m_Localized: '{Actor} vowed to the healing god Airy.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335586
+    m_Localized: '{Actor} took a full concentration stance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335587
+    m_Localized: But it failed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335588
+    m_Localized: '{Actor} swung their shield with all their might.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335589
+    m_Localized: '{Actor} attacked while holding up their shield.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335590
+    m_Localized: '{Actor} unleashed a combo attack passed down in the Arnoid family.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335591
+    m_Localized: But it didn't go well. It seems the steps were wrong.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335592
+    m_Localized: '{Actor} unleashed a secret combo attack passed down in the Arnoid
+      family.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335593
+    m_Localized: '{Actor} brimmed with the spirit of false bravado.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335594
+    m_Localized: The inferno consumed even {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335595
+    m_Localized: '{Actor} hurled a great spear engulfed in inferno flames.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335596
+    m_Localized: '{Actor} cast the forbidden technique: Salde Everge.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335597
+    m_Localized: '{Actor} spread abundant magic at their feet.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335598
+    m_Localized: '{Actor} fired a thick arrow.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335599
+    m_Localized: '{Actor} fired an extra-thick arrow.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335600
+    m_Localized: '{Actor} delivered a perfected regular attack.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690469335601
+    m_Localized: '{Actor} sliced into the core of the amorphous being.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529344
+    m_Localized: '{Actor} delivered a strike that terrified beasts.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529345
+    m_Localized: '{Actor} took a stance to observe the opponent''s condition.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529346
+    m_Localized: '{Actor} cast a spell and summoned a massive meteor.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529347
+    m_Localized: Then they consumed magic counts and converted them into BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529348
+    m_Localized: '{Actor}''s BP fully recovered.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529349
+    m_Localized: '{Actor} cast the forbidden technique: Dirba Everge.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529350
+    m_Localized: '{Actor} took a stance for a counterattack fueled by rage.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529351
+    m_Localized: The wind began to blow around {Actor}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529352
+    m_Localized: '{Actor} braced themselves and held up their shield firmly.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529353
+    m_Localized: '{Actor} took a forbidden drug.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529354
+    m_Localized: '{Actor} unleashed a strike with all their might.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529355
+    m_Localized: '{Actor} took a counter stance while guarding.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529356
+    m_Localized: '{Actor} generated tendrils composed of magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529357
+    m_Localized: '{Actor} took a stance to withstand any attack.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529358
+    m_Localized: '{Actor} converted all their power into magic.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529359
+    m_Localized: '{Actor} took a traditional stance passed down from the East.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529360
+    m_Localized: '{Actor} delivered a fierce diagonal slash.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529361
+    m_Localized: '{Actor} swung their weapon with enough force to shatter rocks.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529362
+    m_Localized: '{Actor} unleashed a fire that incinerated everything.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529363
+    m_Localized: '{Actor} performed an attack that terrified beasts.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529364
+    m_Localized: '{Actor} created two small star fragments and attacked.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529365
+    m_Localized: The arrow {Actor} fired through time pierced {Target} further.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529366
+    m_Localized: '{Actor} fired an arrow that transcended time.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529367
+    m_Localized: '{Actor} unleashed a wave of white energy.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529368
+    m_Localized: The afterimage entered the next attack stance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529369
+    m_Localized: '{Actor} created an afterimage and attacked.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529370
+    m_Localized: '{Actor} looked up to the sky and summoned lightning.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529371
+    m_Localized: '{Actor} rained countless spears down on {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529372
+    m_Localized: '{Actor} attacked with a swing learned from a foreign sport.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529373
+    m_Localized: '{Actor} converted all their magic into BP.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529374
+    m_Localized: But there was no magic count, so it failed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529375
+    m_Localized: '{Actor}''s strike in adversity was free of suffering.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529376
+    m_Localized: '{Actor} hid a knife in their pocket.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529377
+    m_Localized: '{Actor} threw all the hidden knives at once.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529378
+    m_Localized: But there were no knives hidden.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529379
+    m_Localized: '{Actor} performed Shen''s signature knife throw.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529380
+    m_Localized: '{Actor} cast a spell and summoned a meteor.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529381
+    m_Localized: '{Actor} focused on the opponent''s weak points.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529382
+    m_Localized: '{Actor} unleashed an explosive fire dash at {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529383
+    m_Localized: '{Actor} unleashed the legendary Ebonia technique.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529384
+    m_Localized: The thrown weapon returned.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529385
+    m_Localized: '{Actor} threw a foreign weapon of strange shape at {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529386
+    m_Localized: '{Actor} threw a round, foreign weapon at {Target}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529387
+    m_Localized: '{Actor} threw a foreign weapon that barely qualifies as a weapon.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529388
+    m_Localized: '{Actor} unleashed thunder that could pierce a whale.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529389
+    m_Localized: '{Actor} unleashed thunder that could pierce an elephant.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529390
+    m_Localized: '{Actor} struck the opponent with a large shield.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529391
+    m_Localized: '{Actor} raised the great shield of the holy knight Luxora.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529392
+    m_Localized: '{Actor} dealt a fatal blow.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529393
+    m_Localized: '{Actor} splashed hydrochloric acid on the opponent.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529394
+    m_Localized: '{Actor} unleashed a wave of silver-white energy.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529395
+    m_Localized: '{Actor} struck the opponent with a cursed doll.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529396
+    m_Localized: '{Actor} summoned shooting stars with the power of the demon tribe.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529397
+    m_Localized: An attack where {Actor}'s weapon became sharper.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529398
+    m_Localized: '{Actor} swung their weapon as if to shatter any armor.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529399
+    m_Localized: '{Actor} delivered a straight punch with soul.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529400
+    m_Localized: '{Actor} kicked up like a crescent moon.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529401
+    m_Localized: But it only sliced through the air.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529402
+    m_Localized: Cut rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529403
+    m_Localized: Piercing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529404
+    m_Localized: Blunt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529405
+    m_Localized: Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529406
+    m_Localized: Attack power
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529407
+    m_Localized: Attack attribute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529408
+    m_Localized: "\u3053\u304A\u308D\u304E\u69D8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529409
+    m_Localized: It unconsciously bound Luxora and the others.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529410
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529411
+    m_Localized: Reincarnation<size=75%> of</size><size=120%> Luxora</size>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529412
+    m_Localized: "\u30C7\u30D6\u30A7\u30ED\u30C3\u30D1\u30FC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529413
+    m_Localized: However, only {PlayerName}, who came from the outside world, possessed
+      the power to break those chains.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529414
+    m_Localized: "\u52B9\u679C\u97F3\u30E9\u30DC\u69D8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529415
+    m_Localized: "\u7530\u4E2D\u82B3\u5178\u69D8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529416
+    m_Localized: Airy continued to seek out strong souls.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529417
+    m_Localized: What remained was empty silence.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529418
+    m_Localized: Sound effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529419
+    m_Localized: '"While bearing the fate of being the God of Destruction,
+
+      he
+      likely never imagined that he would be defeated."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529420
+    m_Localized: Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529421
+    m_Localized: All souls were freed, and the world had fulfilled its role.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529422
+    m_Localized: Program and Game Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529423
+    m_Localized: '"And within that silence,
+
+      long-forgotten peace quietly spread."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529424
+    m_Localized: Illustration and Flavor Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529425
+    m_Localized: "\u3042\u3044\u3046\u3048\u304A\n\u304B\u304D\u304F\u3051\u3053\n\u3055\u3057\u3059"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529426
+    m_Localized: Agility
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529427
+    m_Localized: Stamina
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529428
+    m_Localized: Physical Attack Power
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529429
+    m_Localized: Endurance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529430
+    m_Localized: Magic Attack Power
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529431
+    m_Localized: Basic Stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529432
+    m_Localized: ST (Stamina)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529433
+    m_Localized: BP (Battle Points)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529434
+    m_Localized: HP (Hit Points)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529435
+    m_Localized: Experience Points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529436
+    m_Localized: Nothing to display
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529437
+    m_Localized: Please enter your name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529438
+    m_Localized: "\uFF5ETrial Version\uFF5E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529439
+    m_Localized: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529440
+    m_Localized: Master Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2154588523397120
+    m_Localized: You obtained <color=#8888FF>{0}</color>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2154588540174336
+    m_Localized: You obtained {1} <color=#8888FF>{0}</color>.
     m_Metadata:
       m_Items: []
   references:

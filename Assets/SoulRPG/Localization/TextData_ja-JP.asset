@@ -1935,7 +1935,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1690465141211
-    m_Localized: "\u708E\u306E\u6E26\u304C\u76F8\u624B\u3092\u7126\u304C\u3059\u3002\u5F37\u529B\u306A\u708E\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046"
+    m_Localized: "\u708E\u306E\u6E26\u304C\u76F8\u624B\u3092\u7126\u304C\u3059\u3002\u5F37\u529B\u306A\u708E\u5C5E\u6027\u306E\u653B\u6483\u3092\u884C\u3046\u3002"
     m_Metadata:
       m_Items: []
   - m_Id: 1690465141212
@@ -4721,18 +4721,6 @@ MonoBehaviour:
       id:{floorId}"
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529444
-    m_Localized: "<color=#8888FF>{itemData.MasterDataItem.Name}</color>\u3092\u624B\u306B\u5165\u308C\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529445
-    m_Localized: "<color=#8888FF>{itemData.MasterDataItem.Name}</color>\u3092{itemData.Count}\u500B\u624B\u306B\u5165\u308C\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529446
-    m_Localized: "{inputController.InputActions.InGame.Interact.GetTag()}\u30A2\u30A4\u30C6\u30E0\u3092\u62FE\u3046"
-    m_Metadata:
-      m_Items: []
   - m_Id: 1690473529447
     m_Localized: "{inputController.InputActions.InGame.Interact.GetTag()}\u958B\u3051\u308B"
     m_Metadata:
@@ -5400,6 +5388,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 349285423185920
     m_Localized: ":\u958B\u59CB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2154588523397120
+    m_Localized: "<color=#8888FF>{0}</color>\u3092\u624B\u306B\u5165\u308C\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2154588540174336
+    m_Localized: "<color=#8888FF>{0}</color>\u3092{1}\u500B\u624B\u306B\u5165\u308C\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2154588540174337
+    m_Localized: "{0}\u30A2\u30A4\u30C6\u30E0\u3092\u62FE\u3046"
     m_Metadata:
       m_Items: []
   references:
