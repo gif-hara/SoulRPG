@@ -1,0 +1,827 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextData_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 28f9ff92bfa98f14a9375eb2c35576cd, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1690431586304
+    m_Localized: Luxora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946432
+    m_Localized: "Reencarnaci\xF3n de <size=75%>el</size><size=120%>{SealedName}</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946433
+    m_Localized: "Ca\xEDn"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946434
+    m_Localized: Selius
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140736
+    m_Localized: Ash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140737
+    m_Localized: Zain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140738
+    m_Localized: Hablar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140739
+    m_Localized: "Una hoja simple pero refinada. Ligera y afilada un compa\xF1ero
+      confiable en el campo de batalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140740
+    m_Localized: "Una hoja corta pero afilada. Brilla desde las sombras un compa\xF1ero
+      confiable para los asesinos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140741
+    m_Localized: Una espada masiva que presume de un peso y poder abrumadores. Contiene
+      la fuerza pura para cortar todo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140742
+    m_Localized: Una hoja afilada y delgada que atraviesa incluso la armadura. Una
+      espada para los maestros precisos y despiadados del golpe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140743
+    m_Localized: Garra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140744
+    m_Localized: Un arma simple pero mortal. Aplasta a los enemigos con sus golpes
+      pesados.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140745
+    m_Localized: Daga Venenosa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140746
+    m_Localized: "Una hoja recubierta de veneno que trae dolor y muerte a sus v\xEDctimas.
+      Un solo golpe es un golpe fatal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140747
+    m_Localized: Filo Chispa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140748
+    m_Localized: "Una hoja envuelta en rel\xE1mpagos r\xE1pida como un destello.
+      Corta a los enemigos al instante y atraviesa el campo de batalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140749
+    m_Localized: Maza de Voluntad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140750
+    m_Localized: Una maza adecuada para aquellos con una voluntad inquebrantable.
+      Rompe los huesos y destruye la voluntad de luchar de los enemigos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140751
+    m_Localized: Vara de Llamas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140752
+    m_Localized: "Una vara m\xE1gica que controla el poder del fuego. Su punta siempre
+      arde con una peque\xF1a llama que tiene el poder de incinerar a los enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140753
+    m_Localized: Un arma contundente imbuida con el poder del fuego. Quema a los
+      enemigos mientras los aplasta con una fuerza abrumadora.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140754
+    m_Localized: Vara de Trueno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140755
+    m_Localized: "Una vara imbuida con el poder del rayo. Golpea a los enemigos con
+      un rayo paraliz\xE1ndolos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140756
+    m_Localized: Espada del Mago Azul
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140757
+    m_Localized: "Una espada m\xE1gica envuelta en una luz azul p\xE1lida. Solo un
+      Mago Azul puede manejar su poder desconocido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140758
+    m_Localized: Una espada masiva llena de peso. Posee el poder destructivo de cortar
+      todo dominando el campo de batalla con un solo golpe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140759
+    m_Localized: Daga Chispa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140760
+    m_Localized: "Una daga que emite chispas desde su hoja roja brillante. Quema
+      a los enemigos con un destello y los abruma con ataques r\xE1pidos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140761
+    m_Localized: "Varita de Maldici\xF3n del Trueno"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140762
+    m_Localized: "Una vara maldita que se agita con luz amarilla y negra. Desata
+      una maldici\xF3n de trueno que lleva a los enemigos a la ruina."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140763
+    m_Localized: Garrote Destructor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140764
+    m_Localized: Un garrote masivo con un poder destructivo abrumador. Aplasta a
+      todos los enemigos no dejando nada a su paso.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140765
+    m_Localized: "Arco R\xE1pido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140766
+    m_Localized: "Un arco ligero que permite movimientos r\xE1pidos. Dispara flechas
+      instant\xE1neamente el arma perfecta para un francotirador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140767
+    m_Localized: Lanza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140768
+    m_Localized: Un arma de caballero combinada con un escudo. Especializada en cargas
+      atraviesa las defensas enemigas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140769
+    m_Localized: Espada de Trueno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140770
+    m_Localized: "Una espada fina imbuida con el poder del trueno. Tan r\xE1pida
+      como un rayo corta a los enemigos mientras los electrocuta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140771
+    m_Localized: "Lanza Grande del Coraz\xF3n de Lava"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140772
+    m_Localized: Una lanza enorme envuelta en llamas heredada de la familia Lavaheart.
+      Su calor como la lava incinera a los enemigos con una fuerza destructiva.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140773
+    m_Localized: Escudo de Hierro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140774
+    m_Localized: Un escudo simple hecho de hierro macizo. Ofrece una defensa confiable
+      y resiste cualquier ataque.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140775
+    m_Localized: Espada del Veneno Mortal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140776
+    m_Localized: Una espada mortal impregnada de veneno verde. Con un solo golpe
+      inyecta veneno letal en sus enemigos un arma aterradora.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140777
+    m_Localized: Espada del Juicio de Leo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140778
+    m_Localized: "La espada del juicio usada por el h\xE9roe Leo. Corta el mal con
+      la luz de la justicia y dicta sentencia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140779
+    m_Localized: Daga del Corredor de las Sombras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140780
+    m_Localized: "Una daga para aquellos que se mueven r\xE1pidamente en las sombras.
+      Su hoja negra se desliza como una sombra eliminando enemigos en silencio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140781
+    m_Localized: Asesino de Slimes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140782
+    m_Localized: "Una espada recta especial forjada para cazar slimes. Su hoja atraviesa
+      incluso a los enemigos m\xE1s tenaces de un solo tajo sin dejar rastro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140783
+    m_Localized: "Vara de Amplificaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140784
+    m_Localized: "Una vara que amplifica el poder m\xE1gico llev\xE1ndolo a su m\xE1ximo
+      potencial. La magia del portador se vuelve abrumadoramente poderosa aplastando
+      a sus enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140785
+    m_Localized: "Un escudo creado por una antigua civilizaci\xF3n perdida. Su superficie
+      est\xE1 cubierta de patrones misteriosos que emiten magia protegiendo al portador
+      de todos los ataques. Es como si una pared invisible lo rodeara permaneciendo
+      impasible incluso ante los asaltos m\xE1s feroces."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140786
+    m_Localized: "Cronoc\xE9ptor"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140787
+    m_Localized: "Un bast\xF3n legendario imbuido con el poder de manipular el flujo
+      del tiempo. Quien empu\xF1e este bast\xF3n puede acelerar el tiempo al instante,
+      detener los movimientos del enemigo y duplicar sus propias acciones. La magia
+      liberada trasciende las fronteras del tiempo, conectando el pasado y el futuro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140788
+    m_Localized: Hoja Maldita Misericordia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140789
+    m_Localized: "Una espada maldita que una vez fue empu\xF1ada por un espadach\xEDn
+      maldito que devor\xF3 innumerables almas. La hoja est\xE1 impregnada de maldad,
+      otorgando un poder abrumador mientras corroe la mente de quien la empu\xF1a.
+      El odio de los cortados se acumula en la espada, amplificando su poder destructivo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140790
+    m_Localized: "Un escudo robusto que se dice que el caballero Regalis defendi\xF3
+      con su vida. Este escudo protege a su portador como un muro sagrado, reflejando
+      todos los ataques enemigos. Junto con el juramento de Regalis, contiene el
+      poder de protecci\xF3n que nunca ser\xE1 roto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140791
+    m_Localized: Espada de Espinas Invertidas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140792
+    m_Localized: "Esta espada est\xE1 grabada con espinas que crecen en sentido inverso
+      desde la base hasta la punta de la hoja. Con cada estocada, desgarra la carne
+      del enemigo, y al retirarla, inflige heridas a\xFAn m\xE1s profundas. Una espada
+      cruel que trae mayor dolor y desesperaci\xF3n al perforar sin temor a represalias."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140793
+    m_Localized: "Bast\xF3n de Airy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140794
+    m_Localized: "El Bast\xF3n de Airy es un bast\xF3n sagrado imbuido con el poder
+      de la curaci\xF3n. Se mantiene cerca de su portador, insuflando vida a los
+      heridos. Especializado en magia curativa, alivia el dolor y calma el coraz\xF3n
+      con solo un toque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140795
+    m_Localized: "Bast\xF3n de Regeneraci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140796
+    m_Localized: "Un bast\xF3n sagrado que restaura la vida perdida. Su luz brilla
+      constantemente, trayendo sanaci\xF3n a las manos de su portador. Su poder para
+      curar heridas y regenerar el coraz\xF3n trae esperanza al campo de batalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140797
+    m_Localized: Espada de Arnoid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140798
+    m_Localized: "La espada de un noble que combina elegancia y fuerza. Su hoja delgada
+      brilla con un resplandor afilado y hermoso, cortando a los enemigos de un solo
+      golpe. El dise\xF1o refinado simboliza el linaje noble y la dignidad de su
+      portador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140799
+    m_Localized: Bate Enfurecido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140800
+    m_Localized: "El Bate Enfurecido es un garrote de madera toscamente tallado.
+      Aunque simple en apariencia, una vez blandido, desata un poder asombroso. Cuando
+      se maneja con ira, su fuerza se duplica, convirti\xE9ndolo en un arma formidable
+      para aplastar a los enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140801
+    m_Localized: "Espada de Trueno de \xC9bano"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140802
+    m_Localized: "Una espada recta dorada que se dice que est\xE1 imbuida con el
+      poder del dios del trueno. Su hoja brilla intensamente y con cada golpe retumba
+      el trueno. Otorga a su portador la velocidad y el poder del rayo, derribando
+      enemigos al instante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140803
+    m_Localized: Gran Arco de Luxora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140804
+    m_Localized: "Un arco sagrado que una vez fue usado por un palad\xEDn. Su cuerda
+      est\xE1 imbuida con el poder de la luz, y las flechas que dispara atraviesan
+      a los enemigos como el rayo. Este arco, s\xEDmbolo de la justicia, tiene el
+      poder de purificar el mal y traer paz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140805
+    m_Localized: "Bast\xF3n de Ilyssia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140806
+    m_Localized: "Un bast\xF3n sagrado que se dice que est\xE1 en manos del archimago
+      Ilyssia. Contiene magia blanca pura, con poder de purificaci\xF3n y regeneraci\xF3n.
+      El poder curativo que otorga a sus aliados es suave pero poderoso, como el
+      toque de un dios."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140807
+    m_Localized: Ballesta Pesada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140808
+    m_Localized: "Una gran ballesta que presume de una potencia abrumadora. Su construcci\xF3n
+      pesada y su cuerda fuerte imbuyen a los pernos que dispara con una fuerza destructiva.
+      Con un solo disparo, destruye las defensas del enemigo y emana una presencia
+      amenazante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140809
+    m_Localized: "Una espada recta gruesa y pesada, dise\xF1ada para realizar cortes
+      poderosos capaces de aplastar las defensas enemigas. Aunque simple, es confiable
+      y es un compa\xF1ero de confianza en el campo de batalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140810
+    m_Localized: Daga Chispeante+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140811
+    m_Localized: "Una versi\xF3n mejorada de la daga que lanza chispas desde su hoja
+      roja brillante. Quema a los enemigos de un solo tajo y los abruma con ataques
+      r\xE1pidos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140812
+    m_Localized: Garrote+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140813
+    m_Localized: "Una versi\xF3n mejorada de un arma simple pero mortal. Sus golpes
+      pesados aplastan a los enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140814
+    m_Localized: Daga Venenosa+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140815
+    m_Localized: "La hoja, mejorada con veneno mortal, trae dolor y muerte a los
+      cortados. Una sola pu\xF1alada proporciona un golpe fatal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140816
+    m_Localized: Navaja de Bolsillo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140817
+    m_Localized: "Un arma peque\xF1a, ligera y altamente port\xE1til. Su mango verde
+      simboliza la armon\xEDa con la naturaleza, mientras que la hoja blanca brillante
+      combina nitidez y silencio. Un compa\xF1ero confiable para quienes buscan sigilo
+      y golpes r\xE1pidos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140818
+    m_Localized: "Bast\xF3n Sombradeluz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140819
+    m_Localized: "Un bast\xF3n m\xEDstico que re\xFAne el poder de las estrellas
+      que brillan en el cielo nocturno. Su punta contiene magia p\xFArpura, otorgando
+      a su portador el poder de controlar las estrellas. Brillando en la noche oscura,
+      este bast\xF3n simboliza el poder de un gu\xEDa de las estrellas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140820
+    m_Localized: Espada de Fuego Abrasador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140821
+    m_Localized: Una gran espada envuelta en llamas abrasadoras. Su hoja en llamas
+      parece llevar consigo los fuegos del infierno. Respondiendo a la ira de su
+      portador, quema a los enemigos y los reduce a cenizas. Las llamas feroces tienen
+      el poder de incinerar a todos los que se acercan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140822
+    m_Localized: "Cronoc\xE9ptor+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140823
+    m_Localized: "Una versi\xF3n mejorada del bast\xF3n legendario que controla el
+      flujo del tiempo. Quien lo maneje puede acelerar el tiempo al instante, congelar
+      los movimientos del enemigo y duplicar sus propias acciones. La magia que desata
+      trasciende el tiempo, conectando el pasado y el futuro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140824
+    m_Localized: Vara de Llamas+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140825
+    m_Localized: "Una versi\xF3n mejorada del bast\xF3n m\xE1gico que controla el
+      poder del fuego. Una peque\xF1a llama arde constantemente en su punta, conteniendo
+      el poder de incinerar a los enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140826
+    m_Localized: Vara de Trueno+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140827
+    m_Localized: "Una versi\xF3n mejorada del bast\xF3n imbuido con el poder del
+      rayo. Con un golpe de rel\xE1mpago, electrifica y paraliza a los enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140828
+    m_Localized: "Bolsa de Proyectiles Ex\xF3ticos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140829
+    m_Localized: Una bolsa llena de varios proyectiles creados en tierras extranjeras.
+      Contiene una variedad de armas como bumeranes y granadas, desconcertando a
+      los enemigos con ataques impredecibles.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140830
+    m_Localized: Arco del Tiempo y el Espacio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140831
+    m_Localized: Un arma legendaria que controla el tiempo y el espacio. Se dice
+      que aquellos que tensan su cuerda pueden disparar a objetivos del pasado, el
+      futuro y a distancias lejanas con un solo tiro. Este arco, imbuido de poder
+      trascendental, solo puede ser manejado por los elegidos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140832
+    m_Localized: "Una versi\xF3n mejorada de una espada gigantesca que ostenta un
+      peso y poder abrumadores. Contiene la capacidad de cortar cualquier cosa con
+      una fuerza descomunal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140833
+    m_Localized: Defensor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140834
+    m_Localized: "Una espada masiva que tambi\xE9n act\xFAa como un escudo. Su hoja
+      ancha y resistente puede bloquear ataques enemigos mientras asesta un golpe
+      aplastante. Los portadores de esta espada pueden dominar un estilo de combate
+      que combina ofensiva y defensiva."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140835
+    m_Localized: "Bast\xF3n del Desprecio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140836
+    m_Localized: "Un bast\xF3n imbuido con magia oscura, que otorga un inmenso poder
+      a su portador mientras infunde sentimientos de desprecio. La magia negra que
+      gira en su punta tiene el poder de corromper el alma de quienes lo tocan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140837
+    m_Localized: "Espada del Rayo de \xC9bano"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140838
+    m_Localized: "Una verdadera espada recta dorada que se dice que est\xE1 imbuida
+      con el poder del dios del trueno. Su hoja brilla intensamente y con cada golpe
+      retumba el trueno. Otorga a su portador la velocidad y el poder del rayo, derribando
+      enemigos al instante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140839
+    m_Localized: "Lanza de Muerte de Coraz\xF3n de Lava"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140840
+    m_Localized: "Una verdadera lanza gigante transmitida a trav\xE9s de la familia
+      Coraz\xF3n de Lava, envuelta en llamas. Su calor parecido al de la lava incinera
+      a los enemigos, lo que la convierte en un arma de inmenso poder destructivo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140841
+    m_Localized: "Cronoc\xE9ptor++"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140842
+    m_Localized: "La versi\xF3n final mejorada del legendario bast\xF3n que controla
+      el flujo del tiempo. Quien lo empu\xF1e puede acelerar el tiempo al instante,
+      congelar los movimientos del enemigo y duplicar sus propias acciones. La magia
+      que desata trasciende el tiempo, conectando el pasado y el futuro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140843
+    m_Localized: "Bast\xF3n Divino de Exorcismo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140844
+    m_Localized: "Un bast\xF3n legendario imbuido con la magia de la luz que disipa
+      la oscuridad. Este bast\xF3n otorga protecci\xF3n divina a su portador y posee
+      el poder de purificar instant\xE1neamente la magia maligna. Se dice que fue
+      forjado por un gran sabio y empu\xF1ado por un h\xE9roe que luch\xF3 para proteger
+      el mundo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140845
+    m_Localized: Colmillo de la Sombra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140846
+    m_Localized: "Una daga que se dice fue forjada desde los abismos de la oscuridad.
+      Su hoja es tan negra como las sombras, bailando con im\xE1genes residuales
+      al mando de su portador. Alguna vez temido entre los asesinos, su nombre a\xFAn
+      resuena en la oscuridad de la noche."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140847
+    m_Localized: Hoguera de la Llama Negra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140848
+    m_Localized: "Se dice que fue forjada en las llamas del infierno. Con cada golpe,
+      llamas rojo-negras arden ferozmente, convirtiendo en cenizas todo lo que tocan.
+      Envuelta en llamas oscuras, esta arma est\xE1 destinada a reducir a cenizas
+      a los pecadores, una herramienta maldita de ejecuci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140849
+    m_Localized: Espada de la Majestad Divina
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140850
+    m_Localized: A pesar de su apariencia simple, contiene un poder abrumador. Un
+      aura blanca pura envuelve su hoja, cortando la oscuridad de los enemigos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140851
+    m_Localized: "Bast\xF3n Divino de Airy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140852
+    m_Localized: "La versi\xF3n final mejorada del bast\xF3n sagrado imbuido con
+      el poder curativo. Acompa\xF1a a su portador, insuflando vida a los heridos.
+      Especializado en magia de curaci\xF3n, con solo un toque alivia el dolor y
+      calma el coraz\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140853
+    m_Localized: Gran Espada de Luxora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140854
+    m_Localized: "Esta gran espada, que lleva el nombre de Luxora, quien lider\xF3
+      a los Caballeros Sagrados, est\xE1 imbuida de un alma noble y el poder de la
+      justicia. Un solo golpe que disipa la oscuridad muestra el orgullo y la dignidad
+      de un Caballero Sagrado, y su resplandor nunca se desvanecer\xE1."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140855
+    m_Localized: "Destrucci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140856
+    m_Localized: "Como su nombre indica, esta ballesta masiva tiene el poder de arrasar
+      a los enemigos. Los virotes que dispara atraviesan a los enemigos como una
+      tormenta, y una vez que la mira se fija en un objetivo, no hay escapatoria.
+      Es un s\xEDmbolo de destrucci\xF3n absoluta, temido en el campo de batalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140857
+    m_Localized: Cuchillos de Shen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140858
+    m_Localized: "Shen dominaba estos tres cuchillos para silenciar a los enemigos
+      en la oscuridad. Las hojas son afiladas, capaces de atravesar corazones sin
+      emitir sonido. Nadie sabe cu\xE1ntos han ca\xEDdo por estos cuchillos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140859
+    m_Localized: Defensor+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140860
+    m_Localized: "La versi\xF3n final mejorada de una espada masiva que tambi\xE9n
+      sirve como escudo. Su hoja ancha y resistente bloquea los ataques enemigos
+      mientras asesta golpes aplastantes. Quienes manejen esta espada pueden dominar
+      un estilo de combate que combina ofensiva y defensiva."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140861
+    m_Localized: Escudo Sagrado de Luxora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140862
+    m_Localized: "Un gran escudo que fue utilizado por el caballero sagrado Luxora.
+      Irradia una luz divina, lo que le otorga una defensa absoluta. Ning\xFAn ataque
+      enemigo puede atravesar la protecci\xF3n de este escudo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140863
+    m_Localized: "Cambio Cronol\xF3gico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140864
+    m_Localized: "Un bast\xF3n legendario que manipula libremente el flujo del tiempo.
+      Su portador puede viajar entre el pasado y el futuro al instante, cambiando
+      el curso de la batalla a su favor. La magia liberada desde la punta del bast\xF3n
+      se convierte en una onda temporal que sacude el espacio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140865
+    m_Localized: Perforador de Ballenas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140866
+    m_Localized: "Un gigantesco ancla azul que se dice que fue empu\xF1ada por el
+      soberano de las profundidades. Al ser balanceada, crea una onda de choque como
+      si el propio oc\xE9ano se partiera. Su poder para perforar ballenas es testimonio
+      del valor del guardi\xE1n de los mares."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140867
+    m_Localized: Perforador de Elefantes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140868
+    m_Localized: "Un enorme martillo gris que, seg\xFAn la leyenda, puede perforar
+      incluso a los elefantes de un solo golpe. Esta arma se destaca por su peso
+      abrumador y su poder destructivo, y se dice que solo aquellos con una fuerza
+      inmensa pueden manejarla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140869
+    m_Localized: Espada Divina de Arnold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140870
+    m_Localized: "Una espada divina de un pr\xEDncipe noble, que combina elegancia
+      y poder. Su esbelta hoja brilla con un resplandor afilado y hermoso, capaz
+      de cortar a los enemigos de un solo tajo. El dise\xF1o refinado simboliza el
+      linaje noble y la gracia de su portador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140871
+    m_Localized: Ancla de Hierro Negro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140872
+    m_Localized: "Un enorme ancla que se dice fue extra\xEDda de las profundidades
+      del mar. Su hierro brilla con un resplandor oscuro que absorbe toda la luz.
+      Ahora es temida no solo como un arma, sino tambi\xE9n como una reliquia maldita
+      imbuid con el poder de la oscuridad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140873
+    m_Localized: Lanza de Obsidiana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140874
+    m_Localized: "Una lanza m\xEDstica que se dice fue otorgada por los dioses del
+      inframundo, adorados por los antiguos guerreros. Hecha de obsidiana negra como
+      el azabache, la lanza brilla hermosamente, como si fuera la encarnaci\xF3n
+      misma de la oscuridad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140875
+    m_Localized: "La versi\xF3n final mejorada de una espada gigantesca que ostenta
+      un peso y poder abrumadores. Contiene la fuerza para cortar todo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140876
+    m_Localized: Gran Lanza de la Tormenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140877
+    m_Localized: "Un arma antigua que se dice fue creada por los dioses de la tormenta.
+      Su hoja se divide en mil lanzas con un solo golpe, rodeando a los enemigos
+      y desatando una tormenta de destrucci\xF3n. El portador puede invocar innumerables
+      lanzas para cortar a sus enemigos como un vendaval."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140878
+    m_Localized: "Un arma pesada hecha de oro brillante, cuyo golpe posee el poder
+      de sacudir la tierra. Este martillo, que se dice fue empu\xF1ado por un antiguo
+      rey, otorga dignidad y poder a su portador, y su brillo aterroriza a los enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140879
+    m_Localized: "La versi\xF3n final mejorada de una hoja corta pero afilada. Un
+      compa\xF1ero confiable de los asesinos, brillando en las sombras."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140880
+    m_Localized: "Pu\xF1o de Karate Watenryu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140881
+    m_Localized: "Las vendas envueltas alrededor de este pu\xF1o simbolizan la fuerza
+      adquirida a trav\xE9s de a\xF1os de entrenamiento y numerosas batallas. Esta
+      arma, dominada solo por aquellos que han perfeccionado el Karate Watenryu,
+      tiene el poder de someter a los enemigos al instante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140882
+    m_Localized: Espada Matademonios
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140883
+    m_Localized: "Una espada de antiguas leyendas, forjada para repeler demonios.
+      No lleva decoraciones innecesarias, confiando solo en su agudeza y durabilidad
+      para derrotar a los enemigos. Brilla con una luz pura y poderosa, reflejando
+      la determinaci\xF3n de su portador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140884
+    m_Localized: Hacha Cazadora de Osos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140885
+    m_Localized: "Un hacha tradicional forjada para cazar incluso a los osos m\xE1s
+      grandes. Cuenta con un mango de madera resistente y una hoja afilada, lo que
+      la convierte en una herramienta apreciada por los cazadores."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140886
+    m_Localized: "Arp\xF3n de la Compasi\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140887
+    m_Localized: "Un arma que alguna vez fue la favorita de un joven h\xE9roe que
+      luchaba por la justicia. Su punta afilada desata golpes que simbolizan el compromiso
+      del h\xE9roe con la justicia. Aunque derriba a los enemigos, sigue siendo un
+      arma de pura intenci\xF3n, no manchada por el mal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140888
+    m_Localized: "Bast\xF3n de la Doncella Oni de la Luna"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140889
+    m_Localized: "Un bast\xF3n empu\xF1ado por una doncella cuyo linaje mezcla la
+      sangre de la luna y los oni. El bast\xF3n brilla con una luz azul p\xE1lida
+      en su punta, infundiendo un miedo silencioso en los enemigos. Cuando est\xE1
+      en sus manos, su poder crece con las fases de la luna."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

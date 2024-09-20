@@ -6158,9 +6158,9 @@ MonoBehaviour:
         DungeonName: Dungeon.10201
         X: 16
         Y: 19
-        ViewName: Npc.0
-        SequenceId: 102002
-        PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
+        ViewName: NextFloor
+        SequenceId: 101005
+        PromptMessage: "\u89E6\u308C\u308B"
     - Id: Dungeon.10301
       InitialX: 12
       InitialY: 12
@@ -6786,9 +6786,9 @@ MonoBehaviour:
         DungeonName: Dungeon.10301
         X: 20
         Y: 16
-        ViewName: Npc.0
-        SequenceId: 102002
-        PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
+        ViewName: NextFloor
+        SequenceId: 101005
+        PromptMessage: "\u89E6\u308C\u308B"
     - Id: Dungeon.10401
       InitialX: 25
       InitialY: 0
@@ -7339,12 +7339,12 @@ MonoBehaviour:
         PositiveSideCondition: None
         NegativeSideCondition: None
         CreateRate: 0
-      - Id: 10401.(14,06).(15,06).0.Door
+      - Id: 10401.(14,05).(15,05).0.Door
         DungeonName: Dungeon.10401
         LeftX: 14
-        LeftY: 6
+        LeftY: 5
         RightX: 15
-        RightY: 6
+        RightY: 5
         EventType: Door
         PositiveSideCondition: None
         NegativeSideCondition: None
@@ -7451,9 +7451,9 @@ MonoBehaviour:
         DungeonName: Dungeon.10401
         X: 18
         Y: 14
-        ViewName: Npc.0
-        SequenceId: 102002
-        PromptMessage: "\u8A71\u3057\u304B\u3051\u308B"
+        ViewName: NextFloor
+        SequenceId: 101005
+        PromptMessage: "\u89E6\u308C\u308B"
     - Id: Dungeon.10501
       InitialX: 12
       InitialY: 1
@@ -11663,7 +11663,7 @@ MonoBehaviour:
       NeedBehaviourPoint: 0
       NeedStamina: 5
       CanRegisterUsedSkills: 1
-      Description: "\u3053\u306E\u4E00\u6483\u306B\u5168\u3066\u3092\u304B\u3051\u308B\u601D\u3044\u3092\u8FBC\u3081\u3066\u6B66\u5668\u3092\u632F\u308A\u56DE\u3059\u3002\u5168\u3066\u306EBP\u3092\u6D88\u8CBB\u3057\u3001\u6D88\u8CBB\u3057\u305F\u6570\u3060\u3051\u653B\u6483\u529B\u304C\u4E0A\u6607\u3059\u308B\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u75B2\u52B4\u300D\u3068\u300C\u9EBB\u75FA\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
+      Description: "\u3053\u306E\u4E00\u6483\u306B\u5168\u3066\u3092\u304B\u3051\u308B\u601D\u3044\u3092\u8FBC\u3081\u3066\u6B66\u5668\u3092\u632F\u308A\u56DE\u3059\u3002\u5168\u3066\u306EBP\u3092\u5A01\u529B\u306B\u5909\u63DB\u3057\u3066\u653B\u6483\u3092\u884C\u3046\u3002\u81EA\u5206\u81EA\u8EAB\u306B\u300C\u75B2\u52B4\u300D\u3068\u300C\u9EBB\u75FA\u300D\u3092\u4ED8\u4E0E\u3059\u308B\u3002"
       ActionSequences: {fileID: 11400000, guid: 8ebcfda92a9e1405b8a514494a1c0613, type: 2}
       AdditionalDescriptions:
       - SkillId: 101067
@@ -12687,6 +12687,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: f9317d34f60914b29ac4199dffd411f3, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10102
       Name: "\u30B4\u30D6\u30EA\u30F3"
       HitPoint: 29
@@ -12712,6 +12713,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: ca3b96fb5dfd942ed98c7c1922217be2, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10103
       Name: "\u30D8\u30C9\u30ED\u30B9\u30E9\u30A4\u30E0"
       HitPoint: 22
@@ -12737,6 +12739,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 99bbd1b817bfe4757befd21bd8db65f0, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10104
       Name: "\u546A\u3044\u306E\u4EBA\u5F62"
       HitPoint: 28
@@ -12762,6 +12765,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 9bf75c17ce2c1407ebb81d07c8e59355, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10105
       Name: "\u30D2\u30E3\u30AF\u30E1\u306E\u8349\u7389"
       HitPoint: 27
@@ -12787,6 +12791,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: f1ce242ebf50d4affa7bf6e507131a1f, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10201
       Name: "\u5730\u5E95\u306E\u9B5A\u4EBA"
       HitPoint: 129
@@ -12812,6 +12817,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: ad6302d79a44344598b271a51f1fbdda, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10202
       Name: "\u8150\u6557\u306E\u6728\u970A"
       HitPoint: 132
@@ -12837,6 +12843,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: c213ce1b1b1684f6a8d8dbba5640d8a7, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10203
       Name: "\u5893\u5730\u6B7B\u8005"
       HitPoint: 142
@@ -12862,6 +12869,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 39892eb7d58d64a16870066e263dd823, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10204
       Name: "\u7B11\u307F\u5F71"
       HitPoint: 52
@@ -12887,6 +12895,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 6368866bfa8344adcb5249ff9f6ba8e9, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10205
       Name: "\u865A\u7121\u306E\u9A0E\u58EB"
       HitPoint: 116
@@ -12912,6 +12921,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: b2927497ce51f40fc8e4fa5bc498f3f9, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10206
       Name: "\u6EB6\u5CA9\u30B4\u30FC\u30EC\u30E0"
       HitPoint: 297
@@ -12937,6 +12947,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: c7bd361a7cb935940b904544ee39fae0, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10207
       Name: "\u5869\u9178\u30A8\u30B9\u30AB\u30EB\u30B4"
       HitPoint: 321
@@ -12962,6 +12973,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: b8baf931c7936254c9377d887b87006a, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10208
       Name: "\u9ED2\u72FC"
       HitPoint: 371
@@ -12987,6 +12999,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 7f823724a8424f54cb2915765b470469, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10209
       Name: "\u5236\u88C1\u306E\u76EE\u7389"
       HitPoint: 208
@@ -13012,6 +13025,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 3eae48f5137300043845515eefcf7b01, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10210
       Name: "\u5948\u843D\u306E\u767D\u970A"
       HitPoint: 266
@@ -13037,6 +13051,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 8632ee97240a2d5418be611caa1e950c, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10301
       Name: "\u9AA8\u306E\u738B"
       HitPoint: 479
@@ -13062,6 +13077,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: dfea27145fddfc4449bd840e601662d1, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10302
       Name: "\u7956\u970A\u6A39"
       HitPoint: 513
@@ -13087,6 +13103,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 1efd32200de816449b4a3b468d461e92, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10303
       Name: "\u53E4\u4EE3\u81EA\u7136\u738B\u306E\u50CF"
       HitPoint: 396
@@ -13112,6 +13129,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: bc12c042675873f499fb50dc169925ff, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10304
       Name: "\u5287\u6BD2\u5927\u86C7"
       HitPoint: 516
@@ -13137,6 +13155,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: c1b7a48cad316c34491fbe5c481aca1f, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10305
       Name: "\u30E1\u30BF\u30E2\u30EB\u30B9\u30E9\u30A4\u30E0"
       HitPoint: 666
@@ -13162,6 +13181,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 9c19bfa944b40af448951528049fee52, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10306
       Name: "\u8840\u306E\u9B54\u6CD5\u4F7F\u3044"
       HitPoint: 807
@@ -13187,6 +13207,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 2e8bf2cfc9d8a7b4db72bf82b9a11e94, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10307
       Name: "\u6C37\u306E\u9B54\u6CD5\u4F7F\u3044"
       HitPoint: 745
@@ -13212,6 +13233,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: bec15185549f0d64e90782d110e5358a, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10308
       Name: "\u938C\u9F2C\u9D09"
       HitPoint: 654
@@ -13237,6 +13259,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: e4ffd7ad3c24d9b4786b872ef4aabe3e, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10309
       Name: "\u98A8\u795E"
       HitPoint: 712
@@ -13262,6 +13285,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 624782d9a2673e84293c8d2f019b80f2, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 10310
       Name: "\u30A8\u30EB\u30C9\u306E\u30C9\u30E9\u30B4\u30F3"
       HitPoint: 1071
@@ -13287,6 +13311,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: ff8339cc9ea0f9e43a328ad89da18f58, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: dc5e7b6936de60d4d9d0347a94ebf975, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 0
     - Id: 19901
       Name: "\u5929\u99C6\u3051\u308B\u9BAE\u8840\u3001\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
       HitPoint: 268
@@ -13312,6 +13337,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 081d14a8dd78045c9a95ca9c1f7ff551, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 4f081eff7afdef04da4b3efa8e407c0e, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 1
     - Id: 19902
       Name: "\u96F7\u8853\u306E\u821E\u8E0F\u8005\u3001\u30A8\u30DC\u30CB\u30A2"
       HitPoint: 1273
@@ -13337,6 +13363,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 292cb2e96f0184bfc90e3cb84372977b, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: d8e875add8519464a91b38cb342a7c1e, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 1
     - Id: 19903
       Name: "\u6012\u308A\u306E\u708E\u3001\u30E9\u30F4\u30A1\u30CF\u30FC\u30C8"
       HitPoint: 1161
@@ -13362,6 +13389,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 6d3f4040040154aba8749dcc0ff13571, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 079071d98c1ef43da889c4a0f0c9dd3b, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 1
     - Id: 19904
       Name: "\u7D2B\u708E\u306E\u4E5D\u5C3E"
       HitPoint: 1496
@@ -13387,6 +13415,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: f48c8b5c3fafc47ef9795d6062e3a9f4, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 6d7d8e7381597af4b93ced8bd3c508f1, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 1
     - Id: 19905
       Name: "\u661F\u932C\u5B66\u9577\u3001\u30A4\u30EA\u30B7\u30A2"
       HitPoint: 1023
@@ -13412,6 +13441,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 758d15476014d438ebaa09a50fbbc1a2, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 2298d088d70558e4f8dc92d80e929ae5, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 1
     - Id: 19906
       Name: "\u9023\u9583\u306E\u30A2\u30EB\u30CE\u30A4\u30C9"
       HitPoint: 5346
@@ -13437,6 +13467,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 9185323e6fabf4b4187661cbbaf041fb, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: bdd67bcf60084438989242ae095483e1, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 1
     - Id: 19907
       Name: "\u5F71\u306E\u5203\u3001\u30B7\u30A7\u30F3"
       HitPoint: 5464
@@ -13462,6 +13493,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 979d9a43264014cacad6481499027c79, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 4593628952f1f434ab9a5d4a42b24814, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 1
     - Id: 19908
       Name: "\u899A\u9192\u306E\u30A6\u30A9\u30ED\u30FC\u30DC\u30C3\u30C8"
       HitPoint: 5740
@@ -13487,6 +13519,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: c235d59e597fb4ae7bee5b8dff879ee5, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 2ee7fe8726be04a58841a6ed77d8cf68, type: 2}
       PlayBgmIfDefeated: 1
+      ViewId: 1
     - Id: 19909
       Name: "\u8EE2\u751F\u306E{SealedName}"
       HitPoint: 8208
@@ -13512,6 +13545,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 9ff4f8c3ead8a4b1590ebb5f10249663, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: 5cc432970e21a49339e62f55020746a4, type: 2}
       PlayBgmIfDefeated: 0
+      ViewId: 1
     - Id: 19910
       Name: "\u9EC4\u6CC9\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
       HitPoint: 8748
@@ -13537,6 +13571,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 0568950a7c5f74cca9b2701d7cbcb36a, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: fbdb00ac6f5e57e4fba0ea5429e9ee06, type: 2}
       PlayBgmIfDefeated: 0
+      ViewId: 1
     - Id: 19911
       Name: "\u7834\u58CA\u306E\u795E\u3001\u30A8\u30A2\u30EA\u30FC"
       HitPoint: 9477
@@ -13562,6 +13597,7 @@ MonoBehaviour:
       AISequences: {fileID: 11400000, guid: 558bf9721e55440919c0d80038b9c8aa, type: 2}
       BattleCharacterSequences: {fileID: 11400000, guid: baf8a5e1c1bd2a74dbc4f2dc22909074, type: 2}
       PlayBgmIfDefeated: 0
+      ViewId: 1
   ailments:
     list:
     - Id: 101001
@@ -14116,4 +14152,6 @@ MonoBehaviour:
     - Sequences: {fileID: 11400000, guid: 39a0fd6e62cadca459e7a9ccbd6490dc, type: 2}
     - Sequences: {fileID: 11400000, guid: 071e0ca20af4b3f4c8b3b4b8b4d7575e, type: 2}
     - Sequences: {fileID: 11400000, guid: 714d7a4fa80893e4084ac9e056665f69, type: 2}
+    - Sequences: {fileID: 11400000, guid: 92e2ddfd5afa65c4baee2d848950ae7f, type: 2}
     - Sequences: {fileID: 11400000, guid: 7682032c6f9487d42bd91aaa99185578, type: 2}
+    - Sequences: {fileID: 11400000, guid: 24bd5e2cda464e14c82bfd29950ebd96, type: 2}

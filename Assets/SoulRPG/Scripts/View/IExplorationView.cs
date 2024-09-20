@@ -10,7 +10,9 @@ namespace SoulRPG
     public interface IExplorationView
     {
         UniTask OnOpenDoorAsync(DungeonInstanceWallData wallData);
-        
+
         HKUIDocument GetFloorEventDocument(DungeonInstanceFloorData data);
+
+        Define.MiniMapType GetMiniMapType();
     }
 }

@@ -403,19 +403,23 @@ namespace SoulRPG
         private async UniTask OnInteractItemAsync(Character character, DungeonInstanceFloorData.Item itemData)
         {
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            gameEvents.OnRequestChangeMiniMapType.OnNext(Define.MiniMapType.Default);
+            var tempMiniMapType = view.GetMiniMapType();
+            if (tempMiniMapType == Define.MiniMapType.View)
+            {
+                gameEvents.OnRequestChangeMiniMapType.OnNext(Define.MiniMapType.Default);
+            }
             gameEvents.OnAcquiredFloorData.OnNext(itemData);
             RemoveFloorData(character.Position);
             character.Inventory.Add(itemData.MasterDataItem.Id, itemData.Count);
             if (itemData.Count == 1)
             {
-                gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{itemData.MasterDataItem.Name}</color>を手に入れた。",
-                    "Sfx.Message.0"));
+                var message = "<color=#8888FF>{0}</color>を手に入れた。".Localized().Format(itemData.MasterDataItem.Name);
+                gameEvents.OnRequestShowMessage.OnNext(new(message, "Sfx.Message.0"));
             }
             else
             {
-                gameEvents.OnRequestShowMessage.OnNext(new($"<color=#8888FF>{itemData.MasterDataItem.Name}</color>を{itemData.Count}個手に入れた。",
-                    "Sfx.Message.0"));
+                var message = "<color=#8888FF>{0}</color>を{1}個手に入れた。".Localized().Format(itemData.MasterDataItem.Name, itemData.Count);
+                gameEvents.OnRequestShowMessage.OnNext(new(message, "Sfx.Message.0"));
             }
 
             character.Events.OnAcquiredItem.OnNext((itemData.MasterDataItem.Id, itemData.Count));
@@ -425,6 +429,10 @@ namespace SoulRPG
             await gameEvents.WaitForSubmitInputAsync();
             acquireItemViewScope.Cancel();
             acquireItemViewScope.Dispose();
+            if (tempMiniMapType == Define.MiniMapType.View)
+            {
+                gameEvents.OnRequestChangeMiniMapType.OnNext(Define.MiniMapType.View);
+            }
         }
 
         private async UniTask OnInteractSequenceEventAsync(Character character,
@@ -462,8 +470,8 @@ namespace SoulRPG
         {
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token, itemData.LifeScope.Token);
             var inputController = TinyServiceLocator.Resolve<InputController>();
-            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(
-                (() => $"{inputController.InputActions.InGame.Interact.GetTag()}アイテムを拾う", scope.Token));
+            var message = "{0}アイテムを拾う".Localized().Format(inputController.InputActions.InGame.Interact.GetTag());
+            TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext((() => message, scope.Token));
             return UniTask.CompletedTask;
         }
 

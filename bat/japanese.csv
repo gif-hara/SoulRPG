@@ -635,6 +635,44 @@ SoulRPG/Database/MasterData.asset,黄金色の魂の加護
 SoulRPG/Database/MasterData.asset,かつてのルクスオラの力を授かった状態。ターン開始時にBPが2回復する。
 SoulRPG/Database/MasterData.asset,気力回復
 SoulRPG/Database/MasterData.asset,元気が漲っている。ターン終了時にスタミナが少量回復する。
+<<<<<<< HEAD
+SoulRPG/Database/EnemyAI/10209.asset,{Actor}は目玉が白く輝いた。
+SoulRPG/Database/EnemyAI/10306.1.asset,{Actor}は白い波動を放った。
+SoulRPG/Database/EnemyAI/19901.1.2.asset,{Actor}は手に持つ槍で鋭く突いてきた。
+SoulRPG/Database/EnemyAI/10210.asset,{Actor}は霊剣で立ち向かってきた。
+SoulRPG/Database/EnemyAI/19911.4.asset,{Actor}「邪魔だ{SealedName}」
+SoulRPG/Database/EnemyAI/19911.4.asset,{Actor}は黄金色の魂を消滅させた。
+SoulRPG/Database/EnemyAI/19911.4.asset,{Actor}「これで貴様一人だ」
+SoulRPG/Database/EnemyAI/19911.4.asset,{Actor}「終わらせる」
+SoulRPG/Database/EnemyAI/19911.4.asset,{Actor}は果てしなく黒い魔法弾を放った。
+SoulRPG/Database/EnemyAI/10101.1.asset,{Actor}は様子を見ている。
+SoulRPG/Database/EnemyAI/10305.2.asset,{Actor}は電光石火してきた。
+SoulRPG/Database/EnemyAI/19910.2.asset,{Actor}は魔力で出来た刀を振り下ろしてきた。
+SoulRPG/Database/EnemyAI/19910.6.asset,{Actor}は増幅した魔力を{Target}に放った。
+SoulRPG/Database/EnemyAI/19907.1.2.asset,{Actor}は大量のナイフを投げてきた。
+SoulRPG/Database/EnemyAI/10304.2.asset,{Actor}は{Target}に巻き付いてきた。
+SoulRPG/Database/EnemyAI/19911.2.asset,突然黄金色に輝く光が{Target}に舞い降りてきた。
+SoulRPG/Database/EnemyAI/19911.2.asset,{SealedName}「この力をお前に託す。少しは楽になるだろう」
+SoulRPG/Database/EnemyAI/19911.2.asset,{Actor}「茶番だ・・・」
+SoulRPG/Database/EnemyAI/19911.2.asset,{Actor}は黒い魔法弾を放ってきた。
+SoulRPG/Database/EnemyAI/19901.2.asset,{Actor}の黒炎槍が滾り、{Target}を襲う。
+SoulRPG/Database/EnemyAI/19906.1.1.asset,{Actor}「良いだろう。私の連撃、とくと御覧あれ！」
+SoulRPG/Database/EnemyAI/19906.1.1.asset,{Actor}「はあぁぁぁ！」
+SoulRPG/Database/EnemyAI/19906.1.1.asset,{Actor}「せいやっ！」
+SoulRPG/Database/EnemyAI/19906.1.1.asset,{Actor}「ラストッ！」
+SoulRPG/Database/EnemyAI/19906.1.1.asset,{Actor}「ここまでとは・・・」
+SoulRPG/Database/EnemyAI/19906.2.2.asset,{Actor}「これでどうだ！」
+SoulRPG/Database/EnemyAI/19906.1.3.asset,{Actor}「二つ！」
+SoulRPG/Database/EnemyAI/10309.asset,{Actor}は突風を仕掛けた。
+SoulRPG/Database/EnemyAI/10309.asset,さらに稲妻が襲いかかる。
+SoulRPG/Database/EnemyAI/10307.1.asset,{Actor}は氷の息吹で攻撃してきた。
+SoulRPG/Database/EnemyAI/10103.2.asset,{Actor}は突然のしかかってきた。
+SoulRPG/Database/EnemyAI/19908.2.asset,{Actor}は朱い雷を纏った大きな槍を振り回してきた。
+SoulRPG/Database/EnemyAI/19907.2.1.asset,なんとナイフが爆発した。
+SoulRPG/Database/EnemyAI/19907.2.1.asset,{Actor}は特殊な火薬を塗布したナイフを投げてきた。
+SoulRPG/Database/EnemyAI/19910.4.asset,{Actor}は魔力で出来た弓矢で攻撃してきた。
+SoulRPG/Database/EnemyAI/19906.1.4.asset,{Actor}「三つ！」
+=======
 SoulRPG/Database/AccessorySequences/106016.BeginBattle.asset,{Actor}が装備している小悪魔のネックレスから魔法陣が展開された。
 SoulRPG/Database/AccessorySequences/106017.BeginBattle.asset,{Actor}が装備している蛍火妖精のネックレスから魔法陣が展開された。
 SoulRPG/Database/AccessorySequences/106018.BeginBattle.asset,{Actor}が装備している防人精霊の証から魔法陣が展開された。
@@ -862,24 +900,106 @@ SoulRPG/Database/EnemyAI/10309.asset,{Actor}は突風を仕掛けた。
 SoulRPG/Database/EnemyAI/10309.asset,さらに稲妻が襲いかかる。
 SoulRPG/Database/EnemyAI/10310.1.asset,{Actor}は力を蓄えている。
 SoulRPG/Database/EnemyAI/10310.2.asset,{Actor}は業火で焼き尽くしてきた。
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Database/EnemyAI/19901.1.1.asset,{Actor}「この私をここまで追い込むとは・・・」
 SoulRPG/Database/EnemyAI/19901.1.1.asset,{Actor}「貴様は必ず地獄へ落とす」
 SoulRPG/Database/EnemyAI/19901.1.1.asset,{Actor}「うおおおお！」
 SoulRPG/Database/EnemyAI/19901.1.1.asset,{Actor}は真の姿へと変身した。
 SoulRPG/Database/EnemyAI/19901.1.1.asset,{Actor}「このウォローボットが貴様を灰にしてくれる」
+<<<<<<< HEAD
+SoulRPG/Database/EnemyAI/19903.2.asset,{Actor}は獄炎槍を投げつけてきた。
+SoulRPG/Database/EnemyAI/10305.3.asset,{Actor}は雷の爪で引っ掻いてきた。
+SoulRPG/Database/EnemyAI/10306.2.asset,{Actor}は血の触手を巻き付けてきた。
+SoulRPG/Database/EnemyAI/19910.3.asset,{Actor}は魔力の塊を爆発させた。
+SoulRPG/Database/EnemyAI/19910.1.asset,{Actor}「無駄です」
+SoulRPG/Database/EnemyAI/19910.1.asset,さらに{Actor}は白い魔法弾を放ってきた。
+SoulRPG/Database/EnemyAI/10305.1.asset,{Actor}は突然姿を変えた。
+SoulRPG/Database/EnemyAI/10208.asset,{Actor}は素早く噛み付いてきた。
+SoulRPG/Database/EnemyAI/10101.2.asset,{Actor}は{Target}に襲いかかる。
+SoulRPG/Database/EnemyAI/19909.3.asset,{Actor}は全てを超越した力を放った。
+SoulRPG/Database/EnemyAI/19911.1.asset,{Actor}は果てしなく黒い魔力を放った。
+SoulRPG/Database/EnemyAI/19911.1.asset,{Actor}「慈悲など無い」
+SoulRPG/Database/EnemyAI/10304.1.asset,{Actor}は劇毒を持つ牙で噛み付いてきた。
+SoulRPG/Database/EnemyAI/10308.asset,{Actor}は裂傷の風起こしをした。
+SoulRPG/Database/EnemyAI/19906.1.2.asset,{Actor}「一つ！」
+SoulRPG/Database/EnemyAI/19907.1.1.asset,{Actor}はナイフに何か塗布した。
+SoulRPG/Database/EnemyAI/19907.1.1.asset,{Actor}「・・・！」
+SoulRPG/Database/EnemyAI/19907.1.1.asset,さらに反撃の体勢を取った。
+SoulRPG/Database/EnemyAI/19910.5.asset,{Actor}「終わらせます」
+SoulRPG/Database/EnemyAI/19910.5.asset,{Actor}は白い魔力を増幅させている。
+SoulRPG/Database/EnemyAI/10103.1.asset,{Actor}はゆっくりとこちらに近づいてくる。
+SoulRPG/Database/EnemyAI/19906.2.1.asset,{Actor}「まだだ！」
+SoulRPG/Database/EnemyAI/10307.2.asset,{Actor}は大きな氷柱を放つ。
+SoulRPG/Database/EnemyAI/19903.1.2.asset,{Actor}は熱された槍で攻撃してきた。
+SoulRPG/Database/EnemyAI/19911.3.1.asset,{Actor}「時よ止まれ！」
+SoulRPG/Database/EnemyAI/10202.asset,{Actor}はツタを絡ませてきた。
+=======
 SoulRPG/Database/EnemyAI/19901.1.2.asset,{Actor}は手に持つ槍で鋭く突いてきた。
 SoulRPG/Database/EnemyAI/19901.2.asset,{Actor}の黒炎槍が滾り、{Target}を襲う。
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Database/EnemyAI/19902.1.1.asset,{Actor}「あなたを甘く見ていました」
 SoulRPG/Database/EnemyAI/19902.1.1.asset,{Actor}「失礼しました。ここからは本気で行かせていただきます」
 SoulRPG/Database/EnemyAI/19902.1.1.asset,{Actor}「その身、稲妻とともに裂かれることでしょう」
 SoulRPG/Database/EnemyAI/19902.1.1.asset,{Actor}は蒼い稲妻を纏って急突進してきた。
+<<<<<<< HEAD
+SoulRPG/Database/EnemyAI/19905.5.asset,{Actor}に集う星が襲いかかる。
+SoulRPG/Database/EnemyAI/19902.2.2.asset,{Actor}は雷を纏った武術で攻撃してきた。
+SoulRPG/Database/EnemyAI/19904.1.2.1.asset,{Actor}は大きく紫炎を纏う尻尾で攻撃してきた。
+SoulRPG/Database/EnemyAI/0.asset,{Actor}にはまだ考える脳みそが搭載されていない。
+SoulRPG/Database/EnemyAI/19904.1.1.asset,{Actor}は面妖な踊りを行った。
+SoulRPG/Database/EnemyAI/19909.2.2.asset,{Actor}は静かに大剣を振り下ろす。
+SoulRPG/Database/EnemyAI/19909.1.3.asset,{Actor}は勝利を誓った。
+SoulRPG/Database/EnemyAI/10204.asset,{Actor}は素早い動きで翻弄してきた。
+SoulRPG/Database/EnemyAI/10310.1.asset,{Actor}は力を蓄えている。
+SoulRPG/Database/EnemyAI/10105.asset,{Actor}は毒玉を投げてきた。
+SoulRPG/Database/EnemyAI/19905.1.asset,{Actor}はさらに魔力を溜め込んでいるようだ。
+SoulRPG/Database/EnemyAI/19905.1.asset,{Actor}は自分自身にプロテクターを展開した。
+SoulRPG/Database/EnemyAI/19909.1.1.asset,{Actor}は精神を統一した。
+SoulRPG/Database/EnemyAI/19909.1.1.asset,{Actor}は加護を授かった。
+SoulRPG/Database/EnemyAI/10303.2.asset,{Actor}は大きな拳で殴りかかってきた。
+SoulRPG/Database/EnemyAI/19905.3.asset,{Actor}は溜めた魔力で何かしてくるようだ。
+SoulRPG/Database/EnemyAI/19905.3.asset,{Actor}「星よ！我の味方となれ！」
+SoulRPG/Database/EnemyAI/10206.asset,{Actor}は溶岩を纏った両拳を振り下ろしてきた。
+SoulRPG/Database/EnemyAI/10203.1.asset,{Actor}は急に叫びだした。
+SoulRPG/Database/EnemyAI/19908.1.2.asset,{Actor}は炎を纏った大きな槍を振り回してきた。
+SoulRPG/Database/EnemyAI/10302.asset,{Actor}は根を{Target}に張り巡らせた。
+SoulRPG/Database/EnemyAI/19902.1.2.asset,{Actor}は剣に雷を纏わせて攻撃してきた。
+SoulRPG/Database/EnemyAI/19905.4.asset,{Actor}は大きな隕石を降らせてきた。
+SoulRPG/Database/EnemyAI/10201.asset,{Actor}は手に持つ銛で突いてきた。
+=======
 SoulRPG/Database/EnemyAI/19902.1.2.asset,{Actor}は剣に雷を纏わせて攻撃してきた。
 SoulRPG/Database/EnemyAI/19902.2.1.asset,{Actor}は黄金に輝く稲妻を放ってきた。
 SoulRPG/Database/EnemyAI/19902.2.2.asset,{Actor}は雷を纏った武術で攻撃してきた。
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Database/EnemyAI/19903.1.1.asset,{Actor}「我はまだ燃え尽きておらぬ」
 SoulRPG/Database/EnemyAI/19903.1.1.asset,{Actor}「ここからが俺の本気だ」
 SoulRPG/Database/EnemyAI/19903.1.1.asset,{Actor}「この獄炎で貴様を焼き尽くす」
 SoulRPG/Database/EnemyAI/19903.1.1.asset,{Actor}は赤黒い炎を纏った。
+<<<<<<< HEAD
+SoulRPG/Database/EnemyAI/19902.2.1.asset,{Actor}は黄金に輝く稲妻を放ってきた。
+SoulRPG/Database/EnemyAI/10102.asset,{Actor}はがむしゃらに武器を振り回してきた。
+SoulRPG/Database/EnemyAI/19904.1.2.2.asset,{Actor}は紫炎弾を吐き出してきた。
+SoulRPG/Database/EnemyAI/19905.2.asset,{Actor}は小さな星つぶてを放ってきた。
+SoulRPG/Database/EnemyAI/10310.2.asset,{Actor}は業火で焼き尽くしてきた。
+SoulRPG/Database/EnemyAI/10207.asset,{Actor}は塩酸を振り撒いてきた。
+SoulRPG/Database/EnemyAI/19909.2.1.asset,{Actor}静かに大剣を構えた。
+SoulRPG/Database/EnemyAI/19908.1.3.asset,{Actor}は雷を纏った大きな槍を振り回してきた。
+SoulRPG/Database/EnemyAI/19908.1.1.asset,{Actor}は朱い雷を身に纏った。
+SoulRPG/Database/EnemyAI/19908.1.1.asset,{Actor}「うおおおおおお！」
+SoulRPG/Database/EnemyAI/19908.1.1.asset,{Actor}「絶対に・・・絶対にだ！」
+SoulRPG/Database/EnemyAI/19908.1.1.asset,{Actor}「お前をこの先には行かせない・・・！」
+SoulRPG/Database/EnemyAI/10203.2.asset,{Actor}は爪で引っ掻いてきた。
+SoulRPG/Database/EnemyAI/10301.asset,{Actor}は朽ちた特大剣を振り回してきた。
+SoulRPG/Database/EnemyAI/10205.asset,{Actor}は大剣を振り回してきた。
+SoulRPG/Database/EnemyAI/10303.1.asset,{Actor}は自然の力をその身に宿した。
+SoulRPG/Database/EnemyAI/10104.asset,{Actor}は奇声をあげながら持っているナイフで襲いかかる。
+SoulRPG/Database/EnemyAI/19909.1.2.asset,{Actor}は護りの体勢を取った。
+SoulRPG/Database/FloorEvent/101004.asset,転送装置だ。次の階層へと続いているみたいだ。
+SoulRPG/Database/FloorEvent/101004.asset,次の階層へ進みますか？
+SoulRPG/Database/FloorEvent/101004.asset,はい
+SoulRPG/Database/FloorEvent/101004.asset,いいえ
+SoulRPG/Database/FloorEvent/101002.asset,・・・脳内に話しかけてくる。
+=======
 SoulRPG/Database/EnemyAI/19903.1.2.asset,{Actor}は熱された槍で攻撃してきた。
 SoulRPG/Database/EnemyAI/19903.2.asset,{Actor}は獄炎槍を投げつけてきた。
 SoulRPG/Database/EnemyAI/19904.1.1.asset,{Actor}は面妖な踊りを行った。
@@ -944,16 +1064,64 @@ SoulRPG/Database/EnemyAI/19911.4.asset,{Actor}は果てしなく黒い魔法弾�
 SoulRPG/Database/FloorEvent/101001.asset,・・・脳内に話しかけてくる。
 SoulRPG/Database/FloorEvent/101001.asset,「仄暗きこのダンジョンを制覇せよ」
 SoulRPG/Database/FloorEvent/101001.asset,「そして我と同じモノを探し当てるがよい」
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Database/FloorEvent/101002.asset,「よくぞ我の片割れを見つけてくれた」
 SoulRPG/Database/FloorEvent/101002.asset,「だがしかし、これ以降はまだ未実装となっている」
 SoulRPG/Database/FloorEvent/101002.asset,「鋭意開発中となっているので期待してて欲しい」
 SoulRPG/Database/FloorEvent/101002.asset,「もしよろしければ応援コメントを書いてくれると大変喜ばしい」
 SoulRPG/Database/FloorEvent/101002.asset,「ではまた会おう」
+<<<<<<< HEAD
+SoulRPG/Database/FloorEvent/102004.5.0.asset,「馬鹿な・・・そんなはずは・・・」
+SoulRPG/Database/FloorEvent/102004.5.0.asset,「あり得ない・・・」
+SoulRPG/Database/FloorEvent/102004.5.0.asset,「あり得ない・・・！」
+SoulRPG/Database/FloorEvent/102004.4.0.asset,「待て・・・」
+SoulRPG/Database/FloorEvent/102004.4.0.asset,「まだ終わりではない・・・」
+SoulRPG/Database/FloorEvent/102004.4.0.asset,蒼い魂が消えてゆく。
+SoulRPG/Database/FloorEvent/102004.4.0.asset,「我は破壊神」
+SoulRPG/Database/FloorEvent/102004.4.0.asset,「貴様を底知れぬ絶望へと突き落とす」
+SoulRPG/Database/FloorEvent/102004.4.0.asset,「己の無力さを知れ」
+SoulRPG/Database/FloorEvent/101003.asset,安らかな光が周囲を漂う。休憩出来そうだ。
+SoulRPG/Database/FloorEvent/101001.asset,「仄暗きこのダンジョンを制覇せよ」
+SoulRPG/Database/FloorEvent/101001.asset,「そして我と同じモノを探し当てるがよい」
+SoulRPG/Database/FloorEvent/102002.asset,「ありがとうございます。たくさんの魂を解放してくれてますね」
+SoulRPG/Database/FloorEvent/102002.asset,「ですが・・・その・・・言いにくいのですが」
+SoulRPG/Database/FloorEvent/102002.asset,\u300C\u3053\u308C\u306F\
+SoulRPG/Database/FloorEvent/102002.asset,と言われるもので、この先はまだ存在しないようです」
+SoulRPG/Database/FloorEvent/102002.asset,「もう少しだけ待っててください」
+SoulRPG/Database/FloorEvent/102002.asset,「可能であればコメントを書いてくれるととても喜びます」
+SoulRPG/Database/FloorEvent/102002.asset,「それでは、期待して待っててくださいね」
+SoulRPG/Database/FloorEvent/102004.0.asset,「ありがとうございます。<color=#FFAAAA>{SealedName}</color>も報われるでしょう」
+SoulRPG/Database/FloorEvent/102004.0.asset,「これで、この世界で一番強いのは、あなた」
+SoulRPG/Database/FloorEvent/102004.0.asset,「あなたは、<color=#AAAAFF>{SealedName}</color>なの」
+SoulRPG/Database/FloorEvent/102004.0.asset,あなたは<color=#AAAAFF>{SealedName}</color>ですか？
+SoulRPG/Database/FloorEvent/102004.0.asset,「これで・・・」
+SoulRPG/Database/FloorEvent/102004.0.asset,「<color=#AAAAFF>{SealedName}</color>たり得る力を持っているの」
+SoulRPG/Database/FloorEvent/102004.2.asset,「これで私も更なる高みへと目指せます」
+SoulRPG/Database/FloorEvent/102004.2.asset,「ふふふ」
+SoulRPG/Database/FloorEvent/102004.2.asset,「それでは次を待ちましょう」
+SoulRPG/Database/FloorEvent/102004.2.asset,「あなたを超える、次の魂を・・・」
+SoulRPG/Database/FloorEvent/102003.0.1.asset,黄金色の魂と戦いますか？
+SoulRPG/Database/FloorEvent/102004.1.0.asset,「そうです。あなたは、<color=#AAAAFF>{SealedName}</color>なのです」
+SoulRPG/Database/FloorEvent/102003.2.0.asset,「！？・・・」
+SoulRPG/Database/FloorEvent/102003.2.0.asset,「私を解放しに来たのでは無いのか？」
+SoulRPG/Database/FloorEvent/102003.2.0.asset,「では何のための力か？」
+SoulRPG/Database/FloorEvent/102003.2.0.asset,「・・・元凶を断つ？」
+SoulRPG/Database/FloorEvent/102003.2.0.asset,「・・・エアリー・・・？」
+SoulRPG/Database/FloorEvent/102003.2.0.asset,突然目眩がした。
+SoulRPG/Database/FloorEvent/102004.3.asset,「なぜ黄金色の魂を倒さないのですか？」
+SoulRPG/Database/FloorEvent/102004.3.asset,「私に盾突くということですか？」
+SoulRPG/Database/FloorEvent/102004.3.asset,「この世界を作り上げた私に？」
+SoulRPG/Database/FloorEvent/102004.3.asset,「いいでしょう」
+SoulRPG/Database/FloorEvent/102004.3.asset,「その全てが無意味だという事を、教えます」
+SoulRPG/Database/FloorEvent/102004.3.asset,蒼い魂がゆっくりと姿を形作る。
+SoulRPG/Database/FloorEvent/102003.0.0.asset,黄金色の魂が形を表してくる。
+=======
 SoulRPG/Database/FloorEvent/101003.asset,安らかな光が周囲を漂う。休憩出来そうだ。
 SoulRPG/Database/FloorEvent/101004.asset,転送装置だ。次の階層へと続いているみたいだ。
 SoulRPG/Database/FloorEvent/101004.asset,次の階層へ進みますか？
 SoulRPG/Database/FloorEvent/101004.asset,はい
 SoulRPG/Database/FloorEvent/101004.asset,いいえ
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Database/FloorEvent/102001.asset,「・・・もしかして私が視えるのですか？」
 SoulRPG/Database/FloorEvent/102001.asset,「お願いです。この先のダンジョンに眠る魂達を解放してあげてください」
 SoulRPG/Database/FloorEvent/102001.asset,「中にはあなたに敵対する魂もいると思いますが、倒して構いません」
@@ -961,6 +1129,9 @@ SoulRPG/Database/FloorEvent/102001.asset,「・・・！？」
 SoulRPG/Database/FloorEvent/102001.asset,「それのみが我々を解放する術なのです」
 SoulRPG/Database/FloorEvent/102001.asset,「最奥にいる黄色く輝く魂の解放、それが私の望みです」
 SoulRPG/Database/FloorEvent/102001.asset,「どうか、よろしくお願いします」
+<<<<<<< HEAD
+SoulRPG/Database/FloorEvent/102004.1.1.asset,「いいえ。あなたは、<color=#AAAAFF>{SealedName}</color>なのです」
+=======
 SoulRPG/Database/FloorEvent/102002.asset,「ありがとうございます。たくさんの魂を解放してくれてますね」
 SoulRPG/Database/FloorEvent/102002.asset,「ですが・・・その・・・言いにくいのですが」
 SoulRPG/Database/FloorEvent/102002.asset,\u300C\u3053\u308C\u306F\
@@ -980,11 +1151,368 @@ SoulRPG/Database/FloorEvent/102003.2.0.asset,「では何のための力か？�
 SoulRPG/Database/FloorEvent/102003.2.0.asset,「・・・元凶を断つ？」
 SoulRPG/Database/FloorEvent/102003.2.0.asset,「・・・エアリー・・・？」
 SoulRPG/Database/FloorEvent/102003.2.0.asset,突然目眩がした。
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Database/FloorEvent/102003.asset,「・・・お前は」
 SoulRPG/Database/FloorEvent/102003.asset,「私を解放してくれるのか？」
 SoulRPG/Database/FloorEvent/102003.asset,「この輪廻を、断ち切れるのか？」
 SoulRPG/Database/FloorEvent/102003.asset,「その力、試させてくれ」
 SoulRPG/Database/FloorEvent/102003.asset,黄金色に輝く魂が佇んでいる。
+<<<<<<< HEAD
+SoulRPG/Database/FloorEvent/102003.1.0.asset,「そうか・・・終わるのか・・・」
+SoulRPG/Database/FloorEvent/102003.1.0.asset,「やっと・・・終わ・・・る・・・」
+SoulRPG/Database/FloorEvent/102003.1.0.asset,黄金色の魂はゆっくりと消えていった。
+SoulRPG/Database/FloorEvent/102003.1.0.asset,すると突然目眩がし、眼の前が真っ暗になった。
+SoulRPG/Database/AccessorySequences/106024.BeginBattle.asset,{Actor}が装備している時のスカーフが光りだした。
+SoulRPG/Database/AccessorySequences/106021.BeginBattle.asset,{Actor}が装備している溢れる魔力の瓶詰めから魔力が溢れてきた。
+SoulRPG/Database/AccessorySequences/106025.BeginBattle.asset,{Actor}が装備しているニトログリコルの瓶が反応した。
+SoulRPG/Database/AccessorySequences/106020.BeginBattle.asset,{Actor}が装備している豊作のエンブレムから黄色い煙が立ち込める。
+SoulRPG/Database/AccessorySequences/106026.BeginBattle.asset,{Actor}が装備している黒帯が勇気をくれた。
+SoulRPG/Database/AccessorySequences/106023.BeginBattle.asset,{Actor}が装備しているシェンの七つ道具を使った。
+SoulRPG/Database/AccessorySequences/106017.BeginBattle.asset,{Actor}が装備している蛍火妖精のネックレスから魔法陣が展開された。
+SoulRPG/Database/AccessorySequences/106027.BeginBattle.asset,{Actor}が装備している麻痺軟膏を体に塗った。
+SoulRPG/Database/AccessorySequences/106022.BeginBattle.asset,{Actor}が装備している窮鼠の指輪が輝いた。
+SoulRPG/Database/AccessorySequences/106016.BeginBattle.asset,{Actor}が装備している小悪魔のネックレスから魔法陣が展開された。
+SoulRPG/Database/AccessorySequences/106032.BeginBattle.asset,{Actor}が装備している火炎のエンブレムが輝いた。
+SoulRPG/Database/AccessorySequences/106036.BeginBattle.asset,{Actor}はエナジードリンクを飲み干した。
+SoulRPG/Database/AccessorySequences/106033.BeginBattle.asset,{Actor}が装備している雷撃のエンブレムが輝いた。
+SoulRPG/Database/AccessorySequences/106029.BeginBattle.asset,{Actor}が装備している打撃のエンブレムが輝いた。
+SoulRPG/Database/AccessorySequences/106035.BeginBattle.asset,{Actor}が装備している異国の探知機が相手を識別した。
+SoulRPG/Database/AccessorySequences/106030.BeginBattle.asset,{Actor}が装備している刺突のエンブレムが輝いた。
+SoulRPG/Database/AccessorySequences/106018.BeginBattle.asset,{Actor}が装備している防人精霊の証から魔法陣が展開された。
+SoulRPG/Database/AccessorySequences/106028.BeginBattle.asset,{Actor}が装備している斬撃のエンブレムが輝いた。
+SoulRPG/Database/AccessorySequences/106031.BeginBattle.asset,{Actor}が装備している魔法のエンブレムが輝いた。
+SoulRPG/Database/AccessorySequences/106019.BeginBattle.asset,{Actor}が装備している呪いの腕輪から黒い煙が立ち込める。
+SoulRPG/Database/BattleCharacterSequences/Enemy.19906.OnDeadMessage.asset,{Actor}を倒した。
+SoulRPG/Database/BattleCharacterSequences/Enemy.19906.OnDeadMessage.asset,{Actor}「まさか・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19906.OnDeadMessage.asset,{Actor}「私の・・・連撃が・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19906.OnDeadMessage.asset,{Actor}「敗れる・・・のか・・・？」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19906.OnDeadMessage.asset,{Actor}を倒したことで{Target}の最大BPが<color=#88FF88>1</color>増えた。
+SoulRPG/Database/BattleCharacterSequences/Enemy.19907.OnDeadMessage.asset,{Actor}「くっ・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19907.OnDeadMessage.asset,{Actor}「お父様・・・申し訳ありません・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19907.OnDeadMessage.asset,{Actor}「私は・・・私・・・は・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19903.OnDeadMessage.asset,{Actor}「何故だ！？何故炎が効かない！？」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19903.OnDeadMessage.asset,{Actor}「うおおおおおお。{SealedName}様ぁ！」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19903.OnDeadMessage.asset,{Actor}「後は頼みましたぞおおお！」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19908.OnAppearance.asset,{Actor}が現れた。
+SoulRPG/Database/BattleCharacterSequences/Enemy.19908.OnAppearance.asset,{Actor}「俺は舞い戻ってきた・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19902.OnDeadMessage.asset,{Actor}「どうやら私の・・・負けのようですね・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19902.OnDeadMessage.asset,{Actor}「くっ・・・後は任せました・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19901.OnDeadMessage.2.asset,{Actor}「貴様・・・その力は・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19901.OnDeadMessage.2.asset,{Actor}「まさか・・・<color=#FFAAAA>{SealedName}</color>なのか・・・？」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19901.OnDeadMessage.2.asset,{Actor}「ぐおおおおおおおおおお」
+SoulRPG/Database/BattleCharacterSequences/Player.OnDeadMessage.asset,{Actor}は倒れてしまった。
+SoulRPG/Database/BattleCharacterSequences/Enemy.19901.OnDeadMessage.1.asset,{Actor}「そうか・・・私では無いのか・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19908.OnDeadMessage.0.asset,{Actor}「くそ・・・これでも駄目なのか・・・！」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19908.OnDeadMessage.0.asset,{Actor}「行くな！{Target}！」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19908.OnDeadMessage.0.asset,{Actor}「お前は・・・お前は・・・！」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19908.OnDeadMessage.1.asset,{Actor}「やはり・・・お前は<color=#FFAAAA>{SealedName}</color>だな・・・？」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19908.OnDeadMessage.1.asset,{Actor}「お前ならこの世界を変えられるはずだ・・・」
+SoulRPG/Database/BattleCharacterSequences/Enemy.19908.OnDeadMessage.1.asset,{Actor}「正しき・・・道を・・・選ぶんだ・・・！」
+SoulRPG/Database/SkillActions/101083.asset,{Actor}は異国のスポーツから学んだスイングで攻撃した。
+SoulRPG/Database/SkillActions/101006.asset,{Actor}は{Target}の急所を正確に見極め、一点突破を狙う。
+SoulRPG/Database/SkillActions/101043.asset,{Actor}は治療神エアリーに誓った。
+SoulRPG/Database/SkillActions/101022.asset,{Actor}は全身の力を込めて一撃を放つ。
+SoulRPG/Database/SkillActions/101067.asset,{Actor}は全ての力を振り絞った一撃を放った。
+SoulRPG/Database/SkillActions/101102.asset,{Actor}は銀白の波動を放った。
+SoulRPG/Database/SkillActions/101100.asset,{Actor}は致命の一撃を放った。
+SoulRPG/Database/SkillActions/101058.asset,{Actor}は不定形種の核となる部分を斬り刻む。
+SoulRPG/Database/SkillActions/101020.asset,{Actor}はエボニア家に伝わる秘伝の技、雷の力を宿した剣技を放った。
+SoulRPG/Database/SkillActions/101020.asset,さらに雷の一撃が{Target}を襲う。
+SoulRPG/Database/SkillActions/101065.asset,{Actor}は盾をしっかりと構えた。
+SoulRPG/Database/SkillActions/101098.asset,{Actor}は大きな盾で相手を打ち付けた。
+SoulRPG/Database/SkillActions/101004.asset,{Actor}は{Target}の足を砕く。
+SoulRPG/Database/SkillActions/101041.asset,{Actor}は反撃をする棘を身体中に巻き付けた。
+SoulRPG/Database/SkillActions/101039.asset,{Actor}は怨念の力を変換して自分自身に取り込んだ。
+SoulRPG/Database/SkillActions/101081.asset,{Actor}は天高く仰ぎ、雷を呼び出した。
+SoulRPG/Database/SkillActions/101061.Success.asset,さらに魔カウントを消費してBPに変換した。
+SoulRPG/Database/SkillActions/101045.asset,{Actor}は盾を思い切り振り回す。
+SoulRPG/Database/SkillActions/101085.asset,{Actor}の苦しみの無い逆境の一撃。
+SoulRPG/Database/SkillActions/101078.asset,{Actor}は時を超える矢を放った。
+SoulRPG/Database/SkillActions/101019.asset,{Actor}は雷の精霊の怒りをその身に宿し、敵に向けて解き放つ。
+SoulRPG/Database/SkillActions/101104.asset,{Actor}は鬼族の力で流れ星を呼び出した。
+SoulRPG/Database/SkillActions/101024.asset,{Actor}はラヴァハート家に伝わる炎の槍投げ技を放った。
+SoulRPG/Database/SkillActions/101061.asset,{Actor}は魔術を唱えて巨大な隕石を喚び出した。
+SoulRPG/Database/SkillActions/101026.asset,{Actor}は弓を力一杯引き、矢を射出する。
+SoulRPG/Database/SkillActions/101063.asset,{Actor}は怒りの反撃体勢を取った。
+SoulRPG/Database/SkillActions/101106.asset,{Actor}は如何なる防具も砕くように武器を振り下ろした。
+SoulRPG/Database/SkillActions/101087.asset,{Actor}は仕込んだナイフを一斉に投げ放つ。
+SoulRPG/Database/SkillActions/101088.Failure.asset,しかしナイフを1本も仕込んでいなかった。
+SoulRPG/Database/SkillActions/101002.asset,{Actor}は素早く構えて攻撃を強化する体勢を取った。
+SoulRPG/Database/SkillActions/101047.asset,{Actor}はアルノイド家に伝わる連撃を行った。
+SoulRPG/Database/SkillActions/101064.asset,{Actor}の周りに風が吹くようになった。
+SoulRPG/Database/SkillActions/101021.asset,{Actor}は魔力から雷の一撃を放つ。
+SoulRPG/Database/SkillActions/101099.asset,{Actor}は聖騎士ルクスオラの大盾を掲げた。
+SoulRPG/Database/SkillActions/101059.asset,{Actor}は獣を恐怖に陥れる一撃を放った。
+SoulRPG/Database/SkillActions/101101.asset,{Actor}は塩酸を相手に振り撒いた。
+SoulRPG/Database/SkillActions/101038.asset,{Actor}は禁忌の技。エヴァージを唱えた。
+SoulRPG/Database/SkillActions/101080.asset,残像は次の攻撃体勢に入る。
+SoulRPG/Database/SkillActions/101080.asset,{Actor}は残像を作り上げて攻撃した。
+SoulRPG/Database/SkillActions/101040.asset,{Actor}は妖しい刃で斬り付ける。
+SoulRPG/Database/SkillActions/101005.asset,{Actor}は武器を左右に素早く振った。
+SoulRPG/Database/SkillActions/101042.asset,{Actor}は治療魔法を唱えた。
+SoulRPG/Database/SkillActions/101007.asset,{Actor}は巨大な武器をブン回す。
+SoulRPG/Database/SkillActions/101082.asset,{Actor}は無数の槍を全て{Target}に降り注いだ。
+SoulRPG/Database/SkillActions/101103.asset,{Actor}は呪いの人形を相手に打ち付けた。
+SoulRPG/Database/SkillActions/101066.asset,{Actor}は禁忌の麻薬に口を付けた。
+SoulRPG/Database/SkillActions/101023.asset,{Actor}は稲妻から鎧を作り出す。
+SoulRPG/Database/SkillActions/101062.asset,{Actor}のBPが全回復した。
+SoulRPG/Database/SkillActions/101062.asset,{Actor}は禁忌の技。ディルバエヴァージを唱えた。
+SoulRPG/Database/SkillActions/101027.asset,{Actor}はバックステップしつつ、矢を放つ。
+SoulRPG/Database/SkillActions/101046.asset,{Actor}は盾を構えつつ攻撃を行った。
+SoulRPG/Database/SkillActions/101003.asset,{Actor}の鋭い突きによる攻撃。
+SoulRPG/Database/SkillActions/101002.AfterCommand.asset,{Actor}は構えを解き、力強く武器を振るった。
+SoulRPG/Database/SkillActions/101048.Failure.asset,しかし上手く決まらなかった。手順が違うようだ。
+SoulRPG/Database/SkillActions/101086.asset,{Actor}はナイフを懐に仕込んだ。
+SoulRPG/Database/SkillActions/101084.asset,{Actor}は全ての魔力をBPに変換した。
+SoulRPG/Database/SkillActions/101079.asset,{Actor}は白の波動を放った。
+SoulRPG/Database/SkillActions/101044.asset,{Actor}は全集中の構え。
+SoulRPG/Database/SkillActions/101001.asset,{Actor}は武器を振り回した。
+SoulRPG/Database/SkillActions/101060.asset,{Actor}は相手の状態を見極める体勢を取った。
+SoulRPG/Database/SkillActions/101025.asset,{Actor}は聖騎士ルクスオラの意志、勝利を誓った。
+SoulRPG/Database/SkillActions/101105.asset,{Actor}の武器の鋭さが増した攻撃。
+SoulRPG/Database/SkillActions/101018.asset,{Actor}は素早く{Target}に向かって疾風のごとく駆け抜ける。
+SoulRPG/Database/SkillActions/101109.asset,{Actor}は三日月が如く蹴り上げた。
+SoulRPG/Database/SkillActions/101014.asset,{Actor}は熱された武器を{Target}に押し付けた。
+SoulRPG/Database/SkillActions/101051.asset,{Actor}は虚勢の闘志を漲らせた。
+SoulRPG/Database/SkillActions/101091.asset,{Actor}は爆裂火走を{Target}に放った。
+SoulRPG/Database/SkillActions/101029.asset,{Actor}は舞いと乱撃を合わせた華麗な攻撃。
+SoulRPG/Database/SkillActions/101088.asset,{Actor}はシェンの得意なナイフ投げをした。
+SoulRPG/Database/SkillActions/101030.asset,{Actor}は死よりも苦痛とされる特殊な毒で攻撃する。
+SoulRPG/Database/SkillActions/101075.asset,{Actor}は全てを焼き尽くす火を放った。
+SoulRPG/Database/SkillActions/101032.asset,{Actor}は素早い身のこなしで動く。
+SoulRPG/Database/SkillActions/101077.asset,{Actor}は小さな星つぶてを二つ作り攻撃した。
+SoulRPG/Database/SkillActions/101084.Failure.asset,しかし魔カウントが無かったので失敗した。
+SoulRPG/Database/SkillActions/101093.asset,投げた武器が戻ってきた。
+SoulRPG/Database/SkillActions/101093.asset,{Actor}は妙な形をした異国の武器を{Target}に向かって投げた。
+SoulRPG/Database/SkillActions/101016.asset,{Actor}は武器に魔力を帯びさせ攻撃する。
+SoulRPG/Database/SkillActions/101053.asset,{Actor}は禁忌の技。サルデエヴァージを唱えた。
+SoulRPG/Database/SkillActions/101097.asset,{Actor}は象を穿つ雷鳴を放った。
+SoulRPG/Database/SkillActions/101012.asset,{Actor}は念じて生成された魔力弾を発射した。
+SoulRPG/Database/SkillActions/101057.asset,{Actor}は極まる通常攻撃を行った。
+SoulRPG/Database/SkillActions/101036.asset,{Actor}はがっしりと構えた。
+SoulRPG/Database/SkillActions/101073.asset,{Actor}は激しく袈裟斬りを行った。
+SoulRPG/Database/SkillActions/101009.asset,{Actor}は稲妻の如く素早い動きで敵に接近し、攻撃する。
+SoulRPG/Database/SkillActions/101034.asset,{Actor}は増幅した魔力を一気に放った。
+SoulRPG/Database/SkillActions/101071.asset,{Actor}は全ての力を魔力に変換した。
+SoulRPG/Database/SkillActions/101010.asset,{Actor}は心の奥底から湧き上がる闘志と決意を全身にみなぎらせた。
+SoulRPG/Database/SkillActions/101055.asset,{Actor}は太い矢を放った。
+SoulRPG/Database/SkillActions/101109.Failure.asset,しかし空を切るだけで終わってしまった。
+SoulRPG/Database/SkillActions/101068.asset,{Actor}はガードしつつカウンターの構えを取った。
+SoulRPG/Database/SkillActions/101095.asset,{Actor}は武器と言えるのか分からない異国の武器を投げた。
+SoulRPG/Database/SkillActions/101076.asset,{Actor}は獣が恐怖する攻撃を行った。
+SoulRPG/Database/SkillActions/101033.asset,{Actor}は自身の魔力を増幅させた。
+SoulRPG/Database/SkillActions/101078.AfterCommand.asset,{Actor}が放った時の矢が{Target}を更に貫く。
+SoulRPG/Database/SkillActions/101044.Failure.asset,しかし失敗してしまった。
+SoulRPG/Database/SkillActions/101052.asset,獄炎は{Actor}をも焼き尽くしてしまう。
+SoulRPG/Database/SkillActions/101052.asset,{Actor}は獄炎に包まれた大槍を投げつける。
+SoulRPG/Database/SkillActions/101017.asset,{Actor}は敵との距離を一瞬で詰めて武器を振るう。
+SoulRPG/Database/SkillActions/101092.asset,{Actor}は伝説のエボニア術を放った。
+SoulRPG/Database/SkillActions/101090.asset,{Actor}は相手の弱点を見据えた。
+SoulRPG/Database/SkillActions/101028.asset,{Actor}は3本の矢を同時に射出する。
+SoulRPG/Database/SkillActions/101050.asset,{Actor}はアルノイド家に伝わる秘連撃を行った。
+SoulRPG/Database/SkillActions/101015.asset,{Actor}は赤熱に爛れた武器を{Target}に押し付けた。
+SoulRPG/Database/SkillActions/101108.asset,{Actor}は魂を込めて正拳突きをした。
+SoulRPG/Database/SkillActions/101089.asset,{Actor}は魔術を唱えて隕石を喚び出した。
+SoulRPG/Database/SkillActions/101074.asset,{Actor}は岩をも砕く勢いで武器を振るう。
+SoulRPG/Database/SkillActions/101031.asset,{Actor}は大地が裂けるほどの大きな一振り。
+SoulRPG/Database/SkillActions/101070.asset,{Actor}は如何なる攻撃も耐える体勢を取った。
+SoulRPG/Database/SkillActions/101035.asset,{Actor}は自身の魔力を増幅させつつ攻撃を行う。
+SoulRPG/Database/SkillActions/101008.asset,{Actor}は武器に毒を塗布し斬りつけた。
+SoulRPG/Database/SkillActions/101069.asset,{Actor}は魔力で構成された触手を生成した。
+SoulRPG/Database/SkillActions/101094.asset,{Actor}は丸っこい異国の武器を{Target}に向かって投げた。
+SoulRPG/Database/SkillActions/101054.asset,{Actor}は潤沢な魔力を足元に展開した。
+SoulRPG/Database/SkillActions/101011.asset,{Actor}は絶え間なく燃え盛る炎を纏った。
+SoulRPG/Database/SkillActions/101056.asset,{Actor}は極太い矢を放った。
+SoulRPG/Database/SkillActions/101013.asset,{Actor}は魔力から炎の塊を生成して放った。
+SoulRPG/Database/SkillActions/101096.asset,{Actor}は鯨を穿つ雷鳴を放った。
+SoulRPG/Database/SkillActions/101072.asset,{Actor}は東方に伝わる伝統ある構えを取った。
+SoulRPG/Database/SkillActions/101037.asset,{Actor}は魔力で盾を作り上げる。
+SoulRPG/Database/AilmentSequences/101041.OnAdded.asset,{Actor}は行動後にナイフをストックするようになった。
+SoulRPG/Database/AilmentSequences/101050.OnRemoved.asset,{Actor}の斬撃強化が解除された。
+SoulRPG/Database/AilmentSequences/101056.OnAdded.asset,{Actor}はかつてのルクスオラの加護を得た。
+SoulRPG/Database/AilmentSequences/101017.OnRemoved.asset,{Actor}の恨みの力は解除された。
+SoulRPG/Database/AilmentSequences/101004.OnComboFromGivedDamage.asset,炎の追撃が{Target}を襲う。
+SoulRPG/Database/AilmentSequences/101052.OnAdded.asset,{Actor}の刺突が強化された。
+SoulRPG/Database/AilmentSequences/101033.OnRemoved.asset,{Actor}は怯み無効が解除された。
+SoulRPG/Database/AilmentSequences/101045.OnAdded.asset,{Actor}に名も無き小悪魔が寄り添ってきた。
+SoulRPG/Database/AilmentSequences/101029.OnTakeDamage.asset,{Actor}は怒りでBPを回復する。
+SoulRPG/Database/AilmentSequences/101049.OnRemoved.asset,{Actor}の豊作祈願は解除された。
+SoulRPG/Database/AilmentSequences/101026.OnAdded.asset,{Actor}は通常攻撃を極めた。
+SoulRPG/Database/AilmentSequences/101001.OnRemoved.asset,{Actor}の毒が治った。
+SoulRPG/Database/AilmentSequences/101031.OnAdded.asset,{Actor}に逆境の追い風が吹いた。
+SoulRPG/Database/AilmentSequences/101046.OnRemoved.asset,{Actor}に漂っていた蛍火妖精がどこかへ消えた。
+SoulRPG/Database/AilmentSequences/101008.OnAdded.asset,{Actor}は身体が痺れてしまった。
+SoulRPG/Database/AilmentSequences/101035.OnAdded.asset,{Actor}は魔力回復の効果を得た。
+SoulRPG/Database/AilmentSequences/101044.OnBehaviourEnd.Success.asset,{Actor}は最後の足掻きを見せた。
+SoulRPG/Database/AilmentSequences/101022.OnAdded.asset,{Actor}はアルノイド連撃・弐の舞芸術を行っている。
+SoulRPG/Database/AilmentSequences/101045.OnTurnEnd.asset,{Actor}の小悪魔が支援してきた。
+SoulRPG/Database/AilmentSequences/101025.OnRemoved.asset,{Actor}の時停止が解除された。
+SoulRPG/Database/AilmentSequences/101018.OnRemoved.asset,{Actor}は物理反撃の体勢を解除した。
+SoulRPG/Database/AilmentSequences/101032.OnAdded.asset,{Actor}は魔力ブーストになった。スタミナの消費が増えるが威力も増える。
+SoulRPG/Database/AilmentSequences/101022.OnRemoved.asset,{Actor}はアルノイド連撃・弐が解除された。
+SoulRPG/Database/AilmentSequences/101025.OnAdded.asset,{Actor}は時を停めた。
+SoulRPG/Database/AilmentSequences/101021.OnAdded.asset,{Actor}はアルノイド連撃・壱の舞芸術を行っている。
+SoulRPG/Database/AilmentSequences/101041.OnRemoved.asset,{Actor}のシェンのナイフ仕込みは解除された。
+SoulRPG/Database/AilmentSequences/101036.OnAdded.asset,{Actor}の周りに魔力の触手が展開された。
+SoulRPG/Database/AilmentSequences/101018.OnAdded.asset,{Actor}は物理攻撃を受けたら反撃する体勢を取った。
+SoulRPG/Database/AilmentSequences/101006.OnRemoved.asset,{Actor}の爛れ火傷が治った。
+SoulRPG/Database/AilmentSequences/101055.OnAdded.asset,{Actor}の雷撃が強化された。
+SoulRPG/Database/AilmentSequences/101030.OnReset.asset,{Actor}は引き続きガードの体勢を取った。
+SoulRPG/Database/AilmentSequences/101042.OnAdded.asset,{Actor}は初めのターンにBPが付与されるようになった。
+SoulRPG/Database/AilmentSequences/101034.OnRemoved.asset,{Actor}は麻痺無効が解除された。
+SoulRPG/Database/AilmentSequences/101009.OnRemoved.asset,{Actor}は鎧砕きが解けた。
+SoulRPG/Database/AilmentSequences/101046.OnAdded.asset,{Actor}に蛍火妖精が寄り添ってきた。
+SoulRPG/Database/AilmentSequences/101005.OnComboFromTakeDamage.asset,{Actor}の火傷がさらにダメージを与える。
+SoulRPG/Database/AilmentSequences/101010.OnRemoved.asset,{Actor}の聖騎士の意志は解かれた。
+SoulRPG/Database/AilmentSequences/101051.OnAdded.asset,{Actor}の打撃が強化された。
+SoulRPG/Database/AilmentSequences/101057.OnRemoved.asset,{Actor}の気力回復が解除された。
+SoulRPG/Database/AilmentSequences/101012.OnTurnStart.asset,{Actor}の疲れていて本来の力を発揮できない。
+SoulRPG/Database/AilmentSequences/101023.OnRemoved.asset,{Actor}は空元気が解除された。
+SoulRPG/Database/AilmentSequences/101014.TurnStart.asset,鉄壁の構えによりGPを得た。
+SoulRPG/Database/AilmentSequences/101048.OnAdded.asset,{Actor}は呪われた。
+SoulRPG/Database/AilmentSequences/101007.OnRemoved.asset,{Actor}の物理半減状態は治まった。
+SoulRPG/Database/AilmentSequences/101040.OnRemoved.asset,{Actor}は白の波動は解除された。
+SoulRPG/Database/AilmentSequences/101035.OnRemoved.asset,{Actor}の魔力回復が解除された。
+SoulRPG/Database/AilmentSequences/101008.OnRemoved.asset,{Actor}の麻痺が解けた。
+SoulRPG/Database/AilmentSequences/101005.OnAdded.asset,{Actor}は火傷を負ってしまった。
+SoulRPG/Database/AilmentSequences/101012.OnAdded.asset,{Actor}はとても疲れた。
+SoulRPG/Database/AilmentSequences/101036.OnTurnEnd.asset,{Actor}の魔力の触手が攻撃を仕掛ける。
+SoulRPG/Database/AilmentSequences/101038.OnAdded.asset,{Actor}は全ての動きに効率化を図るようになった。
+SoulRPG/Database/AilmentSequences/101056.OnRemoved.asset,{Actor}のルクスオラの加護が解除された。
+SoulRPG/Database/AilmentSequences/101016.OnAdded.asset,{Actor}のBPが加速するようになった。
+SoulRPG/Database/AilmentSequences/101011.OnRemoved.asset,{Actor}の回避可能性は解除された。
+SoulRPG/Database/AilmentSequences/101001.OnAdded.asset,{Actor}は毒に侵された。
+SoulRPG/Database/AilmentSequences/101002.CanExecutableTurn.asset,{Actor}の怯んでいて行動出来ない。
+SoulRPG/Database/AilmentSequences/101028.OnAdded.asset,{Actor}は稲妻の鎧を身に纏った。
+SoulRPG/Database/AilmentSequences/101016.OnRemoved.asset,{Actor}のBP加速が解除された。
+SoulRPG/Database/AilmentSequences/101042.OnTurnStart.Success.asset,{Actor}の先制攻撃が発動した。
+SoulRPG/Database/AilmentSequences/101051.OnRemoved.asset,{Actor}の打撃強化が解除された。
+SoulRPG/Database/AilmentSequences/101011.OnAdded.asset,{Actor}は軽い身のこなしで相手の攻撃を回避出来る可能性を得た。
+SoulRPG/Database/AilmentSequences/101006.OnAdded.asset,{Actor}は爛れ火傷を負ってしまった。
+SoulRPG/Database/AilmentSequences/101048.OnRemoved.asset,{Actor}の呪いは解除された。
+SoulRPG/Database/AilmentSequences/101002.OnAdded.asset,{Actor}は怯んだ。
+SoulRPG/Database/AilmentSequences/101032.OnRemoved.asset,{Actor}の魔力ブーストが解除された。
+SoulRPG/Database/AilmentSequences/101015.OnAdded.asset,{Actor}は前方に大きな魔力の盾を展開した。
+SoulRPG/Database/AilmentSequences/101047.OnRemoved.asset,{Actor}の防人精霊がどこかへ消えた。
+SoulRPG/Database/AilmentSequences/101016.OnTurnStart.asset,{Actor}のBPが加速する。
+SoulRPG/Database/AilmentSequences/101024.OnRemoved.asset,{Actor}の攻撃絶対回避疲れが治った。
+SoulRPG/Database/AilmentSequences/101019.OnRemoved.asset,{Actor}のエアリーの加護が解除された。
+SoulRPG/Database/AilmentSequences/101014.OnAdded.asset,{Actor}は鉄壁の構えを取った。
+SoulRPG/Database/AilmentSequences/101003.OnAdded.asset,{Actor}は気合に満ちた。
+SoulRPG/Database/AilmentSequences/101038.OnRemoved.asset,{Actor}の効率化が解除された。
+SoulRPG/Database/AilmentSequences/101005.OnRemoved.asset,{Actor}の火傷が治った。
+SoulRPG/Database/AilmentSequences/101042.OnRemoved.asset,{Actor}の先制攻撃が解除された。
+SoulRPG/Database/AilmentSequences/101007.OnAdded.asset,{Actor}は鎧を硬化させ、物理半減状態になった。
+SoulRPG/Database/AilmentSequences/101010.OnAdded.asset,{Actor}は聖騎士の意志を力を継いだ。
+SoulRPG/Database/AilmentSequences/101021.OnRemoved.asset,{Actor}はアルノイド連撃・壱が解除された。
+SoulRPG/Database/AilmentSequences/101039.OnCalculateAilmentTurnCount.Success.asset,過剰反応により付与されるターン数が伸びた。
+SoulRPG/Database/AilmentSequences/101029.OnAdded.asset,{Actor}は怒りをBPに変えられるようになった。
+SoulRPG/Database/AilmentSequences/101054.OnRemoved.asset,{Actor}の火炎強化が解除された。
+SoulRPG/Database/AilmentSequences/101013.OnRemoved.asset,{Actor}の先駆は解けた。
+SoulRPG/Database/AilmentSequences/101012.OnReset.asset,{Actor}はさらに疲れた。
+SoulRPG/Database/AilmentSequences/101037.OnRemoved.asset,{Actor}の鋼鉄化が解除された。
+SoulRPG/Database/AilmentSequences/101057.OnTurnEnd.asset,{Actor}は元気はつらつとしている。
+SoulRPG/Database/AilmentSequences/101030.OnRemoved.asset,{Actor}はガードの体勢を解いた。
+SoulRPG/Database/AilmentSequences/101049.OnAdded.asset,{Actor}は豊作祈願により経験値が多くもらえるようになった。
+SoulRPG/Database/AilmentSequences/101029.OnRemoved.asset,{Actor}は憤怒の反撃が解けた。
+SoulRPG/Database/AilmentSequences/101014.OnRemoved.asset,{Actor}の鉄壁の構えは解けた。
+SoulRPG/Database/AilmentSequences/101011.OnReset.asset,{Actor}は軽い身のこなしを継続した。回避出来る可能性は続く。
+SoulRPG/Database/AilmentSequences/101053.OnRemoved.asset,{Actor}の魔法強化が解除された。
+SoulRPG/Database/AilmentSequences/101046.OnTurnEnd.asset,{Actor}の蛍火妖精が支援してきた。
+SoulRPG/Database/AilmentSequences/101017.OnAdded.asset,{Actor}は恨みの力に侵された。
+SoulRPG/Database/AilmentSequences/101026.OnRemoved.asset,{Actor}の通常攻撃はいつも通りに戻った。
+SoulRPG/Database/AilmentSequences/101001.OnTurnEnd.asset,{Actor}は毒に侵されている。
+SoulRPG/Database/AilmentSequences/101039.OnAdded.asset,{Actor}は自分に付与される状態異常に過剰に反応するようになった。
+SoulRPG/Database/AilmentSequences/101045.OnRemoved.asset,{Actor}に漂っていた小悪魔がどこかへ消えた。
+SoulRPG/Database/AilmentSequences/101013.OnAdded.asset,{Actor}は先駆の体勢。
+SoulRPG/Database/AilmentSequences/101004.OnAdded.asset,{Actor}は炎追撃の力を得た。
+SoulRPG/Database/AilmentSequences/101037.TurnEnd.asset,鋼鉄化によりGPを得た。
+SoulRPG/Database/AilmentSequences/101002.OnRemoved.asset,{Actor}の怯みから立ち直った。
+SoulRPG/Database/AilmentSequences/101019.OnAdded.asset,{Actor}はエアリーの加護を授かった。
+SoulRPG/Database/AilmentSequences/101031.OnRemoved.asset,{Actor}の逆境の追い風が止んだ。
+SoulRPG/Database/AilmentSequences/101037.OnAdded.asset,{Actor}は鋼鉄と化した。
+SoulRPG/Database/AilmentSequences/101020.OnAdded.asset,{Actor}は全集中し、必ず攻撃を回避する構え。
+SoulRPG/Database/AilmentSequences/101052.OnRemoved.asset,{Actor}の刺突強化が解除された。
+SoulRPG/Database/AilmentSequences/101006.OnComboFromTakeDamage.asset,{Actor}の爛れ火傷がさらにダメージを与える。
+SoulRPG/Database/AilmentSequences/101028.OnRemoved.asset,{Actor}は稲妻の鎧が解けた。
+SoulRPG/Database/AilmentSequences/101024.OnAdded.asset,{Actor}は集中力が切れ、攻撃絶対回避が出来なくなった。
+SoulRPG/Database/AilmentSequences/101015.OnRemoved.asset,{Actor}の魔力の盾は消滅した。
+SoulRPG/Database/AilmentSequences/101033.OnAdded.asset,{Actor}は恐怖を克服し、怯まなくなった。
+SoulRPG/Database/AilmentSequences/101056.OnTurnStart.asset,{Actor}の黄金色の魂が輝く。
+SoulRPG/Database/AilmentSequences/101050.OnAdded.asset,{Actor}の斬撃が強化された。
+SoulRPG/Database/AilmentSequences/101025.CanExecutableTurnOpponent.asset,{Target}は{Actor}の時停止で動けない。
+SoulRPG/Database/AilmentSequences/101047.OnAdded.asset,{Actor}に防人精霊が宿り、防御力が増した。
+SoulRPG/Database/AilmentSequences/101027.OnRemoved.asset,{Actor}のアナライズが解除された。
+SoulRPG/Database/AilmentSequences/101003.OnRemoved.asset,{Actor}の気合が解除された。
+SoulRPG/Database/AilmentSequences/101018.OnTakeDamage.Success.asset,{Actor}は相手の攻撃に反撃した。
+SoulRPG/Database/AilmentSequences/101044.OnRemoved.asset,{Actor}は足掻くのをやめた。
+SoulRPG/Database/AilmentSequences/101043.OnAdded.asset,{Actor}は狙いを研ぎ澄ました。
+SoulRPG/Database/AilmentSequences/101054.OnAdded.asset,{Actor}の火炎が強化された。
+SoulRPG/Database/AilmentSequences/101019.OnTurnEnd.asset,{Actor}はエアリーの加護に包まれた。
+SoulRPG/Database/AilmentSequences/101043.OnRemoved.asset,{Actor}は狙い澄ましを止めた。
+SoulRPG/Database/AilmentSequences/101044.OnAdded.asset,{Actor}はターンの最後に足掻くようになった。
+SoulRPG/Database/AilmentSequences/101031.OnTurnStart.Success.asset,{Actor}に逆境の追い風が吹いている。
+SoulRPG/Database/AilmentSequences/101039.OnRemoved.asset,{Actor}の過剰反応は解除された。
+SoulRPG/Database/AilmentSequences/101053.OnAdded.asset,{Actor}の魔法が強化された。
+SoulRPG/Database/AilmentSequences/101004.OnRemoved.asset,{Actor}の炎追撃が解除された。
+SoulRPG/Database/AilmentSequences/101020.OnRemoved.asset,{Actor}の攻撃絶対回避の体勢を解除した。
+SoulRPG/Database/AilmentSequences/101057.OnAdded.asset,{Actor}は元気になり、スタミナが回復するようになった。
+SoulRPG/Database/AilmentSequences/101040.OnAdded.asset,{Actor}は白の波動を食らい、魔法系に弱くなった。
+SoulRPG/Database/AilmentSequences/101012.OnRemoved.asset,{Actor}の疲れが取れた。
+SoulRPG/Database/AilmentSequences/101035.OnTurnEnd.asset,{Actor}の魔力回復が続く。
+SoulRPG/Database/AilmentSequences/101023.OnAdded.asset,{Actor}は空元気で虚勢を張る。
+SoulRPG/Database/AilmentSequences/101055.OnRemoved.asset,{Actor}の雷撃強化が解除された。
+SoulRPG/Database/AilmentSequences/101034.OnAdded.asset,{Actor}は柔軟になり、麻痺が効かなくなった。
+SoulRPG/Database/AilmentSequences/101009.OnAdded.asset,{Actor}は鎧砕き状態になった。
+SoulRPG/Database/AilmentSequences/101030.OnAdded.asset,{Actor}はガードの体勢を取った。
+SoulRPG/Database/AilmentSequences/101036.OnRemoved.asset,{Actor}の魔力の触手は消滅した。
+SoulRPG/Database/AilmentSequences/101027.OnAdded.asset,{Actor}は相手の状態が読み取れるようになった。
+SoulRPG/Database/Effects/SealedNameSubmit.asset,私の名前は・・・？
+SoulRPG/Database/Effects/SealedNameSubmit.asset,その名前を思い出すと頭痛がする・・・。
+SoulRPG/Database/Effects/Player.Recovery.asset,どうやら安全な場所に移動したようだ。
+SoulRPG/Prefabs/UIElement.Tab.prefab,サウンド
+SoulRPG/Prefabs/UI.Game.Menu.List.prefab,表示するものが無い
+SoulRPG/Prefabs/UI.Game.NameInputField.prefab,あなたの名前を入力してください
+SoulRPG/Prefabs/UI.Game.EndCredits.prefab,それは無意識にルクスオラたちを縛り上げていた。
+SoulRPG/Prefabs/UI.Game.EndCredits.prefab,"しかし、外の世界から訪れた存在
+ユーザーだけがその鎖を断ち切る力を持っていた。"
+SoulRPG/Prefabs/UI.Game.EndCredits.prefab,エアリーは、強き魂を求め続けていた。
+SoulRPG/Prefabs/UI.Game.EndCredits.prefab,残されたのは、何もない静寂。
+SoulRPG/Prefabs/UI.Game.EndCredits.prefab,"破壊の神としての宿命を背負いながら
+自らが倒されることなど想像すらしなかったのだろう。"
+SoulRPG/Prefabs/UI.Game.EndCredits.prefab,全ての魂は解放され、世界はその役目を終えた。
+SoulRPG/Prefabs/UI.Game.EndCredits.prefab,"そして、その静寂の中に
+久しく忘れられた平穏が静かに広がっていた。"
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,カット率
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,基本ステータス
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,ST（スタミナ）
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,斬撃
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,打撃
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,BP（行動ポイント）
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,物理攻撃力
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,刺突
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,HP（ヒットポイント）
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,魔法攻撃力
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,素早さ
+SoulRPG/Prefabs/UI.Game.Menu.Info.Status.prefab,所持経験値
+SoulRPG/Prefabs/UI.Game.Menu.Info.Item.prefab,"あいうえお
+かきくけこ
+さしす"
+SoulRPG/Prefabs/UI.Game.Menu.Info.Item.prefab,攻撃力
+SoulRPG/Prefabs/UI.Game.Menu.Info.Item.prefab,体力
+SoulRPG/Prefabs/UI.Game.Menu.Info.Item.prefab,持久力
+SoulRPG/Prefabs/UI.Game.Menu.Info.Item.prefab,攻撃属性
+SoulRPG/Prefabs/UI.Options.prefab,未実装のようだ
+SoulRPG/Prefabs/UI.Options.prefab,マスター音量
+SoulRPG/Prefabs/UI.Game.TitleScreen.prefab,転生<size=75%>の</size><size=120%>ルクスオラ</size>
+SoulRPG/Prefabs/UI.Game.TitleScreen.prefab,～体験版～
+SoulRPG/Scripts/Extensions.IWeight.cs,IWeight
+SoulRPG/Scripts/Extensions.IWeight.cs,要素が存在しません
+SoulRPG/Scripts/Extensions.IWeight.cs,重みが0です
+SoulRPG/Scripts/Extensions.IWeight.cs,未定義の動作です
+SoulRPG/Scripts/Extensions.Enum.cs,魔法
+SoulRPG/Scripts/Extensions.Enum.cs,火炎
+=======
 SoulRPG/Database/FloorEvent/102004.0.asset,「ありがとうございます。<color=#FFAAAA>{SealedName}</color>も報われるでしょう」
 SoulRPG/Database/FloorEvent/102004.0.asset,「これで、この世界で一番強いのは、あなた」
 SoulRPG/Database/FloorEvent/102004.0.asset,「あなたは、<color=#AAAAFF>{SealedName}</color>なの」
@@ -1177,6 +1705,7 @@ SoulRPG/Prefabs/UI.Game.TitleScreen.prefab,～体験版～
 SoulRPG/Prefabs/UI.Options.prefab,サウンド
 SoulRPG/Prefabs/UI.Options.prefab,マスター音量
 SoulRPG/Scenes/Game/LightingData.asset,エラー: 'charmap' codec can't decode byte 0x90 in position 39: character maps to <undefined>
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Scripts/DungeonController.cs,すでに床データが存在しています position:{position}
 SoulRPG/Scripts/DungeonController.cs,ダンジョンが存在しません id:{floorId}
 SoulRPG/Scripts/DungeonController.cs,<color=#8888FF>{itemData.MasterDataItem.Name}</color>を手に入れた。
@@ -1189,12 +1718,15 @@ SoulRPG/Scripts/DungeonController.cs,こちらからは開かないようだ。
 SoulRPG/Scripts/DungeonController.cs,Sfx.Message.0
 SoulRPG/Scripts/DungeonController.cs,<color=#88FF88>{addExperience}</color>の経験値を獲得した。
 SoulRPG/Scripts/DungeonController.cs,Sfx.AcquireExperience.0
+<<<<<<< HEAD
+=======
 SoulRPG/Scripts/Extensions.Enum.cs,魔法
 SoulRPG/Scripts/Extensions.Enum.cs,火炎
 SoulRPG/Scripts/Extensions.IWeight.cs,IWeight
 SoulRPG/Scripts/Extensions.IWeight.cs,要素が存在しません
 SoulRPG/Scripts/Extensions.IWeight.cs,重みが0です
 SoulRPG/Scripts/Extensions.IWeight.cs,未定義の動作です
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Scripts/InputController.cs,:移動
 SoulRPG/Scripts/InputController.cs,:水平移動
 SoulRPG/Scripts/InputController.cs,:メニュー
@@ -1203,11 +1735,28 @@ SoulRPG/Scripts/InputController.cs,:選択
 SoulRPG/Scripts/InputController.cs,:決定
 SoulRPG/Scripts/InputController.cs,:キャンセル
 SoulRPG/Scripts/InputController.cs,:カテゴリ移動
+<<<<<<< HEAD
+SoulRPG/Scripts/SceneControllers/GameSceneController.cs,中断データから再開しました。中断データは削除されたのでご注意ください。
+SoulRPG/Scripts/SceneControllers/GameSceneController.cs,確認
+SoulRPG/Scripts/SceneControllers/GameSceneController.cs,プレイヤーの無敵：{battleDebugData.IsInvinciblePlayer}
+SoulRPG/Scripts/SceneControllers/GameSceneController.cs,敵の無敵：{battleDebugData.IsInvincibleEnemy}
+SoulRPG/Scripts/SceneControllers/GameSceneController.cs,全スキル使用可能：{battleDebugData.IsAllSkillAvailable}
+SoulRPG/Scripts/SceneControllers/GameSceneController.cs,コスト無し：{battleDebugData.NoCost}
+SoulRPG/Scripts/SceneControllers/GameSceneController.cs,大ダメージ：{battleDebugData.IsBigDamage}
+SoulRPG/Scripts/SceneControllers/GameSceneController.cs,行動ポイント：{player.GrowthParameter.BehaviourPoint}
+SoulRPG/Scripts/BattleSystems/AilmentElement.cs,battleCharacterがnullです
+SoulRPG/Scripts/BattleSystems/AilmentElement.cs,マスターデータが存在しません masterDataAilmentId: {masterDataAilmentId}
+SoulRPG/Scripts/BattleSystems/CommandInvokers/ChangeWeapon.cs,装備している武器を変更した。
+SoulRPG/Scripts/BattleSystems/CommandInvokers/ChangeWeapon.cs,Sfx.Message.24
+SoulRPG/Scripts/BattleSystems/AI/Input.cs,武器
+SoulRPG/Scripts/BattleSystems/AI/Input.cs,武器を利用して攻撃などを行う。
+=======
 SoulRPG/Scripts/BattleSystems/AilmentElement.cs,battleCharacterがnullです
 SoulRPG/Scripts/BattleSystems/AilmentElement.cs,マスターデータが存在しません masterDataAilmentId: {masterDataAilmentId}
 SoulRPG/Scripts/BattleSystems/AI/Input.cs,武器
 SoulRPG/Scripts/BattleSystems/AI/Input.cs,武器を利用して攻撃などを行う。
 SoulRPG/Scripts/BattleSystems/AI/Input.cs,確認
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Scripts/BattleSystems/AI/Input.cs,状態異常・ステータスなどの情報を確認する。
 SoulRPG/Scripts/BattleSystems/AI/Input.cs,武器変更
 SoulRPG/Scripts/BattleSystems/AI/Input.cs,装備している武器を変更する。
@@ -1228,14 +1777,35 @@ SoulRPG/Scripts/BattleSystems/AI/Input.cs,敵に付与されている状態異�
 SoulRPG/Scripts/BattleSystems/AI/Input.cs,情報を選べ
 SoulRPG/Scripts/BattleSystems/AI/Input.cs,{x.GetMasterDataAilment().Name}(残り{x.GetRemainingTurnCount()}ターン)
 SoulRPG/Scripts/BattleSystems/AI/Input.cs,変更する武器を選べ
+<<<<<<< HEAD
+=======
 SoulRPG/Scripts/BattleSystems/CommandInvokers/ChangeWeapon.cs,装備している武器を変更した。
 SoulRPG/Scripts/BattleSystems/CommandInvokers/ChangeWeapon.cs,Sfx.Message.24
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Scripts/CharacterControllers/Equipment.cs,使えそうだ。空いてる武器枠に装備した。
 SoulRPG/Scripts/CharacterControllers/Equipment.cs,使えそうだ。頭に装備した。
 SoulRPG/Scripts/CharacterControllers/Equipment.cs,使えそうだ。胴に装備した。
 SoulRPG/Scripts/CharacterControllers/Equipment.cs,使えそうだ。腕に装備した。
 SoulRPG/Scripts/CharacterControllers/Equipment.cs,使えそうだ。脚に装備した。
 SoulRPG/Scripts/CharacterControllers/Equipment.cs,使えそうだ。空いてるアクセサリー枠に装備した。
+<<<<<<< HEAD
+SoulRPG/Scripts/Sequences/RecoveryHitPoint.cs,{t.BattleStatus.NameWithTag}のHPが<color=#88FF88>{recovery}</color>回復した。
+SoulRPG/Scripts/Sequences/AddMagicCount.cs,{t.BattleStatus.NameWithTag}の魔カウントが<color=#99FF99>{value}</color>蓄積した
+SoulRPG/Scripts/Sequences/RecoveryStamina.cs,{t.BattleStatus.NameWithTag}のスタミナが<color=#88FF88>{recovery}</color>回復した。
+SoulRPG/Scripts/Sequences/ResetMagicCount.cs,{t.BattleStatus.NameWithTag}の魔カウントがリセットされた。
+SoulRPG/Scripts/Sequences/AddKnifeCount.cs,{t.BattleStatus.NameWithTag}のナイフストックが<color=#99FF99>{value}</color>蓄積した
+SoulRPG/Scripts/Sequences/AddKnifeCount.cs,{t.BattleStatus.NameWithTag}のナイフストックが<color=#FF9999>{-value}</color>減少した
+SoulRPG/Scripts/Sequences/AddBehaviourPoint.cs,{t.BattleStatus.NameWithTag}のBPが<color=#99FF99>{value}</color>回復した。
+SoulRPG/Scripts/Sequences/AddBehaviourPoint.cs,{t.BattleStatus.NameWithTag}のBPが<color=#FF9999>{-value}</color>減少した。
+SoulRPG/Scripts/Sequences/GiveDamage.cs,{t.BattleStatus.NameWithTag}は攻撃を回避した。
+SoulRPG/Scripts/Sequences/GiveDamage.cs,{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。
+SoulRPG/Scripts/Sequences/ResetKnifeCount.cs,{t.BattleStatus.NameWithTag}のナイフストックがリセットされた。
+SoulRPG/Scripts/View/OptionsView.cs,UI.Game.Header
+SoulRPG/Scripts/View/OptionsView.cs,システム
+SoulRPG/Scripts/View/OptionsView.cs,ゲーム全体の音量を設定する。
+SoulRPG/Scripts/View/OptionsView.cs,BGMの音量を設定する。
+SoulRPG/Scripts/View/OptionsView.cs,効果音の音量を設定する。
+=======
 SoulRPG/Scripts/SceneControllers/GameSceneController.cs,中断データから再開しました。中断データは削除されたのでご注意ください。
 SoulRPG/Scripts/SceneControllers/GameSceneController.cs,プレイヤーの無敵：{battleDebugData.IsInvinciblePlayer}
 SoulRPG/Scripts/SceneControllers/GameSceneController.cs,敵の無敵：{battleDebugData.IsInvincibleEnemy}
@@ -1254,6 +1824,7 @@ SoulRPG/Scripts/Sequences/RecoveryHitPoint.cs,{t.BattleStatus.NameWithTag}のHP�
 SoulRPG/Scripts/Sequences/RecoveryStamina.cs,{t.BattleStatus.NameWithTag}のスタミナが<color=#88FF88>{recovery}</color>回復した。
 SoulRPG/Scripts/Sequences/ResetKnifeCount.cs,{t.BattleStatus.NameWithTag}のナイフストックがリセットされた。
 SoulRPG/Scripts/Sequences/ResetMagicCount.cs,{t.BattleStatus.NameWithTag}の魔カウントがリセットされた。
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Scripts/View/GameDebugWindowView.cs,全アイテム追加
 SoulRPG/Scripts/View/GameDebugWindowView.cs,全アイテムを追加しました
 SoulRPG/Scripts/View/GameDebugWindowView.cs,バトル
@@ -1279,12 +1850,19 @@ SoulRPG/Scripts/View/GameDebugWindowView.cs,エンカウント無し
 SoulRPG/Scripts/View/GameDebugWindowView.cs,エンカウント無しを{battleDebugData.NoEncount}に設定しました
 SoulRPG/Scripts/View/GameDebugWindowView.cs,スターターパック
 SoulRPG/Scripts/View/GameDebugWindowView.cs,想定経験値獲得
+<<<<<<< HEAD
+=======
 SoulRPG/Scripts/View/GameDebugWindowView.cs,イベント呼び出し
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Scripts/View/GameDebugWindowView.cs,ダンジョンレベル: {x}
 SoulRPG/Scripts/View/GameDebugWindowView.cs,スターターパック{x}を追加しました
 SoulRPG/Scripts/View/GameDebugWindowView.cs,ボスの経験値も獲得しますか？
 SoulRPG/Scripts/View/GameDebugWindowView.cs,想定経験値\
 SoulRPG/Scripts/View/GameDebugWindowView.cs,を獲得しました。
+<<<<<<< HEAD
+SoulRPG/Scripts/View/GamePauseMenuView.cs,装備変更
+SoulRPG/Scripts/View/GamePauseMenuView.cs,戦闘で使う装備を変更する。
+=======
 SoulRPG/Scripts/View/GameEndCreditsView.cs,:スキップ
 SoulRPG/Scripts/View/GameNameInputFieldView.cs,名前を入力してください。
 SoulRPG/Scripts/View/GameNameInputFieldView.cs,名前は10文字以内で入力してください。
@@ -1292,6 +1870,7 @@ SoulRPG/Scripts/View/GameNameInputFieldView.cs,「{inputField.text}」でよろ�
 SoulRPG/Scripts/View/GamePauseMenuView.cs,装備変更
 SoulRPG/Scripts/View/GamePauseMenuView.cs,戦闘で使う装備を変更する。
 SoulRPG/Scripts/View/GamePauseMenuView.cs,システム
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Scripts/View/GamePauseMenuView.cs,システム設定を行う。
 SoulRPG/Scripts/View/GamePauseMenuView.cs,中断データ作成
 SoulRPG/Scripts/View/GamePauseMenuView.cs,中断データを作成してゲームを終了します。
@@ -1321,6 +1900,12 @@ SoulRPG/Scripts/View/GamePauseMenuView.cs,アクセサリー変更
 SoulRPG/Scripts/View/GamePauseMenuView.cs,装備したいアクセサリーを選択せよ。
 SoulRPG/Scripts/View/GamePauseMenuView.cs,中断データを作成してゲームを終了しますか？
 SoulRPG/Scripts/View/GamePauseMenuView.cs,中断データを作成しました。このままゲームを終了できます。お疲れ様でした。
+<<<<<<< HEAD
+SoulRPG/Scripts/View/GameNameInputFieldView.cs,名前を入力してください。
+SoulRPG/Scripts/View/GameNameInputFieldView.cs,名前は10文字以内で入力してください。
+SoulRPG/Scripts/View/GameNameInputFieldView.cs,「{inputField.text}」でよろしいですか？変更は出来ません。
+=======
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c
 SoulRPG/Scripts/View/GameSavePointMenuView.cs,レベルアップ
 SoulRPG/Scripts/View/GameSavePointMenuView.cs,経験値を消費してレベルアップを行います。
 SoulRPG/Scripts/View/GameSavePointMenuView.cs,休憩
@@ -1341,6 +1926,8 @@ SoulRPG/Scripts/View/GameSavePointMenuView.cs,パラメーターを割り振っ�
 SoulRPG/Scripts/View/GameSavePointMenuView.cs,本当にレベルアップしますか？
 SoulRPG/Scripts/View/GameSavePointMenuView.cs,ここではもう休憩できません。
 SoulRPG/Scripts/View/GameSavePointMenuView.cs,HPとSTを回復しますが一度しか使用できません。\nよろしいですか？
+<<<<<<< HEAD
+=======
 SoulRPG/Scripts/View/OptionsView.cs,UI.Game.Header
 SoulRPG/Scripts/View/OptionsView.cs,ゲーム全体の音量を設定する。
 SoulRPG/Scripts/View/OptionsView.cs,BGMの音量を設定する。
@@ -1348,3 +1935,4 @@ SoulRPG/Scripts/View/OptionsView.cs,効果音の音量を設定する。
 SoulRPG/Scripts/View/OptionsView.cs,ミニマップの回転をプレイヤーの向きと同期を取るか設定する。
 SoulRPG/Scripts/View/OptionsView.cs,オン
 SoulRPG/Scripts/View/OptionsView.cs,オフ
+>>>>>>> 1428d424da51d63f468f9f4f1c72ddb3144ee69c

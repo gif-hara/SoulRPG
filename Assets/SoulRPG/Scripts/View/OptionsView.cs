@@ -136,16 +136,53 @@ namespace SoulRPG
                     "BGMの音量を設定する。",
                     "効果音の音量を設定する。",
                 };
-                var saveActions = new List<Action<SaveData, float>>
+                var initialActions = new List<Action<HKUIDocument>>
                 {
-                    (x, volume) => x.audioData.masterVolume = volume,
-                    (x, volume) => x.audioData.bgmVolume = volume,
-                    (x, volume) => x.audioData.sfxVolume = volume,
+                    x =>
+                    {
+                        x.Q<HKUIDocument>("Slider").Q<Slider>("Slider").OnValueChangedAsObservable()
+                            .Skip(1)
+                            .Subscribe(value =>
+                            {
+                                var saveData = SaveData.LoadSafe();
+                                saveData.audioData.masterVolume = value;
+                                saveData.Save();
+                                AudioManager.SetVolume("MasterVolume", value);
+                            })
+                            .RegisterTo(scope);
+                    },
+                    x =>
+                    {
+                        x.Q<HKUIDocument>("Slider").Q<Slider>("Slider").OnValueChangedAsObservable()
+                            .Skip(1)
+                            .Subscribe(value =>
+                            {
+                                var saveData = SaveData.LoadSafe();
+                                saveData.audioData.bgmVolume = value;
+                                saveData.Save();
+                                AudioManager.SetVolume("BgmVolume", value);
+                            })
+                            .RegisterTo(scope);
+                    },
+                    x =>
+                    {
+                        x.Q<HKUIDocument>("Slider").Q<Slider>("Slider").OnValueChangedAsObservable()
+                            .Skip(1)
+                            .Subscribe(value =>
+                            {
+                                var saveData = SaveData.LoadSafe();
+                                saveData.audioData.sfxVolume = value;
+                                saveData.Save();
+                                AudioManager.SetVolume("SfxVolume", value);
+                            })
+                            .RegisterTo(scope);
+                    },
                 };
                 var currentVolumeIndex = 0;
                 for (var i = 0; i < volumeNames.Count; i++)
                 {
                     var volume = contents.Q<HKUIDocument>(volumeNames[i]);
+                    initialActions[i](contents.Q<HKUIDocument>(volumeNames[i]));
                     SetActiveVolume(volume);
                     SetSliderValue(volume, AudioManager.GetVolume(volumeExposeNames[i]));
                 }
@@ -183,22 +220,14 @@ namespace SoulRPG
                         {
                             var volume = AudioManager.GetVolume(volumeExposeNames[currentVolumeIndex]);
                             volume += 0.1f;
-                            AudioManager.SetVolume(volumeExposeNames[currentVolumeIndex], volume);
                             SetSliderValue(contents.Q<HKUIDocument>(volumeNames[currentVolumeIndex]), volume);
-                            var saveData = SaveData.LoadSafe();
-                            saveActions[currentVolumeIndex](saveData, volume);
-                            saveData.Save();
                             AudioManager.PlaySfx("Sfx.Message.0");
                         }
                         else if (value.x < 0)
                         {
                             var volume = AudioManager.GetVolume(volumeExposeNames[currentVolumeIndex]);
                             volume -= 0.1f;
-                            AudioManager.SetVolume(volumeExposeNames[currentVolumeIndex], volume);
                             SetSliderValue(contents.Q<HKUIDocument>(volumeNames[currentVolumeIndex]), volume);
-                            var saveData = SaveData.LoadSafe();
-                            saveActions[currentVolumeIndex](saveData, volume);
-                            saveData.Save();
                             AudioManager.PlaySfx("Sfx.Message.0");
                         }
                     })

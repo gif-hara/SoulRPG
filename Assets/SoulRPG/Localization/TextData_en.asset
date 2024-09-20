@@ -1,0 +1,815 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextData_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 28f9ff92bfa98f14a9375eb2c35576cd, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1690469335040
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690431586304
+    m_Localized: Luxora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946432
+    m_Localized: Reincarnation of <size=75%>the</size><size=120%>{SealedName}</size>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946433
+    m_Localized: Cain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946434
+    m_Localized: Selius
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140736
+    m_Localized: Ash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140737
+    m_Localized: Zain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140738
+    m_Localized: Talk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140739
+    m_Localized: A simple yet refined blade. Lightweight and sharp a reliable companion
+      on the battlefield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140740
+    m_Localized: A short but sharp blade. Shines from the shadows a trusted companion
+      of assassins.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140741
+    m_Localized: A massive sword boasting overwhelming weight and power. Holds the
+      sheer force to cleave through everything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140742
+    m_Localized: A sharp thin blade that pierces even armor. A sword for the precise
+      and ruthless thrusting master.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140743
+    m_Localized: Club
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140744
+    m_Localized: A simple yet deadly weapon. Crushes enemies with its heavy strikes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140745
+    m_Localized: Poison Dagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140746
+    m_Localized: A poison-coated blade that brings pain and death to its victims.
+      A single thrust is a fatal strike.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140747
+    m_Localized: Spark Edge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140748
+    m_Localized: A blade enveloped in lightning swift as a flash. Slices through
+      foes in an instant and races across the battlefield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140749
+    m_Localized: Will Mace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140750
+    m_Localized: A mace fit for one with unshakable will. Shatters bones and crushes
+      the spirit of enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140751
+    m_Localized: Flame Rod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140752
+    m_Localized: A magical rod that controls the power of flames. Its tip always
+      burns with a small flame holding the power to incinerate enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140753
+    m_Localized: A blunt weapon imbued with the power of fire. Burns enemies while
+      crushing them with overwhelming force.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140754
+    m_Localized: Thunder Rod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140755
+    m_Localized: A rod imbued with the power of lightning. Strikes enemies with a
+      bolt of lightning paralyzing them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140756
+    m_Localized: Blue Mage's Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140757
+    m_Localized: A magical sword shrouded in pale blue light. Only a Blue Mage can
+      wield its unknown power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140758
+    m_Localized: A massive sword full of weight. Possesses the destructive power
+      to cleave through everything dominating the battlefield with a single swing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140759
+    m_Localized: Spark Dagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140760
+    m_Localized: A dagger that sparks from its glowing red blade. Scorches foes with
+      a flash and overwhelms them with swift attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140761
+    m_Localized: Thunder Curse Staff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140762
+    m_Localized: A cursed staff swirling with yellow and black light. Unleashes a
+      thunder curse that leads enemies to ruin.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140763
+    m_Localized: Buster Club
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140764
+    m_Localized: A massive club with overwhelming destructive power. Smashes all
+      foes leaving nothing in its wake.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140765
+    m_Localized: Quick Bow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140766
+    m_Localized: A lightweight bow that allows for quick movements. Fires arrows
+      instantly the perfect weapon for a sniper.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140767
+    m_Localized: Lance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140768
+    m_Localized: A knight's weapon paired with a shield. Specialized in charges it
+      breaks through enemy defenses.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140769
+    m_Localized: Thunder Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140770
+    m_Localized: A slim sword imbued with the power of thunder. As swift as lightning
+      it slices through enemies while electrocuting them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140771
+    m_Localized: Lavaheart Great Spear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140772
+    m_Localized: A massive spear engulfed in flames passed down by the Lavaheart
+      family. Its molten heat incinerates enemies with destructive force.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140773
+    m_Localized: Iron Shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140774
+    m_Localized: A simple shield made of solid iron. Offers reliable defense and
+      withstands any attack.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140775
+    m_Localized: Death Poison Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140776
+    m_Localized: A deadly sword infused with green poison. With a single strike it
+      injects fatal poison into its enemies a terrifying weapon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140777
+    m_Localized: Leo's Sword of Judgment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140778
+    m_Localized: The sword of judgment used by the hero Leo. Cuts through evil with
+      the light of justice delivering judgment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140779
+    m_Localized: Shadowrunner Dagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140780
+    m_Localized: A dagger for those who move swiftly in the shadows. Its black blade
+      creeps like a shadow silently taking down enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140781
+    m_Localized: Slime Slayer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140782
+    m_Localized: A special straight sword forged to hunt slimes. Its blade slices
+      through even the toughest enemies with one slash leaving no trace.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140783
+    m_Localized: Amplify Rod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140784
+    m_Localized: A rod that amplifies magical power drawing it out to its full potential.
+      The wielder's magic becomes overwhelmingly powerful crushing their enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140785
+    m_Localized: A shield created by a lost ancient civilization. Its surface is
+      covered in mysterious patterns emitting magic that protects the wielder from
+      all attacks. It is as if an invisible wall surrounds it remaining unaffected
+      by even the fiercest assaults.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140786
+    m_Localized: Chronocepter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140787
+    m_Localized: A legendary staff imbued with the power to manipulate the flow of
+      time. Wielders of this staff can accelerate time in an instant, freeze the
+      enemy's movements, and double their own actions. The unleashed magic transcends
+      the boundaries of time, connecting the past and future.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140788
+    m_Localized: Cursed Blade Misericorde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140789
+    m_Localized: A cursed blade once wielded by a swordsman who devoured countless
+      souls. The blade swirls with malevolence, granting overwhelming power while
+      eroding the mind of its wielder. The hatred of those cut accumulates in the
+      sword, amplifying its destructive force.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140790
+    m_Localized: A sturdy shield that Sir Regalis is said to have defended with his
+      life. This shield protects its bearer like a holy wall, reflecting all enemy
+      attacks. Along with Regalis' oath, it holds the power of protection that will
+      never be broken.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140791
+    m_Localized: Reversed Thorn Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140792
+    m_Localized: This sword is etched with thorns that grow in reverse from the base
+      to the tip of the blade. With each thrust, it tears the enemy's flesh, and
+      when withdrawn, it inflicts even deeper wounds. A cruel sword that brings greater
+      pain and despair by piercing without fear of retaliation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140793
+    m_Localized: Airy Staff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140794
+    m_Localized: Airy Staff is a holy staff imbued with the power of healing. It
+      stays close to its wielder, breathing life into the wounded. Specializing in
+      healing magic, it soothes pain and calms the heart with a mere touch.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140795
+    m_Localized: Staff of Regeneration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140796
+    m_Localized: A holy staff that restores lost life. Its light constantly shines,
+      bringing healing to its wielder's hands. Its power to heal wounds and regenerate
+      the heart brings hope to the battlefield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140797
+    m_Localized: Arnoid's Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140798
+    m_Localized: The sword of a nobleman that combines elegance and strength. Its
+      slender blade shines with a sharp and beautiful glow, cutting through enemies
+      in a single swing. The refined design symbolizes the noble lineage and dignity
+      of its wielder.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140799
+    m_Localized: Angry Bat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140800
+    m_Localized: The Angry Bat is a rough-hewn wooden club. Though simple in appearance,
+      once swung, it unleashes tremendous power. When wielded with anger, its strength
+      doubles, making it a formidable weapon to crush foes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140801
+    m_Localized: Ebony Thunder Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140802
+    m_Localized: A golden straight sword said to be imbued with the power of the
+      thunder god. Its blade shines brightly, and with each swing, thunder roars.
+      It grants its wielder the speed and power of lightning, striking down foes
+      in an instant.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140803
+    m_Localized: Luxora's Great Bow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140804
+    m_Localized: A holy bow once used by a paladin. Its string is infused with the
+      power of light, and the arrows it fires pierce enemies like lightning. This
+      bow, a symbol of justice, holds the power to purify evil and bring peace.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140805
+    m_Localized: Ilyssia's Staff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140806
+    m_Localized: A holy staff said to be held by Archmage Ilyssia. It contains pure
+      white magic, possessing the power of purification and regeneration. The healing
+      power it grants to allies is gentle yet mighty, like the touch of a god.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140807
+    m_Localized: Heavy Crossbow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140808
+    m_Localized: A large crossbow boasting overwhelming power. Its heavy construction
+      and strong string imbue the bolts it fires with destructive force. With a single
+      shot, it shatters enemy defenses, exuding a menacing presence.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140809
+    m_Localized: A thick and heavy straight sword designed for powerful slashes,
+      capable of crushing enemy defenses. Simple yet reliable, it's a trusted companion
+      on the battlefield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140810
+    m_Localized: Sparking Dagger+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140811
+    m_Localized: An enhanced version of the dagger that sparks from its glowing red
+      blade. It scorches foes with a single slash and overwhelms them with rapid
+      attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140812
+    m_Localized: Club+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140813
+    m_Localized: A simple yet deadly enhanced weapon. Its heavy strikes crush enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140814
+    m_Localized: Poison Dagger+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140815
+    m_Localized: The blade, enhanced with deadly poison, brings pain and death to
+      those cut. A single stab delivers a fatal blow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140816
+    m_Localized: Pocket Knife
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140817
+    m_Localized: A lightweight and highly portable small weapon. Its green handle
+      symbolizes harmony with nature, while the glowing white blade combines sharpness
+      and silence. It is a reliable companion for those seeking stealth and swift
+      strikes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140818
+    m_Localized: Starshadow Staff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140819
+    m_Localized: A mystical staff that gathers the power of the stars shining in
+      the night sky. Its tip holds purple magic, granting its wielder the ability
+      to control the power of the stars. Glowing in the dark night, this staff symbolizes
+      the power of a guide of the stars.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140820
+    m_Localized: Blazing Flame Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140821
+    m_Localized: A greatsword engulfed in scorching flames. Its burning blade looks
+      as if it brings the fires of hell itself. Responding to its wielder's fury,
+      it burns enemies to ashes. The raging flames hold the power to incinerate all
+      who approach.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140822
+    m_Localized: Chronocepter+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140823
+    m_Localized: An enhanced version of the legendary staff that controls the flow
+      of time. Wielders of this staff can accelerate time in an instant, freeze enemy
+      movements, and double their own actions. The magic it unleashes transcends
+      time, connecting the past and future.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140824
+    m_Localized: Flame Rod+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140825
+    m_Localized: An enhanced version of the magical staff that controls the power
+      of fire. A small flame constantly burns at its tip, holding the power to incinerate
+      enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140826
+    m_Localized: Thunder Rod+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140827
+    m_Localized: An enhanced version of the staff imbued with the power of lightning.
+      With a strike of lightning, it electrifies and paralyzes enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140828
+    m_Localized: Exotic Projectile Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140829
+    m_Localized: A bag filled with various projectiles crafted in foreign lands.
+      It contains a variety of weapons such as boomerangs and grenades, confusing
+      enemies with unpredictable attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140830
+    m_Localized: Bow of Time and Space
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140831
+    m_Localized: A legendary weapon that controls time and space. It is said that
+      those who draw its string can strike past and future targets, as well as distant
+      ones, with a single shot. This bow, imbued with transcendent power, can only
+      be wielded by the chosen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140832
+    m_Localized: An enhanced version of a gigantic sword boasting overwhelming weight
+      and power. It holds the ability to cut through anything with sheer force.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140833
+    m_Localized: Defender
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140834
+    m_Localized: A massive sword that also serves as a shield. Its broad and sturdy
+      blade can block enemy attacks while delivering a crushing blow. Wielders of
+      this sword can master a combat style that combines offense and defense.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140835
+    m_Localized: Staff of Contempt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140836
+    m_Localized: A staff imbued with dark magic, granting immense power to its wielder
+      while instilling feelings of contempt. Swirling with black magic at its tip,
+      it holds the power to corrupt the souls of those who touch it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140837
+    m_Localized: Ebony Thunderblade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140838
+    m_Localized: A true golden straight sword said to be imbued with the power of
+      the thunder god. Its blade shines brightly, and with each swing, thunder roars.
+      It grants its wielder the speed and power of lightning, striking down foes
+      instantly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140839
+    m_Localized: Lavaheart's Deathflame Spear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140840
+    m_Localized: A true, massive spear passed down through the Lavaheart family,
+      enveloped in flames. Its molten heat incinerates enemies, making it a weapon
+      of overwhelming destructive power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140841
+    m_Localized: Chronocepter++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140842
+    m_Localized: The ultimate enhanced version of the legendary staff that controls
+      the flow of time. Wielders of this staff can accelerate time in an instant,
+      freeze enemy movements, and double their own actions. The magic it unleashes
+      transcends time, connecting the past and future.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140843
+    m_Localized: Divine Staff of Exorcism
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140844
+    m_Localized: A legendary staff imbued with the magic of light that dispels darkness.
+      This staff grants divine protection to its wielder and possesses the power
+      to instantly purify evil magic. It is said to have been forged by a great sage
+      and wielded by a hero who fought to protect the world.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140845
+    m_Localized: Fang of Shadow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140846
+    m_Localized: A dagger said to have been forged from the abyss of darkness. Its
+      blade is as black as shadows, dancing with afterimages at the will of its wielder.
+      Once feared among assassins, its name still echoes through the night.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140847
+    m_Localized: Pyre of Black Flame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140848
+    m_Localized: Said to have been forged in the fires of hell. With each strike,
+      red-black flames roar to life, turning anything they touch to ash. Shrouded
+      in dark fire, this weapon is destined to burn the sinful to nothingness, a
+      cursed tool of execution.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140849
+    m_Localized: Sword of Divine Majesty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140850
+    m_Localized: Despite its simple appearance, it holds overwhelming power. A pure
+      white aura surrounds its blade, cleaving through the darkness of enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140851
+    m_Localized: Airy's Divine Staff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140852
+    m_Localized: The ultimate enhanced version of the holy staff imbued with healing
+      power. It brings life to the wounded, soothing pain and calming hearts with
+      just a touch, specializing in recovery magic.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140853
+    m_Localized: Luxora's Greatsword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140854
+    m_Localized: This greatsword, bearing the name of Luxora, who led the Holy Knights,
+      is imbued with a noble soul and the power of justice. A single swing that banishes
+      darkness demonstrates the pride and dignity of a Holy Knight, and its radiance
+      will never fade.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140855
+    m_Localized: Rampage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140856
+    m_Localized: As the name suggests, this massive crossbow holds the power to ravage
+      enemies. The bolts it fires pierce enemies like a storm, leaving no escape
+      for any target once it is sighted. It is a symbol of absolute destruction,
+      feared on the battlefield.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140857
+    m_Localized: Shen's Knife
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140858
+    m_Localized: Shen mastered these three knives to silence enemies in the dark.
+      The blades are sharp, able to pierce hearts without a sound. No one knows how
+      many have fallen to these knives.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140859
+    m_Localized: Defender+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140860
+    m_Localized: The ultimate enhanced version of a massive sword that also serves
+      as a shield. Its broad and sturdy blade blocks enemy attacks while delivering
+      crushing blows. Wielders of this sword can master a combat style that combines
+      both offense and defense.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140861
+    m_Localized: Luxora's Holy Shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140862
+    m_Localized: A great shield once used by the holy knight Luxora. It radiates
+      a divine light, boasting absolute defense. No enemy attack can penetrate this
+      shield's protection.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140863
+    m_Localized: Chronoshift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140864
+    m_Localized: A legendary staff that freely manipulates the flow of time. Its
+      wielder can traverse past and future in an instant, turning the tide of battle
+      overwhelmingly in their favor. The magic released from the tip of the staff
+      becomes a wave of time, shaking the very fabric of space.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140865
+    m_Localized: Whale Piercer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140866
+    m_Localized: A massive blue anchor said to have been wielded by the ruler of
+      the deep seas. When swung, it creates a shockwave as if the ocean itself were
+      splitting. Its power to pierce even whales is a testament to the bravery of
+      the guardian of the seas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140867
+    m_Localized: Elephant Piercer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140868
+    m_Localized: A massive gray hammer said to have the power to pierce even elephants
+      with a single strike. This weapon boasts overwhelming weight and destructive
+      power, and it is said that only those with immense strength can wield it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140869
+    m_Localized: Arnold's Divine Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140870
+    m_Localized: A divine sword of a noble prince, combining elegance and power.
+      Its slender blade shines with a sharp yet beautiful brilliance, capable of
+      slicing through enemies with a single swing. The refined design symbolizes
+      the noble lineage and grace of its wielder.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140871
+    m_Localized: Black Iron Anchor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140872
+    m_Localized: A massive anchor said to have been raised from the depths of the
+      sea, its iron shines with a dark glow that absorbs all light. It is now feared
+      not just as a weapon, but as a cursed relic imbued with the power of darkness.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140873
+    m_Localized: Obsidian Lance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140874
+    m_Localized: A mystical spear said to have been bestowed by the gods of the underworld,
+      worshipped by ancient warriors. Made of jet-black obsidian, the lance shines
+      beautifully, as if it were the embodiment of darkness itself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140875
+    m_Localized: The ultimate enhanced version of a massive sword boasting overwhelming
+      weight and power. It holds the strength to cut through everything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140876
+    m_Localized: Storm Greatspear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140877
+    m_Localized: An ancient weapon said to have been crafted by the gods of storms.
+      Its blade splits into a thousand spears with a single strike, surrounding enemies
+      and creating a storm of destruction. The wielder can summon countless spears
+      to slice through foes like a tempest.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140878
+    m_Localized: A heavy weapon made of shining gold, its blow holds the power to
+      shake the earth. This hammer, said to have been wielded by an ancient king,
+      grants dignity and power to its wielder, and its brilliance terrifies enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140879
+    m_Localized: The ultimate enhanced version of a short but razor-sharp blade.
+      A trusted companion of assassins, gleaming in the shadows.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140880
+    m_Localized: Watenryu Karate Fist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140881
+    m_Localized: The bandages wrapped around this fist symbolize the strength gained
+      through years of training and countless battles. This weapon, mastered only
+      by those who have perfected Watenryu Karate, has the power to subdue enemies
+      instantly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140882
+    m_Localized: Oni-Slaying Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140883
+    m_Localized: A sword from ancient legends, forged to repel demons. It bears no
+      unnecessary decorations, relying solely on its sharpness and durability to
+      defeat foes. It shines with a pure and powerful radiance, reflecting the resolve
+      of its wielder.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140884
+    m_Localized: Bear Hunter's Axe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140885
+    m_Localized: A traditional axe forged to bring down even the largest of bears.
+      It features a sturdy wooden handle and a sharply honed blade, making it a beloved
+      tool for hunters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140886
+    m_Localized: Harpoon of Compassion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140887
+    m_Localized: A weapon once favored by a young hero who fought for justice. Its
+      razor-sharp tip delivers slashing blows, symbolizing the hero's commitment
+      to righteousness. Though it cuts down foes, it remains a weapon of pure intent,
+      unsullied by evil.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140888
+    m_Localized: Moon Oni Maiden's Staff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140889
+    m_Localized: A staff wielded by a maiden whose bloodline mixes that of the moon
+      and oni. The staff glows with a pale blue light at its tip, instilling silent
+      fear in enemies. When in her hands, its power grows with the waxing and waning
+      of the moon.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

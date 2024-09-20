@@ -1,0 +1,838 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextData_fr-FR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr-FR
+  m_SharedData: {fileID: 11400000, guid: 28f9ff92bfa98f14a9375eb2c35576cd, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1690431586304
+    m_Localized: Luxora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946432
+    m_Localized: "R\xE9incarnation de <size=75%>la</size><size=120%>{SealedName}</size>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946433
+    m_Localized: Cain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946434
+    m_Localized: Selius
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140736
+    m_Localized: Ash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140737
+    m_Localized: Zain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140738
+    m_Localized: Parler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140739
+    m_Localized: "Une lame simple mais raffin\xE9e. L\xE9g\xE8re et tranchante un
+      compagnon fiable sur le champ de bataille."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140740
+    m_Localized: "Une lame courte mais ac\xE9r\xE9e. Brille dans l'ombre un compagnon
+      de confiance des assassins."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140741
+    m_Localized: "Une \xE9p\xE9e massive qui se targue d'un poids et d'une puissance
+      \xE9crasante. Contient la force de tout trancher."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140742
+    m_Localized: "Une lame fine et tranchante qui perce m\xEAme les armures. Une
+      \xE9p\xE9e pour les ma\xEEtres de l'estocade pr\xE9cise et impitoyable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140743
+    m_Localized: Massue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140744
+    m_Localized: "Une arme simple mais mortelle. \xC9crase les ennemis avec ses coups
+      puissants."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140745
+    m_Localized: "Dague empoisonn\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140746
+    m_Localized: "Une lame enduite de poison qui apporte douleur et mort \xE0 ses
+      victimes. Un coup est une frappe fatale."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140747
+    m_Localized: "Lame \xC9tincelle"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140748
+    m_Localized: "Une lame entour\xE9e de foudre aussi rapide qu'un \xE9clair. Tranche
+      les ennemis en un instant et traverse le champ de bataille."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140749
+    m_Localized: "Masse de Volont\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140750
+    m_Localized: "Une masse digne de ceux qui ont une volont\xE9 in\xE9branlable.
+      Brise les os et an\xE9antit l'esprit de l'ennemi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140751
+    m_Localized: "B\xE2ton de Flamme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140752
+    m_Localized: "Une baguette magique qui contr\xF4le le pouvoir des flammes. Son
+      extr\xE9mit\xE9 br\xFBle toujours avec une petite flamme contenant le pouvoir
+      d'incin\xE9rer les ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140753
+    m_Localized: "Une arme contondante impr\xE9gn\xE9e du pouvoir du feu. Br\xFBle
+      les ennemis tout en les \xE9crasant avec une force \xE9crasante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140754
+    m_Localized: "B\xE2ton de Tonnerre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140755
+    m_Localized: "Une baguette impr\xE9gn\xE9e du pouvoir de la foudre. Frappe les
+      ennemis avec un \xE9clair les paralysant."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140756
+    m_Localized: "\xC9p\xE9e de Mage Bleu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140757
+    m_Localized: "Une \xE9p\xE9e magique envelopp\xE9e d'une lumi\xE8re bleu p\xE2le.
+      Seul un Mage Bleu peut manier son pouvoir inconnu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140758
+    m_Localized: "Une \xE9p\xE9e massive pleine de poids. Poss\xE8de le pouvoir destructeur
+      de tout trancher et domine le champ de bataille d'un seul coup."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140759
+    m_Localized: "Dague \xC9tincelle"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140760
+    m_Localized: "Une dague qui \xE9met des \xE9tincelles depuis sa lame rougeoyante.
+      Br\xFBle les ennemis d'un \xE9clair et les submerge d'attaques rapides."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140761
+    m_Localized: "B\xE2ton Maudit du Tonnerre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140762
+    m_Localized: "Un b\xE2ton maudit impr\xE9gn\xE9 de lumi\xE8re jaune et noire.
+      Lib\xE8re une mal\xE9diction de tonnerre qui conduit les ennemis \xE0 la ruine."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140763
+    m_Localized: Masse Destructrice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140764
+    m_Localized: "Une masse massive \xE0 la puissance destructrice \xE9crasante.
+      \xC9crase tous les ennemis sans rien laisser derri\xE8re."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140765
+    m_Localized: Arc Rapide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140766
+    m_Localized: "Un arc l\xE9ger permettant des mouvements rapides. Tire des fl\xE8ches
+      instantan\xE9ment l'arme parfaite pour un sniper."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140767
+    m_Localized: Lance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140768
+    m_Localized: "Une arme de chevalier associ\xE9e \xE0 un bouclier. Sp\xE9cialis\xE9e
+      dans les charges elle transperce les d\xE9fenses ennemies."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140769
+    m_Localized: "\xC9p\xE9e de Tonnerre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140770
+    m_Localized: "Une \xE9p\xE9e fine impr\xE9gn\xE9e du pouvoir du tonnerre. Rapide
+      comme l'\xE9clair elle tranche les ennemis tout en les \xE9lectrocutant."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140771
+    m_Localized: "Grande Lance du C\u0153ur de Lave"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140772
+    m_Localized: "Une immense lance enflamm\xE9e transmise par la famille C\u0153ur
+      de Lave. Sa chaleur de lave incin\xE8re les ennemis avec une force destructrice."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140773
+    m_Localized: Bouclier de Fer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140774
+    m_Localized: "Un simple bouclier en fer solide. Offre une d\xE9fense fiable et
+      r\xE9siste \xE0 toute attaque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140775
+    m_Localized: "\xC9p\xE9e du Poison Mortel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140776
+    m_Localized: "Une \xE9p\xE9e mortelle impr\xE9gn\xE9e de poison vert. D'un seul
+      coup elle injecte un poison fatal dans ses ennemis une arme terrifiante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140777
+    m_Localized: "\xC9p\xE9e du Jugement de L\xE9o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140778
+    m_Localized: "L'\xE9p\xE9e du jugement utilis\xE9e par le h\xE9ros L\xE9o. Tranche
+      le mal avec la lumi\xE8re de la justice et d\xE9livre le jugement."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140779
+    m_Localized: Dague de l'Ombrecoureur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140780
+    m_Localized: "Une dague pour ceux qui se d\xE9placent rapidement dans l'ombre.
+      Sa lame noire s'infiltre comme une ombre et tue ses ennemis en silence."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140781
+    m_Localized: Tueur de Slimes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140782
+    m_Localized: "Une \xE9p\xE9e droite sp\xE9ciale forg\xE9e pour chasser les slimes.
+      Sa lame tranche m\xEAme les ennemis les plus tenaces d'un seul coup ne laissant
+      aucune trace."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140783
+    m_Localized: "B\xE2ton d'Amplification"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140784
+    m_Localized: "Une baguette qui amplifie la puissance magique en la tirant \xE0
+      son plein potentiel. La magie du porteur devient \xE9crasante et \xE9crase
+      ses ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140785
+    m_Localized: "Un bouclier cr\xE9\xE9 par une ancienne civilisation perdue. Sa
+      surface est couverte de motifs myst\xE9rieux qui \xE9mettent une force magique
+      prot\xE9geant son porteur de toutes les attaques."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140786
+    m_Localized: "Chronoc\xE9pteur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140787
+    m_Localized: "Un b\xE2ton l\xE9gendaire impr\xE9gn\xE9 du pouvoir de manipuler
+      le flux du temps. Celui qui manie ce b\xE2ton peut acc\xE9l\xE9rer le temps
+      instantan\xE9ment, figer les mouvements des ennemis et doubler ses propres
+      actions. La magie lib\xE9r\xE9e transcende les fronti\xE8res du temps, reliant
+      le pass\xE9 et le futur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140788
+    m_Localized: "Lame maudite Mis\xE9ricorde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140789
+    m_Localized: "Un sabre maudit autrefois mani\xE9 par un \xE9p\xE9iste maudit
+      qui d\xE9vora d'innombrables \xE2mes. La lame tourbillonne de malveillance,
+      accordant un pouvoir \xE9crasant tout en rongeant l'esprit de celui qui la
+      manie. La haine de ceux qui ont \xE9t\xE9 coup\xE9s s'accumule dans l'\xE9p\xE9e,
+      amplifiant sa puissance destructrice."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140790
+    m_Localized: "Un bouclier solide que le chevalier Regalis aurait d\xE9fendu de
+      sa vie. Ce bouclier prot\xE8ge son porteur comme un mur sacr\xE9, repoussant
+      toutes les attaques ennemies. Avec le serment de Regalis, il d\xE9tient une
+      force de protection qui ne sera jamais bris\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140791
+    m_Localized: "\xC9p\xE9e \xC9pine Invers\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140792
+    m_Localized: "Cette \xE9p\xE9e est grav\xE9e d'\xE9pines qui poussent en sens
+      inverse, de la base jusqu'\xE0 la pointe de la lame. \xC0 chaque coup, elle
+      d\xE9chire la chair de l'ennemi, et en la retirant, elle inflige des blessures
+      encore plus profondes. Une \xE9p\xE9e cruelle qui apporte une douleur et un
+      d\xE9sespoir plus grands en transper\xE7ant sans craindre les repr\xE9sailles."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140793
+    m_Localized: "B\xE2ton d'Airy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140794
+    m_Localized: "Le b\xE2ton d'Airy est un b\xE2ton sacr\xE9 impr\xE9gn\xE9 du pouvoir
+      de gu\xE9rison. Il reste proche de son porteur, insufflant la vie aux bless\xE9s.
+      Sp\xE9cialis\xE9 dans la magie de gu\xE9rison, il apaise la douleur et calme
+      le c\u0153ur par un simple toucher."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140795
+    m_Localized: "B\xE2ton de R\xE9g\xE9n\xE9ration"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140796
+    m_Localized: "Un b\xE2ton sacr\xE9 qui restaure la vie perdue. Sa lumi\xE8re
+      brille constamment, apportant la gu\xE9rison entre les mains de son porteur.
+      Son pouvoir de gu\xE9rir les blessures et de r\xE9g\xE9n\xE9rer le c\u0153ur
+      apporte de l'espoir sur le champ de bataille."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140797
+    m_Localized: "\xC9p\xE9e d'Arnoid"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140798
+    m_Localized: "L'\xE9p\xE9e d'un noble qui allie \xE9l\xE9gance et force. Sa lame
+      fine brille d'un \xE9clat tranchant et magnifique, tranchant les ennemis d'un
+      seul coup. Le design raffin\xE9 symbolise la lign\xE9e noble et la dignit\xE9
+      de son porteur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140799
+    m_Localized: "Bat Col\xE9rique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140800
+    m_Localized: "Le Bat Col\xE9rique est une massue en bois grossi\xE8rement taill\xE9e.
+      Bien que simple d'apparence, une fois balanc\xE9e, elle d\xE9ploie une puissance
+      incroyable. Lorsque brandie avec col\xE8re, sa force double, en faisant une
+      arme puissante pour \xE9craser les ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140801
+    m_Localized: "\xC9p\xE9e de Tonnerre d'\xC9b\xE8ne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140802
+    m_Localized: "Une \xE9p\xE9e droite dor\xE9e qui est cens\xE9e renfermer le pouvoir
+      du dieu du tonnerre. Sa lame brille de mille feux et \xE0 chaque coup, le tonnerre
+      gronde. Elle conf\xE8re \xE0 son porteur la vitesse et la puissance de la foudre,
+      terrassant instantan\xE9ment ses ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140803
+    m_Localized: Grand Arc de Luxora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140804
+    m_Localized: "Un arc sacr\xE9 autrefois utilis\xE9 par un paladin. Sa corde est
+      impr\xE9gn\xE9e du pouvoir de la lumi\xE8re et les fl\xE8ches qu'il tire transpercent
+      les ennemis comme la foudre. Cet arc, symbole de justice, d\xE9tient le pouvoir
+      de purifier le mal et d'apporter la paix."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140805
+    m_Localized: "B\xE2ton d'Ilyssia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140806
+    m_Localized: "Un b\xE2ton sacr\xE9 que l'on dit d\xE9tenu par l'Archimage Ilyssia.
+      Il contient une magie blanche pure, dot\xE9e du pouvoir de purification et
+      de r\xE9g\xE9n\xE9ration. Le pouvoir de gu\xE9rison qu'il accorde \xE0 ses
+      alli\xE9s est \xE0 la fois doux et puissant, comme une caresse divine."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140807
+    m_Localized: "Arbal\xE8te Lourde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140808
+    m_Localized: "Une grande arbal\xE8te dot\xE9e d'une puissance \xE9crasante. Sa
+      construction massive et sa corde puissante conf\xE8rent aux carreaux qu'elle
+      tire une force destructrice. D'un seul tir, elle brise les d\xE9fenses ennemies
+      et d\xE9gage une aura mena\xE7ante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140809
+    m_Localized: "Une \xE9p\xE9e droite \xE9paisse et lourde, con\xE7ue pour des
+      coups puissants capables d'\xE9craser les d\xE9fenses ennemies. Simple mais
+      fiable, elle est un compagnon de confiance sur le champ de bataille."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140810
+    m_Localized: "Dague \xC9tincelante+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140811
+    m_Localized: "Une version am\xE9lior\xE9e de la dague qui projette des \xE9tincelles
+      depuis sa lame rougeoyante. Elle br\xFBle les ennemis en un seul coup et les
+      submerge par ses attaques rapides."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140812
+    m_Localized: Masse+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140813
+    m_Localized: "Une arme am\xE9lior\xE9e simple mais mortelle. Ses coups lourds
+      \xE9crasent les ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140814
+    m_Localized: "Dague Empoisonn\xE9e+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140815
+    m_Localized: "La lame, renforc\xE9e par un poison mortel, apporte douleur et
+      mort \xE0 ceux qu'elle touche. Un coup suffit pour d\xE9livrer un coup fatal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140816
+    m_Localized: Couteau de Poche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140817
+    m_Localized: "Une petite arme l\xE9g\xE8re et tr\xE8s portable. Son manche vert
+      symbolise l'harmonie avec la nature, tandis que sa lame blanche brillante allie
+      tranchant et silence. Un compagnon fiable pour ceux qui recherchent la discr\xE9tion
+      et les frappes rapides."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140818
+    m_Localized: "B\xE2ton de l'Ombre des \xC9toiles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140819
+    m_Localized: "Un b\xE2ton mystique qui rassemble le pouvoir des \xE9toiles brillantes
+      dans le ciel nocturne. Son extr\xE9mit\xE9 renferme une magie violette, conf\xE9rant
+      \xE0 son porteur le pouvoir de contr\xF4ler les \xE9toiles. Brillant dans la
+      nuit noire, ce b\xE2ton symbolise le pouvoir d'un guide des \xE9toiles."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140820
+    m_Localized: "\xC9p\xE9e des Flammes Ardentes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140821
+    m_Localized: "Une \xE9p\xE9e massive entour\xE9e de flammes ardentes. Sa lame
+      en feu donne l'impression d'emporter avec elle les flammes de l'enfer. R\xE9pondant
+      \xE0 la col\xE8re de son porteur, elle br\xFBle les ennemis et les r\xE9duit
+      en cendres. Ses flammes d\xE9vastatrices ont le pouvoir de tout incin\xE9rer
+      \xE0 leur approche."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140822
+    m_Localized: "Chronoc\xE9pteur+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140823
+    m_Localized: "Une version am\xE9lior\xE9e du b\xE2ton l\xE9gendaire qui contr\xF4le
+      le flux du temps. Celui qui le manie peut acc\xE9l\xE9rer le temps en un instant,
+      figer les mouvements ennemis et doubler ses propres actions. La magie qu'il
+      lib\xE8re transcende le temps, reliant le pass\xE9 et l'avenir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140824
+    m_Localized: "B\xE2ton de Flamme+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140825
+    m_Localized: "Une version am\xE9lior\xE9e du b\xE2ton magique qui contr\xF4le
+      la puissance du feu. Une petite flamme br\xFBle constamment \xE0 son extr\xE9mit\xE9,
+      renfermant le pouvoir d'incin\xE9rer les ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140826
+    m_Localized: "B\xE2ton de Foudre+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140827
+    m_Localized: "Une version am\xE9lior\xE9e du b\xE2ton impr\xE9gn\xE9 de la puissance
+      de la foudre. Un coup d'\xE9clair foudroie et paralyse les ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140828
+    m_Localized: Sac de Projectiles Exotiques
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140829
+    m_Localized: "Un sac rempli de divers projectiles con\xE7us dans des terres \xE9trang\xE8res.
+      Il contient une vari\xE9t\xE9 d'armes telles que des boomerangs et des grenades,
+      d\xE9stabilisant les ennemis avec des attaques impr\xE9visibles."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140830
+    m_Localized: Arc du Temps et de l'Espace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140831
+    m_Localized: "Une arme l\xE9gendaire qui contr\xF4le le temps et l'espace. On
+      dit que ceux qui tendent sa corde peuvent frapper des cibles du pass\xE9, du
+      futur, ainsi que des cibles \xE9loign\xE9es en un seul tir. Cet arc, dot\xE9
+      d'un pouvoir transcendant, ne peut \xEAtre mani\xE9 que par les \xE9lus."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140832
+    m_Localized: "Une version am\xE9lior\xE9e d'une gigantesque \xE9p\xE9e, dot\xE9e
+      d'un poids et d'une puissance \xE9crasants. Elle renferme la capacit\xE9 de
+      trancher tout avec une force brute."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140833
+    m_Localized: "D\xE9fenseur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140834
+    m_Localized: "Une \xE9p\xE9e massive qui fait \xE9galement office de bouclier.
+      Sa large et robuste lame peut bloquer les attaques ennemies tout en ass\xE9nant
+      un coup d\xE9vastateur. Les porteurs de cette \xE9p\xE9e peuvent ma\xEEtriser
+      un style de combat alliant attaque et d\xE9fense."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140835
+    m_Localized: "B\xE2ton de M\xE9pris"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140836
+    m_Localized: "Un b\xE2ton impr\xE9gn\xE9 de magie noire, conf\xE9rant une puissance
+      immense \xE0 son porteur tout en lui insufflant des sentiments de m\xE9pris.
+      Avec la magie noire tourbillonnant \xE0 son extr\xE9mit\xE9, il a le pouvoir
+      de corrompre l'\xE2me de ceux qui le touchent."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140837
+    m_Localized: "\xC9p\xE9e Foudroyante d'\xC9b\xE8ne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140838
+    m_Localized: "Une v\xE9ritable \xE9p\xE9e droite dor\xE9e cens\xE9e renfermer
+      le pouvoir du dieu du tonnerre. Sa lame brille intens\xE9ment, et \xE0 chaque
+      coup, le tonnerre gronde. Elle conf\xE8re \xE0 son porteur la rapidit\xE9 et
+      la puissance de la foudre, terrassant instantan\xE9ment ses ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140839
+    m_Localized: Lance Mortelle de Lavecoeur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140840
+    m_Localized: "Une v\xE9ritable lance gigantesque, transmise dans la famille Lavecoeur,
+      envelopp\xE9e de flammes. Sa chaleur semblable \xE0 la lave r\xE9duit les ennemis
+      en cendres, faisant d'elle une arme de destruction massive."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140841
+    m_Localized: "Chronoc\xE9pteur++"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140842
+    m_Localized: "La version ultime du b\xE2ton l\xE9gendaire qui contr\xF4le le
+      flux du temps. Celui qui manie ce b\xE2ton peut acc\xE9l\xE9rer le temps en
+      un instant, figer les mouvements ennemis et doubler ses propres actions. La
+      magie qu'il lib\xE8re transcende le temps, reliant le pass\xE9 et l'avenir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140843
+    m_Localized: "B\xE2ton Divin d'Exorcisme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140844
+    m_Localized: "Un b\xE2ton l\xE9gendaire impr\xE9gn\xE9 de la magie de la lumi\xE8re
+      qui dissipe les t\xE9n\xE8bres. Ce b\xE2ton accorde une protection divine \xE0
+      son porteur et poss\xE8de le pouvoir de purifier instantan\xE9ment la magie
+      mal\xE9fique. On raconte qu'il a \xE9t\xE9 forg\xE9 par un grand sage et mani\xE9
+      par un h\xE9ros qui a combattu pour prot\xE9ger le monde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140845
+    m_Localized: Crocs de l'Ombre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140846
+    m_Localized: "Un poignard qui aurait \xE9t\xE9 forg\xE9 dans les abysses de l'obscurit\xE9.
+      Sa lame est aussi noire que l'ombre, dansant avec des images r\xE9manentes
+      au gr\xE9 de la volont\xE9 de son porteur. Autrefois craint parmi les assassins,
+      son nom r\xE9sonne encore dans la nuit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140847
+    m_Localized: "B\xFBcher des Flammes Noires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140848
+    m_Localized: "On dit qu'il a \xE9t\xE9 forg\xE9 dans les feux de l'enfer. \xC0
+      chaque coup, des flammes rouge-noir s'embrasent, r\xE9duisant en cendres tout
+      ce qu'elles touchent. Envelopp\xE9e de flammes sombres, cette arme est destin\xE9e
+      \xE0 br\xFBler les p\xE9cheurs jusqu'\xE0 l'an\xE9antissement, un outil maudit
+      d'ex\xE9cution."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140849
+    m_Localized: "\xC9p\xE9e de la Majest\xE9 Divine"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140850
+    m_Localized: "Malgr\xE9 son apparence simple, elle renferme un pouvoir \xE9crasant.
+      Une aura blanche pure entoure sa lame, tranchant les t\xE9n\xE8bres des ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140851
+    m_Localized: "B\xE2ton Divin d'Airy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140852
+    m_Localized: "La version ultime du b\xE2ton sacr\xE9 impr\xE9gn\xE9 de pouvoir
+      gu\xE9risseur. Il insuffle la vie aux bless\xE9s, apaisant la douleur et calmant
+      les c\u0153urs d'un simple toucher, sp\xE9cialis\xE9 dans la magie de gu\xE9rison."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140853
+    m_Localized: "Grande \xC9p\xE9e de Luxora"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140854
+    m_Localized: "Cette grande \xE9p\xE9e, portant le nom de Luxora, qui dirigeait
+      les Chevaliers Sacr\xE9s, est impr\xE9gn\xE9e d'une \xE2me noble et du pouvoir
+      de la justice. Un seul coup qui bannit les t\xE9n\xE8bres d\xE9montre la fiert\xE9
+      et la dignit\xE9 d'un Chevalier Sacr\xE9, et son \xE9clat ne s'\xE9teindra
+      jamais."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140855
+    m_Localized: Furie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140856
+    m_Localized: "Comme son nom l'indique, cette arbal\xE8te massive a le pouvoir
+      de ravager les ennemis. Les carreaux qu'elle tire transpercent les ennemis
+      comme une temp\xEAte, et une fois la cible rep\xE9r\xE9e, il n'y a pas d'\xE9chappatoire.
+      C'est un symbole de destruction absolue, redout\xE9 sur le champ de bataille."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140857
+    m_Localized: Couteaux de Shen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140858
+    m_Localized: "Shen ma\xEEtrisait ces trois couteaux pour r\xE9duire au silence
+      ses ennemis dans l'obscurit\xE9. Les lames sont tranchantes, per\xE7ant les
+      c\u0153urs sans un bruit. Personne ne sait combien sont tomb\xE9s sous ces
+      couteaux."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140859
+    m_Localized: "D\xE9fenseur+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140860
+    m_Localized: "La version ultime d'une \xE9p\xE9e massive qui sert \xE9galement
+      de bouclier. Sa large et robuste lame bloque les attaques ennemies tout en
+      ass\xE9nant des coups \xE9crasants. Ceux qui manient cette \xE9p\xE9e peuvent
+      ma\xEEtriser un style de combat qui allie attaque et d\xE9fense."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140861
+    m_Localized: "Bouclier Sacr\xE9 de Luxora"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140862
+    m_Localized: "Un grand bouclier autrefois utilis\xE9 par le chevalier sacr\xE9
+      Luxora. Il rayonne d'une lumi\xE8re divine, offrant une d\xE9fense absolue.
+      Aucune attaque ennemie ne peut p\xE9n\xE9trer la protection de ce bouclier."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140863
+    m_Localized: Chronoshift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140864
+    m_Localized: "Un b\xE2ton l\xE9gendaire qui manipule librement le flux du temps.
+      Celui qui le manie peut traverser le pass\xE9 et le futur en un instant, changeant
+      radicalement le cours de la bataille. La magie \xE9mise par la pointe du b\xE2ton
+      devient une onde temporelle qui \xE9branle l'espace."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140865
+    m_Localized: Perce-Baleine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140866
+    m_Localized: "Une gigantesque ancre bleue qui aurait \xE9t\xE9 mani\xE9e par
+      le souverain des profondeurs. Lorsqu'elle est balanc\xE9e, elle cr\xE9e une
+      onde de choc comme si l'oc\xE9an lui-m\xEAme se f\xEAlait. Son pouvoir de percer
+      les baleines t\xE9moigne de la bravoure du gardien des mers."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140867
+    m_Localized: "Perce-\xC9l\xE9phant"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140868
+    m_Localized: "Un \xE9norme marteau gris qui, selon la l\xE9gende, peut transpercer
+      m\xEAme des \xE9l\xE9phants d'un seul coup. Ce marteau se distingue par son
+      poids et sa puissance destructrice, et il est dit que seuls ceux dot\xE9s d'une
+      force immense peuvent le manier."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140869
+    m_Localized: "\xC9p\xE9e Divine d'Arnold"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140870
+    m_Localized: "Une \xE9p\xE9e divine appartenant \xE0 un prince noble, alliant
+      \xE9l\xE9gance et puissance. Sa lame fine brille d'un \xE9clat \xE0 la fois
+      tranchant et magnifique, capable de trancher les ennemis d'un seul coup. Son
+      design raffin\xE9 symbolise la lign\xE9e noble et la gr\xE2ce de son porteur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140871
+    m_Localized: Ancre de Fer Noir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140872
+    m_Localized: "Une gigantesque ancre que l'on dit avoir \xE9t\xE9 rep\xEAch\xE9e
+      des profondeurs marines, son fer rayonne d'une lueur sombre qui absorbe toute
+      lumi\xE8re. Elle est d\xE9sormais redout\xE9e non seulement en tant qu'arme,
+      mais aussi comme une relique maudite impr\xE9gn\xE9e de la puissance des t\xE9n\xE8bres."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140873
+    m_Localized: Lance en Obsidienne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140874
+    m_Localized: "Une lance mystique qui aurait \xE9t\xE9 offerte par les dieux du
+      sous-sol, v\xE9n\xE9r\xE9s par les anciens guerriers. Fabriqu\xE9e en obsidienne
+      noire comme la nuit, elle brille magnifiquement, comme si elle incarnait les
+      t\xE9n\xE8bres elles-m\xEAmes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140875
+    m_Localized: "La version ultime d'une gigantesque \xE9p\xE9e qui se distingue
+      par son poids et sa puissance \xE9crasante. Elle renferme la force de tout
+      trancher."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140876
+    m_Localized: "Grande Lance des Temp\xEAtes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140877
+    m_Localized: "Une arme ancienne que l'on dit cr\xE9\xE9e par les dieux des temp\xEAtes.
+      Sa lame se divise en mille lances d'un seul coup, encerclant les ennemis et
+      d\xE9cha\xEEnant une temp\xEAte de destruction. Le porteur peut invoquer d'innombrables
+      lances pour d\xE9chirer ses ennemis comme un ouragan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140878
+    m_Localized: "Une arme lourde faite d'or brillant, dont le coup renferme le pouvoir
+      de secouer la terre. Ce marteau, utilis\xE9 par un ancien roi, conf\xE8re dignit\xE9
+      et puissance \xE0 son porteur, et sa brillance terrifie les ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140879
+    m_Localized: "La version ultime d'une lame courte mais tranchante. Un compagnon
+      fid\xE8le des assassins, brillant dans l'ombre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140880
+    m_Localized: "Poing du Karat\xE9 Watenryu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140881
+    m_Localized: "Les bandages enroul\xE9s autour de ce poing symbolisent la force
+      acquise apr\xE8s des ann\xE9es d'entra\xEEnement et de nombreux combats. Cette
+      arme, ma\xEEtris\xE9e uniquement par ceux qui ont perfectionn\xE9 le Karat\xE9
+      Watenryu, poss\xE8de le pouvoir de ma\xEEtriser instantan\xE9ment les ennemis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140882
+    m_Localized: "\xC9p\xE9e Tueuse d'Oni"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140883
+    m_Localized: "Une \xE9p\xE9e issue des l\xE9gendes anciennes, forg\xE9e pour
+      repousser les d\xE9mons. Elle ne porte aucun ornement superflu, ne comptant
+      que sur son tranchant et sa robustesse pour vaincre ses ennemis. Elle brille
+      d'une lumi\xE8re pure et puissante, refl\xE9tant la d\xE9termination de son
+      porteur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140884
+    m_Localized: Hache du Chasseur d'Ours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140885
+    m_Localized: "Une hache traditionnelle forg\xE9e pour abattre m\xEAme les plus
+      gros ours. Elle se distingue par son manche en bois robuste et sa lame aff\xFBt\xE9e,
+      faisant d'elle un outil appr\xE9ci\xE9 des chasseurs."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140886
+    m_Localized: Harpon de la Compassion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140887
+    m_Localized: "Une arme autrefois utilis\xE9e par un jeune h\xE9ros qui luttait
+      pour la justice. Sa pointe tranchante d\xE9livre des coups qui symbolisent
+      l'engagement du h\xE9ros envers la justice. Bien qu'elle terrasse les ennemis,
+      elle reste une arme pure, non souill\xE9e par le mal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140888
+    m_Localized: "B\xE2ton de la Fille Oni de la Lune"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140889
+    m_Localized: "Un b\xE2ton mani\xE9 par une jeune fille dont la lign\xE9e m\xEAle
+      le sang de la lune et des onis. Le b\xE2ton \xE9met une lueur bleue p\xE2le
+      \xE0 son extr\xE9mit\xE9, insufflant une peur silencieuse chez les ennemis.
+      Entre ses mains, sa puissance grandit avec les phases de la lune."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

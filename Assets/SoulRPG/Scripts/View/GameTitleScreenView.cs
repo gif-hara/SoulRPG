@@ -26,7 +26,15 @@ namespace SoulRPG
             document.Q<TMP_Text>("Text.Title").text = title;
             inputController.PushInputType(InputController.InputType.UI);
             sequences.Q<SequenceMonobehaviour>("Animation.AnyClick.Loop").PlayAsync(anyClickScope.Token).Forget();
-            await inputController.InputActions.UI.Click.OnPerformedAsObservable().FirstAsync();
+            var anyClickText = document.Q<TMP_Text>("Text.AnyClick");
+            document.Q("Text.Trial").SetActive(gameRule.IsTrialVersion);
+            TinyServiceLocator.Resolve<InputScheme>().AnyChangedAsObservable()
+                .Subscribe(_ =>
+                {
+                    anyClickText.text = inputController.InputActions.UI.Submit.GetTag() + ":開始";
+                })
+                .RegisterTo(scope);
+            await inputController.InputActions.UI.Submit.OnPerformedAsObservable().FirstAsync();
             anyClickScope.Cancel();
             anyClickScope.Dispose();
             await sequences.Q<SequenceMonobehaviour>("Animation.In").PlayAsync(scope);

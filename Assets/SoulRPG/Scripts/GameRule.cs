@@ -101,6 +101,10 @@ namespace SoulRPG
         private List<string> defaultPlayerNames;
         public List<string> DefaultPlayerNames => defaultPlayerNames;
 
+        [SerializeField]
+        private bool isTrialVersion;
+        public bool IsTrialVersion => isTrialVersion;
+
         [Serializable]
         public class ExperienceTableData
         {

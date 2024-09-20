@@ -39,6 +39,8 @@ namespace SoulRPG
 
         private readonly List<GameObject> messageElements = new();
 
+        private Define.MiniMapType miniMapType;
+
         public ExplorationView(
             HKUIDocument uiDocumentPrefab,
             HKUIDocument dungeonDocumentPrefab,
@@ -136,6 +138,16 @@ namespace SoulRPG
             var size = areaDocument.Q<RectTransform>("Area.Tips").rect.size;
             var tipSize = size / 10;
             var shadowParent = areaDocument.Q<RectTransform>("Area.Shadow.Viewport");
+            var isRotation = SaveData.LoadSafe().gameSettingData.isRotationMiniMap;
+            var tempDirection = character.Direction;
+            var rotationObject = areaDocument.Q<RectTransform>("RotationObject");
+            var characterFrame = areaDocument.Q<RectTransform>("Character.Frame");
+
+            if (isRotation)
+            {
+                rotationObject.localRotation = Quaternion.Euler(0, 0, 0.0f);
+                characterFrame.localRotation = Quaternion.Euler(0, 0, 0.0f);
+            }
 
             foreach (var i in dungeonController.CurrentDungeon.wall.List)
             {
@@ -213,6 +225,12 @@ namespace SoulRPG
                 });
                 dungeonObjects.Add(characterObject.gameObject);
             }
+
+            if (isRotation)
+            {
+                rotationObject.localRotation = Quaternion.Euler(0, 0, tempDirection.ToAngle());
+                characterFrame.localRotation = Quaternion.Euler(0, 0, -tempDirection.ToAngle());
+            }
         }
 
         private void SetupMiniMap(
@@ -233,7 +251,6 @@ namespace SoulRPG
             var rotationObject = areaDocument.Q<RectTransform>("RotationObject");
             var characterFrame = areaDocument.Q<RectTransform>("Character.Frame");
             var gameEvents = TinyServiceLocator.Resolve<GameEvents>();
-            var miniMapType = Define.MiniMapType.Default;
             var isRotation = SaveData.LoadSafe().gameSettingData.isRotationMiniMap;
             var directionNorth = areaDocument.Q<RectTransform>("Direction.North");
             var directionSouth = areaDocument.Q<RectTransform>("Direction.South");
@@ -375,7 +392,7 @@ namespace SoulRPG
             }
             foreach (var i in dungeonController.Enemies)
             {
-                var characterObject = Object.Instantiate(dungeonDocument.Q<Transform>("Dungeon.Enemy"), dungeonDocument.transform);
+                var characterObject = Object.Instantiate(dungeonDocument.Q<Transform>($"Dungeon.Enemy.{i.MasterDataEnemy.ViewId}"), dungeonDocument.transform);
                 characterObject.position = new Vector3(i.Position.x, 0, i.Position.y);
                 i.PositionAsObservable()
                     .Subscribe(x =>
@@ -530,6 +547,11 @@ namespace SoulRPG
         public HKUIDocument GetFloorEventDocument(DungeonInstanceFloorData data)
         {
             return dungeonFloorEventObjects[data];
+        }
+
+        public Define.MiniMapType GetMiniMapType()
+        {
+            return miniMapType;
         }
     }
 }

@@ -686,6 +686,8 @@ namespace SoulRPG
 
             public bool PlayBgmIfDefeated;
 
+            public int ViewId;
+
             [Serializable]
             public class DictionaryList : DictionaryList<int, Enemy>
             {

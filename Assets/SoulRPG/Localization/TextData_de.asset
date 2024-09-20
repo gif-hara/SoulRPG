@@ -1,0 +1,847 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextData_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 28f9ff92bfa98f14a9375eb2c35576cd, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1690431586304
+    m_Localized: Luxora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946432
+    m_Localized: Wiedergeburt von <size=75%>dem</size><size=120%>{SealedName}</size>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946433
+    m_Localized: Cain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690460946434
+    m_Localized: Selius
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140736
+    m_Localized: Ash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140737
+    m_Localized: Zain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140738
+    m_Localized: Sprechen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140739
+    m_Localized: "Eine einfache aber raffinierte Klinge. Leicht und scharf ein zuverl\xE4ssiger
+      Begleiter auf dem Schlachtfeld."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140740
+    m_Localized: "Eine kurze aber scharfe Klinge. Leuchtet im Schatten ein vertrauensw\xFCrdiger
+      Begleiter f\xFCr Attent\xE4ter."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140741
+    m_Localized: "Ein gewaltiges Schwert das mit \xFCberw\xE4ltigendem Gewicht und
+      Kraft prahlt. Enth\xE4lt die schiere Kraft alles zu spalten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140742
+    m_Localized: "Eine scharfe d\xFCnne Klinge die sogar R\xFCstungen durchbohrt.
+      Ein Schwert f\xFCr den pr\xE4zisen und erbarmungslosen Meister des Sto\xDFes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140743
+    m_Localized: Keule
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140744
+    m_Localized: "Eine einfache aber t\xF6dliche Waffe. Zerschmettert Feinde mit
+      schweren Schl\xE4gen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140745
+    m_Localized: Giftdolch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140746
+    m_Localized: "Eine mit Gift \xFCberzogene Klinge die ihren Opfern Schmerz und
+      Tod bringt. Ein einziger Sto\xDF ist ein t\xF6dlicher Schlag."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140747
+    m_Localized: Funkenklinge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140748
+    m_Localized: "Eine mit Blitz umh\xFCllte Klinge schnell wie ein Blitz. Zerschneidet
+      Feinde im Handumdrehen und fegt \xFCber das Schlachtfeld."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140749
+    m_Localized: Willekeule
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140750
+    m_Localized: "Ein Streitkolben der zu jemandem mit unersch\xFCtterlichem Willen
+      passt. Zerschmettert Knochen und zerst\xF6rt den Kampfeswillen der Feinde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140751
+    m_Localized: Flammenstab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140752
+    m_Localized: Ein magischer Stab der die Kraft des Feuers kontrolliert. Seine
+      Spitze brennt immer mit einer kleinen Flamme die die Kraft besitzt Feinde zu
+      verbrennen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140753
+    m_Localized: "Eine Waffe die mit der Kraft des Feuers durchdrungen ist. Verbrennt
+      Feinde w\xE4hrend sie mit \xFCberw\xE4ltigender Kraft zerschlagen werden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140754
+    m_Localized: Donnerstab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140755
+    m_Localized: "Ein Stab der mit der Macht des Blitzes durchdrungen ist. Schl\xE4gt
+      Feinde mit einem Blitz und l\xE4hmt sie."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140756
+    m_Localized: Schwert des Blaumagiers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140757
+    m_Localized: "Ein magisches Schwert das von blassblauem Licht umh\xFCllt ist.
+      Nur ein Blaumagier kann seine unbekannte Macht f\xFChren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140758
+    m_Localized: "Ein massives Schwert voller Gewicht. Besitzt die Zerst\xF6rungskraft
+      alles zu zerschneiden und beherrscht das Schlachtfeld mit einem einzigen Schlag."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140759
+    m_Localized: Funkendolch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140760
+    m_Localized: "Ein Dolch der Funken von seiner leuchtend roten Klinge verspr\xFCht.
+      Versengt Feinde mit einem Blitz und \xFCberw\xE4ltigt sie mit schnellen Angriffen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140761
+    m_Localized: Donnerfluchstab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140762
+    m_Localized: "Ein verfluchter Stab in dem gelbes und schwarzes Licht wabert.
+      Entfesselt einen Blitzfluch der die Feinde ins Verderben f\xFChrt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140763
+    m_Localized: Schmetterkeule
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140764
+    m_Localized: "Eine gewaltige Keule mit \xFCberw\xE4ltigender Zerst\xF6rungskraft.
+      Zerschmettert alle Feinde und hinterl\xE4sst nichts."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140765
+    m_Localized: Schnellbogen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140766
+    m_Localized: "Ein leichter Bogen der schnelle Bewegungen erm\xF6glicht. Schie\xDFt
+      Pfeile sofort ab die perfekte Waffe f\xFCr einen Scharfsch\xFCtzen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140767
+    m_Localized: Lanze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140768
+    m_Localized: Eine Waffe eines Ritters die mit einem Schild gepaart ist. Auf Angriffe
+      spezialisiert durchbricht sie die feindlichen Verteidigungslinien.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140769
+    m_Localized: Donnerschwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140770
+    m_Localized: "Ein schlankes Schwert das mit der Macht des Donners durchdrungen
+      ist. Schnell wie ein Blitz schneidet es durch Feinde w\xE4hrend es sie elektrisiert."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140771
+    m_Localized: "Lavaherz-Gro\xDFlanze"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140772
+    m_Localized: "Eine riesige in Flammen geh\xFCllte Lanze die in der Lavaherz-Familie
+      weitergegeben wurde. Ihre gl\xFChende Hitze verbrennt Feinde mit zerst\xF6rerischer
+      Kraft."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140773
+    m_Localized: Eisenschild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140774
+    m_Localized: "Ein einfacher Schild aus solidem Eisen. Bietet zuverl\xE4ssige
+      Verteidigung und widersteht jedem Angriff."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140775
+    m_Localized: Todgift-Schwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140776
+    m_Localized: "Ein t\xF6dliches Schwert das mit gr\xFCnem Gift durchtr\xE4nkt
+      ist. Mit einem einzigen Schlag injiziert es t\xF6dliches Gift in seine Feinde
+      eine furchterregende Waffe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140777
+    m_Localized: Leos Schwert des Urteils
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140778
+    m_Localized: "Das Schwert des Urteils das von dem Helden Leo benutzt wurde. Zerschneidet
+      das B\xF6se mit dem Licht der Gerechtigkeit und bringt das Urteil."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140779
+    m_Localized: "Schattenl\xE4ufer-Dolch"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140780
+    m_Localized: "Ein Dolch f\xFCr jene die sich schnell im Schatten bewegen. Seine
+      schwarze Klinge schleicht wie ein Schatten heran und t\xF6tet Feinde lautlos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140781
+    m_Localized: "Schleim-Schl\xE4chter"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140782
+    m_Localized: "Ein spezielles gerades Schwert das geschmiedet wurde um Schleime
+      zu jagen. Seine Klinge schneidet selbst die z\xE4hesten Feinde mit einem einzigen
+      Hieb durch und hinterl\xE4sst keine Spuren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140783
+    m_Localized: "Verst\xE4rkungsstab"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140784
+    m_Localized: "Ein Stab der magische Kr\xE4fte verst\xE4rkt und sie zu ihrem vollen
+      Potenzial entfaltet. Die Magie des Tr\xE4gers wird \xFCberw\xE4ltigend und
+      zerschmettert seine Feinde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140785
+    m_Localized: "Ein Schild das von einer verlorenen antiken Zivilisation geschaffen
+      wurde. Seine Oberfl\xE4che ist von mysteri\xF6sen Mustern bedeckt und strahlt
+      Magie aus die den Tr\xE4ger vor allen Angriffen sch\xFCtzt. Es ist als w\xFCrde
+      eine unsichtbare Wand es umgeben unbeeindruckt von den heftigsten Angriffen
+      bleiben."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140786
+    m_Localized: Chronozeptor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140787
+    m_Localized: "Ein legend\xE4rer Stab, der die Macht besitzt, den Fluss der Zeit
+      zu manipulieren. Wer diesen Stab schwingt, kann die Zeit im Handumdrehen beschleunigen,
+      die Bewegungen des Feindes einfrieren und seine eigenen Aktionen verdoppeln.
+      Die entfesselte Magie \xFCberschreitet die Grenzen der Zeit und verbindet Vergangenheit
+      und Zukunft."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140788
+    m_Localized: Verfluchte Klinge Misericorde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140789
+    m_Localized: "Ein verfluchtes Schwert, das einst von einem verdammten Schwertk\xE4mpfer
+      gef\xFChrt wurde, der unz\xE4hlige Seelen verschlang. Die Klinge wirbelt vor
+      Bosheit und verleiht \xFCberw\xE4ltigende Macht, w\xE4hrend sie den Verstand
+      des Tr\xE4gers zersetzt. Der Hass derjenigen, die geschnitten wurden, sammelt
+      sich im Schwert und verst\xE4rkt seine zerst\xF6rerische Kraft."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140790
+    m_Localized: "Ein robuster Schild, den der Ritter Regalis angeblich mit seinem
+      Leben verteidigte. Dieser Schild sch\xFCtzt seinen Tr\xE4ger wie eine heilige
+      Mauer und reflektiert alle Angriffe des Feindes. Zusammen mit dem Eid von Regalis
+      tr\xE4gt er die Macht des Schutzes, die niemals gebrochen wird."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140791
+    m_Localized: Umgekehrtes Dornenschwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140792
+    m_Localized: "Dieses Schwert ist mit Dornen versehen, die sich von der Basis
+      bis zur Spitze der Klinge umkehren. Mit jedem Sto\xDF zerrei\xDFt es das Fleisch
+      des Feindes, und beim Herausziehen verursacht es noch tiefere Wunden. Ein grausames
+      Schwert, das durch das Durchbohren ohne Angst vor Vergeltung gr\xF6\xDFere
+      Schmerzen und Verzweiflung bringt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140793
+    m_Localized: Luftstab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140794
+    m_Localized: "Der Airy-Stab ist ein heiliger Stab, der mit heilender Kraft erf\xFCllt
+      ist. Er bleibt in der N\xE4he seines Tr\xE4gers und haucht den Verwundeten
+      neues Leben ein. Er ist auf Heilmagie spezialisiert und lindert Schmerzen und
+      beruhigt das Herz mit nur einer Ber\xFChrung."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140795
+    m_Localized: Stab der Regeneration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140796
+    m_Localized: "Ein heiliger Stab, der verlorenes Leben wiederherstellt. Sein Licht
+      leuchtet unaufh\xF6rlich und bringt Heilung in die H\xE4nde seines Tr\xE4gers.
+      Seine Kraft, Wunden zu heilen und das Herz zu regenerieren, bringt Hoffnung
+      auf das Schlachtfeld."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140797
+    m_Localized: Arnoids Schwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140798
+    m_Localized: "Das Schwert eines Adligen, das Eleganz und St\xE4rke vereint. Seine
+      schlanke Klinge gl\xE4nzt mit einem scharfen und sch\xF6nen Schein und schneidet
+      Feinde mit einem einzigen Schwung. Das raffinierte Design symbolisiert die
+      edle Abstammung und W\xFCrde seines Tr\xE4gers."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140799
+    m_Localized: "W\xFCtender Kn\xFCppel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140800
+    m_Localized: "Der W\xFCtende Kn\xFCppel ist eine grob gehauene Keule aus Holz.
+      Obwohl er einfach aussieht, entfesselt er beim Schwingen eine erstaunliche
+      Kraft. Wenn er mit Wut geschwungen wird, verdoppelt sich seine St\xE4rke und
+      er wird zu einer m\xE4chtigen Waffe, um Feinde zu zerschmettern."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140801
+    m_Localized: Ebonia Donnerschwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140802
+    m_Localized: "Ein goldenes Schwert, das angeblich die Kraft des Donnergottes
+      in sich tr\xE4gt. Seine Klinge leuchtet hell, und bei jedem Schwung ert\xF6nt
+      ein Donnern. Es verleiht seinem Tr\xE4ger die Schnelligkeit und Kraft des Blitzes
+      und schl\xE4gt Feinde augenblicklich nieder."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140803
+    m_Localized: "Luxoras Gro\xDFbogen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140804
+    m_Localized: "Ein heiliger Bogen, der einst von einem Paladin benutzt wurde.
+      Seine Sehne ist mit der Kraft des Lichts durchdrungen, und die Pfeile, die
+      er abschie\xDFt, durchbohren Feinde wie Blitze. Dieser Bogen, ein Symbol der
+      Gerechtigkeit, hat die Macht, das B\xF6se zu reinigen und Frieden zu bringen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140805
+    m_Localized: Ilyssias Stab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140806
+    m_Localized: "Ein heiliger Stab, von dem gesagt wird, dass ihn Erzmagier Ilyssia
+      tr\xE4gt. Er enth\xE4lt reine wei\xDFe Magie und besitzt die Kraft der Reinigung
+      und Regeneration. Die Heilkr\xE4fte, die er Verb\xFCndeten verleiht, sind sanft
+      und m\xE4chtig zugleich, wie die Ber\xFChrung einer Gottheit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140807
+    m_Localized: Schwere Armbrust
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140808
+    m_Localized: "Eine gro\xDFe Armbrust, die mit \xFCberw\xE4ltigender Kraft beeindruckt.
+      Ihr massiver Bau und die starke Sehne verleihen den abgeschossenen Bolzen zerst\xF6rerische
+      Kraft. Mit einem einzigen Schuss zerschmettert sie die Verteidigung des Feindes
+      und strahlt eine bedrohliche Pr\xE4senz aus."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140809
+    m_Localized: "Ein dickes und schweres Schwert, das f\xFCr kraftvolle Hiebe entwickelt
+      wurde und die Verteidigung des Feindes zerschmettern kann. Einfach, aber solide,
+      ist es ein zuverl\xE4ssiger Begleiter auf dem Schlachtfeld."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140810
+    m_Localized: Funken Dolch+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140811
+    m_Localized: "Eine verbesserte Version des Dolches, der Funken von seiner rotgl\xFChenden
+      Klinge spr\xFCht. Mit einem einzigen Schlag versengt er den Feind und \xFCberw\xE4ltigt
+      ihn mit schnellen Angriffen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140812
+    m_Localized: Keule+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140813
+    m_Localized: "Eine einfache, aber t\xF6dliche verbesserte Waffe. Ihre schweren
+      Schl\xE4ge zerschmettern Feinde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140814
+    m_Localized: Giftdolch+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140815
+    m_Localized: "Die Klinge, die mit t\xF6dlichem Gift verst\xE4rkt wurde, bringt
+      Schmerz und Tod \xFCber jene, die sie trifft. Ein einziger Stich f\xFChrt zum
+      t\xF6dlichen Schlag."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140816
+    m_Localized: Taschenmesser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140817
+    m_Localized: "Eine leichte und hochgradig tragbare kleine Waffe. Ihr gr\xFCner
+      Griff symbolisiert die Harmonie mit der Natur, w\xE4hrend die leuchtend wei\xDFe
+      Klinge Sch\xE4rfe und Stille vereint. Ein zuverl\xE4ssiger Begleiter f\xFCr
+      diejenigen, die auf Heimlichkeit und schnelle Schl\xE4ge setzen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140818
+    m_Localized: Sternschattenstab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140819
+    m_Localized: "Ein mystischer Stab, der die Kraft der Sterne am Nachthimmel sammelt.
+      Seine Spitze enth\xE4lt violette Magie, die seinem Tr\xE4ger die F\xE4higkeit
+      verleiht, die Macht der Sterne zu kontrollieren. Im dunklen Nachthimmel leuchtend,
+      symbolisiert dieser Stab die Macht eines Sternf\xFChrers."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140820
+    m_Localized: Flammenschwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140821
+    m_Localized: "Ein Gro\xDFschwert, das von sengenden Flammen umh\xFCllt ist. Seine
+      brennende Klinge scheint die Feuer der H\xF6lle mit sich zu f\xFChren. Es reagiert
+      auf die Wut seines Tr\xE4gers, verbrennt Feinde und verwandelt sie in Asche.
+      Die tobenden Flammen haben die Kraft, alles zu verbrennen, was sich ihnen n\xE4hert."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140822
+    m_Localized: Chronozeptor+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140823
+    m_Localized: "Eine verbesserte Version des legend\xE4ren Stabs, der den Fluss
+      der Zeit kontrolliert. Wer diesen Stab f\xFChrt, kann die Zeit im Handumdrehen
+      beschleunigen, die Bewegungen des Feindes einfrieren und seine eigenen Handlungen
+      verdoppeln. Die freigesetzte Magie \xFCberschreitet die Grenzen der Zeit und
+      verbindet Vergangenheit und Zukunft."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140824
+    m_Localized: Flammenstab+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140825
+    m_Localized: "Eine verbesserte Version des magischen Stabs, der die Kraft des
+      Feuers kontrolliert. Eine kleine Flamme brennt st\xE4ndig an seiner Spitze
+      und birgt die Macht, Feinde zu verbrennen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140826
+    m_Localized: Donnerstab+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140827
+    m_Localized: "Eine verbesserte Version des Stabs, der mit der Macht des Donners
+      erf\xFCllt ist. Ein Blitzschlag l\xE4sst Feinde elektrisieren und l\xE4hmen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140828
+    m_Localized: Exotischer Projektilbeutel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140829
+    m_Localized: "Ein Beutel voller verschiedener Wurfgeschosse aus fernen L\xE4ndern.
+      Er enth\xE4lt eine Vielzahl von Waffen wie Bumerangs und Granaten, die Feinde
+      mit unvorhersehbaren Angriffen verwirren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140830
+    m_Localized: Bogen der Zeit und des Raums
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140831
+    m_Localized: "Eine legend\xE4re Waffe, die Zeit und Raum kontrolliert. Es hei\xDFt,
+      dass diejenigen, die seine Sehne spannen, Ziele in der Vergangenheit, Zukunft
+      und auch weit entfernte Ziele mit einem einzigen Schuss treffen k\xF6nnen.
+      Dieser Bogen, der mit transzendenter Kraft erf\xFCllt ist, kann nur von den
+      Auserw\xE4hlten gef\xFChrt werden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140832
+    m_Localized: "Eine verbesserte Version eines gigantischen Schwerts, das durch
+      sein \xFCberw\xE4ltigendes Gewicht und seine Kraft besticht. Es birgt die F\xE4higkeit,
+      alles mit roher Gewalt zu durchschneiden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140833
+    m_Localized: Verteidiger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140834
+    m_Localized: "Ein massives Schwert, das auch als Schild dient. Seine breite und
+      robuste Klinge kann feindliche Angriffe abwehren und gleichzeitig einen vernichtenden
+      Schlag austeilen. Diejenigen, die dieses Schwert f\xFChren, k\xF6nnen einen
+      Kampfstil meistern, der Angriff und Verteidigung vereint."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140835
+    m_Localized: Stab der Verachtung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140836
+    m_Localized: "Ein Stab, der mit dunkler Magie erf\xFCllt ist, die seinem Tr\xE4ger
+      immense Kraft verleiht, w\xE4hrend er gleichzeitig Gef\xFChle der Verachtung
+      einfl\xF6\xDFt. Mit schwarzer Magie an seiner Spitze birgt er die Gefahr, die
+      Seelen derjenigen zu verderben, die ihn ber\xFChren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140837
+    m_Localized: Ebonia Blitzschwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140838
+    m_Localized: "Ein wahrhaft goldenes Schwert, das angeblich die Macht des Donnergottes
+      in sich tr\xE4gt. Seine Klinge leuchtet hell, und bei jedem Schwung ert\xF6nt
+      ein Donnern. Es verleiht seinem Tr\xE4ger die Geschwindigkeit und Kraft des
+      Blitzes und schl\xE4gt Feinde augenblicklich nieder."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140839
+    m_Localized: Lavaherz' Todesflammenlanze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140840
+    m_Localized: "Eine gewaltige Lanze, die in der Familie Lavaherz \xFCberliefert
+      wird und von Flammen umh\xFCllt ist. Ihre hitze wie Lava verbrennt Feinde,
+      wodurch sie eine Waffe mit enormer Zerst\xF6rungskraft ist."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140841
+    m_Localized: Chronozeptor++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140842
+    m_Localized: "Die ultimative Version des legend\xE4ren Stabes, der den Fluss
+      der Zeit kontrolliert. Wer diesen Stab f\xFChrt, kann die Zeit im Handumdrehen
+      beschleunigen, die Bewegungen des Feindes einfrieren und seine eigenen Handlungen
+      verdoppeln. Die Magie, die er freisetzt, \xFCberschreitet die Grenzen der Zeit
+      und verbindet Vergangenheit und Zukunft."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140843
+    m_Localized: "G\xF6ttlicher Exorzismusstab"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140844
+    m_Localized: "Ein legend\xE4rer Stab, der mit dem Licht der Magie erf\xFCllt
+      ist, das die Dunkelheit vertreibt. Dieser Stab verleiht seinem Tr\xE4ger g\xF6ttlichen
+      Schutz und besitzt die F\xE4higkeit, b\xF6se Magie augenblicklich zu reinigen.
+      Es wird gesagt, dass er von einem gro\xDFen Weisen geschmiedet wurde und von
+      einem Helden gef\xFChrt wurde, der k\xE4mpfte, um die Welt zu sch\xFCtzen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140845
+    m_Localized: Schattenzahn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140846
+    m_Localized: "Ein Dolch, von dem gesagt wird, dass er aus den Tiefen der Dunkelheit
+      geschmiedet wurde. Seine Klinge ist so schwarz wie der Schatten und hinterl\xE4sst
+      Nachbilder, die dem Willen seines Tr\xE4gers folgen. Einst gef\xFCrchtet unter
+      Attent\xE4tern, hallt sein Name noch immer in der Nacht wider."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140847
+    m_Localized: Scheiterhaufen der schwarzen Flamme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140848
+    m_Localized: "Es wird gesagt, dass er in den Flammen der H\xF6lle geschmiedet
+      wurde. Mit jedem Schlag lodern rot-schwarze Flammen auf und verwandeln alles,
+      was sie ber\xFChren, in Asche. Diese Waffe, umh\xFCllt von schwarzem Feuer,
+      ist dazu bestimmt, die S\xFCnder zu verbrennen, ein verfluchtes Hinrichtungswerkzeug."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140849
+    m_Localized: "Schwert der g\xF6ttlichen Majest\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140850
+    m_Localized: "Trotz seines schlichten Aussehens birgt es eine \xFCberw\xE4ltigende
+      Macht. Eine reine wei\xDFe Aura umh\xFCllt seine Klinge und durchschneidet
+      die Dunkelheit der Feinde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140851
+    m_Localized: "Lufts g\xF6ttlicher Stab"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140852
+    m_Localized: "Die ultimative Version des heiligen Stabes, der mit Heilkr\xE4ften
+      erf\xFCllt ist. Er bringt den Verwundeten Leben, lindert Schmerzen und beruhigt
+      Herzen mit nur einer Ber\xFChrung, spezialisiert auf Heilmagie."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140853
+    m_Localized: "Luxoras Gro\xDFschwert"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140854
+    m_Localized: "Dieses Gro\xDFschwert, das den Namen Luxora tr\xE4gt, der die Heiligen
+      Ritter anf\xFChrte, ist mit einer edlen Seele und der Kraft der Gerechtigkeit
+      erf\xFCllt. Ein einziger Hieb, der die Dunkelheit vertreibt, demonstriert den
+      Stolz und die W\xFCrde eines Heiligen Ritters, und sein Glanz wird niemals
+      verblassen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140855
+    m_Localized: Amoklauf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140856
+    m_Localized: "Wie der Name schon sagt, besitzt diese massive Armbrust die Macht,
+      Feinde zu verw\xFCsten. Die Bolzen, die sie abfeuert, durchbohren Feinde wie
+      ein Sturm, und sobald ein Ziel anvisiert ist, gibt es kein Entkommen. Sie ist
+      ein Symbol absoluter Zerst\xF6rung, gef\xFCrchtet auf dem Schlachtfeld."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140857
+    m_Localized: Shens Messer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140858
+    m_Localized: "Shen beherrschte diese drei Messer, um Feinde im Dunkeln zum Schweigen
+      zu bringen. Die Klingen sind scharf und durchbohren lautlos die Herzen der
+      Feinde. Niemand wei\xDF, wie viele durch diese Messer gefallen sind."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140859
+    m_Localized: Verteidiger+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140860
+    m_Localized: "Die ultimative Version eines massiven Schwertes, das auch als Schild
+      dient. Seine breite und robuste Klinge blockiert feindliche Angriffe und teilt
+      gleichzeitig vernichtende Schl\xE4ge aus. Diejenigen, die dieses Schwert f\xFChren,
+      k\xF6nnen einen Kampfstil meistern, der sowohl Angriff als auch Verteidigung
+      kombiniert."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140861
+    m_Localized: Luxoras Heiligenschild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140862
+    m_Localized: "Ein gro\xDFer Schild, der einst vom heiligen Ritter Luxora verwendet
+      wurde. Er strahlt ein g\xF6ttliches Licht aus und bietet absoluten Schutz.
+      Kein feindlicher Angriff kann die Verteidigung dieses Schildes durchdringen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140863
+    m_Localized: Zeitschub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140864
+    m_Localized: "Ein legend\xE4rer Stab, der den Fluss der Zeit frei manipuliert.
+      Sein Tr\xE4ger kann augenblicklich durch die Vergangenheit und Zukunft reisen
+      und das Schlachtfeld entscheidend zu seinen Gunsten wenden. Die von der Spitze
+      des Stabs ausgestrahlte Magie wird zu einer Welle der Zeit, die den Raum ersch\xFCttert."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140865
+    m_Localized: Walstecher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140866
+    m_Localized: "Ein riesiger blauer Anker, von dem gesagt wird, dass er vom Herrscher
+      der Tiefsee gef\xFChrt wurde. Beim Schwingen erzeugt er eine Sto\xDFwelle,
+      als ob sich das Meer selbst spalten w\xFCrde. Seine Kraft, Wale zu durchbohren,
+      ist ein Zeichen des Mutes des W\xE4chters der Meere."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140867
+    m_Localized: Elefantenstecher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140868
+    m_Localized: "Ein riesiger grauer Hammer, der angeblich mit einem einzigen Schlag
+      sogar Elefanten durchbohren kann. Diese Waffe zeichnet sich durch ihr enormes
+      Gewicht und ihre Zerst\xF6rungskraft aus und es hei\xDFt, dass nur diejenigen
+      mit immenser Kraft sie f\xFChren k\xF6nnen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140869
+    m_Localized: "Arnolds G\xF6ttliches Schwert"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140870
+    m_Localized: "Ein g\xF6ttliches Schwert eines edlen Prinzen, das Eleganz und
+      St\xE4rke vereint. Seine schlanke Klinge strahlt einen scharfen, aber wundersch\xF6nen
+      Glanz aus und kann Feinde mit einem einzigen Schlag durchtrennen. Das raffinierte
+      Design symbolisiert die edle Abstammung und Anmut seines Tr\xE4gers."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140871
+    m_Localized: Schwarze Eisenanker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140872
+    m_Localized: "Ein riesiger Anker, von dem man sagt, dass er aus den Tiefen des
+      Meeres gehoben wurde. Sein Eisen strahlt einen dunklen Glanz aus, der alles
+      Licht verschluckt. Jetzt wird dieser Anker nicht nur als Waffe, sondern auch
+      als verfluchtes Relikt gef\xFCrchtet, das mit der Macht der Dunkelheit durchdrungen
+      ist."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140873
+    m_Localized: Obsidianspeer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140874
+    m_Localized: "Ein mystischer Speer, der angeblich von den G\xF6ttern der Unterwelt,
+      die von den alten Kriegern verehrt wurden, verliehen wurde. Der Speer, aus
+      tiefschwarzem Obsidian gefertigt, gl\xE4nzt wundersch\xF6n, als w\xE4re er
+      die Verk\xF6rperung der Dunkelheit selbst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140875
+    m_Localized: "Die ultimative Version eines gigantischen Schwerts, das durch sein
+      \xFCberw\xE4ltigendes Gewicht und seine Kraft besticht. Es birgt die St\xE4rke,
+      alles zu durchtrennen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140876
+    m_Localized: "Gro\xDFer Sturmspie\xDF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140877
+    m_Localized: "Eine alte Waffe, die von den G\xF6ttern des Sturms erschaffen worden
+      sein soll. Ihre Klinge teilt sich mit einem einzigen Schlag in tausend Speere,
+      die die Feinde umzingeln und einen Zerst\xF6rungssturm entfachen. Der Tr\xE4ger
+      kann unz\xE4hlige Speere herbeirufen, die wie ein Sturm durch die Feinde schneiden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140878
+    m_Localized: "Eine schwere Waffe aus strahlendem Gold, deren Schlag die Macht
+      besitzt, die Erde zu ersch\xFCttern. Dieser Hammer, der von einem alten K\xF6nig
+      gef\xFChrt worden sein soll, verleiht seinem Tr\xE4ger W\xFCrde und Macht,
+      und sein Glanz versetzt die Feinde in Angst und Schrecken."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140879
+    m_Localized: "Die ultimative Version einer kurzen, aber rasiermesserscharfen
+      Klinge. Ein vertrauter Begleiter von Attent\xE4tern, der im Schatten leuchtet."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140880
+    m_Localized: Watenryu-Karate-Faust
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140881
+    m_Localized: "Die Bandagen um diese Faust symbolisieren die Kraft, die durch
+      jahrelanges Training und unz\xE4hlige K\xE4mpfe erworben wurde. Diese Waffe,
+      die nur von denen gemeistert wird, die das Watenryu-Karate perfektioniert haben,
+      hat die Macht, Feinde augenblicklich zu \xFCberw\xE4ltigen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140882
+    m_Localized: "D\xE4monenj\xE4ger-Schwert"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140883
+    m_Localized: "Ein Schwert aus alten Legenden, geschmiedet, um D\xE4monen abzuwehren.
+      Es tr\xE4gt keinen unn\xF6tigen Schmuck und verl\xE4sst sich nur auf seine
+      Sch\xE4rfe und Haltbarkeit, um Feinde zu besiegen. Es leuchtet mit einem reinen
+      und kraftvollen Glanz, der den Willen seines Tr\xE4gers widerspiegelt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140884
+    m_Localized: "B\xE4renj\xE4ger-Axt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140885
+    m_Localized: "Eine traditionelle Axt, die geschmiedet wurde, um sogar die gr\xF6\xDFten
+      B\xE4ren zu erlegen. Sie zeichnet sich durch einen robusten Holzgriff und eine
+      scharf geschliffene Klinge aus und ist bei J\xE4gern beliebt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140886
+    m_Localized: Harpunen der Barmherzigkeit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140887
+    m_Localized: "Eine Waffe, die einst von einem jungen Helden verwendet wurde,
+      der f\xFCr Gerechtigkeit k\xE4mpfte. Ihre scharfe Spitze versetzt Hiebe, die
+      das Engagement des Helden f\xFCr die Gerechtigkeit symbolisieren. Obwohl sie
+      Feinde niederschl\xE4gt, bleibt sie eine Waffe reiner Absicht, unbefleckt vom
+      B\xF6sen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140888
+    m_Localized: "Stab der Mond-Oni-M\xE4dchen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690465140889
+    m_Localized: "Ein Stab, der von einem M\xE4dchen mit dem Blut von Mond und Oni
+      gef\xFChrt wird. Die Spitze des Stabs leuchtet in blassem Blau und erf\xFCllt
+      die Feinde mit stiller Angst. In ihren H\xE4nden w\xE4chst seine Macht mit
+      den Mondphasen."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

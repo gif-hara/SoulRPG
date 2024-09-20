@@ -42,7 +42,10 @@ def find_japanese_in_assets_folder():
     seen_strings = set()  # 重複防止用のセット
     
     # Assetsフォルダ内のファイルを再帰的に探索
-    for root, _, files in os.walk(assets_directory):
+    for root, dirs, files in os.walk(assets_directory):
+        # Localizationフォルダを検索対象外にする
+        dirs[:] = [d for d in dirs if d != 'Localization']
+        
         for file in files:
             # ファイル名に「SDF」が含まれている場合はスキップ
             if 'SDF' in file:

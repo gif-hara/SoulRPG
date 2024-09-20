@@ -225,7 +225,7 @@ namespace SoulRPG
         public CharacterBattleStatus(MasterData.Enemy enemy)
             : this
             (
-                enemy.Name.Replace("{SealedName}", SaveData.LoadSafe().playerData.sealedName),
+                enemy.Name.Localized().Replace("{SealedName}", SaveData.LoadSafe().playerData.sealedName),
                 enemy.HitPoint,
                 enemy.HitPoint,
                 enemy.Stamina,

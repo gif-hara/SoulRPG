@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/SoulRPG/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 0d45b9ee6b9ccc24cbded06ed0f3cc76, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 7e0f7aa3c6dcaec4cab160b9c323eb05, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 88bc39fc49af96a49a1d4964aecb470f, type: 3}
+    com.unity.localization.addressable-group-rules: {fileID: 11400000, guid: dab176c7327aac345a8e8f0d08674947, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 637c01e1b22a3214e958e0d1df89801c, type: 2}
   m_UseUCBPForAssetBundles: 0

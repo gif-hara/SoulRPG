@@ -74,6 +74,9 @@ MonoBehaviour:
       data:
         elements:
         - evaluator:
+            rid: 6455564140641517646
+          sequences: {fileID: 11400000, guid: 6a2022dcd509579449d15b57532cf5b3, type: 2}
+        - evaluator:
             rid: 6455563984491249671
           sequences: {fileID: 11400000, guid: ad8738c6352ab8d449581712a9010f28, type: 2}
         - evaluator:
@@ -99,3 +102,6 @@ MonoBehaviour:
       type: {class: Constant, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
       data:
         value: 1
+    - rid: 6455564140641517646
+      type: {class: IsTrrialVersion, ns: SoulRPG.ContainerEvaluators, asm: Assembly-CSharp}
+      data: 

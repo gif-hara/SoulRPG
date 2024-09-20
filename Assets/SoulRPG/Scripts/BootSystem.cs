@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using SoulRPG;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 namespace HK
 {
@@ -41,6 +42,7 @@ namespace HK
         {
             initializeState = InitializeState.Initializing;
             await InitializeAudioManagerAsync();
+            await InitializeLocalizationAsync();
             initializeState = InitializeState.Initialized;
         }
 
@@ -50,6 +52,15 @@ namespace HK
             var instance = Object.Instantiate(prefab);
             TinyServiceLocator.Register(instance);
             Object.DontDestroyOnLoad(instance.gameObject);
+        }
+
+        private static UniTask InitializeLocalizationAsync()
+        {
+#if UNITY_WEBGL
+            return UniTask.CompletedTask;
+#else
+            return LocalizationSettings.InitializationOperation.Task.AsUniTask();
+#endif
         }
     }
 }
