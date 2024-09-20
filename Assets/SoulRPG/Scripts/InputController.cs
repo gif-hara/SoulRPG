@@ -74,10 +74,10 @@ namespace SoulRPG
                     gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
                     {
                         return
-                            inputActions.InGame.Move.GetTag() + ":移動" +
-                            inputActions.InGame.Shift.GetTag() + ":水平移動" +
-                            inputActions.InGame.ToMenu.GetTag() + ":メニュー" +
-                            inputActions.InGame.ToggleMiniMapView.GetTag() + ":マップ切り替え";
+                            inputActions.InGame.Move.GetTag() + ":移動".Localized() +
+                            inputActions.InGame.Shift.GetTag() + ":水平移動".Localized() +
+                            inputActions.InGame.ToMenu.GetTag() + ":メニュー".Localized() +
+                            inputActions.InGame.ToggleMiniMapView.GetTag() + ":マップ切り替え".Localized();
                     }, inputGuideScope.Token));
                     break;
                 case InputType.UI:
@@ -87,9 +87,9 @@ namespace SoulRPG
                     gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
                     {
                         return
-                            inputActions.UI.Navigate.GetTag() + ":選択" +
-                            inputActions.UI.Submit.GetTag() + ":決定" +
-                            inputActions.UI.Cancel.GetTag() + ":キャンセル";
+                            inputActions.UI.Navigate.GetTag() + ":選択".Localized() +
+                            inputActions.UI.Submit.GetTag() + ":決定".Localized() +
+                            inputActions.UI.Cancel.GetTag() + ":キャンセル".Localized();
                     }, inputGuideScope.Token));
                     break;
                 case InputType.Options:
@@ -99,10 +99,10 @@ namespace SoulRPG
                     gameEvents.OnRequestShowInputGuideBottom.OnNext((() =>
                     {
                         return
-                            inputActions.Options.Navigate.GetTag() + ":選択" +
-                            inputActions.Options.Submit.GetTag() + ":決定" +
-                            inputActions.Options.Cancel.GetTag() + ":キャンセル" +
-                            inputActions.Options.PreviousTab.GetTag() + inputActions.Options.NextTab.GetTag() + ":カテゴリ移動";
+                            inputActions.Options.Navigate.GetTag() + ":選択".Localized() +
+                            inputActions.Options.Submit.GetTag() + ":決定".Localized() +
+                            inputActions.Options.Cancel.GetTag() + ":キャンセル".Localized() +
+                            inputActions.Options.PreviousTab.GetTag() + inputActions.Options.NextTab.GetTag() + ":カテゴリ移動".Localized();
                     }, inputGuideScope.Token));
                     break;
             }

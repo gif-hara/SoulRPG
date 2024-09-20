@@ -36,8 +36,8 @@ namespace SoulRPG
                 var t = targetType == Define.TargetType.Self ? actor : target;
                 t.BattleStatus.AddKnifeCount(value);
                 var message = value > 0
-                    ? $"{t.BattleStatus.NameWithTag}のナイフストックが<color=#99FF99>{value}</color>蓄積した"
-                    : $"{t.BattleStatus.NameWithTag}のナイフストックが<color=#FF9999>{-value}</color>減少した";
+                    ? "{0}のナイフストックが<color=#99FF99>{1}</color>蓄積した。".Localized().Format(t.BattleStatus.NameWithTag, value)
+                    : "{0}のナイフストックが<color=#FF9999>{1}</color>減少した。".Localized().Format(t.BattleStatus.NameWithTag, -value);
                 await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new(message, "Sfx.Message.0"));
             }
         }

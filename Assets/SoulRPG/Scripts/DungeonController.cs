@@ -494,8 +494,9 @@ namespace SoulRPG
 
             var scope = CancellationTokenSource.CreateLinkedTokenSource(enterScope.Token);
             var inputController = TinyServiceLocator.Resolve<InputController>();
+            var message = "{0}開ける".Localized().Format(inputController.InputActions.InGame.Interact.GetTag());
             TinyServiceLocator.Resolve<GameEvents>().OnRequestShowInputGuideCenter.OnNext(
-                (() => $"{inputController.InputActions.InGame.Interact.GetTag()}開ける", scope.Token));
+                (() => message, scope.Token));
             return UniTask.CompletedTask;
         }
 
@@ -509,7 +510,7 @@ namespace SoulRPG
                 case "None":
                     if (!wallEvent.IsOpen)
                     {
-                        gameEvents.OnRequestShowMessage.OnNext(new("扉が開いた。", "Sfx.OpenDoor.0"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("扉が開いた。".Localized(), "Sfx.OpenDoor.0"));
                         wallEvent.Open();
                         AddReachedPoint(character);
                         gameEvents.OnOpenDoor.OnNext(Unit.Default);
@@ -520,7 +521,7 @@ namespace SoulRPG
                 case "Lock":
                     if (!wallEvent.IsOpen)
                     {
-                        gameEvents.OnRequestShowMessage.OnNext(new("こちらからは開かないようだ。", "Sfx.Message.0"));
+                        gameEvents.OnRequestShowMessage.OnNext(new("こちらからは開かないようだ。".Localized(), "Sfx.Message.0"));
                     }
 
                     break;
@@ -582,7 +583,8 @@ namespace SoulRPG
                 }
                 var addExperience = await playerCharacter.AilmentController.OnCalculateAddExperienceAsync(enemyCharacter.BattleStatus.Experience);
                 character.InstanceStatus.AddExperience(addExperience);
-                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"<color=#88FF88>{addExperience}</color>の経験値を獲得した。", "Sfx.AcquireExperience.0"));
+                var message = "<color=#88FF88>{0}</color>の経験値を獲得した。".Localized().Format(addExperience);
+                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new(message, "Sfx.AcquireExperience.0"));
             }
             else
             {

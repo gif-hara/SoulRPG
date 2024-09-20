@@ -39,8 +39,8 @@ namespace SoulRPG
                 var value = valueResolver.Resolve(container);
                 t.BattleStatus.AddBehaviourPoint(value);
                 var message = value > 0
-                    ? $"{t.BattleStatus.NameWithTag}のBPが<color=#99FF99>{value}</color>回復した。"
-                    : $"{t.BattleStatus.NameWithTag}のBPが<color=#FF9999>{-value}</color>減少した。";
+                    ? "{0}のBPが<color=#99FF99>{1}</color>回復した。".Localized().Format(t.BattleStatus.NameWithTag, value)
+                    : "{0}のBPが<color=#FF9999>{1}</color>減少した。".Localized().Format(t.BattleStatus.NameWithTag, -value);
                 await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new(message, "Sfx.Message.0"));
             }
         }

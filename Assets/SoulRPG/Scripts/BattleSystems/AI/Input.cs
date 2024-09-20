@@ -96,7 +96,7 @@ namespace SoulRPG
                 {
                     GameListView.ApplyAsSimpleElement(
                         x,
-                        "武器",
+                        "武器".Localized(),
                         _ =>
                         {
                             AudioManager.PlaySfx("Sfx.Message.0");
@@ -104,14 +104,14 @@ namespace SoulRPG
                         },
                         _ =>
                         {
-                            GameTipsView.SetTip("武器を利用して攻撃などを行う。");
+                            GameTipsView.SetTip("武器を利用して攻撃などを行う。".Localized());
                         });
                 }),
                 new(x =>
                 {
                     GameListView.ApplyAsSimpleElement(
                         x,
-                        "確認",
+                        "確認".Localized(),
                         _ =>
                         {
                             AudioManager.PlaySfx("Sfx.Message.0");
@@ -119,14 +119,14 @@ namespace SoulRPG
                         },
                         _ =>
                         {
-                            GameTipsView.SetTip("状態異常・ステータスなどの情報を確認する。");
+                            GameTipsView.SetTip("状態異常・ステータスなどの情報を確認する。".Localized());
                         });
                 }),
                 new(x =>
                 {
                     GameListView.ApplyAsSimpleElement(
                         x,
-                        "武器変更",
+                        "武器変更".Localized(),
                         _ =>
                         {
                             AudioManager.PlaySfx("Sfx.Message.0");
@@ -134,7 +134,7 @@ namespace SoulRPG
                         },
                         _ =>
                         {
-                            GameTipsView.SetTip("装備している武器を変更する。");
+                            GameTipsView.SetTip("装備している武器を変更する。".Localized());
                         });
                 })
             };
@@ -146,7 +146,7 @@ namespace SoulRPG
                     {
                         GameListView.ApplyAsSimpleElement(
                             x,
-                            "全スキル",
+                            "全スキル".Localized(),
                             _ =>
                             {
                                 AudioManager.PlaySfx("Sfx.Message.0");
@@ -157,7 +157,7 @@ namespace SoulRPG
             }
 #endif
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
-            listDocument.Q<TMP_Text>("Header").text = "選べ";
+            listDocument.Q<TMP_Text>("Header").text = "選べ".Localized();
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {
@@ -202,7 +202,7 @@ namespace SoulRPG
                     });
                 });
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, cachedSelectWeaponIndex);
-            listDocument.Q<TMP_Text>("Header").text = "武器を選べ";
+            listDocument.Q<TMP_Text>("Header").text = "武器を選べ".Localized();
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -251,19 +251,19 @@ namespace SoulRPG
                             AudioManager.PlaySfx("Sfx.Message.0");
                             if (isUsed)
                             {
-                                gameEvents.OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。", "Sfx.Message.0"));
+                                gameEvents.OnRequestShowMessage.OnNext(new("このターンではもう使用出来ない。".Localized(), "Sfx.Message.0"));
                                 return;
                             }
                             var behaviourPoint = await actor.GetFixedNeedBehaviourPointAsync(x.NeedBehaviourPoint);
                             if (!actor.BattleStatus.HasBehaviourPoint(behaviourPoint))
                             {
-                                gameEvents.OnRequestShowMessage.OnNext(new("BPが足りない。", "Sfx.Message.0"));
+                                gameEvents.OnRequestShowMessage.OnNext(new("BPが足りない。".Localized(), "Sfx.Message.0"));
                                 return;
                             }
                             var stamina = await actor.GetFixedNeedStaminaAsync(x.NeedStamina);
                             if (!actor.BattleStatus.HasStamina(stamina))
                             {
-                                gameEvents.OnRequestShowMessage.OnNext(new("スタミナが足りない。", "Sfx.Message.0"));
+                                gameEvents.OnRequestShowMessage.OnNext(new("スタミナが足りない。".Localized(), "Sfx.Message.0"));
                                 return;
                             }
                             cachedSelectSkillIndex = skills.IndexOf(x);
@@ -277,7 +277,7 @@ namespace SoulRPG
                 });
             });
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, cachedSelectSkillIndex);
-            listDocument.Q<TMP_Text>("Header").text = "スキルを選べ";
+            listDocument.Q<TMP_Text>("Header").text = "スキルを選べ".Localized();
             await scope.WaitUntilCanceled();
             GameTipsView.SetTip(string.Empty);
             if (listDocument != null)
@@ -305,7 +305,7 @@ namespace SoulRPG
                 {
                     GameListView.ApplyAsSimpleElement(
                         x,
-                        "ステータス",
+                        "ステータス".Localized(),
                         _ =>
                         {
                             AudioManager.PlaySfx("Sfx.Message.0");
@@ -313,14 +313,14 @@ namespace SoulRPG
                         },
                         _ =>
                         {
-                            GameTipsView.SetTip("各種ステータスやカット率の確認を行う。");
+                            GameTipsView.SetTip("各種ステータスやカット率の確認を行う。".Localized());
                         });
                 }),
                 new(x =>
                 {
                     GameListView.ApplyAsSimpleElement(
                         x,
-                        "状態異常",
+                        "状態異常".Localized(),
                         _ =>
                         {
                             AudioManager.PlaySfx("Sfx.Message.0");
@@ -329,7 +329,7 @@ namespace SoulRPG
                         },
                         _ =>
                         {
-                            GameTipsView.SetTip("自分自身に付与されている状態異常を確認する。");
+                            GameTipsView.SetTip("自分自身に付与されている状態異常を確認する。".Localized());
                         });
                 }),
             };
@@ -340,7 +340,7 @@ namespace SoulRPG
                     {
                         GameListView.ApplyAsSimpleElement(
                             x,
-                            "状態異常（敵）",
+                            "状態異常（敵）".Localized(),
                             _ =>
                             {
                                 AudioManager.PlaySfx("Sfx.Message.0");
@@ -349,13 +349,13 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip("敵に付与されている状態異常を確認する。");
+                                GameTipsView.SetTip("敵に付与されている状態異常を確認する。".Localized());
                             });
                     }
                 );
             }
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
-            listDocument.Q<TMP_Text>("Header").text = "情報を選べ";
+            listDocument.Q<TMP_Text>("Header").text = "情報を選べ".Localized();
             await scope.WaitUntilCanceled();
             if (listDocument != null)
             {
@@ -393,8 +393,8 @@ namespace SoulRPG
                     return new Action<HKUIDocument>(element =>
                     {
                         var header = x.GetRemainingTurnCount() <= -1
-                            ? x.GetMasterDataAilment().Name
-                            : $"{x.GetMasterDataAilment().Name}(残り{x.GetRemainingTurnCount()}ターン)";
+                            ? x.GetMasterDataAilment().Name.Localized()
+                            : "{0}(残り{1}ターン)".Localized().Format(x.GetMasterDataAilment().Name.Localized(), x.GetRemainingTurnCount());
                         GameListView.ApplyAsSimpleElement(
                             element,
                             header,
@@ -403,8 +403,8 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                informationDocument.Q<TMP_Text>("Name").text = x.GetMasterDataAilment().Name;
-                                informationDocument.Q<TMP_Text>("Description").text = x.GetMasterDataAilment().Description;
+                                informationDocument.Q<TMP_Text>("Name").text = x.GetMasterDataAilment().Name.Localized();
+                                informationDocument.Q<TMP_Text>("Description").text = x.GetMasterDataAilment().Description.Localized();
                             });
                     });
                 });
@@ -479,7 +479,7 @@ namespace SoulRPG
                             : Define.HandWeaponId;
                         GameListView.ApplyAsSimpleElement(
                             element,
-                            fixedWeaponId.GetMasterDataItem().Name,
+                            fixedWeaponId.GetMasterDataItem().Name.Localized(),
                             _ =>
                             {
                                 selectedChangeWeaponEquipmentIndex = index;
@@ -494,7 +494,7 @@ namespace SoulRPG
                     });
                 });
             var listDocument = GameListView.CreateAsCommand(commandDocumentPrefab, commands, 0);
-            listDocument.Q<TMP_Text>("Header").text = "変更する武器を選べ";
+            listDocument.Q<TMP_Text>("Header").text = "変更する武器を選べ".Localized();
             TinyServiceLocator.Resolve<InputController>().InputActions.UI.Cancel.OnPerformedAsObservable()
                 .Subscribe(_ =>
                 {
@@ -531,7 +531,7 @@ namespace SoulRPG
                     {
                         GameListView.ApplyAsSimpleElement(
                             element,
-                            x.Key.GetMasterDataItem().Name,
+                            x.Key.GetMasterDataItem().Name.Localized(),
                             _ =>
                             {
                                 source.TrySetResult(new ChangeWeapon(selectedChangeWeaponEquipmentIndex, x.Key));

@@ -23,7 +23,7 @@ namespace SoulRPG.BattleSystems.CommandInvokers
         public async UniTask InvokeAsync(BattleCharacter actor, BattleCharacter target, Container container, CancellationToken scope)
         {
             actor.Equipment.EquipWeapon(equipmentWeaponInventoryIndex, changeWeaponId);
-            await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new("装備している武器を変更した。", "Sfx.Message.24"));
+            await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new("装備している武器を変更した。".Localized(), "Sfx.Message.24"));
         }
 
         public int GetNeedBehaviourPoint()
