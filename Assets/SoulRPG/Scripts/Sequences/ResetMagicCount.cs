@@ -19,7 +19,7 @@ namespace SoulRPG
 
         [SerializeReference, SubclassSelector]
         private IBattleCharacterEvaluatorBoolean battleCharacterEvaluator;
-        
+
         [SerializeField]
         private bool isSilent;
 
@@ -37,7 +37,8 @@ namespace SoulRPG
                 t.BattleStatus.ResetMagicCount();
                 if (!isSilent)
                 {
-                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}の魔カウントがリセットされた。", "Sfx.Message.0"));
+                    var message = "{0}の魔カウントがリセットされた。".Localized().Format(t.BattleStatus.NameWithTag);
+                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new(message, "Sfx.Message.0"));
                 }
             }
         }

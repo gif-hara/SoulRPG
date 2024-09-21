@@ -44,9 +44,10 @@ namespace SoulRPG
             else
             {
                 Assert.IsNotNull(t, $"target is null targetType:{targetType}");
+                var message = "{0}のスタミナが<color=#88FF88>{1}</color>回復した。".Localized().Format(t.BattleStatus.NameWithTag, recovery);
                 await UniTask.WhenAll(
                     t.RecoveryStaminaAsync(recovery),
-                    gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}のスタミナが<color=#88FF88>{recovery}</color>回復した。", fixedSfxName))
+                    gameEvents.ShowMessageAndWaitForSubmitInputAsync(new(message, fixedSfxName))
                 );
             }
         }

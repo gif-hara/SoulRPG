@@ -40,7 +40,8 @@ namespace SoulRPG
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
             if (giveDamageType == Define.GiveDamageType.Direct && await t.EvaluateEvaded())
             {
-                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}は攻撃を回避した。", "Sfx.Message.0"));
+                var m = "{0}は攻撃を回避した。".Localized().Format(t.BattleStatus.NameWithTag);
+                await gameEvents.ShowMessageAndWaitForSubmitInputAsync(new(m, "Sfx.Message.0"));
                 return;
             }
             var fixedSfxName = string.IsNullOrEmpty(sfxName) ? "Sfx.Message.2" : sfxName;
@@ -54,9 +55,10 @@ namespace SoulRPG
 #endif
             container.RegisterOrReplace("Damage", damage);
             Assert.IsNotNull(t, $"target is null targetType:{targetType}");
+            var message = "{0}に<color=#FFFF88>{1}</color>のダメージを与えた。".Localized().Format(t.BattleStatus.NameWithTag, damage);
             await UniTask.WhenAll(
                 t.TakeDamageAsync(damage),
-                gameEvents.ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}に<color=#FFFF88>{damage}</color>のダメージを与えた。", fixedSfxName))
+                gameEvents.ShowMessageAndWaitForSubmitInputAsync(new(message, fixedSfxName))
             );
             var a = t == actor ? target : actor;
             var attackAttribute = weapon?.AttackAttribute ?? Define.AttackAttribute.None;

@@ -32,7 +32,8 @@ namespace SoulRPG
             {
                 var t = targetType == Define.TargetType.Self ? actor : target;
                 t.BattleStatus.ResetKnifeCount();
-                await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}のナイフストックがリセットされた。", "Sfx.Message.0"));
+                var message = "{0}のナイフストックがリセットされた。".Localized().Format(t.BattleStatus.NameWithTag);
+                await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new(message, "Sfx.Message.0"));
             }
         }
     }

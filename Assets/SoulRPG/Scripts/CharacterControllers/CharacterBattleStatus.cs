@@ -15,7 +15,7 @@ namespace SoulRPG
     {
         public string Name { get; }
 
-        public string NameWithTag => AllyType.WithTag(Name);
+        public string NameWithTag => AllyType.WithTag(Name.Localized());
 
         private readonly ReactiveProperty<int> hitPointMaxReactiveProperty;
         public ReadOnlyReactiveProperty<int> HitPointMaxReactiveProperty => hitPointMaxReactiveProperty;

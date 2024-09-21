@@ -52,7 +52,8 @@ namespace SoulRPG
                 t.BattleStatus.AddMagicCount(value);
                 if (!isSilent)
                 {
-                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new($"{t.BattleStatus.NameWithTag}の魔カウントが<color=#99FF99>{value}</color>蓄積した", "Sfx.Message.0"));
+                    var message = "{0}の魔カウントが<color=#99FF99>{1}</color>蓄積した。".Localized().Format(t.BattleStatus.NameWithTag, value);
+                    await TinyServiceLocator.Resolve<GameEvents>().ShowMessageAndWaitForSubmitInputAsync(new(message, "Sfx.Message.0"));
                 }
             }
         }

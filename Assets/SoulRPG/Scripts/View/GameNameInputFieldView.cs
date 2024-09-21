@@ -41,13 +41,13 @@ namespace SoulRPG
                     AudioManager.PlaySfx("Sfx.Message.0");
                     if (inputField.text.Length == 0)
                     {
-                        await DialogView.ConfirmAsync(dialogDocumentPrefab, "名前を入力してください。", new[] { "確認" }, 0, scope);
+                        await DialogView.ConfirmAsync(dialogDocumentPrefab, "名前を入力してください。".Localized(), new[] { "確認".Localized() }, 0, scope);
                         AudioManager.PlaySfx("Sfx.Message.0");
                         EventSystem.current.SetSelectedGameObject(inputField.gameObject);
                     }
                     else if (inputField.text.Length > 10)
                     {
-                        await DialogView.ConfirmAsync(dialogDocumentPrefab, "名前は10文字以内で入力してください。", new[] { "確認" }, 0, scope);
+                        await DialogView.ConfirmAsync(dialogDocumentPrefab, "名前は10文字以内で入力してください。".Localized(), new[] { "確認".Localized() }, 0, scope);
                         AudioManager.PlaySfx("Sfx.Message.0");
                         EventSystem.current.SetSelectedGameObject(inputField.gameObject);
                     }
@@ -63,7 +63,8 @@ namespace SoulRPG
                     else
                     {
                         document.gameObject.SetActive(false);
-                        var confirmIndex = await DialogView.ConfirmAsync(dialogDocumentPrefab, $"「{inputField.text}」でよろしいですか？変更は出来ません。", new[] { "はい", "いいえ" }, 0, scope);
+                        var message = "「{0}」でよろしいですか？変更は出来ません。".Localized().Format(inputField.text);
+                        var confirmIndex = await DialogView.ConfirmAsync(dialogDocumentPrefab, message, new[] { "はい".Localized(), "いいえ".Localized() }, 0, scope);
                         AudioManager.PlaySfx("Sfx.Message.0");
                         if (confirmIndex == 0)
                         {
