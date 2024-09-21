@@ -59,7 +59,7 @@ namespace SoulRPG
                         GameListView.ApplyAsSimpleElement
                         (
                             element,
-                            "装備変更",
+                            "装備変更".Localized(),
                             _ =>
                             {
                                 stateMachine.Change(StateSelectEquipmentPartAsync);
@@ -67,7 +67,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip("戦闘で使う装備を変更する。");
+                                GameTipsView.SetTip("戦闘で使う装備を変更する。".Localized());
                             }
                         );
                     },
@@ -76,7 +76,7 @@ namespace SoulRPG
                         GameListView.ApplyAsSimpleElement
                         (
                             element,
-                            "システム",
+                            "システム".Localized(),
                             _ =>
                             {
                                 stateMachine.Change(StateOptionsAsync);
@@ -84,7 +84,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip("システム設定を行う。");
+                                GameTipsView.SetTip("システム設定を行う。".Localized());
                             }
                         );
                     },
@@ -93,7 +93,7 @@ namespace SoulRPG
                         GameListView.ApplyAsSimpleElement
                         (
                             element,
-                            "中断データ作成",
+                            "中断データ作成".Localized(),
                             _ =>
                             {
                                 stateMachine.Change(StateCreateSuspendData);
@@ -101,7 +101,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip("中断データを作成してゲームを終了します。");
+                                GameTipsView.SetTip("中断データを作成してゲームを終了します。".Localized());
                             }
                         );
                     }
@@ -116,7 +116,7 @@ namespace SoulRPG
                         AudioManager.PlaySfx("Sfx.Cancel.0");
                     })
                     .RegisterTo(scope);
-            CreateHeader("メニュー", scope);
+            CreateHeader("メニュー".Localized(), scope);
             GameStatusInformationView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Status"), character, scope);
             cachedStateSelectEquipmentPartIndex = 0;
             await UniTask.WaitUntilCanceled(scope);
@@ -132,7 +132,8 @@ namespace SoulRPG
                 var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
                 return new Action<HKUIDocument>(element =>
                 {
-                    GameListView.ApplyAsSimpleElement(element, $"武器{i + 1}: {weaponName}", _ =>
+                    var message = "武器{0}: {1}".Localized().Format(i + 1, weaponName.Localized());
+                    GameListView.ApplyAsSimpleElement(element, message, _ =>
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Weapon1);
                         stateMachine.Change(StateSelectWeaponAsync);
@@ -154,7 +155,9 @@ namespace SoulRPG
             });
             var headElement = new Action<HKUIDocument>(element =>
             {
-                GameListView.ApplyAsSimpleElement(element, $"頭: {(character.Equipment.HeadId == 0 ? "なし" : character.Equipment.HeadId.GetMasterDataItem().Name)}", _ =>
+                var headId = character.Equipment.HeadId;
+                var message = "頭: {0}".Localized().Format(headId == 0 ? "なし".Localized() : headId.GetMasterDataItem().Name.Localized());
+                GameListView.ApplyAsSimpleElement(element, message, _ =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Head);
                     stateMachine.Change(StateSelectArmorHeadAsync);
@@ -175,7 +178,9 @@ namespace SoulRPG
             });
             var bodyElement = new Action<HKUIDocument>(element =>
             {
-                GameListView.ApplyAsSimpleElement(element, $"胴: {(character.Equipment.BodyId == 0 ? "なし" : character.Equipment.BodyId.GetMasterDataItem().Name)}", _ =>
+                var bodyId = character.Equipment.BodyId;
+                var message = "胴: {0}".Localized().Format(bodyId == 0 ? "なし".Localized() : bodyId.GetMasterDataItem().Name.Localized());
+                GameListView.ApplyAsSimpleElement(element, message, _ =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Body);
                     stateMachine.Change(StateSelectArmorBodyAsync);
@@ -196,7 +201,9 @@ namespace SoulRPG
             });
             var armElement = new Action<HKUIDocument>(element =>
             {
-                GameListView.ApplyAsSimpleElement(element, $"腕: {(character.Equipment.ArmId == 0 ? "なし" : character.Equipment.ArmId.GetMasterDataItem().Name)}", _ =>
+                var armdId = character.Equipment.ArmId;
+                var message = "腕: {0}".Localized().Format(armdId == 0 ? "なし".Localized() : armdId.GetMasterDataItem().Name.Localized());
+                GameListView.ApplyAsSimpleElement(element, message, _ =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Arm);
                     stateMachine.Change(StateSelectArmorArmsAsync);
@@ -217,7 +224,9 @@ namespace SoulRPG
             });
             var legElement = new Action<HKUIDocument>(element =>
             {
-                GameListView.ApplyAsSimpleElement(element, $"脚: {(character.Equipment.LegId == 0 ? "なし" : character.Equipment.LegId.GetMasterDataItem().Name)}", _ =>
+                var legId = character.Equipment.LegId;
+                var message = "脚: {0}".Localized().Format(legId == 0 ? "なし".Localized() : legId.GetMasterDataItem().Name.Localized());
+                GameListView.ApplyAsSimpleElement(element, message, _ =>
                 {
                     context = new EquipmentChangeController(character, EquipmentChangeController.PartType.Leg);
                     stateMachine.Change(StateSelectArmorLegsAsync);
@@ -241,7 +250,8 @@ namespace SoulRPG
                 var accessoryName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
                 return new Action<HKUIDocument>(element =>
                 {
-                    GameListView.ApplyAsSimpleElement(element, $"アクセサリ{i + 1}: {accessoryName}", _ =>
+                    var message = "アクセサリー{0}: {1}".Localized().Format(i + 1, accessoryName.Localized());
+                    GameListView.ApplyAsSimpleElement(element, message, _ =>
                     {
                         context = new EquipmentChangeController(character, (EquipmentChangeController.PartType)i + (int)EquipmentChangeController.PartType.Accessory1);
                         stateMachine.Change(StateSelectAccessoryAsync);
@@ -282,8 +292,8 @@ namespace SoulRPG
                     AudioManager.PlaySfx("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
-            CreateHeader("装備変更", scope);
-            GameTipsView.SetTip("変更したい部位を選択せよ。");
+            CreateHeader("装備変更".Localized(), scope);
+            GameTipsView.SetTip("変更したい部位を選択せよ。".Localized());
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -327,8 +337,8 @@ namespace SoulRPG
                     AudioManager.PlaySfx("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
-            CreateHeader("武器変更", scope);
-            GameTipsView.SetTip("装備したい武器を選択せよ。");
+            CreateHeader("武器変更".Localized(), scope);
+            GameTipsView.SetTip("装備したい武器を選択せよ。".Localized());
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -368,8 +378,8 @@ namespace SoulRPG
                     AudioManager.PlaySfx("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
-            CreateHeader("頭防具変更", scope);
-            GameTipsView.SetTip("装備したい頭防具を選択せよ。");
+            CreateHeader("頭防具変更".Localized(), scope);
+            GameTipsView.SetTip("装備したい頭防具を選択せよ。".Localized());
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -409,8 +419,8 @@ namespace SoulRPG
                     AudioManager.PlaySfx("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
-            CreateHeader("胴防具変更", scope);
-            GameTipsView.SetTip("装備したい胴防具を選択せよ。");
+            CreateHeader("胴防具変更".Localized(), scope);
+            GameTipsView.SetTip("装備したい胴防具を選択せよ。".Localized());
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -450,8 +460,8 @@ namespace SoulRPG
                     AudioManager.PlaySfx("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
-            CreateHeader("腕防具変更", scope);
-            GameTipsView.SetTip("装備したい腕防具を選択せよ。");
+            CreateHeader("腕防具変更".Localized(), scope);
+            GameTipsView.SetTip("装備したい腕防具を選択せよ。".Localized());
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -491,8 +501,8 @@ namespace SoulRPG
                     AudioManager.PlaySfx("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
-            CreateHeader("脚防具変更", scope);
-            GameTipsView.SetTip("装備したい脚防具を選択せよ。");
+            CreateHeader("脚防具変更".Localized(), scope);
+            GameTipsView.SetTip("装備したい脚防具を選択せよ。".Localized());
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -532,8 +542,8 @@ namespace SoulRPG
                     AudioManager.PlaySfx("Sfx.Cancel.0");
                 })
                 .RegisterTo(scope);
-            CreateHeader("アクセサリー変更", scope);
-            GameTipsView.SetTip("装備したいアクセサリーを選択せよ。");
+            CreateHeader("アクセサリー変更".Localized(), scope);
+            GameTipsView.SetTip("装備したいアクセサリーを選択せよ。".Localized());
             await UniTask.WaitUntilCanceled(scope);
             Object.Destroy(listDocument.gameObject);
         }
@@ -548,8 +558,8 @@ namespace SoulRPG
         {
             var index = await DialogView.ConfirmAsync(
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                "中断データを作成してゲームを終了しますか？",
-                new[] { "はい", "いいえ" },
+                "中断データを作成してゲームを終了しますか？".Localized(),
+                new[] { "はい".Localized(), "いいえ".Localized() },
                 0,
                 scope
                 );
@@ -579,7 +589,7 @@ namespace SoulRPG
             await DialogView.ConfirmAsync
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                "中断データを作成しました。このままゲームを終了できます。お疲れ様でした。",
+                "中断データを作成しました。このままゲームを終了できます。お疲れ様でした。".Localized(),
                 new string[] { },
                 0,
                 scope
