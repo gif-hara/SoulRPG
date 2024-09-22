@@ -16,7 +16,7 @@ namespace SoulRPG
         {
             var document = Object.Instantiate(documentPrefab);
             document.Q<Image>("Image").sprite = masterDataItem.Thumbnail;
-            document.Q<TMP_Text>("Name").text = masterDataItem.Name;
+            document.Q<TMP_Text>("Name").text = masterDataItem.Name.Localized();
             await scope.WaitUntilCanceled();
             Object.Destroy(document.gameObject);
         }

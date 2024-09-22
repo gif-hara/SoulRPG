@@ -182,7 +182,7 @@ namespace SoulRPG
                             : Define.HandWeaponId;
                         GameListView.ApplyAsSimpleElement(
                             element,
-                            fixedWeaponId.GetMasterDataItem().Name,
+                            fixedWeaponId.GetMasterDataItem().Name.Localized(),
                             _ =>
                             {
                                 selectedWeaponId = index;

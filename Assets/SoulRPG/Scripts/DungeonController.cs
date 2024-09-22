@@ -413,12 +413,12 @@ namespace SoulRPG
             character.Inventory.Add(itemData.MasterDataItem.Id, itemData.Count);
             if (itemData.Count == 1)
             {
-                var message = "<color=#8888FF>{0}</color>を手に入れた。".Localized().Format(itemData.MasterDataItem.Name);
+                var message = "<color=#8888FF>{0}</color>を手に入れた。".Localized().Format(itemData.MasterDataItem.Name.Localized());
                 gameEvents.OnRequestShowMessage.OnNext(new(message, "Sfx.Message.0"));
             }
             else
             {
-                var message = "<color=#8888FF>{0}</color>を{1}個手に入れた。".Localized().Format(itemData.MasterDataItem.Name, itemData.Count);
+                var message = "<color=#8888FF>{0}</color>を{1}個手に入れた。".Localized().Format(itemData.MasterDataItem.Name.Localized(), itemData.Count);
                 gameEvents.OnRequestShowMessage.OnNext(new(message, "Sfx.Message.0"));
             }
 

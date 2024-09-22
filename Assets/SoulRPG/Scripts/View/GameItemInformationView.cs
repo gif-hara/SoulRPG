@@ -45,7 +45,7 @@ namespace SoulRPG
         {
             SetActiveEmptyArea(false);
             Thumbnail.sprite = item.Thumbnail;
-            Name.text = item.Name;
+            Name.text = item.Name.Localized();
             Description.text = item.Description;
             foreach (var element in skillElements)
             {

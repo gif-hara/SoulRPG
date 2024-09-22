@@ -129,7 +129,7 @@ namespace SoulRPG
             var gameItemInformationView = new GameItemInformationView(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Info.Item"), scope);
             var weaponElements = character.Equipment.GetWeaponIds().Select((x, i) =>
             {
-                var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
+                var weaponName = x == 0 ? "なし" : x.GetMasterDataItem().Name.Localized();
                 return new Action<HKUIDocument>(element =>
                 {
                     var message = "武器{0}: {1}".Localized().Format(i + 1, weaponName.Localized());
@@ -247,7 +247,7 @@ namespace SoulRPG
             });
             var accessoryElements = character.Equipment.GetAccessoryIds().Select((x, i) =>
             {
-                var accessoryName = x == 0 ? "なし" : x.GetMasterDataItem().Name;
+                var accessoryName = x == 0 ? "なし" : x.GetMasterDataItem().Name.Localized();
                 return new Action<HKUIDocument>(element =>
                 {
                     var message = "アクセサリー{0}: {1}".Localized().Format(i + 1, accessoryName.Localized());
@@ -309,7 +309,7 @@ namespace SoulRPG
                     return new Action<HKUIDocument>(element =>
                     {
                         GameListView.ApplyAsSimpleElement(element,
-                        x.Key.GetMasterDataItem().Name, _ =>
+                        x.Key.GetMasterDataItem().Name.Localized(), _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
@@ -354,7 +354,7 @@ namespace SoulRPG
                     return new Action<HKUIDocument>(element =>
                     {
                         GameListView.ApplyAsSimpleElement(element,
-                        x.Key.GetMasterDataItem().Name, _ =>
+                        x.Key.GetMasterDataItem().Name.Localized(), _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
@@ -395,7 +395,7 @@ namespace SoulRPG
                     return new Action<HKUIDocument>(element =>
                     {
                         GameListView.ApplyAsSimpleElement(element,
-                        x.Key.GetMasterDataItem().Name, _ =>
+                        x.Key.GetMasterDataItem().Name.Localized(), _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
@@ -436,7 +436,7 @@ namespace SoulRPG
                     return new Action<HKUIDocument>(element =>
                     {
                         GameListView.ApplyAsSimpleElement(element,
-                        x.Key.GetMasterDataItem().Name, _ =>
+                        x.Key.GetMasterDataItem().Name.Localized(), _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
@@ -477,7 +477,7 @@ namespace SoulRPG
                     return new Action<HKUIDocument>(element =>
                     {
                         GameListView.ApplyAsSimpleElement(element,
-                        x.Key.GetMasterDataItem().Name, _ =>
+                        x.Key.GetMasterDataItem().Name.Localized(), _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);
@@ -518,7 +518,7 @@ namespace SoulRPG
                     return new Action<HKUIDocument>(element =>
                     {
                         GameListView.ApplyAsSimpleElement(element,
-                        x.Key.GetMasterDataItem().Name, _ =>
+                        x.Key.GetMasterDataItem().Name.Localized(), _ =>
                         {
                             var equipmentChangeController = (EquipmentChangeController)context;
                             equipmentChangeController.ChangeEquipment(x.Key);

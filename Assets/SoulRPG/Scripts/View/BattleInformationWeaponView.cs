@@ -33,7 +33,7 @@ namespace SoulRPG
                 weapon = Define.HandWeaponId.GetMasterDataWeapon();
             }
             document.Q<Image>("Thumbnail").sprite = weapon.ItemId.GetMasterDataItem().Thumbnail;
-            document.Q<TMP_Text>("Name").text = weapon.ItemId.GetMasterDataItem().Name;
+            document.Q<TMP_Text>("Name").text = weapon.ItemId.GetMasterDataItem().Name.Localized();
             document.Q<HKUIDocument>("Strength").Q<TMP_Text>("Value").text = weapon.Strength.ToString();
             document.Q<HKUIDocument>("AttackAttribute").Q<TMP_Text>("Value").text = weapon.AttackAttribute.ToUIString();
         }
