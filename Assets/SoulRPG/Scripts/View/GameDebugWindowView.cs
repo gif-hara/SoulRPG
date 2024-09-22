@@ -293,7 +293,7 @@ namespace SoulRPG
                                 GameListView.ApplyAsSimpleElement
                                 (
                                     element,
-                                    $"{x.Id}: {x.Name}",
+                                    $"{x.Id}: {x.Name.Localized()}",
                                     _ =>
                                     {
                                         AudioManager.PlaySfx("Sfx.Message.0");

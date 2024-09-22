@@ -245,7 +245,7 @@ namespace SoulRPG
                     element.Q<TMP_Text>("Header").color = isUsed ? new Color(0.5f, 0.2f, 0.2f) : Color.white;
                     GameListView.ApplyAsSimpleElement(
                         element,
-                        x.Name,
+                        x.Name.Localized(),
                         async _ =>
                         {
                             AudioManager.PlaySfx("Sfx.Message.0");
@@ -442,7 +442,7 @@ namespace SoulRPG
                     {
                         GameListView.ApplyAsSimpleElement(
                             element,
-                            $"{x.Id}: {x.Name}",
+                            $"{x.Id}: {x.Name.Localized()}",
                             _ =>
                             {
                                 source.TrySetResult(new Skill(Define.TestWeaponId, x.Id, false));

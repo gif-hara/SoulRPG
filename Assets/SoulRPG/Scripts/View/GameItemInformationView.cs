@@ -73,8 +73,8 @@ namespace SoulRPG
                 {
                     var masterDataSkill = i.GetMasterDataSkill();
                     var skillElement = Object.Instantiate(skillElementPrefab, skillParent);
-                    skillElement.Q<TMP_Text>("Name").text = masterDataSkill.Name;
-                    var description = masterDataSkill.Description;
+                    skillElement.Q<TMP_Text>("Name").text = masterDataSkill.Name.Localized();
+                    var description = masterDataSkill.Description.Localized();
                     foreach (var s in masterDataSkill.AdditionalDescriptions)
                     {
                         description += $"\n<size=80%><color=#FFDDDD>{s.CreateAdditionalDescription()}</color></size>";

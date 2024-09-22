@@ -96,7 +96,7 @@ namespace SoulRPG
             {
                 case 0:
                     var ailment = TinyServiceLocator.Resolve<MasterData>().Ailments.Get(self.Id);
-                    return $"{ailment.Name} : {ailment.Description}";
+                    return $"{ailment.Name.Localized()} : {ailment.Description.Localized()}";
                 default:
                     Debug.LogError($"Invalid type: {self.Type}");
                     return string.Empty;
@@ -114,7 +114,7 @@ namespace SoulRPG
             sb.Append(" ST:");
             sb.Append(self.NeedStamina);
             sb.Append("] ");
-            sb.Append(self.Description);
+            sb.Append(self.Description.Localized());
             sb.Append("<size=80%>");
             sb.Append("<color=#FFDDDD>");
             foreach (var i in self.AdditionalDescriptions)
