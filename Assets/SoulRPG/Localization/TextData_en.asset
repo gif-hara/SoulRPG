@@ -5229,6 +5229,474 @@ MonoBehaviour:
     m_Localized: You obtained {1} <color=#8888FF>{0}</color>.
     m_Metadata:
       m_Items: []
+  - m_Id: 2154588540174337
+    m_Localized: '{0}Pick up item'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479434502144
+    m_Localized: '{0}Open'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529448
+    m_Localized: The door opened.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529450
+    m_Localized: It seems it won't open from this side.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667968
+    m_Localized: You gained <color=#88FF88>{0}</color> experience points.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529454
+    m_Localized: Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529455
+    m_Localized: Fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529460
+    m_Localized: :Move
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529461
+    m_Localized: :Horizontal Move
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529462
+    m_Localized: :Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529463
+    m_Localized: :Switch Map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529464
+    m_Localized: :Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529465
+    m_Localized: :Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529466
+    m_Localized: :Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529467
+    m_Localized: :Move Category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529470
+    m_Localized: Weapon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529471
+    m_Localized: Use weapons to perform attacks and other actions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529472
+    m_Localized: Check
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529473
+    m_Localized: Check information such as status effects and stats.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529474
+    m_Localized: Change Weapon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529475
+    m_Localized: Change the equipped weapon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529476
+    m_Localized: All Skills
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529477
+    m_Localized: Header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529478
+    m_Localized: Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529479
+    m_Localized: Select a weapon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529480
+    m_Localized: You can't use this anymore this turn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529481
+    m_Localized: Not enough BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529482
+    m_Localized: Not enough stamina.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529483
+    m_Localized: Select a skill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529484
+    m_Localized: Status
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529485
+    m_Localized: Check various stats and cut rates.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529486
+    m_Localized: Status Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529487
+    m_Localized: Check the status effects applied to yourself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529488
+    m_Localized: Status Effects (Enemy)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529489
+    m_Localized: Check the status effects applied to the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529490
+    m_Localized: Select information
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667969
+    m_Localized: '{0} (remaining {1} turns)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529492
+    m_Localized: Select the weapon to change
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529493
+    m_Localized: Changed the equipped weapon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529495
+    m_Localized: It looks usable. Equipped it in the empty weapon slot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529496
+    m_Localized: It looks usable. Equipped it on the head.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529497
+    m_Localized: It looks usable. Equipped it on the torso.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529498
+    m_Localized: It looks usable. Equipped it on the arms.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529499
+    m_Localized: It looks usable. Equipped it on the legs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529500
+    m_Localized: It looks usable. Equipped it in the empty accessory slot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529501
+    m_Localized: Resumed from suspend data. Please note that the suspend data has
+      been deleted.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667970
+    m_Localized: '{0}''s BP recovered by <color=#99FF99>{1}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667971
+    m_Localized: '{0}''s BP decreased by <color=#FF9999>{1}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667972
+    m_Localized: '{0}''s knife stock increased by <color=#99FF99>{1}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667973
+    m_Localized: '{0}''s knife stock decreased by <color=#FF9999>{1}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667974
+    m_Localized: '{0}''s magic count increased by <color=#99FF99>{1}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667975
+    m_Localized: '{0} evaded the attack.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667976
+    m_Localized: '{0} took <color=#FFFF88>{1}</color> damage.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667977
+    m_Localized: '{0}''s HP recovered by <color=#88FF88>{1}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667978
+    m_Localized: '{0}''s stamina recovered by <color=#88FF88>{1}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862272
+    m_Localized: '{0}''s knife stock was reset.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862273
+    m_Localized: '{0}''s magic count was reset.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529550
+    m_Localized: :Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529551
+    m_Localized: Please enter a name.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529552
+    m_Localized: Please enter a name within 10 characters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862274
+    m_Localized: Is "{0}" correct? Changes cannot be made.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529554
+    m_Localized: Change Equipment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529555
+    m_Localized: Change the equipment used in battle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529556
+    m_Localized: System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529557
+    m_Localized: Configure system settings.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529558
+    m_Localized: Create Suspend Data
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529559
+    m_Localized: Create suspend data and exit the game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529560
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529561
+    m_Localized: None
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862275
+    m_Localized: 'Weapon {0}: {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862276
+    m_Localized: 'Head: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862277
+    m_Localized: 'Torso: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862278
+    m_Localized: 'Arms: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862279
+    m_Localized: 'Legs: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862280
+    m_Localized: 'Accessory {0}: {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529572
+    m_Localized: Select the part you want to change.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529573
+    m_Localized: Select the weapon you want to equip.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529574
+    m_Localized: Change Head Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529575
+    m_Localized: Select the head armor you want to equip.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529576
+    m_Localized: Change Torso Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529577
+    m_Localized: Select the torso armor you want to equip.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529578
+    m_Localized: Change Arm Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529579
+    m_Localized: Select the arm armor you want to equip.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529580
+    m_Localized: Change Leg Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529581
+    m_Localized: Select the leg armor you want to equip.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529582
+    m_Localized: Change Accessory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529583
+    m_Localized: Select the accessory you want to equip.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529584
+    m_Localized: Create suspend data and exit the game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529585
+    m_Localized: Suspend data has been created. You can now exit the game. Good job!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529586
+    m_Localized: Level Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529587
+    m_Localized: Use experience points to level up.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529588
+    m_Localized: Rest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529589
+    m_Localized: Restore HP and ST. This can only be used once.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529590
+    m_Localized: Checkpoint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529591
+    m_Localized: Vitality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529592
+    m_Localized: Increasing Vitality will increase HP (Hit Points).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529593
+    m_Localized: Increasing Endurance will increase ST (Stamina).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529594
+    m_Localized: Strength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529595
+    m_Localized: Increasing Strength will increase the power of physical attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529596
+    m_Localized: Spirit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529597
+    m_Localized: Increasing Spirit will increase the power of magic attacks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529598
+    m_Localized: Increasing Agility will make it easier to act first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529599
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529600
+    m_Localized: Required Experience Points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529601
+    m_Localized: Are you sure you want to go back without leveling up?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529602
+    m_Localized: Please allocate parameters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529603
+    m_Localized: Are you sure you want to level up?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529604
+    m_Localized: You can no longer rest here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529605
+    m_Localized: 'HP and ST will be restored, but this can only be used once.
+
+      Is
+      this okay?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349285423185920
+    m_Localized: :Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529607
+    m_Localized: Set the overall volume of the game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529608
+    m_Localized: Set the BGM volume.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529609
+    m_Localized: Set the sound effect volume.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529610
+    m_Localized: Set whether the minimap rotation syncs with the player's direction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529611
+    m_Localized: On
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529612
+    m_Localized: Off
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

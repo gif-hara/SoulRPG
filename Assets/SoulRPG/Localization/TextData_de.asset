@@ -5352,6 +5352,479 @@ MonoBehaviour:
     m_Localized: Du hast {1} <color=#8888FF>{0}</color> erhalten.
     m_Metadata:
       m_Items: []
+  - m_Id: 2154588540174337
+    m_Localized: '{0}Gegenstand aufheben'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479434502144
+    m_Localized: "{0}\xD6ffnen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529448
+    m_Localized: "Die T\xFCr hat sich ge\xF6ffnet."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529450
+    m_Localized: "Es scheint, dass es sich von dieser Seite nicht \xF6ffnet."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667968
+    m_Localized: Du hast <color=#88FF88>{0}</color> Erfahrungspunkte erhalten.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529454
+    m_Localized: Magie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529455
+    m_Localized: Feuer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529460
+    m_Localized: :Bewegen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529461
+    m_Localized: :Horizontal Bewegen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529462
+    m_Localized: ":Men\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529463
+    m_Localized: :Karte Wechseln
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529464
+    m_Localized: ":Ausw\xE4hlen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529465
+    m_Localized: ":Best\xE4tigen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529466
+    m_Localized: :Abbrechen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529467
+    m_Localized: :Kategorie Wechseln
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529470
+    m_Localized: Waffe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529471
+    m_Localized: "Verwende Waffen, um Angriffe und andere Aktionen auszuf\xFChren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529472
+    m_Localized: "\xDCberpr\xFCfen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529473
+    m_Localized: "Informationen zu Status und Zust\xE4nden pr\xFCfen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529474
+    m_Localized: Waffen wechseln
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529475
+    m_Localized: "Die ausger\xFCstete Waffe wechseln."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529476
+    m_Localized: "Alle F\xE4higkeiten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529477
+    m_Localized: "\xDCberschrift"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529478
+    m_Localized: "Ausw\xE4hlen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529479
+    m_Localized: "W\xE4hle eine Waffe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529480
+    m_Localized: Du kannst dies in diesem Zug nicht mehr verwenden.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529481
+    m_Localized: Nicht genug BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529482
+    m_Localized: Nicht genug Ausdauer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529483
+    m_Localized: "W\xE4hle eine F\xE4higkeit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529484
+    m_Localized: Status
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529485
+    m_Localized: "Verschiedene Statistiken und K\xFCrzungsraten \xFCberpr\xFCfen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529486
+    m_Localized: "Zustandsver\xE4nderungen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529487
+    m_Localized: "\xDCberpr\xFCfe die Zustandsver\xE4nderungen, die auf dich angewendet
+      wurden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529488
+    m_Localized: "Zustandsver\xE4nderungen (Feind)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529489
+    m_Localized: "\xDCberpr\xFCfe die Zustandsver\xE4nderungen, die auf den Feind
+      angewendet wurden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529490
+    m_Localized: "Informationen ausw\xE4hlen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667969
+    m_Localized: '{0} (noch {1} Runden)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529492
+    m_Localized: "W\xE4hle die zu \xE4ndernde Waffe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529493
+    m_Localized: "Die ausger\xFCstete Waffe wurde ge\xE4ndert."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529495
+    m_Localized: "Es sieht brauchbar aus. Ausger\xFCstet im freien Waffenslot."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529496
+    m_Localized: "Es sieht brauchbar aus. Ausger\xFCstet am Kopf."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529497
+    m_Localized: "Es sieht brauchbar aus. Ausger\xFCstet am Rumpf."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529498
+    m_Localized: "Es sieht brauchbar aus. Ausger\xFCstet an den Armen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529499
+    m_Localized: "Es sieht brauchbar aus. Ausger\xFCstet an den Beinen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529500
+    m_Localized: "Es sieht brauchbar aus. Ausger\xFCstet im freien Zubeh\xF6rslot."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529501
+    m_Localized: "Fortsetzung vom Unterbrechungsstand. Bitte beachten, dass die Unterbrechungsdaten
+      gel\xF6scht wurden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667970
+    m_Localized: '{0}''s BP wurde um <color=#99FF99>{1}</color> wiederhergestellt.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667971
+    m_Localized: '{0}''s BP verringerte sich um <color=#FF9999>{1}</color>.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667972
+    m_Localized: "{0}'s Messerbestand hat sich um <color=#99FF99>{1}</color> erh\xF6ht."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667973
+    m_Localized: '{0}''s Messerbestand hat sich um <color=#FF9999>{1}</color> verringert.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667974
+    m_Localized: "{0}'s Magiez\xE4hler hat sich um <color=#99FF99>{1}</color> erh\xF6ht."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667975
+    m_Localized: '{0} hat dem Angriff ausgewichen.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667976
+    m_Localized: '{0} hat <color=#FFFF88>{1}</color> Schaden erlitten.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667977
+    m_Localized: '{0}''s HP wurden um <color=#88FF88>{1}</color> wiederhergestellt.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667978
+    m_Localized: '{0}''s Ausdauer wurde um <color=#88FF88>{1}</color> wiederhergestellt.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862272
+    m_Localized: "{0}'s Messerbestand wurde zur\xFCckgesetzt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862273
+    m_Localized: "{0}'s Magiez\xE4hler wurde zur\xFCckgesetzt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529550
+    m_Localized: ":\xDCberspringen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529551
+    m_Localized: Bitte gib einen Namen ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529552
+    m_Localized: Bitte gib einen Namen mit maximal 10 Zeichen ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862274
+    m_Localized: "Ist \u201E{0}\u201C korrekt? \xC4nderungen sind nicht m\xF6glich."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529554
+    m_Localized: "Ausr\xFCstung \xE4ndern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529555
+    m_Localized: "\xC4ndere die im Kampf verwendete Ausr\xFCstung."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529556
+    m_Localized: System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529557
+    m_Localized: Systemeinstellungen vornehmen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529558
+    m_Localized: Unterbrechungsdaten erstellen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529559
+    m_Localized: Erstelle Unterbrechungsdaten und beende das Spiel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529560
+    m_Localized: "Men\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529561
+    m_Localized: Keine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862275
+    m_Localized: 'Waffe {0}: {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862276
+    m_Localized: 'Kopf: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862277
+    m_Localized: 'Rumpf: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862278
+    m_Localized: 'Arme: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862279
+    m_Localized: 'Beine: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862280
+    m_Localized: "Zubeh\xF6r {0}: {1}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529572
+    m_Localized: "W\xE4hle den Teil, den du \xE4ndern m\xF6chtest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529573
+    m_Localized: "W\xE4hle die Waffe, die du ausr\xFCsten m\xF6chtest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529574
+    m_Localized: "Kopfr\xFCstung \xE4ndern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529575
+    m_Localized: "W\xE4hle die Kopfr\xFCstung, die du ausr\xFCsten m\xF6chtest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529576
+    m_Localized: "Rumpfr\xFCstung \xE4ndern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529577
+    m_Localized: "W\xE4hle die Rumpfr\xFCstung, die du ausr\xFCsten m\xF6chtest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529578
+    m_Localized: "Armr\xFCstung \xE4ndern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529579
+    m_Localized: "W\xE4hle die Armr\xFCstung, die du ausr\xFCsten m\xF6chtest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529580
+    m_Localized: "Beinr\xFCstung \xE4ndern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529581
+    m_Localized: "W\xE4hle die Beinsr\xFCstung, die du ausr\xFCsten m\xF6chtest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529582
+    m_Localized: "Zubeh\xF6r \xE4ndern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529583
+    m_Localized: "W\xE4hle das Zubeh\xF6r, das du ausr\xFCsten m\xF6chtest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529584
+    m_Localized: Unterbrechungsdaten erstellen und Spiel beenden?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529585
+    m_Localized: Unterbrechungsdaten wurden erstellt. Du kannst das Spiel jetzt beenden.
+      Gute Arbeit!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529586
+    m_Localized: Level Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529587
+    m_Localized: "Verwende Erfahrungspunkte, um das Level zu erh\xF6hen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529588
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529589
+    m_Localized: Stelle HP und ST wieder her. Dies kann nur einmal verwendet werden.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529590
+    m_Localized: Kontrollpunkt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529591
+    m_Localized: "Vitalit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529592
+    m_Localized: "Das Erh\xF6hen der Vitalit\xE4t erh\xF6ht die HP (Lebenspunkte)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529593
+    m_Localized: "Das Erh\xF6hen der Ausdauer erh\xF6ht die ST (Ausdauer)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529594
+    m_Localized: "St\xE4rke"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529595
+    m_Localized: "Das Erh\xF6hen der St\xE4rke erh\xF6ht die Kraft der physischen
+      Angriffe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529596
+    m_Localized: Geist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529597
+    m_Localized: "Das Erh\xF6hen des Geistes erh\xF6ht die Kraft der magischen Angriffe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529598
+    m_Localized: "Das Erh\xF6hen der Beweglichkeit erleichtert es, zuerst zu handeln."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529599
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529600
+    m_Localized: Erforderliche Erfahrungspunkte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529601
+    m_Localized: "Bist du sicher, dass du ohne Level-Up zur\xFCckkehren m\xF6chtest?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529602
+    m_Localized: Bitte weise Parameter zu.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529603
+    m_Localized: "Bist du sicher, dass du ein Level-Up durchf\xFChren m\xF6chtest?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529604
+    m_Localized: Hier kannst du dich nicht mehr ausruhen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529605
+    m_Localized: 'HP und ST werden wiederhergestellt, aber dies kann nur einmal verwendet
+      werden.
+
+      Ist das in Ordnung?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349285423185920
+    m_Localized: :Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529607
+    m_Localized: "Stelle die Gesamtlautst\xE4rke des Spiels ein."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529608
+    m_Localized: "Stelle die BGM-Lautst\xE4rke ein."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529609
+    m_Localized: "Stelle die Lautst\xE4rke der Soundeffekte ein."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529610
+    m_Localized: Stelle ein, ob die Minikartenrotation mit der Richtung des Spielers
+      synchronisiert wird.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529611
+    m_Localized: An
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529612
+    m_Localized: Aus
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

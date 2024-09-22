@@ -41,6 +41,8 @@ namespace SoulRPG
 
         private Define.MiniMapType miniMapType;
 
+        private HKUIDocument dungeonDocument;
+
         public ExplorationView(
             HKUIDocument uiDocumentPrefab,
             HKUIDocument dungeonDocumentPrefab,
@@ -106,6 +108,10 @@ namespace SoulRPG
                 Object.Destroy(i.Value);
             }
             maptipShadowObjects.Clear();
+            if (dungeonDocument != null)
+            {
+                Object.Destroy(dungeonDocument.gameObject);
+            }
             CreateMiniMap();
             CreateDungeon();
         }
@@ -348,7 +354,7 @@ namespace SoulRPG
 
         private void CreateDungeon()
         {
-            var dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
+            dungeonDocument = Object.Instantiate(dungeonDocumentPrefab);
             var dungeonController = TinyServiceLocator.Resolve<DungeonController>();
             for (var i = 0; i <= dungeonController.CurrentDungeon.range.x; i++)
             {

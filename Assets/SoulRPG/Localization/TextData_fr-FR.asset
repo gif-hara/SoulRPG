@@ -5349,6 +5349,479 @@ MonoBehaviour:
     m_Localized: Vous avez obtenu {1} <color=#8888FF>{0}</color>.
     m_Metadata:
       m_Items: []
+  - m_Id: 2154588540174337
+    m_Localized: '{0}Ramasser un objet'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479434502144
+    m_Localized: '{0}Ouvrir'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529448
+    m_Localized: La porte s'est ouverte.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529450
+    m_Localized: "Il semble que \xE7a ne s'ouvre pas de ce c\xF4t\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667968
+    m_Localized: "Vous avez gagn\xE9 <color=#88FF88>{0}</color> points d'exp\xE9rience."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529454
+    m_Localized: Magie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529455
+    m_Localized: Feu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529460
+    m_Localized: ":D\xE9placer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529461
+    m_Localized: ":D\xE9placement Horizontal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529462
+    m_Localized: :Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529463
+    m_Localized: :Changer Carte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529464
+    m_Localized: ":S\xE9lectionner"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529465
+    m_Localized: :Confirmer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529466
+    m_Localized: :Annuler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529467
+    m_Localized: ":Changer Cat\xE9gorie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529470
+    m_Localized: Arme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529471
+    m_Localized: Utilisez des armes pour attaquer ou effectuer d'autres actions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529472
+    m_Localized: "V\xE9rifier"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529473
+    m_Localized: "V\xE9rifiez des informations telles que les effets de statut et
+      les statistiques."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529474
+    m_Localized: Changer d'arme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529475
+    m_Localized: "Changez l'arme \xE9quip\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529476
+    m_Localized: "Toutes les comp\xE9tences"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529477
+    m_Localized: "En-t\xEAte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529478
+    m_Localized: "S\xE9lectionner"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529479
+    m_Localized: "S\xE9lectionnez une arme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529480
+    m_Localized: Vous ne pouvez plus utiliser ceci ce tour-ci.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529481
+    m_Localized: Pas assez de BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529482
+    m_Localized: Pas assez d'endurance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529483
+    m_Localized: "S\xE9lectionnez une comp\xE9tence"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529484
+    m_Localized: Statut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529485
+    m_Localized: "V\xE9rifiez diverses statistiques et taux de r\xE9duction."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529486
+    m_Localized: "Alt\xE9rations d'\xE9tat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529487
+    m_Localized: "V\xE9rifiez les alt\xE9rations d'\xE9tat qui vous sont appliqu\xE9es."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529488
+    m_Localized: "Alt\xE9rations d'\xE9tat (Ennemi)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529489
+    m_Localized: "V\xE9rifiez les alt\xE9rations d'\xE9tat appliqu\xE9es \xE0 l'ennemi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529490
+    m_Localized: "S\xE9lectionner des informations"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667969
+    m_Localized: '{0} (reste {1} tours)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529492
+    m_Localized: "S\xE9lectionnez l'arme \xE0 changer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529493
+    m_Localized: "L'arme \xE9quip\xE9e a \xE9t\xE9 chang\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529495
+    m_Localized: "Cela semble utilisable. \xC9quip\xE9 dans l'emplacement d'arme
+      libre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529496
+    m_Localized: "Cela semble utilisable. \xC9quip\xE9 sur la t\xEAte."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529497
+    m_Localized: "Cela semble utilisable. \xC9quip\xE9 sur le torse."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529498
+    m_Localized: "Cela semble utilisable. \xC9quip\xE9 sur les bras."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529499
+    m_Localized: "Cela semble utilisable. \xC9quip\xE9 sur les jambes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529500
+    m_Localized: "Cela semble utilisable. \xC9quip\xE9 dans l'emplacement d'accessoire
+      libre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529501
+    m_Localized: "Reprise \xE0 partir des donn\xE9es de suspension. Veuillez noter
+      que les donn\xE9es de suspension ont \xE9t\xE9 supprim\xE9es."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667970
+    m_Localized: "Le BP de {0} a r\xE9cup\xE9r\xE9 de <color=#99FF99>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667971
+    m_Localized: "Le BP de {0} a diminu\xE9 de <color=#FF9999>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667972
+    m_Localized: "Le stock de couteaux de {0} a augment\xE9 de <color=#99FF99>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667973
+    m_Localized: "Le stock de couteaux de {0} a diminu\xE9 de <color=#FF9999>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667974
+    m_Localized: "Le compteur magique de {0} a augment\xE9 de <color=#99FF99>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667975
+    m_Localized: "{0} a esquiv\xE9 l'attaque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667976
+    m_Localized: "{0} a subi <color=#FFFF88>{1}</color> de d\xE9g\xE2ts."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667977
+    m_Localized: "{0} a r\xE9cup\xE9r\xE9 <color=#88FF88>{1}</color> PV."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667978
+    m_Localized: "{0} a r\xE9cup\xE9r\xE9 <color=#88FF88>{1}</color> d'endurance."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862272
+    m_Localized: "Le stock de couteaux de {0} a \xE9t\xE9 r\xE9initialis\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862273
+    m_Localized: "Le compteur magique de {0} a \xE9t\xE9 r\xE9initialis\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529550
+    m_Localized: :Passer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529551
+    m_Localized: Veuillez entrer un nom.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529552
+    m_Localized: "Veuillez entrer un nom de moins de 10 caract\xE8res."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862274
+    m_Localized: "Est-ce que \"{0}\" vous convient ? Aucun changement ne pourra \xEAtre
+      fait."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529554
+    m_Localized: "Changer l'\xE9quipement"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529555
+    m_Localized: "Changer l'\xE9quipement utilis\xE9 en combat."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529556
+    m_Localized: "Syst\xE8me"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529557
+    m_Localized: "Configurer les param\xE8tres du syst\xE8me."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529558
+    m_Localized: "Cr\xE9er des donn\xE9es de suspension"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529559
+    m_Localized: "Cr\xE9er des donn\xE9es de suspension et quitter le jeu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529560
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529561
+    m_Localized: Aucun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862275
+    m_Localized: 'Arme {0}: {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862276
+    m_Localized: "T\xEAte: {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862277
+    m_Localized: 'Torse: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862278
+    m_Localized: 'Bras: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862279
+    m_Localized: 'Jambes: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862280
+    m_Localized: 'Accessoire {0}: {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529572
+    m_Localized: "S\xE9lectionnez la partie que vous souhaitez changer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529573
+    m_Localized: "S\xE9lectionnez l'arme que vous souhaitez \xE9quiper."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529574
+    m_Localized: "Changer l'armure de t\xEAte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529575
+    m_Localized: "S\xE9lectionnez l'armure de t\xEAte que vous souhaitez \xE9quiper."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529576
+    m_Localized: Changer l'armure de torse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529577
+    m_Localized: "S\xE9lectionnez l'armure de torse que vous souhaitez \xE9quiper."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529578
+    m_Localized: Changer l'armure de bras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529579
+    m_Localized: "S\xE9lectionnez l'armure de bras que vous souhaitez \xE9quiper."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529580
+    m_Localized: Changer l'armure de jambes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529581
+    m_Localized: "S\xE9lectionnez l'armure de jambes que vous souhaitez \xE9quiper."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529582
+    m_Localized: Changer d'accessoire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529583
+    m_Localized: "S\xE9lectionnez l'accessoire que vous souhaitez \xE9quiper."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529584
+    m_Localized: "Cr\xE9er des donn\xE9es de suspension et quitter le jeu ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529585
+    m_Localized: "Les donn\xE9es de suspension ont \xE9t\xE9 cr\xE9\xE9es. Vous pouvez
+      maintenant quitter le jeu. Bon travail !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529586
+    m_Localized: Monter de niveau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529587
+    m_Localized: "Utilisez des points d'exp\xE9rience pour monter de niveau."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529588
+    m_Localized: Repos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529589
+    m_Localized: "Restaurez HP et ST. Cela ne peut \xEAtre utilis\xE9 qu'une fois."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529590
+    m_Localized: "Point de contr\xF4le"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529591
+    m_Localized: "Vitalit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529592
+    m_Localized: "Augmenter la vitalit\xE9 augmentera les PV (Points de Vie)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529593
+    m_Localized: Augmenter l'endurance augmentera les ST (Endurance).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529594
+    m_Localized: Force
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529595
+    m_Localized: Augmenter la force augmentera la puissance des attaques physiques.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529596
+    m_Localized: Esprit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529597
+    m_Localized: Augmenter l'esprit augmentera la puissance des attaques magiques.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529598
+    m_Localized: "Augmenter l'agilit\xE9 vous permettra d'agir plus facilement en
+      premier."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529599
+    m_Localized: Niveau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529600
+    m_Localized: "Points d'exp\xE9rience requis"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529601
+    m_Localized: "\xCAtes-vous s\xFBr de revenir sans monter de niveau ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529602
+    m_Localized: "Veuillez attribuer des param\xE8tres."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529603
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir monter de niveau ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529604
+    m_Localized: Vous ne pouvez plus vous reposer ici.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529605
+    m_Localized: "Les PV et ST seront restaur\xE9s, mais cela ne peut \xEAtre utilis\xE9
+      qu'une seule fois.\nCela vous convient-il ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349285423185920
+    m_Localized: :Commencer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529607
+    m_Localized: "R\xE9glez le volume global du jeu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529608
+    m_Localized: "R\xE9glez le volume de la musique (BGM)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529609
+    m_Localized: "R\xE9glez le volume des effets sonores."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529610
+    m_Localized: "D\xE9finissez si la rotation de la mini-carte est synchronis\xE9e
+      avec l'orientation du joueur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529611
+    m_Localized: "Activ\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529612
+    m_Localized: "D\xE9sactiv\xE9"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
