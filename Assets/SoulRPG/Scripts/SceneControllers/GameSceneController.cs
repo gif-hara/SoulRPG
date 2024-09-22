@@ -197,8 +197,8 @@ namespace SoulRPG.SceneControllers
                     inputController.PushInputType(InputController.InputType.UI);
                     await DialogView.ConfirmAsync(
                         gameMenuBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                        "中断データから再開しました。中断データは削除されたのでご注意ください。",
-                        new[] { "確認" },
+                        "中断データから再開しました。中断データは削除されたのでご注意ください。.Localized()",
+                        new[] { "確認".Localized() },
                         0,
                         destroyCancellationToken
                         );

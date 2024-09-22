@@ -19,7 +19,7 @@ namespace SoulRPG
         public static UniTask OpenAsync(HKUIDocument documentBundlePrefab, CancellationToken scope)
         {
             var document = UnityEngine.Object.Instantiate(documentBundlePrefab.Q<HKUIDocument>("UI.Options"));
-            var header = HeaderView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"), "システム", scope);
+            var header = HeaderView.Open(documentBundlePrefab.Q<HKUIDocument>("UI.Game.Header"), "システム".Localized(), scope);
             var source = new UniTaskCompletionSource();
             var stateMachine = new TinyStateMachine();
             HKUIDocument currentTabObject = null;
@@ -132,9 +132,9 @@ namespace SoulRPG
                 };
                 var tips = new List<string>
                 {
-                    "ゲーム全体の音量を設定する。",
-                    "BGMの音量を設定する。",
-                    "効果音の音量を設定する。",
+                    "ゲーム全体の音量を設定する。".Localized(),
+                    "BGMの音量を設定する。".Localized(),
+                    "効果音の音量を設定する。".Localized(),
                 };
                 var initialActions = new List<Action<HKUIDocument>>
                 {
@@ -264,7 +264,7 @@ namespace SoulRPG
                 };
                 var tips = new List<string>
                 {
-                    "ミニマップの回転をプレイヤーの向きと同期を取るか設定する。",
+                    "ミニマップの回転をプレイヤーの向きと同期を取るか設定する。".Localized(),
                 };
                 var onSubmitActions = new List<Action>
                 {
@@ -278,7 +278,7 @@ namespace SoulRPG
                         var element = elements[elementIndex];
                         element.Q<HKUIDocument>("Message")
                             .Q<TMP_Text>("Message")
-                            .text = saveData.gameSettingData.isRotationMiniMap ? "オン" : "オフ";
+                            .text = saveData.gameSettingData.isRotationMiniMap ? "オン".Localized() : "オフ".Localized();
                     },
                 };
                 var onInitializeActions = new List<Action<HKUIDocument>>
@@ -288,7 +288,7 @@ namespace SoulRPG
                         var saveData = SaveData.LoadSafe();
                         element.Q<HKUIDocument>("Message")
                             .Q<TMP_Text>("Message")
-                            .text = saveData.gameSettingData.isRotationMiniMap ? "オン" : "オフ";
+                            .text = saveData.gameSettingData.isRotationMiniMap ? "オン".Localized() : "オフ".Localized();
                     },
                 };
                 inputController.InputActions.Options.Navigate.OnPerformedAsObservable()

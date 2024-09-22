@@ -31,7 +31,7 @@ namespace SoulRPG
             TinyServiceLocator.Resolve<InputScheme>().AnyChangedAsObservable()
                 .Subscribe(_ =>
                 {
-                    anyClickText.text = inputController.InputActions.UI.Submit.GetTag() + ":開始";
+                    anyClickText.text = inputController.InputActions.UI.Submit.GetTag() + ":開始".Localized();
                 })
                 .RegisterTo(scope);
             await inputController.InputActions.UI.Submit.OnPerformedAsObservable().FirstAsync();

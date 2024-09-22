@@ -169,12 +169,12 @@ namespace SoulRPG
         {
             return self switch
             {
-                Define.AttackAttribute.Slash => "斬撃",
-                Define.AttackAttribute.Blow => "打撃",
-                Define.AttackAttribute.Thrust => "刺突",
-                Define.AttackAttribute.Magic => "魔法",
-                Define.AttackAttribute.Fire => "火炎",
-                Define.AttackAttribute.Thunder => "雷撃",
+                Define.AttackAttribute.Slash => "斬撃".Localized(),
+                Define.AttackAttribute.Blow => "打撃".Localized(),
+                Define.AttackAttribute.Thrust => "刺突".Localized(),
+                Define.AttackAttribute.Magic => "魔法".Localized(),
+                Define.AttackAttribute.Fire => "火炎".Localized(),
+                Define.AttackAttribute.Thunder => "雷撃".Localized(),
                 _ => throw new System.ArgumentOutOfRangeException()
             };
         }

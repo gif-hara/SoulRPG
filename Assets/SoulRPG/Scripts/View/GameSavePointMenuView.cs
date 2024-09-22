@@ -60,14 +60,14 @@ namespace SoulRPG
                     GameListView.ApplyAsSimpleElement
                     (
                         element,
-                        "レベルアップ",
+                        "レベルアップ".Localized(),
                         _ =>
                         {
                             stateMachine.Change(StateLevelUpAsync);
                         },
                         _ =>
                         {
-                            GameTipsView.SetTip("経験値を消費してレベルアップを行います。");
+                            GameTipsView.SetTip("経験値を消費してレベルアップを行います。".Localized());
                         }
                     );
                 },
@@ -76,14 +76,14 @@ namespace SoulRPG
                     GameListView.ApplyAsSimpleElement
                     (
                         element,
-                        "休憩",
+                        "休憩".Localized(),
                         _ =>
                         {
                             stateMachine.Change(StateRestAsync);
                         },
                         _ =>
                         {
-                            GameTipsView.SetTip("HPとSTを回復します。これは一度しか使用できません。");
+                            GameTipsView.SetTip("HPとSTを回復します。これは一度しか使用できません。".Localized());
                         }
                     );
                 },
@@ -97,7 +97,7 @@ namespace SoulRPG
                     stateMachine.Change(StateCloseAsync);
                 })
                 .RegisterTo(scope);
-            CreateHeader("チェックポイント", scope);
+            CreateHeader("チェックポイント".Localized(), scope);
             await UniTask.WaitUntilCanceled(scope);
             UnityEngine.Object.Destroy(listDocument.gameObject);
         }
@@ -117,14 +117,14 @@ namespace SoulRPG
                         SetupElement
                         (
                             element,
-                            "生命力",
+                            "生命力".Localized(),
                             x =>
                             {
                                 growthParameter.Vitality += x;
                                 return growthParameter.Vitality;
                             },
                             character.GrowthParameter.Vitality,
-                            "生命力を上げるとHP（ヒットポイント）が増加します。"
+                            "生命力を上げるとHP（ヒットポイント）が増加します。".Localized()
                         );
                     },
                     element =>
@@ -132,14 +132,14 @@ namespace SoulRPG
                         SetupElement
                         (
                             element,
-                            "持久力",
+                            "持久力".Localized(),
                             x =>
                             {
                                 growthParameter.Stamina += x;
                                 return growthParameter.Stamina;
                             },
                             character.GrowthParameter.Stamina,
-                            "持久力を上げるとST（スタミナ）が増加します。"
+                            "持久力を上げるとST（スタミナ）が増加します。".Localized()
                         );
                     },
                     element =>
@@ -147,14 +147,14 @@ namespace SoulRPG
                         SetupElement
                         (
                             element,
-                            "筋力",
+                            "筋力".Localized(),
                             x =>
                             {
                                 growthParameter.PhysicalStrength += x;
                                 return growthParameter.PhysicalStrength;
                             },
                             character.GrowthParameter.PhysicalStrength,
-                            "筋力を上げると物理攻撃の威力が増加します。"
+                            "筋力を上げると物理攻撃の威力が増加します。".Localized()
                         );
                     },
                     element =>
@@ -162,14 +162,14 @@ namespace SoulRPG
                         SetupElement
                         (
                             element,
-                            "精神力",
+                            "精神力".Localized(),
                             x =>
                             {
                                 growthParameter.MagicalStrength += x;
                                 return growthParameter.MagicalStrength;
                             },
                             character.GrowthParameter.MagicalStrength,
-                            "精神力を上げると魔法攻撃の威力が増加します。"
+                            "精神力を上げると魔法攻撃の威力が増加します。".Localized()
                         );
                     },
                     element =>
@@ -177,14 +177,14 @@ namespace SoulRPG
                         SetupElement
                         (
                             element,
-                            "素早さ",
+                            "素早さ".Localized(),
                             x =>
                             {
                                 growthParameter.Speed += x;
                                 return growthParameter.Speed;
                             },
                             character.GrowthParameter.Speed,
-                            "素早さを上げると先手を取りやすくなります。"
+                            "素早さを上げると先手を取りやすくなります。".Localized()
                         );
                     },
                 },
@@ -194,7 +194,7 @@ namespace SoulRPG
             var informationViewport = informationDocument.Q<RectTransform>("Viewport");
             var informationElementPrefab = documentBundlePrefab.Q<HKUIDocument>("UIElement.Info");
             var currentLevelInfo = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
-            currentLevelInfo.Q<TMP_Text>("Header").text = "レベル";
+            currentLevelInfo.Q<TMP_Text>("Header").text = "レベル".Localized();
             Observable.Merge(useExperience)
                 .Subscribe(x =>
                 {
@@ -202,7 +202,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var currentExperienceInfo = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
-            currentExperienceInfo.Q<TMP_Text>("Header").text = "所持経験値";
+            currentExperienceInfo.Q<TMP_Text>("Header").text = "所持経験値".Localized();
             Observable.Merge(useExperience, character.InstanceStatus.ExperienceAsObservable())
                 .Subscribe(x =>
                 {
@@ -210,7 +210,7 @@ namespace SoulRPG
                 })
                 .RegisterTo(scope);
             var needExperienceInfo = UnityEngine.Object.Instantiate(informationElementPrefab, informationViewport);
-            needExperienceInfo.Q<TMP_Text>("Header").text = "必要経験値";
+            needExperienceInfo.Q<TMP_Text>("Header").text = "必要経験値".Localized();
             Observable.Merge(useExperience)
                 .Subscribe(x =>
                 {
@@ -230,8 +230,8 @@ namespace SoulRPG
                         var result = await DialogView.ConfirmAsync
                         (
                             documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                            "レベルアップせずに戻ります。よろしいですか？",
-                            new[] { "はい", "いいえ" },
+                            "レベルアップせずに戻ります。よろしいですか？".Localized(),
+                            new[] { "はい".Localized(), "いいえ".Localized() },
                             0,
                             scope
                         );
@@ -247,7 +247,7 @@ namespace SoulRPG
                     }
                 })
                 .RegisterTo(scope);
-            CreateHeader("レベルアップ", scope);
+            CreateHeader("レベルアップ".Localized(), scope);
             await UniTask.WaitUntilCanceled(scope);
             UnityEngine.Object.Destroy(listDocument.gameObject);
             UnityEngine.Object.Destroy(informationDocument.gameObject);
@@ -277,7 +277,7 @@ namespace SoulRPG
                             await DialogView.ConfirmAsync
                             (
                                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                                "パラメーターを割り振ってください",
+                                "パラメーターを割り振ってください".Localized(),
                                 new[] { "OK" },
                                 0,
                                 scope
@@ -289,8 +289,8 @@ namespace SoulRPG
                         var result = await DialogView.ConfirmAsync
                         (
                             documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                            "本当にレベルアップしますか？",
-                            new[] { "はい", "いいえ" },
+                            "本当にレベルアップしますか？".Localized(),
+                            new[] { "はい".Localized(), "いいえ".Localized() },
                             0,
                             scope
                         );
@@ -365,8 +365,8 @@ namespace SoulRPG
                 await DialogView.ConfirmAsync
                 (
                     documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                    "ここではもう休憩できません。",
-                    new[] { "OK" },
+                    "ここではもう休憩できません。".Localized(),
+                    new[] { "確認".Localized() },
                     0,
                     scope
                 );
@@ -376,8 +376,8 @@ namespace SoulRPG
             var result = await DialogView.ConfirmAsync
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                "HPとSTを回復しますが一度しか使用できません。\nよろしいですか？",
-                new[] { "はい", "いいえ" },
+                "HPとSTを回復しますが一度しか使用できません。\nよろしいですか？".Localized(),
+                new[] { "はい".Localized(), "いいえ".Localized() },
                 0,
                 scope
             );
