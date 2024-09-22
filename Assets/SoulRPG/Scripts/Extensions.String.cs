@@ -10,7 +10,7 @@ namespace SoulRPG
     {
         public static string Localized(this string self)
         {
-#if UNITY_WEBGL
+#if !UNITY_EDITOR && UNITY_WEBGL
             return self;
 #else
             var table = LocalizationSettings.StringDatabase.GetTable("TextData");
