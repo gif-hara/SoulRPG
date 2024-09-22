@@ -46,7 +46,7 @@ namespace SoulRPG
             SetActiveEmptyArea(false);
             Thumbnail.sprite = item.Thumbnail;
             Name.text = item.Name.Localized();
-            Description.text = item.Description;
+            Description.text = item.Description.Localized();
             foreach (var element in skillElements)
             {
                 Object.Destroy(element);

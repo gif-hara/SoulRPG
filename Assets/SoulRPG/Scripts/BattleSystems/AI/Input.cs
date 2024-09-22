@@ -196,7 +196,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip(fixedWeaponId.GetMasterDataItem().Description);
+                                GameTipsView.SetTip(fixedWeaponId.GetMasterDataItem().Description.Localized());
                                 informationWeaponView.Setup(fixedWeaponId);
                             });
                     });
@@ -488,7 +488,7 @@ namespace SoulRPG
                             },
                             _ =>
                             {
-                                GameTipsView.SetTip(fixedWeaponId.GetMasterDataItem().Description);
+                                GameTipsView.SetTip(fixedWeaponId.GetMasterDataItem().Description.Localized());
                                 informationWeaponView.Setup(fixedWeaponId);
                             });
                     });
