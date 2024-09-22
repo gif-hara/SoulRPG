@@ -4721,10 +4721,6 @@ MonoBehaviour:
       id:{floorId}"
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529447
-    m_Localized: "{inputController.InputActions.InGame.Interact.GetTag()}\u958B\u3051\u308B"
-    m_Metadata:
-      m_Items: []
   - m_Id: 1690473529448
     m_Localized: "\u6249\u304C\u958B\u3044\u305F\u3002"
     m_Metadata:
@@ -4739,10 +4735,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1690473529451
     m_Localized: Sfx.Message.0
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529452
-    m_Localized: "<color=#88FF88>{addExperience}</color>\u306E\u7D4C\u9A13\u5024\u3092\u7372\u5F97\u3057\u305F\u3002"
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529453
@@ -4898,20 +4890,12 @@ MonoBehaviour:
     m_Localized: "\u60C5\u5831\u3092\u9078\u3079"
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529491
-    m_Localized: "{x.GetMasterDataAilment().Name}(\u6B8B\u308A{x.GetRemainingTurnCount()}\u30BF\u30FC\u30F3)"
-    m_Metadata:
-      m_Items: []
   - m_Id: 1690473529492
     m_Localized: "\u5909\u66F4\u3059\u308B\u6B66\u5668\u3092\u9078\u3079"
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529493
     m_Localized: "\u88C5\u5099\u3057\u3066\u3044\u308B\u6B66\u5668\u3092\u5909\u66F4\u3057\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529494
-    m_Localized: Sfx.Message.24
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529495
@@ -4964,50 +4948,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1690473529507
     m_Localized: "\u884C\u52D5\u30DD\u30A4\u30F3\u30C8\uFF1A{player.GrowthParameter.BehaviourPoint}"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529508
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306EBP\u304C<color=#99FF99>{value}</color>\u56DE\u5FA9\u3057\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529509
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306EBP\u304C<color=#FF9999>{-value}</color>\u6E1B\u5C11\u3057\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529510
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306E\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u304C<color=#99FF99>{value}</color>\u84C4\u7A4D\u3057\u305F"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529511
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306E\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u304C<color=#FF9999>{-value}</color>\u6E1B\u5C11\u3057\u305F"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529512
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306E\u9B54\u30AB\u30A6\u30F3\u30C8\u304C<color=#99FF99>{value}</color>\u84C4\u7A4D\u3057\u305F"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529513
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306F\u653B\u6483\u3092\u56DE\u907F\u3057\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529514
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306B<color=#FFFF88>{damage}</color>\u306E\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529515
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306EHP\u304C<color=#88FF88>{recovery}</color>\u56DE\u5FA9\u3057\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529516
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306E\u30B9\u30BF\u30DF\u30CA\u304C<color=#88FF88>{recovery}</color>\u56DE\u5FA9\u3057\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529517
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306E\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u304C\u30EA\u30BB\u30C3\u30C8\u3055\u308C\u305F\u3002"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529518
-    m_Localized: "{t.BattleStatus.NameWithTag}\u306E\u9B54\u30AB\u30A6\u30F3\u30C8\u304C\u30EA\u30BB\u30C3\u30C8\u3055\u308C\u305F\u3002"
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529519
@@ -5146,10 +5086,6 @@ MonoBehaviour:
     m_Localized: "\u540D\u524D\u306F10\u6587\u5B57\u4EE5\u5185\u3067\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529553
-    m_Localized: "\u300C{inputField.text}\u300D\u3067\u3088\u308D\u3057\u3044\u3067\u3059\u304B\uFF1F\u5909\u66F4\u306F\u51FA\u6765\u307E\u305B\u3093\u3002"
-    m_Metadata:
-      m_Items: []
   - m_Id: 1690473529554
     m_Localized: "\u88C5\u5099\u5909\u66F4"
     m_Metadata:
@@ -5180,46 +5116,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1690473529561
     m_Localized: "\u306A\u3057"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529562
-    m_Localized: "\u6B66\u5668{i + 1}: {weaponName}"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529563
-    m_Localized: "\u982D: {(character.Equipment.HeadId == 0 ?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529564
-    m_Localized: ': character.Equipment.HeadId.GetMasterDataItem().Name)}'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529565
-    m_Localized: "\u80F4: {(character.Equipment.BodyId == 0 ?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529566
-    m_Localized: ': character.Equipment.BodyId.GetMasterDataItem().Name)}'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529567
-    m_Localized: "\u8155: {(character.Equipment.ArmId == 0 ?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529568
-    m_Localized: ': character.Equipment.ArmId.GetMasterDataItem().Name)}'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529569
-    m_Localized: "\u811A: {(character.Equipment.LegId == 0 ?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529570
-    m_Localized: ': character.Equipment.LegId.GetMasterDataItem().Name)}'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1690473529571
-    m_Localized: "\u30A2\u30AF\u30BB\u30B5\u30EA{i + 1}: {accessoryName}"
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529572
@@ -5358,10 +5254,6 @@ MonoBehaviour:
     m_Localized: "HP\u3068ST\u3092\u56DE\u5FA9\u3057\u307E\u3059\u304C\u4E00\u5EA6\u3057\u304B\u4F7F\u7528\u3067\u304D\u307E\u305B\u3093\u3002\\n\u3088\u308D\u3057\u3044\u3067\u3059\u304B\uFF1F"
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529606
-    m_Localized: UI.Game.Header
-    m_Metadata:
-      m_Items: []
   - m_Id: 1690473529607
     m_Localized: "\u30B2\u30FC\u30E0\u5168\u4F53\u306E\u97F3\u91CF\u3092\u8A2D\u5B9A\u3059\u308B\u3002"
     m_Metadata:
@@ -5400,6 +5292,90 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2154588540174337
     m_Localized: "{0}\u30A2\u30A4\u30C6\u30E0\u3092\u62FE\u3046"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479434502144
+    m_Localized: "{0}\u958B\u3051\u308B"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667968
+    m_Localized: "<color=#88FF88>{0}</color>\u306E\u7D4C\u9A13\u5024\u3092\u7372\u5F97\u3057\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667969
+    m_Localized: "{0}(\u6B8B\u308A{1}\u30BF\u30FC\u30F3)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667970
+    m_Localized: "{0}\u306EBP\u304C<color=#99FF99>{1}</color>\u56DE\u5FA9\u3057\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667971
+    m_Localized: "{0}\u306EBP\u304C<color=#FF9999>{1}</color>\u6E1B\u5C11\u3057\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667972
+    m_Localized: "{0}\u306E\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u304C<color=#99FF99>{1}</color>\u84C4\u7A4D\u3057\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667973
+    m_Localized: "{0}\u306E\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u304C<color=#FF9999>{1}</color>\u6E1B\u5C11\u3057\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667974
+    m_Localized: "{0}\u306E\u9B54\u30AB\u30A6\u30F3\u30C8\u304C<color=#99FF99>{1}</color>\u84C4\u7A4D\u3057\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667975
+    m_Localized: "{0}\u306F\u653B\u6483\u3092\u56DE\u907F\u3057\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667976
+    m_Localized: "{0}\u306B<color=#FFFF88>{1}</color>\u306E\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667977
+    m_Localized: "{0}\u306EHP\u304C<color=#88FF88>{1}</color>\u56DE\u5FA9\u3057\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667978
+    m_Localized: "{0}\u306E\u30B9\u30BF\u30DF\u30CA\u304C<color=#88FF88>{1}</color>\u56DE\u5FA9\u3057\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862272
+    m_Localized: "{0}\u306E\u30CA\u30A4\u30D5\u30B9\u30C8\u30C3\u30AF\u304C\u30EA\u30BB\u30C3\u30C8\u3055\u308C\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862273
+    m_Localized: "{0}\u306E\u9B54\u30AB\u30A6\u30F3\u30C8\u304C\u30EA\u30BB\u30C3\u30C8\u3055\u308C\u305F\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862274
+    m_Localized: "\u300C{0}\u300D\u3067\u3088\u308D\u3057\u3044\u3067\u3059\u304B\uFF1F\u5909\u66F4\u306F\u51FA\u6765\u307E\u305B\u3093\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862275
+    m_Localized: "\u6B66\u5668{0}: {1}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862276
+    m_Localized: "\u982D: {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862277
+    m_Localized: "\u80F4: {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862278
+    m_Localized: "\u8155: {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862279
+    m_Localized: "\u811A: {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862280
+    m_Localized: "\u30A2\u30AF\u30BB\u30B5\u30EA\u30FC{0}: {1}"
     m_Metadata:
       m_Items: []
   references:

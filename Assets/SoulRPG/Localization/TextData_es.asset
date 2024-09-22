@@ -5303,6 +5303,474 @@ MonoBehaviour:
     m_Localized: Has obtenido {1} <color=#8888FF>{0}</color>.
     m_Metadata:
       m_Items: []
+  - m_Id: 2154588540174337
+    m_Localized: "{0}Recoger \xEDtem"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479434502144
+    m_Localized: '{0}Abrir'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529448
+    m_Localized: "La puerta se abri\xF3."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529450
+    m_Localized: "Parece que no se abrir\xE1 desde este lado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667968
+    m_Localized: Has ganado <color=#88FF88>{0}</color> puntos de experiencia.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529454
+    m_Localized: Magia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529455
+    m_Localized: Fuego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529460
+    m_Localized: :Mover
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529461
+    m_Localized: :Movimiento Horizontal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529462
+    m_Localized: ":Men\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529463
+    m_Localized: :Cambiar Mapa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529464
+    m_Localized: :Seleccionar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529465
+    m_Localized: :Confirmar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529466
+    m_Localized: :Cancelar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529467
+    m_Localized: ":Mover Categor\xEDa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529470
+    m_Localized: Arma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529471
+    m_Localized: Usa armas para realizar ataques y otras acciones.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529472
+    m_Localized: Comprobar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529473
+    m_Localized: "Comprueba informaci\xF3n como estados alterados y estad\xEDsticas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529474
+    m_Localized: Cambiar arma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529475
+    m_Localized: Cambia el arma equipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529476
+    m_Localized: Todas las habilidades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529477
+    m_Localized: Encabezado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529478
+    m_Localized: Seleccionar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529479
+    m_Localized: Selecciona un arma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529480
+    m_Localized: Ya no puedes usar esto en este turno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529481
+    m_Localized: No tienes suficiente BP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529482
+    m_Localized: No tienes suficiente resistencia.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529483
+    m_Localized: Selecciona una habilidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529484
+    m_Localized: Estado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529485
+    m_Localized: "Revisa varias estad\xEDsticas y tasas de reducci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529486
+    m_Localized: Estados alterados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529487
+    m_Localized: Comprueba los estados alterados que se te han aplicado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529488
+    m_Localized: Estados alterados (enemigo)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529489
+    m_Localized: Comprueba los estados alterados que se han aplicado al enemigo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529490
+    m_Localized: "Seleccionar informaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667969
+    m_Localized: '{0} (restan {1} turnos)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529492
+    m_Localized: Selecciona el arma para cambiar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529493
+    m_Localized: Has cambiado el arma equipada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529495
+    m_Localized: "Parece usable. Equipado en la ranura de armas vac\xEDa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529496
+    m_Localized: Parece usable. Equipado en la cabeza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529497
+    m_Localized: Parece usable. Equipado en el torso.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529498
+    m_Localized: Parece usable. Equipado en los brazos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529499
+    m_Localized: Parece usable. Equipado en las piernas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529500
+    m_Localized: "Parece usable. Equipado en la ranura de accesorios vac\xEDa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529501
+    m_Localized: "Reanudado desde los datos de suspensi\xF3n. Tenga en cuenta que
+      los datos de suspensi\xF3n se han eliminado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667970
+    m_Localized: "El BP de {0} se recuper\xF3 en <color=#99FF99>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667971
+    m_Localized: "El BP de {0} disminuy\xF3 en <color=#FF9999>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667972
+    m_Localized: "El stock de cuchillos de {0} aument\xF3 en <color=#99FF99>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667973
+    m_Localized: "El stock de cuchillos de {0} disminuy\xF3 en <color=#FF9999>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667974
+    m_Localized: "El contador m\xE1gico de {0} aument\xF3 en <color=#99FF99>{1}</color>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667975
+    m_Localized: "{0} esquiv\xF3 el ataque."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667976
+    m_Localized: "{0} recibi\xF3 <color=#FFFF88>{1}</color> de da\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667977
+    m_Localized: "{0} recuper\xF3 <color=#88FF88>{1}</color> puntos de vida."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479459667978
+    m_Localized: "{0} recuper\xF3 <color=#88FF88>{1}</color> de resistencia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862272
+    m_Localized: El stock de cuchillos de {0} se ha restablecido.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862273
+    m_Localized: "El contador m\xE1gico de {0} se ha restablecido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529550
+    m_Localized: :Saltar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529551
+    m_Localized: Por favor, introduce un nombre.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529552
+    m_Localized: Por favor, introduce un nombre de hasta 10 caracteres.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862274
+    m_Localized: "\xBFEs \"{0}\" correcto? No se podr\xE1n realizar cambios."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529554
+    m_Localized: Cambiar equipo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529555
+    m_Localized: Cambiar el equipo que se utiliza en combate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529556
+    m_Localized: Sistema
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529557
+    m_Localized: Configurar los ajustes del sistema.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529558
+    m_Localized: "Crear datos de suspensi\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529559
+    m_Localized: "Crear datos de suspensi\xF3n y salir del juego."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529560
+    m_Localized: "Men\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529561
+    m_Localized: Ninguno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862275
+    m_Localized: 'Arma {0}: {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862276
+    m_Localized: 'Cabeza: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862277
+    m_Localized: 'Torso: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862278
+    m_Localized: 'Brazos: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862279
+    m_Localized: 'Piernas: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2689479463862280
+    m_Localized: 'Accesorio {0}: {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529572
+    m_Localized: Selecciona la parte que deseas cambiar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529573
+    m_Localized: Selecciona el arma que deseas equipar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529574
+    m_Localized: Cambiar armadura de cabeza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529575
+    m_Localized: Selecciona la armadura de cabeza que deseas equipar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529576
+    m_Localized: Cambiar armadura de torso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529577
+    m_Localized: Selecciona la armadura de torso que deseas equipar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529578
+    m_Localized: Cambiar armadura de brazos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529579
+    m_Localized: Selecciona la armadura de brazos que deseas equipar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529580
+    m_Localized: Cambiar armadura de piernas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529581
+    m_Localized: Selecciona la armadura de piernas que deseas equipar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529582
+    m_Localized: Cambiar accesorio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529583
+    m_Localized: Selecciona el accesorio que deseas equipar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529584
+    m_Localized: "\xBFCrear datos de suspensi\xF3n y salir del juego?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529585
+    m_Localized: "Los datos de suspensi\xF3n han sido creados. Ahora puedes salir
+      del juego. \xA1Buen trabajo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529586
+    m_Localized: Subir de nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529587
+    m_Localized: Usa puntos de experiencia para subir de nivel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529588
+    m_Localized: Descanso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529589
+    m_Localized: Restaura HP y ST. Esto solo se puede usar una vez.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529590
+    m_Localized: Punto de control
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529591
+    m_Localized: Vitalidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529592
+    m_Localized: "Aumentar la vitalidad aumentar\xE1 el HP (Puntos de Vida)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529593
+    m_Localized: "Aumentar la resistencia aumentar\xE1 el ST (Resistencia)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529594
+    m_Localized: Fuerza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529595
+    m_Localized: "Aumentar la fuerza aumentar\xE1 el poder de los ataques f\xEDsicos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529596
+    m_Localized: "Esp\xEDritu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529597
+    m_Localized: "Aumentar el esp\xEDritu aumentar\xE1 el poder de los ataques m\xE1gicos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529598
+    m_Localized: "Aumentar la agilidad facilitar\xE1 tomar la iniciativa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529599
+    m_Localized: Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529600
+    m_Localized: Puntos de experiencia necesarios
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529601
+    m_Localized: "\xBFEst\xE1s seguro de que quieres regresar sin subir de nivel?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529602
+    m_Localized: "Por favor, asigna par\xE1metros."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529603
+    m_Localized: "\xBFEst\xE1s seguro de que quieres subir de nivel?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529604
+    m_Localized: "Ya no puedes descansar aqu\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529605
+    m_Localized: "Se restaurar\xE1n HP y ST, pero solo se puede usar una vez.\n\xBFEst\xE1
+      bien?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349285423185920
+    m_Localized: :Iniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529607
+    m_Localized: Ajustar el volumen general del juego.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529608
+    m_Localized: "Ajustar el volumen de la m\xFAsica (BGM)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529609
+    m_Localized: Ajustar el volumen de los efectos de sonido.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529610
+    m_Localized: "Configurar si la rotaci\xF3n del minimapa se sincroniza con la
+      direcci\xF3n del jugador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529611
+    m_Localized: Activado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690473529612
+    m_Localized: Desactivado
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
