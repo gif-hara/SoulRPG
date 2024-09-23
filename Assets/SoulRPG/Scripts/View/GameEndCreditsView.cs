@@ -26,7 +26,7 @@ namespace SoulRPG
             try
             {
                 var title3 = document.Q<TMP_Text>("Title.3");
-                title3.text = title3.text.Replace("{PlayerName}", SaveData.LoadSafe().playerData.name);
+                title3.text = title3.text.Localized().Replace("{PlayerName}", SaveData.LoadSafe().playerData.name);
                 skipText.gameObject.SetActive(false);
                 TinyServiceLocator.Resolve<InputScheme>().AnyChangedAsObservable()
                     .Subscribe(_ =>
