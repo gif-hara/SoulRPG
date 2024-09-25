@@ -22,7 +22,7 @@ namespace SoulRPG
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
             document.Q<CanvasGroup>("Area.Title").alpha = 0;
             var title = gameRule.GameTitle;
-            title = title.Replace("{SealedName}", saveData.playerData.sealedName);
+            title = title.Localized().Replace("{SealedName}", saveData.playerData.sealedName);
             document.Q<TMP_Text>("Text.Title").text = title;
             inputController.PushInputType(InputController.InputType.UI);
             sequences.Q<SequenceMonobehaviour>("Animation.AnyClick.Loop").PlayAsync(anyClickScope.Token).Forget();

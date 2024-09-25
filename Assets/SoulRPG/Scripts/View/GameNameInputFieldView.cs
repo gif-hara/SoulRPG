@@ -29,7 +29,7 @@ namespace SoulRPG
             var submitButton = document.Q<Button>("Button.Submit");
             var gameRule = TinyServiceLocator.Resolve<GameRule>();
             var saveData = SaveData.LoadSafe();
-            var defaultPlayerName = saveData.playerData.sealedName == gameRule.DefaultSealedName
+            var defaultPlayerName = saveData.playerData.sealedName == gameRule.DefaultSealedName.Localized()
                 ? gameRule.DefaultPlayerNames[Random.Range(0, gameRule.DefaultPlayerNames.Count)]
                 : saveData.playerData.sealedName;
             inputField.text = defaultPlayerName;

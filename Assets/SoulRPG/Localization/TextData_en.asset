@@ -5129,10 +5129,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529419
-    m_Localized: '"While bearing the fate of being the God of Destruction,
+    m_Localized: 'While bearing the fate of being the God of Destruction,
 
       he
-      likely never imagined that he would be defeated."'
+      likely never imagined that he would be defeated.'
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529420
@@ -5148,9 +5148,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529423
-    m_Localized: '"And within that silence,
+    m_Localized: 'And within that silence,
 
-      long-forgotten peace quietly spread."'
+      long-forgotten peace quietly spread.'
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529424
@@ -5695,6 +5695,272 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1690473529612
     m_Localized: Off
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198270738432
+    m_Localized: Leaf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321344
+    m_Localized: Touch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321345
+    m_Localized: Short Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321346
+    m_Localized: Dagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321347
+    m_Localized: Buster Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321348
+    m_Localized: Penetrator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321349
+    m_Localized: Burning Iron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321350
+    m_Localized: Great Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321351
+    m_Localized: Emblem Shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321352
+    m_Localized: Regalis Knight Shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321353
+    m_Localized: Broadsword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321354
+    m_Localized: Penetrator +
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321355
+    m_Localized: Buster Sword +
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321356
+    m_Localized: Buster Sword ++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321357
+    m_Localized: Golden Hammer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321358
+    m_Localized: Dagger ++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321359
+    m_Localized: Bare Hands
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321360
+    m_Localized: Knight's Helm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321361
+    m_Localized: Black Knight's Helm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321362
+    m_Localized: White Silk Hood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321363
+    m_Localized: White Silk Robe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321364
+    m_Localized: White Silk Gloves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321365
+    m_Localized: Golden Helm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321366
+    m_Localized: Black Silk Hood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321367
+    m_Localized: Black Silk Robe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321368
+    m_Localized: Black Silk Gloves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321369
+    m_Localized: Black Belt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321370
+    m_Localized: Flame Dance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321371
+    m_Localized: Festering Burning Iron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321372
+    m_Localized: Dance of Chaos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321373
+    m_Localized: Magic Shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321374
+    m_Localized: Perception
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321375
+    m_Localized: Sea of Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321376
+    m_Localized: Guard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321377
+    m_Localized: Swing your weapon with all your might, channeling all BP into power.
+      Inflicts 'Fatigue' and 'Paralysis' on yourself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321378
+    m_Localized: Magic Tentacles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321379
+    m_Localized: White Wave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321380
+    m_Localized: Grenade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321381
+    m_Localized: Darts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321382
+    m_Localized: Hard Bash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321383
+    m_Localized: Courage Antlers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321384
+    m_Localized: Lava Golem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321385
+    m_Localized: Black Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321386
+    m_Localized: Kama-Itachi Crow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321387
+    m_Localized: Nine-Tailed Fox of Purple Flames
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321388
+    m_Localized: Poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321389
+    m_Localized: Burn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515648
+    m_Localized: Festering Burn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515649
+    m_Localized: Fatigue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515650
+    m_Localized: Magic Boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515651
+    m_Localized: Struggle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515652
+    m_Localized: '{Actor} ''You...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515653
+    m_Localized: '{Actor} ''Die!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515654
+    m_Localized: '{Actor} ''...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515655
+    m_Localized: ...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515656
+    m_Localized: '{Actor} ''{SealedName}-dono...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515657
+    m_Localized: '{Actor}''s physical reduction state has worn off.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515658
+    m_Localized: '{Actor} hardened their armor and is now in a physical reduction
+      state.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515659
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515660
+    m_Localized: Heitaro Ashibe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515661
+    m_Localized: Yu-Rin-Chi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515662
+    m_Localized: Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515663
+    m_Localized: Game Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515664
+    m_Localized: Minimap Rotation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3932256315047936
+    m_Localized: BGM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3932256315047937
+    m_Localized: SE
     m_Metadata:
       m_Items: []
   references:

@@ -5253,8 +5253,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529419
-    m_Localized: "\"W\xE4hrend er das Schicksal als Gott der Zerst\xF6rung trug,\nh\xE4tte
-      er sich wohl nie vorgestellt, dass er besiegt werden k\xF6nnte.\""
+    m_Localized: "W\xE4hrend er das Schicksal als Gott der Zerst\xF6rung trug,\nh\xE4tte
+      er sich wohl nie vorgestellt, dass er besiegt werden k\xF6nnte."
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529420
@@ -5270,10 +5270,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529423
-    m_Localized: '"Und in dieser Stille breitete sich
+    m_Localized: 'Und in dieser Stille breitete sich
 
       lang vergessener Frieden
-      still aus."'
+      still aus.'
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529424
@@ -5823,6 +5823,272 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1690473529612
     m_Localized: Aus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198270738432
+    m_Localized: Blatt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321344
+    m_Localized: "Ber\xFChren"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321345
+    m_Localized: Kurzschwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321346
+    m_Localized: Dolch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321347
+    m_Localized: Buster-Schwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321348
+    m_Localized: Durchdringer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321349
+    m_Localized: Brennendes Eisen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321350
+    m_Localized: "Gro\xDFschwert"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321351
+    m_Localized: Wappenschild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321352
+    m_Localized: Regalis-Ritterschild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321353
+    m_Localized: Breitschwert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321354
+    m_Localized: Durchdringer +
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321355
+    m_Localized: Buster-Schwert +
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321356
+    m_Localized: Buster-Schwert ++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321357
+    m_Localized: Goldener Hammer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321358
+    m_Localized: Dolch ++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321359
+    m_Localized: "Blo\xDFe H\xE4nde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321360
+    m_Localized: Ritterhelm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321361
+    m_Localized: Schwarzer Ritterhelm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321362
+    m_Localized: "Wei\xDFe Seidenhaube"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321363
+    m_Localized: "Wei\xDFe Seidenrobe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321364
+    m_Localized: "Wei\xDFe Seidenhandschuhe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321365
+    m_Localized: Goldener Helm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321366
+    m_Localized: Schwarze Seidenhaube
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321367
+    m_Localized: Schwarze Seidenrobe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321368
+    m_Localized: Schwarze Seidenhandschuhe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321369
+    m_Localized: Schwarzgurt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321370
+    m_Localized: Flammentanz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321371
+    m_Localized: Faulendes Brenneisen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321372
+    m_Localized: Chaostanz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321373
+    m_Localized: Magieschild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321374
+    m_Localized: Wahrnehmung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321375
+    m_Localized: Meer der Magie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321376
+    m_Localized: Schutz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321377
+    m_Localized: "Schwinge deine Waffe mit aller Kraft und verwandle alle BP in St\xE4rke.
+      Du f\xFCgst dir selbst 'Ersch\xF6pfung' und 'L\xE4hmung' zu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321378
+    m_Localized: Magische Tentakeln
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321379
+    m_Localized: "Wei\xDFe Welle"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321380
+    m_Localized: Granate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321381
+    m_Localized: Pfeile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321382
+    m_Localized: Harter Schlag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321383
+    m_Localized: Mutige Geweih
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321384
+    m_Localized: Lava-Golem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321385
+    m_Localized: Schwarzer Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321386
+    m_Localized: "Kama-Itachi-Kr\xE4he"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321387
+    m_Localized: "Neunschw\xE4nziger Fuchs der violetten Flammen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321388
+    m_Localized: Gift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321389
+    m_Localized: Verbrennung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515648
+    m_Localized: Faulende Verbrennung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515649
+    m_Localized: "Ersch\xF6pfung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515650
+    m_Localized: Magie-Boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515651
+    m_Localized: Kampf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515652
+    m_Localized: '{Actor} ''Du...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515653
+    m_Localized: '{Actor} ''Stirb!'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515654
+    m_Localized: '{Actor} ''...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515655
+    m_Localized: ...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515656
+    m_Localized: '{Actor} ''{SealedName}-sama...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515657
+    m_Localized: "{Actor}'s physischer Reduktionszustand hat sich aufgel\xF6st."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515658
+    m_Localized: "{Actor} hat seine R\xFCstung verh\xE4rtet und befindet sich jetzt
+      in einem physischen Reduktionszustand."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515659
+    m_Localized: "Best\xE4tigen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515660
+    m_Localized: Heitaro Ashibe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515661
+    m_Localized: Yu-Rin-Chi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515662
+    m_Localized: Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515663
+    m_Localized: Spieleinstellungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515664
+    m_Localized: Minikartenrotation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3932256315047936
+    m_Localized: Hintergrundmusik (BGM)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3932256315047937
+    m_Localized: Soundeffekte (SE)
     m_Metadata:
       m_Items: []
   references:

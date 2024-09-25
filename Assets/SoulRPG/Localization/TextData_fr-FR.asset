@@ -5251,8 +5251,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529419
-    m_Localized: "\"Bien qu'il portait le destin d'\xEAtre le dieu de la destruction,\nil
-      n'avait probablement jamais imagin\xE9 \xEAtre vaincu.\""
+    m_Localized: "Bien qu'il portait le destin d'\xEAtre le dieu de la destruction,\nil
+      n'avait probablement jamais imagin\xE9 \xEAtre vaincu."
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529420
@@ -5269,8 +5269,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529423
-    m_Localized: "\"Et dans ce silence,\nun calme longtemps oubli\xE9 s'\xE9tendait
-      doucement.\""
+    m_Localized: "Et dans ce silence,\nun calme longtemps oubli\xE9 s'\xE9tendait
+      doucement."
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529424
@@ -5820,6 +5820,272 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1690473529612
     m_Localized: "D\xE9sactiv\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198270738432
+    m_Localized: Feuille
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321344
+    m_Localized: Toucher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321345
+    m_Localized: "\xC9p\xE9e courte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321346
+    m_Localized: Dague
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321347
+    m_Localized: "\xC9p\xE9e Buster"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321348
+    m_Localized: "P\xE9n\xE9trateur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321349
+    m_Localized: "Fer br\xFBlant"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321350
+    m_Localized: "Grande \xE9p\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321351
+    m_Localized: "Bouclier \xE0 embl\xE8me"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321352
+    m_Localized: Bouclier de chevalier de Regalis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321353
+    m_Localized: "\xC9p\xE9e large"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321354
+    m_Localized: "P\xE9n\xE9trateur +"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321355
+    m_Localized: "\xC9p\xE9e Buster +"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321356
+    m_Localized: "\xC9p\xE9e Buster ++"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321357
+    m_Localized: "Marteau dor\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321358
+    m_Localized: Dague ++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321359
+    m_Localized: Mains nues
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321360
+    m_Localized: Heaume de chevalier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321361
+    m_Localized: Heaume de chevalier noir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321362
+    m_Localized: Capuche en soie blanche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321363
+    m_Localized: Robe en soie blanche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321364
+    m_Localized: Gants en soie blanche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321365
+    m_Localized: "Heaume dor\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321366
+    m_Localized: Capuche en soie noire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321367
+    m_Localized: Robe en soie noire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321368
+    m_Localized: Gants en soie noire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321369
+    m_Localized: Ceinture noire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321370
+    m_Localized: Danse de feu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321371
+    m_Localized: "Fer br\xFBlant infect\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321372
+    m_Localized: Danse chaotique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321373
+    m_Localized: Bouclier magique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321374
+    m_Localized: Perception
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321375
+    m_Localized: Mer de magie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321376
+    m_Localized: Garde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321377
+    m_Localized: Maniez votre arme avec toute votre force, en transformant tous les
+      BP en puissance. Vous infligez 'Fatigue' et 'Paralysie'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321378
+    m_Localized: Tentacules magiques
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321379
+    m_Localized: Vague blanche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321380
+    m_Localized: Grenade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321381
+    m_Localized: "Fl\xE9chettes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321382
+    m_Localized: Coup dur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321383
+    m_Localized: Cornes de courage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321384
+    m_Localized: Golem de lave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321385
+    m_Localized: Loup noir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321386
+    m_Localized: Corbeau kamaitachi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321387
+    m_Localized: "Renard \xE0 neuf queues de flammes violettes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321388
+    m_Localized: Poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321389
+    m_Localized: "Br\xFBlure"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515648
+    m_Localized: "Br\xFBlure infect\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515649
+    m_Localized: Fatigue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515650
+    m_Localized: Renforcement magique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515651
+    m_Localized: Lutte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515652
+    m_Localized: '{Actor} ''Toi...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515653
+    m_Localized: '{Actor} ''Meurs !'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515654
+    m_Localized: '{Actor} ''...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515655
+    m_Localized: ...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515656
+    m_Localized: '{Actor} ''{SealedName}-dono...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515657
+    m_Localized: "L'\xE9tat de r\xE9duction physique de {Actor} s'est dissip\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515658
+    m_Localized: "{Actor} a durci son armure et est maintenant en \xE9tat de r\xE9duction
+      physique."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515659
+    m_Localized: Valider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515660
+    m_Localized: Heitaro Ashibe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515661
+    m_Localized: Yu-Rin-Chi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515662
+    m_Localized: Nom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515663
+    m_Localized: "Param\xE8tres du jeu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515664
+    m_Localized: Rotation de la minimap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3932256315047936
+    m_Localized: Musique (BGM)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3932256315047937
+    m_Localized: Effets sonores (SE)
     m_Metadata:
       m_Items: []
   references:

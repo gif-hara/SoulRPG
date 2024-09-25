@@ -5205,8 +5205,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529419
-    m_Localized: "\"Aunque llevaba el destino de ser el dios de la destrucci\xF3n,\nprobablemente
-      nunca imagin\xF3 ser derrotado.\""
+    m_Localized: "Aunque llevaba el destino de ser el dios de la destrucci\xF3n,\nprobablemente
+      nunca imagin\xF3 ser derrotado."
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529420
@@ -5223,8 +5223,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529423
-    m_Localized: "\"Y dentro de ese silencio,\nuna paz largamente olvidada se extend\xEDa
-      en calma.\""
+    m_Localized: "Y dentro de ese silencio,\nuna paz largamente olvidada se extend\xEDa
+      en calma."
     m_Metadata:
       m_Items: []
   - m_Id: 1690473529424
@@ -5769,6 +5769,272 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1690473529612
     m_Localized: Desactivado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198270738432
+    m_Localized: Hoja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321344
+    m_Localized: Tocar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321345
+    m_Localized: Espada corta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321346
+    m_Localized: Daga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321347
+    m_Localized: Espada Buster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321348
+    m_Localized: Penetrador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321349
+    m_Localized: Hierro ardiente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321350
+    m_Localized: Gran espada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321351
+    m_Localized: Escudo de emblema
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321352
+    m_Localized: Escudo de caballero de Regalis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321353
+    m_Localized: Espada ancha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321354
+    m_Localized: Penetrador +
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321355
+    m_Localized: Espada Buster +
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321356
+    m_Localized: Espada Buster ++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321357
+    m_Localized: Martillo dorado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321358
+    m_Localized: Daga ++
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321359
+    m_Localized: Manos desnudas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321360
+    m_Localized: Yelmo de caballero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321361
+    m_Localized: Yelmo de caballero negro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321362
+    m_Localized: Capucha de seda blanca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321363
+    m_Localized: "T\xFAnica de seda blanca"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321364
+    m_Localized: Guantes de seda blanca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321365
+    m_Localized: Yelmo dorado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321366
+    m_Localized: Capucha de seda negra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321367
+    m_Localized: "T\xFAnica de seda negra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321368
+    m_Localized: Guantes de seda negra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321369
+    m_Localized: "Cintur\xF3n negro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321370
+    m_Localized: Danza de fuego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321371
+    m_Localized: Hierro ardiente purulento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321372
+    m_Localized: "Danza ca\xF3tica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321373
+    m_Localized: "Escudo m\xE1gico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321374
+    m_Localized: "Percepci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321375
+    m_Localized: Mar de magia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321376
+    m_Localized: Guardia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321377
+    m_Localized: "Balancea tu arma con todas tus fuerzas, convirtiendo todo el BP
+      en poder. Te inflige 'Fatiga' y 'Par\xE1lisis'."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321378
+    m_Localized: "Tent\xE1culos m\xE1gicos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321379
+    m_Localized: Onda blanca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321380
+    m_Localized: Granada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321381
+    m_Localized: Dardos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321382
+    m_Localized: Golpe fuerte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321383
+    m_Localized: Astas de coraje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321384
+    m_Localized: "G\xF3lem de lava"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321385
+    m_Localized: Lobo negro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321386
+    m_Localized: Cuervo Kama-Itachi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321387
+    m_Localized: Zorro de nueve colas de llamas moradas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321388
+    m_Localized: Veneno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198283321389
+    m_Localized: Quemadura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515648
+    m_Localized: Quemadura purulenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515649
+    m_Localized: Fatiga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515650
+    m_Localized: "Impulso m\xE1gico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515651
+    m_Localized: Lucha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515652
+    m_Localized: "{Actor} 'T\xFA...'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515653
+    m_Localized: "{Actor} '\xA1Muere!'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515654
+    m_Localized: '{Actor} ''...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515655
+    m_Localized: ...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515656
+    m_Localized: '{Actor} ''{SealedName}-dono...'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515657
+    m_Localized: "El estado de reducci\xF3n f\xEDsica de {Actor} ha desaparecido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515658
+    m_Localized: "{Actor} endureci\xF3 su armadura y ahora est\xE1 en un estado de
+      reducci\xF3n f\xEDsica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515659
+    m_Localized: Confirmar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515660
+    m_Localized: Heitaro Ashibe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515661
+    m_Localized: Yu-Rin-Chi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515662
+    m_Localized: Nombre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515663
+    m_Localized: "Configuraci\xF3n del juego"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3930198287515664
+    m_Localized: "Rotaci\xF3n del minimapa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3932256315047936
+    m_Localized: "M\xFAsica (BGM)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3932256315047937
+    m_Localized: Efectos de sonido (SE)
     m_Metadata:
       m_Items: []
   references:
