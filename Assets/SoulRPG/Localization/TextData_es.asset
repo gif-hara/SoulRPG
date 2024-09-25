@@ -5082,10 +5082,6 @@ MonoBehaviour:
     m_Localized: "{Actor} desat\xF3 un trueno que podr\xEDa atravesar una ballena."
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529389
-    m_Localized: "{Actor} desat\xF3 un trueno que podr\xEDa atravesar un elefante."
-    m_Metadata:
-      m_Items: []
   - m_Id: 1690473529390
     m_Localized: "{Actor} golpe\xF3 al oponente con un gran escudo."
     m_Metadata:
@@ -6035,6 +6031,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3932256315047937
     m_Localized: Efectos de sonido (SE)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939606564372480
+    m_Localized: "{Actor} desat\xF3 un fuego infernal que atraviesa elefantes."
     m_Metadata:
       m_Items: []
   references:

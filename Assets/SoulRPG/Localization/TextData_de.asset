@@ -5129,11 +5129,6 @@ MonoBehaviour:
     m_Localized: "{Actor} entlie\xDF einen Donner, der einen Wal durchdringen k\xF6nnte."
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529389
-    m_Localized: "{Actor} entlie\xDF einen Donner, der einen Elefanten durchdringen
-      k\xF6nnte."
-    m_Metadata:
-      m_Items: []
   - m_Id: 1690473529390
     m_Localized: "{Actor} schlug den Gegner mit einem gro\xDFen Schild."
     m_Metadata:
@@ -6089,6 +6084,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3932256315047937
     m_Localized: Soundeffekte (SE)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939606564372480
+    m_Localized: "{Actor} entfesselte ein H\xF6llenfeuer, das Elefanten durchdringt."
     m_Metadata:
       m_Items: []
   references:

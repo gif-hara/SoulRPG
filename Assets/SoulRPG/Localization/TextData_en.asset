@@ -5007,10 +5007,6 @@ MonoBehaviour:
     m_Localized: '{Actor} unleashed thunder that could pierce a whale.'
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529389
-    m_Localized: '{Actor} unleashed thunder that could pierce an elephant.'
-    m_Metadata:
-      m_Items: []
   - m_Id: 1690473529390
     m_Localized: '{Actor} struck the opponent with a large shield.'
     m_Metadata:
@@ -5961,6 +5957,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3932256315047937
     m_Localized: SE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939606564372480
+    m_Localized: '{Actor} unleashed a hellfire that pierces elephants.'
     m_Metadata:
       m_Items: []
   references:

@@ -5128,10 +5128,6 @@ MonoBehaviour:
     m_Localized: "{Actor} a lib\xE9r\xE9 un tonnerre capable de transpercer une baleine."
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529389
-    m_Localized: "{Actor} a lib\xE9r\xE9 un tonnerre capable de transpercer un \xE9l\xE9phant."
-    m_Metadata:
-      m_Items: []
   - m_Id: 1690473529390
     m_Localized: "{Actor} a frapp\xE9 l'adversaire avec un grand bouclier."
     m_Metadata:
@@ -6086,6 +6082,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3932256315047937
     m_Localized: Effets sonores (SE)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3939606564372480
+    m_Localized: "{Actor} a lanc\xE9 un feu infernal capable de transpercer des \xE9l\xE9phants."
     m_Metadata:
       m_Items: []
   references:
