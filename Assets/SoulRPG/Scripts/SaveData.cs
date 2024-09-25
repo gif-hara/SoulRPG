@@ -57,9 +57,9 @@ namespace SoulRPG
         [Serializable]
         public class AudioData
         {
-            public float masterVolume = 0.8f;
+            public float masterVolume = 0.5f;
 
-            public float bgmVolume = 0.8f;
+            public float bgmVolume = 0.3f;
 
             public float sfxVolume = 0.8f;
         }
