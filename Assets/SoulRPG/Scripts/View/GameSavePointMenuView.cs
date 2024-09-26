@@ -376,7 +376,7 @@ namespace SoulRPG
             var result = await DialogView.ConfirmAsync
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
-                "HPとSTを回復しますが一度しか使用できません。\nよろしいですか？".Localized(),
+                "HPとSTを回復しますが一度しか使用できません。よろしいですか？".Localized(),
                 new[] { "はい".Localized(), "いいえ".Localized() },
                 0,
                 scope
