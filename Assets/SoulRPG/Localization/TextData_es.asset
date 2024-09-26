@@ -5733,11 +5733,6 @@ MonoBehaviour:
     m_Localized: "Ya no puedes descansar aqu\xED."
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529605
-    m_Localized: "Se restaurar\xE1n HP y ST, pero solo se puede usar una vez.\n\xBFEst\xE1
-      bien?"
-    m_Metadata:
-      m_Items: []
   - m_Id: 349285423185920
     m_Localized: :Iniciar
     m_Metadata:
@@ -6035,6 +6030,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3939606564372480
     m_Localized: "{Actor} desat\xF3 un fuego infernal que atraviesa elefantes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4323579203354624
+    m_Localized: "Se restaurar\xE1n HP y ST, pero solo se puede usar una vez.\xBFEst\xE1
+      bien?"
     m_Metadata:
       m_Items: []
   references:

@@ -5784,13 +5784,6 @@ MonoBehaviour:
     m_Localized: Hier kannst du dich nicht mehr ausruhen.
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529605
-    m_Localized: 'HP und ST werden wiederhergestellt, aber dies kann nur einmal verwendet
-      werden.
-
-      Ist das in Ordnung?'
-    m_Metadata:
-      m_Items: []
   - m_Id: 349285423185920
     m_Localized: :Start
     m_Metadata:
@@ -6088,6 +6081,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3939606564372480
     m_Localized: "{Actor} entfesselte ein H\xF6llenfeuer, das Elefanten durchdringt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4323579203354624
+    m_Localized: HP und ST werden wiederhergestellt, aber dies kann nur einmal verwendet
+      werden.Ist das in Ordnung?
     m_Metadata:
       m_Items: []
   references:

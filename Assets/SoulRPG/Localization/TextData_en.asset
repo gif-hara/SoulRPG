@@ -5658,13 +5658,6 @@ MonoBehaviour:
     m_Localized: You can no longer rest here.
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529605
-    m_Localized: 'HP and ST will be restored, but this can only be used once.
-
-      Is
-      this okay?'
-    m_Metadata:
-      m_Items: []
   - m_Id: 349285423185920
     m_Localized: :Start
     m_Metadata:
@@ -5961,6 +5954,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3939606564372480
     m_Localized: '{Actor} unleashed a hellfire that pierces elephants.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4323579203354624
+    m_Localized: HP and ST will be restored, but this can only be used once.Is this
+      okay?
     m_Metadata:
       m_Items: []
   references:

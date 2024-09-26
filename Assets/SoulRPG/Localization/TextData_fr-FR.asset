@@ -5784,11 +5784,6 @@ MonoBehaviour:
     m_Localized: Vous ne pouvez plus vous reposer ici.
     m_Metadata:
       m_Items: []
-  - m_Id: 1690473529605
-    m_Localized: "Les PV et ST seront restaur\xE9s, mais cela ne peut \xEAtre utilis\xE9
-      qu'une seule fois.\nCela vous convient-il ?"
-    m_Metadata:
-      m_Items: []
   - m_Id: 349285423185920
     m_Localized: :Commencer
     m_Metadata:
@@ -6086,6 +6081,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3939606564372480
     m_Localized: "{Actor} a lanc\xE9 un feu infernal capable de transpercer des \xE9l\xE9phants."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4323579203354624
+    m_Localized: "Les PV et ST seront restaur\xE9s, mais cela ne peut \xEAtre utilis\xE9
+      qu'une seule fois.Cela vous convient-il ?"
     m_Metadata:
       m_Items: []
   references:
