@@ -6,6 +6,8 @@ using SoulRPG.CharacterControllers;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 namespace SoulRPG.SceneControllers
 {
@@ -87,6 +89,10 @@ namespace SoulRPG.SceneControllers
                 var saveData = SaveData.LoadSafe();
                 Assert.IsNotNull(saveData, "saveData != null");
                 Assert.IsNotNull(saveData.playerData, "saveData.playerData != null");
+                if (!string.IsNullOrEmpty(saveData.languageData.language))
+                {
+                    LocalizationSettings.SelectedLocale = Locale.CreateLocale(saveData.languageData.language);
+                }
                 var suspendData = SuspendData.Load();
                 var playerName = saveData?.playerData?.name ?? debugPlayerName;
                 var playerGrowthParameter = suspendData?.growthParameter ?? new(gameRule.PlayerGrowthParameter);
