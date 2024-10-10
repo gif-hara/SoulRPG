@@ -56,7 +56,7 @@ namespace HK
 
         private static UniTask InitializeLocalizationAsync()
         {
-#if UNITY_WEBGL
+#if UNITY_WEBGL && !UNITY_EDITOR
             return UniTask.CompletedTask;
 #else
             return LocalizationSettings.InitializationOperation.Task.AsUniTask();
