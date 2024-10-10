@@ -7,6 +7,8 @@ using R3;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 namespace SoulRPG
@@ -31,11 +33,13 @@ namespace SoulRPG
             {
                 "Sound",
                 "GameSettings",
+                "Language",
             };
             var categoryList = new List<Func<CancellationToken, UniTask>>
             {
                 StateSoundAsync,
                 StateGameSettingsAsync,
+                StateLanguageAsync,
             };
             foreach (var categoryName in categoryNames)
             {
@@ -336,6 +340,88 @@ namespace SoulRPG
                     AudioManager.PlaySfx("Sfx.Select.0");
                     EventSystem.current.SetSelectedGameObject(elements[elementIndex].Q<Button>("Button").gameObject);
                 }
+            }
+
+            UniTask StateLanguageAsync(CancellationToken scope)
+            {
+                AudioManager.PlaySfx("Sfx.Message.0");
+                string[] languageKeys = { "ja-JP", "en", "zh", "zh-TW", "fr-FR", "de", "es" };
+                string[] languageNames = { "日本語", "English", "中文", "中文(繁体)", "Français", "Deutsch", "Español" };
+                var saveData = SaveData.LoadSafe();
+                var areaDocument = contentsAreaDocument.Q<HKUIDocument>("Language");
+                var languageIndex = Array.IndexOf(languageKeys, saveData.languageData.language);
+                if (languageIndex == -1)
+                {
+                    languageIndex = 0;
+                }
+                var elements = new List<HKUIDocument>
+                {
+                    areaDocument.Q<HKUIDocument>("Language"),
+                };
+                var tips = new List<string>
+                {
+                    "日本語に設定する。".Localized(),
+                    "英語に設定する。".Localized(),
+                    "中国語に設定する。".Localized(),
+                    "繁体字に設定する。".Localized(),
+                    "フランス語に設定する。".Localized(),
+                    "ドイツ語に設定する。".Localized(),
+                    "スペイン語に設定する。".Localized(),
+                };
+                var onInitializeActions = new List<Action<HKUIDocument>>
+                {
+                    element =>
+                    {
+                        element.Q<HKUIDocument>("Message")
+                            .Q<TMP_Text>("Message")
+                            .text = languageNames[languageIndex];
+                    },
+                };
+                var onHorizontalActions = new List<Action<bool, HKUIDocument>>
+                {
+                    (isLeft, element) =>
+                    {
+                        AudioManager.PlaySfx("Sfx.Message.0");
+                        languageIndex += isLeft ? -1 : 1;
+                        if (languageIndex < 0)
+                        {
+                            languageIndex = languageKeys.Length - 1;
+                        }
+                        else if (languageIndex >= languageKeys.Length)
+                        {
+                            languageIndex = 0;
+                        }
+                        saveData.languageData.language = languageKeys[languageIndex];
+                        LocalizationSettings.SelectedLocale = Locale.CreateLocale(languageKeys[languageIndex]);
+                        element.Q<HKUIDocument>("Message")
+                            .Q<TMP_Text>("Message")
+                            .text = languageNames[languageIndex];
+                        saveData.Save();
+                    }
+                };
+                inputController.InputActions.Options.Navigate.OnPerformedAsObservable()
+                    .Subscribe(context =>
+                    {
+                        var value = context.ReadValue<Vector2>();
+                        if (value.x > 0)
+                        {
+                            onHorizontalActions[0](true, elements[0]);
+                        }
+                        else if (value.x < 0)
+                        {
+                            onHorizontalActions[0](false, elements[0]);
+                        }
+                    })
+                    .RegisterTo(scope);
+                SetActiveTab(tabAreaDocument.Q<HKUIDocument>("Language"));
+                SetAcitveContents(areaDocument);
+                for (var i = 0; i < elements.Count; i++)
+                {
+                    onInitializeActions[i](elements[i]);
+                }
+                GameTipsView.SetTip(tips[languageIndex]);
+                elements[0].Q<Button>("Button").Select();
+                return UniTask.CompletedTask;
             }
         }
     }

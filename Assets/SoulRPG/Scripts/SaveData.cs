@@ -17,6 +17,8 @@ namespace SoulRPG
 
         public GameSettingData gameSettingData;
 
+        public LanguageData languageData;
+
         public static SaveData LoadSafe()
         {
             var result = SaveSystem.Load<SaveData>("SaveData");
@@ -68,6 +70,12 @@ namespace SoulRPG
         public class GameSettingData
         {
             public bool isRotationMiniMap = true;
+        }
+
+        [Serializable]
+        public class LanguageData
+        {
+            public string language;
         }
 
         public string DefaultPath => "SaveData";
