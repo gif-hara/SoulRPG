@@ -37,7 +37,7 @@ namespace SoulRPG
                     return;
                 }
             }
-            var message = format;
+            var message = format.Localized();
             if (actor != null)
             {
                 message = message.Replace("{Actor}", actor.BattleStatus.NameWithTag);
