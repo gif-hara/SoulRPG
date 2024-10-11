@@ -56,10 +56,10 @@ namespace HK
 
         private static UniTask InitializeLocalizationAsync()
         {
-#if UNITY_WEBGL && !UNITY_EDITOR
-            return UniTask.CompletedTask;
-#else
+#if UNITY_EDITOR || USE_LOCALIZATION
             return LocalizationSettings.InitializationOperation.Task.AsUniTask();
+#else
+            return UniTask.CompletedTask;
 #endif
         }
     }

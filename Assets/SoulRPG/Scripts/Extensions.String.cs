@@ -10,9 +10,7 @@ namespace SoulRPG
     {
         public static string Localized(this string self)
         {
-#if !UNITY_EDITOR && UNITY_WEBGL
-            return self;
-#else
+#if UNITY_EDITOR || USE_LOCALIZATION
             var table = LocalizationSettings.StringDatabase.GetTable("TextData");
             var entry = table.GetEntry(self);
             if (entry == null)
@@ -21,6 +19,8 @@ namespace SoulRPG
                 return self;
             }
             return entry.Value;
+#else
+            return self;
 #endif
         }
 
