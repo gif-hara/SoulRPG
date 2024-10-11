@@ -55,5 +55,6 @@
         "Temp/": true,
         "UserSettings/": true
     },
-    "dotnet.defaultSolution": "SoulRPG.sln"
+    "dotnet.defaultSolution": "SoulRPG.sln",
+    "editor.stickyScroll.defaultModel": "foldingProviderModel"
 }
