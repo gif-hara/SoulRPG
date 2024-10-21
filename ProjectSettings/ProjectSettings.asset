@@ -140,6 +140,7 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 88bc39fc49af96a49a1d4964aecb470f, type: 3}
   - {fileID: 11400000, guid: 7e0f7aa3c6dcaec4cab160b9c323eb05, type: 2}
+  - {fileID: 11400000, guid: 637c01e1b22a3214e958e0d1df89801c, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -715,7 +716,7 @@ PlayerSettings:
     PS4: UNITY_POST_PROCESSING_STACK_V2
     PS5: UNITY_POST_PROCESSING_STACK_V2
     QNX: UNITY_POST_PROCESSING_STACK_V2
-    Standalone: UNITY_POST_PROCESSING_STACK_V2
+    Standalone: UNITY_POST_PROCESSING_STACK_V2;USE_LOCALIZATION
     WebGL: UNITY_POST_PROCESSING_STACK_V2;USE_LOCALIZATION
     XboxOne: UNITY_POST_PROCESSING_STACK_V2
     tvOS: UNITY_POST_PROCESSING_STACK_V2
