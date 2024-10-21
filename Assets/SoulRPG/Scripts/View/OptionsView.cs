@@ -31,12 +31,14 @@ namespace SoulRPG
             var contentsAreaDocument = document.Q<HKUIDocument>("Area.Contents");
             var categoryNames = new List<string>
             {
+                "Screen",
                 "Sound",
                 "GameSettings",
                 "Language",
             };
             var categoryList = new List<Func<CancellationToken, UniTask>>
             {
+                StateScreenAsync,
                 StateSoundAsync,
                 StateGameSettingsAsync,
                 StateLanguageAsync,
@@ -295,6 +297,13 @@ namespace SoulRPG
                             .text = saveData.gameSettingData.isRotationMiniMap ? "オン".Localized() : "オフ".Localized();
                     },
                 };
+                var onNavigateActions = new List<Action<bool, HKUIDocument>>
+                {
+                    (isLeft, element) =>
+                    {
+                        onSubmitActions[elementIndex]();
+                    }
+                };
                 inputController.InputActions.Options.Navigate.OnPerformedAsObservable()
                     .Subscribe(context =>
                     {
@@ -317,6 +326,14 @@ namespace SoulRPG
                             }
                             SetActive();
                         }
+                        else if (value.x > 0)
+                        {
+                            onNavigateActions[elementIndex](true, elements[elementIndex]);
+                        }
+                        else if (value.x < 0)
+                        {
+                            onNavigateActions[elementIndex](false, elements[elementIndex]);
+                        }
                     })
                     .RegisterTo(scope);
                 inputController.InputActions.Options.Submit.OnPerformedAsObservable()
@@ -330,9 +347,9 @@ namespace SoulRPG
                 {
                     onInitializeActions[i](elements[i]);
                 }
-                SetActive();
                 SetActiveTab(tabAreaDocument.Q<HKUIDocument>("GameSettings"));
                 SetAcitveContents(areaDocument);
+                SetActive();
                 return UniTask.CompletedTask;
                 void SetActive()
                 {
@@ -422,6 +439,18 @@ namespace SoulRPG
                 }
                 GameTipsView.SetTip(tips[languageIndex].Localized());
                 elements[0].Q<Button>("Button").Select();
+                return UniTask.CompletedTask;
+            }
+
+            UniTask StateScreenAsync(CancellationToken scope)
+            {
+                AudioManager.PlaySfx("Sfx.Message.0");
+                SetActiveTab(tabAreaDocument.Q<HKUIDocument>("Screen"));
+                SetAcitveContents(contentsAreaDocument.Q<HKUIDocument>("Screen"));
+                foreach (var i in Screen.resolutions)
+                {
+                    Debug.Log(i);
+                }
                 return UniTask.CompletedTask;
             }
         }
