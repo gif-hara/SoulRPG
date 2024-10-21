@@ -360,13 +360,13 @@ namespace SoulRPG
                 };
                 var tips = new List<string>
                 {
-                    "日本語に設定する。".Localized(),
-                    "英語に設定する。".Localized(),
-                    "中国語に設定する。".Localized(),
-                    "繁体字に設定する。".Localized(),
-                    "フランス語に設定する。".Localized(),
-                    "ドイツ語に設定する。".Localized(),
-                    "スペイン語に設定する。".Localized(),
+                    "日本語に設定する。",
+                    "英語に設定する。",
+                    "中国語に設定する。",
+                    "繁体字に設定する。",
+                    "フランス語に設定する。",
+                    "ドイツ語に設定する。",
+                    "スペイン語に設定する。",
                 };
                 var onInitializeActions = new List<Action<HKUIDocument>>
                 {
@@ -396,6 +396,7 @@ namespace SoulRPG
                         element.Q<HKUIDocument>("Message")
                             .Q<TMP_Text>("Message")
                             .text = languageNames[languageIndex];
+                        GameTipsView.SetTip(tips[languageIndex].Localized());
                         saveData.Save();
                     }
                 };
@@ -419,7 +420,7 @@ namespace SoulRPG
                 {
                     onInitializeActions[i](elements[i]);
                 }
-                GameTipsView.SetTip(tips[languageIndex]);
+                GameTipsView.SetTip(tips[languageIndex].Localized());
                 elements[0].Q<Button>("Button").Select();
                 return UniTask.CompletedTask;
             }
