@@ -5961,6 +5961,38 @@ MonoBehaviour:
       okay?
     m_Metadata:
       m_Items: []
+  - m_Id: 13374890968285184
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451008
+    m_Localized: Set to Japanese.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451009
+    m_Localized: Set to English.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451010
+    m_Localized: Set to Chinese.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451011
+    m_Localized: Set to Traditional Chinese.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451012
+    m_Localized: Set to French.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451013
+    m_Localized: Set to German.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451014
+    m_Localized: Set to Spanish.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

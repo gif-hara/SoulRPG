@@ -6037,6 +6037,38 @@ MonoBehaviour:
       bien?"
     m_Metadata:
       m_Items: []
+  - m_Id: 13374890968285184
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451008
+    m_Localized: "Establecer en japon\xE9s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451009
+    m_Localized: "Establecer en ingl\xE9s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451010
+    m_Localized: Establecer en chino.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451011
+    m_Localized: Establecer en chino tradicional.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451012
+    m_Localized: "Establecer en franc\xE9s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451013
+    m_Localized: "Establecer en alem\xE1n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451014
+    m_Localized: "Establecer en espa\xF1ol."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

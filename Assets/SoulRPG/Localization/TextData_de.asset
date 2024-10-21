@@ -6088,6 +6088,38 @@ MonoBehaviour:
       werden.Ist das in Ordnung?
     m_Metadata:
       m_Items: []
+  - m_Id: 13374890968285184
+    m_Localized: Sprache
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451008
+    m_Localized: Auf Japanisch einstellen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451009
+    m_Localized: Auf Englisch einstellen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451010
+    m_Localized: Auf Chinesisch einstellen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451011
+    m_Localized: Auf Traditionelles Chinesisch einstellen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451012
+    m_Localized: "Auf Franz\xF6sisch einstellen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451013
+    m_Localized: Auf Deutsch einstellen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451014
+    m_Localized: Auf Spanisch einstellen.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

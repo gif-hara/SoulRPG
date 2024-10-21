@@ -6088,6 +6088,38 @@ MonoBehaviour:
       qu'une seule fois.Cela vous convient-il ?"
     m_Metadata:
       m_Items: []
+  - m_Id: 13374890968285184
+    m_Localized: Langue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451008
+    m_Localized: "D\xE9finir en japonais."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451009
+    m_Localized: "D\xE9finir en anglais."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451010
+    m_Localized: "D\xE9finir en chinois."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451011
+    m_Localized: "D\xE9finir en chinois traditionnel."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451012
+    m_Localized: "D\xE9finir en fran\xE7ais."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451013
+    m_Localized: "D\xE9finir en allemand."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13374890993451014
+    m_Localized: "D\xE9finir en espagnol."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
