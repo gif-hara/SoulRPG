@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using HK;
@@ -445,11 +446,136 @@ namespace SoulRPG
             UniTask StateScreenAsync(CancellationToken scope)
             {
                 AudioManager.PlaySfx("Sfx.Message.0");
-                SetActiveTab(tabAreaDocument.Q<HKUIDocument>("Screen"));
-                SetAcitveContents(contentsAreaDocument.Q<HKUIDocument>("Screen"));
-                foreach (var i in Screen.resolutions)
+                var currentElementIndex = 0;
+                var fullScreenModes = new List<FullScreenMode>
                 {
-                    Debug.Log(i);
+                    FullScreenMode.ExclusiveFullScreen,
+                    FullScreenMode.FullScreenWindow,
+                    FullScreenMode.Windowed,
+                };
+                var fullScreenModeNames = new List<string>
+                {
+                    "フルスクリーン".Localized(),
+                    "フルスクリーンウィンドウ".Localized(),
+                    "ウィンドウ".Localized(),
+                };
+                var resolutions = Screen.resolutions
+                    .Where(x => Mathf.Abs((float)x.width / x.height - 16.0f / 9.0f) < 0.001)
+                    .Select(x => (x.width, x.height))
+                    .Distinct()
+                    .ToArray();
+                var currentResolution = (Screen.currentResolution.width, Screen.currentResolution.height);
+                var resolutionIndex = Array.IndexOf(resolutions, currentResolution);
+                resolutionIndex = resolutionIndex == -1 ? 0 : resolutionIndex;
+                var fullScreenModeIndex = fullScreenModes.IndexOf(Screen.fullScreenMode);
+                fullScreenModeIndex = fullScreenModeIndex == -1 ? 0 : fullScreenModeIndex;
+                var areaDocument = contentsAreaDocument.Q<HKUIDocument>("Screen");
+                var elements = new List<HKUIDocument>
+                {
+                    areaDocument.Q<HKUIDocument>("FullScreenMode"),
+                    areaDocument.Q<HKUIDocument>("Resolution"),
+                };
+                var tips = new List<string>
+                {
+                    "ウィンドウもしくはフルスクリーンを設定する。".Localized(),
+                    "解像度を設定する。".Localized(),
+                };
+                var onNavigateActions = new List<Action<bool, HKUIDocument>>
+                {
+                    (isLeft, element) =>
+                    {
+                        AudioManager.PlaySfx("Sfx.Message.0");
+                        fullScreenModeIndex += isLeft ? -1 : 1;
+                        if (fullScreenModeIndex < 0)
+                        {
+                            fullScreenModeIndex = fullScreenModes.Count - 1;
+                        }
+                        else if (fullScreenModeIndex >= fullScreenModes.Count)
+                        {
+                            fullScreenModeIndex = 0;
+                        }
+                        element.Q<HKUIDocument>("Message")
+                            .Q<TMP_Text>("Message")
+                            .text = fullScreenModeNames[fullScreenModeIndex];
+                        Screen.fullScreenMode = fullScreenModes[fullScreenModeIndex];
+                    },
+                    (isLeft, element) =>
+                    {
+                        AudioManager.PlaySfx("Sfx.Message.0");
+                        resolutionIndex += isLeft ? -1 : 1;
+                        if (resolutionIndex < 0)
+                        {
+                            resolutionIndex = resolutions.Length - 1;
+                        }
+                        else if (resolutionIndex >= resolutions.Length)
+                        {
+                            resolutionIndex = 0;
+                        }
+                        element.Q<HKUIDocument>("Message")
+                            .Q<TMP_Text>("Message")
+                            .text = $"{resolutions[resolutionIndex].width}x{resolutions[resolutionIndex].height}";
+                        Screen.SetResolution(resolutions[resolutionIndex].width, resolutions[resolutionIndex].height, Screen.fullScreenMode);
+                    }
+                };
+                var onInitializeActions = new List<Action<HKUIDocument>>
+                {
+                    element =>
+                    {
+                        element.Q<HKUIDocument>("Message")
+                            .Q<TMP_Text>("Message")
+                            .text = fullScreenModeNames[fullScreenModeIndex];
+                    },
+                    element =>
+                    {
+                        element.Q<HKUIDocument>("Message")
+                            .Q<TMP_Text>("Message")
+                            .text = $"{resolutions[resolutionIndex].width}x{resolutions[resolutionIndex].height}";
+                    },
+                };
+                SetActiveTab(tabAreaDocument.Q<HKUIDocument>("Screen"));
+                SetAcitveContents(areaDocument);
+                SetActive();
+                for (var i = 0; i < elements.Count; i++)
+                {
+                    onInitializeActions[i](elements[i]);
+                }
+                inputController.InputActions.Options.Navigate.OnPerformedAsObservable()
+                    .Subscribe(context =>
+                    {
+                        var value = context.ReadValue<Vector2>();
+                        if (value.y > 0)
+                        {
+                            currentElementIndex--;
+                            if (currentElementIndex < 0)
+                            {
+                                currentElementIndex = elements.Count - 1;
+                            }
+                            SetActive();
+                        }
+                        else if (value.y < 0)
+                        {
+                            currentElementIndex++;
+                            if (currentElementIndex >= elements.Count)
+                            {
+                                currentElementIndex = 0;
+                            }
+                            SetActive();
+                        }
+                        else if (value.x > 0)
+                        {
+                            onNavigateActions[currentElementIndex](true, elements[currentElementIndex]);
+                        }
+                        else if (value.x < 0)
+                        {
+                            onNavigateActions[currentElementIndex](false, elements[currentElementIndex]);
+                        }
+                    })
+                    .RegisterTo(scope);
+                void SetActive()
+                {
+                    GameTipsView.SetTip(tips[currentElementIndex]);
+                    AudioManager.PlaySfx("Sfx.Select.0");
+                    EventSystem.current.SetSelectedGameObject(elements[currentElementIndex].Q<Button>("Button").gameObject);
                 }
                 return UniTask.CompletedTask;
             }
