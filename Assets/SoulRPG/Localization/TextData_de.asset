@@ -6120,6 +6120,38 @@ MonoBehaviour:
     m_Localized: Auf Spanisch einstellen.
     m_Metadata:
       m_Items: []
+  - m_Id: 13734073752289280
+    m_Localized: Vollbild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455104
+    m_Localized: Vollbildfenster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455105
+    m_Localized: Fenster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455106
+    m_Localized: Wechsel zwischen Fenster- und Vollbildmodus.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455107
+    m_Localized: "Stelle die Aufl\xF6sung ein."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455108
+    m_Localized: Bildschirmmodus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455109
+    m_Localized: "Aufl\xF6sung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455110
+    m_Localized: Bildschirm
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

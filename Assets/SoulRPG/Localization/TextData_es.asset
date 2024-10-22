@@ -6069,6 +6069,38 @@ MonoBehaviour:
     m_Localized: "Establecer en espa\xF1ol."
     m_Metadata:
       m_Items: []
+  - m_Id: 13734073752289280
+    m_Localized: Pantalla completa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455104
+    m_Localized: Ventana de pantalla completa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455105
+    m_Localized: Ventana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455106
+    m_Localized: Configura en modo ventana o pantalla completa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455107
+    m_Localized: "Configura la resoluci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455108
+    m_Localized: Modo de pantalla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455109
+    m_Localized: "Resoluci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455110
+    m_Localized: Pantalla
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

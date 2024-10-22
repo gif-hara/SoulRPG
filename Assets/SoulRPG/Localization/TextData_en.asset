@@ -5993,6 +5993,38 @@ MonoBehaviour:
     m_Localized: Set to Spanish.
     m_Metadata:
       m_Items: []
+  - m_Id: 13734073752289280
+    m_Localized: Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455104
+    m_Localized: Fullscreen Window
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455105
+    m_Localized: Window
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455106
+    m_Localized: Set to either Windowed or Fullscreen mode.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455107
+    m_Localized: Set the resolution.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455108
+    m_Localized: Screen Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455109
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455110
+    m_Localized: Screen
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

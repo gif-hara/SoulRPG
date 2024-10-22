@@ -6120,6 +6120,38 @@ MonoBehaviour:
     m_Localized: "D\xE9finir en espagnol."
     m_Metadata:
       m_Items: []
+  - m_Id: 13734073752289280
+    m_Localized: "Plein \xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455104
+    m_Localized: "Fen\xEAtre plein \xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455105
+    m_Localized: "Fen\xEAtre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455106
+    m_Localized: "D\xE9finir en mode Fen\xEAtre ou Plein \xE9cran."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455107
+    m_Localized: "D\xE9finir la r\xE9solution."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455108
+    m_Localized: "Mode d'\xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455109
+    m_Localized: "R\xE9solution"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13734073777455110
+    m_Localized: "\xC9cran"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
