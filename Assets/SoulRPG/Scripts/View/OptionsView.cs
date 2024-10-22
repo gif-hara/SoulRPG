@@ -30,6 +30,22 @@ namespace SoulRPG
             var inputController = TinyServiceLocator.Resolve<InputController>();
             var tabAreaDocument = document.Q<HKUIDocument>("Area.Tab");
             var contentsAreaDocument = document.Q<HKUIDocument>("Area.Contents");
+#if UNITY_WEBGL
+            var categoryNames = new List<string>
+            {
+                "Sound",
+                "GameSettings",
+                "Language",
+            };
+            var categoryList = new List<Func<CancellationToken, UniTask>>
+            {
+                StateSoundAsync,
+                StateGameSettingsAsync,
+                StateLanguageAsync,
+            };
+            tabAreaDocument.Q<HKUIDocument>("Screen").gameObject.SetActive(false);
+            contentsAreaDocument.Q<HKUIDocument>("Screen").gameObject.SetActive(false);
+#else
             var categoryNames = new List<string>
             {
                 "Screen",
@@ -44,6 +60,7 @@ namespace SoulRPG
                 StateGameSettingsAsync,
                 StateLanguageAsync,
             };
+#endif
             foreach (var categoryName in categoryNames)
             {
                 var tab = tabAreaDocument.Q<HKUIDocument>(categoryName);
