@@ -6152,6 +6152,10 @@ MonoBehaviour:
     m_Localized: Bildschirm
     m_Metadata:
       m_Items: []
+  - m_Id: 13736191309578240
+    m_Localized: Beenden
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
