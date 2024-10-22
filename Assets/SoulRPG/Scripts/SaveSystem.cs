@@ -18,11 +18,11 @@ namespace SoulRPG
 
         public static T Load<T>(string path)
         {
-            path = Application.persistentDataPath + "/" + path;
             if (!Contains(path))
             {
                 return default;
             }
+            path = Application.persistentDataPath + "/" + path;
             var encryptedJson = File.ReadAllText(path);
             var json = EncryptionUtility.Decrypt(encryptedJson);
             return JsonUtility.FromJson<T>(json);
