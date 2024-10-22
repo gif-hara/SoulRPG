@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 
 namespace SoulRPG
@@ -11,28 +12,32 @@ namespace SoulRPG
         {
             var json = JsonUtility.ToJson(data);
             var encryptedJson = EncryptionUtility.Encrypt(json);
-            PlayerPrefs.SetString(path, encryptedJson);
+            path = Application.persistentDataPath + "/" + path;
+            File.WriteAllText(path, encryptedJson);
         }
-        
+
         public static T Load<T>(string path)
         {
+            path = Application.persistentDataPath + "/" + path;
             if (!Contains(path))
             {
                 return default;
             }
-            var encryptedJson = PlayerPrefs.GetString(path);
+            var encryptedJson = File.ReadAllText(path);
             var json = EncryptionUtility.Decrypt(encryptedJson);
             return JsonUtility.FromJson<T>(json);
         }
-        
+
         public static bool Contains(string path)
         {
-            return PlayerPrefs.HasKey(path);
+            path = Application.persistentDataPath + "/" + path;
+            return File.Exists(path);
         }
-        
+
         public static void Delete(string path)
         {
-            PlayerPrefs.DeleteKey(path);
+            path = Application.persistentDataPath + "/" + path;
+            File.Delete(path);
         }
     }
 }
