@@ -27,7 +27,9 @@ namespace SoulRPG
                 result = new SaveData
                 {
                     playerData = new PlayerData(),
-                    audioData = new AudioData()
+                    audioData = new AudioData(),
+                    gameSettingData = new GameSettingData(),
+                    languageData = new LanguageData()
                 };
                 result.Save();
             }
