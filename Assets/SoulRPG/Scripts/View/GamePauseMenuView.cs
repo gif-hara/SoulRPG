@@ -586,6 +586,7 @@ namespace SoulRPG
 
         private async UniTask StateCreatedSuspendData(CancellationToken scope)
         {
+#if UNITY_WEBGL
             await DialogView.ConfirmAsync
             (
                 documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
@@ -594,6 +595,17 @@ namespace SoulRPG
                 0,
                 scope
             );
+#else
+            await DialogView.ConfirmAsync
+            (
+                documentBundlePrefab.Q<HKUIDocument>("UI.Game.Menu.Dialog"),
+                "中断データを作成しました。このままゲームを終了できます。お疲れ様でした。".Localized(),
+                new[] { "終了".Localized() },
+                0,
+                scope
+            );
+            Application.Quit();
+#endif
         }
 
         private UniTask StateCloseAsync(CancellationToken scope)
